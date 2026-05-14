@@ -46,7 +46,7 @@
     "description": "Authenticated route returned 404.",
     "steps_to_reproduce": [
       "1. Login as krokusstudia2@gmail.com",
-      "2. Navigate к https://www.lancerwise.com/money/invoices/recurring/new"
+      "2. Navigate \u043a https://www.lancerwise.com/money/invoices/recurring/new"
     ],
     "console_errors": []
   },
@@ -63,7 +63,7 @@
     "description": "Authenticated route returned 404.",
     "steps_to_reproduce": [
       "1. Login as krokusstudia2@gmail.com",
-      "2. Navigate к https://www.lancerwise.com/expenses/new"
+      "2. Navigate \u043a https://www.lancerwise.com/expenses/new"
     ],
     "console_errors": []
   },
@@ -79,7 +79,7 @@
     "title": "/settings/billing HTTP 404",
     "description": "Settings route returned 404.",
     "steps_to_reproduce": [
-      "1. Navigate к https://www.lancerwise.com/settings/billing"
+      "1. Navigate \u043a https://www.lancerwise.com/settings/billing"
     ],
     "console_errors": []
   },
@@ -95,7 +95,7 @@
     "title": "/settings/security HTTP 404",
     "description": "Settings route returned 404.",
     "steps_to_reproduce": [
-      "1. Navigate к https://www.lancerwise.com/settings/security"
+      "1. Navigate \u043a https://www.lancerwise.com/settings/security"
     ],
     "console_errors": []
   },
@@ -111,7 +111,7 @@
     "title": "/settings/integrations HTTP 404",
     "description": "Settings route returned 404.",
     "steps_to_reproduce": [
-      "1. Navigate к https://www.lancerwise.com/settings/integrations"
+      "1. Navigate \u043a https://www.lancerwise.com/settings/integrations"
     ],
     "console_errors": []
   },
@@ -127,7 +127,7 @@
     "title": "/settings/ai-preferences HTTP 404",
     "description": "Settings route returned 404.",
     "steps_to_reproduce": [
-      "1. Navigate к https://www.lancerwise.com/settings/ai-preferences"
+      "1. Navigate \u043a https://www.lancerwise.com/settings/ai-preferences"
     ],
     "console_errors": []
   },
@@ -143,7 +143,7 @@
     "title": "/settings/onboarding HTTP 404",
     "description": "Settings route returned 404.",
     "steps_to_reproduce": [
-      "1. Navigate к https://www.lancerwise.com/settings/onboarding"
+      "1. Navigate \u043a https://www.lancerwise.com/settings/onboarding"
     ],
     "console_errors": []
   },
@@ -159,7 +159,7 @@
     "title": "/settings/upgrade HTTP 404",
     "description": "Settings route returned 404.",
     "steps_to_reproduce": [
-      "1. Navigate к https://www.lancerwise.com/settings/upgrade"
+      "1. Navigate \u043a https://www.lancerwise.com/settings/upgrade"
     ],
     "console_errors": []
   },
@@ -175,7 +175,7 @@
     "title": "/settings/account HTTP 404",
     "description": "Settings route returned 404.",
     "steps_to_reproduce": [
-      "1. Navigate к https://www.lancerwise.com/settings/account"
+      "1. Navigate \u043a https://www.lancerwise.com/settings/account"
     ],
     "console_errors": []
   },
@@ -191,7 +191,7 @@
     "title": "/settings/team HTTP 404",
     "description": "Settings route returned 404.",
     "steps_to_reproduce": [
-      "1. Navigate к https://www.lancerwise.com/settings/team"
+      "1. Navigate \u043a https://www.lancerwise.com/settings/team"
     ],
     "console_errors": []
   },
@@ -206,7 +206,7 @@
     "category": "broken-modal",
     "severity": "major",
     "title": "Quick Invoice: Save-as-Draft disabled when description empty, but Send-&-Create is active (inconsistent validation)",
-    "description": "Observed visually: Modal fields fill OK except description (\"What are you charging for?\" remains empty with placeholder visible). Save as Draft stays DISABLED while Send & Create button is ACTIVE. Two findings: (a) description is required для Save as Draft but NOT для Send & Create (inconsistent validation), (b) keyboard.fill on textarea via my generic selector did не attach — actual input element needs more specific selector.",
+    "description": "Observed visually: Modal fields fill OK except description (\"What are you charging for?\" remains empty with placeholder visible). Save as Draft stays DISABLED while Send & Create button is ACTIVE. Two findings: (a) description is required \u0434\u043b\u044f Save as Draft but NOT \u0434\u043b\u044f Send & Create (inconsistent validation), (b) keyboard.fill on textarea via my generic selector did \u043d\u0435 attach \u2014 actual input element needs more specific selector.",
     "steps_to_reproduce": [
       "1. /dashboard press N",
       "2. Select client",
@@ -227,13 +227,13 @@
     "category": "z-index",
     "severity": "critical",
     "title": "Cookie consent banner intercepts pointer events on /clients/new step 2 Next button",
-    "description": "Cookie consent banner (role=dialog aria-label='Cookie consent', fixed bottom z-50) overlaps the step 2 Next button on /clients/new wizard. Playwright reports the banner's subtree intercepts the pointer events at the Next button's click coordinates — meaning user cannot advance the wizard until cookie banner dismissed. Banner does NOT block step 1 Next (page is shorter on step 1). This blocks the entire wizard на step 2+ for users who don't dismiss banner first.",
+    "description": "Cookie consent banner (role=dialog aria-label='Cookie consent', fixed bottom z-50) overlaps the step 2 Next button on /clients/new wizard. Playwright reports the banner's subtree intercepts the pointer events at the Next button's click coordinates \u2014 meaning user cannot advance the wizard until cookie banner dismissed. Banner does NOT block step 1 Next (page is shorter on step 1). This blocks the entire wizard \u043d\u0430 step 2+ for users who don't dismiss banner first.",
     "steps_to_reproduce": [
       "1. Login (cookie banner present)",
-      "2. /clients/new — banner visible bottom of viewport",
-      "3. Fill step 1 fields, click Next — step 1 Next works",
-      "4. On step 2, scroll к Next button OR see it at bottom",
-      "5. Click Next — banner intercepts, click никогда reaches button"
+      "2. /clients/new \u2014 banner visible bottom of viewport",
+      "3. Fill step 1 fields, click Next \u2014 step 1 Next works",
+      "4. On step 2, scroll \u043a Next button OR see it at bottom",
+      "5. Click Next \u2014 banner intercepts, click \u043d\u0438\u043a\u043e\u0433\u0434\u0430 reaches button"
     ],
     "console_errors": []
   },
@@ -248,7 +248,7 @@
     "category": "layout",
     "severity": "minor",
     "title": "Wizard step 1 inputs lack <label> markup (accessibility)",
-    "description": "Inputs (Full Name, Company, Email, Phone, Country) have no associated <label for=...> element. Playwright getByLabel() returns no match для all 5 fields. Screen-reader users lose field context. Visible UI uses uppercase eyebrow text instead of semantic labels. Recommendation: wrap each input в <label> OR use aria-labelledby+visible label k preserve accessibility.",
+    "description": "Inputs (Full Name, Company, Email, Phone, Country) have no associated <label for=...> element. Playwright getByLabel() returns no match \u0434\u043b\u044f all 5 fields. Screen-reader users lose field context. Visible UI uses uppercase eyebrow text instead of semantic labels. Recommendation: wrap each input \u0432 <label> OR use aria-labelledby+visible label k preserve accessibility.",
     "steps_to_reproduce": [
       "1. Open /clients/new",
       "2. Inspect form inputs in DOM",
@@ -267,11 +267,11 @@
     "category": "layout",
     "severity": "cosmetic",
     "title": "Validation error color uses text-red-500 instead of design-system rose-500",
-    "description": "Empty-submit validation errors на /clients/new render с classes 'text-red-500' / 'text-red-400'. Design system pattern (per backlog_button_color_inconsistency и B3.20 destructive pattern) uses 'rose' palette. Inconsistency between red-500 (here) и rose-500 (Delete pattern elsewhere) suggests two color tokens for negative state.",
+    "description": "Empty-submit validation errors \u043d\u0430 /clients/new render \u0441 classes 'text-red-500' / 'text-red-400'. Design system pattern (per backlog_button_color_inconsistency \u0438 B3.20 destructive pattern) uses 'rose' palette. Inconsistency between red-500 (here) \u0438 rose-500 (Delete pattern elsewhere) suggests two color tokens for negative state.",
     "steps_to_reproduce": [
       "1. /clients/new",
-      "2. Click Next с empty fields",
-      "3. Inspect 'Full name is required' classes — text-red-500"
+      "2. Click Next \u0441 empty fields",
+      "3. Inspect 'Full name is required' classes \u2014 text-red-500"
     ],
     "console_errors": []
   },
@@ -289,7 +289,7 @@
     "description": "On a single client detail page, multiple AI-feature buttons share the exact label 'Generate' (AI Client Summary, AI Project Brief, Win-back Email, Referral Request Email, etc.). Plus 'Regenerate' for portal link. Selector ambiguity + UX cognitive load. Recommend distinct labels e.g. 'Generate Summary' / 'Generate Brief' / 'Generate Email'.",
     "steps_to_reproduce": [
       "1. Open /clients/[id]",
-      "2. Inspect Generate buttons count в DOM",
+      "2. Inspect Generate buttons count \u0432 DOM",
       "3. Note multiple identical labels"
     ],
     "console_errors": []
@@ -305,10 +305,10 @@
     "category": "z-index",
     "severity": "minor",
     "title": "Portal-link Regenerate confirmation modal uses z-[9999] inset-0 (good practice; document)",
-    "description": "When 'Regenerate' clicked on Client Portal link section, full-viewport modal с backdrop-blur opens asking 'Are you sure? Regenerate the portal link? The old link will stop working immediately.' c Cancel/Confirm. Good UX protection. Z-index z-[9999] highest in audit. Documenting that several modal layers exist (cookie banner z-50, portal regenerate z-9999); if more modals stack, layering rules need explicit docs.",
+    "description": "When 'Regenerate' clicked on Client Portal link section, full-viewport modal \u0441 backdrop-blur opens asking 'Are you sure? Regenerate the portal link? The old link will stop working immediately.' c Cancel/Confirm. Good UX protection. Z-index z-[9999] highest in audit. Documenting that several modal layers exist (cookie banner z-50, portal regenerate z-9999); if more modals stack, layering rules need explicit docs.",
     "steps_to_reproduce": [
       "1. /clients/[id]",
-      "2. Scroll к Client Portal section",
+      "2. Scroll \u043a Client Portal section",
       "3. Click Regenerate"
     ],
     "console_errors": []
@@ -328,7 +328,28 @@
     "steps_to_reproduce": [
       "1. Open project detail",
       "2. Find \"/Status Summary|AI Status/i\" section",
-      "3. Look для Generate button"
+      "3. Look \u0434\u043b\u044f Generate button"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-019",
+    "tested_at": "2026-05-14T16:26:53.919277+00:00",
+    "tested_as": "krokusstudia2@gmail.com",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/projects/new",
+    "route": "/projects/new",
+    "screenshot": "auth-work/projects-ai-scope-checker-RESULT.png",
+    "category": "broken-ai",
+    "severity": "critical",
+    "title": "AI Scope Checker /api/ai/scope-check returns HTTP 500",
+    "description": "Filled scope text + clicked Check Scope. Network response: 500 Internal Server Error from /api/ai/scope-check. Latency 20.6s before timeout (suggests server-side AI provider failure OR endpoint bug). UI does NOT surface the error \u043a user \u2014 Check Scope button returns \u043a idle state, no error toast, no error inline. Silent failure.",
+    "steps_to_reproduce": [
+      "1. /projects/new",
+      "2. Scroll \u043a AI Scope Checker section",
+      "3. Paste scope text 200+ chars",
+      "4. Click Check Scope",
+      "5. Observe 500 response \u0432 network tab + no UI error"
     ],
     "console_errors": []
   },
@@ -342,52 +363,11 @@
     "screenshot": "auth-work/projects-ai-brief-NOT-FOUND.png",
     "category": "broken-ai",
     "severity": "minor",
-    "title": "AI feature \"AI Project Brief\" heading not found на project detail",
+    "title": "AI feature \"AI Project Brief\" heading not found \u043d\u0430 project detail",
     "description": "Could not locate \"/Project Brief|AI Brief/i\" text section.",
     "steps_to_reproduce": [
       "1. Open project detail",
-      "2. Look для \"/Project Brief|AI Brief/i\" section"
-    ],
-    "console_errors": []
-  },
-  {
-    "id": "FA-021",
-    "tested_at": "2026-05-14T16:25:51.900Z",
-    "tested_as": "krokusstudia2@gmail.com",
-    "viewport": "desktop",
-    "url": "https://www.lancerwise.com/projects/new",
-    "route": "/projects/new",
-    "screenshot": "auth-work/projects-ai-scope-checker-RESULT.png",
-    "category": "broken-ai",
-    "severity": "critical",
-    "title": "Project detail page lacks AI Status Summary/Brief/Milestones (features live на /projects/new not /[id])",
-    "description": "AI features previously assumed для /projects/[id] (per audit brief): \"AI Status Summary\", \"AI Project Brief\", \"Generate Milestones\". Actual placement: на /projects/new — \"AI Name Generator\" + \"AI Milestones\" + \"Generate with AI\" buttons exist on the creation form, не on the detail page. Implication: cannot regenerate status summary or brief AFTER project exists; only at creation time. Worth confirming с product whether status summary on /[id] should be added для existing projects.",
-    "steps_to_reproduce": [
-      "1. /projects/new",
-      "2. Fill scope",
-      "3. Check Scope"
-    ],
-    "console_errors": [],
-    "ai_output_text": "@media (max-width: 767px) { .mobile-menu-btn { display: flex !important; } }ProjectsSearch...⌘K1?PTT Back to ProjectsNew ProjectUse TemplateQuick templatesWeb DesignMobile AppSEO AuditBrandingAutomationProject Title *AI Name GeneratorGenerateSaaS LaunchPadBrandForge InitiativePulse IdentityLumina RevampSparkLab BlueprintDescriptionAI MilestonesGenerate with AIClientNo clientMaria RodriguezАлександ"
-  },
-  {
-    "id": "FA-019",
-    "tested_at": "2026-05-14T16:26:53.919277+00:00",
-    "tested_as": "krokusstudia2@gmail.com",
-    "viewport": "desktop",
-    "url": "https://www.lancerwise.com/projects/new",
-    "route": "/projects/new",
-    "screenshot": "auth-work/projects-ai-scope-checker-RESULT.png",
-    "category": "broken-ai",
-    "severity": "critical",
-    "title": "AI Scope Checker /api/ai/scope-check returns HTTP 500",
-    "description": "Filled scope text + clicked Check Scope. Network response: 500 Internal Server Error from /api/ai/scope-check. Latency 20.6s before timeout (suggests server-side AI provider failure OR endpoint bug). UI does NOT surface the error к user — Check Scope button returns к idle state, no error toast, no error inline. Silent failure.",
-    "steps_to_reproduce": [
-      "1. /projects/new",
-      "2. Scroll к AI Scope Checker section",
-      "3. Paste scope text 200+ chars",
-      "4. Click Check Scope",
-      "5. Observe 500 response в network tab + no UI error"
+      "2. Look \u0434\u043b\u044f \"/Project Brief|AI Brief/i\" section"
     ],
     "console_errors": []
   },
@@ -401,8 +381,8 @@
     "screenshot": "auth-work/projects-ai-scope-checker-RESULT.png",
     "category": "broken-ai",
     "severity": "major",
-    "title": "AI Scope Checker — server error не surfaced к user",
-    "description": "When /api/ai/scope-check returns 500, the UI does not show error toast, inline error message, or any indication к the user that the action failed. Check Scope button returns к clickable state silently. User assumes nothing happened, retries, gets same silent failure.",
+    "title": "AI Scope Checker \u2014 server error \u043d\u0435 surfaced \u043a user",
+    "description": "When /api/ai/scope-check returns 500, the UI does not show error toast, inline error message, or any indication \u043a the user that the action failed. Check Scope button returns \u043a clickable state silently. User assumes nothing happened, retries, gets same silent failure.",
     "steps_to_reproduce": [
       "1. Trigger Check Scope while endpoint returns 500",
       "2. Observe UI feedback (none)"
@@ -411,7 +391,7 @@
   },
   {
     "id": "FA-021",
-    "tested_at": "2026-05-14T16:26:53.919277+00:00",
+    "tested_at": "2026-05-14T16:50:26.871515+00:00",
     "tested_as": "krokusstudia2@gmail.com",
     "viewport": "desktop",
     "url": "https://www.lancerwise.com/projects/62924406-138c-443f-9654-831b73bf2398",
@@ -419,33 +399,14 @@
     "screenshot": "auth-work/projects-detail-FULL.png",
     "category": "broken-ai",
     "severity": "minor",
-    "title": "Project detail: AI Status Summary / Project Brief / Generate Milestones not visible",
-    "description": "Per project AI feature inventory, /projects/[id] should expose AI Status Summary + AI Project Brief + Generate Milestones. None of these headings or buttons located on tested project (new project, minimal data). May be feature-not-shipped OR data-conditional (requires project to have milestones/tasks/time entries first). Worth confirming with product owner whether these features exist.",
+    "title": "Pass 2 could \u043d\u0435 trigger AI Status Summary/Brief/Milestones on minimal project (selector limitation OR conditional rendering)",
+    "description": "Pass 2 audit could not locate 'AI Status Summary' / 'AI Project Brief' / 'Generate Milestones' buttons on /projects/[id] \u0434\u043b\u044f the tested project (minimal data \u2014 1 active project, no tasks, no time entries). HOWEVER: Batch 3 Section 4 audit (Pass 1, screenshot s4-05c) DID capture AI Status Summary working \u0441 output 'I've completed the initial wireframes \u0434\u043b\u044f Q2 Product Redesign...'. Conclusion: features EXIST and DO work, but were either (a) conditionally rendered based on project state (tasks/time entries/milestones required) OR (b) selector miss \u0432 this pass. NOT a Phase 11 regression \u2014 features confirmed alive \u0432 prior audit. Re-test on populated project post-launch \u043a confirm conditional logic + document trigger conditions.",
     "steps_to_reproduce": [
       "1. /projects (list)",
-      "2. Open existing project detail",
-      "3. Search для 'AI Status Summary', 'AI Project Brief', 'Generate Milestones'"
-    ],
-    "console_errors": []
-  },
-  {
-    "id": "FA-025",
-    "tested_at": "2026-05-14T16:38:25.656Z",
-    "tested_as": "krokusstudia2@gmail.com",
-    "viewport": "desktop",
-    "url": "https://www.lancerwise.com/contracts/analyze?contractId=921761cf-05b2-4bb1-a9aa-cc3ba117f60b",
-    "route": "/contracts/analyze",
-    "screenshot": "auth-contracts/contracts-full-risk-PRELOADED.png",
-    "category": "broken-ai",
-    "severity": "minor",
-    "title": "Full Risk Report opens с contract text pre-loaded but не auto-analyzed",
-    "description": "Clicking \"Full Risk Report\" CTA on contract detail navigates к /contracts/analyze?contractId=... с the contract text auto-loaded в the textarea. User then must click ANOTHER \"Analyze Contract\" button к trigger AI. Extra click adds friction. Recommend either (a) auto-analyze on landing (one less click) с loading spinner, OR (b) rename CTA к \"Open Risk Analyzer\" к set correct expectation.",
-    "steps_to_reproduce": [
-      "1. /contracts/[id]",
-      "2. Click Full Risk Report",
-      "3. Observe contract pre-loaded но no analysis fired",
-      "4. Click Analyze Contract",
-      "5. AI fires only after second click"
+      "2. Open project \u0441 minimal data",
+      "3. Search \u0434\u043b\u044f 'AI Status Summary' / 'AI Project Brief' / 'Generate Milestones'",
+      "4. Compare \u043a Batch 3 Section 4 s4-05c screenshot showing feature working",
+      "5. Re-test on populated project \u043a determine conditional rendering rules"
     ],
     "console_errors": []
   },
@@ -459,14 +420,35 @@
     "screenshot": "auth-contracts/contracts-full-risk-ACTUAL-RESULT.png",
     "category": "broken-ai",
     "severity": "critical",
-    "title": "AI Contract Risk Analyzer fails: 'Analysis failed — please try again' after 46s wait",
-    "description": "Opened /contracts/analyze?contractId=... (contract auto-loaded в textarea, 4231 chars). Clicked 'Analyze Contract' button. After 46 seconds, page rendered 'Analysis failed — please try again' inline error. No /api/ai/* call observed in network listener (analyzer may use different endpoint path OR endpoint hung). Note: error IS surfaced к user (unlike FA-020 silent scope-check failure). But feature broken end-to-end.",
+    "title": "AI Contract Risk Analyzer fails: 'Analysis failed \u2014 please try again' after 46s wait",
+    "description": "Opened /contracts/analyze?contractId=... (contract auto-loaded \u0432 textarea, 4231 chars). Clicked 'Analyze Contract' button. After 46 seconds, page rendered 'Analysis failed \u2014 please try again' inline error. No /api/ai/* call observed in network listener (analyzer may use different endpoint path OR endpoint hung). Note: error IS surfaced \u043a user (unlike FA-020 silent scope-check failure). But feature broken end-to-end.",
     "steps_to_reproduce": [
       "1. Generate contract at /contracts/generate",
       "2. On detail page click 'Full Risk Report'",
       "3. Click 'Analyze Contract' on the analyzer page",
       "4. Wait 30-60s",
-      "5. Observe 'Analysis failed — please try again' error"
+      "5. Observe 'Analysis failed \u2014 please try again' error"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-025",
+    "tested_at": "2026-05-14T16:38:25.656Z",
+    "tested_as": "krokusstudia2@gmail.com",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/contracts/analyze?contractId=921761cf-05b2-4bb1-a9aa-cc3ba117f60b",
+    "route": "/contracts/analyze",
+    "screenshot": "auth-contracts/contracts-full-risk-PRELOADED.png",
+    "category": "broken-ai",
+    "severity": "minor",
+    "title": "Full Risk Report opens \u0441 contract text pre-loaded but \u043d\u0435 auto-analyzed",
+    "description": "Clicking \"Full Risk Report\" CTA on contract detail navigates \u043a /contracts/analyze?contractId=... \u0441 the contract text auto-loaded \u0432 the textarea. User then must click ANOTHER \"Analyze Contract\" button \u043a trigger AI. Extra click adds friction. Recommend either (a) auto-analyze on landing (one less click) \u0441 loading spinner, OR (b) rename CTA \u043a \"Open Risk Analyzer\" \u043a set correct expectation.",
+    "steps_to_reproduce": [
+      "1. /contracts/[id]",
+      "2. Click Full Risk Report",
+      "3. Observe contract pre-loaded \u043d\u043e no analysis fired",
+      "4. Click Analyze Contract",
+      "5. AI fires only after second click"
     ],
     "console_errors": []
   },
@@ -484,7 +466,7 @@
     "description": "After filling freelancer/client/email/service-type/scope/budget/timeline, button remains disabled. Required-empty: [\"Describe the project: what needs to be built, key requirements, special constraints...\"]",
     "steps_to_reproduce": [
       "1. /proposals",
-      "2. Fill all visible fields на top form",
+      "2. Fill all visible fields \u043d\u0430 top form",
       "3. Observe Generate Proposal disabled"
     ],
     "console_errors": []
