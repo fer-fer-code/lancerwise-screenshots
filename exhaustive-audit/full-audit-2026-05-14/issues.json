@@ -46,7 +46,7 @@
     "description": "Authenticated route returned 404.",
     "steps_to_reproduce": [
       "1. Login as krokusstudia2@gmail.com",
-      "2. Navigate к https://www.lancerwise.com/money/invoices/recurring/new"
+      "2. Navigate \u043a https://www.lancerwise.com/money/invoices/recurring/new"
     ],
     "console_errors": []
   },
@@ -63,7 +63,7 @@
     "description": "Authenticated route returned 404.",
     "steps_to_reproduce": [
       "1. Login as krokusstudia2@gmail.com",
-      "2. Navigate к https://www.lancerwise.com/expenses/new"
+      "2. Navigate \u043a https://www.lancerwise.com/expenses/new"
     ],
     "console_errors": []
   },
@@ -79,7 +79,7 @@
     "title": "/settings/billing HTTP 404",
     "description": "Settings route returned 404.",
     "steps_to_reproduce": [
-      "1. Navigate к https://www.lancerwise.com/settings/billing"
+      "1. Navigate \u043a https://www.lancerwise.com/settings/billing"
     ],
     "console_errors": []
   },
@@ -95,7 +95,7 @@
     "title": "/settings/security HTTP 404",
     "description": "Settings route returned 404.",
     "steps_to_reproduce": [
-      "1. Navigate к https://www.lancerwise.com/settings/security"
+      "1. Navigate \u043a https://www.lancerwise.com/settings/security"
     ],
     "console_errors": []
   },
@@ -111,7 +111,7 @@
     "title": "/settings/integrations HTTP 404",
     "description": "Settings route returned 404.",
     "steps_to_reproduce": [
-      "1. Navigate к https://www.lancerwise.com/settings/integrations"
+      "1. Navigate \u043a https://www.lancerwise.com/settings/integrations"
     ],
     "console_errors": []
   },
@@ -127,7 +127,7 @@
     "title": "/settings/ai-preferences HTTP 404",
     "description": "Settings route returned 404.",
     "steps_to_reproduce": [
-      "1. Navigate к https://www.lancerwise.com/settings/ai-preferences"
+      "1. Navigate \u043a https://www.lancerwise.com/settings/ai-preferences"
     ],
     "console_errors": []
   },
@@ -143,7 +143,7 @@
     "title": "/settings/onboarding HTTP 404",
     "description": "Settings route returned 404.",
     "steps_to_reproduce": [
-      "1. Navigate к https://www.lancerwise.com/settings/onboarding"
+      "1. Navigate \u043a https://www.lancerwise.com/settings/onboarding"
     ],
     "console_errors": []
   },
@@ -159,7 +159,7 @@
     "title": "/settings/upgrade HTTP 404",
     "description": "Settings route returned 404.",
     "steps_to_reproduce": [
-      "1. Navigate к https://www.lancerwise.com/settings/upgrade"
+      "1. Navigate \u043a https://www.lancerwise.com/settings/upgrade"
     ],
     "console_errors": []
   },
@@ -175,7 +175,7 @@
     "title": "/settings/account HTTP 404",
     "description": "Settings route returned 404.",
     "steps_to_reproduce": [
-      "1. Navigate к https://www.lancerwise.com/settings/account"
+      "1. Navigate \u043a https://www.lancerwise.com/settings/account"
     ],
     "console_errors": []
   },
@@ -191,7 +191,28 @@
     "title": "/settings/team HTTP 404",
     "description": "Settings route returned 404.",
     "steps_to_reproduce": [
-      "1. Navigate к https://www.lancerwise.com/settings/team"
+      "1. Navigate \u043a https://www.lancerwise.com/settings/team"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-013",
+    "tested_at": "2026-05-14T15:45:14.819Z",
+    "tested_as": "krokusstudia2@gmail.com",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/dashboard",
+    "route": "/dashboard",
+    "screenshot": "auth-dashboard/auth-dashboard-quick-invoice-SAVE-DISABLED.png",
+    "category": "broken-modal",
+    "severity": "major",
+    "title": "Quick Invoice: Save-as-Draft disabled when description empty, but Send-&-Create is active (inconsistent validation)",
+    "description": "Observed visually: Modal fields fill OK except description (\"What are you charging for?\" remains empty with placeholder visible). Save as Draft stays DISABLED while Send & Create button is ACTIVE. Two findings: (a) description is required \u0434\u043b\u044f Save as Draft but NOT \u0434\u043b\u044f Send & Create (inconsistent validation), (b) keyboard.fill on textarea via my generic selector did \u043d\u0435 attach \u2014 actual input element needs more specific selector.",
+    "steps_to_reproduce": [
+      "1. /dashboard press N",
+      "2. Select client",
+      "3. Fill amount 2500",
+      "4. Leave \"What are you charging for?\" empty",
+      "5. Note Save as Draft disabled but Send & Create enabled"
     ],
     "console_errors": []
   }
