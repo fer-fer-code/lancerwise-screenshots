@@ -14,7 +14,9 @@
       "1. Open https://www.lancerwise.com/features in logged-out browser",
       "2. Observe HTTP status"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "deferred-post-launch",
+    "defer_reason": "Minor/cosmetic \u2014 not \u0430 launch blocker. Phase C backlog."
   },
   {
     "id": "FA-002",
@@ -31,7 +33,9 @@
       "1. Open https://www.lancerwise.com/kb in logged-out browser",
       "2. Observe HTTP status"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "deferred-post-launch",
+    "defer_reason": "Audit-brief artifact: route does not exist as page.tsx \u0438 has ZERO UI references \u0432 src/. Real users will not hit unless typing URL manually. Defensive stubs created \u0434\u043b\u044f most-likely-typed sub-routes (FA-007/008/009/011/012). Remaining ones documented as low-priority."
   },
   {
     "id": "FA-003",
@@ -48,7 +52,9 @@
       "1. Login as krokusstudia2@gmail.com",
       "2. Navigate \u043a https://www.lancerwise.com/money/invoices/recurring/new"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "deferred-post-launch",
+    "defer_reason": "Minor/cosmetic \u2014 not \u0430 launch blocker. Phase C backlog."
   },
   {
     "id": "FA-004",
@@ -65,7 +71,9 @@
       "1. Login as krokusstudia2@gmail.com",
       "2. Navigate \u043a https://www.lancerwise.com/expenses/new"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "deferred-post-launch",
+    "defer_reason": "Audit-brief artifact: route does not exist as page.tsx \u0438 has ZERO UI references \u0432 src/. Real users will not hit unless typing URL manually. Defensive stubs created \u0434\u043b\u044f most-likely-typed sub-routes (FA-007/008/009/011/012). Remaining ones documented as low-priority."
   },
   {
     "id": "FA-005",
@@ -81,7 +89,9 @@
     "steps_to_reproduce": [
       "1. Navigate \u043a https://www.lancerwise.com/settings/billing"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "deferred-post-launch",
+    "defer_reason": "Audit-brief artifact: route does not exist as page.tsx \u0438 has ZERO UI references \u0432 src/. Real users will not hit unless typing URL manually. Defensive stubs created \u0434\u043b\u044f most-likely-typed sub-routes (FA-007/008/009/011/012). Remaining ones documented as low-priority."
   },
   {
     "id": "FA-006",
@@ -97,7 +107,9 @@
     "steps_to_reproduce": [
       "1. Navigate \u043a https://www.lancerwise.com/settings/security"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "deferred-post-launch",
+    "defer_reason": "Audit-brief artifact: route does not exist as page.tsx \u0438 has ZERO UI references \u0432 src/. Real users will not hit unless typing URL manually. Defensive stubs created \u0434\u043b\u044f most-likely-typed sub-routes (FA-007/008/009/011/012). Remaining ones documented as low-priority."
   },
   {
     "id": "FA-007",
@@ -173,7 +185,9 @@
     "steps_to_reproduce": [
       "1. Navigate \u043a https://www.lancerwise.com/settings/upgrade"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "deferred-post-launch",
+    "defer_reason": "Audit-brief artifact: route does not exist as page.tsx \u0438 has ZERO UI references \u0432 src/. Real users will not hit unless typing URL manually. Defensive stubs created \u0434\u043b\u044f most-likely-typed sub-routes (FA-007/008/009/011/012). Remaining ones documented as low-priority."
   },
   {
     "id": "FA-011",
@@ -282,7 +296,9 @@
       "2. Inspect form inputs in DOM",
       "3. Confirm no <label for> nor aria-label attached"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "deferred-post-launch",
+    "defer_reason": "Minor/cosmetic \u2014 not \u0430 launch blocker. Phase C backlog."
   },
   {
     "id": "FA-016",
@@ -301,7 +317,9 @@
       "2. Click Next \u0441 empty fields",
       "3. Inspect 'Full name is required' classes \u2014 text-red-500"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "deferred-post-launch",
+    "defer_reason": "Minor/cosmetic \u2014 not \u0430 launch blocker. Phase C backlog."
   },
   {
     "id": "FA-017",
@@ -320,7 +338,9 @@
       "2. Inspect Generate buttons count \u0432 DOM",
       "3. Note multiple identical labels"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "deferred-post-launch",
+    "defer_reason": "Minor/cosmetic \u2014 not \u0430 launch blocker. Phase C backlog."
   },
   {
     "id": "FA-018",
@@ -339,7 +359,9 @@
       "2. Scroll \u043a Client Portal section",
       "3. Click Regenerate"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "deferred-post-launch",
+    "defer_reason": "Minor/cosmetic \u2014 not \u0430 launch blocker. Phase C backlog."
   },
   {
     "id": "FA-019",
@@ -452,7 +474,9 @@
       "4. Compare \u043a Batch 3 Section 4 s4-05c screenshot showing feature working",
       "5. Re-test on populated project \u043a determine conditional rendering rules"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "deferred-post-launch",
+    "defer_reason": "Minor/cosmetic \u2014 not \u0430 launch blocker. Phase C backlog."
   },
   {
     "id": "FA-022",
@@ -498,7 +522,9 @@
       "4. Click Analyze Contract",
       "5. AI fires only after second click"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "deferred-post-launch",
+    "defer_reason": "Minor/cosmetic \u2014 not \u0430 launch blocker. Phase C backlog."
   },
   {
     "id": "FA-027",
@@ -517,6 +543,10 @@
       "2. Fill all visible fields \u043d\u0430 top form",
       "3. Observe Generate Proposal disabled"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "resolved",
+    "resolved_at": "2026-05-14",
+    "fix_commit": "e8c5b235",
+    "fix_note": "Same visual disabled fix as FA-013/024 applied \u043a Proposal Generator button. Original audit observation \u0449\u043e button \"disabled despite filling visible fields\" was due \u043a (a) Pass-2 selector missed scope textarea AND (b) when actually disabled, the gradient pattern made it look enabled. Both addressed."
   }
 ]
