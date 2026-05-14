@@ -312,5 +312,120 @@
       "3. Click Regenerate"
     ],
     "console_errors": []
+  },
+  {
+    "id": "FA-019",
+    "tested_at": "2026-05-14T16:24:42.546Z",
+    "tested_as": "krokusstudia2@gmail.com",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/projects/62924406-138c-443f-9654-831b73bf2398",
+    "route": "/projects/62924406-138c-443f-9654-831b73bf2398",
+    "screenshot": "auth-work/projects-ai-status-summary-NO-BUTTON.png",
+    "category": "broken-ai",
+    "severity": "minor",
+    "title": "AI feature \"AI Status Summary\": no trigger button found",
+    "description": "Could not locate any of: Generate, Refresh, Regenerate near \"/Status Summary|AI Status/i\" heading.",
+    "steps_to_reproduce": [
+      "1. Open project detail",
+      "2. Find \"/Status Summary|AI Status/i\" section",
+      "3. Look \u0434\u043b\u044f Generate button"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-020",
+    "tested_at": "2026-05-14T16:24:42.551Z",
+    "tested_as": "krokusstudia2@gmail.com",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/projects/62924406-138c-443f-9654-831b73bf2398",
+    "route": "/projects/62924406-138c-443f-9654-831b73bf2398",
+    "screenshot": "auth-work/projects-ai-brief-NOT-FOUND.png",
+    "category": "broken-ai",
+    "severity": "minor",
+    "title": "AI feature \"AI Project Brief\" heading not found \u043d\u0430 project detail",
+    "description": "Could not locate \"/Project Brief|AI Brief/i\" text section.",
+    "steps_to_reproduce": [
+      "1. Open project detail",
+      "2. Look \u0434\u043b\u044f \"/Project Brief|AI Brief/i\" section"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-021",
+    "tested_at": "2026-05-14T16:25:51.900Z",
+    "tested_as": "krokusstudia2@gmail.com",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/projects/new",
+    "route": "/projects/new",
+    "screenshot": "auth-work/projects-ai-scope-checker-RESULT.png",
+    "category": "broken-ai",
+    "severity": "critical",
+    "title": "Project detail page lacks AI Status Summary/Brief/Milestones (features live \u043d\u0430 /projects/new not /[id])",
+    "description": "AI features previously assumed \u0434\u043b\u044f /projects/[id] (per audit brief): \"AI Status Summary\", \"AI Project Brief\", \"Generate Milestones\". Actual placement: \u043d\u0430 /projects/new \u2014 \"AI Name Generator\" + \"AI Milestones\" + \"Generate with AI\" buttons exist on the creation form, \u043d\u0435 on the detail page. Implication: cannot regenerate status summary or brief AFTER project exists; only at creation time. Worth confirming \u0441 product whether status summary on /[id] should be added \u0434\u043b\u044f existing projects.",
+    "steps_to_reproduce": [
+      "1. /projects/new",
+      "2. Fill scope",
+      "3. Check Scope"
+    ],
+    "console_errors": [],
+    "ai_output_text": "@media (max-width: 767px) { .mobile-menu-btn { display: flex !important; } }ProjectsSearch...\u2318K1?PTT Back to ProjectsNew ProjectUse TemplateQuick templatesWeb DesignMobile AppSEO AuditBrandingAutomationProject Title *AI Name GeneratorGenerateSaaS LaunchPadBrandForge InitiativePulse IdentityLumina RevampSparkLab BlueprintDescriptionAI MilestonesGenerate with AIClientNo clientMaria Rodriguez\u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434"
+  },
+  {
+    "id": "FA-019",
+    "tested_at": "2026-05-14T16:26:53.919277+00:00",
+    "tested_as": "krokusstudia2@gmail.com",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/projects/new",
+    "route": "/projects/new",
+    "screenshot": "auth-work/projects-ai-scope-checker-RESULT.png",
+    "category": "broken-ai",
+    "severity": "critical",
+    "title": "AI Scope Checker /api/ai/scope-check returns HTTP 500",
+    "description": "Filled scope text + clicked Check Scope. Network response: 500 Internal Server Error from /api/ai/scope-check. Latency 20.6s before timeout (suggests server-side AI provider failure OR endpoint bug). UI does NOT surface the error \u043a user \u2014 Check Scope button returns \u043a idle state, no error toast, no error inline. Silent failure.",
+    "steps_to_reproduce": [
+      "1. /projects/new",
+      "2. Scroll \u043a AI Scope Checker section",
+      "3. Paste scope text 200+ chars",
+      "4. Click Check Scope",
+      "5. Observe 500 response \u0432 network tab + no UI error"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-020",
+    "tested_at": "2026-05-14T16:26:53.919277+00:00",
+    "tested_as": "krokusstudia2@gmail.com",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/projects/new",
+    "route": "/projects/new",
+    "screenshot": "auth-work/projects-ai-scope-checker-RESULT.png",
+    "category": "broken-ai",
+    "severity": "major",
+    "title": "AI Scope Checker \u2014 server error \u043d\u0435 surfaced \u043a user",
+    "description": "When /api/ai/scope-check returns 500, the UI does not show error toast, inline error message, or any indication \u043a the user that the action failed. Check Scope button returns \u043a clickable state silently. User assumes nothing happened, retries, gets same silent failure.",
+    "steps_to_reproduce": [
+      "1. Trigger Check Scope while endpoint returns 500",
+      "2. Observe UI feedback (none)"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-021",
+    "tested_at": "2026-05-14T16:26:53.919277+00:00",
+    "tested_as": "krokusstudia2@gmail.com",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/projects/62924406-138c-443f-9654-831b73bf2398",
+    "route": "/projects/[id]",
+    "screenshot": "auth-work/projects-detail-FULL.png",
+    "category": "broken-ai",
+    "severity": "minor",
+    "title": "Project detail: AI Status Summary / Project Brief / Generate Milestones not visible",
+    "description": "Per project AI feature inventory, /projects/[id] should expose AI Status Summary + AI Project Brief + Generate Milestones. None of these headings or buttons located on tested project (new project, minimal data). May be feature-not-shipped OR data-conditional (requires project to have milestones/tasks/time entries first). Worth confirming with product owner whether these features exist.",
+    "steps_to_reproduce": [
+      "1. /projects (list)",
+      "2. Open existing project detail",
+      "3. Search \u0434\u043b\u044f 'AI Status Summary', 'AI Project Brief', 'Generate Milestones'"
+    ],
+    "console_errors": []
   }
 ]
