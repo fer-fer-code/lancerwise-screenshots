@@ -1,0 +1,198 @@
+[
+  {
+    "id": "FA-001",
+    "tested_at": "2026-05-14T14:25:02.825Z",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/features",
+    "route": "/features",
+    "screenshot": "public/public-features-page.png",
+    "category": "broken-route",
+    "severity": "major",
+    "title": "/features returns HTTP 404",
+    "description": "Public route /features returned 404 when accessed without auth.",
+    "steps_to_reproduce": [
+      "1. Open https://www.lancerwise.com/features in logged-out browser",
+      "2. Observe HTTP status"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-002",
+    "tested_at": "2026-05-14T14:26:19.684Z",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/kb",
+    "route": "/kb",
+    "screenshot": "public/public-kb.png",
+    "category": "broken-route",
+    "severity": "major",
+    "title": "/kb returns HTTP 404",
+    "description": "Public route /kb returned 404 when accessed without auth.",
+    "steps_to_reproduce": [
+      "1. Open https://www.lancerwise.com/kb in logged-out browser",
+      "2. Observe HTTP status"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-003",
+    "tested_at": "2026-05-14T14:29:08.534Z",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/money/invoices/recurring/new",
+    "route": "/money/invoices/recurring/new",
+    "screenshot": "auth-money/auth-money-recurring-new.png",
+    "category": "broken-route",
+    "severity": "major",
+    "title": "/money/invoices/recurring/new returns HTTP 404",
+    "description": "Authenticated route returned 404.",
+    "steps_to_reproduce": [
+      "1. Login as krokusstudia2@gmail.com",
+      "2. Navigate к https://www.lancerwise.com/money/invoices/recurring/new"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-004",
+    "tested_at": "2026-05-14T14:29:22.396Z",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/expenses/new",
+    "route": "/expenses/new",
+    "screenshot": "auth-money/auth-money-expenses-new.png",
+    "category": "broken-route",
+    "severity": "major",
+    "title": "/expenses/new returns HTTP 404",
+    "description": "Authenticated route returned 404.",
+    "steps_to_reproduce": [
+      "1. Login as krokusstudia2@gmail.com",
+      "2. Navigate к https://www.lancerwise.com/expenses/new"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-005",
+    "tested_at": "2026-05-14T14:40:04.814Z",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/settings/billing",
+    "route": "/settings/billing",
+    "screenshot": "auth-settings/auth-settings-billing.png",
+    "category": "broken-route",
+    "severity": "major",
+    "title": "/settings/billing HTTP 404",
+    "description": "Settings route returned 404.",
+    "steps_to_reproduce": [
+      "1. Navigate к https://www.lancerwise.com/settings/billing"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-006",
+    "tested_at": "2026-05-14T14:40:10.509Z",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/settings/security",
+    "route": "/settings/security",
+    "screenshot": "auth-settings/auth-settings-security.png",
+    "category": "broken-route",
+    "severity": "major",
+    "title": "/settings/security HTTP 404",
+    "description": "Settings route returned 404.",
+    "steps_to_reproduce": [
+      "1. Navigate к https://www.lancerwise.com/settings/security"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-007",
+    "tested_at": "2026-05-14T14:40:16.224Z",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/settings/integrations",
+    "route": "/settings/integrations",
+    "screenshot": "auth-settings/auth-settings-integrations.png",
+    "category": "broken-route",
+    "severity": "major",
+    "title": "/settings/integrations HTTP 404",
+    "description": "Settings route returned 404.",
+    "steps_to_reproduce": [
+      "1. Navigate к https://www.lancerwise.com/settings/integrations"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-008",
+    "tested_at": "2026-05-14T14:41:00.917Z",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/settings/ai-preferences",
+    "route": "/settings/ai-preferences",
+    "screenshot": "auth-settings/auth-settings-ai-preferences.png",
+    "category": "broken-route",
+    "severity": "major",
+    "title": "/settings/ai-preferences HTTP 404",
+    "description": "Settings route returned 404.",
+    "steps_to_reproduce": [
+      "1. Navigate к https://www.lancerwise.com/settings/ai-preferences"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-009",
+    "tested_at": "2026-05-14T14:41:21.651Z",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/settings/onboarding",
+    "route": "/settings/onboarding",
+    "screenshot": "auth-settings/auth-settings-onboarding.png",
+    "category": "broken-route",
+    "severity": "major",
+    "title": "/settings/onboarding HTTP 404",
+    "description": "Settings route returned 404.",
+    "steps_to_reproduce": [
+      "1. Navigate к https://www.lancerwise.com/settings/onboarding"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-010",
+    "tested_at": "2026-05-14T14:41:27.401Z",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/settings/upgrade",
+    "route": "/settings/upgrade",
+    "screenshot": "auth-settings/auth-settings-upgrade.png",
+    "category": "broken-route",
+    "severity": "major",
+    "title": "/settings/upgrade HTTP 404",
+    "description": "Settings route returned 404.",
+    "steps_to_reproduce": [
+      "1. Navigate к https://www.lancerwise.com/settings/upgrade"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-011",
+    "tested_at": "2026-05-14T14:41:40.497Z",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/settings/account",
+    "route": "/settings/account",
+    "screenshot": "auth-settings/auth-settings-account.png",
+    "category": "broken-route",
+    "severity": "major",
+    "title": "/settings/account HTTP 404",
+    "description": "Settings route returned 404.",
+    "steps_to_reproduce": [
+      "1. Navigate к https://www.lancerwise.com/settings/account"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-012",
+    "tested_at": "2026-05-14T14:41:46.199Z",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/settings/team",
+    "route": "/settings/team",
+    "screenshot": "auth-settings/auth-settings-team.png",
+    "category": "broken-route",
+    "severity": "major",
+    "title": "/settings/team HTTP 404",
+    "description": "Settings route returned 404.",
+    "steps_to_reproduce": [
+      "1. Navigate к https://www.lancerwise.com/settings/team"
+    ],
+    "console_errors": []
+  }
+]
