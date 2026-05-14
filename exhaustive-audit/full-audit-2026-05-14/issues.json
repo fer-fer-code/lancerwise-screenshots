@@ -215,5 +215,64 @@
       "5. Note Save as Draft disabled but Send & Create enabled"
     ],
     "console_errors": []
+  },
+  {
+    "id": "FA-014",
+    "tested_at": "2026-05-14T15:57:59.392576Z",
+    "tested_as": "krokusstudia2@gmail.com",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/clients/new",
+    "route": "/clients/new",
+    "screenshot": "auth-clients/clients-new-step2-FILLED.png",
+    "category": "z-index",
+    "severity": "critical",
+    "title": "Cookie consent banner intercepts pointer events on /clients/new step 2 Next button",
+    "description": "Cookie consent banner (role=dialog aria-label='Cookie consent', fixed bottom z-50) overlaps the step 2 Next button on /clients/new wizard. Playwright reports the banner's subtree intercepts the pointer events at the Next button's click coordinates \u2014 meaning user cannot advance the wizard until cookie banner dismissed. Banner does NOT block step 1 Next (page is shorter on step 1). This blocks the entire wizard \u043d\u0430 step 2+ for users who don't dismiss banner first.",
+    "steps_to_reproduce": [
+      "1. Login (cookie banner present)",
+      "2. /clients/new \u2014 banner visible bottom of viewport",
+      "3. Fill step 1 fields, click Next \u2014 step 1 Next works",
+      "4. On step 2, scroll \u043a Next button OR see it at bottom",
+      "5. Click Next \u2014 banner intercepts, click \u043d\u0438\u043a\u043e\u0433\u0434\u0430 reaches button"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-015",
+    "tested_at": "2026-05-14T16:00:43.301590+00:00",
+    "tested_as": "krokusstudia2@gmail.com",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/clients/new",
+    "route": "/clients/new",
+    "screenshot": "auth-clients/clients-new-step1-FILLED.png",
+    "category": "layout",
+    "severity": "minor",
+    "title": "Wizard step 1 inputs lack <label> markup (accessibility)",
+    "description": "Inputs (Full Name, Company, Email, Phone, Country) have no associated <label for=...> element. Playwright getByLabel() returns no match \u0434\u043b\u044f all 5 fields. Screen-reader users lose field context. Visible UI uses uppercase eyebrow text instead of semantic labels. Recommendation: wrap each input \u0432 <label> OR use aria-labelledby+visible label k preserve accessibility.",
+    "steps_to_reproduce": [
+      "1. Open /clients/new",
+      "2. Inspect form inputs in DOM",
+      "3. Confirm no <label for> nor aria-label attached"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-016",
+    "tested_at": "2026-05-14T16:00:43.301590+00:00",
+    "tested_as": "krokusstudia2@gmail.com",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/clients/new",
+    "route": "/clients/new",
+    "screenshot": "auth-clients/clients-new-step1-VALIDATION-ERROR.png",
+    "category": "layout",
+    "severity": "cosmetic",
+    "title": "Validation error color uses text-red-500 instead of design-system rose-500",
+    "description": "Empty-submit validation errors \u043d\u0430 /clients/new render \u0441 classes 'text-red-500' / 'text-red-400'. Design system pattern (per backlog_button_color_inconsistency \u0438 B3.20 destructive pattern) uses 'rose' palette. Inconsistency between red-500 (here) \u0438 rose-500 (Delete pattern elsewhere) suggests two color tokens for negative state.",
+    "steps_to_reproduce": [
+      "1. /clients/new",
+      "2. Click Next \u0441 empty fields",
+      "3. Inspect 'Full name is required' classes \u2014 text-red-500"
+    ],
+    "console_errors": []
   }
 ]
