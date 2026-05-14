@@ -274,5 +274,43 @@
       "3. Inspect 'Full name is required' classes \u2014 text-red-500"
     ],
     "console_errors": []
+  },
+  {
+    "id": "FA-017",
+    "tested_at": "2026-05-14T16:07:04.576546+00:00",
+    "tested_as": "krokusstudia2@gmail.com",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/clients/fa0aaaff-0844-44c6-a995-304d7a827b9d",
+    "route": "/clients/[id]",
+    "screenshot": "auth-clients/clients-ai-summary-RESULT.png",
+    "category": "broken-modal",
+    "severity": "minor",
+    "title": "Client detail page has 6+ buttons literally labeled 'Generate' (selector + UX ambiguity)",
+    "description": "On a single client detail page, multiple AI-feature buttons share the exact label 'Generate' (AI Client Summary, AI Project Brief, Win-back Email, Referral Request Email, etc.). Plus 'Regenerate' for portal link. Selector ambiguity + UX cognitive load. Recommend distinct labels e.g. 'Generate Summary' / 'Generate Brief' / 'Generate Email'.",
+    "steps_to_reproduce": [
+      "1. Open /clients/[id]",
+      "2. Inspect Generate buttons count \u0432 DOM",
+      "3. Note multiple identical labels"
+    ],
+    "console_errors": []
+  },
+  {
+    "id": "FA-018",
+    "tested_at": "2026-05-14T16:07:04.576546+00:00",
+    "tested_as": "krokusstudia2@gmail.com",
+    "viewport": "desktop",
+    "url": "https://www.lancerwise.com/clients/fa0aaaff-0844-44c6-a995-304d7a827b9d",
+    "route": "/clients/[id]",
+    "screenshot": "auth-clients/clients-ai-summary-RESULT.png",
+    "category": "z-index",
+    "severity": "minor",
+    "title": "Portal-link Regenerate confirmation modal uses z-[9999] inset-0 (good practice; document)",
+    "description": "When 'Regenerate' clicked on Client Portal link section, full-viewport modal \u0441 backdrop-blur opens asking 'Are you sure? Regenerate the portal link? The old link will stop working immediately.' c Cancel/Confirm. Good UX protection. Z-index z-[9999] highest in audit. Documenting that several modal layers exist (cookie banner z-50, portal regenerate z-9999); if more modals stack, layering rules need explicit docs.",
+    "steps_to_reproduce": [
+      "1. /clients/[id]",
+      "2. Scroll \u043a Client Portal section",
+      "3. Click Regenerate"
+    ],
+    "console_errors": []
   }
 ]
