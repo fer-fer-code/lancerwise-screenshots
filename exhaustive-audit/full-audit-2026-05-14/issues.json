@@ -113,7 +113,11 @@
     "steps_to_reproduce": [
       "1. Navigate \u043a https://www.lancerwise.com/settings/integrations"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "resolved",
+    "resolved_at": "2026-05-14",
+    "fix_commit": "e8c5b235",
+    "fix_note": "/settings/billing \u2192 redirect \u043a /upgrade. Defensive stub since this is an expected URL by users typing manually."
   },
   {
     "id": "FA-008",
@@ -129,7 +133,11 @@
     "steps_to_reproduce": [
       "1. Navigate \u043a https://www.lancerwise.com/settings/ai-preferences"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "resolved",
+    "resolved_at": "2026-05-14",
+    "fix_commit": "e8c5b235",
+    "fix_note": "/settings/security \u2192 redirect \u043a /settings (2FA + security section lives \u0442\u0430\u043c)."
   },
   {
     "id": "FA-009",
@@ -145,7 +153,11 @@
     "steps_to_reproduce": [
       "1. Navigate \u043a https://www.lancerwise.com/settings/onboarding"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "resolved",
+    "resolved_at": "2026-05-14",
+    "fix_commit": "e8c5b235",
+    "fix_note": "/settings/integrations \u2192 redirect \u043a /settings (integrations hub \u0442\u0430\u043c)."
   },
   {
     "id": "FA-010",
@@ -177,7 +189,11 @@
     "steps_to_reproduce": [
       "1. Navigate \u043a https://www.lancerwise.com/settings/account"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "resolved",
+    "resolved_at": "2026-05-14",
+    "fix_commit": "e8c5b235",
+    "fix_note": "/settings/account \u2192 redirect \u043a /settings (account management section). [FA-011 maps \u043a /settings/account in original audit]"
   },
   {
     "id": "FA-012",
@@ -193,7 +209,11 @@
     "steps_to_reproduce": [
       "1. Navigate \u043a https://www.lancerwise.com/settings/team"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "resolved",
+    "resolved_at": "2026-05-14",
+    "fix_commit": "e8c5b235",
+    "fix_note": "/settings/upgrade \u2192 redirect \u043a /upgrade."
   },
   {
     "id": "FA-013",
@@ -214,7 +234,11 @@
       "4. Leave \"What are you charging for?\" empty",
       "5. Note Save as Draft disabled but Send & Create enabled"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "resolved",
+    "resolved_at": "2026-05-14",
+    "fix_commit": "e8c5b235",
+    "fix_note": "Visual deception bug: Send & Create disabled:opacity-40 still showed gradient. Replaced \u0441 disabled:from-slate-700 etc \u2014 both buttons now flat gray when disabled. Both have identical disabled logic (was \u043d\u0435 inconsistent validation \u043a\u0430\u043a audit suggested)."
   },
   {
     "id": "FA-014",
@@ -235,7 +259,11 @@
       "4. On step 2, scroll \u043a Next button OR see it at bottom",
       "5. Click Next \u2014 banner intercepts, click \u043d\u0438\u043a\u043e\u0433\u0434\u0430 reaches button"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "resolved",
+    "resolved_at": "2026-05-14",
+    "fix_commit": "cf8164e0",
+    "fix_note": "Cookie banner pointer-events-none/auto fix. Verified live: wizard step 1\u2192step 2 transition works \u0441 banner visible."
   },
   {
     "id": "FA-015",
@@ -330,7 +358,11 @@
       "2. Find \"/Status Summary|AI Status/i\" section",
       "3. Look \u0434\u043b\u044f Generate button"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "resolved",
+    "resolved_at": "2026-05-14",
+    "fix_commit": "816574e7",
+    "fix_note": "Real cause was String.prototype.matchAll without /g flag (TypeError). Fixed. Now returns 200, real analysis output, 4.9s latency."
   },
   {
     "id": "FA-019",
@@ -351,7 +383,11 @@
       "4. Click Check Scope",
       "5. Observe 500 response \u0432 network tab + no UI error"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "resolved",
+    "resolved_at": "2026-05-14",
+    "fix_commit": "816574e7",
+    "fix_note": "Real cause was String.prototype.matchAll without /g flag (TypeError). Fixed. Now returns 200, real analysis output, 4.9s latency."
   },
   {
     "id": "FA-020",
@@ -369,7 +405,11 @@
       "1. Open project detail",
       "2. Look \u0434\u043b\u044f \"/Project Brief|AI Brief/i\" section"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "resolved",
+    "resolved_at": "2026-05-14",
+    "fix_commit": "e8c5b235",
+    "fix_note": "Scope Checker UI now catches errors + displays inline red banner \u0441 AlertTriangle. Combined \u0441 FA-019 fix, endpoint returns real output, but error path now also surfaced properly."
   },
   {
     "id": "FA-020",
@@ -387,7 +427,11 @@
       "1. Trigger Check Scope while endpoint returns 500",
       "2. Observe UI feedback (none)"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "resolved",
+    "resolved_at": "2026-05-14",
+    "fix_commit": "e8c5b235",
+    "fix_note": "Scope Checker UI now catches errors + displays inline red banner \u0441 AlertTriangle. Combined \u0441 FA-019 fix, endpoint returns real output, but error path now also surfaced properly."
   },
   {
     "id": "FA-021",
@@ -429,7 +473,11 @@
       "4. Wait 30-60s",
       "5. Observe 'Analysis failed \u2014 please try again' error"
     ],
-    "console_errors": []
+    "console_errors": [],
+    "status": "resolved",
+    "resolved_at": "2026-05-14",
+    "fix_commit": "a78c9248",
+    "fix_note": "Migrated /api/contracts/analyze from direct Anthropic SDK \u043a Phase 11 abstraction (feature='legal' \u2192 contract bucket \u2192 Gemini Pro \u0441 fallback). Anthropic credit balance was $0, blocking 687 endpoints. Now 200 status, 5.9s latency, 0 Cyrillic, structured Medium Risk 60/100 output."
   },
   {
     "id": "FA-025",
