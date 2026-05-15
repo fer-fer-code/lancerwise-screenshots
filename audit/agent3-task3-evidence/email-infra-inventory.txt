@@ -1,0 +1,70 @@
+=== Universal templates (3, in src/lib/email.ts) ===
+721:export function simpleNotificationTemplate(opts: SimpleNotificationOpts): string {
+817:export function infoCardNotificationTemplate(opts: InfoCardNotificationOpts): string {
+1002:export function richSummaryTemplate(opts: RichSummaryOpts): string {
+
+=== Legacy templates (src/lib/emailTemplates.ts, src/lib/email.ts pre-migration funcs) ===
+src/lib/email.ts:17
+src/lib/emailTemplates.ts:0
+
+=== Email infra files ===
+-rw-r--r--  1 myoffice  staff  45498 May 15 13:06 src/lib/email.ts
+-rw-r--r--  1 myoffice  staff  27281 May 12 00:06 src/lib/emailTemplates.ts
+
+src/emails/:
+total 8
+drwxr-xr-x@  3 myoffice  staff    96 May 12 00:07 .
+drwxr-xr-x  13 myoffice  staff   416 May 15 15:26 ..
+-rw-r--r--   1 myoffice  staff  2507 May 12 00:07 new-navigation-announcement.tsx
+
+src/lib/emails/:
+total 40
+drwxr-xr-x   4 myoffice  staff    128 May 12 00:07 .
+drwxr-xr-x  52 myoffice  staff   1664 May 16 00:29 ..
+-rw-r--r--   1 myoffice  staff   4170 May 12 00:07 WeeklyDigest.tsx
+-rw-r--r--   1 myoffice  staff  10553 May 11 23:56 shell.ts
+
+=== sendEmail({...}) call count ===
+     161
+
+=== Unique type: values used ===
+type: "image/png"
+type: "image/svg+xml"
+type: "website"
+type: 'Cheaper Offshore — We found someone who can do it for much less'
+type: 'Fixed Price Only — We can only do fixed price, not hourly'
+type: 'Hiring Internally — We might just hire someone in-house instead'
+type: 'Invoice due'
+type: 'Just Starting Out — We prefer someone with more experience'
+type: 'Milestone'
+type: 'Need it Faster — We need this done in half the time you quoted'
+type: 'No Portfolio — Can you show me similar work you\'
+type: 'Not Ready Yet — We\'
+type: 'Project'
+type: 'Rate Increase — Why are you charging more than last time?'
+type: 'Scope Creep — Can you just add this one more thing for free?'
+type: 'Too Expensive — Your rate is too high for our budget'
+type: 'Web Dev'
+type: 'Web Development'
+type: 'achievement'
+type: 'active_days'
+type: 'activity'
+type: 'add'
+type: 'admin'
+type: 'annual'
+type: 'annual_year_review'
+type: 'article'
+type: 'asset'
+type: 'authorization_code'
+type: 'base64'
+type: 'birthday'
+type: 'booking_request'
+type: 'break'
+type: 'breaking'
+type: 'broadcast'
+type: 'budget_alert'
+type: 'bullet'
+type: 'burnout_alert'
+type: 'call'
+type: 'case_study'
+type: 'check_in'

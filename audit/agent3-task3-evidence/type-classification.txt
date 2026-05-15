@@ -1,0 +1,30 @@
+src/app/(app)/tools/tax-calendar/TaxCalendarClient.tsx:21:  event_type: 'deadline' | 'payment' | 'filing' | 'reminder' | 'custom'
+src/app/api/invoices/send-reminder/route.ts:133:      type: 'reminder',
+src/app/api/tax-calendar/route.ts:19:      { title: 'W-9 / 1099 Forms Reminder', event_type: 'reminder', country: 'US', due_date: `${year}-01-31`, amount: null, description: 'Ensure W-9/1099 forms collected from clients', is_system: true },
+src/app/api/auto-reminders/send-now/route.ts:81:    type: 'reminder',
+src/app/api/email/route.ts:23:    const result = await sendEmail({ to, subject, html, userId: user.id, type: type || 'transactional' })
+src/app/api/email/route.ts:126:      type: 'digest',
+src/app/api/email/test/route.ts:31:  const result = await sendEmail({ to: toEmail, subject: 'LancerWise email test — it works!', html, userId: user.id, type: 'system' })
+src/app/api/email/time-report/route.ts:80:    type: 'digest',
+src/app/api/cron/client-anniversary/route.ts:150:        type: 'notification',
+src/app/api/cron/re-engagement/route.ts:66:      type: 'notification',
+src/app/api/cron/invoice-reminders/route.ts:187:          type: 'reminder',
+src/app/api/cron/invoice-reminders/route.ts:199:            type: 'system',
+src/app/api/cron/invoice-reminders/route.ts:316:          type: 'reminder',
+src/app/api/cron/expense-ratio-alert/route.ts:156:      type: isHighRisk ? 'reminder' : 'digest',
+src/app/api/cron/monthly-digest/route.ts:152:      type: 'digest',
+src/app/api/cron/overdue-escalation/route.ts:116:      type: 'critical',
+src/app/api/cron/time-midmonth-check/route.ts:164:        type: 'reminder',
+src/app/api/cron/time-reminder/route.ts:76:      type: 'reminder',
+src/app/api/cron/quarterly-tax-digest/route.ts:157:        type: 'digest',
+src/app/api/cron/quarter-sprint/route.ts:232:        type: 'reminder',
+src/app/api/cron/payment-reminders/route.ts:212:        type: 'reminder',
+src/app/api/cron/payment-reminders/route.ts:223:          type: 'system',
+src/app/api/cron/apply-late-fees/route.ts:49:    type: 'notification',
+src/app/api/cron/winback-reminder/route.ts:121:      type: 'digest',
+src/app/api/cron/api-key-digest/route.ts:106:      await sendEmail({ to: email, subject: 'Your LancerWise API activity this week', html, userId, type: 'digest' })
+src/app/api/cron/nps-survey/route.ts:107:              type: 'notification',
+src/app/api/cron/weekly-summary/route.ts:243:      const emailResult = await sendEmail({ to: emailTo, subject, html, userId, type: 'digest' })
+src/app/api/cron/rate-increase-reminder/route.ts:139:    await sendEmail({ to: user.email, userId: user.id, type: 'reminder', subject, html })
+src/app/api/cron/weekly-review-auto/route.ts:232:          type: 'digest',
+src/app/api/cron/contract-expiry/route.ts:83:      type: 'reminder',

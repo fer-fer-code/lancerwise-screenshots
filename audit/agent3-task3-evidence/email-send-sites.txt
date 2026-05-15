@@ -1,0 +1,383 @@
+src/app/portal/contract/[token]/page.tsx:6:import { sendEmail } from '@/lib/email'
+src/app/portal/contract/[token]/page.tsx:37:    sendEmail({
+src/app/portal/proposal/[token]/page.tsx:6:import { sendEmail } from '@/lib/email'
+src/app/portal/proposal/[token]/page.tsx:37:    sendEmail({
+src/app/(app)/clients/surveys/SurveyBuilderClient.tsx:131:  const [sendEmail, setSendEmail] = useState('')
+src/app/(app)/clients/surveys/SurveyBuilderClient.tsx:270:      const finalEmail = sendEmail || clientObj?.email || ''
+src/app/(app)/clients/surveys/SurveyBuilderClient.tsx:920:              <input value={sendEmail} onChange={(e) => setSendEmail(e.target.value)} style={inputStyle} placeholder="client@example.com" type="email" />
+src/app/(app)/clients/[id]/RequestTestimonialButton.tsx:40:  async function sendEmail() {
+src/app/(app)/clients/[id]/RequestTestimonialButton.tsx:77:            onClick={sendEmail}
+src/app/(app)/tools/proposal-followup/ProposalFollowupClient.tsx:146:  async function sendEmail(touchIndex: number) {
+src/app/(app)/tools/proposal-followup/ProposalFollowupClient.tsx:537:                            onClick={() => sendEmail(activeTab)}
+src/app/(app)/analytics/churn-risk/ChurnRiskClient.tsx:179:  async function sendEmail() {
+src/app/(app)/analytics/churn-risk/ChurnRiskClient.tsx:544:                  onClick={sendEmail}
+src/app/auth/callback/route.ts:3:import { sendEmail } from '@/lib/email'
+src/app/auth/callback/route.ts:196:          sendEmail({
+src/app/api/v1/invoices/[id]/remind/route.ts:4:import { sendEmail, invoiceOverdueTemplate } from '@/lib/email'
+src/app/api/v1/invoices/[id]/remind/route.ts:75:  await sendEmail({ to: recipientEmail, subject, html, userId: auth.userId, type: 'invoice_reminder' })
+src/app/api/v1/invoices/[id]/send/route.ts:4:import { sendEmail, invoiceComposeTemplate } from '@/lib/email'
+src/app/api/v1/invoices/[id]/send/route.ts:74:  const result = await sendEmail({
+src/app/api/v1/invoices/[id]/resend/route.ts:4:import { sendEmail } from '@/lib/email'
+src/app/api/v1/invoices/[id]/resend/route.ts:42:  await sendEmail({
+src/app/api/v1/proposals/[id]/send/route.ts:4:import { sendEmail, infoCardNotificationTemplate, type InfoCardKVPair } from '@/lib/email'
+src/app/api/v1/proposals/[id]/send/route.ts:74:  await sendEmail({ to: recipientEmail, subject: `Proposal from ${freelancerName}`, html, userId: auth.userId, type: 'proposal_sent' })
+src/app/api/clients/statement-email/route.ts:3:import { sendEmail, richSummaryTemplate } from '@/lib/email'
+src/app/api/clients/statement-email/route.ts:80:  const result = await sendEmail({
+src/app/api/clients/testimonial-email/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/clients/testimonial-email/route.ts:46:  const result = await sendEmail({
+src/app/api/clients/welcome/route.ts:3:import { sendEmail, clientWelcomeTemplate } from '@/lib/email'
+src/app/api/clients/welcome/route.ts:33:  const result = await sendEmail({
+src/app/api/clients/special-dates/send-greeting/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/clients/special-dates/send-greeting/route.ts:101:    await sendEmail({
+src/app/api/clients/[id]/onboarding/route.ts:3:import { sendEmail } from '@/lib/email'
+src/app/api/clients/[id]/onboarding/route.ts:76:    const result = await sendEmail({
+src/app/api/clients/[id]/winback-send/route.ts:44:  const emailRes = await fetch('https://api.resend.com/emails', {
+src/app/api/clients/onboarding-welcome/route.ts:3:import { sendEmail } from '@/lib/email'
+src/app/api/clients/onboarding-welcome/route.ts:68:    const result = await sendEmail({
+src/app/api/clients/broadcast/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/clients/broadcast/route.ts:135:      const result = await sendEmail({
+src/app/api/clients/winback-send/route.ts:142:          await fetch('https://api.resend.com/emails', {
+src/app/api/settings/send-test-email/route.ts:22:    const res = await fetch('https://api.resend.com/emails', {
+src/app/api/satisfaction-surveys/respond/[token]/route.ts:4:import { sendEmail, infoCardNotificationTemplate, type InfoCardKVPair } from '@/lib/email'
+src/app/api/satisfaction-surveys/respond/[token]/route.ts:133:        sendEmail({
+src/app/api/tools/status-update/send/route.ts:59:    const res = await fetch('https://api.resend.com/emails', {
+src/app/api/tools/handoff/[id]/send/route.ts:96:    const res = await fetch('https://api.resend.com/emails', {
+src/app/api/tools/reactivation/send/route.ts:32:    const res = await fetch('https://api.resend.com/emails', {
+src/app/api/tools/price-increase/send/route.ts:24:    await resend.emails.send({
+src/app/api/tools/proposal-followup/send/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/tools/proposal-followup/send/route.ts:34:  const result = await sendEmail({
+src/app/api/tools/win-back/send/route.ts:23:    const res = await fetch('https://api.resend.com/emails', {
+src/app/api/tools/timezone-planner/invite/route.ts:194:      const emailRes = await fetch('https://api.resend.com/emails', {
+src/app/api/tools/newsletter/send/route.ts:45:      fetch('https://api.resend.com/emails', {
+src/app/api/tools/meeting-notes/[id]/send-summary/route.ts:110:    await resend.emails.send({
+src/app/api/portal/[token]/contact/route.ts:3:import { sendEmail, infoCardNotificationTemplate } from '@/lib/email'
+src/app/api/portal/[token]/contact/route.ts:92:      await sendEmail({
+src/app/api/portal/[token]/messages/route.ts:3:import { sendEmail, portalMessageTemplate } from '@/lib/email'
+src/app/api/portal/[token]/messages/route.ts:75:      sendEmail({
+src/app/api/portal/proposal/[token]/respond/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/portal/proposal/[token]/respond/route.ts:83:    await sendEmail({ to: profile.email, subject, html })
+src/app/api/portal/time-approval/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardKVPair } from '@/lib/email'
+src/app/api/portal/time-approval/route.ts:119:      await sendEmail({
+src/app/api/portal/testimonial/[token]/submit/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/portal/testimonial/[token]/submit/route.ts:62:    await sendEmail({
+src/app/api/portal/track-view/route.ts:9:import { sendEmail, invoiceViewedTemplate } from '@/lib/email'
+src/app/api/portal/track-view/route.ts:81:          sendEmail({
+src/app/api/pricing-page/contact/route.ts:22:    const res = await fetch('https://api.resend.com/emails', {
+src/app/api/questionnaires/fill/[token]/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/questionnaires/fill/[token]/route.ts:102:      sendEmail({
+src/app/api/testimonials/collect/[token]/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/testimonials/collect/[token]/route.ts:134:        sendEmail({
+src/app/api/testimonials/submit/[token]/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/testimonials/submit/[token]/route.ts:142:      sendEmail({
+src/app/api/testimonials/request/route.ts:82:      const emailRes = await fetch('https://api.resend.com/emails', {
+src/app/api/invoices/status/route.ts:3:import { sendEmail, paymentReceiptTemplate } from '@/lib/email'
+src/app/api/invoices/status/route.ts:58:          await sendEmail({
+src/app/api/invoices/send-reminder/route.ts:4:import { sendEmail, infoCardNotificationTemplate, type InfoCardKVPair } from '@/lib/email'
+src/app/api/invoices/send-reminder/route.ts:127:    const result = await sendEmail({
+src/app/api/invoices/[id]/route.ts:4:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/invoices/[id]/route.ts:116:      sendEmail({
+src/app/api/invoices/[id]/route.ts:189:          sendEmail({
+src/app/api/invoices/[id]/payments/route.ts:3:import { sendEmail, paymentReceiptTemplate } from '@/lib/email'
+src/app/api/invoices/[id]/payments/route.ts:139:            await sendEmail({
+src/app/api/invoices/[id]/installments/[installmentId]/remind/route.ts:3:import { sendEmail, infoCardNotificationTemplate } from '@/lib/email'
+src/app/api/invoices/[id]/installments/[installmentId]/remind/route.ts:84:  const result = await sendEmail({
+src/app/api/invoices/[id]/send-email/route.ts:3:import { sendEmail, invoiceComposeTemplate } from '@/lib/email'
+src/app/api/invoices/[id]/send-email/route.ts:87:  const result = await sendEmail({
+src/app/api/invoices/[id]/send-reminder/route.ts:3:import { sendEmail, infoCardNotificationTemplate } from '@/lib/email'
+src/app/api/invoices/[id]/send-reminder/route.ts:78:  const result = await sendEmail({
+src/app/api/invoices/overdue/route.ts:3:import { sendEmail, invoiceOverdueTemplate } from '@/lib/email'
+src/app/api/invoices/overdue/route.ts:42:    await sendEmail({
+src/app/api/quotes/respond/route.ts:2:import { sendEmail, infoCardNotificationTemplate } from '@/lib/email'
+src/app/api/quotes/respond/route.ts:143:    await sendEmail({
+src/app/api/quotes/[id]/accept/route.ts:48:      const { sendEmail, simpleNotificationTemplate } = await import('@/lib/email')
+src/app/api/quotes/[id]/accept/route.ts:70:      await sendEmail({ to: freelancerEmail, subject: `Quote accepted — ${q.title}`, html })
+src/app/api/quotes/[id]/send/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardLineItem } from '@/lib/email'
+src/app/api/quotes/[id]/send/route.ts:92:  await sendEmail({
+src/app/api/quotes/send/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardLineItem } from '@/lib/email'
+src/app/api/quotes/send/route.ts:77:  await sendEmail({
+src/app/api/email-templates/[id]/use/route.ts:54:    const resendRes = await fetch('https://api.resend.com/emails', {
+src/app/api/booking/create/route.ts:3:import { sendEmail, newBookingTemplate } from '@/lib/email'
+src/app/api/booking/create/route.ts:146:      await fetch('https://api.resend.com/emails', {
+src/app/api/booking/create/route.ts:188:      sendEmail({
+src/app/api/referrals/[id]/thank-you/route.ts:96:  const emailRes = await fetch('https://api.resend.com/emails', {
+src/app/api/contracts/send/route.ts:4:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/contracts/send/route.ts:45:  // Send to client using sendEmail helper (unsubscribe-safe, logged)
+src/app/api/contracts/send/route.ts:62:    sendEmail({
+src/app/api/contracts/sign/route.ts:3:import { sendEmail, infoCardNotificationTemplate } from '@/lib/email'
+src/app/api/contracts/sign/route.ts:143:      await sendEmail({
+src/app/api/contracts/sign/[token]/route.ts:4:import { sendEmail, contractSignedTemplate } from '@/lib/email'
+src/app/api/contracts/sign/[token]/route.ts:107:      sendEmail({
+src/app/api/projects/milestone-complete/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardKVPair } from '@/lib/email'
+src/app/api/projects/milestone-complete/route.ts:77:  await sendEmail({
+src/app/api/projects/[id]/route.ts:4:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/projects/[id]/route.ts:158:        sendEmail({
+src/app/api/projects/[id]/send-survey/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/projects/[id]/send-survey/route.ts:152:    const emailResult = await sendEmail({
+src/app/api/projects/[id]/send-status/route.ts:2:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/projects/[id]/send-status/route.ts:150:    const emailResult = await sendEmail({
+src/app/api/projects/[id]/status-report/route.ts:195:  const { error: sendError } = await resend.emails.send({
+src/app/api/digest/test/route.ts:5:import { sendEmail } from '@/lib/email'
+src/app/api/digest/test/route.ts:33:  const result = await sendEmail({ to: data.toEmail, subject, html, userId: user.id, type: 'digest_test' })
+src/app/api/digest/send-now/route.ts:48:  const res = await fetch('https://api.resend.com/emails', {
+src/app/api/contact-form/route.ts:41:    const res = await fetch(RESEND_API, {
+src/app/api/workflows/[id]/run/route.ts:41:        const emailRes = await fetch('https://api.resend.com/emails', {
+src/app/api/intake-forms/public/[token]/submit/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardKVPair } from '@/lib/email'
+src/app/api/intake-forms/public/[token]/submit/route.ts:95:      sendEmail({
+src/app/api/nps/route.ts:91:      await resend.emails.send({
+src/app/api/nps/respond/[token]/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardKVPair } from '@/lib/email'
+src/app/api/nps/respond/[token]/route.ts:100:        sendEmail({
+src/app/api/intake/[slug]/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardKVPair } from '@/lib/email'
+src/app/api/intake/[slug]/route.ts:120:      sendEmail({
+src/app/api/invoice-aging/remind/route.ts:3:import { sendEmail } from '@/lib/email'
+src/app/api/invoice-aging/remind/route.ts:88:  await sendEmail({
+src/app/api/digest-preferences/send-now/route.ts:40:  const res = await fetch('https://api.resend.com/emails', {
+src/app/api/milestones/route.ts:4:import { sendEmail } from '@/lib/email'
+src/app/api/milestones/route.ts:206:    await sendEmail({
+src/app/api/portfolio/contact/route.ts:86:    const resendRes = await fetch('https://api.resend.com/emails', {
+src/app/api/surveys/submit/route.ts:8:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/surveys/submit/route.ts:111:        sendEmail({
+src/app/api/surveys/public/[token]/route.ts:8:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/surveys/public/[token]/route.ts:113:        sendEmail({
+src/app/api/surveys/send/route.ts:23:    const res = await fetch('https://api.resend.com/emails', {
+src/app/api/availability/public/[handle]/inquire/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardKVPair } from '@/lib/email'
+src/app/api/availability/public/[handle]/inquire/route.ts:93:      sendEmail({
+src/app/api/finance/aging/batch-remind/route.ts:87:      await resend.emails.send({
+src/app/api/monthly-review/send-email/route.ts:2:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/monthly-review/send-email/route.ts:121:  await sendEmail({
+src/app/api/invoice-payments/route.ts:3:import { sendEmail, paymentReceiptTemplate, freelancerPaymentAlertTemplate } from '@/lib/email'
+src/app/api/invoice-payments/route.ts:117:      await sendEmail({
+src/app/api/invoice-payments/route.ts:133:      sendEmail({
+src/app/api/time-entries/submit-for-approval/route.ts:3:import { sendEmail, infoCardNotificationTemplate } from '@/lib/email'
+src/app/api/time-entries/submit-for-approval/route.ts:116:      await sendEmail({
+src/app/api/survey/project/[token]/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardKVPair } from '@/lib/email'
+src/app/api/survey/project/[token]/route.ts:142:        sendEmail({
+src/app/api/survey/[token]/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardKVPair } from '@/lib/email'
+src/app/api/survey/[token]/route.ts:94:        sendEmail({
+src/app/api/auto-reminders/send-now/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardKVPair } from '@/lib/email'
+src/app/api/auto-reminders/send-now/route.ts:75:  await sendEmail({
+src/app/api/auto-reminders/send-now/[invoiceId]/route.ts:72:    await resend.emails.send({
+src/app/api/booking-requests/route.ts:4:import { sendEmail, infoCardNotificationTemplate, type InfoCardKVPair } from '@/lib/email'
+src/app/api/booking-requests/route.ts:134:      sendEmail({
+src/app/api/outreach/send/route.ts:3:import { sendEmail } from '@/lib/email'
+src/app/api/outreach/send/route.ts:61:  const result = await sendEmail({
+src/app/api/sign/[token]/route.ts:3:import { sendEmail, simpleNotificationTemplate, infoCardNotificationTemplate } from '@/lib/email'
+src/app/api/sign/[token]/route.ts:112:      await sendEmail({
+src/app/api/sign/[token]/route.ts:141:      await sendEmail({
+src/app/api/reminders/test/route.ts:108:    const res = await fetch('https://api.resend.com/emails', {
+src/app/api/email/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/email/route.ts:23:    const result = await sendEmail({ to, subject, html, userId: user.id, type: type || 'transactional' })
+src/app/api/email/route.ts:121:    await sendEmail({
+src/app/api/email/contract/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/email/contract/route.ts:46:  const result = await sendEmail({
+src/app/api/email/test/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/email/test/route.ts:31:  const result = await sendEmail({ to: toEmail, subject: 'LancerWise email test — it works!', html, userId: user.id, type: 'system' })
+src/app/api/email/client-welcome/route.ts:3:import { sendEmail, clientWelcomeTemplate } from '@/lib/email'
+src/app/api/email/client-welcome/route.ts:31:  const result = await sendEmail({
+src/app/api/email/time-report/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/email/time-report/route.ts:75:  await sendEmail({
+src/app/api/email/send/route.ts:3:import { sendEmail, invoiceSentTemplate, invoiceOverdueTemplate } from '@/lib/email'
+src/app/api/email/send/route.ts:37:    result = await sendEmail({
+src/app/api/email/send/route.ts:53:    result = await sendEmail({
+src/app/api/onboarding/[id]/send-welcome/route.ts:55:    await resend.emails.send({
+src/app/api/proposals/v2/public/[token]/route.ts:3:import { sendEmail, proposalAcceptedTemplate } from '@/lib/email'
+src/app/api/proposals/v2/public/[token]/route.ts:89:        sendEmail({
+src/app/api/proposals/review/[token]/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/proposals/review/[token]/route.ts:142:      await sendEmail({
+src/app/api/proposals/[id]/followup/route.ts:3:import { sendEmail } from '@/lib/email'
+src/app/api/proposals/[id]/followup/route.ts:56:  const result = await sendEmail({
+src/app/api/proposals/[id]/view/route.ts:3:import { sendEmail, proposalViewedTemplate } from '@/lib/email'
+src/app/api/proposals/[id]/view/route.ts:77:        await sendEmail({
+src/app/api/proposals/[id]/send/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/proposals/[id]/send/route.ts:81:  const result = await sendEmail({
+src/app/api/cron/client-anniversary/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/client-anniversary/route.ts:145:      await sendEmail({
+src/app/api/cron/re-engagement/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/cron/re-engagement/route.ts:61:    const result = await sendEmail({
+src/app/api/cron/friday-summary/route.ts:5:import { sendEmail } from '@/lib/email'
+src/app/api/cron/friday-summary/route.ts:61:      await sendEmail({
+src/app/api/cron/revenue-milestone/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/revenue-milestone/route.ts:127:      await sendEmail({
+src/app/api/cron/invoice-reminders/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardKVPair } from '@/lib/email'
+src/app/api/cron/invoice-reminders/route.ts:180:        const result = await sendEmail({
+src/app/api/cron/invoice-reminders/route.ts:192:        // sendEmail won't apply the per-client unsub check.
+src/app/api/cron/invoice-reminders/route.ts:194:          await sendEmail({
+src/app/api/cron/invoice-reminders/route.ts:310:        const result = await sendEmail({
+src/app/api/cron/annual-year-review/route.ts:10:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/annual-year-review/route.ts:211:      await sendEmail({
+src/app/api/cron/weekly-report/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/weekly-report/route.ts:182:      const result = await sendEmail({
+src/app/api/cron/expense-ratio-alert/route.ts:8:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/expense-ratio-alert/route.ts:153:    await sendEmail({
+src/app/api/cron/burnout-alert/route.ts:9:import { sendEmail } from '@/lib/email'
+src/app/api/cron/burnout-alert/route.ts:135:      await sendEmail({
+src/app/api/cron/auto-invoice-retainers/route.ts:3:import { sendEmail, infoCardNotificationTemplate } from '@/lib/email'
+src/app/api/cron/auto-invoice-retainers/route.ts:138:      // Email — use sendEmail helper (respects unsubscribe + logs)
+src/app/api/cron/auto-invoice-retainers/route.ts:172:      sendEmail({
+src/app/api/cron/special-dates-greeting/route.ts:2:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/cron/special-dates-greeting/route.ts:139:        await sendEmail({
+src/app/api/cron/proposal-followups/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/proposal-followups/route.ts:112:      const result = await sendEmail({ to: recipientEmail, subject, html, userId, type: 'proposal_followup' })
+src/app/api/cron/monthly-digest/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/monthly-digest/route.ts:130:    await sendEmail({
+src/app/api/cron/overdue-escalation/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/overdue-escalation/route.ts:107:      // collection workflow). sendEmail's fallback footer is also
+src/app/api/cron/overdue-escalation/route.ts:111:    const result = await sendEmail({
+src/app/api/cron/time-midmonth-check/route.ts:8:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/time-midmonth-check/route.ts:159:      await sendEmail({
+src/app/api/cron/time-reminder/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/cron/time-reminder/route.ts:71:    await sendEmail({
+src/app/api/cron/quarterly-tax-digest/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/quarterly-tax-digest/route.ts:152:      await sendEmail({
+src/app/api/cron/rate-health-check/route.ts:8:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/rate-health-check/route.ts:154:    await sendEmail({
+src/app/api/cron/onboarding-nudge/route.ts:3:import { sendEmail, simpleNotificationTemplate, infoCardNotificationTemplate } from '@/lib/email'
+src/app/api/cron/onboarding-nudge/route.ts:153:  const result = await sendEmail({
+src/app/api/cron/onboarding-nudge/route.ts:206:  const result = await sendEmail({
+src/app/api/cron/onboarding-nudge/route.ts:243:    const result = await sendEmail({
+src/app/api/cron/onboarding-nudge/route.ts:274:  const result = await sendEmail({
+src/app/api/cron/project-survey/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/cron/project-survey/route.ts:107:    const emailResult = await sendEmail({
+src/app/api/cron/renewal-reminders/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardLineItem } from '@/lib/email'
+src/app/api/cron/renewal-reminders/route.ts:116:      const result = await sendEmail({ to: recipientEmail, subject, html, userId, type: 'renewal_reminder' })
+src/app/api/cron/budget-alerts/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/budget-alerts/route.ts:134:      const result = await sendEmail({ to: recipientEmail, subject, html, userId, type: 'budget_alert' })
+src/app/api/cron/inactivity-alert/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/cron/inactivity-alert/route.ts:92:      await sendEmail({
+src/app/api/cron/quarter-sprint/route.ts:9:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/quarter-sprint/route.ts:227:      await sendEmail({
+src/app/api/cron/stale-draft-invoices/route.ts:7:import { sendEmail } from '@/lib/email'
+src/app/api/cron/stale-draft-invoices/route.ts:116:      await sendEmail({
+src/app/api/cron/scope-creep-alert/route.ts:3:import { sendEmail } from '@/lib/email'
+src/app/api/cron/scope-creep-alert/route.ts:144:    await sendEmail({ to: profile.email, userId, type: 'scope_creep_alert', subject: `⚠️ Scope creep: ${projs.length} project${projs.length > 1 ? 's' : ''} over budget`, html })
+src/app/api/cron/payment-reminders/route.ts:2:import { sendEmail, infoCardNotificationTemplate } from '@/lib/email'
+src/app/api/cron/payment-reminders/route.ts:206:      const result = await sendEmail({
+src/app/api/cron/payment-reminders/route.ts:215:      // Optional bcc copy to freelancer (via separate sendEmail — bcc not
+src/app/api/cron/payment-reminders/route.ts:218:        await sendEmail({
+src/app/api/cron/apply-late-fees/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardLineItem } from '@/lib/email'
+src/app/api/cron/apply-late-fees/route.ts:44:  await sendEmail({
+src/app/api/cron/winback-reminder/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardLineItem } from '@/lib/email'
+src/app/api/cron/winback-reminder/route.ts:116:    const result = await sendEmail({
+src/app/api/cron/nps-survey/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/cron/nps-survey/route.ts:101:            const result = await sendEmail({
+src/app/api/cron/api-key-digest/route.ts:7:import { sendEmail, infoCardNotificationTemplate, type InfoCardLineItem } from '@/lib/email'
+src/app/api/cron/api-key-digest/route.ts:106:      await sendEmail({ to: email, subject: 'Your LancerWise API activity this week', html, userId, type: 'digest' })
+src/app/api/cron/weekly-summary/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/weekly-summary/route.ts:243:      const emailResult = await sendEmail({ to: emailTo, subject, html, userId, type: 'digest' })
+src/app/api/cron/client-onboarding/route.ts:3:import { sendEmail } from '@/lib/email'
+src/app/api/cron/client-onboarding/route.ts:90:          const result = await sendEmail({
+src/app/api/cron/rate-increase-reminder/route.ts:8:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/rate-increase-reminder/route.ts:139:    await sendEmail({ to: user.email, userId: user.id, type: 'reminder', subject, html })
+src/app/api/cron/weekly-review-auto/route.ts:2:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/weekly-review-auto/route.ts:227:        await sendEmail({
+src/app/api/cron/contract-expiry/route.ts:3:import { sendEmail, infoCardNotificationTemplate } from '@/lib/email'
+src/app/api/cron/contract-expiry/route.ts:78:    await sendEmail({
+src/app/api/cron/stale-leads/route.ts:8:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/stale-leads/route.ts:144:    const result = await sendEmail({
+src/app/api/cron/recurring-expense-summary/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/recurring-expense-summary/route.ts:115:    const result = await sendEmail({ to: email, subject, html, userId, type: 'expense_summary' })
+src/app/api/cron/goal-check/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardKVPair } from '@/lib/email'
+src/app/api/cron/goal-check/route.ts:105:    await sendEmail({
+src/app/api/cron/project-tracking-gap/route.ts:13:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/project-tracking-gap/route.ts:139:      await sendEmail({
+src/app/api/cron/time-budget-alerts/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/time-budget-alerts/route.ts:148:      const result = await sendEmail({
+src/app/api/cron/payment-reminder/route.ts:3:import { sendEmail, infoCardNotificationTemplate } from '@/lib/email'
+src/app/api/cron/payment-reminder/route.ts:88:    const result = await sendEmail({
+src/app/api/cron/viewed-invoice-digest/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/viewed-invoice-digest/route.ts:104:    const result = await sendEmail({
+src/app/api/cron/goal-progress-alert/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/goal-progress-alert/route.ts:96:      await sendEmail({ to: user.email, subject: `Goal check: ${goalPct}% of ${goalCurrency}${Math.round(goal.target_value).toLocaleString()} goal`, html, userId: user.id, type: 'goal_progress_alert' })
+src/app/api/cron/late-payment-pattern/route.ts:8:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/late-payment-pattern/route.ts:134:    await sendEmail({ to: user.email, userId: user.id, type: 'late_payment_pattern', subject: `${slowPayers.length} client${slowPayers.length !== 1 ? 's' : ''} consistently pay late — here's how to fix it`, html })
+src/app/api/cron/status-reports/route.ts:113:        const { error: sendError } = await resend.emails.send({
+src/app/api/cron/invoice-aging/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/invoice-aging/route.ts:110:    await sendEmail({
+src/app/api/cron/monthly-revenue-forecast/route.ts:11:import { sendEmail } from '@/lib/email'
+src/app/api/cron/monthly-revenue-forecast/route.ts:190:      await sendEmail({
+src/app/api/cron/monthly-health-score/route.ts:11:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/monthly-health-score/route.ts:304:      await sendEmail({
+src/app/api/cron/daily-summary/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/daily-summary/route.ts:280:      await sendEmail({
+src/app/api/cron/milestone-reminder/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardLineItem } from '@/lib/email'
+src/app/api/cron/milestone-reminder/route.ts:78:    await sendEmail({
+src/app/api/cron/lead-followups/route.ts:7:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/lead-followups/route.ts:163:    const result = await sendEmail({
+src/app/api/cron/budget-alert/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/budget-alert/route.ts:149:    const result = await sendEmail({
+src/app/api/cron/client-revenue-drop/route.ts:8:import { sendEmail } from '@/lib/email'
+src/app/api/cron/client-revenue-drop/route.ts:166:    await sendEmail({
+src/app/api/cron/subscription-renewals/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardKVPair } from '@/lib/email'
+src/app/api/cron/subscription-renewals/route.ts:90:    const result = await sendEmail({
+src/app/api/cron/monthly-win-rate/route.ts:7:import { sendEmail } from '@/lib/email'
+src/app/api/cron/monthly-win-rate/route.ts:161:      await sendEmail({
+src/app/api/cron/project-completion-followup/route.ts:8:import { sendEmail } from '@/lib/email'
+src/app/api/cron/project-completion-followup/route.ts:110:    await sendEmail({
+src/app/api/cron/milestone-reminders/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardLineItem } from '@/lib/email'
+src/app/api/cron/milestone-reminders/route.ts:117:    const result = await sendEmail({
+src/app/api/cron/invoice-reminders-auto/route.ts:2:import { sendEmail } from '@/lib/email'
+src/app/api/cron/invoice-reminders-auto/route.ts:122:      const result = await sendEmail({
+src/app/api/cron/weekly-time-report/route.ts:8:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/weekly-time-report/route.ts:195:    await sendEmail({
+src/app/api/cron/unbilled-digest/route.ts:2:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/unbilled-digest/route.ts:135:      await sendEmail({
+src/app/api/cron/capacity-alert/route.ts:8:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/capacity-alert/route.ts:141:    await sendEmail({ to: user.email, userId: user.id, type: 'reminder', subject, html })
+src/app/api/cron/weekly-digest/route.ts:9:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/weekly-digest/route.ts:438:      const result = await sendEmail({ to: data.toEmail, subject, html, userId, type: 'digest' })
+src/app/api/cron/deadline-reminder/route.ts:5:import { sendEmail } from '@/lib/email'
+src/app/api/cron/deadline-reminder/route.ts:70:    const result = await sendEmail({
+src/app/api/cron/monthly-review/route.ts:2:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/monthly-review/route.ts:205:        await sendEmail({
+src/app/api/cron/project-profitability-report/route.ts:9:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/project-profitability-report/route.ts:211:    await sendEmail({
+src/app/api/cron/ai-weekly-insights/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/ai-weekly-insights/route.ts:414:      await sendEmail({
+src/app/api/cron/proposal-followup/route.ts:3:import { sendEmail } from '@/lib/email'
+src/app/api/cron/proposal-followup/route.ts:83:      const result = await sendEmail({
+src/app/api/cron/proposal-expired-alert/route.ts:8:import { sendEmail } from '@/lib/email'
+src/app/api/cron/proposal-expired-alert/route.ts:112:      await sendEmail({
+src/app/api/cron/auto-invoice-reminders/route.ts:2:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/cron/auto-invoice-reminders/route.ts:104:          const result = await sendEmail({
+src/app/api/cron/client-greetings/route.ts:2:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/cron/client-greetings/route.ts:123:    await sendEmail({
+src/app/api/cron/client-greetings/route.ts:162:        await sendEmail({
+src/app/api/cron/project-health/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/project-health/route.ts:90:    await sendEmail({
+src/app/api/cron/hours-budget-alert/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/hours-budget-alert/route.ts:124:    const result = await sendEmail({
+src/app/api/cron/milestone-alerts/route.ts:3:import { sendEmail, infoCardNotificationTemplate, type InfoCardLineItem } from '@/lib/email'
+src/app/api/cron/milestone-alerts/route.ts:104:    const emailResult = await sendEmail({ to: profile.email, subject, html, userId, type: 'milestone_alert' })
+src/app/api/cron/quarterly-review/route.ts:9:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/quarterly-review/route.ts:295:      await sendEmail({
+src/app/api/cron/due-soon-reminder/route.ts:3:import { sendEmail, simpleNotificationTemplate } from '@/lib/email'
+src/app/api/cron/due-soon-reminder/route.ts:81:    const result = await sendEmail({
+src/app/api/cron/cash-flow-snapshot/route.ts:9:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/cash-flow-snapshot/route.ts:182:    await sendEmail({
+src/app/api/cron/send-payment-reminders/route.ts:3:import { sendEmail, infoCardNotificationTemplate } from '@/lib/email'
+src/app/api/cron/send-payment-reminders/route.ts:190:        const result = await sendEmail({
+src/app/api/cron/slow-month-alert/route.ts:8:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/slow-month-alert/route.ts:168:      await sendEmail({
+src/app/api/cron/client-invoice-gap/route.ts:8:import { sendEmail } from '@/lib/email'
+src/app/api/cron/client-invoice-gap/route.ts:141:      await sendEmail({
+src/app/api/cron/at-risk-clients/route.ts:6:import { sendEmail, infoCardNotificationTemplate, type InfoCardLineItem } from '@/lib/email'
+src/app/api/cron/at-risk-clients/route.ts:102:    await sendEmail({
+src/app/api/cron/standup-brief/route.ts:3:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/standup-brief/route.ts:142:      await sendEmail({
+src/app/api/cron/generate-recurring-invoices/route.ts:3:import { sendEmail, infoCardNotificationTemplate } from '@/lib/email'
+src/app/api/cron/generate-recurring-invoices/route.ts:195:        await sendEmail({
+src/app/api/cron/business-pulse/route.ts:9:import { sendEmail, richSummaryTemplate, type RichSection } from '@/lib/email'
+src/app/api/cron/business-pulse/route.ts:284:      const result = await sendEmail({ to: d.toEmail, subject, html, userId, type: 'digest' })
+src/app/api/analytics/invoice-aging/send-reminder/route.ts:3:import { sendEmail, infoCardNotificationTemplate } from '@/lib/email'
+src/app/api/analytics/invoice-aging/send-reminder/route.ts:62:  const result = await sendEmail({
+src/app/api/reports/send-test-renewal/route.ts:118:  const res = await fetch('https://api.resend.com/emails', {
+src/app/api/reports/send-test/route.ts:140:  const res = await fetch('https://api.resend.com/emails', {
+src/app/api/stripe/webhook/route.ts:4:import { sendEmail, paymentReceiptTemplate } from '@/lib/email'
+src/app/api/stripe/webhook/route.ts:67:          await sendEmail({
+src/app/api/stripe/webhook/route.ts:105:          await sendEmail({
+src/app/api/stripe/webhook/route.ts:146:          await sendEmail({
+src/app/api/meeting-notes/[id]/email/route.ts:77:    const emailRes = await fetch('https://api.resend.com/emails', {
+src/emails/new-navigation-announcement.tsx:3:// Usage: sendEmail({ to, subject, html: newNavigationAnnouncementHtml(name) })
+src/lib/email.ts:54:  console.warn('[sendEmail] recurring email without unsubscribeUrl', {
+src/lib/email.ts:67:export async function sendEmail({ to, subject, html, text, userId, clientId, type, replyTo }: EmailPayload) {
+src/lib/email.ts:101:  const res = await fetch(RESEND_API, {
+src/lib/emails/shell.ts:7: * <!DOCTYPE html>...</html> ready for Resend / sendEmail.
