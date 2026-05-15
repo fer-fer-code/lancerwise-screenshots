@@ -1,0 +1,23 @@
+Upstash Redis rate limit verification — production /api/v1/clients
+
+Test: 200 parallel requests (50 concurrent workers)
+Result:
+  100 × HTTP 401 (auth required — would be hit if user not logged in)
+   99 × HTTP 401 (same)
+  100 × HTTP 429 (rate limit kicked in)
+    1 × HTTP 000 (connection drop)
+
+429 response headers:
+  retry-after: 12
+  x-ratelimit-limit: 100
+  x-ratelimit-remaining: 0
+  x-ratelimit-reset: 1778823060000
+
+Security headers (visible on every response):
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  permissions-policy: camera=(), microphone=(), geolocation=()
+  referrer-policy: strict-origin-when-cross-origin
+  x-content-type-options: nosniff
+  x-frame-options: SAMEORIGIN
+
+Verified 2026-05-15 ~05:30 UTC.
