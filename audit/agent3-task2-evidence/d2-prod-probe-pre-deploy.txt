@@ -1,0 +1,11 @@
+=== D.2 Production probe (PRE-DEPLOY snapshot) ===
+Date: Sat May 16 00:36:44 +07 2026
+Expected: same as Step A baseline (404s) until PR merged + Vercel deploys
+
+/calendar -> 404|
+/sign-in -> 404|
+/time -> 404|
+/today -> 404|
+/insights/time -> 404|
+/insights/goals -> 404|
+/insights/reports -> 404|

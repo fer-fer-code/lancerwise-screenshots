@@ -1,0 +1,67 @@
+=== Before bulk replace: /sign-in callers ===
+31 (per /tmp/sign-in-callers.txt)
+
+=== After bulk replace: /sign-in callers ===
+0 (grep exit 1 = no matches)
+
+=== Changed files (31) ===
+src/app/(app)/activity/page.tsx
+src/app/(app)/analytics/annual-review/page.tsx
+src/app/(app)/analytics/billing-efficiency/page.tsx
+src/app/(app)/analytics/kpi-dashboard/page.tsx
+src/app/(app)/analytics/revenue-forecast/page.tsx
+src/app/(app)/clients/health-scores/page.tsx
+src/app/(app)/clients/retainers/page.tsx
+src/app/(app)/settings/public-profile/page.tsx
+src/app/(app)/tools/auto-invoicing/page.tsx
+src/app/(app)/tools/auto-reminders/page.tsx
+src/app/(app)/tools/booking-pages/page.tsx
+src/app/(app)/tools/budget-alerts/page.tsx
+src/app/(app)/tools/cold-outreach/page.tsx
+src/app/(app)/tools/content-briefs/page.tsx
+src/app/(app)/tools/digest/page.tsx
+src/app/(app)/tools/goals/page.tsx
+src/app/(app)/tools/invoice-reminders/page.tsx
+src/app/(app)/tools/milestone-billing/page.tsx
+src/app/(app)/tools/onboarding-flows/page.tsx
+src/app/(app)/tools/outreach-dms/page.tsx
+src/app/(app)/tools/outreach-sequences/page.tsx
+src/app/(app)/tools/project-brief/page.tsx
+src/app/(app)/tools/project-budgets/page.tsx
+src/app/(app)/tools/rate-negotiation/page.tsx
+src/app/(app)/tools/renewal-reminders/page.tsx
+src/app/(app)/tools/revenue-goals/page.tsx
+src/app/(app)/tools/service-pages/page.tsx
+src/app/(app)/tools/time-goals/page.tsx
+src/app/(app)/tools/weekly-plan/page.tsx
+src/app/(app)/tools/weekly-report/page.tsx
+src/app/(app)/tools/workflows/page.tsx
+
+=== Sample diff (first 2 files) ===
+diff --git a/src/app/(app)/activity/page.tsx b/src/app/(app)/activity/page.tsx
+index 8b77bb67..51061332 100644
+--- a/src/app/(app)/activity/page.tsx
++++ b/src/app/(app)/activity/page.tsx
+@@ -7,7 +7,7 @@ export const metadata = { title: 'Activity Feed' }
+ export default async function ActivityFeedPage() {
+   const supabase = await createClient()
+   const { data: { user } } = await supabase.auth.getUser()
+-  if (!user) redirect('/sign-in')
++  if (!user) redirect('/login')
+   return (
+     <div>
+       <ActivityFeedClient />
+
+diff --git a/src/app/(app)/clients/retainers/page.tsx b/src/app/(app)/clients/retainers/page.tsx
+index 1d062668..a0fb61d6 100644
+--- a/src/app/(app)/clients/retainers/page.tsx
++++ b/src/app/(app)/clients/retainers/page.tsx
+@@ -7,7 +7,7 @@ export const metadata = { title: 'Retainer Manager' }
+ export default async function RetainersPage() {
+   const supabase = await createClient()
+   const { data: { user } } = await supabase.auth.getUser()
+-  if (!user) redirect('/sign-in')
++  if (!user) redirect('/login')
+   return (
+     <div>
+       <RetainersClient />

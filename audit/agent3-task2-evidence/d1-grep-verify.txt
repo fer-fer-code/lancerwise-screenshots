@@ -1,0 +1,16 @@
+=== D.1 source grep verify (on agent3-task2-dead-urls-cleanup) ===
+
+--- /sign-in callers (expect 0) ===
+exit=1
+
+--- href="/calendar" (expect 0) ===
+exit=1
+
+--- /login redirects count ===
+     360
+
+--- next.config.ts new redirects ===
+      { source: '/today',            destination: '/dashboard', permanent: true },
+      { source: '/insights/time',    destination: '/dashboard', permanent: true },
+      { source: '/insights/goals',   destination: '/dashboard', permanent: true },
+      { source: '/insights/reports', destination: '/dashboard', permanent: true },

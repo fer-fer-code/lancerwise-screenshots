@@ -1,0 +1,268 @@
+
+> lancerwise@0.1.0 build
+> next build
+
+[@sentry/nextjs] DEPRECATION WARNING: disableLogger is deprecated and will be removed in a future version. Use webpack.treeshake.removeDebugLogging instead. (Not supported with Turbopack.)
+[@sentry/nextjs] DEPRECATION WARNING: automaticVercelMonitors is deprecated and will be removed in a future version. Use webpack.automaticVercelMonitors instead. (Not supported with Turbopack.)
+[@sentry/nextjs] DEPRECATION WARNING: reactComponentAnnotation is deprecated and will be removed in a future version. Use webpack.reactComponentAnnotation instead. (Not supported with Turbopack.)
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local, .env.production
+- Experiments (use with caution):
+  · clientTraceMetadata
+
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+  Creating an optimized production build ...
+[@sentry/nextjs] DEPRECATION WARNING: disableLogger is deprecated and will be removed in a future version. Use webpack.treeshake.removeDebugLogging instead. (Not supported with Turbopack.)
+[@sentry/nextjs] DEPRECATION WARNING: automaticVercelMonitors is deprecated and will be removed in a future version. Use webpack.automaticVercelMonitors instead. (Not supported with Turbopack.)
+[@sentry/nextjs] DEPRECATION WARNING: reactComponentAnnotation is deprecated and will be removed in a future version. Use webpack.reactComponentAnnotation instead. (Not supported with Turbopack.)
+
+> Build error occurred
+Error: Turbopack build failed with 9 errors:
+./src/app/api/dashboard/super/route.ts:5:1
+Module not found: Can't resolve '@/lib/api/locale'
+  [90m3 |[0m [36mimport[0m { [33mNextResponse[0m } [36mfrom[0m [32m'next/server'[0m
+  [90m4 |[0m [36mimport[0m { getTranslations } [36mfrom[0m [32m'next-intl/server'[0m
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { getRequestLocale } [36mfrom[0m [32m'@/lib/api/locale'[0m
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { formatMinutes } [36mfrom[0m [32m'@/lib/format/plural-hours'[0m
+  [90m7 |[0m [36mimport[0m { formatCurrencyLocale } [36mfrom[0m [32m'@/lib/format/currency'[0m
+  [90m8 |[0m
+
+Import map: aliased to relative './src/lib/api/locale' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/(app)/dashboard/CashFlowWidget.tsx:7:1
+Module not found: Can't resolve '@/lib/format/currency'
+  [90m 5 |[0m [36mimport[0m { [33mTrendingUp[0m, [33mAlertTriangle[0m } [36mfrom[0m [32m'lucide-react'[0m
+  [90m 6 |[0m [36mimport[0m { useTranslations, useLocale } [36mfrom[0m [32m'next-intl'[0m
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { formatCurrencyLocale } [36mfrom[0m [32m'@/lib/format/currency'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m [36mtype[0m { [33mLocale[0m } [36mfrom[0m [32m'@/i18n/config'[0m
+  [90m 9 |[0m
+  [90m10 |[0m [36minterface[0m [33mCashFlowSummary[0m {
+
+Import map: aliased to relative './src/lib/format/currency' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(app)/dashboard/CashFlowWidget.tsx [Client Component Browser]
+    ./src/app/(app)/dashboard/SuperDashboardClient.tsx [Client Component Browser]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Client Component Browser]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Server Component]
+    ./src/app/(app)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(app)/dashboard/CashFlowWidget.tsx [Client Component SSR]
+    ./src/app/(app)/dashboard/SuperDashboardClient.tsx [Client Component SSR]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Client Component SSR]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Server Component]
+    ./src/app/(app)/dashboard/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/(app)/dashboard/ClientHealthGrid.tsx:7:1
+Module not found: Can't resolve '@/lib/format/currency'
+  [90m 5 |[0m [36mimport[0m { [33mUsers2[0m } [36mfrom[0m [32m'lucide-react'[0m
+  [90m 6 |[0m [36mimport[0m { useTranslations, useLocale } [36mfrom[0m [32m'next-intl'[0m
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { formatCurrencyLocale } [36mfrom[0m [32m'@/lib/format/currency'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m [36mtype[0m { [33mLocale[0m } [36mfrom[0m [32m'@/i18n/config'[0m
+  [90m 9 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m'react'[0m
+  [90m10 |[0m
+
+Import map: aliased to relative './src/lib/format/currency' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(app)/dashboard/ClientHealthGrid.tsx [Client Component Browser]
+    ./src/app/(app)/dashboard/SuperDashboardClient.tsx [Client Component Browser]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Client Component Browser]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Server Component]
+    ./src/app/(app)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(app)/dashboard/ClientHealthGrid.tsx [Client Component SSR]
+    ./src/app/(app)/dashboard/SuperDashboardClient.tsx [Client Component SSR]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Client Component SSR]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Server Component]
+    ./src/app/(app)/dashboard/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/(app)/dashboard/LeadsPipelineWidget.tsx:7:1
+Module not found: Can't resolve '@/lib/format/currency'
+  [90m 5 |[0m [36mimport[0m { [33mTrendingUp[0m, [33mTarget[0m, [33mAlertCircle[0m, [33mTrophy[0m, [33mChevronRight[0m } [36mfrom[0m [32m'lucide-react'[0m
+  [90m 6 |[0m [36mimport[0m { useTranslations, useLocale } [36mfrom[0m [32m'next-intl'[0m
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { formatCurrencyLocale } [36mfrom[0m [32m'@/lib/format/currency'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m [36mtype[0m { [33mLocale[0m } [36mfrom[0m [32m'@/i18n/config'[0m
+  [90m 9 |[0m
+  [90m10 |[0m [36minterface[0m [33mPipelineStats[0m {
+
+Import map: aliased to relative './src/lib/format/currency' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(app)/dashboard/LeadsPipelineWidget.tsx [Client Component Browser]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Client Component Browser]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Server Component]
+    ./src/app/(app)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(app)/dashboard/LeadsPipelineWidget.tsx [Client Component SSR]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Client Component SSR]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Server Component]
+    ./src/app/(app)/dashboard/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/(app)/dashboard/NextActionWidget.tsx:8:1
+Module not found: Can't resolve '@/lib/format/currency'
+  [90m 6 |[0m [36mimport[0m { useTranslations, useLocale } [36mfrom[0m [32m'next-intl'[0m
+  [90m 7 |[0m [36mimport[0m { isLinkLabelKey, [36mtype[0m [33mLinkLabelKey[0m } [36mfrom[0m [32m'@/lib/types/ai-next-action'[0m
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { formatCurrencyLocale } [36mfrom[0m [32m'@/lib/format/currency'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m [36mtype[0m { [33mLocale[0m } [36mfrom[0m [32m'@/i18n/config'[0m
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mAction[0m = {
+
+Import map: aliased to relative './src/lib/format/currency' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(app)/dashboard/NextActionWidget.tsx [Client Component Browser]
+    ./src/app/(app)/dashboard/SuperDashboardClient.tsx [Client Component Browser]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Client Component Browser]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Server Component]
+    ./src/app/(app)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(app)/dashboard/NextActionWidget.tsx [Client Component SSR]
+    ./src/app/(app)/dashboard/SuperDashboardClient.tsx [Client Component SSR]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Client Component SSR]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Server Component]
+    ./src/app/(app)/dashboard/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/(app)/dashboard/SuperDashboardClient.tsx:5:1
+Module not found: Can't resolve '@/lib/format/currency'
+  [90m3 |[0m [36mimport[0m { useEffect, useState, useCallback } [36mfrom[0m [32m'react'[0m
+  [90m4 |[0m [36mimport[0m { useTranslations, useLocale } [36mfrom[0m [32m'next-intl'[0m
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { formatCurrencyLocale } [36mfrom[0m [32m'@/lib/format/currency'[0m
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m [36mtype[0m { [33mLocale[0m } [36mfrom[0m [32m'@/i18n/config'[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mfunction[0m useIsMobile() {
+
+Import map: aliased to relative './src/lib/format/currency' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(app)/dashboard/SuperDashboardClient.tsx [Client Component Browser]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Client Component Browser]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Server Component]
+    ./src/app/(app)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(app)/dashboard/SuperDashboardClient.tsx [Client Component SSR]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Client Component SSR]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Server Component]
+    ./src/app/(app)/dashboard/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/api/dashboard/super/route.ts:7:1
+Module not found: Can't resolve '@/lib/format/currency'
+  [90m 5 |[0m [36mimport[0m { getRequestLocale } [36mfrom[0m [32m'@/lib/api/locale'[0m
+  [90m 6 |[0m [36mimport[0m { formatMinutes } [36mfrom[0m [32m'@/lib/format/plural-hours'[0m
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { formatCurrencyLocale } [36mfrom[0m [32m'@/lib/format/currency'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m
+  [90m 9 |[0m [36mexport[0m [36masync[0m [36mfunction[0m [33mGET[0m() {
+  [90m10 |[0m   [36mconst[0m supabase = [36mawait[0m createClient()
+
+Import map: aliased to relative './src/lib/format/currency' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/api/dashboard/super/route.ts:6:1
+Module not found: Can't resolve '@/lib/format/plural-hours'
+  [90m4 |[0m [36mimport[0m { getTranslations } [36mfrom[0m [32m'next-intl/server'[0m
+  [90m5 |[0m [36mimport[0m { getRequestLocale } [36mfrom[0m [32m'@/lib/api/locale'[0m
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { formatMinutes } [36mfrom[0m [32m'@/lib/format/plural-hours'[0m
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { formatCurrencyLocale } [36mfrom[0m [32m'@/lib/format/currency'[0m
+  [90m8 |[0m
+  [90m9 |[0m [36mexport[0m [36masync[0m [36mfunction[0m [33mGET[0m() {
+
+Import map: aliased to relative './src/lib/format/plural-hours' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/(app)/dashboard/NextActionWidget.tsx:7:1
+Module not found: Can't resolve '@/lib/types/ai-next-action'
+  [90m 5 |[0m [36mimport[0m { [33mZap[0m, [33mArrowRight[0m, [33mLoader2[0m, [33mAlertTriangle[0m, [33mTrendingUp[0m, [33mClock[0m, [33mUsers[0m, [33mFileText[0m } [36mfro.[0m.[32m.[0m
+  [90m 6 |[0m [36mimport[0m { useTranslations, useLocale } [36mfrom[0m [32m'next-intl'[0m
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { isLinkLabelKey, [36mtype[0m [33mLinkLabelKey[0m } [36mfrom[0m [32m'@/lib/types/ai-next-action'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { formatCurrencyLocale } [36mfrom[0m [32m'@/lib/format/currency'[0m
+  [90m 9 |[0m [36mimport[0m [36mtype[0m { [33mLocale[0m } [36mfrom[0m [32m'@/i18n/config'[0m
+  [90m10 |[0m
+
+Import map: aliased to relative './src/lib/types/ai-next-action' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(app)/dashboard/NextActionWidget.tsx [Client Component Browser]
+    ./src/app/(app)/dashboard/SuperDashboardClient.tsx [Client Component Browser]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Client Component Browser]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Server Component]
+    ./src/app/(app)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(app)/dashboard/NextActionWidget.tsx [Client Component SSR]
+    ./src/app/(app)/dashboard/SuperDashboardClient.tsx [Client Component SSR]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Client Component SSR]
+    ./src/app/(app)/dashboard/DashboardClient.tsx [Server Component]
+    ./src/app/(app)/dashboard/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./src/app/api/dashboard/super/route.ts:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/(app)/dashboard/CashFlowWidget.tsx:7:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/(app)/dashboard/ClientHealthGrid.tsx:7:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/(app)/dashboard/LeadsPipelineWidget.tsx:7:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/(app)/dashboard/NextActionWidget.tsx:8:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/(app)/dashboard/SuperDashboardClient.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/api/dashboard/super/route.ts:7:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/api/dashboard/super/route.ts:6:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/(app)/dashboard/NextActionWidget.tsx:7:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)

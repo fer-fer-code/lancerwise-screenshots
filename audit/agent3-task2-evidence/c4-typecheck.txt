@@ -1,0 +1,30 @@
+
+<--- Last few GCs --->
+
+[89427:0x140018000]    94668 ms: Mark-Compact 4024.2 (4128.2) -> 4005.4 (4128.2) MB, pooled: 4 MB, 1438.96 / 0.00 ms  (average mu = 0.268, current mu = 0.325) allocation failure; scavenge might not succeed
+[89427:0x140018000]    96455 ms: Mark-Compact 4021.3 (4128.2) -> 4005.5 (4126.0) MB, pooled: 6 MB, 1730.25 / 0.04 ms  (average mu = 0.162, current mu = 0.032) allocation failure; scavenge might not succeed
+
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+ 1: 0x105749f10 node::OOMErrorHandler(char const*, v8::OOMDetails const&) [/opt/homebrew/Cellar/node@22/22.22.1_3/lib/libnode.127.dylib]
+ 2: 0x10594c118 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, v8::OOMDetails const&) [/opt/homebrew/Cellar/node@22/22.22.1_3/lib/libnode.127.dylib]
+ 3: 0x105aee388 v8::internal::Heap::CallGCPrologueCallbacks(v8::GCType, v8::GCCallbackFlags, v8::internal::GCTracer::Scope::ScopeId) [/opt/homebrew/Cellar/node@22/22.22.1_3/lib/libnode.127.dylib]
+ 4: 0x105af8728 v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags)::$_1::operator()() const [/opt/homebrew/Cellar/node@22/22.22.1_3/lib/libnode.127.dylib]
+ 5: 0x105aee6c0 void heap::base::Stack::SetMarkerAndCallbackImpl<v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags)::$_1>(heap::base::Stack*, void*, void const*) [/opt/homebrew/Cellar/node@22/22.22.1_3/lib/libnode.127.dylib]
+ 6: 0x105658028 PushAllRegistersAndIterateStack [/opt/homebrew/Cellar/node@22/22.22.1_3/lib/libnode.127.dylib]
+ 7: 0x105aebd8c v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/opt/homebrew/Cellar/node@22/22.22.1_3/lib/libnode.127.dylib]
+ 8: 0x105ae4cf8 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/opt/homebrew/Cellar/node@22/22.22.1_3/lib/libnode.127.dylib]
+ 9: 0x105ad7eb4 v8::internal::Factory::NewFillerObject(int, v8::internal::AllocationAlignment, v8::internal::AllocationType, v8::internal::AllocationOrigin) [/opt/homebrew/Cellar/node@22/22.22.1_3/lib/libnode.127.dylib]
+10: 0x105d70a04 v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [/opt/homebrew/Cellar/node@22/22.22.1_3/lib/libnode.127.dylib]
+11: 0x105539af4 Builtins_CEntry_Return1_ArgvOnStack_NoBuiltinExit [/opt/homebrew/Cellar/node@22/22.22.1_3/lib/libnode.127.dylib]
+12: 0x1054dfaa4 Builtins_ArrayIteratorPrototypeNext [/opt/homebrew/Cellar/node@22/22.22.1_3/lib/libnode.127.dylib]
+13: 0x10c309dd4 
+14: 0x10c426bd4 
+15: 0x10ce0ee34 
+16: 0x10c4d8a7c 
+17: 0x10c4392a8 
+18: 0x10c452ffc 

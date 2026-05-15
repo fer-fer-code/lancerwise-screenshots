@@ -1,0 +1,16 @@
+diff --git a/next.config.ts b/next.config.ts
+index a0b8e328..23ef2330 100644
+--- a/next.config.ts
++++ b/next.config.ts
+@@ -27,6 +27,11 @@ const nextConfig: NextConfig = {
+       { source: '/money',          destination: '/money/invoices',  permanent: false },
+       { source: '/work',           destination: '/work/projects',   permanent: false },
+       { source: '/money/recurring', destination: '/invoices/recurring', permanent: false },
++      // Dead URLs from pre-launch cleanup — permanent redirect for bookmarks / SEO graceful handling
++      { source: '/today',            destination: '/dashboard', permanent: true },
++      { source: '/insights/time',    destination: '/dashboard', permanent: true },
++      { source: '/insights/goals',   destination: '/dashboard', permanent: true },
++      { source: '/insights/reports', destination: '/dashboard', permanent: true },
+     ]
+   },
+   async headers() {
