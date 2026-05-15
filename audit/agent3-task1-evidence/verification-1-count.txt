@@ -1,0 +1,6 @@
+=== VERIFICATION 1: total tracked (expect 546) ===
+ tracked 
+---------
+     546
+(1 строка)
+

@@ -1,0 +1,37 @@
+=== CURRENT STATE OF TRACKING TABLE ===
+    version     |            name            | sl 
+----------------+----------------------------+----
+ 20260509000001 | contracts_table            |  6
+ 20260510000001 | proposals_table            |  7
+ 20260510000002 | clients_add_fields         |  9
+ 20260510000003 | freelance_goals_fields     |  8
+ 20260510000004 | notes_add_fields           |  6
+ 20260512000001 | clients_email_unsubscribed |  6
+(6 строк)
+
+
+=== supabase db push --dry-run EXIT 1 ===
+DRY RUN: migrations will *not* be pushed to the database.
+Connecting to remote database...
+Skipping migration 20260426000012b_profile_public.sql... (file name must match pattern "<timestamp>_name.sql")
+Remote migration versions not found in local migrations directory.
+
+Make sure your local git repo is up-to-date. If the error persists, try repairing the migration history table:
+supabase migration repair --status reverted 20260426000012b
+
+And update local migrations to match remote database:
+supabase db pull
+
+EXIT=1
+
+=== supabase migration list --linked (works fine) ===
+   20260508000002 | 20260508000002 | 2026-05-08 00:00:02 
+   20260509000001 | 20260509000001 | 2026-05-09 00:00:01 
+   20260510000001 | 20260510000001 | 2026-05-10 00:00:01 
+   20260510000002 | 20260510000002 | 2026-05-10 00:00:02 
+   20260510000003 | 20260510000003 | 2026-05-10 00:00:03 
+   20260510000004 | 20260510000004 | 2026-05-10 00:00:04 
+   20260512000001 | 20260512000001 | 2026-05-12 00:00:01 
+
+A new version of Supabase CLI is available: v2.98.2 (currently installed v2.90.0)
+We recommend updating regularly for new features and bug fixes: https://supabase.com/docs/guides/cli/getting-started#updating-the-supabase-cli

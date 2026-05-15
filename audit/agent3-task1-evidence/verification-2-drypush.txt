@@ -1,0 +1,12 @@
+=== VERIFICATION 2: supabase db push --dry-run (expect 'no pending') ===
+DRY RUN: migrations will *not* be pushed to the database.
+Connecting to remote database...
+Skipping migration 20260426000012b_profile_public.sql... (file name must match pattern "<timestamp>_name.sql")
+Remote migration versions not found in local migrations directory.
+
+Make sure your local git repo is up-to-date. If the error persists, try repairing the migration history table:
+supabase migration repair --status reverted 20260426000012b
+
+And update local migrations to match remote database:
+supabase db pull
+
