@@ -1,12 +1,13 @@
 ==========================================================
 PLAYWRIGHT LOCALE-PURITY DEMO — failing baseline on /dashboard
+(post-Step 2 amendments: subtree skip + route fix + keyboard whitelist)
 ==========================================================
 
 $ node --env-file=.env.local ./node_modules/.bin/playwright \
     test --project=setup --project=locale-purity-ru -g "/dashboard$"
 
   ✓  [setup] authenticate test user and seed RU locale cookie
-  ✘  [locale-purity-ru] RU locale purity: /dashboard (39.0s)
+  ✘  [locale-purity-ru] RU locale purity: /dashboard
 
   Error: Found English text on RU locale at /dashboard:
          219 offending token(s)
@@ -33,4 +34,17 @@ $ node --env-file=.env.local ./node_modules/.bin/playwright \
     "Reconnect with Clients" => captured: Reconnect + Clients
     "Scope Creep Monitor"    => captured: Scope + Creep + Monitor
 
-  Full per-route counts: see audit/locale-purity-summary.md
+  POST-AMENDMENTS NUMBERS:
+    Total failures: 2779 (pre-amendments: 2741; delta +38)
+    Unique tokens:  2052 (pre-amendments: 2025)
+    Routes covered: 10/10 (10 fail, 1 setup pass)
+
+  WHITELIST VERIFICATION:
+    "Esc" (whitelisted)  -> 0 hits in baseline (should be 0)
+    "Enter" (whitelisted)  -> 0 hits in baseline (should be 0)
+    "Tab" (whitelisted)  -> 0 hits in baseline (should be 0)
+    "Shift" (whitelisted)  -> 0 hits in baseline (should be 0)
+    "Ctrl" (whitelisted)  -> 0 hits in baseline (should be 0)
+    "Cmd" (whitelisted)  -> 0 hits in baseline (should be 0)
+    "Alt" (whitelisted)  -> 0 hits in baseline (should be 0)
+    "PTT" (deliberately NOT whitelisted) -> 9 hits (real translation work)

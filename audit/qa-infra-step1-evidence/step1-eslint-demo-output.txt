@@ -1,0 +1,16 @@
+==========================================
+ESLint i18n DEMO — failing on bad input
+==========================================
+$ npx eslint scripts/_demo/eslint-i18n-demo.tsx
+
+/Users/myoffice/lancerwise/scripts/_demo/eslint-i18n-demo.tsx
+   8:11  error  disallow literal string: <h1>Hello World</h1>                          i18next/no-literal-string
+   9:26  error  disallow literal string: aria-label="Save document"                    i18next/no-literal-string
+   9:48  error  disallow literal string: title="Click to save"                         i18next/no-literal-string
+   9:64  error  disallow literal string: <button ...>Save</button>                     i18next/no-literal-string
+  12:26  error  disallow literal string: placeholder="Enter your name"                 i18next/no-literal-string
+
+5 problems (5 errors, 0 warnings)
+Exit: 1  -> ESLint fails the build
+
+(GoodComponent in the same file, which uses t(), produced 0 errors)
