@@ -1,0 +1,21 @@
+=== Callers of POST /api/unsubscribe with direct body {audience, id, email} ===
+
+--- Look for fetch + /api/unsubscribe (any method) ---
+src/lib/unsubscribe.ts:110:  return `${APP_URL}/api/unsubscribe?token=${signUnsubscribeToken(payload)}`
+src/lib/email.ts:32: *  - caller didn't already include `/api/unsubscribe?token=` or an Unsubscribe link
+src/lib/email.ts:50:  if (html.includes('/api/unsubscribe?token=')) return html
+src/lib/email.ts:63:  const footer = `<div style="margin-top:24px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);color:#8b8b94;font-size:12px;text-align:center;">You're receiving this as ${audienceLabel} of LancerWise. <a href="${APP_URL}/api/unsubscribe?token=${token}" style="color:#8b8b94;text-decoration:underline;">Unsubscribe</a></div>`
+
+--- Look for POST + audience+id+email pattern ---
+
+--- Any 'token' vs direct {audience,id,email} usage ---
+src/app/api/satisfaction-surveys/respond/[token]/route.ts:          unsubscribeUrl: buildUnsubscribeUrl({ audience: 'user', id: userId, email: freelancerEmail }),
+src/app/api/invoices/send-reminder/route.ts:      ? buildUnsubscribeUrl({ audience: 'client', id: params.clientId, email: params.clientEmail })
+src/app/api/intake-forms/public/[token]/submit/route.ts:        unsubscribeUrl: buildUnsubscribeUrl({ audience: 'user', id: form.user_id, email: freelancerEmail }),
+src/app/api/unsubscribe/route.ts:      return { audience: 'user' as Audience, id: data.id, email: data.email }
+src/app/api/unsubscribe/route.ts:      return { audience: 'user' as Audience, id: data.id, email: data.email }
+src/app/api/survey/project/[token]/route.ts:          unsubscribeUrl: buildUnsubscribeUrl({ audience: 'user', id: survey.user_id, email: freelancerEmail }),
+src/app/api/survey/[token]/route.ts:          unsubscribeUrl: buildUnsubscribeUrl({ audience: 'user', id: survey.user_id, email: freelancerEmail }),
+src/app/api/auto-reminders/send-now/route.ts:      ? buildUnsubscribeUrl({ audience: 'client', id: inv.client_id, email: recipientEmail })
+src/app/api/booking-requests/route.ts:        unsubscribeUrl: buildUnsubscribeUrl({ audience: 'user', id: userId, email: freelancerEmail }),
+src/app/api/email/route.ts:      unsubscribeUrl: buildUnsubscribeUrl({ audience: 'user', id: user.id, email }),
