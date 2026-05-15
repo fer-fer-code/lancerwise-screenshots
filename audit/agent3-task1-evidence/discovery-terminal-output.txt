@@ -1,0 +1,28 @@
+=== migration count (files) ===
+     546
+
+=== invalid named files (skipped by CLI) ===
+20260426000012b_profile_public.sql
+
+=== count by valid pattern ===
+     545
+
+=== tracking table contents (full) ===
+    version     |            name             
+----------------+-----------------------------
+ 20260424000001 | project_tasks
+ 20260425000001 | email_unsubscribe_recurring
+ 20260512000001 | 
+(3 строки)
+
+
+=== tracking table schema ===
+               Таблица "supabase_migrations.schema_migrations"
+  Столбец   |  Тип   | Правило сортировки | Допустимость NULL | По умолчанию 
+------------+--------+--------------------+-------------------+--------------
+ version    | text   |                    | not null          | 
+ statements | text[] |                    |                   | 
+ name       | text   |                    |                   | 
+Индексы:
+    "schema_migrations_pkey" PRIMARY KEY, btree (version)
+

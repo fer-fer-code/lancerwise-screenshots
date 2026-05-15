@@ -1,0 +1,37 @@
+=== Sample 10 random untracked migrations verification ===
+
+Sample files picked:
+  20260429000764_job_opportunities.sql (CREATE TABLE job_opportunities)
+  20260428000623_invoice_reminders.sql (CREATE TABLE invoice_reminders)
+  20260428000494_work_journal.sql (CREATE TABLE work_journal_entries)
+  20260428000662_auto_reminders.sql (CREATE TABLE auto_reminder_settings, invoice_reminder_log)
+  20260428000666_scope_analyses.sql (CREATE TABLE scope_analyses)
+  20260428000508_pitch_decks.sql (CREATE TABLE pitch_decks)
+  20260428000630_comm_templates.sql (CREATE TABLE comm_templates)
+  20260429000790_proposal_pdf.sql (ALTER TABLE proposal_drafts ADD COLUMN pdf_theme, public_token)
+  20260427000331_tax_payments.sql (CREATE TABLE tax_payments)
+  20260428000671_rate_calculator.sql (CREATE TABLE rate_calculations)
+
+=== Production schema lookup: tables exist? ===
+       table_name       
+------------------------
+ auto_reminder_settings
+ comm_templates
+ invoice_reminder_log
+ invoice_reminders
+ job_opportunities
+ pitch_decks
+ rate_calculations
+ scope_analyses
+ tax_payments
+ work_journal_entries
+(10 строк)
+
+
+=== proposal_drafts ALTER columns exist? ===
+ column_name  
+--------------
+ pdf_theme
+ public_token
+(2 строки)
+
