@@ -1,5 +1,6 @@
 ==========================================================
 VISUAL REGRESSION DEMO — gate catches injected style change
+(post sidebar-stability fix — second-pass capture)
 ==========================================================
 
 $ BASE_URL=http://localhost:3000 node --env-file=.env.local \
@@ -8,10 +9,17 @@ $ BASE_URL=http://localhost:3000 node --env-file=.env.local \
 
 Test: DEMO — /dashboard [en] visual gate catches injected style change
 
-Setup: visual-regression project loads existing baseline
+Setup: visual-regression project loads the regenerated baseline
        tests/e2e/visual-regression.spec.ts-snapshots/
          visual-dashboard-en-1-visual-regression-darwin.png
-       (captured against current main, 6f1cdc70 dashboard).
+       (captured after sidebar mask + cookie banner mask fix).
+       Baseline NOW includes the navigation sidebar and HIDES the
+       cookie banner — previously the [data-tour] mask was hiding
+       the sidebar by mistake.
+
+Demo spec uses the SAME `preparePage` + `settleAndDismissModals`
+exported by visual-regression.spec.ts, so the capture path matches
+the baseline path bit-for-bit. The mutation is the only difference.
 
 Mutation: page.addStyleTag({ content: `header { background: #00ff00 !important; }` })
 
@@ -19,7 +27,7 @@ Result:
   ✘  DEMO — /dashboard [en] visual gate catches injected style change
 
   Error: expect(page).toHaveScreenshot(expected) failed
-  81695 pixels (ratio 0.07 of all image pixels) are different.
+  65078 pixels (ratio 0.06 of all image pixels) are different.
   Snapshot: visual-dashboard-en-1.png
 
   Exit: 1 -> CI gate would block PR merge
@@ -31,19 +39,27 @@ Result:
 
 INTERPRETATION:
   - Threshold: maxDiffPixelRatio = 0.01 (1% of pixels)
-  - Actual diff: 0.07 (7%) — clear failure
-  - The green header overlay covers ~7% of the page surface — well above
-    the threshold and easily seen in the diff PNG
+  - Actual diff: 0.06 (6%) — clear failure
+  - Diff is ISOLATED to the header region in the rendered diff PNG —
+    the sidebar is rendered transparent (= identical between expected
+    and actual). Same goes for the rest of the page surface. No
+    false-positive bleed.
+  - Previous demo (pre-fix) reported 81,695 px diff (0.07). The new
+    demo reports 65,078 px (0.06) — slightly less because the user
+    avatar wrapper is now uniformly masked via
+    [data-test-skip-locale-purity] in BOTH expected and actual.
 
-PASSING RUN (control):
-  Re-running the same suite WITHOUT the demo mutation:
+STABILITY VERIFICATION (3 identical runs on /dashboard [en]):
+  Run 1: MD5 3f0a11ac264bf4ca8da2bde9dd6f42aa  size 179875 bytes
+  Run 2: MD5 3f0a11ac264bf4ca8da2bde9dd6f42aa  size 179875 bytes  -> IDENTICAL
+  Run 3: MD5 3f0a11ac264bf4ca8da2bde9dd6f42aa  size 179875 bytes  -> IDENTICAL
+
+PASSING RUN (control, on regenerated baselines):
   $ playwright test --project=setup --project=visual-regression
-  → 25 passed (4.8m) — all 24 baselines reproduce within threshold.
-
-The demo spec file (_demo-visual-regression.spec.ts) was deleted after
-this capture — it was a one-off proof, not part of the gate.
+  -> 25 passed (5.3m) — all 24 regenerated baselines stable within threshold.
 
 DEMO FILE INVENTORY:
-  step3-demo-fail-expected.png — the baseline as captured on main
-  step3-demo-fail-actual.png   — page with green header (the mutation)
-  step3-demo-fail-diff.png     — Playwright's red diff overlay
+  step3-demo-fail-expected.png — new baseline (sidebar visible)
+  step3-demo-fail-actual.png   — mutated render (green header, sidebar visible)
+  step3-demo-fail-diff.png     — Playwright's red overlay (header region only)
+  step3-demo-fail-output.txt   — this file

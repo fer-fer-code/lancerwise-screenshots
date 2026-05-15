@@ -3,13 +3,16 @@
 Playwright visual-regression baseline suite + demo proving the gate
 catches a real UI regression.
 
+> **2026-05-15 sidebar-stability fix.** First-pass baselines (commit `278e75cb`) accidentally masked the navigation sidebar via an over-broad `[data-tour]` selector. Fixed in a follow-up commit — see [`sidebar-diagnosis.md`](sidebar-diagnosis.md) for root cause + verification. All 24 baselines were regenerated. The sample PNGs and demo fail PNGs in this directory are the **post-fix** versions.
+
 ## Source
 
 | Field         | Value                                                |
 | ------------- | ---------------------------------------------------- |
 | Private repo  | `fer-fer-code/lancerwise` (not viewable by reviewer) |
 | Branch        | `qa-infrastructure-2026-05`                          |
-| Commit        | _filled in when Step 3 commit lands — see top of repo_ |
+| Step 3 commit (original)        | `278e75cb` — initial 24 baselines (sidebar accidentally masked) |
+| Step 3 follow-up (sidebar fix)  | _see top of repo HEAD_ — mask tighten + sidebar wait + baselines regen |
 | Spec          | `tests/e2e/visual-regression.spec.ts`                |
 | Snapshot dir  | `tests/e2e/visual-regression.spec.ts-snapshots/`     |
 | Target        | `http://localhost:3000` (next dev / Turbopack)        |
