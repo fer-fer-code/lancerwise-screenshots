@@ -1,0 +1,22 @@
+===== URL: /calendar =====
+src/components/WorkCalendarMini.tsx:89:        <Link href="/calendar" className="text-sm text-violet-400 hover:text-violet-400 flex items-center gap-1">
+
+===== URL: /sign-in =====
+
+===== URL: /time =====
+src/app/(app)/dashboard/command-center/CommandCenterClient.tsx:732:            <QuickActionBtn href="/time" icon="⏱️" label="+ Log Time" />
+
+===== URL: /today =====
+
+===== URL: /insights/time =====
+
+===== URL: /insights/goals =====
+
+===== URL: /insights/reports =====
+
+===== URL: /settings/profile =====
+
+===== URL: /contracts/templates/new =====
+src/app/(app)/contracts/templates/page.tsx:66:        <Link href="/contracts/templates/new"
+src/app/(app)/contracts/templates/page.tsx:96:          <Link href="/contracts/templates/new"
+

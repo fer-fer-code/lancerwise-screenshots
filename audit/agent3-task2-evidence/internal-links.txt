@@ -1,0 +1,517 @@
+src/app/layout.tsx:141:        <link rel="icon" href="/favicon.ico" sizes="any" />
+src/app/layout.tsx:142:        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+src/app/layout.tsx:143:        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+src/app/layout.tsx:144:        <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+src/app/layout.tsx:145:        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+src/app/not-found.tsx:21:            href="/dashboard"
+src/app/error.tsx:33:            href="/dashboard"
+src/app/demo/DemoClient.tsx:113:            <Link href="/login" className="text-sm text-slate-400 hover:text-white transition-colors">Log in</Link>
+src/app/demo/DemoClient.tsx:114:            <Link href="/register" className="text-sm bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-violet-600/30 text-white px-4 py-2 rounded-lg font-medium transition-all">
+src/app/demo/DemoClient.tsx:228:              href="/register"
+src/app/demo/DemoClient.tsx:234:              href="/login"
+src/app/demo/DemoClient.tsx:255:            <Link href="/privacy" className="hover:text-slate-300 transition-colors">Privacy</Link>
+src/app/demo/DemoClient.tsx:256:            <Link href="/terms" className="hover:text-slate-300 transition-colors">Terms</Link>
+src/app/page.tsx:268:              <Link href="/tools/rate-calculator" className="hover:text-slate-100 transition-colors">Free Tools</Link>
+src/app/page.tsx:269:              <Link href="/blog" className="hover:text-slate-100 transition-colors">Blog</Link>
+src/app/page.tsx:273:              <Link href="/login" className="text-sm font-medium text-slate-400 hover:text-slate-100 transition-colors px-2 py-2.5">
+src/app/page.tsx:277:                href="/register"
+src/app/page.tsx:336:                    href="/register"
+src/app/page.tsx:344:                    href="/demo"
+src/app/page.tsx:449:              href="/tools/rate-calculator"
+src/app/page.tsx:534:              href="/register"
+src/app/page.tsx:577:                    <li><Link href="/tools/rate-calculator" className="hover:text-slate-400 transition-colors">Rate Calculator</Link></li>
+src/app/page.tsx:578:                    <li><Link href="/blog" className="hover:text-slate-400 transition-colors">Blog</Link></li>
+src/app/page.tsx:579:                    <li><Link href="/api-docs" className="hover:text-slate-400 transition-colors">API Docs</Link></li>
+src/app/page.tsx:580:                    <li><Link href="/n8n-templates" className="hover:text-slate-400 transition-colors">n8n Templates</Link></li>
+src/app/page.tsx:581:                    <li><Link href="/changelog" className="hover:text-slate-400 transition-colors">Changelog</Link></li>
+src/app/page.tsx:587:                    <li><Link href="/about" className="hover:text-slate-400 transition-colors">About</Link></li>
+src/app/page.tsx:588:                    <li><Link href="/contact" className="hover:text-slate-400 transition-colors">Contact</Link></li>
+src/app/page.tsx:589:                    <li><Link href="/faq" className="hover:text-slate-400 transition-colors">FAQ</Link></li>
+src/app/page.tsx:590:                    <li><Link href="/login" className="hover:text-slate-400 transition-colors">Sign in</Link></li>
+src/app/page.tsx:591:                    <li><Link href="/register" className="hover:text-slate-400 transition-colors">Sign up</Link></li>
+src/app/page.tsx:597:                    <li><a href="/privacy" className="hover:text-slate-400 transition-colors">Privacy Policy</a></li>
+src/app/page.tsx:598:                    <li><a href="/terms" className="hover:text-slate-400 transition-colors">Terms of Service</a></li>
+src/app/page.tsx:599:                    <li><Link href="/cookie-policy" className="hover:text-slate-400 transition-colors">Cookie Policy</Link></li>
+src/app/page.tsx:623:                <Link href="/changelog" className="hover:text-slate-300 transition-colors">What's new</Link>
+src/app/contact/page.tsx:41:            <Link href="/login" className="text-sm text-slate-400 hover:text-slate-200 transition-colors">Sign in</Link>
+src/app/contact/page.tsx:43:              href="/register"
+src/app/contact/page.tsx:99:        <Link href="/faq" className="hover:text-slate-300 transition-colors">FAQ</Link>
+src/app/contact/page.tsx:101:        <Link href="/about" className="hover:text-slate-300 transition-colors">About</Link>
+src/app/contact/page.tsx:103:        <Link href="/privacy" className="hover:text-slate-300 transition-colors">Privacy</Link>
+src/app/contact/page.tsx:105:        <Link href="/terms" className="hover:text-slate-300 transition-colors">Terms</Link>
+src/app/n8n-templates/page.tsx:306:          <Link href="/api-docs" style={{ fontSize: 13, color: '#94a3b8', textDecoration: 'none' }}>API Docs</Link>
+src/app/n8n-templates/page.tsx:307:          <Link href="/dashboard" style={{ fontSize: 13, color: '#818cf8', textDecoration: 'none', fontWeight: 500 }}>← App</Link>
+src/app/n8n-templates/page.tsx:323:            <Link href="/settings/api" style={{ background: '#4f46e5', color: '#fff', textDecoration: 'none', padding: '10px 20px', borderRadius: 8, fontSize: 14, fontWeight: 600 }}>
+src/app/n8n-templates/page.tsx:326:            <Link href="/api-docs" style={{ background: '#1e293b', border: '1px solid #334155', color: '#94a3b8', textDecoration: 'none', padding: '10px 20px', borderRadius: 8, fontSize: 14 }}>
+src/app/n8n-templates/page.tsx:403:            <Link href="/api-docs" style={{ background: '#4f46e5', color: '#fff', textDecoration: 'none', padding: '10px 20px', borderRadius: 8, fontSize: 14, fontWeight: 600 }}>
+src/app/n8n-templates/page.tsx:406:            <Link href="/changelog" style={{ background: 'transparent', border: '1px solid #334155', color: '#94a3b8', textDecoration: 'none', padding: '10px 20px', borderRadius: 8, fontSize: 14 }}>
+src/app/(public-tools)/tools/rate-calculator/RateCalculatorPublic.tsx:113:            <Link href="/login" className="text-sm text-slate-400 hover:text-slate-200 transition-colors">Sign in</Link>
+src/app/(public-tools)/tools/rate-calculator/RateCalculatorPublic.tsx:115:              href="/register"
+src/app/(public-tools)/tools/rate-calculator/RateCalculatorPublic.tsx:418:                  href="/register"
+src/app/(public-tools)/tools/rate-calculator/RateCalculatorPublic.tsx:492:              href="/register"
+src/app/(public-tools)/tools/rate-calculator/RateCalculatorPublic.tsx:506:        <Link href="/faq" className="hover:text-slate-300 transition-colors">FAQ</Link>
+src/app/(public-tools)/tools/rate-calculator/RateCalculatorPublic.tsx:508:        <Link href="/about" className="hover:text-slate-300 transition-colors">About</Link>
+src/app/(public-tools)/tools/rate-calculator/RateCalculatorPublic.tsx:510:        <Link href="/privacy" className="hover:text-slate-300 transition-colors">Privacy</Link>
+src/app/(public-tools)/tools/rate-calculator/RateCalculatorPublic.tsx:512:        <Link href="/terms" className="hover:text-slate-300 transition-colors">Terms</Link>
+src/app/payments/success/page.tsx:100:            href="/dashboard"
+src/app/(app)/error.tsx:31:          href="/dashboard"
+src/app/(app)/forecast/page.tsx:268:            href="/api/calendar/export"
+src/app/(app)/forecast/page.tsx:301:            href="/invoices"
+src/app/(app)/forecast/page.tsx:312:            <Link href="/invoices/new" className="mt-2 inline-block text-sm text-violet-400 hover:underline">
+src/app/(app)/clients/ImportButton.tsx:9:      href="/clients/import"
+src/app/(app)/clients/pipeline/page.tsx:51:            href="/leads"
+src/app/(app)/clients/pipeline/page.tsx:57:            href="/api/leads/export"
+src/app/(app)/clients/page.tsx:104:          <Link href="/clients/new"
+src/app/(app)/clients/page.tsx:109:          <Link href="/clients/pipeline"
+src/app/(app)/clients/page.tsx:129:          href="/clients/new"
+src/app/(app)/clients/check-ins/CheckInsClient.tsx:309:          <Link href="/clients" style={{ fontSize: 13, color: '#6366f1', textDecoration: 'none', minHeight: 44, display: 'flex', alignItems: 'center' }}>
+src/app/(app)/clients/referrals/ReferralsClient.tsx:638:            <Link href="/clients" style={{ color: '#9ca3af', textDecoration: 'none', display: 'flex', alignItems: 'center', minHeight: 44, minWidth: 44, justifyContent: 'center' }}>
+src/app/(app)/clients/special-dates/SpecialDatesClient.tsx:574:              href="/clients"
+src/app/(app)/clients/health-scores/ClientHealthClient.tsx:278:            href="/clients/feedback-analytics"
+src/app/(app)/clients/health-scores/ClientHealthClient.tsx:546:          <Link href="/clients/new" style={{
+src/app/(app)/clients/intake/page.tsx:107:        <Link href="/clients" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 min-h-[44px]">
+src/app/(app)/clients/win-back/page.tsx:370:            href="/clients"
+src/app/(app)/clients/new/page.tsx:276:        <Link href="/clients" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 min-h-[44px]">
+src/app/(app)/clients/new/page.tsx:297:            <Link href="/billing" className="inline-flex items-center gap-1.5 mt-2 text-sm font-semibold text-violet-400 hover:text-indigo-300">
+src/app/(app)/clients/new/page.tsx:507:                        <Link href="/billing" className="block mt-1 font-semibold text-violet-400 hover:text-indigo-300 underline">
+src/app/(app)/clients/new/page.tsx:574:              <Link href="/clients" className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 hover:text-slate-300 px-4 py-2.5 rounded-lg border border-slate-700 hover:bg-slate-900/50 transition-colors min-h-[44px]">
+src/app/(app)/clients/new/page.tsx:590:                href="/billing"
+src/app/(app)/clients/referral-analytics/page.tsx:76:        <Link href="/clients" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 mb-4 min-h-[44px]">
+src/app/(app)/clients/referral-analytics/page.tsx:122:          <Link href="/clients" className="inline-flex items-center gap-2 bg-violet-600 text-white text-sm font-medium px-4 py-2.5 rounded-lg hover:bg-violet-700 transition-colors min-h-[44px]">
+src/app/(app)/clients/referral-analytics/page.tsx:203:              <Link href="/clients" className="text-xs font-semibold text-amber-400 hover:text-amber-900 border border-amber-300 px-3 py-1.5 rounded-lg hover:bg-amber-900/20 transition-colors flex-shrink-0 min-h-[44px]">
+src/app/(app)/clients/[id]/page.tsx:102:        <Link href="/clients" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 mb-4 min-h-[44px]">
+src/app/(app)/clients/import/page.tsx:214:        <Link href="/clients" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 transition-colors min-h-[44px]">
+src/app/(app)/clients/import/page.tsx:430:                  href="/clients"
+src/app/(app)/clients/import/page.tsx:450:              <Link href="/clients" className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 hover:text-slate-300 px-4 py-2.5 rounded-lg border border-slate-700 hover:bg-slate-900/50 transition-colors min-h-[44px]">
+src/app/(app)/clients/broadcast/page.tsx:178:        <Link href="/clients" className="text-sm text-slate-500 hover:text-slate-300 flex items-center gap-1 min-h-[44px]">
+src/app/(app)/settings/OutlookConnect.tsx:125:              href="/inbox"
+src/app/(app)/settings/page.tsx:478:          <a href="/billing" className="inline-flex items-center min-h-[44px] text-sm text-violet-400 hover:text-indigo-300 font-medium">
+src/app/(app)/settings/page.tsx:490:            <a href="/upgrade" className="bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-600/30 text-white text-sm font-medium px-4 py-2 rounded-lg transition-all min-h-[44px]">
+src/app/(app)/settings/page.tsx:582:          <a href="/settings/items-library" className="inline-flex items-center min-h-[44px] text-sm text-violet-400 hover:text-indigo-300 font-medium">
+src/app/(app)/settings/page.tsx:600:          <a href="/settings/api" className="inline-flex items-center min-h-[44px] text-sm text-violet-400 hover:text-indigo-300 font-medium">
+src/app/(app)/settings/page.tsx:630:          <a href="/settings/export" className="inline-flex items-center min-h-[44px] text-sm text-violet-400 hover:text-indigo-300 font-medium">
+src/app/(app)/settings/page.tsx:660:            <a href="/forgot-password"
+src/app/(app)/settings/GmailConnect.tsx:135:              href="/inbox"
+src/app/(app)/settings/api/APIKeysClient.tsx:1405:              <a href="/api-docs" className="inline-flex items-center min-h-[44px] text-xs text-violet-400 hover:text-indigo-300 font-medium underline underline-offset-2">
+src/app/(app)/settings/api/APIKeysClient.tsx:1409:              <a href="/n8n-templates" className="inline-flex items-center min-h-[44px] text-xs text-orange-400 hover:text-orange-300 font-medium underline underline-offset-2">
+src/app/(app)/settings/items-library/page.tsx:144:        <Link href="/settings" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 min-h-[44px]">
+src/app/(app)/retainers/health/page.tsx:145:            href="/retainers"
+src/app/(app)/retainers/health/page.tsx:159:            href="/retainers"
+src/app/(app)/retainers/health/page.tsx:242:            <Link href="/retainers" className="inline-flex items-center min-h-[44px] text-sm text-slate-500 hover:text-slate-400 transition-colors">
+src/app/(app)/retainers/health/page.tsx:252:          href="/retainers"
+src/app/(app)/retainers/health/page.tsx:348:                      href="/retainers"
+src/app/(app)/retainers/health/page.tsx:422:            href="/retainers"
+src/app/(app)/retainers/page.tsx:300:            href="/retainers/health"
+src/app/(app)/upgrade/PlansGrid.tsx:180:        <Link href="/settings" className="text-violet-500 hover:text-violet-400">Manage subscription in settings</Link>
+src/app/(app)/tools/proposal-followups/ProposalFollowupsClient.tsx:160:            href="/proposals"
+src/app/(app)/tools/goals/AnnualGoalsClient.tsx:338:            href="/analytics/annual-review"
+src/app/(app)/tools/budget-alerts/BudgetAlertsClient.tsx:176:            <Link href="/projects" style={{ display: 'inline-flex', alignItems: 'center', marginTop: 16, background: '#4f46e5', color: '#fff', fontWeight: 600, fontSize: 14, padding: '9px 20px', borderRadius: 8, textDecoration: 'none', minHeight: 44 }}>
+src/app/(app)/tools/digest/DigestClient.tsx:469:              href="/settings/digest"
+src/app/(app)/tools/proof-wall/ProofWallClient.tsx:691:                    <Link href="/tools/testimonials" style={{ color: accent, fontSize: 14, fontWeight: 600, minHeight: 44, display: 'inline-flex', alignItems: 'center' }}>
+src/app/(app)/tools/work-rhythm/WorkRhythmClient.tsx:229:          <Link href="/work/time" style={{ display: 'inline-flex', alignItems: 'center', background: '#6366f1', color: '#fff', borderRadius: 8, padding: '10px 24px', textDecoration: 'none', fontWeight: 600, fontSize: 14, minHeight: 44 }}>
+src/app/(app)/tools/work-life/WorkLifeClient.tsx:87:      <Link href="/time-tracker" className="mt-4 inline-block text-violet-400 text-sm hover:underline">
+src/app/(app)/tools/work-life/WorkLifeClient.tsx:190:        <Link href="/time-tracker" className="text-sm font-medium text-violet-400 hover:text-indigo-300 border border-violet-700 hover:bg-violet-900/30 rounded-lg px-4 py-2 min-h-[44px]">
+src/app/(app)/tools/work-life/WorkLifeClient.tsx:193:        <Link href="/tools/burnout" className="text-sm font-medium text-slate-400 hover:text-slate-300 border border-slate-700 hover:bg-slate-700/50 rounded-lg px-4 py-2 min-h-[44px]">
+src/app/(app)/tools/auto-invoicing/AutoInvoicingClient.tsx:200:              <a href="/retainers" style={{ color: '#60a5fa', textDecoration: 'none' }}>Retainer Manager</a>.
+src/app/(app)/tools/brief-extractor/BriefExtractorClient.tsx:628:                  href="/proposals/new"
+src/app/(app)/inbox/page.tsx:132:          href="/settings#email"
+src/app/(app)/invoices/page.tsx:110:          href="/invoices/new"
+src/app/(app)/invoices/page.tsx:116:          href="/invoices/collections"
+src/app/(app)/invoices/page.tsx:133:            <Link href="/invoices"
+src/app/(app)/invoices/page.tsx:152:          <Link href="/invoices/new" className="flex items-center gap-2 bg-gradient-primary hover:brightness-110 active:scale-[0.98] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all min-h-[44px]">
+src/app/(app)/invoices/page.tsx:155:          <Link href="/invoices/templates"
+src/app/(app)/invoices/page.tsx:160:            <Link href="/invoices/collections"
+src/app/(app)/invoices/generate/page.tsx:264:      <Link href="/invoices" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 mb-6 min-h-[44px]">
+src/app/(app)/invoices/escalation/page.tsx:505:        <Link href="/invoices" style={{ color: '#6b7280', display: 'flex', alignItems: 'center', gap: 4, fontSize: 14, textDecoration: 'none', minHeight: 44 }}>
+src/app/(app)/invoices/new/page.tsx:557:                <a href="/settings#invoice-numbering" className="text-violet-400 hover:underline">Configure in Settings</a>
+src/app/(app)/invoices/new/page.tsx:799:            <a href="/settings" style={{ color: '#fca5a5', fontWeight: 600, textDecoration: 'underline', marginLeft: 4 }}>Upgrade to Pro →</a>
+src/app/(app)/invoices/new/page.tsx:814:          <Link href="/invoices" className="text-sm font-medium text-slate-400 px-4 py-2.5 rounded-lg border border-slate-600 hover:bg-slate-700/50 transition-colors min-h-[44px]">Cancel</Link>
+src/app/(app)/invoices/templates/page.tsx:121:            <Link href="/invoices" className="inline-flex items-center min-h-[44px] text-sm text-slate-500 hover:text-slate-300">Invoices</Link>
+src/app/(app)/invoices/[id]/InvoiceCreditNotes.tsx:112:                  <a href="/credit-notes" className="font-mono text-xs font-semibold text-violet-400 hover:underline">
+src/app/(app)/invoices/[id]/page.tsx:101:        <Link href="/invoices" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 mb-4 min-h-[44px]">
+src/app/(app)/invoices/[id]/page.tsx:167:            href="/credit-notes"
+src/app/(app)/invoices/[id]/page.tsx:321:          href="/settings#invoice-branding"
+src/app/(app)/invoices/recurring/page.tsx:108:            <Link href="/invoices" className="inline-flex items-center min-h-[44px] text-sm text-slate-500 hover:text-slate-300">Invoices</Link>
+src/app/(app)/invoices/recurring/page.tsx:120:          href="/invoices/recurring/new"
+src/app/(app)/invoices/reminders/page.tsx:282:          <Link href="/invoices" style={{ display: 'flex', alignItems: 'center', color: '#64748b', textDecoration: 'none' }}>
+src/app/(app)/invoices/aging/AgingReportClient.tsx:257:                <Link href="/invoices" style={{ fontSize: 13, color: '#9ca3af', textDecoration: 'none', minHeight: 44, display: 'flex', alignItems: 'center' }}>← Invoices</Link>
+src/app/(app)/invoices/collections/page.tsx:163:          <Link href="/invoices" className="flex items-center gap-1 text-sm text-slate-500 hover:text-slate-300 transition-colors min-h-[44px]">
+src/app/(app)/invoices/collections/page.tsx:212:          <Link href="/invoices" className="inline-flex items-center gap-2 mt-5 text-sm text-violet-400 hover:text-indigo-300 font-medium min-h-[44px]">
+src/app/(app)/invoices/recurring/new/page.tsx:153:      <Link href="/invoices/recurring"
+src/app/(app)/invoices/recurring/new/page.tsx:329:            href="/invoices/recurring"
+src/app/(app)/invoices/analytics/page.tsx:57:          <Link href="/invoices" className="text-sm text-slate-500 hover:text-slate-300 flex items-center gap-1 min-h-[44px]">
+src/app/(app)/invoices/analytics/page.tsx:77:        <Link href="/invoices" className="text-sm text-slate-500 hover:text-slate-300 flex items-center gap-1">
+src/app/(app)/invoices/analytics/page.tsx:120:        <Link href="/invoices" className="text-sm text-slate-500 hover:text-slate-300 flex items-center gap-1">
+src/app/(app)/estimates/page.tsx:37:          <Link href="/estimates"
+src/app/(app)/estimates/page.tsx:54:        <Link href="/estimates/new" className="flex items-center gap-2 bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-600/30 text-white text-sm font-medium px-4 py-2.5 rounded-lg transition-all min-h-[44px]">
+src/app/(app)/estimates/page.tsx:71:            <Link href="/estimates/new" className="inline-flex items-center gap-2 bg-violet-600 text-white text-sm font-medium px-4 py-2.5 rounded-lg hover:bg-violet-700 transition-colors min-h-[44px]">
+src/app/(app)/estimates/[id]/page.tsx:173:          <Link href="/estimates" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 mb-6">
+src/app/(app)/estimates/[id]/page.tsx:338:            <Link href="/estimates" className="text-sm font-medium text-slate-400 px-4 py-2.5 rounded-lg border border-slate-600 hover:bg-slate-900/50 transition-colors min-h-[44px]">
+src/app/(app)/estimates/new/page.tsx:110:      <Link href="/estimates" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 mb-6">
+src/app/(app)/estimates/new/page.tsx:240:          <Link href="/estimates" className="text-sm font-medium text-slate-400 px-4 py-2.5 rounded-lg border border-slate-600 hover:bg-slate-900/50 transition-colors min-h-[44px]">Cancel</Link>
+src/app/(app)/time-off/calendar/page.tsx:266:            href="/time-off"
+src/app/(app)/time-off/calendar/page.tsx:280:          href="/time-off"
+src/app/(app)/time-off/calendar/page.tsx:424:                href="/time-off"
+src/app/(app)/expenses/CategoryBreakdown.tsx:40:          <Link href="/expenses/categories" className="inline-flex items-center min-h-[44px] text-xs text-violet-400 hover:underline font-medium">
+src/app/(app)/expenses/breakdown/page.tsx:153:        <Link href="/expenses" className="text-slate-500 hover:text-slate-400 transition-colors">
+src/app/(app)/expenses/categories/page.tsx:94:          <Link href="/expenses" className="text-slate-500 hover:text-slate-400 transition-colors">
+src/app/(app)/expenses/recurring/RecurringExpensesClient.tsx:243:          <Link href="/expenses" className="text-slate-500 hover:text-slate-400 transition-colors">
+src/app/(app)/expenses/recurring/page.tsx:100:          <Link href="/expenses" className="text-slate-500 hover:text-slate-400 transition-colors">
+src/app/(app)/expenses/recurring/page.tsx:109:          href="/expenses"
+src/app/(app)/expenses/recurring/page.tsx:126:            href="/expenses"
+src/app/(app)/expenses/page.tsx:244:              <Link href="/expenses/breakdown" className="inline-flex items-center min-h-[44px] text-sm text-violet-400 hover:text-indigo-300 font-medium transition-colors">Breakdown →</Link>
+src/app/(app)/expenses/page.tsx:303:          <Link href="/expenses/recurring" className="inline-flex items-center min-h-[44px] text-xs text-violet-400 hover:underline font-medium flex-shrink-0">
+src/app/(app)/contracts/page.tsx:486:          <Link href="/contracts/generate" className="flex items-center gap-1.5 bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-zinc-700 text-sm font-medium px-3 py-2 rounded-lg transition-colors min-h-[44px]">
+src/app/(app)/leads/analytics/page.tsx:87:          <Link href="/leads" className="flex items-center gap-2 text-slate-400 hover:text-slate-200 text-sm transition-colors">
+src/app/(app)/leads/analytics/page.tsx:277:                <Link href="/leads" className="inline-flex items-center min-h-[44px] text-xs font-semibold text-amber-400 hover:text-amber-300 transition-colors whitespace-nowrap">
+src/app/(app)/leads/page.tsx:907:            href="/leads/analytics"
+src/app/(app)/contracts/renewals/page.tsx:55:        <Link href="/contracts" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 mb-4">
+src/app/(app)/contracts/templates/page.tsx:66:        <Link href="/contracts/templates/new"
+src/app/(app)/contracts/templates/page.tsx:96:          <Link href="/contracts/templates/new"
+src/app/(app)/contracts/templates/[id]/page.tsx:98:          <Link href="/contracts/templates" className="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-slate-300">
+src/app/(app)/contracts/new/page.tsx:148:      <Link href="/contracts" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 mb-6">
+src/app/(app)/contracts/new/page.tsx:233:            <Link href="/contracts" className="text-sm font-medium text-slate-400 px-4 py-2.5 rounded-lg border border-slate-600 hover:bg-slate-900/50 transition-colors min-h-[44px]">Cancel</Link>
+src/app/(app)/contracts/expiry/page.tsx:89:        <Link href="/contracts" className="text-sm text-violet-400 hover:text-indigo-300 font-medium flex items-center gap-1">
+src/app/(app)/contracts/[id]/page.tsx:34:        <Link href="/contracts" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 mb-4">
+src/app/(app)/projects/page.tsx:60: <Link href="/projects"
+src/app/(app)/projects/page.tsx:86: <Link href="/projects/new" className="flex items-center gap-2 bg-gradient-primary hover:brightness-110 active:scale-[0.98] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all min-h-[44px]">
+src/app/(app)/projects/page.tsx:89: <Link href="/projects/ai-brief"
+src/app/(app)/projects/page.tsx:109: <Link href="/projects/board"
+src/app/(app)/projects/page.tsx:114: <Link href="/projects/timeline"
+src/app/(app)/projects/page.tsx:119: <Link href="/projects/gantt"
+src/app/(app)/projects/board/KanbanBoard.tsx:118: <Link href="/projects/new"
+src/app/(app)/projects/health/page.tsx:85: <Link href="/projects" className="inline-flex items-center min-h-[44px] text-sm text-slate-500 hover:text-slate-300">
+src/app/(app)/projects/health/page.tsx:120: <Link href="/projects/new" className="inline-flex items-center gap-2 mt-4 bg-violet-600 text-white text-sm font-medium px-4 py-2.5 rounded-lg hover:bg-violet-700 transition-colors min-h-[44px]">
+src/app/(app)/projects/board/page.tsx:33: <Link href="/projects"
+src/app/(app)/projects/board/page.tsx:42: <Link href="/projects/timeline"
+src/app/(app)/projects/board/page.tsx:48: <Link href="/projects/new"
+src/app/(app)/projects/ai-brief/page.tsx:178: href="/projects"
+src/app/(app)/projects/gantt/page.tsx:136: <Link href="/projects" className="flex items-center gap-1.5 text-sm text-slate-500 hover:text-slate-300 transition-colors min-h-[44px]">
+src/app/(app)/projects/gantt/page.tsx:155: <Link href="/projects/new" className="inline-flex items-center gap-2 mt-4 bg-violet-600 text-white text-sm font-medium px-4 py-2.5 rounded-lg hover:bg-violet-700 transition-colors min-h-[44px]">
+src/app/(app)/projects/milestone-billing/page.tsx:137: href="/invoices/new"
+src/app/(app)/projects/milestone-billing/page.tsx:186: href="/projects"
+src/app/(app)/projects/new/page.tsx:191: <Link href="/projects" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 mb-6 min-h-[44px]">
+src/app/(app)/projects/new/page.tsx:392: <Link href="/projects" className="text-sm font-medium text-slate-400 px-4 py-2.5 rounded-lg border border-slate-600 hover:bg-slate-900/50 transition-colors min-h-[44px]">Cancel</Link>
+src/app/(app)/projects/[id]/page.tsx:357: <Link href="/time-tracker" className="inline-flex items-center min-h-[44px] text-xs text-violet-400 font-medium hover:text-indigo-300">+ Track time</Link>
+src/app/(app)/projects/timeline/GanttClient.tsx:204: <Link href="/projects" style={{ marginTop: 8, padding: '8px 16px', background: '#4f46e5', color: '#fff', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', minHeight: 44, display: 'inline-flex', alignItems: 'center' }}>
+src/app/(app)/projects/timeline/GanttTimeline.tsx:529: <Link href="/projects/new" style={{ marginTop: 8, padding: '8px 16px', background: '#4f46e5', color: '#fff', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', minHeight: 44, display: 'inline-flex', alignItems: 'center' }}>
+src/app/(app)/tax-estimator/TaxEstimatorClient.tsx:508:                {' '}<a href="/settings" className="underline hover:text-violet-500 transition-colors">Update tax rate →</a>
+src/app/(app)/dashboard/ProposalWinRateWidget.tsx:74:          href="/analytics/proposals"
+src/app/(app)/dashboard/DiversificationWidget.tsx:71:        <Link href="/analytics/diversification" className="inline-flex items-center min-h-[44px] text-xs text-violet-400 hover:text-indigo-300 font-medium">
+src/app/(app)/dashboard/DiversificationWidget.tsx:124:        href="/analytics/diversification"
+src/app/(app)/dashboard/MonthlyTarget.tsx:55:        <Link href="/settings" className="inline-flex items-center min-h-[44px] text-xs text-slate-500 hover:text-violet-400 transition-colors">
+src/app/(app)/dashboard/FollowUpsWidget.tsx:70:        <Link href="/clients" className="inline-flex items-center min-h-[44px] text-xs text-violet-400 hover:text-violet-400 font-medium">
+src/app/(app)/dashboard/ProjectHealthWidget.tsx:42:      href="/projects/health"
+src/app/(app)/dashboard/InvoiceReadyAlert.tsx:62:                  <Link href="/invoices" className="block text-xs text-center text-blue-500 hover:text-blue-400 py-1 min-h-[44px]">
+src/app/(app)/dashboard/ExpiringProposalsWidget.tsx:41:          href="/proposals"
+src/app/(app)/dashboard/SubscriptionRenewalsWidget.tsx:56:        <Link href="/subscriptions" className="inline-flex items-center min-h-[44px] text-xs text-blue-500 hover:text-blue-400 font-medium">
+src/app/(app)/dashboard/RecentPaymentsWidget.tsx:46:                <Link href="/invoices" className="ml-auto text-xs text-violet-400 font-medium hover:text-violet-800 min-h-[44px] flex items-center">View all →</Link>
+src/app/(app)/dashboard/RevenueGoalWidget.tsx:64:        href="/goals"
+src/app/(app)/dashboard/RevenueGoalWidget.tsx:93:        <Link href="/goals" className="inline-flex items-center min-h-[44px] text-xs text-slate-500 hover:text-violet-400 transition-colors">
+src/app/(app)/dashboard/InstallmentsWidget.tsx:70:        <Link href="/invoices" className="text-sm text-violet-400 hover:text-violet-400 flex items-center gap-1 min-h-[44px]">
+src/app/(app)/dashboard/LeadsPipelineWidget.tsx:59:      <Link href="/leads" className="block bg-slate-800/50 border border-slate-700 rounded-xl p-5 hover:border-violet-500/50 transition-colors group">
+src/app/(app)/dashboard/LeadsPipelineWidget.tsx:72:    <Link href="/leads" className="block bg-slate-800/50 border border-slate-700 rounded-xl p-5 hover:border-violet-500/40 transition-colors group">
+src/app/(app)/dashboard/ContractRenewalWidget.tsx:89:        <Link href="/contracts/renewals" className="inline-flex items-center min-h-[44px] text-xs text-violet-400 hover:text-violet-400 font-medium">
+src/app/(app)/dashboard/ContractRenewalWidget.tsx:118:        <Link href="/contracts?filter=expiring" className="inline-flex items-center min-h-[44px] text-xs text-slate-500 hover:text-violet-400 transition-colors">
+src/app/(app)/dashboard/NewClientsThisMonth.tsx:71:                  <Link href="/clients" className="block text-xs text-center text-violet-500 hover:text-violet-700 py-1 min-h-[44px]">
+src/app/(app)/dashboard/SavingsWidget.tsx:53:          <Link href="/savings" className="text-sm text-violet-400 hover:text-violet-400 flex items-center gap-1">
+src/app/(app)/dashboard/UnbilledMilestonesWidget.tsx:41:        href="/invoices/new"
+src/app/(app)/dashboard/MonthlyReportCard.tsx:22:    <Link href="/reports/monthly" className="block group">
+src/app/(app)/dashboard/BurnoutWidget.tsx:87:          href="/analytics/burnout"
+src/app/(app)/dashboard/ProjectStatusSummary.tsx:58:                <Link href="/projects" className="ml-auto text-xs text-violet-400 hover:text-violet-400 min-h-[44px] flex items-center">View all</Link>
+src/app/(app)/dashboard/IntakeNotificationBanner.tsx:21:      href="/clients/intake"
+src/app/(app)/dashboard/RemindersWidget.tsx:70:          <Link href="/reminders" className="ml-auto text-xs text-violet-400 hover:text-violet-400 font-medium">View all →</Link>
+src/app/(app)/dashboard/RemindersWidget.tsx:89:        <Link href="/reminders" className="ml-auto text-xs text-violet-400 hover:text-violet-400 font-medium">View all →</Link>
+src/app/(app)/dashboard/ProjectPauseAlert.tsx:66:                  <Link href="/projects" className="block text-xs text-center text-orange-500 hover:text-orange-700 py-1 min-h-[44px]">
+src/app/(app)/dashboard/RecentActivityWidget.tsx:122:        <Link href="/activity" className="text-sm text-violet-400 hover:text-violet-400 flex items-center gap-1">
+src/app/(app)/dashboard/AvailabilityWidget.tsx:103:          href="/availability"
+src/app/(app)/dashboard/AvailabilityWidget.tsx:122:          <Link href="/time-off" className="ml-auto text-xs text-blue-500 hover:text-blue-400 font-medium">
+src/app/(app)/dashboard/QuickProposalStats.tsx:43:                <Link href="/proposals" className="ml-auto text-xs text-violet-400 hover:text-violet-400 min-h-[44px] flex items-center">View all →</Link>
+src/app/(app)/dashboard/AgingAlertWidget.tsx:59:        href="/invoices/aging"
+src/app/(app)/dashboard/OverduePulse.tsx:66:                  <Link href="/invoices" className="inline-flex items-center min-h-[44px] text-xs text-red-400 font-medium hover:text-red-300">
+src/app/(app)/dashboard/OverduePulse.tsx:72:              <Link href="/invoices"
+src/app/(app)/dashboard/ScoreCardWidget.tsx:70:        href="/reports/scorecard"
+src/app/(app)/dashboard/ActiveTimer.tsx:84:        <Link href="/work/time" className="inline-flex items-center min-h-[44px] text-xs text-emerald-500 hover:text-emerald-300 transition-colors">View</Link>
+src/app/(app)/dashboard/WorkLogWidget.tsx:34:    <Link href="/work-log" className="block group">
+src/app/(app)/dashboard/DeadlinesWidget.tsx:100:        <Link href="/projects" className="ml-auto flex items-center gap-1 text-xs text-violet-400 hover:text-violet-400 font-medium min-h-[44px]">
+src/app/(app)/dashboard/DeadlinesWidget.tsx:129:              <Link href="/projects" className="inline-flex items-center min-h-[44px] text-xs text-violet-400 hover:text-violet-400 font-medium">
+src/app/(app)/dashboard/TestimonialsWidget.tsx:33:          href="/testimonials"
+src/app/(app)/dashboard/TestimonialsWidget.tsx:65:        href="/testimonials"
+src/app/(app)/dashboard/TeamPayoutWidget.tsx:73:        <Link href="/team?tab=payouts" className="flex items-center gap-1 text-xs font-medium text-violet-400 hover:text-violet-400 transition-colors min-h-[44px]">
+src/app/(app)/dashboard/GoalProgressWidget.tsx:119:        href="/goals"
+src/app/(app)/dashboard/GoalProgressWidget.tsx:144:        <Link href="/goals" className="text-xs text-slate-500 hover:text-violet-400 transition-colors flex items-center gap-1 min-h-[44px]">
+src/app/(app)/dashboard/GoalsWidget.tsx:89:        href="/revenue-goals"
+src/app/(app)/dashboard/GoalsWidget.tsx:106:        <Link href="/revenue-goals" className="inline-flex items-center min-h-[44px] text-xs text-violet-400 hover:underline font-medium">
+src/app/(app)/dashboard/RetainerUsageWidget.tsx:61:        <Link href="/retainers" className="text-sm text-violet-400 hover:text-violet-400 flex items-center gap-1">
+src/app/(app)/dashboard/RetainerUsageWidget.tsx:82:          href="/retainers"
+src/app/(app)/dashboard/CashFlowForecast.tsx:85:                    <Link href="/invoices" className="text-xs text-red-400 underline min-h-[44px] flex items-center">View</Link>
+src/app/(app)/dashboard/RetainersWidget.tsx:43:        <Link href="/retainers" className="text-sm text-slate-400 hover:text-white flex items-center gap-1 transition-colors">
+src/app/(app)/dashboard/RetainersWidget.tsx:55:        <Link href="/retainers" className="mt-2 block text-xs text-slate-500 hover:text-violet-400 transition-colors">
+src/app/(app)/dashboard/ClientPipelineValue.tsx:45:                  <Link href="/proposals" className="bg-slate-800/50 rounded-lg p-3 hover:bg-violet-900/20 transition-colors">
+src/app/(app)/dashboard/ClientPipelineValue.tsx:52:                  <Link href="/invoices" className="bg-slate-800/50 rounded-lg p-3 hover:bg-violet-900/20 transition-colors">
+src/app/(app)/dashboard/ProjectProgressGrid.tsx:60:                <Link href="/projects" className="ml-auto text-xs text-violet-400 font-medium hover:text-violet-800 min-h-[44px] flex items-center">View all →</Link>
+src/app/(app)/dashboard/DashboardClient.tsx:311:                <a href="/tasks" className="text-indigo-500 no-underline text-[13px]">
+src/app/(app)/dashboard/DashboardClient.tsx:389:          href="/invoices/new"
+src/app/(app)/dashboard/ClientTierWidget.tsx:73:        <Link href="/clients" className="text-xs text-violet-400 hover:text-violet-400 flex items-center gap-1 min-h-[44px]">
+src/app/(app)/dashboard/UnbilledTimeAlert.tsx:101:                  <Link href="/projects" className="block text-xs text-center text-teal-400 hover:text-teal-300 py-1 min-h-[44px]">
+src/app/(app)/dashboard/CashFlowWidget.tsx:64:        <Link href="/analytics/cash-flow" className="inline-flex items-center min-h-[44px] text-xs text-violet-400 hover:text-indigo-300 font-medium">
+src/app/(app)/dashboard/BillabilityWidget.tsx:105:              <Link href="/settings/public-profile" className="text-violet-500 hover:underline">Settings</Link>{' '}
+src/app/(app)/dashboard/BillabilityWidget.tsx:114:            <Link href="/analytics/time" className="inline-flex items-center min-h-[44px] text-xs text-violet-500 hover:text-violet-400 font-medium">
+src/app/(app)/dashboard/EngagementWidget.tsx:124:        href="/analytics/engagement"
+src/app/(app)/dashboard/CollectionsWidget.tsx:58:          href="/invoices/collections"
+src/app/(app)/dashboard/RevenueForecastWidget.tsx:47:          href="/forecast"
+src/app/(app)/dashboard/DraftInvoiceAlert.tsx:67:              <Link href="/invoices?status=draft" className="inline-flex items-center min-h-[44px] text-xs text-orange-600 hover:text-orange-700 font-medium">
+src/app/(app)/dashboard/HealthScoreWidget.tsx:172:        href="/analytics/health"
+src/app/(app)/dashboard/FocusWidget.tsx:61:      <Link href="/invoices/new"
+src/app/(app)/dashboard/FocusWidget.tsx:76:      <Link href="/invoices"
+src/app/(app)/dashboard/ActiveProjectsSummary.tsx:50:                <Link href="/projects" className="ml-auto text-xs text-violet-400 hover:text-violet-400 min-h-[44px] flex items-center">View all</Link>
+src/app/(app)/dashboard/SuperDashboardClient.tsx:199:              href="/analytics/invoice-aging"
+src/app/(app)/dashboard/SuperDashboardClient.tsx:207:              href="/clients/communications"
+src/app/(app)/dashboard/SuperDashboardClient.tsx:215:              href="/clients/documents"
+src/app/(app)/dashboard/SuperDashboardClient.tsx:270:        <a href="/invoices" className={`${CARD_CLASS} no-underline block cursor-pointer`}>
+src/app/(app)/dashboard/SuperDashboardClient.tsx:309:        <a href="/sales/pipeline" className={`${CARD_CLASS} no-underline block cursor-pointer`}>
+src/app/(app)/dashboard/SuperDashboardClient.tsx:334:              <a href="/projects/new" className="text-indigo-500">Create one →</a>
+src/app/(app)/dashboard/SuperDashboardClient.tsx:373:            <a href="/projects" className="text-indigo-500 text-[13px] no-underline inline-flex items-center min-h-[44px]">View all projects →</a>
+src/app/(app)/dashboard/SuperDashboardClient.tsx:480:            <a href="/tools/goals" className="text-violet-300 no-underline inline-flex items-center min-h-[44px]">Set revenue goals to track monthly progress →</a>
+src/app/(app)/dashboard/SuperDashboardClient.tsx:498:                href="/work/time"
+src/app/(app)/dashboard/OnboardingBanner.tsx:61:          <Link href="/onboarding"
+src/app/(app)/dashboard/UnpaidInvoicesList.tsx:67:                <Link href="/invoices?status=unpaid" className="inline-flex items-center min-h-[44px] text-xs text-violet-400 hover:text-violet-400 font-medium">
+src/app/(app)/dashboard/command-center/CommandCenterClient.tsx:434:              <Link href="/clients/meeting-notes" style={{ fontSize: 12, color: T.accent, textDecoration: 'none' }}>View All →</Link>
+src/app/(app)/dashboard/command-center/CommandCenterClient.tsx:491:              <Link href="/clients/meeting-notes" style={{ fontSize: 12, color: T.accent, textDecoration: 'none' }}>Prepare Notes →</Link>
+src/app/(app)/dashboard/command-center/CommandCenterClient.tsx:568:                href="/analytics/burnout"
+src/app/(app)/dashboard/command-center/CommandCenterClient.tsx:658:                  href="/clients"
+src/app/(app)/dashboard/command-center/CommandCenterClient.tsx:682:              <Link href="/clients/outreach" style={{ fontSize: 12, color: T.accent, textDecoration: 'none' }}>View All →</Link>
+src/app/(app)/dashboard/command-center/CommandCenterClient.tsx:706:                        href="/clients/outreach"
+src/app/(app)/dashboard/command-center/CommandCenterClient.tsx:731:            <QuickActionBtn href="/finance/invoices/new" icon="🧾" label="+ New Invoice" />
+src/app/(app)/dashboard/command-center/CommandCenterClient.tsx:732:            <QuickActionBtn href="/time" icon="⏱️" label="+ Log Time" />
+src/app/(app)/dashboard/command-center/CommandCenterClient.tsx:733:            <QuickActionBtn href="/tools/proposal-writer" icon="📝" label="+ New Proposal" />
+src/app/(app)/dashboard/command-center/CommandCenterClient.tsx:734:            <QuickActionBtn href="/clients/meeting-notes" icon="📋" label="+ Meeting Notes" />
+src/app/(app)/dashboard/command-center/CommandCenterClient.tsx:735:            <QuickActionBtn href="/analytics/health-score" icon="🏆" label="Health Score" />
+src/app/(app)/dashboard/command-center/CommandCenterClient.tsx:736:            <QuickActionBtn href="/finance/pl-statement" icon="📊" label="View P&L" />
+src/app/(app)/dashboard/command-center/CommandCenterClient.tsx:737:            <QuickActionBtn href="/finance/tax" icon="🧮" label="Tax Estimate" />
+src/app/(app)/dashboard/briefing/DailyBriefingClient.tsx:590:                <Link href="/goals" style={{ ...styles.actionLink, display: 'inline-block', marginTop: '8px', marginLeft: 0, fontSize: '13px' }}>
+src/app/(app)/dashboard/briefing/DailyBriefingClient.tsx:625:        <Link href="/invoices/new" style={styles.quickActionBtn}>+ Invoice</Link>
+src/app/(app)/dashboard/briefing/DailyBriefingClient.tsx:626:        <Link href="/projects/new" style={styles.quickActionBtn}>+ Project</Link>
+src/app/(app)/dashboard/briefing/DailyBriefingClient.tsx:627:        <Link href="/proposals/new" style={styles.quickActionBtn}>+ Proposal</Link>
+src/app/(app)/dashboard/briefing/DailyBriefingClient.tsx:628:        <Link href="/time-tracker" style={styles.quickActionBtn}>Log Time</Link>
+src/app/(app)/time-tracker/page.tsx:478:          <Link href="/invoices/generate" className="flex items-center gap-1.5 text-sm text-slate-400 border border-slate-600 hover:text-violet-300 hover:border-violet-700/50 hover:bg-violet-500/10 font-medium px-3 py-2 rounded-lg transition-colors min-h-[44px]">
+src/app/(app)/time-tracker/page.tsx:481:          <a href="/api/time-entries/export" download
+src/app/(app)/time-tracker/focus/page.tsx:116:      <Link href="/work/time" className="absolute top-6 left-6 flex items-center gap-2 text-slate-600 hover:text-slate-400 transition-colors text-sm min-h-[44px]">
+src/app/(app)/time-tracker/timesheet/page.tsx:215:                  <Link href="/time-tracker" className="mt-3 inline-block text-violet-400 hover:text-indigo-300 text-sm transition-colors">
+src/app/(app)/tax-report/TaxExpenses.tsx:56:          <Link href="/expenses" className="text-violet-400 hover:underline">Add expenses →</Link>
+src/app/(app)/tax-report/TaxExpenses.tsx:69:        <Link href="/expenses" className="inline-flex items-center min-h-[44px] text-xs text-violet-400 hover:underline">View all →</Link>
+src/app/(app)/tax-report/page.tsx:58:        <Link href="/analytics" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-slate-300 mb-4">
+src/app/(app)/tax-report/page.tsx:67:            <Link href="/tax-estimator" className="inline-flex items-center gap-1.5 text-sm font-medium text-violet-400 hover:text-violet-400 bg-violet-900/20 border border-violet-800/30 rounded-lg px-3 py-2 transition-colors min-h-[44px]">
+src/app/(app)/finance/taxes/TaxDashboardClient.tsx:570:                href="/finance/expenses"
+src/app/(app)/finance/tax-quarterly/TaxQuarterlyClient.tsx:184:        href="/finance/taxes"
+src/app/(app)/skills/gap-analysis/SkillGapClient.tsx:625:            <a href="/skills" style={{ color: '#4f46e5', textDecoration: 'none', fontWeight: 600 }}>
+src/app/(app)/onboarding/OnboardingWizard.tsx:263:        <Link href="/dashboard" className="inline-flex items-center min-h-[44px] text-xs text-slate-500 hover:text-slate-400 transition-colors">
+src/app/(app)/proposals/generate/page.tsx:195:              href="/proposals"
+src/app/(app)/proposals/page.tsx:302:            href="/proposals/templates"
+src/app/(app)/proposals/page.tsx:308:            href="/proposals/brief"
+src/app/(app)/proposals/page.tsx:314:            href="/proposals/ai-writer"
+src/app/(app)/proposals/page.tsx:328:              <Link href="/proposals/templates" className="ml-auto underline hover:no-underline">Change</Link>
+src/app/(app)/proposals/page.tsx:390:                  href="/proposals/price-estimator"
+src/app/(app)/proposals/templates/TemplateLibraryClient.tsx:145:        <Link href="/proposals" className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-slate-200 mb-4 min-h-[44px]">
+src/app/(app)/proposals/[id]/page.tsx:152:        <Link href="/proposals" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 mb-4 min-h-[44px]">
+src/app/(app)/proposals/[id]/page.tsx:255:        <Link href="/proposals" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 mb-4 min-h-[44px]">
+src/app/(app)/proposals/[id]/page.tsx:360:          href="/analytics/proposals"
+src/app/(app)/proposals/templates/ProposalTemplatesClient.tsx:193:          href="/proposals"
+src/app/(app)/proposals/price-estimator/PriceEstimatorClient.tsx:162:            href="/proposals"
+src/app/(app)/proposals/analytics/ProposalAnalyticsClient.tsx:259:        <Link href="/proposals" style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13, color: '#6b7280', textDecoration: 'none', marginTop: 4, minHeight: 44 }}>
+src/app/(app)/proposals/analytics/WinRateClient.tsx:372:        <Link href="/proposals" style={{ display: 'inline-flex', alignItems: 'center', marginTop: 20, fontSize: 13, color: '#6366f1', textDecoration: 'none', minHeight: 44 }}>
+src/app/(app)/proposals/analytics/WinRateClient.tsx:386:        <Link href="/proposals" style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13, color: '#6b7280', textDecoration: 'none', marginTop: 4, minHeight: 44 }}>
+src/app/(app)/analytics/ExpenseTrend.tsx:58:        <Link href="/expenses" className="inline-flex items-center min-h-[44px] text-xs text-violet-400 hover:underline">All expenses →</Link>
+src/app/(app)/analytics/ProfitLoss.tsx:65:          <Link href="/expenses" className="text-violet-400 hover:underline font-medium inline-flex items-center min-h-[44px]">Add expenses →</Link>
+src/app/(app)/analytics/ProfitLoss.tsx:78:        <Link href="/expenses" className="inline-flex items-center min-h-[44px] text-xs text-violet-400 hover:underline">View expenses →</Link>
+src/app/(app)/analytics/page.tsx:326:        <Link href="/dashboard" className="text-sm text-slate-500 hover:text-slate-200 flex items-center gap-1 min-h-[44px]">
+src/app/(app)/analytics/page.tsx:330:        <Link href="/analytics/proposals" className="ml-auto flex items-center gap-1.5 text-sm text-violet-400 hover:text-indigo-300 font-medium bg-violet-900/20 hover:bg-violet-900/30 px-3 py-1.5 rounded-lg transition-colors min-h-[44px]">
+src/app/(app)/analytics/page.tsx:334:        <Link href="/analytics/time" className="flex items-center gap-1.5 text-sm text-violet-400 hover:text-indigo-300 font-medium bg-violet-900/20 hover:bg-violet-900/30 px-3 py-1.5 rounded-lg transition-colors min-h-[44px]">
+src/app/(app)/analytics/rates/page.tsx:232:          href="/analytics"
+src/app/(app)/analytics/revenue-heatmap/page.tsx:125:          href="/analytics"
+src/app/(app)/analytics/unbilled/page.tsx:160:          href="/analytics"
+src/app/(app)/analytics/unbilled/page.tsx:393:              href="/time-tracker"
+src/app/(app)/analytics/rate-history/page.tsx:187:          href="/analytics"
+src/app/(app)/analytics/goals/page.tsx:328:        <Link href="/analytics" style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#94a3b8', textDecoration: 'none', fontSize: 14, minHeight: 44 }}>
+src/app/(app)/analytics/referrals/page.tsx:141:          href="/analytics"
+src/app/(app)/analytics/referrals/page.tsx:162:            href="/clients"
+src/app/(app)/analytics/revenue-calendar/RevenueCalendarClient.tsx:451:              href="/analytics"
+src/app/(app)/analytics/expenses/page.tsx:652:            <Link href="/analytics" style={{ color: '#64748b', textDecoration: 'none', display: 'flex', alignItems: 'center', minHeight: 44, minWidth: 44, justifyContent: 'center' }}>
+src/app/(app)/analytics/yoy/page.tsx:119:          href="/analytics"
+src/app/(app)/analytics/health/BusinessHealthClient.tsx:269:          href="/analytics"
+src/app/(app)/analytics/health/page.tsx:255:          href="/analytics"
+src/app/(app)/analytics/burn-rate/page.tsx:231:          href="/analytics"
+src/app/(app)/analytics/burn-rate/page.tsx:258:            href="/projects"
+src/app/(app)/analytics/revenue-pipeline/page.tsx:143:        <Link href="/analytics" className="p-2 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-slate-200 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center">
+src/app/(app)/analytics/revenue-pipeline/page.tsx:281:                      <Link href="/time-tracker" className="text-violet-400 hover:text-indigo-300 transition-colors">Open Time Tracker →</Link>
+src/app/(app)/analytics/revenue-pipeline/page.tsx:290:                      <Link href="/invoices?status=sent" className="text-violet-400 hover:text-indigo-300 transition-colors">View invoices →</Link>
+src/app/(app)/analytics/time/page.tsx:122:        <Link href="/analytics" className="text-sm text-slate-500 hover:text-slate-200 flex items-center gap-1 min-h-[44px]">
+src/app/(app)/analytics/time/page.tsx:130:          href="/analytics/heatmap"
+src/app/(app)/analytics/client-work-report/page.tsx:86:        <Link href="/analytics" className="p-2 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-slate-200 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center">
+src/app/(app)/analytics/nps/page.tsx:66:        <Link href="/analytics" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-200 mb-4 min-h-[44px]">
+src/app/(app)/analytics/billing-efficiency/BillingEfficiencyClient.tsx:71:      <Link href="/analytics" className="inline-flex items-center gap-1.5 text-slate-400 hover:text-slate-200 text-sm mb-6 transition-colors min-h-[44px]">
+src/app/(app)/analytics/payment-reliability/page.tsx:216:          href="/analytics"
+src/app/(app)/analytics/engagement/EngagementClient.tsx:148:        <Link href="/analytics" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-200 mb-4 min-h-[44px]">
+src/app/(app)/analytics/engagement/EngagementClient.tsx:250:            <Link href="/clients/new" className="text-violet-400 hover:underline">Add your first client</Link> to start tracking engagement.
+src/app/(app)/analytics/client-tiers/page.tsx:48:        <Link href="/analytics" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-200 mb-4 min-h-[44px]">
+src/app/(app)/analytics/income-forecast/IncomeForecastClient.tsx:504:              <Link href="/revenue-goals" style={{ fontSize: 12, color: '#6366f1', fontWeight: 600 }}>
+src/app/(app)/analytics/income-forecast/IncomeForecastClient.tsx:571:            <Link href="/projects" style={{ fontSize: 13, color: '#6366f1', fontWeight: 600 }}>Add Project →</Link>
+src/app/(app)/analytics/income-forecast/IncomeForecastClient.tsx:572:            <Link href="/proposals" style={{ fontSize: 13, color: '#8b5cf6', fontWeight: 600 }}>Send Proposal →</Link>
+src/app/(app)/analytics/heatmap/WorkHeatmapPage.tsx:169:          href="/analytics"
+src/app/(app)/analytics/tax-planner/TaxPlannerClient.tsx:177:        <Link href="/analytics" style={{ color: '#94a3b8', display: 'flex', alignItems: 'center', marginTop: 4, minHeight: 44, minWidth: 44, justifyContent: 'center' }}>
+src/app/(app)/analytics/mood/page.tsx:257:          <Link href="/analytics" className="text-slate-400 hover:text-slate-600:text-slate-200 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center">
+src/app/(app)/analytics/streaks/StreakDashboard.tsx:96:          href="/analytics"
+src/app/(app)/analytics/client-segments/ClientSegmentsClient.tsx:575:                    href="/tools/win-back"
+src/app/(app)/analytics/burnout/BurnoutClient.tsx:518:            href="/time-off"
+src/app/(app)/analytics/burnout/BurnoutClient.tsx:525:            href="/time-tracker"
+src/app/(app)/analytics/funnel/page.tsx:161:          href="/analytics/proposals"
+src/app/(app)/analytics/funnel/page.tsx:366:            href="/proposals"
+src/app/(app)/analytics/productivity/ProductivityClient.tsx:135:        <Link href="/analytics" style={{ fontSize: 13, color: '#6b7280', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 4, minHeight: 44 }}>
+src/app/(app)/analytics/productivity/ProductivityClient.tsx:219:      <Link href="/time-tracker" style={{ fontSize: 13, color: '#6366f1', textDecoration: 'none' }}>
+src/app/(app)/reports/page.tsx:230:            href="/api/calendar/export"
+src/app/(app)/reports/profitability/page.tsx:141:          <Link href="/reports" className="px-3 py-1.5 rounded-lg border border-slate-700 dark:border-white/10 text-slate-400 dark:text-gray-400 hover:bg-slate-900/50 dark:hover:bg-slate-900/5 transition-colors min-h-[44px]">
+src/app/(app)/reports/profitability/page.tsx:144:          <Link href="/reports/scorecard" className="px-3 py-1.5 rounded-lg border border-slate-700 dark:border-white/10 text-slate-400 dark:text-gray-400 hover:bg-slate-900/50 dark:hover:bg-slate-900/5 transition-colors min-h-[44px]">
+src/app/(app)/analytics/productivity/ProductivityHeatmapClient.tsx:120:            href="/analytics"
+src/app/(app)/analytics/productivity/ProductivityHeatmapClient.tsx:183:        href="/time-tracker"
+src/app/(app)/analytics/hours-optimizer/page.tsx:183:        <Link href="/analytics" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minWidth: 44, minHeight: 44, borderRadius: 8, border: '1px solid #e5e7eb', color: '#374151', textDecoration: 'none' }}>
+src/app/(app)/analytics/hours-optimizer/page.tsx:226:          <Link href="/time-tracker" style={{ display: 'inline-block', marginTop: 12, padding: '8px 16px', background: '#6366f1', color: 'white', borderRadius: 8, textDecoration: 'none', fontSize: 13, fontWeight: 600 }}>
+src/app/(app)/analytics/hours-optimizer/page.tsx:641:            <Link href="/time-tracker" style={{ fontSize: 13, color: '#6366f1', textDecoration: 'none' }}>
+src/app/(app)/analytics/hours-optimizer/page.tsx:644:            <Link href="/analytics/work-patterns" style={{ fontSize: 13, color: '#9ca3af', textDecoration: 'none' }}>
+src/app/(app)/analytics/hours-optimizer/page.tsx:647:            <Link href="/analytics/burnout" style={{ fontSize: 13, color: '#9ca3af', textDecoration: 'none' }}>
+src/app/(app)/reports/income-statement/page.tsx:138:            <Link href="/reports" className="inline-flex items-center min-h-[44px] text-sm text-slate-400 hover:text-slate-300 transition-colors">Reports</Link>
+src/app/(app)/reports/cash-flow/page.tsx:102:            <Link href="/reports" className="inline-flex items-center min-h-[44px] text-sm text-slate-400 hover:text-slate-300 transition-colors">Reports</Link>
+src/app/(app)/reports/quarterly/page.tsx:100:        <Link href="/reports" className="inline-flex items-center min-h-[44px] text-sm text-slate-500 hover:text-slate-300 transition-colors">← Reports</Link>
+src/app/(app)/reports/quarterly/page.tsx:205:        <Link href="/settings" className="text-slate-500 hover:text-slate-400 ml-1">Manage settings →</Link>
+src/app/(app)/reports/aging/page.tsx:116:        <Link href="/reports" className="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 mb-3 transition-colors">
+src/app/(app)/reports/scorecard/ScorecardClient.tsx:302:              <Link href="/reports" className="hover:text-slate-400 transition-colors">← Back to Reports</Link>
+src/app/privacy/page.tsx:161:        <Link href="/faq" className="hover:text-gray-600 transition-colors">FAQ</Link>
+src/app/privacy/page.tsx:163:        <Link href="/terms" className="hover:text-gray-600 transition-colors">Terms of Service</Link>
+src/app/cookie-policy/page.tsx:186:              <Link href="/privacy" className="text-violet-400 hover:underline">Privacy Policy</Link>.
+src/app/cookie-policy/page.tsx:196:          <Link href="/privacy" className="hover:text-slate-400">Privacy Policy</Link>
+src/app/cookie-policy/page.tsx:197:          <Link href="/terms" className="hover:text-slate-400">Terms of Service</Link>
+src/app/cookie-policy/page.tsx:198:          <Link href="/contact" className="hover:text-slate-400">Contact</Link>
+src/app/admin/layout.tsx:26:              href="/dashboard"
+src/app/about/page.tsx:63:            <Link href="/login" className="text-sm text-slate-400 hover:text-slate-200 transition-colors">Sign in</Link>
+src/app/about/page.tsx:65:              href="/register"
+src/app/about/page.tsx:158:              href="/contact"
+src/app/about/page.tsx:171:            href="/register"
+src/app/about/page.tsx:183:        <Link href="/faq" className="hover:text-slate-300 transition-colors">FAQ</Link>
+src/app/about/page.tsx:185:        <Link href="/contact" className="hover:text-slate-300 transition-colors">Contact</Link>
+src/app/about/page.tsx:187:        <Link href="/privacy" className="hover:text-slate-300 transition-colors">Privacy</Link>
+src/app/about/page.tsx:189:        <Link href="/terms" className="hover:text-slate-300 transition-colors">Terms</Link>
+src/app/changelog/page.tsx:727:          <Link href="/api-docs" style={{ color: '#818cf8', textDecoration: 'none' }}>API Docs</Link>
+src/app/changelog/page.tsx:728:          <Link href="/dashboard" style={{ color: '#818cf8', textDecoration: 'none' }}>Dashboard →</Link>
+src/app/unsubscribe/page.tsx:45:        <Link href="/settings"
+src/app/faq/page.tsx:178:            <Link href="/login" className="text-sm text-slate-400 hover:text-slate-200 transition-colors">Sign in</Link>
+src/app/faq/page.tsx:180:              href="/register"
+src/app/faq/page.tsx:218:              href="/contact"
+src/app/faq/page.tsx:231:        <Link href="/about" className="hover:text-slate-300 transition-colors">About</Link>
+src/app/faq/page.tsx:233:        <Link href="/contact" className="hover:text-slate-300 transition-colors">Contact</Link>
+src/app/faq/page.tsx:235:        <Link href="/privacy" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
+src/app/faq/page.tsx:237:        <Link href="/terms" className="hover:text-slate-300 transition-colors">Terms of Service</Link>
+src/app/blog/page.tsx:96:              <Link href="/tools/rate-calculator" className="hover:text-slate-100 transition-colors">Free Tools</Link>
+src/app/blog/page.tsx:97:              <Link href="/blog" className="text-violet-400 hover:text-indigo-300 transition-colors font-medium">Blog</Link>
+src/app/blog/page.tsx:100:              <Link href="/login" className="text-sm font-medium text-slate-400 hover:text-slate-100 transition-colors px-2 py-2.5">
+src/app/blog/page.tsx:104:                href="/register"
+src/app/blog/page.tsx:153:              <Link href="/blog" className="text-violet-400 hover:underline mt-2 inline-block">
+src/app/blog/page.tsx:174:              href="/register"
+src/app/blog/page.tsx:203:                    <li><Link href="/tools/rate-calculator" className="hover:text-slate-400 transition-colors">Rate Calculator</Link></li>
+src/app/blog/page.tsx:204:                    <li><Link href="/blog" className="hover:text-slate-400 transition-colors">Blog</Link></li>
+src/app/blog/page.tsx:205:                    <li><Link href="/changelog" className="hover:text-slate-400 transition-colors">Changelog</Link></li>
+src/app/blog/page.tsx:211:                    <li><Link href="/about" className="hover:text-slate-400 transition-colors">About</Link></li>
+src/app/blog/page.tsx:212:                    <li><Link href="/contact" className="hover:text-slate-400 transition-colors">Contact</Link></li>
+src/app/blog/page.tsx:213:                    <li><Link href="/faq" className="hover:text-slate-400 transition-colors">FAQ</Link></li>
+src/app/blog/page.tsx:214:                    <li><Link href="/login" className="hover:text-slate-400 transition-colors">Sign in</Link></li>
+src/app/blog/page.tsx:215:                    <li><Link href="/register" className="hover:text-slate-400 transition-colors">Sign up</Link></li>
+src/app/blog/page.tsx:221:                    <li><a href="/privacy" className="hover:text-slate-400 transition-colors">Privacy Policy</a></li>
+src/app/blog/page.tsx:222:                    <li><a href="/terms" className="hover:text-slate-400 transition-colors">Terms of Service</a></li>
+src/app/blog/page.tsx:223:                    <li><Link href="/cookie-policy" className="hover:text-slate-400 transition-colors">Cookie Policy</Link></li>
+src/app/blog/page.tsx:231:              <Link href="/changelog" className="hover:text-slate-300 transition-colors">What's new</Link>
+src/app/terms/page.tsx:175:        <Link href="/faq" className="hover:text-gray-600 transition-colors">FAQ</Link>
+src/app/terms/page.tsx:177:        <Link href="/privacy" className="hover:text-gray-600 transition-colors">Privacy Policy</Link>
+src/app/admin/page.tsx:83:        <StatCard label="Total users" value={totalUsers} icon={Users} href="/admin/users" />
+src/app/admin/page.tsx:86:        <StatCard label="Unverified 24h+" value={unverifiedOld} icon={AlertTriangle} warning href="/admin/users?filter=unverified-stale" />
+src/app/admin/page.tsx:93:            href="/admin/activity"
+src/app/blog/[slug]/page.tsx:152:              <Link href="/tools/rate-calculator" className="hover:text-slate-100 transition-colors">Free Tools</Link>
+src/app/blog/[slug]/page.tsx:153:              <Link href="/blog" className="text-violet-400 hover:text-indigo-300 transition-colors font-medium">Blog</Link>
+src/app/blog/[slug]/page.tsx:156:              <Link href="/login" className="text-sm font-medium text-slate-400 hover:text-slate-100 transition-colors px-2 py-2.5">
+src/app/blog/[slug]/page.tsx:160:                href="/register"
+src/app/blog/[slug]/page.tsx:178:            <Link href="/blog" className="hover:text-slate-300 transition-colors">Blog</Link>
+src/app/blog/[slug]/page.tsx:305:                  href="/register"
+src/app/blog/[slug]/page.tsx:315:                  href="/blog"
+src/app/blog/[slug]/page.tsx:365:                    href="/register"
+src/app/blog/[slug]/page.tsx:397:                    <li><Link href="/tools/rate-calculator" className="hover:text-slate-400 transition-colors">Rate Calculator</Link></li>
+src/app/blog/[slug]/page.tsx:398:                    <li><Link href="/blog" className="hover:text-slate-400 transition-colors">Blog</Link></li>
+src/app/blog/[slug]/page.tsx:399:                    <li><Link href="/changelog" className="hover:text-slate-400 transition-colors">Changelog</Link></li>
+src/app/blog/[slug]/page.tsx:405:                    <li><Link href="/about" className="hover:text-slate-400 transition-colors">About</Link></li>
+src/app/blog/[slug]/page.tsx:406:                    <li><Link href="/contact" className="hover:text-slate-400 transition-colors">Contact</Link></li>
+src/app/blog/[slug]/page.tsx:407:                    <li><Link href="/faq" className="hover:text-slate-400 transition-colors">FAQ</Link></li>
+src/app/blog/[slug]/page.tsx:408:                    <li><Link href="/login" className="hover:text-slate-400 transition-colors">Sign in</Link></li>
+src/app/blog/[slug]/page.tsx:409:                    <li><Link href="/register" className="hover:text-slate-400 transition-colors">Sign up</Link></li>
+src/app/blog/[slug]/page.tsx:415:                    <li><a href="/privacy" className="hover:text-slate-400 transition-colors">Privacy Policy</a></li>
+src/app/blog/[slug]/page.tsx:416:                    <li><a href="/terms" className="hover:text-slate-400 transition-colors">Terms of Service</a></li>
+src/app/blog/[slug]/page.tsx:417:                    <li><Link href="/cookie-policy" className="hover:text-slate-400 transition-colors">Cookie Policy</Link></li>
+src/app/blog/[slug]/page.tsx:425:              <Link href="/changelog" className="hover:text-slate-300 transition-colors">What's new</Link>
+src/app/(auth)/register/page.tsx:181:                <Link href="/terms" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:text-indigo-300 underline-offset-2 hover:underline">Terms of Service</Link>
+src/app/(auth)/register/page.tsx:183:                <Link href="/privacy" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:text-indigo-300 underline-offset-2 hover:underline">Privacy Policy</Link>
+src/app/(auth)/register/page.tsx:219:          <Link href="/login" className="text-violet-400 hover:text-indigo-300 font-medium">Sign in</Link>
+src/app/(auth)/forgot-password/page.tsx:52:            <Link href="/login" className="inline-flex items-center gap-2 text-violet-400 hover:text-indigo-300 text-sm mt-6">
+src/app/(auth)/forgot-password/page.tsx:80:              <Link href="/login" className="inline-flex items-center gap-2 text-slate-400 hover:text-slate-300 text-sm">
+src/app/(auth)/login/page.tsx:112:              <Link href="/forgot-password" className="text-xs text-violet-400 hover:text-indigo-300">Forgot password?</Link>
+src/app/(auth)/login/page.tsx:153:          <Link href="/register" className="text-violet-400 hover:text-indigo-300 font-medium">Sign up free</Link>
+src/app/api-docs/page.tsx:278:        <Link href="/dashboard" style={{ fontSize: 13, color: '#818cf8', textDecoration: 'none', fontWeight: 500 }}>← Go to App</Link>
+src/app/api-docs/page.tsx:317:                <Link href="/settings/api" style={{ color: '#818cf8' }}>Settings → API Keys</Link>.
+src/app/pricing/page.tsx:45:            <Link href="/login" className="text-sm text-slate-400 hover:text-slate-200 transition-colors">
+src/app/pricing/page.tsx:49:              href="/register"
+src/app/pricing/page.tsx:68:        <Link href="/faq" className="hover:text-slate-300 transition-colors">FAQ</Link>
+src/app/pricing/page.tsx:70:        <Link href="/about" className="hover:text-slate-300 transition-colors">About</Link>
+src/app/pricing/page.tsx:72:        <Link href="/contact" className="hover:text-slate-300 transition-colors">Contact</Link>
+src/content/blog/posts/how-to-write-freelance-contract.ts:116:<p>Writing contracts from scratch takes time and requires legal knowledge you may not have. <a href="/contracts">LancerWise's AI Contract Generator</a> creates professional, legally-sound freelance contracts in minutes:</p>
+src/content/blog/posts/how-to-write-freelance-contract.ts:125:<p><a href="/contracts" style="display:inline-block;background:#6366f1;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin:8px 0;">Generate Your Free Contract →</a></p>
+src/content/blog/posts/how-to-write-freelance-contract.ts:143:  <li><a href="/blog/how-to-calculate-freelance-hourly-rate">How to Calculate Your Freelance Hourly Rate (with Free Calculator)</a></li>
+src/content/blog/posts/how-to-write-freelance-contract.ts:144:  <li><a href="/blog/freelance-invoice-template">Freelance Invoice Template: Free Guide + Everything You Need to Know</a></li>
+src/content/blog/posts/how-to-write-freelance-contract.ts:145:  <li><a href="/blog/best-time-tracking-methods-freelancers">Best Time Tracking Methods for Freelancers in 2026</a></li>
+src/components/WorkCalendarMini.tsx:89:        <Link href="/calendar" className="text-sm text-violet-400 hover:text-violet-400 flex items-center gap-1">
+src/content/blog/posts/freelance-invoice-template.ts:83:<p>Want a professionally designed invoice? <a href="/register">LancerWise's invoice creator</a> generates beautiful, branded invoices in seconds — with automatic payment reminders, Stripe integration, and status tracking.</p>
+src/content/blog/posts/freelance-invoice-template.ts:131:  <li><strong>Automate reminders</strong> — Use <a href="/register">LancerWise</a> to automatically send payment reminders at 7 days, 3 days, and 1 day before the due date.</li>
+src/content/blog/posts/freelance-invoice-template.ts:136:<p>Creating invoices manually in Word or Google Docs works — until you have 20 active clients and need to track which invoices are paid, overdue, or disputed. <a href="/register">LancerWise's invoicing module</a> gives you:</p>
+src/content/blog/posts/freelance-invoice-template.ts:145:<p><a href="/register" style="display:inline-block;background:#6366f1;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin:8px 0;">Create Your First Invoice Free →</a></p>
+src/content/blog/posts/freelance-invoice-template.ts:149:  <li><a href="/blog/how-to-calculate-freelance-hourly-rate">How to Calculate Your Freelance Hourly Rate (with Free Calculator)</a></li>
+src/content/blog/posts/freelance-invoice-template.ts:150:  <li><a href="/blog/how-to-write-freelance-contract">How to Write a Freelance Contract: Template + 7 Essential Clauses</a></li>
+src/content/blog/posts/freelance-invoice-template.ts:151:  <li><a href="/blog/best-time-tracking-methods-freelancers">Best Time Tracking Methods for Freelancers in 2026</a></li>
+src/content/blog/posts/best-time-tracking-methods-freelancers.ts:64:  <li>Built into <a href="/register">LancerWise's time tracker</a> (Pomodoro mode)</li>
+src/content/blog/posts/best-time-tracking-methods-freelancers.ts:167:<p><a href="/register">LancerWise</a> generates time reports automatically from your tracked hours — one click, professional PDF, sent directly to the client.</p>
+src/content/blog/posts/best-time-tracking-methods-freelancers.ts:188:<p><a href="/register" style="display:inline-block;background:#6366f1;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin:8px 0;">Start Tracking Your Time Free →</a></p>
+src/content/blog/posts/best-time-tracking-methods-freelancers.ts:192:  <li><a href="/blog/how-to-calculate-freelance-hourly-rate">How to Calculate Your Freelance Hourly Rate (with Free Calculator)</a></li>
+src/content/blog/posts/best-time-tracking-methods-freelancers.ts:193:  <li><a href="/blog/freelance-invoice-template">Freelance Invoice Template: Free Guide + Everything You Need to Know</a></li>
+src/content/blog/posts/best-time-tracking-methods-freelancers.ts:194:  <li><a href="/blog/how-to-write-freelance-contract">How to Write a Freelance Contract: Template + 7 Essential Clauses</a></li>
+src/content/blog/posts/how-to-calculate-freelance-hourly-rate.ts:90:<p>Use <a href="/tools/rate-calculator">LancerWise's free Rate Calculator</a> to run these numbers instantly.</p>
+src/content/blog/posts/how-to-calculate-freelance-hourly-rate.ts:105:<p>Don't do this math manually. <a href="/tools/rate-calculator">LancerWise's free Rate Calculator</a> walks you through each step — enter your target income, expenses, and available hours, and it outputs your minimum hourly rate, project rates, and monthly revenue targets.</p>
+src/content/blog/posts/how-to-calculate-freelance-hourly-rate.ts:107:<p><a href="/tools/rate-calculator" style="display:inline-block;background:#6366f1;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin:8px 0;">Use the Free Rate Calculator →</a></p>
+src/content/blog/posts/how-to-calculate-freelance-hourly-rate.ts:123:  <li><a href="/blog/freelance-invoice-template">Freelance Invoice Template: Free Guide + Everything You Need to Know</a></li>
+src/content/blog/posts/how-to-calculate-freelance-hourly-rate.ts:124:  <li><a href="/blog/how-to-write-freelance-contract">How to Write a Freelance Contract: Template + 7 Essential Clauses</a></li>
+src/content/blog/posts/how-to-calculate-freelance-hourly-rate.ts:125:  <li><a href="/blog/best-time-tracking-methods-freelancers">Best Time Tracking Methods for Freelancers in 2026</a></li>
+src/components/ProjectTemplateSelector.tsx:198:                href="/projects/templates"
+src/components/QuickAddFromLibrary.tsx:131:              href="/settings/items-library"
+src/components/ui/QuickExpenseModal.tsx:105:                <a href="/tools/expenses" className="text-violet-400 hover:text-indigo-300">View all expenses →</a>
+src/components/ui/QuickNoteButton.tsx:104:                  href="/notes"
+src/components/ui/QuickTimerModal.tsx:154:                <Link href="/work/time" onClick={() => setOpen(false)}
+src/components/ui/GlobalTimerBar.tsx:119:      href="/time-tracker"
+src/components/ui/QuickInvoiceModal.tsx:317:                    <Link href="/clients/new" onClick={closeModal} className="text-violet-400 hover:underline">Add a client first</Link> to create invoices.
+src/components/ui/QuickTaskModal.tsx:100:            <Link href="/tasks" onClick={closeModal}
+src/components/landing/LandingMobileNav.tsx:45:              href="/tools/rate-calculator"
+src/components/landing/LandingMobileNav.tsx:52:              href="/blog"
+src/components/landing/LandingMobileNav.tsx:60:                href="/login"
+src/components/landing/LandingMobileNav.tsx:67:                href="/register"
+src/components/dashboard/RunwayWidget.tsx:136:        href="/tools/runway"
+src/components/layout/NewSidebar.tsx:191:        <Link href="/dashboard" className="flex items-center gap-2.5">
+src/components/layout/NewSidebar.tsx:275:          href="/notifications"
+src/components/streaks/StreakWidget.tsx:61:          href="/analytics/streaks"
+src/components/analytics/CookieConsent.tsx:155:                  <Link href="/cookie-policy" className="text-violet-400 hover:text-indigo-300 underline-offset-2 hover:underline">
+src/components/layout/Sidebar.tsx:151:        <Link href="/dashboard" className="flex items-center gap-2.5">
+src/components/notes/LinkedNotes.tsx:71:          <Link href="/notes" className="inline-flex items-center min-h-[44px] text-xs text-slate-500 hover:text-violet-400 transition-colors">
+src/components/notes/LinkedNotes.tsx:110:                href="/notes"
+src/components/analytics/WorkHeatmap.tsx:201:              href="/analytics/heatmap"
+src/components/dashboard/NotesWidget.tsx:41:        <Link href="/notes" className="inline-flex items-center min-h-[44px] text-xs text-violet-400 hover:text-indigo-300">
+src/components/dashboard/NotesWidget.tsx:53:              href="/notes"
+src/components/dashboard/NotesWidget.tsx:82:        href="/notes"

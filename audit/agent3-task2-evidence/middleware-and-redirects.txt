@@ -1,0 +1,25 @@
+=== src/middleware.ts present, ratelimits + auth guards ===
+Protected routes list (line 93-105 of middleware):
+  const protectedRoutes = [
+    '/dashboard', '/clients', '/projects', '/invoices', '/contracts',
+    '/time-tracker', '/settings', '/analytics', '/proposals', '/expenses',
+    '/tax-report', '/tax', '/reports', '/notifications', '/onboarding', '/tools',
+    '/tasks', '/inbox',
+    '/goals', '/retainers', '/skills', '/portfolio', '/vendors',
+    '/team', '/savings', '/forecast', '/availability',
+    '/crm', '/sales', '/finance', '/reminders',
+    '/leads', '/packages',
+    '/quotes', '/estimates', '/notes', '/snippets', '/subscriptions',
+    '/upgrade', '/rate-calculator', '/revenue-goals', '/work-log',
+    '/admin',
+  ]
+
+=== next.config.ts redirects ===
+  async redirects() {
+    return [
+      // Old->new URL aliases (convenience, not forced — old URLs still work directly)
+      { source: '/money',          destination: '/money/invoices',  permanent: false },
+      { source: '/work',           destination: '/work/projects',   permanent: false },
+      { source: '/money/recurring', destination: '/invoices/recurring', permanent: false },
+    ]
+  },
