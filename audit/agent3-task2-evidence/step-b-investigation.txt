@@ -1,0 +1,26 @@
+=== existing /calendar* routes ===
+src/app/(app)/analytics/revenue-calendar/page.tsx
+src/app/(app)/tax/calendar/page.tsx
+src/app/(app)/time-off/calendar/page.tsx
+src/app/(app)/tools/content-calendar/page.tsx
+src/app/(app)/tools/tax-calendar/page.tsx
+
+=== grep 'calendar' in (app) pages ===
+src/app/(app)/forecast/page.tsx
+src/app/(app)/time-off/calendar/page.tsx
+src/app/(app)/tax/page.tsx
+src/app/(app)/dashboard/page.tsx
+src/app/(app)/analytics/page.tsx
+src/app/(app)/analytics/revenue-calendar/page.tsx
+src/app/(app)/analytics/work-location/page.tsx
+src/app/(app)/analytics/goals/page.tsx
+src/app/(app)/reports/page.tsx
+src/app/(app)/analytics/heatmap/page.tsx
+
+=== /time-tracker production probe ===
+code=308 redirect=https://www.lancerwise.com/time-tracker
+
+=== /time-tracker filesystem check ===
+src/app/(app)/time-tracker/page.tsx
+src/app/(app)/time-tracker/focus/page.tsx
+src/app/(app)/time-tracker/timesheet/page.tsx
