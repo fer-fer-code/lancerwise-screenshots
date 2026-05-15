@@ -1,0 +1,36 @@
+==========================================================
+PLAYWRIGHT LOCALE-PURITY DEMO — failing baseline on /dashboard
+==========================================================
+
+$ node --env-file=.env.local ./node_modules/.bin/playwright \
+    test --project=setup --project=locale-purity-ru -g "/dashboard$"
+
+  ✓  [setup] authenticate test user and seed RU locale cookie
+  ✘  [locale-purity-ru] RU locale purity: /dashboard (39.0s)
+
+  Error: Found English text on RU locale at /dashboard:
+         219 offending token(s)
+
+  Sample (10 widget-related tokens from the 4 CP-A blind-spot widgets):
+    'Estimated   ' in div.text-xs.text-slate-500                surrounding='Estimated Balance...'
+    'Balance     ' in div.text-xs.text-slate-500                surrounding='Estimated Balance...'
+    'Freelance   ' in h3.text-sm.font-semibold                  surrounding='Freelance Health Score...'
+    'Health      ' in h3.text-sm.font-semibold                  surrounding='Freelance Health Score...'
+    'Score       ' in h3.text-sm.font-semibold                  surrounding='Freelance Health Score...'
+    'Reconnect   ' in h3.text-sm.font-semibold                  surrounding='Reconnect with Clients...'
+    'Clients     ' in h3.text-sm.font-semibold                  surrounding='Reconnect with Clients...'
+    'Scope       ' in h3.text-sm.font-semibold                  surrounding='Scope Creep Monitor...'
+    'Creep       ' in h3.text-sm.font-semibold                  surrounding='Scope Creep Monitor...'
+    'Monitor     ' in h3.text-sm.font-semibold                  surrounding='Scope Creep Monitor...'
+
+  ... and 209 more
+
+  Exit: 1  -> CI gate would block PR merge
+
+  4-WIDGET CONFIRMATION (the strings that slipped past CP-A):
+    "Estimated Balance"      => captured: Estimated + Balance
+    "Freelance Health Score" => captured: Freelance + Health + Score
+    "Reconnect with Clients" => captured: Reconnect + Clients
+    "Scope Creep Monitor"    => captured: Scope + Creep + Monitor
+
+  Full per-route counts: see audit/locale-purity-summary.md

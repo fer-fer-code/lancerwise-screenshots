@@ -17,11 +17,11 @@
     ],
     "next_js_version": "16.2.4 (next-intl@4.12.0). Async cookies() correct.",
     "drift_investigation_summary": "Root cause: stale Supabase refresh token in Playwright test session, NOT product code. Zero commits on src/app/(app)/dashboard/ between Step 2 (17:50) and Step 3 (18:19). FreelanceHealthScore / ChurnRisk / ClientHealthGrid use client-side supabase.auth.getUser() and return null on auth fail. Real users unaffected. CP-A scope unchanged.",
-    "ramiz_decisions_pending": [
-      "Q-Ramiz-1: Currency symbol position — '1,2 тыс. $' (native) vs '$1.2 тыс.' (american)",
-      "Q-Ramiz-2: Activity feed time format — raw minutes always vs ≥60 min → hours (recommend B)",
-      "Q-Ramiz-3: Sunrise/Sunset greeting icons — defer to Phase 8 backlog (recommend A) vs in-scope CP-A"
-    ],
+    "ramiz_decisions": {
+      "Q-Ramiz-1_currency_symbol_position": "RESOLVED — Option A native Russian. Format: '1,2 тыс. $' (Intl.NumberFormat ru-RU + currencyDisplay narrowSymbol). Matches Tinkoff/Sber/Bitrix24/AmoCRM.",
+      "Q-Ramiz-2_activity_time_threshold": "RESOLVED — Option B. Logic: <60 → '{N} мин'; ≥60 → '{H} ч' if no remainder, else '{H} ч {M} мин'. Hour plural via ICU PluralRules. Matches Toggl/Harvest/Clockify.",
+      "Q-Ramiz-3_sunrise_sunset_icons": "RESOLVED — Option A defer to Phase 8. CP-A keeps Sun (5-17) + Moon (18-04). Backlog file: backlog_phase8_greeting_icons.md."
+    },
     "files_audited": [
       "src/app/(app)/dashboard/page.tsx",
       "src/app/(app)/dashboard/DashboardClient.tsx",

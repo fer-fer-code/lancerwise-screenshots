@@ -4,13 +4,16 @@
 **Inventory total:** 227 entries (222 needing RU translation, 5 already done in CP-A pass 1)
 **Files touched in plan:** 30 components + 2 API routes + 3 new lib files + 2 message files + 1 shared types file
 
-**Amendment log (Step 3 review pass):**
+**Amendment log (Step 3 review pass + v3 final):**
 - §4.3 AI prompt — rewritten to use `linkLabelKey` enum (per reviewer §2); LLM no longer translates labels directly
+- §6.2 Test matrix — ALIGNED with §6.3 zero-new-icons decision (v3 fix): all entries Sun (5-17) or Moon (18-4); Sunrise/Sunset references removed
 - §6.3 Icon decision — scope-checked (per reviewer §3); zero new icons; Sun + Moon only; Sunrise/Sunset deferred to Phase 8 backlog
+- §5 Currency Q-Ramiz-1 FINAL (v3): Option A native RU `1,2 тыс. $` canonical; helper uses `currencyDisplay: 'narrowSymbol'`; Option B removed
+- §7 Plural rules + §7.4 Q-Ramiz-2 FINAL (v3): threshold `<60→мин, ≥60→ч`, new helper `src/lib/format/plural-hours.ts`, activity template `{formatted}` placeholder
 - §4.1 cookies() — confirmed Next.js 16.2.4 → async `await cookies()` is correct (per reviewer §4)
 - §11 Risk register — added LLM enum fallback risk
-- Discovered_issues 1-5 acknowledged with decisions (see _meta block in inventory)
-- 3 Ramiz-decision questions surfaced (currency symbol position / time format threshold / sunset icons backlog scope) — see end-of-plan §13
+- §15 (NEW v3) — Final decisions log table covering Q-Ramiz-1/2/3 + reviewer §1-6
+- Discovered_issues 1-5 acknowledged with decisions (see _meta block in inventory + §14)
 
 **Drift investigation (per reviewer §1):**
 - git log `src/app/(app)/dashboard/` since Step 2 timestamp: 0 commits between Step 2 (~17:50) and Step 3 (~18:19). No code/feature-flag change.
@@ -145,8 +148,8 @@ Greeting boundary Q3 resolved as 4-bucket: night `0-4`, morning `5-11`, afternoo
     "invoiceSent": "Счёт {number} отправлен",
     "invoicePaid": "Счёт {number} оплачен",
     "invoiceOverdue": "Счёт {number} просрочен",
-    "timeLogged": "Учтено {minutes} мин: {description}",
-    "timeLoggedNoDesc": "Учтено {minutes} мин",
+    "timeLogged": "Учтено {formatted}: {description}",
+    "timeLoggedNoDesc": "Учтено {formatted}",
     "projectActive": "Проект «{title}» активен",
     "projectCompleted": "Проект «{title}» завершён",
     "proposalSent": "Предложение {number} отправлено",
@@ -203,7 +206,7 @@ Greeting boundary Q3 resolved as 4-bucket: night `0-4`, morning `5-11`, afternoo
 | 34 | NEW `src/lib/format/currency.ts` | server+client | shared helper | new file ~25 lines | 0.8 |
 | 35 | NEW `src/lib/format/plural-hours.ts` | shared | shared helper | new file ~20 lines | 0.5 |
 | 36 | NEW `src/lib/api/locale.ts` | server | shared helper (reads NEXT_LOCALE) | new file ~15 lines | 0.4 |
-| 37 | `src/app/api/dashboard/super/route.ts` | server | activity descriptions | ~30 lines (template branch) | 2.0 |
+| 37 | `src/app/api/dashboard/super/route.ts` | server | activity descriptions + `formatMinutes()` for time entries (Q-Ramiz-2 threshold) | ~35 lines (template branch + helper call) | 2.2 |
 | 38 | `src/app/api/ai/next-action/route.ts` | server | action.action/linkLabel/reasoning | ~20 lines (AI prompt locale + post-process) | 1.5 |
 | 39 | `src/components/dashboard/WelcomeBanner.tsx` | useTranslations | extend bucketForHour to 4-bucket + add night icon | 4 lines | 0.3 |
 | 40 | `messages/{en,ru}.json` | — | 135 new keys | ~250 lines added | 1.5 |
@@ -339,60 +342,74 @@ it('falls back to English when NEXT_LOCALE missing', async () => {
 
 ---
 
-## 5. Compact Currency Q2
+## 5. Compact Currency Q2 — FINAL (Ramiz Q-Ramiz-1 → Option A)
 
-### 5.1 Proposed shared helper: `src/lib/format/currency.ts`
+**Decision applied:** Native Russian formatting — `1,2 тыс. $` (symbol after, space-separated). Matches Tinkoff / Sber / Bitrix24 / AmoCRM industry standard for Russian financial UI.
+
+### 5.1 Shared helper: `src/lib/format/currency.ts`
 
 ```ts
+import type { Locale } from '@/i18n/config'
+
 type Opts = { compact?: boolean; maximumFractionDigits?: number }
 
-/** Locale-aware currency formatter. Reads locale from explicit arg.
- *  Compact mode produces "$1.2K"/"1,2 тыс. $" output. */
-export function formatCurrencyLocale(amount: number, currency = 'USD', locale: 'en' | 'ru-RU' = 'en', opts: Opts = {}): string {
-  return new Intl.NumberFormat(locale, {
+const LOCALE_ICU: Record<Locale, string> = { en: 'en', ru: 'ru-RU' }
+
+/** Locale-aware currency formatter — single source of truth.
+ *  Compact mode: en → "$1.2K", ru → "1,2 тыс. $" (native, narrowSymbol).
+ *  Standard mode: en → "$1,234", ru → "1 234 $". */
+export function formatCurrencyLocale(amount: number, currency = 'USD', locale: Locale = 'en', opts: Opts = {}): string {
+  return new Intl.NumberFormat(LOCALE_ICU[locale], {
     style: 'currency',
     currency,
     notation: opts.compact ? 'compact' : 'standard',
     maximumFractionDigits: opts.maximumFractionDigits ?? (opts.compact ? 1 : 0),
+    currencyDisplay: 'narrowSymbol',
   }).format(amount)
 }
 ```
 
-### 5.2 Node REPL output (run on system Node v22.22.1)
+### 5.2 Canonical Node REPL output (Node v22.22.1)
 
 ```
-=== Compact currency: $1.2k notation ===
+=== Compact (notation: 'compact', currencyDisplay: 'narrowSymbol') ===
 
 Locale: en
-  1,234 -> $1.2K
-  12,345 -> $12.3K
-  123,456 -> $123.5K
+  1,234     -> $1.2K
+  12,345    -> $12.3K
+  123,456   -> $123.5K
   1,234,567 -> $1.2M
 
-Locale: ru-RU
-  1,234 -> 1,2 тыс. $
-  12,345 -> 12,3 тыс. $
-  123,456 -> 123,5 тыс. $
+Locale: ru-RU (CANONICAL — Option A)
+  1,234     -> 1,2 тыс. $
+  12,345    -> 12,3 тыс. $
+  123,456   -> 123,5 тыс. $
   1,234,567 -> 1,2 млн $
 
-=== Full currency (no compact) ===
+=== Standard (no compact) ===
 
 Locale: en
-  1,234 -> $1,234
-  12,345 -> $12,345
-  123,456 -> $123,456
+  1,234     -> $1,234
+  12,345    -> $12,345
+  123,456   -> $123,456
   1,234,567 -> $1,234,567
 
-Locale: ru-RU
-  1,234 -> 1 234 $
-  12,345 -> 12 345 $
-  123,456 -> 123 456 $
+Locale: ru-RU (CANONICAL — Option A)
+  1,234     -> 1 234 $
+  12,345    -> 12 345 $
+  123,456   -> 123 456 $
   1,234,567 -> 1 234 567 $
 ```
 
-### 5.3 Affected widgets
+### 5.3 Affected widgets (swap inline `new Intl.NumberFormat` calls)
 
-ClientHealthGrid (line 105 — current `new Intl.NumberFormat('en', ...)`), LeadsPipelineWidget (fmt helper line 30-34), SuperDashboardClient (fmt helper line 57). All swap inline calls → `formatCurrencyLocale(value, currency, locale, { compact: true })`.
+| File | Line | Current call | New call |
+|---|---|---|---|
+| `src/app/(app)/dashboard/ClientHealthGrid.tsx` | 105 | `new Intl.NumberFormat('en', { style:'currency', currency:c.revCurrency, notation:'compact', maximumFractionDigits:0 }).format(c.totalRevenue)` | `formatCurrencyLocale(c.totalRevenue, c.revCurrency, locale, { compact: true })` |
+| `src/app/(app)/dashboard/LeadsPipelineWidget.tsx` | 30-34 | local `fmt()` helper with `$${(n/1000).toFixed(0)}k` style | `formatCurrencyLocale(n, 'USD', locale, { compact: true })` |
+| `src/app/(app)/dashboard/SuperDashboardClient.tsx` | 57 | local `fmt()` helper `$${n.toFixed(0)}...` | `formatCurrencyLocale(n, 'USD', locale)` (or `{ compact: true }` for KPI cards) |
+
+For server-rendered routes (`/api/dashboard/super` etc.), locale arrives via `getRequestLocale()` from §4.1.
 
 ---
 
@@ -409,7 +426,7 @@ function bucketForHour(h: number): 'morning' | 'afternoon' | 'evening' | 'night'
 }
 ```
 
-### 6.2 Test matrix — 16 boundary cases
+### 6.2 Test matrix — 16 boundary cases (aligned with §6.3 zero-new-icons decision)
 
 | h | bucket | greeting (RU) | icon |
 |---|---|---|---|
@@ -418,16 +435,18 @@ function bucketForHour(h: number): 'morning' | 'afternoon' | 'evening' | 'night'
 | 2 | night | Доброй ночи | Moon |
 | 3 | night | Доброй ночи | Moon |
 | 4 | night | Доброй ночи | Moon |
-| 5 | morning | Доброе утро | Sunrise |
-| 6 | morning | Доброе утро | Sunrise |
-| 11 | morning | Доброе утро | Sunrise |
+| 5 | morning | Доброе утро | Sun |
+| 6 | morning | Доброе утро | Sun |
+| 11 | morning | Доброе утро | Sun |
 | 12 | afternoon | Добрый день | Sun |
 | 14 | afternoon | Добрый день | Sun |
 | 17 | afternoon | Добрый день | Sun |
-| 18 | evening | Добрый вечер | (NEW: Sunset) |
-| 20 | evening | Добрый вечер | Sunset |
-| 22 | evening | Добрый вечер | Sunset |
+| 18 | evening | Добрый вечер | Moon |
+| 20 | evening | Добрый вечер | Moon |
+| 22 | evening | Добрый вечер | Moon |
 | 23 | night | Доброй ночи | Moon |
+
+Only greeting STRING differs across buckets. Icon stays Sun (5-17) or Moon (18-4).
 
 ### 6.3 Icon decision — AMENDED per reviewer §3 (scope-checked)
 
@@ -448,7 +467,7 @@ Rationale per reviewer: Sunset/Sunrise are visual polish, not blocking i18n. Two
 
 ---
 
-## 7. Plural Rules for Hours/Days
+## 7. Plural Rules for Hours/Days + Q-Ramiz-2 threshold
 
 ### 7.1 Strategy
 
@@ -479,6 +498,54 @@ n=25 en: other   ru: many
 | 22 | few | часа | дня |
 | 25 | many | часов | дней |
 | 40 | many | часов | дней |
+
+### 7.4 Q-Ramiz-2 — Activity feed minutes→hours threshold (FINAL — Option B)
+
+**Decision applied:** convert ≥60 min → часы using Toggl/Harvest/Clockify standard.
+
+**Helper:** `src/lib/format/plural-hours.ts`
+
+```ts
+import type { Locale } from '@/i18n/config'
+
+/** Convert raw minutes → "X мин" / "X ч" / "X ч Y мин" string,
+ *  locale-aware. Used by activity feed and time tracking displays. */
+export function formatMinutes(minutes: number, t: (key: string, vals?: Record<string, any>) => string): string {
+  if (minutes < 60) return t('format.minutesShort', { count: minutes })  // "5 мин" / "5 min"
+  const h = Math.floor(minutes / 60)
+  const m = minutes % 60
+  if (m === 0) return t('format.hoursPlural', { N: h })                  // "8 ч" / "8 hours"
+  return `${t('format.hoursPlural', { N: h })} ${t('format.minutesShort', { count: m })}`
+                                                                          // "8 ч 30 мин"
+}
+```
+
+**Message keys (added to `format.*` namespace):**
+
+```jsonc
+"format": {
+  "minutesShort": "{count} мин",
+  "hoursPlural": "{N, plural, one {{N} час} few {{N} часа} many {{N} часов} other {{N} часа}}",
+  "daysPlural": "{N, plural, one {{N} день} few {{N} дня} many {{N} дней} other {{N} дня}}"
+}
+```
+
+**Examples (Node-verified renderings):**
+
+| raw min | output (RU) | output (EN) |
+|---|---|---|
+| 5 | `5 мин` | `5 min` |
+| 30 | `30 мин` | `30 min` |
+| 60 | `1 час` | `1 hour` |
+| 120 | `2 часа` | `2 hours` |
+| 300 | `5 часов` | `5 hours` |
+| 480 | `8 часов` | `8 hours` |
+| 510 | `8 часов 30 мин` | `8 hours 30 min` |
+| 1260 | `21 час` | `21 hours` |
+
+**Note:** Minute remainders never need plural (always "мин"). Only the leading hour count plurals correctly via PluralRules. Decimal/fractional handled by `other` bucket as fallback.
+
+**Integration with activity feed:** server-side `/api/dashboard/super` calls `formatMinutes(item.duration_min, t)` inside route handler when building `description` strings → passes already-formatted string as `{formatted}` ICU argument.
 
 ---
 
@@ -593,6 +660,24 @@ Recommend Option B with threshold `<60 → мин`, `≥60 → часы` (drop m
 - Option B: Include in CP-A despite scope creep — add Sunrise (morning), Sun (afternoon), Sunset (evening), Moon (night) — 4 icons total
 
 Recommend Option A per reviewer §3.
+
+---
+
+## 15. Final decisions log (Q-Ramiz-1/2/3 + reviewer §1-§6)
+
+| ID | Question | Final answer | Industry comparable | Plan section |
+|---|---|---|---|---|
+| Q-Ramiz-1 | Currency symbol position в ru | **Option A** — `1,2 тыс. $` native, narrowSymbol | Tinkoff / Sber / Bitrix24 / AmoCRM | §5 (canonical) |
+| Q-Ramiz-2 | Activity feed time format | **Option B** — `<60→мин`, `≥60→ч`, remainder if non-zero | Toggl / Harvest / Clockify | §7.4 |
+| Q-Ramiz-3 | Sunrise/Sunset greeting icons | **Option A** — defer to Phase 8 backlog | Linear / Notion / Slack (minimal icons) | §6.3 |
+| Reviewer §1 | Step 2 → Step 3 drift | Test-auth artifact, NOT product change | — | §0 amendment log |
+| Reviewer §2 | AI prompt linkLabel | Enum `linkLabelKey`, UI translates | — | §4.3 (rewritten) |
+| Reviewer §3 | Icon scope check | Zero new icons in CP-A | — | §6.3 |
+| Reviewer §4 | Next.js cookies API | Next 16.2.4 → `await cookies()` correct | — | §4.1 |
+| Reviewer §5 | 3 Ramiz questions surfaced | Forwarded; answers above | — | §13 |
+| Reviewer §6 | 5 discovered_issues | All resolved (table §14) | — | §14 |
+
+All decisions locked. Step 4 implementation proceeds without further plan changes.
 
 ---
 
