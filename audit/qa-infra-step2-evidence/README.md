@@ -77,4 +77,34 @@ For just the 6 scroll captures, use `scripts/audit/dashboard-scroll-captures.mjs
 
 ## Step 2 amendments commit (post-review)
 
-The Step 2 amendments commit (subtree skip mechanism via `[data-test-skip-locale-purity="true"]`, `/settings/profile` route fix, keyboard whitelist `Esc/Enter/Tab/Shift/Ctrl/Cmd/Alt`) was pushed as a follow-up to commit `f211ae90`. See top of this README for the latest commit hash.
+The Step 2 amendments commit (subtree skip mechanism via `[data-test-skip-locale-purity="true"]`, `/settings/profile` route fix, keyboard whitelist `Esc/Enter/Tab/Shift/Ctrl/Cmd/Alt`) was pushed as a follow-up to commit `f211ae90` as `bf076ac7`.
+
+## Step 2 follow-up commit (post-amendments — Actions 1/2)
+
+Commit `7dcdf88c` on `qa-infrastructure-2026-05` adds:
+
+- **Action 1 — Avatar subtree skip.** `src/components/layout/Header.tsx`: `<div data-test-skip-locale-purity="true">` wraps the user-avatar button. `PTT` is the test fixture user's initials (`Phase TestTime`) — not a localizable UI string. Once deployed, the locale-purity baseline drops 9 PTT hits across routes. Validated locally against `npm run dev` on `localhost:3000` (PTT count = **0** confirmed). Will drop on production after merge to `main`.
+
+- **Action 2 — Inner `<main>` scroll fix.** Dashboard wraps content in `<main class="flex-1 overflow-y-auto …">` with `scrollHeight=4126px` while body is just 900px (= viewport). `window.scrollTo()` was a no-op. Spec now scrolls the inner `<main>` when it is the real scroll container, with longer per-step waits (350ms) plus a second-pass driver.js popover dismissal right before `innerText` extraction. Cash Flow / Estimated Balance / Scope Creep Monitor previously dropped from the captured token set when scroll exposed them but the Welcome Tour re-rendered; fix restores them.
+
+### Baseline numbers — before vs after Actions
+
+| Snapshot | Target | Total | PTT | 4 widgets |
+| -------- | ------ | ----: | --: | --------- |
+| Step 2 commit (pre-Actions) | prod | 2,779 | 9 | all caught |
+| Action 1+2 (this commit) | prod | 2,779 | 9 | all caught — prod not redeployed yet (Vercel deploys only `main`) |
+| Action 1+2 (this commit) | local dev | **2,764** | **0** | all caught — Avatar attr applied at runtime |
+
+The local-dev run is the canonical post-Action validation. Production parity will follow once the branch lands on `main`.
+
+## Notes on remaining /settings noise
+
+The `/settings` route is still the noisiest single route at **1,501 unique tokens** (vs. 219 on `/dashboard`). It is the API Reference Explorer with 1,053 endpoint names — legitimately English by product design. Planned approach: wrap the explorer subtree in a `data-test-skip-locale-purity="true"` container in a follow-up commit (CP-A redo or a separate maintenance pass). The subtree skip mechanism is already in place; no spec change needed.
+
+## /settings/public-profile is a separate translation task
+
+The 71 tokens flagged on `/settings/public-profile` are real freelancer-profile editor strings (Cover photo, About, Skills, etc.). They are **not** in CP-A redo scope (CP-A redo covers `/dashboard` + sidebar). Tracked as **CP-A-public-profile / Phase 9 backlog** — handled after CP-A redo merges.
+
+## PTT explanation
+
+`PTT` is the test-fixture user `Phase TestTime`'s initials, rendered in the user-avatar button at the top-right of every page. Earlier baseline iterations flagged it 9 times (one per route, minus `/settings/profile` which was a 404 and didn't render the avatar). It is **not** a localizable UI string — it is per-user dynamic data — so the subtree skip (Action 1) is the correct fix, not a translation key.

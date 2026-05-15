@@ -1,0 +1,49 @@
+==========================================================
+VISUAL REGRESSION DEMO — gate catches injected style change
+==========================================================
+
+$ BASE_URL=http://localhost:3000 node --env-file=.env.local \
+    ./node_modules/.bin/playwright test --project=setup \
+    --project=visual-regression tests/e2e/_demo-visual-regression.spec.ts
+
+Test: DEMO — /dashboard [en] visual gate catches injected style change
+
+Setup: visual-regression project loads existing baseline
+       tests/e2e/visual-regression.spec.ts-snapshots/
+         visual-dashboard-en-1-visual-regression-darwin.png
+       (captured against current main, 6f1cdc70 dashboard).
+
+Mutation: page.addStyleTag({ content: `header { background: #00ff00 !important; }` })
+
+Result:
+  ✘  DEMO — /dashboard [en] visual gate catches injected style change
+
+  Error: expect(page).toHaveScreenshot(expected) failed
+  81695 pixels (ratio 0.07 of all image pixels) are different.
+  Snapshot: visual-dashboard-en-1.png
+
+  Exit: 1 -> CI gate would block PR merge
+
+  Artifacts written to:
+    test-results/_demo-visual-regression-…/visual-dashboard-en-1-expected.png
+    test-results/_demo-visual-regression-…/visual-dashboard-en-1-actual.png
+    test-results/_demo-visual-regression-…/visual-dashboard-en-1-diff.png
+
+INTERPRETATION:
+  - Threshold: maxDiffPixelRatio = 0.01 (1% of pixels)
+  - Actual diff: 0.07 (7%) — clear failure
+  - The green header overlay covers ~7% of the page surface — well above
+    the threshold and easily seen in the diff PNG
+
+PASSING RUN (control):
+  Re-running the same suite WITHOUT the demo mutation:
+  $ playwright test --project=setup --project=visual-regression
+  → 25 passed (4.8m) — all 24 baselines reproduce within threshold.
+
+The demo spec file (_demo-visual-regression.spec.ts) was deleted after
+this capture — it was a one-off proof, not part of the gate.
+
+DEMO FILE INVENTORY:
+  step3-demo-fail-expected.png — the baseline as captured on main
+  step3-demo-fail-actual.png   — page with green header (the mutation)
+  step3-demo-fail-diff.png     — Playwright's red diff overlay
