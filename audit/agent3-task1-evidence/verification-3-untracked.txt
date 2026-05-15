@@ -1,0 +1,2 @@
+=== VERIFICATION 3: any UNTRACKED rows in migration list ===
+UNTRACKED count:        0 (expect 0)

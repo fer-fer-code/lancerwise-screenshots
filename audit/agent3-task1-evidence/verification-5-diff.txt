@@ -1,0 +1,7 @@
+=== VERIFICATION 5: filesystem vs tracking diff ===
+Expected: only 20260426000012b on filesystem-only side (CLI-skipped, intentional)
+
+63d62
+< 20260426000012b
+
+EXIT=0

@@ -1,0 +1,16 @@
+=== C.6.1 PRE-DELETE count (expect 546) ===
+ tracked 
+---------
+     546
+(1 строка)
+
+
+=== C.6.2 DELETE statement ===
+DELETE 1
+
+=== C.6.3 POST-DELETE count (expect 545) ===
+ tracked 
+---------
+     545
+(1 строка)
+

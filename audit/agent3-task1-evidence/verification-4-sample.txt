@@ -1,0 +1,10 @@
+=== VERIFICATION 4: sample 5 rows (substituting 20260426000012b with 20260426000012) ===
+    version     |            name            | stmt_count 
+----------------+----------------------------+------------
+ 20260424000001 | project_tasks              |          3
+ 20260426000012 | contact_inquiries          |          3
+ 20260428000662 | auto_reminders             |          8
+ 20260429000790 | proposal_pdf               |          2
+ 20260512000001 | clients_email_unsubscribed |          6
+(5 строк)
+

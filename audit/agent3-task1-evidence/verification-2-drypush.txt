@@ -1,12 +1,9 @@
-=== VERIFICATION 2: supabase db push --dry-run (expect 'no pending') ===
+=== VERIFICATION 2: supabase db push --dry-run --linked ===
 DRY RUN: migrations will *not* be pushed to the database.
 Connecting to remote database...
 Skipping migration 20260426000012b_profile_public.sql... (file name must match pattern "<timestamp>_name.sql")
-Remote migration versions not found in local migrations directory.
+Remote database is up to date.
+A new version of Supabase CLI is available: v2.98.2 (currently installed v2.90.0)
+We recommend updating regularly for new features and bug fixes: https://supabase.com/docs/guides/cli/getting-started#updating-the-supabase-cli
 
-Make sure your local git repo is up-to-date. If the error persists, try repairing the migration history table:
-supabase migration repair --status reverted 20260426000012b
-
-And update local migrations to match remote database:
-supabase db pull
-
+EXIT=0
