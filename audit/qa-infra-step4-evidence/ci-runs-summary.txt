@@ -1,0 +1,71 @@
+=================================================================
+qa-gates CI runs on PR #1 — full bootstrap loop
+=================================================================
+PR: https://github.com/fer-fer-code/lancerwise/pull/1
+Branch: qa-infrastructure-2026-05 → main
+
+────────────────────────────────────────────────────────────────
+Run 1 — initial PR open  (run 25931373563)
+URL: https://github.com/fer-fer-code/lancerwise/actions/runs/25931373563
+
+  ✓  gate / eslint i18n             pass    1m 14s
+  ✘  gate / locale-purity (ru)      fail    8m 37s   (expected — baseline state)
+  ✘  gate / visual-regression       fail    8m 18s   (no -linux baselines yet)
+
+  -> Gate 1: ratchet matched (current = baseline = 34,615)
+  -> Gate 2: 2,764+ EN tokens captured on RU locale — the gate's job is
+     to surface this; this state drives CP-A redo work
+  -> Gate 3: needs first-run init on linux runner
+
+────────────────────────────────────────────────────────────────
+Run 2 — qa-visual-baseline-init label applied  (run 25931811137)
+URL: https://github.com/fer-fer-code/lancerwise/actions/runs/25931811137
+
+  ✓  gate / eslint i18n             pass
+  ✘  gate / locale-purity (ru)      fail    (still expected)
+  ✓  gate / visual-regression       pass    — wrote 24 -linux.png baselines,
+                                              auto-committed back as
+                                              `ci(qa-gates): initialize linux
+                                              visual baselines` (1d949348)
+
+  Auto-commit content:
+    https://github.com/fer-fer-code/lancerwise/commit/1d949348
+    24 new files: tests/e2e/visual-regression.spec.ts-snapshots/*-linux.png
+
+  Label was removed after this run.
+
+────────────────────────────────────────────────────────────────
+Run 3 — compare mode  (run 25932237949)
+URL: https://github.com/fer-fer-code/lancerwise/actions/runs/25932237949
+
+  ✓  gate / eslint i18n             pass
+  ✘  gate / locale-purity (ru)      fail    (still expected)
+  ✓  gate / visual-regression       pass    — compared against the
+                                              bot-committed -linux baselines,
+                                              within 0.01 threshold
+
+  Triggered by an empty commit (commit 04004574). No --update-snapshots
+  in this run — pure compare. The Linux baselines from Run 2 reproduce
+  cleanly on subsequent Linux runs.
+
+────────────────────────────────────────────────────────────────
+Final state on PR #1
+────────────────────────────────────────────────────────────────
+
+  Required status checks:
+    ✓  gate / eslint i18n             pass
+    ✘  gate / locale-purity (ru)      fail (BY DESIGN — drives CP-A redo)
+    ✓  gate / visual-regression       pass
+
+  The 3-gate CI pipeline is fully wired:
+    - Gate 1 enforces the i18n violation floor (auto-lowers on improvement)
+    - Gate 2 captures live locale state (currently failing — that is the
+      whole point; will turn green when CP-A redo merges and locale is
+      fixed)
+    - Gate 3 enforces pixel-level visual stability (operates on bot-
+      committed linux baselines that match the local darwin baselines
+      from Step 3)
+
+  Branch protection on main is NOT enabled in this PR — Gate 2 must turn
+  green first (after CP-A redo merge). Once green, branch protection
+  rules from ci-architecture.md §3 should be applied.

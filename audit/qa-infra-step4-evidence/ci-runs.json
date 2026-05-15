@@ -1,0 +1,3 @@
+{"conclusion":"failure","event":"pull_request","jobs":[{"conclusion":"success","name":"gate / eslint i18n"},{"conclusion":"failure","name":"gate / locale-purity (ru)"},{"conclusion":"failure","name":"gate / visual-regression"}],"run_id":25931373563}
+{"conclusion":"failure","event":"pull_request","jobs":[{"conclusion":"success","name":"gate / visual-regression"},{"conclusion":"success","name":"gate / eslint i18n"},{"conclusion":"failure","name":"gate / locale-purity (ru)"}],"run_id":25931811137}
+{"conclusion":"failure","event":"pull_request","jobs":[{"conclusion":"success","name":"gate / visual-regression"},{"conclusion":"failure","name":"gate / locale-purity (ru)"},{"conclusion":"success","name":"gate / eslint i18n"}],"run_id":25932237949}
