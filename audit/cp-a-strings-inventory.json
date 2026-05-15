@@ -9,11 +9,18 @@
     "components_covered": 37,
     "update_log_step3_prep": "+21 entries from reviewer feedback + extended grep sweep: RevenueLineChart empty state (3), GoalProgressWidget empty/sublabels (3), UpcomingInvoicesDue dynamic strings (5), ContractExpiryCountdown (2), UnbilledTimeAlert sublabels (3), WorkStreakWidget (3), ActiveTimer (2). Cross-references for reviewer items 2/3/4/5/6/7 confirmed already present (lines below tagged review_pass_2_confirmed: true).",
     "discovered_issues_for_reviewer": [
-      "DEAD CODE: src/app/(app)/dashboard/DashboardClientWrapper.tsx is NOT imported anywhere (verified via grep -rn 'DashboardClientWrapper' src/). Likewise its child DashboardCustomizer.tsx renders no strings on /dashboard. Confirm: ignore / delete / refactor?",
-      "SCOPE: src/app/(app)/dashboard/briefing/DailyBriefingClient.tsx and command-center/CommandCenterClient.tsx contain ~30 hardcoded English strings each but render on DIFFERENT routes (/dashboard/briefing and /dashboard/command-center). Confirm: separate CP-A.briefing + CP-A.commandcenter tasks?",
-      "SHARED FORMATTER MISSING: 5+ widgets call new Intl.NumberFormat('en', { notation: 'compact' }) inline. No shared helper exists. Plan recommends src/lib/format/currency.ts; confirm direction.",
-      "DYNAMIC API STRINGS: /api/dashboard/super activity.description + NextActionWidget action.action/action.linkLabel/action.reasoning are server-generated. Cannot translate via t() alone; needs route handler to read NEXT_LOCALE cookie. Q1 confirmed in scope?",
-      "SHARED CLIENT STATUS ENUM: ClientHealthGrid derives status inline ('active'/'idle'/'at-risk'/'new'). No shared enum file. Plan proposes namespacing under client.status.* in messages/. Confirm vs creating src/lib/clients/status.ts type."
+      "[RESOLVED §6.1] DEAD CODE: src/app/(app)/dashboard/DashboardClientWrapper.tsx is NOT imported anywhere → IGNORE, flag in backlog (backlog_dashboard_wrapper_dead_code.md).",
+      "[RESOLVED §6.2] SCOPE: briefing/ + command-center/ routes → SEPARATE tasks CP-A.briefing, CP-A.commandcenter. NOT in CP-A redo.",
+      "[RESOLVED §6.3] SHARED FORMATTER MISSING → APPROVED direction: src/lib/format/currency.ts. Awaiting Q-Ramiz-1 for symbol position.",
+      "[RESOLVED §6.4] DYNAMIC API STRINGS → IN SCOPE with amendment §2 (linkLabelKey enum). Implementation in plan §4.3.",
+      "[RESOLVED §6.5] SHARED CLIENT STATUS ENUM → APPROVED: namespace under client.status.* in messages/. No new TS type."
+    ],
+    "next_js_version": "16.2.4 (next-intl@4.12.0). Async cookies() correct.",
+    "drift_investigation_summary": "Root cause: stale Supabase refresh token in Playwright test session, NOT product code. Zero commits on src/app/(app)/dashboard/ between Step 2 (17:50) and Step 3 (18:19). FreelanceHealthScore / ChurnRisk / ClientHealthGrid use client-side supabase.auth.getUser() and return null on auth fail. Real users unaffected. CP-A scope unchanged.",
+    "ramiz_decisions_pending": [
+      "Q-Ramiz-1: Currency symbol position — '1,2 тыс. $' (native) vs '$1.2 тыс.' (american)",
+      "Q-Ramiz-2: Activity feed time format — raw minutes always vs ≥60 min → hours (recommend B)",
+      "Q-Ramiz-3: Sunrise/Sunset greeting icons — defer to Phase 8 backlog (recommend A) vs in-scope CP-A"
     ],
     "files_audited": [
       "src/app/(app)/dashboard/page.tsx",

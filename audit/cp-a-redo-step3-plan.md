@@ -2,7 +2,23 @@
 
 **Route:** `/dashboard` (signed-in)
 **Inventory total:** 227 entries (222 needing RU translation, 5 already done in CP-A pass 1)
-**Files touched in plan:** 30 components + 1 API route + 2 new lib files + 2 message files
+**Files touched in plan:** 30 components + 2 API routes + 3 new lib files + 2 message files + 1 shared types file
+
+**Amendment log (Step 3 review pass):**
+- §4.3 AI prompt — rewritten to use `linkLabelKey` enum (per reviewer §2); LLM no longer translates labels directly
+- §6.3 Icon decision — scope-checked (per reviewer §3); zero new icons; Sun + Moon only; Sunrise/Sunset deferred to Phase 8 backlog
+- §4.1 cookies() — confirmed Next.js 16.2.4 → async `await cookies()` is correct (per reviewer §4)
+- §11 Risk register — added LLM enum fallback risk
+- Discovered_issues 1-5 acknowledged with decisions (see _meta block in inventory)
+- 3 Ramiz-decision questions surfaced (currency symbol position / time format threshold / sunset icons backlog scope) — see end-of-plan §13
+
+**Drift investigation (per reviewer §1):**
+- git log `src/app/(app)/dashboard/` since Step 2 timestamp: 0 commits between Step 2 (~17:50) and Step 3 (~18:19). No code/feature-flag change.
+- Recapture in Playwright reproduces missing FreelanceHealthScore / ChurnRisk / ClientHealthGrid widgets — but root cause is **stale Supabase refresh token in test session**, not product change.
+- These 3 widgets use `createClient()` + `supabase.auth.getUser()` pattern client-side. When the Playwright session's refresh token gets consumed/invalidated, they silently `return null`. Other widgets use `/api/*` server endpoints (httpOnly server cookie) and survive.
+- Confirmed via prod browser console errors: `AuthApiError: Invalid Refresh Token: Already Used`.
+- **NOT a real product regression.** Real users with intact session render all 3 widgets. CP-A scope unchanged.
+- Drift screenshot: `audit/cp-a-redo-step3-prep/cp-a-redo-step3-investigate-drift.png` (latest recheck still missing the 3 widgets due to test-auth issue, but per reviewer rule "flag transient and continue").
 
 ---
 
@@ -248,13 +264,54 @@ export async function GET() {
 
 **Fallback contract:** if `NEXT_LOCALE` cookie missing or invalid → `defaultLocale = 'en'`. Tested via unit (item 4.4).
 
-### 4.3 `/api/ai/next-action/route.ts` — AI prompt locale
+### 4.3 `/api/ai/next-action/route.ts` — AI prompt locale (AMENDED per reviewer §2)
 
-Two-pass approach:
-1. Pass `locale` param to `generateText()` in lib/ai (already exists per CP-A pass 1 — `auto-locale propagation`).
-2. The system prompt to the LLM should say: `Respond in Russian if locale=ru, otherwise English. All linkLabel values must be one of: ['Send invoice', 'Log time', 'Review proposal', ...] — translate after.`
+**Original approach (rejected):** LLM directly returns translated `linkLabel`.
+**Reason rejected:** unreliable — LLM may hallucinate translation or skip it.
 
-Cleanest: keep AI response in English, post-process `urgency` enum + map `linkLabel` to fixed keys, but let `action`/`reasoning` come in locale via lib/ai's automatic cookie detection (Phase 11 advisor pattern).
+**New approach: AI returns enum `linkLabelKey`, UI translates.**
+
+1. AI response shape (constrained enum):
+```ts
+type LinkLabelKey =
+  | 'send_invoice' | 'log_time' | 'review_proposal' | 'check_in_client'
+  | 'send_followup' | 'create_contract' | 'mark_paid' | 'add_milestone'
+type AiNextAction = {
+  action: string                  // localized via system prompt + auto-locale
+  reasoning: string               // localized via system prompt + auto-locale
+  urgency: 'critical' | 'high' | 'medium' | 'low'
+  linkLabelKey: LinkLabelKey      // enum, NOT prose
+  link: string
+  estimatedImpact: number
+  currency: string
+  category: string
+}
+```
+
+2. UI translation:
+```tsx
+// NextActionWidget.tsx
+const tLink = useTranslations('nextAction.linkLabel')
+const label = (() => {
+  try { return tLink(action.linkLabelKey) }
+  catch { return tCommon('open') }   // fallback if LLM returns unknown key
+})()
+```
+
+3. New shared types file: `src/lib/types/ai-next-action.ts` with `LinkLabelKey` union.
+
+4. Risk register update (also see §11): LLM may return unknown key → UI falls back to "Открыть" / "Open" via try/catch. Logged for ops review.
+
+5. System prompt update:
+```
+... Return strict JSON: { action, reasoning, urgency, linkLabelKey, link, ... }.
+linkLabelKey must be exactly ONE of: send_invoice, log_time, review_proposal,
+check_in_client, send_followup, create_contract, mark_paid, add_milestone.
+If no key matches, omit linkLabelKey (UI will fall back).
+```
+
+6. Locale-translated `action`/`reasoning` text still flow via lib/ai's existing
+   auto-locale propagation (Phase 11 advisor pattern) — no new code there.
 
 ### 4.4 Unit test snippet
 
@@ -372,13 +429,22 @@ function bucketForHour(h: number): 'morning' | 'afternoon' | 'evening' | 'night'
 | 22 | evening | Добрый вечер | Sunset |
 | 23 | night | Доброй ночи | Moon |
 
-### 6.3 Icon decision — REVIEWER APPROVAL NEEDED
+### 6.3 Icon decision — AMENDED per reviewer §3 (scope-checked)
 
-**Recommendation:** Add lucide `Sunset` icon for evening (18-22), use `Moon` for night (23-04). Today's code uses `Moon` for evening 18-23 which is OK but conflates "evening" with "night". Sunset is more semantically correct for the 18-22 window when sun is setting but social context is still "evening".
+**Decision: Keep zero new icons.**
 
-**Alternative (zero new icon):** Keep `Moon` for both evening + night (status quo) but use different greeting strings. Marginally less clear.
+| Bucket | Hour | Icon | Greeting (RU) | Greeting (EN) |
+|---|---|---|---|---|
+| morning | 5-11 | `Sun` | Доброе утро | Good morning |
+| afternoon | 12-17 | `Sun` | Добрый день | Good afternoon |
+| evening | 18-22 | `Moon` | Добрый вечер | Good evening |
+| night | 23-04 | `Moon` | Доброй ночи | Good night |
 
-→ **Q3 final decision needed before Step 4.**
+Rationale per reviewer: Sunset/Sunrise are visual polish, not blocking i18n. Two icons (Sun + Moon) preserve simplicity; only greeting string differs across all 4 buckets.
+
+**Backlog flag:** `backlog_phase8_greeting_icons.md` — promote evening icon to `Sunset`, morning to `Sunrise` as part of Phase 8 visual polish pass. NOT in CP-A redo.
+
+→ **Q3 RESOLVED.** No icon imports added in Step 4.
 
 ---
 
@@ -507,6 +573,41 @@ Reviewer approval gates:
 
 ---
 
+## 13. Ramiz-decision questions (block Step 4 until answered)
+
+Per reviewer §5, three consumer-facing decisions for the product owner:
+
+**Q-Ramiz-1: Currency symbol position в ru локали**
+- Option A (native Russian, default Intl): `1,2 тыс. $` — symbol after, space-separated
+- Option B (American style overlay): `$1.2 тыс.` — symbol before, no space
+
+**Q-Ramiz-2: Time display threshold в Activity Feed**
+- Option A (raw minutes always): `Учтено 480 мин: untitled`
+- Option B (convert ≥60 мин → часы): `Учтено 8 ч: untitled` (threshold)
+- Option C (convert ≥60 мин → часы + минуты): `Учтено 8 ч 0 мин: untitled`
+
+Recommend Option B with threshold `<60 → мин`, `≥60 → часы` (drop minute remainder).
+
+**Q-Ramiz-3: Sunset/Sunrise icons in greeting**
+- Option A: Defer to Phase 8 backlog (per reviewer §3 amendment) — Sun+Moon only in CP-A
+- Option B: Include in CP-A despite scope creep — add Sunrise (morning), Sun (afternoon), Sunset (evening), Moon (night) — 4 icons total
+
+Recommend Option A per reviewer §3.
+
+---
+
+## 14. Five discovered_issues — Reviewer resolutions applied
+
+| # | Issue | Resolution | Source |
+|---|---|---|---|
+| 1 | Dead code: `DashboardClientWrapper.tsx` not imported anywhere | IGNORE, flag в backlog as `backlog_dashboard_wrapper_dead_code.md` | Reviewer §6.1 |
+| 2 | `briefing/` + `command-center/` routes have ~60 hardcoded strings | SEPARATE tasks: `CP-A.briefing`, `CP-A.commandcenter` — NOT in CP-A redo scope | Reviewer §6.2 |
+| 3 | Shared currency formatter helper missing | APPROVED direction: create `src/lib/format/currency.ts` per §5.1 | Reviewer §6.3 |
+| 4 | Dynamic API strings (activity descriptions + Next Best Action) | IN SCOPE with amendment #2 (`linkLabelKey` enum, see §4.3) | Reviewer §6.4 |
+| 5 | Client status enum inline (no shared TS type) | APPROVED: namespacing under `client.status.*` in messages/ — no new shared TS type | Reviewer §6.5 |
+
+---
+
 ## END OF PLAN
 
-Standing by for reviewer approval to begin Step 4.
+Standing by for reviewer re-approval after amendments + Ramiz answers to Q1/Q2/Q3.
