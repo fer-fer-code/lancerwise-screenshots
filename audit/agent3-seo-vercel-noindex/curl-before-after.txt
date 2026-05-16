@@ -1,0 +1,82 @@
+================================================================
+[AGENT 3] SEO — block *.vercel.app indexing — before/after curl
+================================================================
+
+────────────────────────────────────────────────────────────────
+BEFORE (pre-fix, captured during investigation)
+────────────────────────────────────────────────────────────────
+
+$ curl -sI https://lancerwise.vercel.app/
+HTTP/2 308              ← implicit Vercel platform redirect (auto-set
+                          when canonical custom domain exists)
+location: https://www.lancerwise.com/
+
+  Issue: 308 is a "temporary" redirect semantics for some crawlers,
+  not as strong a canonical signal as 301. Google may keep both
+  URLs in the index longer than necessary.
+
+$ curl -sI https://lancerwise.vercel.app/terms
+HTTP/2 308
+location: https://www.lancerwise.com/terms
+
+$ curl -sI https://www.lancerwise.com/terms
+HTTP/2 200 OK              ← canonical, unaffected
+
+────────────────────────────────────────────────────────────────
+AFTER (post-fix, 3-layer defense applied)
+────────────────────────────────────────────────────────────────
+
+Layer 1 — Vercel platform 301 (applied via API to project domain config)
+
+$ curl -sI https://lancerwise.vercel.app/
+HTTP/2 301              ← permanent. Strongest canonical signal.
+location: https://www.lancerwise.com/
+server: Vercel
+
+$ curl -sI https://lancerwise.vercel.app/terms
+HTTP/2 301
+location: https://www.lancerwise.com/terms
+
+Layer 2 — next.config.ts redirect rule (covers preview *.vercel.app
+deployments that the Layer-1 alias config doesn't touch)
+
+Tested locally with Host header injection:
+$ curl -sI -H "Host: lancerwise.vercel.app" http://localhost:3000/terms
+HTTP/1.1 308 Permanent Redirect      ← next.config rule fires
+location: https://www.lancerwise.com/terms
+
+Layer 3 — middleware.ts X-Robots-Tag on every non-canonical host
+
+$ curl -sI -H "Host: 192.168.1.9" http://localhost:3000/terms
+HTTP/1.1 200 OK
+x-robots-tag: noindex, nofollow      ← stamped by middleware
+
+$ curl -sI -H "Host: www.lancerwise.com" http://localhost:3000/terms
+HTTP/1.1 200 OK
+(no x-robots-tag — canonical host, indexable)
+
+────────────────────────────────────────────────────────────────
+PRODUCTION verification (post-deploy 7bb8f049)
+────────────────────────────────────────────────────────────────
+
+$ curl -sI https://www.lancerwise.com/terms
+HTTP/2 200 OK              ← canonical unchanged
+
+$ curl -sI https://lancerwise.vercel.app/terms
+HTTP/2 301
+location: https://www.lancerwise.com/terms
+
+$ curl -sI https://lancerwise-ol1f9eng1-fer-fer-codes-projects.vercel.app/terms
+HTTP/2 401                 ← Vercel SSO Protection blocks preview URL
+set-cookie: _vercel_sso_nonce=...
+x-robots-tag: noindex      ← Vercel SSO auto-adds noindex header
+
+────────────────────────────────────────────────────────────────
+CI canary on main (run 25953808599)
+────────────────────────────────────────────────────────────────
+
+  ✓  gate / eslint i18n             pass
+  ✘  gate / locale-purity (ru)      fail (expected — pre-CP-A locale)
+  ✓  gate / visual-regression       pass
+
+No regression introduced by the SEO change.
