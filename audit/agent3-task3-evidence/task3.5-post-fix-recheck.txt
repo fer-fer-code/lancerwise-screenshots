@@ -1,0 +1,52 @@
+====================================================
+TASK 3.5 — Post-fix exploitation re-check
+Window: 2026-05-16 morning → now (covers fix-deploy gap)
+Merge commit 21968965 deploy time: ~2026-05-16 ~11:30 UTC+7
+====================================================
+
+Q1 — Any entries in email_unsubscribe_log в the last 24h?
+ recent_unsubs 
+---------------
+             0
+(1 строка)
+
+
+Q2 — Full email_unsubscribe_log content (post-D1d window, не just 24h)
+ id | audience | target_id | email | source | unsubscribed_at 
+----+----------+-----------+-------+--------+-----------------
+(0 строк)
+
+
+Q3 — Current opt-outs (profiles + clients)
+  table   | unsubscribed 
+----------+--------------
+ profiles |            0
+ clients  |            0
+(2 строки)
+
+
+Q4 — Any profile flipped after 2026-05-16 (no audit log entry needed if pre-D1d)
+ERROR:  column "updated_at" does not exist
+СТРОКА 1: SELECT id, email, email_unsubscribed, updated_at FROM profil...
+                                                ^
+ПОДСКАЗКА:  Perhaps you meant to reference the column "profiles.created_at".
+
+Q5 — Same for clients
+ id | email | email_unsubscribed | updated_at 
+----+-------+--------------------+------------
+(0 строк)
+
+Q4 retry — profiles columns inspection
+    column_name     
+--------------------
+ created_at
+ email_unsubscribed
+(2 строки)
+
+
+Q4b — any profile with email_unsubscribed=true (regardless of timestamp column)
+ profiles_flagged 
+------------------
+                0
+(1 строка)
+
