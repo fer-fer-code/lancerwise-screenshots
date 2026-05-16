@@ -1,0 +1,92 @@
+================================================================
+[AGENT 3] SEO — favicon / Organization.logo before/after
+================================================================
+
+────────────────────────────────────────────────────────────────
+INVESTIGATION findings (all from production www.lancerwise.com)
+────────────────────────────────────────────────────────────────
+
+Image assets — all returning HTTP 200 with current branding:
+  /favicon.ico            HTTP/2 200  599 B   32x32  purple lightning bolt
+  /favicon-16x16.png      HTTP/2 200  323 B   16x16  purple lightning bolt
+  /favicon-32x32.png      HTTP/2 200  599 B   32x32  purple lightning bolt
+  /apple-touch-icon.png   HTTP/2 200  3166 B  180x180 purple lightning bolt
+  /icon-192.png           HTTP/2 200  3362 B  192x192 purple lightning bolt
+  /icon-512.png           HTTP/2 200  14993 B 512x512 purple lightning bolt
+  /icon.svg               HTTP/2 200  211 B   any    purple lightning bolt
+  /og-image.png           HTTP/2 200  36246 B 1200x630  OLD circular blue logo + LancerWise wordmark
+                                                       (P2 backlog: SEO OG image polish)
+
+Schema.org Organization.logo URL referenced in HTML <head> JSON-LD:
+  src/app/layout.tsx:97
+    logo: "https://www.lancerwise.com/logo.png"
+
+────────────────────────────────────────────────────────────────
+PROBLEM — /logo.png 404
+────────────────────────────────────────────────────────────────
+
+  $ curl -sI https://www.lancerwise.com/logo.png
+  HTTP/2 404
+  content-type: text/html; charset=utf-8
+
+  public/logo.png file did NOT exist. The schema declared it but no
+  asset existed to back it.
+
+  Effect: Google fell back to og-image.png for SERP brand logo (knowledge
+  panel + result thumbnails). og-image.png shows the OLD circular blue
+  logo branding (pre-rebrand) — so Google's "lancerwise" search result
+  served stale branding.
+
+────────────────────────────────────────────────────────────────
+FIX — public/logo.png created from public/icon-512.png
+────────────────────────────────────────────────────────────────
+
+  Commit 08fcf2fc:
+    cp public/icon-512.png public/logo.png
+    git add public/logo.png && git commit && git push origin main
+
+  Vercel deploy: triggered via `vercel --prod --yes` (git integration
+  remains disconnected, so push-to-deploy doesn't auto-fire).
+  Deploy state READY @ commit 08fcf2fc.
+
+────────────────────────────────────────────────────────────────
+POST-FIX verification
+────────────────────────────────────────────────────────────────
+
+  $ curl -sI https://www.lancerwise.com/logo.png
+  HTTP/2 200
+  content-type: image/png
+  content-length: 14993
+  last-modified: Sat, 16 May 2026 06:09:54 GMT
+
+  Downloaded + viewed: 512×512 purple rounded-square with white
+  lightning bolt — the current branding, identical to icon-512.png.
+
+  Organization JSON-LD still declares this URL, now backed:
+    "logo":"https://www.lancerwise.com/logo.png"
+
+────────────────────────────────────────────────────────────────
+EXPECTED SERP TIMELINE
+────────────────────────────────────────────────────────────────
+
+Google's image-crawler re-fetches Organization.logo URLs on the
+homepage's next normal crawl pass (typically 1-7 days for an active
+site). Once re-fetched, the SERP knowledge panel and search-result
+brand logo for "lancerwise" will show the purple lightning bolt
+instead of the old circular blue logo.
+
+GSC Outdated Content tool is NOT used here — the homepage HTML hasn't
+changed text-wise, only the referenced image asset, and the tool
+verifies by missing-word-in-snippet which doesn't apply to image
+swaps. Natural recrawl is the right path.
+
+────────────────────────────────────────────────────────────────
+NOT FIXED in this commit (deferred follow-up)
+────────────────────────────────────────────────────────────────
+
+og-image.png still shows the OLD circular blue branding. Google may
+still use it as a fallback in some contexts (Twitter cards, link
+previews, mobile result thumbnails). Replacement deferred to its own
+commit per memory backlog_seo_og_image_design_upgrade.md — needs a
+designed 1200×630 image with new branding + wordmark, not just a
+square icon crop.
