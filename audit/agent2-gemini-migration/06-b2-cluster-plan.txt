@@ -1,0 +1,37 @@
+=== B2 candidates: /api/v1/ai/* using messages.create (buffered) ===
+  buffered (B2): 364
+  streaming (B3): 0
+
+=== Natural cluster groups (subdir + name pattern) ===
+     364
+Total subdirs (each = 1 endpoint):
+
+Alphabetic chunks of 25 for batching:
+      15
+chunks total (25 each)
+=== Cluster #1 candidates (first 25 alphabetically) ===
+ab-test-proposals
+analyze-client
+annual-goals-planner
+annual-review
+annual-review-generator
+bad-client-detector
+bio-generator
+bio-optimizer
+brand-voice
+burnout-assessment
+burnout-risk-assessment
+business-plan
+cancel-project-email
+capacity-planning
+case-study-writer
+categorize
+churn-predictor
+client-anniversary-message
+client-boundary-setter
+client-brief-analyzer
+client-check-in-email
+client-churn-prevention
+client-exit-interview
+client-feedback-analyzer
+client-feedback-response

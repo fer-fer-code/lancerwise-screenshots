@@ -1,0 +1,30 @@
+=== Cluster 1 smoke (analyze-client) ===
+Endpoint test: analyze-client prompt structure
+Result: 644 chars, parsed JSON OK, keys=[health_score, insights]
+
+Files migrated (25):
+src/app/api/v1/ai/ab-test-proposals/route.ts
+src/app/api/v1/ai/analyze-client/route.ts
+src/app/api/v1/ai/annual-goals-planner/route.ts
+src/app/api/v1/ai/annual-review-generator/route.ts
+src/app/api/v1/ai/annual-review/route.ts
+src/app/api/v1/ai/bad-client-detector/route.ts
+src/app/api/v1/ai/bio-generator/route.ts
+src/app/api/v1/ai/bio-optimizer/route.ts
+src/app/api/v1/ai/brand-voice/route.ts
+src/app/api/v1/ai/burnout-assessment/route.ts
+src/app/api/v1/ai/burnout-risk-assessment/route.ts
+src/app/api/v1/ai/business-plan/route.ts
+src/app/api/v1/ai/cancel-project-email/route.ts
+src/app/api/v1/ai/capacity-planning/route.ts
+src/app/api/v1/ai/case-study-writer/route.ts
+src/app/api/v1/ai/categorize/route.ts
+src/app/api/v1/ai/churn-predictor/route.ts
+src/app/api/v1/ai/client-anniversary-message/route.ts
+src/app/api/v1/ai/client-boundary-setter/route.ts
+src/app/api/v1/ai/client-brief-analyzer/route.ts
+src/app/api/v1/ai/client-check-in-email/route.ts
+src/app/api/v1/ai/client-churn-prevention/route.ts
+src/app/api/v1/ai/client-exit-interview/route.ts
+src/app/api/v1/ai/client-feedback-analyzer/route.ts
+src/app/api/v1/ai/client-feedback-response/route.ts

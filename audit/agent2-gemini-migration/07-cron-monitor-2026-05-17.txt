@@ -1,0 +1,21 @@
+=== cron + AI usage monitor — 2026-05-17 ===
+Date: 2026-05-16T18:44:00Z
+
+--- Last 24h AI calls by provider ---
+gemini-flash: 122 calls, 115 errors (94%), 2429 output tokens, $0.000729
+
+--- All errors: GEMINI_API_KEY not configured ---
+Window: 16:45 → 18:19 UTC (PRE my cluster 1 deploy at 18:35 UTC)
+Endpoint: risk-assessment (RiskWidget on dashboard)
+Source: B0+B1 deploy dpl_FFsa... — may have been a transient env-binding
+issue at module load time on cold-start (gemini.ts checks process.env
+at module load, caches result for life of function instance).
+
+Vercel env confirmed via 'vercel env pull --environment=production':
+  GEMINI_API_KEY=<set>
+  ANTHROPIC_API_KEY=<set>
+
+Action: monitor next batch of dashboard hits post-cluster-1 deploy.
+If errors persist on fresh deploy, root-cause investigation needed
+(maybe module-load timing OR env not actually deployed). If errors
+stop, this was a transient cold-start issue.
