@@ -1,0 +1,12 @@
+=== 11 AI cron file inspection ===
+  BUFFER | ai-weekly-insights/route.ts | model=claude-haiku-4-5-20251001 | tokens=600 | lines=439 | sdkvar=
+  BUFFER | annual-year-review/route.ts | model=claude-haiku-4-5-20251001 | tokens=150 | lines=223 | sdkvar=ai
+  BUFFER | client-checkins/route.ts | model=claude-haiku-4-5-20251001 | tokens=500 | lines=188 | sdkvar=anthropic
+  BUFFER | deadline-reminder/route.ts | model=claude-haiku-4-5-20251001 | tokens=300 | lines=80 | sdkvar=anthropic
+  BUFFER | friday-summary/route.ts | model=claude-haiku-4-5-20251001 | tokens=300 | lines=71 | sdkvar=ai
+  BUFFER | monthly-health-score/route.ts | model=claude-haiku-4-5-20251001 | tokens=180 | lines=319 | sdkvar=
+  BUFFER | monthly-review/route.ts | model=claude-haiku-4-5-20251001 | tokens=600 | lines=221 | sdkvar=
+  BUFFER | quarter-sprint/route.ts | model=claude-haiku-4-5-20251001 | tokens=200 | lines=242 | sdkvar=
+  BUFFER | quarterly-review/route.ts | model=claude-haiku-4-5-20251001 | tokens=500 | lines=320 | sdkvar=
+  BUFFER | weekly-insights/route.ts | model=claude-haiku-4-5-20251001 | tokens=400 | lines=288 | sdkvar=
+  BUFFER | weekly-review-auto/route.ts | model=claude-haiku-4-5 | tokens=1024 | lines=243 | sdkvar=

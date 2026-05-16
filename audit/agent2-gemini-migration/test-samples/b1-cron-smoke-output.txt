@@ -1,0 +1,28 @@
+=== B1 cron smoke (sample 2/11) ===
+
+Test 1 — deadline-reminder prompt:
+{
+  "name": "deadline-reminder",
+  "duration_ms": 2015,
+  "provider": "gemini-flash",
+  "tokensUsed": 241,
+  "subject_len": 42,
+  "body_len": 295,
+  "subject": "Quick Reminder: Upcoming Project Deadlines",
+  "body_preview": "Just a friendly reminder about a couple of projects due in the next 7 days:\n\n- Q3 landing page (due 2026-05-20)\n- API in"
+}
+
+Test 2 — quarterly-review prompt:
+{
+  "name": "quarterly-review",
+  "duration_ms": 4850,
+  "provider": "gemini-flash",
+  "tokensUsed": 485,
+  "text_len": 1424,
+  "has_summary": true,
+  "has_highlights": true,
+  "has_actions": true,
+  "preview": "Here's your Q2 2026 performance review:\n\n**[SUMMARY]**\nQ2 shows positive momentum with an 8% revenue increase, indicating growth and effective client delivery. While revenue is up, a deeper look at your hourly rate and client acquisition strategy will be key for future scaling.\n\n**[HIGHLIGHTS]**\n*  "
+}
+
+=== ALL ASSERTS PASSED ===
