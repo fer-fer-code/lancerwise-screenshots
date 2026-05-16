@@ -1,0 +1,6 @@
+=== /api/ai/budget — unauthenticated (expect 401) ===
+HTTP 401
+{"error":"Unauthorized"}
+=== /api/ai/risk — confirms whole AI stack still alive ===
+HTTP 401
+{"error":"Unauthorized"}
