@@ -1,0 +1,54 @@
+=== Current /lib/ai/usage.ts (replacing console.log) ===
+export type AIFeature =
+  | 'client-summary'
+  | 'risk-assessment'
+  | 'name-generator'
+  | 'comms-draft'
+  | 'milestones'
+  | 'notes-process'
+  | 'contract'
+  | 'legal'
+  | 'chat'
+  | 'other'
+
+export type AIProvider =
+  | 'gemini-pro'
+  | 'gemini-flash'
+  | 'gemini-flash-lite'
+  | 'groq'
+
+export interface AIUsageEvent {
+  userId: string
+  feature: AIFeature
+  provider: AIProvider
+  model: string
+  tokensUsed: number
+  durationMs?: number
+  success?: boolean
+  errorCode?: string
+  /** true when primary provider failed and fallback was used */
+  fellBackFrom?: AIProvider
+}
+
+export async function logAIUsage(event: AIUsageEvent): Promise<void> {
+  console.log('[ai-usage]', {
+    ...event,
+    ts: new Date().toISOString(),
+  })
+}
+
+
+=== Current /lib/ai/index.ts wrapper outline ===
+/**
+import { logAIUsage, type AIFeature, type AIProvider } from './usage'
+/** Per-provider fallback chain. If primary returns rate-limit, switch to fallback. */
+/** Build a language instruction appended to system prompts. Returns null when locale=en or absent. */
+export function languageInstruction(locale: string | undefined | null): string | null {
+export async function generateText(
+    void logAIUsage({
+      void logAIUsage({
+      void logAIUsage({
+      void logAIUsage({
+/**
+export async function generateJSON<T = unknown>(
+/** Type re-exports for consumer convenience. */

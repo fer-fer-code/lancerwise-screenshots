@@ -1,0 +1,20 @@
+=== agent3 budget cap verification ===
+Daily cap: $0.5
+Test user: 367d62fc-a790-4ffb-b627-32db0df9b34e
+
+✓ cleaned previous test rows
+✓ Haiku 1k+1k tokens = $0.006000 (expect $0.006)
+✓ Sonnet 1k+1k tokens = $0.018000 (expect $0.018)
+✓ Flash 1k+1k tokens = $0.000375 (expect $0.000375)
+✓ Initial: consumed=$0 remaining=$0.5000 exceeded=false
+✓ After 1 small call: consumed=$0.003000 exceeded=false
+  Inserting 35× Sonnet calls (each ~$0.018) to exceed cap...
+✓ After 35 Sonnet calls: consumed=$0.633000 exceeded=true
+✓ checkBudget threw BudgetExceededError:
+    message="Daily AI budget reached, resets at 2026-05-17T00:00:00.000Z"
+    consumed=$0.6330
+    resetsAt=2026-05-17T00:00:00.000Z
+✓ getUserDailyCost = $0.633000 (matches status.consumed)
+✓ cleanup done
+
+=== ALL CHECKS PASSED ===

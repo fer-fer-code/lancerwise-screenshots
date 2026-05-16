@@ -1,0 +1,483 @@
+=== agent3 budget cap verification ===
+Daily cap: $0.5
+Test user: 00000000-0000-0000-0000-000000000099
+
+✓ cleaned previous test rows
+✓ Haiku 1k+1k tokens = $0.006000 (expect $0.006)
+✓ Sonnet 1k+1k tokens = $0.018000 (expect $0.018)
+✓ Flash 1k+1k tokens = $0.000375 (expect $0.000375)
+✓ Initial: consumed=$0 remaining=$0.5000 exceeded=false
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'risk-assessment',
+    endpoint: '/api/ai/risk',
+    provider: 'anthropic',
+    model: 'claude-haiku-4-5-20251001',
+    inputTokens: 500,
+    outputTokens: 500,
+    success: true
+  }
+}
+✓ After 1 small call: consumed=$0.000000 exceeded=false
+  Inserting 35× Sonnet calls (each ~$0.018) to exceed cap...
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+[ai-usage] insert failed {
+  error: 'insert or update on table "ai_usage_log" violates foreign key constraint "ai_usage_log_user_id_fkey"',
+  event: {
+    userId: '00000000-0000-0000-0000-000000000099',
+    feature: 'other',
+    endpoint: '/api/test/burst',
+    provider: 'anthropic',
+    model: 'claude-sonnet-4-6',
+    inputTokens: 1000,
+    outputTokens: 1000,
+    success: true
+  }
+}
+✓ After 35 Sonnet calls: consumed=$0.000000 exceeded=false
+FAIL: Error: Expected exceeded=true
+    at main (/Users/myoffice/lancerwise/scripts/agent3-budget-test.ts:84:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
