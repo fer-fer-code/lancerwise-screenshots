@@ -1,0 +1,98 @@
+================================================================
+[AGENT 3] qa-gates Step 5 — locale-purity ratchet (Path 2)
+================================================================
+
+Per reviewer Path 2 decision: add a locale-purity ratchet symmetric to
+the existing eslint i18n ratchet, instead of waiting for full
+CP-A-redo coverage of all 10 routes.
+
+────────────────────────────────────────────────────────────────
+COMMITS
+────────────────────────────────────────────────────────────────
+lancerwise@f3f7b8eb — ci(qa-gates): add locale-purity ratchet (Path 2)
+                      audit/locale-purity-baseline.json floor=2517
+                      scripts/qa/locale-purity-ratchet.js
+                      workflow Gate 2 rewired to use ratchet + `|| true`
+                      on playwright + `set -o pipefail` on tee
+
+lancerwise@fa1d5aa0 — ci(qa-gates): make baseline auto-commit-back
+                      non-fatal + rebase first
+                      Both Gate 1 and Gate 2 commit-back steps got:
+                        continue-on-error: true
+                        git pull --rebase before push
+                      Fix surfaced by first demo PR pair where the
+                      parallel push race made Gate 1 fail on a clean
+                      improvement.
+
+────────────────────────────────────────────────────────────────
+CANARY ON MAIN (post-ratchet)
+────────────────────────────────────────────────────────────────
+
+Run 25961380671 (push @ commit f3f7b8eb):
+  ✓ gate / eslint i18n       pass   ratchet=improve current=34466 baseline=34670 delta=-204
+  ✓ gate / locale-purity ru  pass   ratchet=improve current=2512 baseline=2517 delta=-5
+  ✓ gate / visual-regression pass
+
+** All 3 GREEN on main. ** This is the canary signal Q3 step 5 was
+waiting for. Branch protection (Q3 step 6) blocked separately on
+GitHub plan — see ci-architecture.md §3 update at the bottom.
+
+────────────────────────────────────────────────────────────────
+DEMO PR PAIR (ACTION 1d)
+────────────────────────────────────────────────────────────────
+
+Both PRs closed without merge after capture. Branches deleted from
+remote. PR comments link back to this evidence dir.
+
+DEMO 1 — demo/locale-pass (PR #7, closed)
+  Run 25961835970 — overall conclusion: success
+    ✓ gate / eslint i18n       pass
+      i18n ratchet report
+        Baseline: 34670  Current: 34466  Delta: -204
+      ratchet=improve
+
+    ✓ gate / locale-purity ru  pass
+      locale-purity ratchet report
+        Baseline: 2517  Current: 2516  Delta: -1
+      ratchet=improve  (auto-commits lower floor to PR branch)
+
+    ✓ gate / visual-regression pass
+
+  Mutation: trivial README addition. Both ratchets correctly detected
+  ratchet=improve. Both auto-commit-back attempts succeeded.
+
+DEMO 2 — demo/locale-fail (PR #8, closed)
+  Run 25961836535 — overall conclusion: failure
+    ✓ gate / eslint i18n       pass
+      (.ru.json edits don't affect TSX eslint scan)
+
+    ✘ gate / locale-purity ru  FAIL
+      locale-purity ratchet report
+        Baseline: 2517  Current: 2521  Delta: +4
+      ratchet=fail
+      Routes with most tokens: /settings 1491 etc.
+      ❌ RATCHET FAILED — 4 new locale-purity violations introduced.
+
+    ✓ gate / visual-regression pass
+
+  Mutation: replaced 6 dashboard.greeting.* + dashboard.today keys in
+  messages/ru.json with deliberate English phrases ("Demo English
+  Good Morning Phrase" etc.). The locale-purity spec scans /dashboard
+  in RU locale and picked up the new EN tokens. Gate 2's ratchet
+  correctly fired with the +4 delta and pointed at the regression's
+  per-route distribution.
+
+  This is the precise behaviour we wanted to demo: regressions get
+  blocked at the gate level, not the test level — even when the
+  regression is invisible to eslint (translation JSON, not TSX).
+
+────────────────────────────────────────────────────────────────
+RATCHET LOCAL VALIDATION (covered 3 cases)
+────────────────────────────────────────────────────────────────
+
+Match:    current 2517 == baseline 2517  → ratchet=ok       exit 0
+Improve:  current 2400 <  baseline 2517  → ratchet=improve  exit 0,
+                                            floor lowered to 2400
+Regress:  current 2600 >  baseline 2517  → ratchet=fail     exit 1
+                                            with per-route + top-10
+                                            tokens

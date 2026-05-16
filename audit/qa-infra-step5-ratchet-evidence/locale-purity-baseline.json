@@ -1,0 +1,7 @@
+{
+  "rule": "locale-purity-ru",
+  "violations": 2517,
+  "updated_at": "2026-05-16",
+  "updated_by": "qa-gates-cp-a-post-merge-canary",
+  "notes": "Floor set after CP-A redo Step 4 merged to main (commit 600c16c3). Captures the residual EN-on-RU tokens across the 10 locale-purity routes: /dashboard 62 + /work 69 + /work/time 395 + /clients 65 + /finances 18 + /analytics 274 + /analytics/forecast 66 + /contracts 19 + /settings 1491 + /settings/public-profile 58 = 2517. Future CP-A waves (briefing, commandcenter, /clients, /work, /analytics, /contracts, /settings/public-profile) will each lower this floor; the CI ratchet auto-rewrites this file on improvement and commits back to the PR branch."
+}

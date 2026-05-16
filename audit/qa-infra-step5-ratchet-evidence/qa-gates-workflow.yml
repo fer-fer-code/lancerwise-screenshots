@@ -1,0 +1,263 @@
+
+name: qa-gates
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, labeled]
+  push:
+    branches: [main]
+  # Allow manual rerun
+  workflow_dispatch:
+
+# Visual-regression baseline init needs to push a commit back to the PR
+# branch when the `qa-visual-baseline-init` label is applied. Other jobs
+# are read-only.
+permissions:
+  contents: write
+  pull-requests: write
+
+# Cancel superseded runs on the same PR (a fresh push obsoletes the previous run)
+concurrency:
+  group: qa-gates-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ────────────────────────────────────────────────────────────────────────
+  # GATE 1 — ESLint i18next/no-literal-string ratchet
+  # ────────────────────────────────────────────────────────────────────────
+  eslint-i18n:
+    name: gate / eslint i18n
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install deps (no scripts, no Playwright browsers needed here)
+        run: npm ci --ignore-scripts
+
+      - name: Run ESLint i18n-only
+        run: |
+          npx eslint 'src/**/*.{tsx,jsx}' \
+            --config eslint.config.i18n.mjs \
+            --no-warn-ignored \
+            --format json \
+            > eslint-i18n-report.json || true
+          test -s eslint-i18n-report.json
+
+      - name: Ratchet check
+        id: ratchet
+        run: |
+          # pipefail so a non-zero exit from i18n-ratchet propagates past tee
+          set -o pipefail
+          node scripts/qa/i18n-ratchet.js eslint-i18n-report.json | tee -a $GITHUB_STEP_SUMMARY
+
+      - name: Commit lowered baseline (if improvement)
+        # Only when ratchet exited 0 AND the baseline file diff is non-empty.
+        # On `push` to main, skip (the baseline lives on a PR branch).
+        # continue-on-error: a transient push race with the parallel
+        # locale-purity commit-back must not fail this gate — the ratchet
+        # result is what determines pass/fail; baseline auto-commit is
+        # best-effort. If it loses the race here, the next PR run picks
+        # up the same improvement and commits successfully then.
+        if: success() && github.event_name == 'pull_request'
+        continue-on-error: true
+        run: |
+          if [ -n "$(git status --porcelain audit/i18n-baseline.json)" ]; then
+            git config user.name "qa-gates[bot]"
+            git config user.email "qa-gates@users.noreply.github.com"
+            git add audit/i18n-baseline.json
+            git commit -m "ci(qa-gates): lower i18n baseline floor"
+            git pull --rebase origin "${{ github.head_ref }}" || true
+            git push origin HEAD:${{ github.head_ref }}
+          else
+            echo "Baseline unchanged."
+          fi
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eslint-i18n-report
+          path: eslint-i18n-report.json
+          retention-days: 30
+
+  # ────────────────────────────────────────────────────────────────────────
+  # GATE 2 — Playwright locale-purity (RU)
+  # ────────────────────────────────────────────────────────────────────────
+  locale-purity:
+    name: gate / locale-purity (ru)
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Install Playwright (chromium only)
+        run: npx playwright install --with-deps chromium
+
+      - name: Start dev server
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          NEXT_PUBLIC_APP_URL: http://localhost:3000
+        run: |
+          nohup npm run dev > dev-server.log 2>&1 &
+          echo "DEV_PID=$!" >> $GITHUB_ENV
+          # Wait for HTTP 200 on /login (public route — no auth required)
+          for i in {1..60}; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:3000/login || echo 000)
+            if [ "$code" = "200" ]; then echo "ready"; break; fi
+            sleep 2
+          done
+          curl -s -o /dev/null -w "Final HTTP: %{http_code}\n" http://localhost:3000/login
+
+      - name: Run locale-purity (collect failures into JSON, never fail this step)
+        env:
+          BASE_URL: http://localhost:3000
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          PLAYWRIGHT_TEST_USER_EMAIL: ${{ secrets.PLAYWRIGHT_TEST_USER_EMAIL }}
+          PLAYWRIGHT_TEST_USER_PASSWORD: ${{ secrets.PLAYWRIGHT_TEST_USER_PASSWORD }}
+        # The spec deliberately throws per-route on any flagged token so local
+        # devs see "10 failed" with route detail. In CI we want the JSON
+        # artifact (failures count) and let the ratchet decide pass/fail
+        # against the baseline floor — so `|| true` swallows the playwright
+        # exit code here. The next step (ratchet) is the real gate.
+        run: npx playwright test --project=setup --project=locale-purity-ru || true
+
+      - name: Ratchet check
+        id: ratchet
+        run: |
+          set -o pipefail
+          node scripts/qa/locale-purity-ratchet.js audit/locale-purity-baseline-failures.json \
+            | tee -a $GITHUB_STEP_SUMMARY
+
+      - name: Commit lowered locale-purity baseline (if improvement)
+        # Only on pull_request — push-to-main canary should not auto-commit
+        # back to main. Same policy as the eslint i18n ratchet.
+        # continue-on-error: same rationale as Gate 1 — best-effort.
+        if: success() && github.event_name == 'pull_request'
+        continue-on-error: true
+        run: |
+          if [ -n "$(git status --porcelain audit/locale-purity-baseline.json)" ]; then
+            git config user.name "qa-gates[bot]"
+            git config user.email "qa-gates@users.noreply.github.com"
+            git add audit/locale-purity-baseline.json
+            git commit -m "ci(qa-gates): lower locale-purity baseline floor"
+            git pull --rebase origin "${{ github.head_ref }}" || true
+            git push origin HEAD:${{ github.head_ref }}
+          else
+            echo "Baseline unchanged."
+          fi
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: locale-purity-artifacts
+          path: |
+            audit/locale-purity-baseline-failures.json
+            test-results/
+            dev-server.log
+          retention-days: 30
+
+  # ────────────────────────────────────────────────────────────────────────
+  # GATE 3 — Playwright visual-regression
+  # ────────────────────────────────────────────────────────────────────────
+  visual-regression:
+    name: gate / visual-regression
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # full fetch + write access so the baseline-init step can push
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Install Playwright (chromium only)
+        run: npx playwright install --with-deps chromium
+
+      - name: Start dev server
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          NEXT_PUBLIC_APP_URL: http://localhost:3000
+        run: |
+          nohup npm run dev > dev-server.log 2>&1 &
+          for i in {1..60}; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:3000/login || echo 000)
+            if [ "$code" = "200" ]; then break; fi
+            sleep 2
+          done
+
+      # Branch A: initialize linux baselines (label-triggered)
+      - name: Initialize linux baselines
+        if: contains(github.event.pull_request.labels.*.name, 'qa-visual-baseline-init')
+        env:
+          BASE_URL: http://localhost:3000
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          PLAYWRIGHT_TEST_USER_EMAIL: ${{ secrets.PLAYWRIGHT_TEST_USER_EMAIL }}
+          PLAYWRIGHT_TEST_USER_PASSWORD: ${{ secrets.PLAYWRIGHT_TEST_USER_PASSWORD }}
+        run: |
+          npx playwright test --project=setup --project=visual-regression --update-snapshots
+          if [ -n "$(git status --porcelain tests/e2e/visual-regression.spec.ts-snapshots/)" ]; then
+            git config user.name "qa-gates[bot]"
+            git config user.email "qa-gates@users.noreply.github.com"
+            git add tests/e2e/visual-regression.spec.ts-snapshots/
+            git commit -m "ci(qa-gates): initialize linux visual baselines"
+            git push origin HEAD:${{ github.head_ref }}
+          fi
+
+      # Branch B: normal compare run (default — no label)
+      - name: Visual regression
+        if: ${{ !contains(github.event.pull_request.labels.*.name, 'qa-visual-baseline-init') }}
+        env:
+          BASE_URL: http://localhost:3000
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          PLAYWRIGHT_TEST_USER_EMAIL: ${{ secrets.PLAYWRIGHT_TEST_USER_EMAIL }}
+          PLAYWRIGHT_TEST_USER_PASSWORD: ${{ secrets.PLAYWRIGHT_TEST_USER_PASSWORD }}
+        run: npx playwright test --project=setup --project=visual-regression
+
+      - name: Upload HTML report + diffs
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: visual-regression-html
+          path: |
+            playwright-report/
+            test-results/
+            tests/e2e/visual-regression.spec.ts-snapshots/
+          retention-days: 30
