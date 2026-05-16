@@ -1,0 +1,18 @@
+$ gh workflow list --repo fer-fer-code/lancerwise
+qa-gates	active	277482776
+
+$ gh workflow view qa-gates.yml --repo fer-fer-code/lancerwise
+qa-gates - qa-gates.yml
+ID: 277482776
+
+Total runs 3
+Recent runs
+completed	failure	qa-gates: install 3-gate CI pipeline + baselines (Step 1-4)	qa-gates	qa-infrastructure-2026-05	pull_request	8m31s	25932237949
+completed	failure	qa-gates: install 3-gate CI pipeline + baselines (Step 1-4)	qa-gates	qa-infrastructure-2026-05	pull_request	7m50s	25931811137
+completed	failure	qa-gates: install 3-gate CI pipeline + baselines (Step 1-4)	qa-gates	qa-infrastructure-2026-05	pull_request	8m40s	25931373563
+
+Note: top-level conclusion "failure" reflects Gate 2 (locale-purity)
+which fails BY DESIGN on the current main locale. Per-job breakdown:
+  Run 25932237949: Gate 1 pass, Gate 2 fail (expected), Gate 3 pass (compare mode)
+  Run 25931811137: Gate 1 pass, Gate 2 fail (expected), Gate 3 pass (baseline-init mode)
+  Run 25931373563: Gate 1 pass, Gate 2 fail (expected), Gate 3 fail (no -linux baselines yet)

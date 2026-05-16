@@ -1,0 +1,89 @@
+=================================================================
+qa-gates demo PR pair — reviewer Q2 (b) deliverable
+=================================================================
+
+Both demos branched from main (commit f50f9d23 — post-bump baseline
+34,670) after the Step 4 merge. Closed without merge after evidence
+capture. Branches deleted.
+
+────────────────────────────────────────────────────────────────
+DEMO 1 — demo/qa-passing  (PR #4, closed)
+────────────────────────────────────────────────────────────────
+PR URL:       https://github.com/fer-fer-code/lancerwise/pull/4
+Run URL:      https://github.com/fer-fer-code/lancerwise/actions/runs/25952666731
+Branch:       demo/qa-passing → main
+Mutation:     +2 lines in README.md (trivial comment)
+
+Result:
+  ✓  gate / eslint i18n             pass   1m 12s
+  ✘  gate / locale-purity (ru)      fail   8m  2s   (locale broken on main — orthogonal)
+  ✓  gate / visual-regression       pass   8m 11s
+
+Ratchet output:
+  i18n ratchet report
+    Rule:     i18next/no-literal-string
+    Baseline:   34670
+    Current:    34670
+    Delta:          0
+    Files with violations: 1450
+  ✅ Ratchet OK — current count matches baseline.
+  ratchet=ok current=34670 baseline=34670 delta=0
+
+→ Gates 1 and 3 prove the pipeline protects against unintended
+  regressions on a clean PR. Gate 2 stays red until CP-A redo
+  fixes the locale — the gate's whole point.
+
+────────────────────────────────────────────────────────────────
+DEMO 2 — demo/qa-failing  (PR #5, closed)
+────────────────────────────────────────────────────────────────
+PR URL:       https://github.com/fer-fer-code/lancerwise/pull/5
+Run URL:      https://github.com/fer-fer-code/lancerwise/actions/runs/25952667978
+Branch:       demo/qa-failing → main
+Mutation:     +src/demo-failing.tsx with 5 hardcoded EN literals:
+                - <h1> text
+                - <p> text
+                - aria-label attr
+                - button children
+                - placeholder attr
+
+Result:
+  ✘  gate / eslint i18n             fail   1m 15s   ← caught the regression
+  ✘  gate / locale-purity (ru)      fail   9m 41s
+  ✓  gate / visual-regression       pass   9m 37s   (no visual surface change)
+
+Ratchet output:
+  i18n ratchet report
+    Rule:     i18next/no-literal-string
+    Baseline:   34670
+    Current:    34675
+    Delta:          5
+    Files with violations: 1451
+  Top offending files:
+        153  src/app/(app)/projects/subcontractors/SubcontractorClient.tsx
+        132  src/app/(app)/clients/network/NetworkClient.tsx
+        120  src/app/(app)/tools/subcontractors/SubcontractorsClient.tsx
+        108  src/app/(app)/tools/pipeline/PipelineClient.tsx
+        107  src/app/(app)/contracts/builder/ContractBuilderClient.tsx
+  ❌ RATCHET FAILED — 5 new i18n violations introduced.
+     Either fix them or, if the regression is intentional, raise the
+     baseline in audit/i18n-baseline.json in the same PR (with rationale).
+  ratchet=fail current=34675 baseline=34670 delta=+5
+
+→ Gate 1 caught the +5 regression with the exact precision expected
+  (5 hardcoded literals = +5 delta). The top-5 offender list points
+  at the worst pre-existing files, not at demo-failing.tsx — that's
+  because the top-5 is sorted by raw count, and the pre-existing
+  worst offenders dominate. The script's stdout (ratchet=fail
+  current=… delta=+5) is the precise signal CI uses to fail the gate.
+
+────────────────────────────────────────────────────────────────
+SIDE NOTE — pipefail bug found and fixed during demo capture
+────────────────────────────────────────────────────────────────
+First demo capture (before fix commit 901e69d9) showed gate / eslint
+i18n: pass on demo/qa-failing despite the ratchet correctly printing
+"❌ RATCHET FAILED". Root cause: the workflow had
+  node ratchet.js | tee -a $GITHUB_STEP_SUMMARY
+Bash takes the pipeline exit code from the last command (tee, which
+always exits 0). Fix: prepend `set -o pipefail` so the ratchet's exit
+1 propagates past tee. Both demos were re-run after the fix landed on
+main; numbers above are post-fix.

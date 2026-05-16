@@ -1,21 +1,26 @@
 # QA Infrastructure — Step 4 Evidence
 
-CI integration of the three quality gates. **Fully live** as of run 3
-on PR [#1](https://github.com/fer-fer-code/lancerwise/pull/1).
+CI integration of the three quality gates. **Fully live and merged to main.**
+Both reviewer-approved demos (Q2 option b) executed; pipefail bug found
+and fixed during demo capture; baseline drift absorbed.
 
 ## Source
 
 | Field | Value |
 | ----- | ----- |
 | Private repo | `fer-fer-code/lancerwise` |
-| PR | [#1 qa-gates: install 3-gate CI pipeline + baselines (Step 1-4)](https://github.com/fer-fer-code/lancerwise/pull/1) |
-| Branch | `qa-infrastructure-2026-05` → `main` |
-| Workflow | [`.github/workflows/qa-gates.yml`](https://github.com/fer-fer-code/lancerwise/blob/qa-infrastructure-2026-05/.github/workflows/qa-gates.yml) |
+| Original PR | [#1 qa-gates: install 3-gate CI pipeline + baselines (Step 1-4)](https://github.com/fer-fer-code/lancerwise/pull/1) — MERGED `97227e21` |
+| Demo PRs (closed, branches deleted) | [#4 DEMO: qa-gates expected behavior on a clean trivial change](https://github.com/fer-fer-code/lancerwise/pull/4) |
+| | [#5 DEMO: qa-gates eslint i18n fail on hardcoded English](https://github.com/fer-fer-code/lancerwise/pull/5) |
+| Workflow on main | [`.github/workflows/qa-gates.yml`](https://github.com/fer-fer-code/lancerwise/blob/main/.github/workflows/qa-gates.yml) |
 | Step 4 commits | `619e4b2a` (i18n config + ratchet + baseline) |
 | | `72cf735e` (workflow YAML shipped as `.txt` — needed because original gh CLI session lacked `workflow` scope) |
 | | `ffb57820` (workflow installed at canonical path after `gh auth refresh -s workflow`) |
 | | `1d949348` (bot-committed Linux baselines — auto-pushed by Gate 3 init run) |
 | | `04004574` (empty commit to verify compare-mode) |
+| | `97227e21` (Step 4 merge to main — `--admin` flag bypassed Gate 2 fail-by-design) |
+| | `901e69d9` (pipefail fix — Gate 1 was passing on demo/qa-failing without it) |
+| | `f50f9d23` (baseline bump 34,615 → 34,670 to absorb CP-A redo helper-file drift) |
 
 ## Status summary
 
@@ -24,16 +29,51 @@ on PR [#1](https://github.com/fer-fer-code/lancerwise/pull/1).
 | GitHub Actions workflow YAML at `.github/workflows/qa-gates.yml` | ✓ — live, triggers on PR + push to main |
 | Standalone i18n ESLint config (`eslint.config.i18n.mjs`) | ✓ |
 | i18n ratchet script (`scripts/qa/i18n-ratchet.js`) | ✓ — validated locally + in CI |
-| Baseline floor JSON (`audit/i18n-baseline.json`) | ✓ — locked at 34,615 |
+| Baseline floor JSON (`audit/i18n-baseline.json`) | ✓ — **34,670** (raised from 34,615 to absorb CP-A redo helper-file drift, commit `f50f9d23`) |
 | GitHub Actions secrets (6) | ✓ — set via `gh secret set` |
 | First CI run (initial PR open) | ✓ — Gate 1 green, Gates 2+3 red as expected |
 | Visual-regression baseline init (label-triggered) | ✓ — auto-commit `1d949348` (24 Linux baselines) |
 | Compare-mode visual-regression run | ✓ — passes against bot-committed baselines |
-| Demo PR — passing case | ✓ — the qa-gates PR itself demonstrates Gate 1 pass + Gate 3 pass; Gate 2 fail is the baseline state |
-| Demo PR — failing case (eslint regression) | ⚠ — covered by local validation (see ratchet output below). A separate failing PR is unnecessary because the local ratchet test already proved the gate blocks regressions with a precise top-5 offender list |
+| qa-infrastructure-2026-05 → main merge | ✓ — commit `97227e21` (`--admin` bypass of Gate 2 fail-by-design) |
+| **Demo PR — passing case** (reviewer Q2 b) | ✓ — [PR #4](https://github.com/fer-fer-code/lancerwise/pull/4) closed, branch deleted. Gate 1 ✓, Gate 2 ✘ (expected), Gate 3 ✓ |
+| **Demo PR — failing case** (reviewer Q2 b) | ✓ — [PR #5](https://github.com/fer-fer-code/lancerwise/pull/5) closed, branch deleted. Gate 1 ✘ caught +5 regression (current 34,675 vs floor 34,670), Gate 2 ✘, Gate 3 ✓ |
+| Pipefail bug surfaced + fixed | ✓ — `\| tee` was swallowing ratchet exit 1 on first demo capture; fix `set -o pipefail` landed as `901e69d9` |
 | Branch protection rules | ✗ — **deferred** until Gate 2 turns green after CP-A redo merges (see `ci-architecture.md` §3) |
 
-## CI run loop — full bootstrap proof
+## Demo PR pair — reviewer Q2 (b) result
+
+See [`demo-runs.txt`](demo-runs.txt) for the full output (ratchet
+report + top-offender list + URLs). Headline result:
+
+```
+DEMO 1 — demo/qa-passing (PR #4, run 25952666731)
+  ✓ gate / eslint i18n       pass   1m 12s   ratchet=ok current=34670 baseline=34670 delta=0
+  ✘ gate / locale-purity     fail   8m 02s   (locale broken on main — orthogonal)
+  ✓ gate / visual-regression pass   8m 11s
+
+DEMO 2 — demo/qa-failing (PR #5, run 25952667978)
+  ✘ gate / eslint i18n       fail   1m 15s   ratchet=fail current=34675 baseline=34670 delta=+5
+                                              ← caught the 5 hardcoded EN literals exactly
+  ✘ gate / locale-purity     fail   9m 41s
+  ✓ gate / visual-regression pass   9m 37s   (no visual surface change)
+```
+
+Both demos branched from main (post Step 4 merge + post baseline bump).
+Closed without merge after capture; branches deleted from remote.
+PR comments link back to this evidence dir.
+
+> **Pipefail bug surfaced and fixed mid-demo.** First capture of
+> demo/qa-failing reported `gate / eslint i18n: pass` despite the
+> ratchet correctly printing `❌ RATCHET FAILED`. Root cause: workflow
+> had `node ratchet.js \| tee` — bash takes the pipeline exit code
+> from the last command, and `tee` always exits 0. Fix is one line:
+> `set -o pipefail` inside the run block. Fix landed on main as
+> `901e69d9`; both demo branches were rebased and re-ran with correct
+> behavior (numbers above are post-fix). The bug had been latent in
+> the workflow since the first install — without the failing demo
+> PR, it would have shipped to production unnoticed.
+
+## CI run loop — full bootstrap proof (Step 4 PR #1)
 
 See [`ci-runs-summary.txt`](ci-runs-summary.txt) for the verbose
 breakdown of all three runs. Headline result:
