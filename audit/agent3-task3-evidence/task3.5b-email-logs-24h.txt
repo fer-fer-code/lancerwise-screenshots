@@ -1,0 +1,50 @@
+=== email_logs schema (so I know which columns to group by) ===
+ column_name |        data_type         
+-------------+--------------------------
+ id          | uuid
+ user_id     | uuid
+ type        | text
+ to_email    | text
+ subject     | text
+ sent_at     | timestamp with time zone
+(6 строк)
+
+
+=== Q1: last 24h, count by type + day ===
+     type      |    day     | n 
+---------------+------------+---
+ daily_summary | 2026-05-15 | 7
+ digest        | 2026-05-15 | 5
+ reminder      | 2026-05-15 | 4
+ notification  | 2026-05-15 | 2
+(4 строки)
+
+
+=== Q2: last 24h, count by recipient (top 10) — bulk to same address is anomaly ===
+         to_email         | sends |             first             |             last              
+--------------------------+-------+-------------------------------+-------------------------------
+ qa-test@lancerwise.com   |     4 | 2026-05-15 16:00:12.862123+00 | 2026-05-15 18:00:50.880137+00
+ test-phase10@example.com |     4 | 2026-05-15 16:00:18.331514+00 | 2026-05-15 18:00:55.680088+00
+ krokusstudia2@gmail.com  |     3 | 2026-05-15 16:00:28.262479+00 | 2026-05-15 18:00:52.801425+00
+ ramiz_ddd@mail.ru        |     3 | 2026-05-15 16:00:33.342336+00 | 2026-05-15 18:00:57.102768+00
+ m@rchdn.com              |     2 | 2026-05-15 17:01:21.087221+00 | 2026-05-15 18:00:54.262253+00
+ tamnaphat@gmail.com      |     1 | 2026-05-15 18:00:46.794888+00 | 2026-05-15 18:00:46.794888+00
+ dear.890dia@gmail.com    |     1 | 2026-05-15 18:00:49.347355+00 | 2026-05-15 18:00:49.347355+00
+(7 строк)
+
+
+=== Q3: last 24h total send rate ===
+ total_24h | unique_recipients | unique_senders 
+-----------+-------------------+----------------
+        18 |                 7 |              7
+(1 строка)
+
+
+=== Q4: minute-level burst check (>3 sends within same minute) ===
+         minute         | sends_in_minute |          types          
+------------------------+-----------------+-------------------------
+ 2026-05-15 18:00:00+00 |               7 | {daily_summary}
+ 2026-05-15 17:01:00+00 |               5 | {digest}
+ 2026-05-15 16:00:00+00 |               6 | {notification,reminder}
+(3 строки)
+
