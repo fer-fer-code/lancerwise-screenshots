@@ -34,27 +34,35 @@ See [`curl-before-after.txt`](curl-before-after.txt) for the full curl evidence.
 | Preview deploy URL | 401 SSO + noindex (already protected) | **401 SSO + noindex** (unchanged) |
 | Raw IP (`Host: 192.168.1.9`) | 200 OK, no X-Robots-Tag | **200 OK + `x-robots-tag: noindex, nofollow`** |
 
-## Remaining manual step — GSC URL Removal (BLOCKER for AGENT 3)
+## GSC removal — submitted ✓
 
-The Chrome session connected via CDP on this machine is signed in to a **Family Link supervised Google account** ("supervised until age 13"). It cannot access Google Search Console — Google returned `https://families.google.com/service-restricted` instead of GSC. Snapshot:
+After Ramiz graduated the `lancerwise.team@gmail.com` account out of Family Link supervision, the account regained access to Google Search Console. Since the account has **no verified property** for `www.lancerwise.com` (and adding one would require DNS/HTML verification just to submit a one-off removal), I used the **Outdated Content Removal Tool** instead — Google's public tool that doesn't require property ownership.
 
-```yaml
-- heading "Сервис недоступен"
-- text: "Ты не можешь пользоваться этим сервисом, пока тебе не исполнится 13 лет…"
-```
+**Submitted request** (see screenshots below):
 
-**Ramiz, please action this manually (5 minutes):**
+- URL: `https://lancerwise.vercel.app/`
+- Reason selected: "Обновляю устаревший результат поиска Google в соответствии с изменениями на странице" (Updating an outdated Google search result to reflect page changes)
+- Verification word: `Service` — present in the cached search snippet "Terms of Service | LancerWise" but absent from the current vercel.app/ response body (which now just returns "Redirecting...")
+- Status: **В ожидании (Pending)**, request date 16 мая 2026 г.
 
-1. Open https://search.google.com/search-console while signed in to the adult-owner Google account that has GSC access for www.lancerwise.com
-2. Pick the `www.lancerwise.com` property
-3. Left sidebar → **Indexing** → **Removals**
-4. Click **New Request** → **Temporarily remove URL** tab
-5. Enter `https://lancerwise.vercel.app/` → choose "Remove all URLs with this prefix" → **Next** → **Submit**
-6. Optional: also submit `https://lancerwise.vercel.app/terms` if it still shows in Search Console's Pages report
+Tool URL: https://search.google.com/search-console/remove-outdated-content
 
-Effect: Google removes the URL from search results within ~24 hours and de-indexes permanently during the next recrawl (typically 1-2 weeks). With Layer-1 returning 301 now, Google will treat all `vercel.app` URLs as moved-permanently → www.lancerwise.com and merge their indexing signals into the canonical.
+### Why this tool (not Search Console Removals)
 
-Without this manual step, the 3-layer fix still works long-term — Google's natural recrawl will eventually catch the 301 and drop the vercel.app entry from the index — but it takes weeks instead of days.
+- **Search Console Removals** requires a verified property for the exact domain — `lancerwise.team@gmail.com` would need to verify ownership of `lancerwise.vercel.app` (which isn't possible — Vercel owns that DNS).
+- **Outdated Content Removal** doesn't require ownership; anyone can submit a removal request as long as the current page either 404s or no longer contains the cached content. Our `vercel.app/` returns 301 → www.lancerwise.com so the cached snippet ("Terms of Service | LancerWise") is no longer on the page → request qualifies.
+
+### Screenshots
+
+- `gsc-removal-submitted.png` — "Запрос отправлен" (Request submitted) confirmation dialog
+- `gsc-removal-list-pending.png` — full GSC page after submission
+- `gsc-removal-pending-row.png` — viewport zoom on the pending request row showing URL, status "В ожидании", date 16 мая 2026 г., and Cancel link
+
+### Expected outcome
+
+Google typically processes outdated-content requests within ~24 hours. Once approved, the cached snippet for `https://lancerwise.vercel.app/` will disappear from search results. With Layer-1 returning 301 now, Google's next recrawl (1–2 weeks) will additionally merge `vercel.app` URL signals into `www.lancerwise.com`.
+
+If the request is denied (e.g., Google's verifier finds "Service" elsewhere on the page), I'll retry with a more unique word from the cached snippet — `Refresh-URL` location header or similar.
 
 ## CI canary on main
 
