@@ -1,0 +1,15 @@
+=== D.1 POST-DEPLOY production probe ===
+Date: Sat May 16 18:59:58 +07 2026
+Merge commit: 21968965
+
+--- 1. POST direct-flow attack vector — should now reject ---
+{"error":"Missing token"}
+HTTP 400
+
+--- 2. POST token-flow с invalid signature — should reject как before ---
+{"error":"Invalid token"}
+HTTP 400
+
+--- 3. POST empty body — error message should be 'Missing token' (no mention of audience,id,email) ---
+{"error":"Missing token"}
+HTTP 400

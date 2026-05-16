@@ -1,0 +1,12 @@
+=== Vercel env var verification — agent3 task3 Phase C-2 ===
+Method: REST API + 'vercel env pull' verification
+Set 2026-05-16 by agent3 (CLI v52 AI_AGENT bypassed via REST)
+
+--- Production ---
+LANCERWISE_POSTAL_ADDRESS="Lancerwise, Marina Suites, Nha Trang, Khanh Hoa, Vietnam"
+
+--- Preview ---
+LANCERWISE_POSTAL_ADDRESS="Lancerwise, Marina Suites, Nha Trang, Khanh Hoa, Vietnam"
+
+--- Development ---
+(intentionally not set — local dev hard-fails to catch missing setup)
