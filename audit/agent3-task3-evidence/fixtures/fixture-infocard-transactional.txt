@@ -1,0 +1,53 @@
+TEST INFO-CARD
+
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+Hi Ramiz,
+
+This is the infoCardNotificationTemplate fixture.
+
+ 
+ 
+ Summary
+ 
+ Status
+
+ Pending
+
+ 
+
+ 
+ 
+ Amount
+
+ $1,250.00
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ 
+ View invoice → (https://www.lancerwise.com/invoices/test)
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ 
+ 
+ LancerWise (https://www.lancerwise.com) · Unsubscribe (https://www.lancerwise.com/api/unsubscribe?token=test)

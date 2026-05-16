@@ -1,0 +1,31 @@
+TEST NOTIFICATION
+
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+Hi Ramiz,
+
+This is the simpleNotificationTemplate fixture. Body paragraphs render as muted text.
+
+A CTA may follow if both ctaLabel and ctaUrl are set.
+
+ 
+ 
+ Open dashboard → (https://www.lancerwise.com/dashboard)
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ 
+ 
+ LancerWise (https://www.lancerwise.com) · Unsubscribe (https://www.lancerwise.com/api/unsubscribe?token=test)

@@ -1,0 +1,19 @@
+=== D.2 fixture render results ===
+  simple-transactional           html_address=false  plain_address=false
+  simple-digest                  html_address=true  plain_address=true
+  infocard-transactional         html_address=false  plain_address=false
+  infocard-digest                html_address=true  plain_address=true
+  rich-transactional             html_address=false  plain_address=false
+  rich-digest                    html_address=true  plain_address=true
+  ✅ Transactional has no address; digest has address (HTML + plain).
+
+=== D.3 sending real emails to lancerwise.team@gmail.com ===
+  transactional → {"ok":true,"data":{"id":"9922b1d5-d7d1-4063-beae-a590cedfb65e"}}
+  digest        → {"ok":true,"data":{"id":"f156d9f6-0508-4272-af5c-cd6cf13eefb5"}}
+
+=== D.3 hard-fail test: temporarily unset LANCERWISE_POSTAL_ADDRESS ===
+  ✅ Hard-fail thrown as expected:
+     LANCERWISE_POSTAL_ADDRESS env var required for non-transactional emails (CAN-SPAM § 7704(a)(5)(A))
+  ✅ Transactional with no env var still succeeded: {"ok":true,"data":{"id":"8e57a215-d096-4f30-845a-c54be104ea6f"}}
+
+=== All Phase C-2 D verification PASSED ===
