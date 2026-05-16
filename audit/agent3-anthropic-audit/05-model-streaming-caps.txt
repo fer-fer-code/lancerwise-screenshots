@@ -1,0 +1,24 @@
+=== Model usage distribution ===
+ 708 model: 'claude-haiku-4-5-20251001'
+   7 model: 'claude-haiku-4-5'
+   2 model: 'claude-sonnet-4-6'
+
+=== Endpoints using Opus (most expensive) ===
+
+=== Endpoints using Sonnet (mid-expensive) ===
+src/app/api/ai/scan-receipt/route.ts
+src/app/api/proposals/price-estimate/route.ts
+
+=== Streaming endpoints (.stream / event-source) ===
+src/app/api/sop-documents/generate/route.ts
+src/app/api/scope-estimates/analyze/route.ts
+src/app/api/brand-voice/generate/route.ts
+src/app/api/income-diversification/analyze/route.ts
+src/app/api/bio-generator/generate/route.ts
+src/app/api/time-reports/generate-summary/route.ts
+src/app/api/negotiations/generate/route.ts
+src/app/api/clients/check-ins/generate-email/route.ts
+src/app/api/clients/anniversaries/generate/route.ts
+src/app/api/clients/[id]/winback-draft/route.ts
+
+=== Endpoints with NO max_tokens (runaway risk) ===

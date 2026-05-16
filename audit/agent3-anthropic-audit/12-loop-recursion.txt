@@ -1,0 +1,21 @@
+=== Search for recursive/chained AI calls (one endpoint that calls multiple AI in sequence) ===
+
+=== Loop-driven AI calls (.map/.forEach/for-of containing messages.create) ===
+  src/app/api/v1/projects/[id]/notes/summary/route.ts
+  src/app/api/v1/smart-brief/route.ts
+  src/app/api/v1/ai/year-end-tax-summary/route.ts
+  src/app/api/v1/ai/work-from-home-routine/route.ts
+  src/app/api/v1/ai/value-proposition-builder/route.ts
+  src/app/api/v1/ai/freelance-growth-hacker/route.ts
+  src/app/api/v1/ai/client-lifetime-value-predictor/route.ts
+  src/app/api/v1/ai/freelance-content-calendar/route.ts
+  src/app/api/v1/ai/competitor-analysis-prompt/route.ts
+  src/app/api/v1/ai/reactivation-campaign-writer/route.ts
+  src/app/api/v1/ai/freelance-positioning-statement/route.ts
+  src/app/api/v1/ai/freelance-confidence-booster/route.ts
+  src/app/api/v1/ai/follow-up-urgency-ranker/route.ts
+  src/app/api/v1/ai/productivity-timer-coach/route.ts
+  src/app/api/v1/ai/freelance-pitch-deck/route.ts
+  src/app/api/v1/ai/upsell-idea/route.ts
+  src/app/api/v1/ai/client-persona/route.ts
+  src/app/api/v1/ai/service-expansion-planner/route.ts

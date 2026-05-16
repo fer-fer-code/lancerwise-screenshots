@@ -1,0 +1,164 @@
+========== src/app/api/cron/friday-summary/route.ts ==========
+--- schedule (from vercel.json grep) ---
+    {
+      "path": "/api/cron/friday-summary",
+--- model + max_tokens ---
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 300,
+--- loop scope (does it iterate users?) ---
+  const { data: profiles } = await supabase.from('profiles').select('id,full_name,email,notification_prefs,email_unsubscribed').not('email', 'is', null)
+  for (const profile of profiles) {
+
+========== src/app/api/cron/annual-year-review/route.ts ==========
+--- schedule (from vercel.json grep) ---
+    {
+      "path": "/api/cron/annual-year-review",
+--- model + max_tokens ---
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 150,
+--- loop scope (does it iterate users?) ---
+    .from('profiles')
+  for (const profile of profiles ?? []) {
+    for (const inv of invoices.filter(i => i.status === 'paid' && i.paid_at)) {
+    for (const inv of invoices.filter(i => i.status === 'paid' && i.client_id)) {
+
+========== src/app/api/cron/quarter-sprint/route.ts ==========
+--- schedule (from vercel.json grep) ---
+    {
+      "path": "/api/cron/quarter-sprint",
+--- model + max_tokens ---
+          model: 'claude-haiku-4-5-20251001',
+          max_tokens: 200,
+--- loop scope (does it iterate users?) ---
+    .from('profiles')
+  for (const profile of profiles) {
+
+========== src/app/api/cron/payment-reminders/route.ts ==========
+--- schedule (from vercel.json grep) ---
+    {
+      "path": "/api/cron/send-payment-reminders",
+--
+    {
+      "path": "/api/cron/payment-reminders",
+--- model + max_tokens ---
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 512,
+--- loop scope (does it iterate users?) ---
+  for (const setting of allSettings as ReminderSetting[]) {
+    const { data: userProfile } = await supabase.from('profiles').select('email').eq('id', userId).maybeSingle()
+    for (const inv of rawInvoices) {
+
+========== src/app/api/cron/weekly-review-auto/route.ts ==========
+--- schedule (from vercel.json grep) ---
+    {
+      "path": "/api/cron/weekly-review-auto",
+--- model + max_tokens ---
+        model: 'claude-haiku-4-5',
+        max_tokens: 1024,
+--- loop scope (does it iterate users?) ---
+  for (const row of (activeUsers ?? [])) userSet.add(row.user_id)
+  for (const row of (activeTimeUsers ?? [])) userSet.add(row.user_id)
+  for (const userId of userSet) {
+        .from('profiles')
+
+========== src/app/api/cron/weekly-insights/route.ts ==========
+--- schedule (from vercel.json grep) ---
+    {
+      "path": "/api/cron/weekly-insights",
+--
+    {
+      "path": "/api/cron/ai-weekly-insights",
+--- model + max_tokens ---
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 400,
+--- loop scope (does it iterate users?) ---
+  for (const lead of leads ?? []) {
+  for (const r of [...(timeUsers ?? []), ...(invoiceUsers ?? [])]) {
+  for (const userId of userIds) {
+
+========== src/app/api/cron/monthly-health-score/route.ts ==========
+--- schedule (from vercel.json grep) ---
+    {
+      "path": "/api/cron/monthly-health-score",
+--- model + max_tokens ---
+          model: 'claude-haiku-4-5-20251001',
+          max_tokens: 180,
+--- loop scope (does it iterate users?) ---
+  for (const inv of paidInvoices3m ?? []) {
+    .from('profiles')
+  for (const profile of profiles) {
+    for (const d of dimensions) {
+    for (const d of dimensions) dimMap[d.key] = d.score
+
+========== src/app/api/cron/generate-daily-tips/route.ts ==========
+--- schedule (from vercel.json grep) ---
+    {
+      "path": "/api/cron/generate-daily-tips",
+--- model + max_tokens ---
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 120,
+--- loop scope (does it iterate users?) ---
+  ;(activeUsers ?? []).forEach((r) => userSet.add(r.user_id))
+  ;(invoiceUsers ?? []).forEach((r) => userSet.add(r.user_id))
+  for (const userId of userIds) {
+
+========== src/app/api/cron/deadline-reminder/route.ts ==========
+--- schedule (from vercel.json grep) ---
+    {
+      "path": "/api/cron/deadline-reminder",
+--- model + max_tokens ---
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 300,
+--- loop scope (does it iterate users?) ---
+  const { data: users } = await supabase.from('profiles').select('id,email,full_name,notification_prefs,email_unsubscribed').not('email', 'is', null)
+  for (const user of users) {
+
+========== src/app/api/cron/monthly-review/route.ts ==========
+--- schedule (from vercel.json grep) ---
+    {
+      "path": "/api/cron/monthly-review",
+--- model + max_tokens ---
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 600,
+--- loop scope (does it iterate users?) ---
+  for (const userId of userIds) {
+        .from('profiles')
+
+========== src/app/api/cron/ai-weekly-insights/route.ts ==========
+--- schedule (from vercel.json grep) ---
+    {
+      "path": "/api/cron/ai-weekly-insights",
+--- model + max_tokens ---
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 600,
+--- loop scope (does it iterate users?) ---
+  for (const entry of topClientEntries ?? []) {
+    .from('profiles')
+  for (const profile of profiles) {
+
+========== src/app/api/cron/quarterly-review/route.ts ==========
+--- schedule (from vercel.json grep) ---
+    {
+      "path": "/api/cron/quarterly-review",
+--- model + max_tokens ---
+          model: 'claude-haiku-4-5-20251001',
+          max_tokens: 500,
+--- loop scope (does it iterate users?) ---
+  for (const inv of (paidInvoices ?? []) as any[]) {
+    .from('profiles')
+  for (const profile of profiles) {
+
+========== src/app/api/cron/client-checkins/route.ts ==========
+--- schedule (from vercel.json grep) ---
+    {
+      "path": "/api/cron/client-checkins",
+--- model + max_tokens ---
+            model: 'claude-haiku-4-5-20251001',
+            max_tokens: 500,
+--- loop scope (does it iterate users?) ---
+  for (const us of userSettings) {
+      for (const m of meetingNotes ?? []) maybeUpdate((m as any).client_id, (m as any).meeting_date, 'meeting')
+      for (const c of communications ?? []) maybeUpdate((c as any).client_id, (c as any).occurred_at, 'communication')
+      for (const p of projectUpdates ?? []) maybeUpdate((p as any).client_id, (p as any).updated_at, 'project update')
+      for (const inv of invoicesSent ?? []) maybeUpdate((inv as any).client_id, (inv as any).created_at, 'invoice')
+

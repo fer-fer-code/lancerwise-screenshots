@@ -1,0 +1,21 @@
+=== Call site total ===
+     711
+
+=== Breakdown by directory ===
+ 710 src/app/api
+   1 src/lib/dailyTipGenerator.ts
+
+=== Cron endpoints calling Anthropic (HIGH RISK) ===
+src/app/api/cron/friday-summary/route.ts
+src/app/api/cron/annual-year-review/route.ts
+src/app/api/cron/quarter-sprint/route.ts
+src/app/api/cron/payment-reminders/route.ts
+src/app/api/cron/weekly-review-auto/route.ts
+src/app/api/cron/weekly-insights/route.ts
+src/app/api/cron/monthly-health-score/route.ts
+src/app/api/cron/generate-daily-tips/route.ts
+src/app/api/cron/deadline-reminder/route.ts
+src/app/api/cron/monthly-review/route.ts
+src/app/api/cron/ai-weekly-insights/route.ts
+src/app/api/cron/quarterly-review/route.ts
+src/app/api/cron/client-checkins/route.ts

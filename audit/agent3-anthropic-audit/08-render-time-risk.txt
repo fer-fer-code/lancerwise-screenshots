@@ -1,0 +1,40 @@
+=== Client components fetching AI endpoints (render-time risk) ===
+Searching for fetch() calls в .tsx that hit endpoints с AI ===
+src/app/(app)/clients/check-ins/CheckInsClient.tsx
+src/app/(app)/clients/testimonials/TestimonialClient.tsx
+src/app/(app)/clients/anniversaries/page.tsx
+src/app/(app)/clients/surveys/SurveysClient.tsx
+src/app/(app)/clients/[id]/ReferralEmail.tsx
+src/app/(app)/clients/[id]/ClientBrief.tsx
+src/app/(app)/clients/[id]/ClientSummaryAI.tsx
+src/app/(app)/clients/[id]/ClientRiskAssessment.tsx
+src/app/(app)/clients/[id]/ClientWinbackEmail.tsx
+src/app/(app)/clients/[id]/EmailComposer.tsx
+src/app/(app)/clients/[id]/OnboardingEmailSequence.tsx
+src/app/(app)/clients/onboarding/OnboardingClient.tsx
+src/app/(app)/clients/outreach/OutreachClient.tsx
+src/app/(app)/settings/BioGenerator.tsx
+src/app/(app)/settings/RateNegotiationHelper.tsx
+src/app/(app)/settings/SmartGoalSuggestion.tsx
+src/app/(app)/settings/PriceIncreaseEmail.tsx
+src/app/(app)/advisor/page.tsx
+src/app/(app)/tools/income-diversification/IncomeDiversificationClient.tsx
+src/app/(app)/tools/brand-voice/BrandVoiceClient.tsx
+
+=== useEffect-triggered AI fetches (UNCONDITIONAL on mount = high risk) ===
+  src/app/(app)/settings/GmailConnect.tsx
+  src/app/(app)/tools/status-updates/StatusUpdateClient.tsx
+  src/app/(app)/tools/retainer-manager/RetainerManagerClient.tsx
+  src/app/(app)/tools/opportunity-eval/OpportunityEvalClient.tsx
+  src/app/(app)/tools/press-kit/PressKitClient.tsx
+  src/app/(app)/tools/project-velocity/VelocityClient.tsx
+  src/app/(app)/tools/sow/SOWClient.tsx
+  src/app/(app)/tools/late-fees/LateFeeClient.tsx
+  src/app/(app)/tools/win-rate/WinRateClient.tsx
+  src/app/(app)/tools/proposals/ProposalsClient.tsx
+  src/app/(app)/leads/page.tsx
+  src/app/(app)/crm/pipeline/CRMPipelineClient.tsx
+  src/app/(app)/dashboard/RiskWidget.tsx
+  src/app/(app)/time-tracker/WeeklySummaryEmail.tsx
+
+=== Search for empty-deps useEffect + AI fetch in same file ===

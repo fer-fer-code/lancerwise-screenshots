@@ -1,0 +1,124 @@
+=== src/app/(app)/dashboard/RiskWidget.tsx — full inspection ===
+'use client'
+
+import { useEffect, useState } from 'react'
+import { AlertTriangle, AlertCircle, Info, RefreshCw } from 'lucide-react'
+import { cn } from '@/lib/utils'
+
+interface RiskAlert {
+  level: 'critical' | 'warning' | 'info'
+  title: string
+  message: string
+  invoice_id: string | null
+}
+
+interface RiskData {
+  alerts: RiskAlert[]
+  summary: string
+}
+
+interface InvoiceInput {
+  id: string
+  invoice_number: string
+  total: number
+  currency: string
+  status: string
+  due_date: string
+  client_name: string
+}
+
+const levelConfig = {
+  critical: { icon: AlertCircle, bg: 'bg-red-900/20', border: 'border-red-800/30', iconColor: 'text-red-500', titleColor: 'text-red-800', msgColor: 'text-red-400' },
+  warning: { icon: AlertTriangle, bg: 'bg-amber-900/20', border: 'border-amber-800/30', iconColor: 'text-amber-500', titleColor: 'text-amber-300', msgColor: 'text-amber-400' },
+  info: { icon: Info, bg: 'bg-blue-900/20', border: 'border-blue-800/30', iconColor: 'text-blue-500', titleColor: 'text-blue-800', msgColor: 'text-blue-400' },
+}
+
+export default function RiskWidget({ invoices }: { invoices: InvoiceInput[] }) {
+  const [data, setData] = useState<RiskData | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
+
+  async function load() {
+    setLoading(true)
+    setError(false)
+    try {
+      const res = await fetch('/api/ai/risk', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ invoices }),
+      })
+      if (!res.ok) throw new Error('bad response')
+      setData(await res.json())
+    } catch {
+      setError(true)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  useEffect(() => { load() }, [])
+
+  return (
+    <div className="bg-slate-800/50 rounded-xl border border-slate-700">
+      <div className="flex items-center justify-between px-5 py-4 border-b border-slate-700/50">
+        <div>
+          <h3 className="font-semibold text-slate-100">AI Risk Assessment</h3>
+          {data?.summary && !loading && (
+            <p className="text-xs text-slate-500 mt-0.5">{data.summary}</p>
+          )}
+        </div>
+        <button onClick={load} disabled={loading}
+          className="text-slate-500 hover:text-slate-400 transition-colors disabled:opacity-40">
+          <RefreshCw className={cn('w-4 h-4', loading && 'animate-spin')} />
+        </button>
+      </div>
+
+      <div className="p-4 space-y-3">
+        {loading && (
+          <div className="flex items-center gap-3 py-4 justify-center text-sm text-slate-500">
+            <RefreshCw className="w-4 h-4 animate-spin" />
+            Analyzing cash flow…
+          </div>
+
+
+=== src/app/(app)/leads/page.tsx — useEffect part ===
+'use client'
+
+import { useState, useEffect, useRef, useCallback } from 'react'
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import {
+  Plus, Target, X, Trash2, ChevronRight, DollarSign,
+  Mail, Building2, Tag, User, FileText, ArrowRight,
+  Phone, Calendar, TrendingUp, Award, AlertCircle,
+  Sparkles, Loader2, Copy, Check, ShieldAlert, ShieldCheck,
+  BarChart2, Receipt, Upload, Search, Briefcase
+} from 'lucide-react'
+import { cn } from '@/lib/utils'
+--
+    setLoading(true)
+    try {
+      const res = await fetch('/api/ai/lead-score', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          leadId: lead.id,
+          stage: lead.stage,
+          source: lead.source,
+          potential_value: lead.potential_value,
+          currency: lead.currency,
+          notes: lead.notes,
+          next_follow_up: lead.next_follow_up,
+--
+  async function save() {
+    setSaving(true)
+    const res = await fetch(`/api/leads/${lead.id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        company: form.company,
+        source: form.source,
+        stage: form.stage,

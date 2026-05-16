@@ -1,0 +1,27 @@
+=== Sonnet 4.6 endpoints (more expensive) ===
+--- src/app/api/ai/scan-receipt/route.ts ---
+      model: 'claude-sonnet-4-6',
+      max_tokens: 500,
+      messages: [{
+        role: 'user',
+
+--- src/app/api/proposals/price-estimate/route.ts ---
+      model: 'claude-sonnet-4-6',
+      max_tokens: 1500,
+      messages: [{ role: 'user', content: prompt }],
+    })
+
+
+=== Any opus references anywhere? ===
+
+=== Endpoints with HIGH max_tokens (>2000) — large output cost ===
+src/app/api/sop-documents/generate/route.ts:        max_tokens: 4000,
+src/app/api/brand-voice/generate/route.ts:        max_tokens: 3500,
+src/app/api/v1/ai/generate-sow/route.ts:    max_tokens: 2000,
+src/app/api/proposal-docs/generate/route.ts:        max_tokens: 4096,
+src/app/api/scope-estimator/estimate/route.ts:        max_tokens: 2000,
+src/app/api/tools/brand-audit/route.ts:    max_tokens: 4000,
+src/app/api/tools/proposal-scorer/route.ts:    max_tokens: 2048,
+src/app/api/tools/contract-review/route.ts:      max_tokens: 2000,
+src/app/api/tools/contract-review/analyze/route.ts:      max_tokens: 4096,
+src/app/api/tools/scope-estimator/proposal/route.ts:        max_tokens: 2048,

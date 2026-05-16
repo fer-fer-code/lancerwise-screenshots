@@ -1,0 +1,61 @@
+=== Sample direct Anthropic call (non-/lib/ai) — confirm it's actually calling Anthropic ===
+import Anthropic from '@anthropic-ai/sdk'
+import { isNotifEnabled } from '@/lib/notification-prefs'
+import { sendEmail } from '@/lib/email'
+
+function verifyCron(req: NextRequest) {
+  const secret = process.env.CRON_SECRET
+  if (!secret) return true
+  return req.headers.get('authorization') === `Bearer ${secret}`
+}
+
+const ai = new Anthropic()
+
+export async function GET(req: NextRequest) {
+  if (!verifyCron(req)) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+
+  const supabase = createAdminClient()
+  const { data: profiles } = await supabase.from('profiles').select('id,full_name,email,notification_prefs,email_unsubscribed').not('email', 'is', null)
+  if (!profiles) return NextResponse.json({ ok: true })
+
+  const now = new Date()
+  const weekStart = new Date(now)
+
+=== AI usage logging (looking for /lib/ai/usage.ts entries) ===
+export type AIFeature =
+  | 'client-summary'
+  | 'risk-assessment'
+  | 'name-generator'
+  | 'comms-draft'
+  | 'milestones'
+  | 'notes-process'
+  | 'contract'
+  | 'legal'
+  | 'chat'
+  | 'other'
+
+export type AIProvider =
+  | 'gemini-pro'
+  | 'gemini-flash'
+  | 'gemini-flash-lite'
+  | 'groq'
+
+export interface AIUsageEvent {
+  userId: string
+  feature: AIFeature
+  provider: AIProvider
+  model: string
+  tokensUsed: number
+  durationMs?: number
+  success?: boolean
+  errorCode?: string
+  /** true when primary provider failed and fallback was used */
+  fellBackFrom?: AIProvider
+}
+
+export async function logAIUsage(event: AIUsageEvent): Promise<void> {
+  console.log('[ai-usage]', {
+    ...event,
+    ts: new Date().toISOString(),
+  })
+}

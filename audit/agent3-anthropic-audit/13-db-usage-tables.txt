@@ -1,0 +1,64 @@
+=== Any AI usage log table в DB? ===
+           table_name            
+---------------------------------
+ ai_insights
+ availability_blackouts
+ availability_blocks
+ availability_dates
+ availability_days
+ availability_pages
+ availability_settings
+ availability_slots
+ broadcast_emails
+ check_constraint_routine_usage
+ check_constraints
+ client_onboarding_emails
+ client_retainers
+ column_domain_usage
+ constraint_column_usage
+ constraint_table_usage
+ daily_dashboard_data
+ daily_productivity_scores
+ daily_tasks
+ daily_tips
+ domain_constraints
+ domain_udt_usage
+ domains
+ email_logs
+ email_responses
+ email_sequences
+ email_signatures
+ email_templates
+ email_unsubscribe_log
+ gmail_connections
+ kickoff_emails
+ mfa_amr_claims
+ outreach_campaigns
+ pg_available_extension_versions
+ pg_available_extensions
+ pg_constraint
+ pg_wait_events
+ questionnaire_responses
+ questionnaires
+ referential_constraints
+ retainer_agreements
+ retainer_contract_payments
+ retainer_contracts
+ retainer_hours
+ retainer_mgr_agreements
+ retainer_mgr_months
+ retainer_payments
+ retainer_proposals
+ retainer_usage
+ retainers
+ sso_domains
+ table_constraints
+(52 строки)
+
+
+=== If ai_usage_log exists, last 7 days breakdown ===
+ to_regclass 
+-------------
+ 
+(1 строка)
+

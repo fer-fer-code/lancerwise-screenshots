@@ -1,0 +1,40 @@
+=== Auth check pattern на unprotected endpoints (sample 10) ===
+--- src/app/api/sop-documents/generate/route.ts ---
+  const { data: { user } } = await supabase.auth.getUser()
+
+--- src/app/api/scope-estimates/analyze/route.ts ---
+  const { data: { user } } = await supabase.auth.getUser()
+
+--- src/app/api/brand-voice/generate/route.ts ---
+  const { data: { user } } = await supabase.auth.getUser()
+
+--- src/app/api/income-diversification/analyze/route.ts ---
+  const { data: { user } } = await supabase.auth.getUser()
+
+--- src/app/api/bio-generator/generate/route.ts ---
+  const { data: { user } } = await supabase.auth.getUser()
+
+--- src/app/api/time-reports/generate-summary/route.ts ---
+  const { data: { user } } = await supabase.auth.getUser()
+
+--- src/app/api/negotiations/generate/route.ts ---
+  const { data: { user } } = await supabase.auth.getUser()
+
+--- src/app/api/insights/generate/route.ts ---
+import { createAdminClient } from '@/lib/supabase/admin'
+    const { data: { user } } = await supabase.auth.getUser()
+    const adminSupabase = createAdminClient()
+
+--- src/app/api/clients/check-ins/route.ts ---
+import { createAdminClient } from '@/lib/supabase/admin'
+  const { data: { user } } = await supabase.auth.getUser()
+  const { data: { user } } = await supabase.auth.getUser()
+
+--- src/app/api/clients/check-ins/generate-email/route.ts ---
+  const { data: { user } } = await supabase.auth.getUser()
+
+
+=== Cache pattern check (Redis / in-memory / DB memo) ===
+  src/app/api/sop-documents/generate/route.ts — has cache hint
+  src/app/api/scope-estimates/analyze/route.ts — has cache hint
+  src/app/api/brand-voice/generate/route.ts — has cache hint

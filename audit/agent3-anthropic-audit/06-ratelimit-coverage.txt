@@ -1,0 +1,33 @@
+=== Call sites under /api/ai/* (rate-limited by middleware aiRatelimit) ===
+       1
+
+=== Call sites under /api/cron/* (CRON_SECRET protected, runs by Vercel scheduler) ===
+      13
+
+=== Call sites under /api/v1/* (rate-limited by middleware apiRatelimit) ===
+     371
+
+=== Call sites under OTHER /api/* (NOT rate-limited by middleware) ===
+     325
+
+=== Examples of unrate-limited endpoints ===
+src/app/api/sop-documents/generate/route.ts
+src/app/api/scope-estimates/analyze/route.ts
+src/app/api/brand-voice/generate/route.ts
+src/app/api/income-diversification/analyze/route.ts
+src/app/api/bio-generator/generate/route.ts
+src/app/api/time-reports/generate-summary/route.ts
+src/app/api/negotiations/generate/route.ts
+src/app/api/insights/generate/route.ts
+src/app/api/clients/check-ins/route.ts
+src/app/api/clients/check-ins/generate-email/route.ts
+src/app/api/clients/anniversaries/generate/route.ts
+src/app/api/clients/[id]/winback-draft/route.ts
+src/app/api/clients/[id]/draft-reply/route.ts
+src/app/api/clients/health-score/[id]/route.ts
+src/app/api/clients/timeline/ai-summary/route.ts
+src/app/api/clients/winback-send/route.ts
+src/app/api/status-updates/generate/route.ts
+src/app/api/quarterly-reviews/analyze/route.ts
+src/app/api/work-boundaries/boundary-script/route.ts
+src/app/api/income-targets/advice/route.ts
