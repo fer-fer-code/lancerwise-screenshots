@@ -1,0 +1,44 @@
+=== A11. /lib/ai already migrated endpoints ===
+      54 /tmp/lib-ai-already.txt
+
+Already-migrated files in agent2 batches (no need to touch):
+src/app/api/ai/advisor/chat/route.ts
+src/app/api/ai/advisor/route.ts
+src/app/api/ai/approval-request/route.ts
+src/app/api/ai/business-insight/route.ts
+src/app/api/ai/categorize-expense/route.ts
+src/app/api/ai/chat/route.ts
+src/app/api/ai/checkpoint-email/route.ts
+src/app/api/ai/client-brief/route.ts
+src/app/api/ai/client-risk/route.ts
+src/app/api/ai/client-summary/route.ts
+...
+
+=== A12. Files that import BOTH @anthropic-ai/sdk AND /lib/ai (partial-migrated) ===
+
+=== A13. AI cron jobs — high priority ===
+  src/app/api/cron/ai-weekly-insights/route.ts
+  src/app/api/cron/annual-year-review/route.ts
+  src/app/api/cron/client-checkins/route.ts
+  src/app/api/cron/deadline-reminder/route.ts
+  src/app/api/cron/friday-summary/route.ts
+  src/app/api/cron/monthly-health-score/route.ts
+  src/app/api/cron/monthly-review/route.ts
+  src/app/api/cron/quarter-sprint/route.ts
+  src/app/api/cron/quarterly-review/route.ts
+  src/app/api/cron/weekly-insights/route.ts
+  src/app/api/cron/weekly-review-auto/route.ts
+
+=== A14. /api/v1/ai/* model + max_tokens sample (largest cluster, 364 files) ===
+--- src/app/api/v1/ai/ab-test-proposals/route.ts ---
+  const message = await client.messages.create({
+    model: 'claude-haiku-4-5-20251001',
+    max_tokens: 800,
+--- src/app/api/v1/ai/analyze-client/route.ts ---
+  const message = await ai.messages.create({
+    model: 'claude-haiku-4-5-20251001',
+    max_tokens: 500,
+--- src/app/api/v1/ai/annual-goals-planner/route.ts ---
+  const message = await anthropic.messages.create({
+    model: 'claude-haiku-4-5-20251001',
+    max_tokens: 500,

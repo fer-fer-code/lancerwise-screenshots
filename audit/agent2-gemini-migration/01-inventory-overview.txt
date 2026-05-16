@@ -1,0 +1,43 @@
+=== A1. Files importing @anthropic-ai/sdk ===
+     687 /tmp/anthropic-files.txt
+
+=== A2. Breakdown by directory level (src/app/api/<dir>/) ===
+ 364 v1/ai
+   3 v1/projects
+   3 tools/upsell
+   3 tools/social-content
+   3 tools/skill-gap
+   3 tools/scope-estimator
+   3 tools/scope-creep
+   3 tools/retainer-proposal
+   3 tools/rate-increase
+   3 tools/negotiation-coach
+   3 tools/icp
+   3 tools/contract-review
+   3 tools/cold-pitch
+   3 tools/client-brief
+   3 projects/[id]
+   2 tools/win-back
+   2 tools/status-update
+   2 tools/reactivation
+   2 tools/proposal-followup
+   2 tools/project-risk
+   2 tools/price-increase
+   2 tools/performance-review
+   2 tools/newsletter
+   2 tools/meeting-agenda
+   2 tools/linkedin-post
+
+=== A3. Call patterns в use ===
+--- new Anthropic() instances ---
+     687
+--- .messages.create() calls (basic completion) ---
+     441
+--- .messages.stream() calls (streaming) ---
+     251
+--- tools / tool_use parameter (function calling) ---
+       0
+--- system parameter usage ---
+       0
+--- Vision (image input) ---
+       1

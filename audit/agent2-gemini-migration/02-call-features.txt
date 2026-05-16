@@ -1,0 +1,70 @@
+=== A4. Model distribution among Anthropic call sites ===
+ 683 model: 'claude-haiku-4-5-20251001'
+   7 model: 'claude-haiku-4-5'
+   2 model: 'claude-sonnet-4-6'
+
+=== A5. max_tokens distribution ===
+ 152 500
+ 121 600
+ 101 400
+  39 1500
+  37 800
+  36 2000
+  33 700
+  29 1200
+  21 1000
+  19 1024
+  18 300
+  14 900
+  14 3000
+   9 2048
+   7 450
+
+=== A6. max_tokens > 8192 (Gemini Flash-Lite output cap) ===
+
+=== A7. Vision file ===
+src/app/api/ai/scan-receipt/route.ts
+
+=== A8. Streaming endpoints — sample 5 (need different migration path) ===
+--- src/app/api/scope-estimates/analyze/route.ts ---
+      const stream = await anthropic.messages.stream({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 1000,
+--- src/app/api/sop-documents/generate/route.ts ---
+      const messageStream = anthropic.messages.stream({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 4000,
+--- src/app/api/brand-voice/generate/route.ts ---
+      const stream = await anthropic.messages.stream({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 3500,
+--- src/app/api/income-diversification/analyze/route.ts ---
+      const response = await anthropic.messages.stream({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 1024,
+--- src/app/api/time-reports/generate-summary/route.ts ---
+      const stream = await anthropic.messages.stream({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 300,
+=== A8b. system parameter — better pattern ===
+/tmp/anthropic-files.txt:0
+--- count files containing 'system:' ---
+     229
+--- sample ---
+        system: systemPrompt,
+        system: 'You are a freelance business consultant specializing in client retention and revenue optimization. Be direct, data-driven, and actionable. Use markdown formatting.',
+        system: 'You are a freelance business strategist. Provide specific, actionable diversification advice. Use markdown formatting with headers and bullet points. Be direct and data-driven.',
+        system: 'You are a freelance business coach giving a quarterly business review. Be direct, data-driven, and actionable. Use markdown formatting for readability.',
+        system: systemPrompt,
+      system: 'You are a freelance business strategist. Give practical, specific advice for income diversification. Always respond with valid JSON only, no markdown.',
+        system: 'You are a freelance business strategist. Analyze profitability data and give specific, actionable advice. Be concise and practical. Use numbered lists for recommendations.',
+        system: systemPrompt,
+        system: 'You are a freelance profitability strategist. Be direct, data-driven, and specific. Reference actual numbers. Use markdown headers for sections.',
+        system: 'You are a revenue strategist for freelancers. Give specific, actionable advice based on the data. Be concise. 3-4 bullets. No fluff.',
+
+=== A9. Caching usage (cache_control, prompt caching) ===
+
+=== A10. Endpoints в /api/ai/* (already migrated to /lib/ai) ===
+      53
+vs /api/ai/* still on direct Anthropic:
+src/app/api/ai/scan-receipt/route.ts

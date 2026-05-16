@@ -1,0 +1,46 @@
+=== A15. Streaming endpoint pattern — typical structure ===
+    return new Response(
+      `data: ${JSON.stringify({ error: 'Unauthorized' })}\n\ndata: [DONE]\n\n`,
+      { status: 401, headers: { 'Content-Type': 'text/event-stream' } }
+    )
+  }
+
+  const { project_description, project_type, tech_stack, your_hourly_rate } = await req.json()
+
+  if (!project_description?.trim()) {
+    return new Response(
+      `data: ${JSON.stringify({ error: 'project_description is required' })}\n\ndata: [DONE]\n\n`,
+      { status: 400, headers: { 'Content-Type': 'text/event-stream' } }
+    )
+  }
+
+  const hourlyRate = your_hourly_rate ?? 50
+
+  const systemPrompt = `You are a senior freelance project manager with 10+ years estimating software, design, and automation projects. You are known for accurate, realistic estimates that account for real-world complexity. You never underestimate.`
+
+  const userPrompt = `Estimate the scope and cost of this freelance project.
+
+Project description:
+${project_description}
+
+Project type: ${project_type || 'Not specified'}
+Tech stack: ${tech_stack || 'Not specified'}
+Freelancer's hourly rate: $${hourlyRate}/hr
+
+Respond with valid JSON only (no markdown, no backticks):
+{
+  "complexity": "Simple | Medium | Complex | Enterprise",
+  "estimated_hours": {
+--
+      let fullText = ''
+
+      const stream = await anthropic.messages.stream({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 1000,
+        system: systemPrompt,
+        messages: [{ role: 'user', content: userPrompt }],
+      })
+
+      for await (const chunk of stream) {
+        if (chunk.type === 'content_block_delta' && chunk.delta.type === 'text_delta') {
+          fullText += chunk.delta.text
