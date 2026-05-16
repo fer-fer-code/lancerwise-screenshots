@@ -1,0 +1,58 @@
+=== StatusUpdateClient — what loadHistory actually calls ===
+  async function loadHistory() {
+    try {
+      const res = await fetch('/api/status-updates')
+      if (res.ok) {
+        const data = await res.json()
+        setHistory((data as any).updates ?? [])
+
+=== ProposalsClient — what loadProposals actually calls ===
+  async function loadProposals() {
+    setLoading(true)
+    try {
+      const res = await fetch('/api/proposals/v2')
+      const json = await res.json()
+      setProposals(json.proposals || [])
+
+=== LateFeeClient — what fires в useEffect ===
+
+import { useEffect, useState, useRef } from 'react'
+
+interface OverdueInvoice {
+  id: string
+  invoice_number: string
+  client_name: string
+  total: number
+  currency: string
+  status: string
+  due_date: string
+  days_overdue: number
+--
+
+  useEffect(() => {
+    const stored = localStorage.getItem(STORAGE_KEY)
+    if (stored) {
+      const parsed = parseFloat(stored)
+      if (!isNaN(parsed) && parsed > 0) setFeePercent(parsed)
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, String(feePercent))
+  }, [feePercent])
+
+=== CRMPipelineClient — what loadLeads actually calls ===
+  async function loadLeads() {
+    setLoading(true)
+    try {
+      const res = await fetch('/api/crm/leads')
+      if (res.ok) {
+        const data = await res.json()
+
+=== WinRateClient — what load() actually calls ===
+  async function load() {
+    setLoading(true)
+    setError(null)
+    try {
+      const res = await fetch('/api/win-rate', { cache: 'no-store' })
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
