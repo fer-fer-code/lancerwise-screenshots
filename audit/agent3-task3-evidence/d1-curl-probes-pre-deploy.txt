@@ -1,0 +1,17 @@
+=== D.1 PRE-DEPLOY production probe baseline ===
+Date: Sat May 16 10:53:15 +07 2026
+PR #3: https://github.com/fer-fer-code/lancerwise/pull/3
+Expected POST direct-flow: still returns 200 OR 'Missing token or {audience,id,email}' depending on body (pre-fix behavior)
+Expected POST token-flow: 400 Invalid token (random test token не signed by prod secret)
+
+--- 1. POST direct-flow с fake {audience,id,email} (PRE-FIX baseline) ===
+{"ok":true}
+HTTP 200
+
+--- 2. POST с only random token (HMAC verification will fail) ===
+{"error":"Invalid token"}
+HTTP 400
+
+--- 3. POST empty body ===
+{"error":"Missing token or {audience,id,email}"}
+HTTP 400

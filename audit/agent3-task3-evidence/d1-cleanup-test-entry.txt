@@ -1,0 +1,15 @@
+=== Confirm no profile actually flipped ===
+ id | email | email_unsubscribed 
+----+-------+--------------------
+(0 строк)
+
+
+=== Cleanup test audit log entry ===
+DELETE 1
+
+=== Verify cleanup ===
+ count 
+-------
+     0
+(1 строка)
+
