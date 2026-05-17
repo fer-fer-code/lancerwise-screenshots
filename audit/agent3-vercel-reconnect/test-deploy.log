@@ -1,0 +1,29 @@
+================================================================
+[AGENT 3] git→Vercel auto-deploy verification — polling trace
+2026-05-17 12:20:19 UTC — test commit pushed
+================================================================
+
+$ git push origin main  (commit 702b9e43e1, empty)
+  → 67baed47..702b9e43  main -> main
+
+Vercel deployments polled at 30s intervals:
+
+  [19:20:55]  src=git  state=QUEUED     sha=702b9e43e1   ← auto-triggered ~36s after push
+  [19:21:26]  src=git  state=QUEUED     sha=702b9e43e1
+  [19:21:58]  src=git  state=QUEUED     sha=702b9e43e1
+  [19:22:30]  src=git  state=QUEUED     sha=702b9e43e1
+  [19:23:01]  src=git  state=QUEUED     sha=702b9e43e1
+  [19:23:33]  src=git  state=QUEUED     sha=702b9e43e1
+  [19:24:05]  src=git  state=BUILDING   sha=702b9e43e1   ← started build (CLI deploy ahead held in queue)
+  [19:24:37]  src=git  state=BUILDING   sha=702b9e43e1
+  [19:25:09]  src=git  state=BUILDING   sha=702b9e43e1
+  [19:25:40]  src=git  state=BUILDING   sha=702b9e43e1
+  [19:26:12]  src=git  state=BUILDING   sha=702b9e43e1
+  [19:26:44]  src=git  state=BUILDING   sha=702b9e43e1
+  [19:27:16]  src=git  state=READY      sha=702b9e43e1   ← deploy live, alias assigned
+
+End-to-end latency: push → READY = 6m 57s
+  (queue wait 3m 10s + build 3m 11s + propagation 36s)
+
+Post-deploy production check:
+  $ curl -sI https://www.lancerwise.com/  → HTTP/2 200

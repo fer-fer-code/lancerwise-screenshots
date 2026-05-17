@@ -1,15 +1,35 @@
 # [AGENT 3] Vercel project ↔ GitHub repo link investigation
 
-Investigation of why `git push origin main` does not auto-deploy on Vercel, and a self-contained action sheet for Ramiz to complete the fix.
+Investigation of why `git push origin main` does not auto-deploy on Vercel, fix application, and end-to-end verification.
 
-## Status
+## Status — **COMPLETE**
 
 | Item | Status |
 | ---- | ------ |
 | Diagnose current state | ✓ |
-| Identify root cause | ✓ — `(a)` from the 5-candidate list, with strong evidence |
-| Apply fix | ✗ — requires interactive OAuth handshake on Ramiz's GitHub account; documented as 5-min click sequence in `ramiz-action-needed.md` |
-| Verify reconnect (test commit + auto-deploy watch) | Pending Ramiz "vercel connected" signal |
+| Identify root cause | ✓ — `(a)` from the 5-candidate list, stronger form (never installed at all) |
+| Apply fix | ✓ — agent drove Vercel UI through provider picker + Install button + repo select + Connect; Ramiz signed in to GitHub (the only step requiring his consent click) |
+| Verify reconnect (test commit + auto-deploy watch) | ✓ — empty test commit `702b9e43e1` auto-deployed via `source=git`, READY in 6m 57s, alias assigned to www.lancerwise.com |
+| Bonus: parallel agent push (`a770262bd5`) also auto-built | ✓ — confirms auto-deploy works for all pushes, not just verification |
+
+## Live state (after fix)
+
+```
+link: {
+  "type":             "github",
+  "repo":             "lancerwise",
+  "repoId":           1219928479,
+  "org":              "fer-fer-code",
+  "productionBranch": "main",
+  "gitCredentialId":  "cred_eeffb3a745efc0706ac07b351c8513df71743c3a"
+}
+
+Vercel GH installationId: 133118001 (fer-fer-code namespace, lancerwise repo scoped)
+First-ever source=git deploy: 702b9e43e1 → lancerwise-bfcnf26d2-fer-fer-codes-projects.vercel.app
+Production alias: www.lancerwise.com (200 OK after deploy)
+```
+
+See [`after.txt`](after.txt) for full post-fix API state diff and [`test-deploy.log`](test-deploy.log) for the 30s-interval polling trace.
 
 ## TL;DR
 

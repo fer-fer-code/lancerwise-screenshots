@@ -1,0 +1,112 @@
+================================================================
+[AGENT 3] Vercel git-link investigation — AFTER state
+2026-05-17 12:25 UTC
+================================================================
+
+────────────────────────────────────────────────────────────────
+1. Vercel project metadata — link field now populated
+────────────────────────────────────────────────────────────────
+$ curl https://api.vercel.com/v9/projects/prj_OfYhgE1ONf98IhDzAMzspTr7hC1A?teamId=...
+
+  link: {
+    "type":             "github",
+    "repo":             "lancerwise",
+    "repoId":           1219928479,
+    "org":              "fer-fer-code",
+    "repoOwnerId":      156411381,
+    "gitCredentialId":  "cred_eeffb3a745efc0706ac07b351c8513df71743c3a",
+    "productionBranch": "main",
+    "createdAt":        1779020345044,
+    "updatedAt":        1779020345044,
+    "deployHooks":      []
+  }
+
+Was `None` in before.txt. Connection live.
+
+────────────────────────────────────────────────────────────────
+2. Vercel-side GitHub namespaces — now visible
+────────────────────────────────────────────────────────────────
+$ curl https://api.vercel.com/v1/integrations/git-namespaces?provider=github
+
+  visible: 1
+    slug=fer-fer-code  installationId=133118001
+
+Was 0 in before.txt.
+
+────────────────────────────────────────────────────────────────
+3. GitHub repo webhooks — still 0 (EXPECTED, NOT A BUG)
+────────────────────────────────────────────────────────────────
+$ gh api repos/fer-fer-code/lancerwise/hooks
+
+  webhook count: 0
+
+GitHub Apps (modern) use a centralised webhook on the App side
+instead of per-repo webhooks. Legacy GitHub OAuth integrations
+needed a per-repo webhook; the Vercel GitHub App does NOT. Zero
+per-repo webhooks is the correct state for an App-based install.
+Auto-deploys still fire via the App's check_suite/push events.
+
+────────────────────────────────────────────────────────────────
+4. End-to-end verification — empty test commit auto-deployed
+────────────────────────────────────────────────────────────────
+
+Test commit:
+  SHA:    702b9e43e1
+  branch: main
+  pushed: 2026-05-17 12:20:19 UTC
+  message: ci(vercel): empty commit to verify git→Vercel auto-deploy
+
+Vercel deployment list immediately after push:
+  [19:20:55 UTC]  src=git  state=QUEUED   sha=702b9e43e1
+  [19:24:05 UTC]  src=git  state=BUILDING sha=702b9e43e1
+  [19:27:16 UTC]  src=git  state=READY    sha=702b9e43e1
+
+Final deployment:
+  url:     lancerwise-bfcnf26d2-fer-fer-codes-projects.vercel.app
+  source:  git                           ← was 'cli' for all 825 prior deploys
+  state:   READY
+  creator: fer-fer-code
+  commit:  702b9e43e1                    ← matches our pushed SHA
+  aliasAssigned: true                    ← www.lancerwise.com routed to it
+
+Production health:
+  $ curl -sI https://www.lancerwise.com/
+  HTTP/2 200
+  x-matched-path: /
+  x-vercel-id: hkg1::iad1::49fsh-1779020892345-f9c3a537a382
+
+────────────────────────────────────────────────────────────────
+5. Bonus — parallel agent's push also auto-built
+────────────────────────────────────────────────────────────────
+
+While verifying, another agent pushed commit a770262bd5 to main.
+Vercel auto-picked it up:
+  src=git  state=BUILDING  sha=a770262bd5
+
+This confirms auto-deploy works for ALL pushes к main, not just
+this verification commit.
+
+────────────────────────────────────────────────────────────────
+SUMMARY
+────────────────────────────────────────────────────────────────
+
+Status: ✓ git → Vercel auto-deploy fully live.
+
+What changed:
+  - Vercel GitHub App installed on fer-fer-code GitHub user
+    (installationId 133118001), scoped to lancerwise repo only.
+  - Vercel project lancerwise linked to fer-fer-code/lancerwise
+    on production branch main.
+  - First-ever source=git deploy succeeded.
+  - Production alias updated to the new deploy.
+
+What is now automatic:
+  - Every push to main → production deploy (source=git)
+  - Every push to non-main branches → preview deploy
+  - PR Pull Request Comments enabled (toggle observed on)
+  - PR check_suite events for qa-gates CI (independent of Vercel)
+
+Manual `vercel --prod --yes` is no longer required for any
+deploy. [AGENT 2]'s remaining B2 clusters, [AGENT 1]'s bug
+fixes, and future Step-4 branch-protection work all benefit
+without further configuration.
