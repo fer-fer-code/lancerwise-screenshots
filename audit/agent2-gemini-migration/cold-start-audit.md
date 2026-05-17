@@ -100,3 +100,55 @@ Benefits:
 | `src/lib/ai/gemini.ts` | #15 | LIVE `dpl_DLQKqfwFcJkXMB2GbnbmCpphS9vF` |
 | `src/lib/ai/groq.ts` | #16 | LIVE `dpl_4gReYChvMh7Pq9um5jVbdDVvjmf5` |
 | 596 direct-Anthropic endpoints | (deferred) | Each fixed когда B2-B5 migrates it к /lib/ai |
+
+---
+
+## Update — Vercel build cache caveat (added 2026-05-17 05:27 UTC)
+
+After gemini.ts + groq.ts lazy fixes were deployed normally (PR #15, #16),
+production risk-assessment endpoint CONTINUED to error за 30 minutes:
+33 failures by the time observation poll started, climbing к 35.
+
+Investigated:
+- Code on origin/main has lazy fix ✓
+- Vercel latest deploy SHA matches latest commit ✓
+- GEMINI_API_KEY type=encrypted across все envs (production matches local) ✓
+- Cron routes (just-modified) work correctly with lazy fix
+- Only risk-assessment (unmodified-since-PR-#10) was failing
+
+Root cause: **Vercel build cache reused stale function bundle для unmodified
+routes.** When gemini.ts changed, Vercel rebuilt routes that directly modified
+files (cron routes touched в B1, modified routes touched в B2-B2.3), но
+routes that hadn't been modified — like /api/ai/risk — used а cached function
+bundle that still contained the OLD gemini.ts с module-load env caching.
+
+### Fix: force rebuild
+
+```
+$ vercel deploy --prod --yes --force
+→ dpl_7XcvgEmpAXp1Jx5Z8KScCVo5KopJ READY
+```
+
+`--force` invalidates Vercel's build cache and rebuilds ALL function bundles.
+
+Post-force-rebuild verification:
+```
+SELECT count(*) FROM ai_usage_log
+WHERE occurred_at > '2026-05-17 05:24:00+00'
+  AND error_code = 'GEMINI_API_KEY not configured';
+→ 0
+```
+
+### Lesson
+
+For changes к shared lib modules (`/lib/ai/*`, `/lib/email/*`, etc.) deployed
+via `vercel deploy --prod`, always pass `--force` к ensure все downstream
+routes pick up the new code. Otherwise cached function bundles may serve
+stale module imports.
+
+Or even better: rely on `git push` к main + auto-deploy (when reconnected),
+which Vercel handles с fresh build each time. The manual deploy path's
+cache reuse is а deliberate optimization that surfaces edge cases like this.
+
+Added к backlog: "always --force on deploys touching /lib/ai/* until git→vercel
+auto-deploy is restored".
