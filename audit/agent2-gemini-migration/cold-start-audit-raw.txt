@@ -1,0 +1,32 @@
+=== groq.ts ===
+import Groq from 'groq-sdk'
+
+const apiKey = process.env.GROQ_API_KEY
+
+if (!apiKey) {
+  console.warn('[ai/groq] GROQ_API_KEY not set — Groq calls will throw at runtime')
+}
+
+const groq = apiKey ? new Groq({ apiKey }) : null
+
+export type GroqModel =
+  | 'llama-3.3-70b-versatile'   // general purpose (default)
+  | 'llama-3.1-8b-instant'      // fastest, smaller
+  | 'mixtral-8x7b-32768'        // long context (32k tokens)
+  | 'gemma2-9b-it'              // alternative
+
+export interface GroqGenerateOptions {
+  model?: GroqModel
+  systemPrompt?: string
+  maxOutputTokens?: number
+  temperature?: number
+  timeoutMs?: number
+}
+
+export interface GroqGenerateResult {
+
+=== Search для module-load env read pattern в /lib/ai ===
+src/lib/ai/groq.ts:3:const apiKey = process.env.GROQ_API_KEY
+src/lib/ai/groq.ts:9:const groq = apiKey ? new Groq({ apiKey }) : null
+
+=== Same pattern в src/lib OR /api/v1/ai (sampled) ===
