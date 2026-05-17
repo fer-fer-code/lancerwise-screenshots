@@ -1,0 +1,7 @@
+    tablename    |             policyname             | cmd |          qual          |       with_check       
+-----------------+------------------------------------+-----+------------------------+------------------------
+ portal_messages | Freelancer manages their messages  | ALL | (auth.uid() = user_id) | (auth.uid() = user_id)
+ portal_messages | Users manage their portal messages | ALL | (auth.uid() = user_id) | (auth.uid() = user_id)
+ project_surveys | Users manage their project surveys | ALL | (auth.uid() = user_id) | (auth.uid() = user_id)
+(3 строки)
+
