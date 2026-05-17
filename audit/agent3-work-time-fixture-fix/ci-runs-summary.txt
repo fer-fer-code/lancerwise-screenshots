@@ -1,0 +1,71 @@
+[AGENT 3] /work/time visual-regression fixture fix — CI run log
+=================================================================
+PR:    https://github.com/fer-fer-code/lancerwise/pull/24
+Branch: fix/visual-regression-work-time-frozen-clock
+
+Run #0 — baseline-init mode (label: qa-visual-baseline-init)
+=============================================================
+commit:    8a578e48 fix(qa-gates): freeze clock for /work/time visual-regression baselines
+trigger:   pull_request (opened) + label set at create
+run id:    25991763069
+duration:  9m12s (cancelled the 2s race-conflict run 25991763065)
+result:    SUCCESS (all 3 gates)
+  gate / eslint i18n        ✓ 1m11s
+  gate / visual-regression  ✓ 7m30s  ← baseline-init job: --update-snapshots
+  gate / locale-purity (ru) ✓ 8m54s
+
+auto-commit-back:
+  commit:  27841e43 ci(qa-gates): initialize linux visual baselines
+  files:   +2 (visual-work-time-en + visual-work-time-ru linux baselines)
+  diff:    only 2 files (other 22 baselines unchanged — byte-stable update)
+
+Run #1 — normal compare mode (no label, stability proof 1/3)
+=============================================================
+commit:    e1552aa7 ci(stability): trigger qa-gates normal-compare run #1
+trigger:   pull_request (synchronize), label REMOVED before push
+run id:    25992023151
+duration:  8m51s
+result:    SUCCESS (all 3 gates)
+  gate / eslint i18n        ✓ 1m10s
+  gate / visual-regression  ✓ 7m42s  ← compared against new frozen-clock baselines
+  gate / locale-purity (ru) ✓ 8m48s
+
+Run #2 — normal compare mode (stability proof 2/3)
+====================================================
+commit:    eacc538c ci(stability): trigger qa-gates normal-compare run #2
+trigger:   pull_request (synchronize)
+run id:    25992273412
+duration:  8m20s
+result:    SUCCESS (all 3 gates)
+  gate / eslint i18n        ✓ 1m14s
+  gate / visual-regression  ✓ 7m34s  ← compared against new frozen-clock baselines
+  gate / locale-purity (ru) ✓ 8m17s
+
+Run #3 — normal compare mode (stability proof 3/3, FINAL)
+============================================================
+commit:    9ce2ffde ci(stability): trigger qa-gates normal-compare run #3 (final stability proof)
+trigger:   pull_request (synchronize)
+run id:    25992497508
+result:    SUCCESS (all 3 gates)
+  gate / eslint i18n        ✓ 1m10s
+  gate / visual-regression  ✓ 8m9s   ← compared against new frozen-clock baselines
+  gate / locale-purity (ru) ✓ 8m22s
+
+Stability summary
+==================
+3 consecutive normal-compare runs against frozen-clock baselines, all green.
+visual-regression timings: 7m42s / 7m34s / 8m9s    ← variation 35s (<8%) → stable
+locale-purity timings:     8m48s / 8m17s / 8m22s   ← variation 31s (<6%) → stable
+eslint i18n timings:       1m10s / 1m14s / 1m10s   ← variation 4s (<6%) → stable
+
+Comparison to pre-fix state (per AGENT 1 escalation):
+  visual-regression: 100% failure rate (always 13131px / 16451px diff on /work/time)
+  locale-purity:     was failing 2517 vs 2516 on PR #17
+  eslint i18n:       always passing
+
+Post-fix state:
+  visual-regression: 3/3 green = 100% pass rate (n=3)
+  locale-purity:     3/3 green (was failing — note: appears separately resolved, possibly via natural ratchet on a parallel main commit)
+  eslint i18n:       3/3 green
+
+False-positive eliminated.
