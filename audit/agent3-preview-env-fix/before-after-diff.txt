@@ -1,0 +1,53 @@
+=== Before → After: env scope changes ===
+
+  CHANGED: ANTHROPIC_API_KEY|PmSmnGDunZ710RzZ
+           before: ('production',)
+           after:  ('preview', 'production')
+  CHANGED: CRON_SECRET|OE1cm8nbyhrZpBNs
+           before: ('production',)
+           after:  ('preview', 'production')
+  CHANGED: NEXT_PUBLIC_SUPABASE_ANON_KEY|7XRwxZ9I38dF57OT
+           before: ('production',)
+           after:  ('preview', 'production')
+  CHANGED: NEXT_PUBLIC_SUPABASE_URL|pbH3hpcT36PsQ7Z2
+           before: ('production',)
+           after:  ('preview', 'production')
+  CHANGED: SUPABASE_DB_URL_SESSION|DvAYObHO4Xqm3Vp5
+           before: ('production',)
+           after:  ('preview', 'production')
+  CHANGED: SUPABASE_DB_URL|QGi0msswr5qXL7tb
+           before: ('production',)
+           after:  ('preview', 'production')
+  CHANGED: SUPABASE_DIRECT_URL|w6O3t9St2KODtpTf
+           before: ('production',)
+           after:  ('preview', 'production')
+  CHANGED: SUPABASE_SERVICE_ROLE_KEY|zUQNRkGrcHo3rpH2
+           before: ('production',)
+           after:  ('preview', 'production')
+  CHANGED: UNSUBSCRIBE_SECRET|1HB02fPVqXBGVbAR
+           before: ('production',)
+           after:  ('preview', 'production')
+
+=== Bucket counts ===
+Before:
+    18  target=['production']
+     8  target=['preview']
+     7  target=['development', 'preview', 'production']
+     7  target=['development']
+After:
+     9  target=['production']
+     9  target=['preview', 'production']
+     8  target=['preview']
+     7  target=['development', 'preview', 'production']
+     7  target=['development']
+
+=== Critical preview-coverage check ===
+  ✓ NEXT_PUBLIC_SUPABASE_URL: preview-covered=True
+  ✓ NEXT_PUBLIC_SUPABASE_ANON_KEY: preview-covered=True
+  ✓ SUPABASE_SERVICE_ROLE_KEY: preview-covered=True
+  ✓ SUPABASE_DB_URL: preview-covered=True
+  ✓ SUPABASE_DB_URL_SESSION: preview-covered=True
+  ✓ SUPABASE_DIRECT_URL: preview-covered=True
+  ✓ ANTHROPIC_API_KEY: preview-covered=True
+  ✓ CRON_SECRET: preview-covered=True
+  ✓ UNSUBSCRIBE_SECRET: preview-covered=True

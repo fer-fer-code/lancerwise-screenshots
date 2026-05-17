@@ -1,0 +1,83 @@
+[AGENT 3] Vercel preview env vars fix — verification deploy log
+==================================================================
+
+ORIGINAL FAILED DEPLOY (pre-fix)
+=================================
+id:           dpl_91weSsRAHCTs4xpm7PeQtx3jQS5E
+branch:       bug-001-batch-2-6-footer
+sha:          fd38220f869ded417e080ab1a84e2e7e70687073
+created:      2026-05-17 13:24 UTC
+readyState:   ERROR
+errorCode:    missing_config
+errorMessage: Command "npm run build" exited with 1
+
+build log excerpts (original):
+  Error: supabaseUrl is required.
+  > Build error occurred
+  Error: Failed to collect page data for /api/surveys/[handle]
+    type: 'Error'
+  Error: Command "npm run build" exited with 1
+
+VERIFICATION REDEPLOY (post-fix, SAME sha)
+============================================
+id:           dpl_3takcXEbRtdBKTniYnqw6tUjJ1gz
+branch:       bug-001-batch-2-6-footer
+sha:          fd38220f869ded417e080ab1a84e2e7e70687073  ← IDENTICAL to original
+created:      2026-05-17 14:09:45 UTC (1779026985843)
+buildingAt:   2026-05-17 14:09:47 UTC
+readyAt:      2026-05-17 14:14:05 UTC (1779027245474)
+build time:   ~4m20s (260 sec)
+readyState:   READY  ✓
+errorCode:    None   ✓
+errorMessage: None   ✓
+url:          https://lancerwise-1kqutq7zk-fer-fer-codes-projects.vercel.app
+
+build log tail (last 30 lines):
+  ├ ƒ /tools/weekly-report
+  ├ ƒ /tools/welcome-kit
+  ├ ƒ /tools/wfh-deductions
+  ├ ƒ /tools/win-back
+  ├ ƒ /tools/win-rate
+  ├ ƒ /tools/work-boundaries
+  ├ ƒ /tools/work-journal
+  ├ ƒ /tools/work-life
+  ├ ƒ /tools/work-rhythm
+  ├ ƒ /tools/workflows
+  ├ ƒ /unsubscribe
+  ├ ƒ /upgrade
+  ├ ƒ /vendors
+  ├ ƒ /wall
+  ├ ƒ /wall/[username]
+  ├ ƒ /work
+  ├ ƒ /work-log
+  ├ ƒ /work/projects
+  ├ ƒ /work/time
+  └ ƒ /year/[token]
+  ƒ Proxy (Middleware)
+  ○  (Static)   prerendered as static content
+  ƒ  (Dynamic)  server-rendered on demand
+  Build Completed in /vercel/output [3m]
+  Deploying outputs...
+  Deployment completed
+  Creating build cache...
+  Created build cache: 15s
+  Uploading build cache [252.83 MB]
+  Build cache uploaded: 2.827s
+
+build log scan for "supabaseUrl is required":
+  (no occurrences — confirmation that NEXT_PUBLIC_SUPABASE_URL is now
+  available in preview build environment)
+
+PROOF SUMMARY
+=============
+Same code, same sha (fd38220f). Original errored on `supabaseUrl is
+required` at `/api/surveys/[handle]`. Post env-var fix, redeploy
+completes successfully in 4m20s with all routes compiled including
+`/api/surveys/[handle]`.
+
+The only thing that changed between the two deploys is the Vercel project
+env var scope (9 critical secrets extended from target=['production'] to
+target=['production', 'preview']). No code change. No git push. Pure
+deployment-config fix.
+
+AGENT 1 PR previews are unblocked.
