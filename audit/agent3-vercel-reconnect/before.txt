@@ -1,0 +1,91 @@
+================================================================
+[AGENT 3] Vercel git-link investigation — BEFORE state
+2026-05-17
+================================================================
+
+────────────────────────────────────────────────────────────────
+1. Vercel project metadata (via REST API)
+────────────────────────────────────────────────────────────────
+$ curl https://api.vercel.com/v9/projects/prj_OfYhgE1ONf98IhDzAMzspTr7hC1A?teamId=...
+
+  name:                          lancerwise
+  framework:                     nextjs
+  createdAt:                     2026-04-24
+  updatedAt:                     2026-05-17
+
+  link:                          None       ← no git connection
+  deployHooks:                   0
+  gitComments:                   { onCommit: false, onPullRequest: true }
+  gitForkProtection:             true
+  autoExposeSystemEnvs:          true
+  sourceFilesOutsideRootDirectory: true
+
+The `link` field is null/None. The project has NO git provider connection.
+gitComments and gitForkProtection are configured but inert without `link`.
+
+────────────────────────────────────────────────────────────────
+2. Deployment history — last 100 deploys
+────────────────────────────────────────────────────────────────
+$ curl https://api.vercel.com/v6/deployments?projectId=...&limit=100
+  Source counts: {'cli': 98, '-': 1, 'redeploy': 1}
+  Most recent git deploy: NONE (no source=git in last 100)
+  Earliest in window:    2026-05-11 06:40
+
+────────────────────────────────────────────────────────────────
+3. Deployment history — paged back further (~825 deploys total)
+────────────────────────────────────────────────────────────────
+Page 1 (2026-05-11→05-17):  100 returned, srcs={'cli': 100}
+Page 2 (2026-05-09→05-11):  100 returned, srcs={'cli': 100}
+Page 3 (2026-05-05→05-09):  100 returned, srcs={'cli': 100}
+Page 4 (2026-04-29→05-05):  100 returned, srcs={'cli': 100}
+Page 5 (2026-04-28→04-29):  100 returned, srcs={'cli': 100}
+Page 6 (2026-04-26→04-28):  100 returned, srcs={'cli': 99, 'redeploy': 1}
+Page 7 (2026-04-24→04-26):  100 returned, srcs={'cli': 100}
+Page 8 (2026-04-24 only):    25 returned, srcs={'cli': 25}
+
+Earliest deploy: 2026-04-24 10:50 — matches project createdAt to the hour.
+**Every single deployment ever made on this project came via the Vercel CLI.**
+Zero git-source deploys in the entire 825-deploy history.
+
+────────────────────────────────────────────────────────────────
+4. GitHub side — repo webhooks
+────────────────────────────────────────────────────────────────
+$ gh api repos/fer-fer-code/lancerwise/hooks
+  webhook count: 0
+
+When Vercel auto-deploys from git, it installs a webhook on the repo
+to be notified of pushes. Zero webhooks = Vercel was never given
+push notification access to this repo.
+
+────────────────────────────────────────────────────────────────
+5. Vercel-side — what GitHub namespaces does Vercel see?
+────────────────────────────────────────────────────────────────
+$ curl https://api.vercel.com/v1/integrations/git-namespaces?provider=github
+  GH namespaces visible to Vercel: 0
+
+$ curl https://api.vercel.com/v1/integrations/git-search/github?slug=fer-fer-code%2Flancerwise
+  {"error":{"code":"not_found","message":"Not Found"}}
+
+Vercel cannot see ANY GitHub namespace at all — not just lancerwise.
+The Vercel GitHub App is not installed on the user's GitHub account.
+
+────────────────────────────────────────────────────────────────
+DIAGNOSIS
+────────────────────────────────────────────────────────────────
+
+Per the 5-candidate root cause list in the brief:
+  a) Vercel GitHub App uninstalled from repo  ← matches, but stronger:
+                                                 never installed at all
+  b) Auth token expired                        — N/A (no auth was ever made)
+  c) Repo renamed/transferred                  — N/A
+  d) Manual unlink at some point               — N/A (never linked)
+  e) Permissions issue with GitHub org         — would only matter post-install
+
+Definitive cause: this Vercel project was created via `vercel deploy`
+(CLI bootstrap), which spawns a project without going through the
+GitHub OAuth flow. The Vercel GitHub App was never installed on the
+`fer-fer-code` GitHub namespace, so Vercel has zero visibility into
+any of the user's GitHub repos.
+
+This is a "set up the link for the first time" situation, not a
+"reconnect" — there was nothing to reconnect from.
