@@ -1,0 +1,24 @@
+public|availability_dates|Public can view availability dates|SELECT|qual=true|with_check=NULL
+public|availability_slots|Public can read slots|SELECT|qual=true|with_check=NULL
+public|client_portals|Public view portal by token|SELECT|qual=true|with_check=NULL
+public|client_surveys|Public can view surveys by token|SELECT|qual=true|with_check=NULL
+public|community_messages|Authenticated users can insert messages|INSERT|qual=NULL|with_check=(auth.uid() IS NOT NULL)
+public|community_messages|Community messages readable by authenticated users|SELECT|qual=true|with_check=NULL
+public|community_profiles|Community profiles readable by authenticated users|SELECT|qual=true|with_check=NULL
+public|community_rooms|Rooms readable by authenticated users|SELECT|qual=true|with_check=NULL
+public|contract_signatures|Anyone can create a signature|INSERT|qual=NULL|with_check=true
+public|dev_feedback|dev_feedback_whitelist_insert|INSERT|qual=NULL|with_check=((user_id = auth.uid()) AND ((auth.jwt() ->> 'email'::text) = ANY (ARRAY['krokusstudia2@gmail.com'::text, 'lancerwise.team@gmail.com'::text])))
+public|intake_responses|Public submit responses|INSERT|qual=NULL|with_check=true
+public|portal_files|Public view portal files|SELECT|qual=true|with_check=NULL
+public|portal_messages|Public access portal messages|ALL|qual=true|with_check=true
+public|portal_messages|Public can insert client messages|INSERT|qual=NULL|with_check=(sender = 'client'::text)
+public|portal_messages|Public can read messages by token|SELECT|qual=true|with_check=NULL
+public|portfolio_items|Portfolio items are public|SELECT|qual=true|with_check=NULL
+public|profiles|Service role can insert profiles|INSERT|qual=NULL|with_check=true
+public|project_surveys|Anyone can view and submit survey by token|ALL|qual=true|with_check=true
+public|rate_card_services|Public read rate_card_services|SELECT|qual=true|with_check=NULL
+public|rate_card_settings|Public read rate_card_settings|SELECT|qual=true|with_check=NULL
+public|support_tickets|Users create tickets|INSERT|qual=NULL|with_check=(auth.uid() = user_id)
+public|survey_responses|Public can insert responses|INSERT|qual=NULL|with_check=true
+public|survey_responses|Public can view responses by token|SELECT|qual=true|with_check=NULL
+public|testimonial_requests|Public submit via token 797|SELECT|qual=true|with_check=NULL
