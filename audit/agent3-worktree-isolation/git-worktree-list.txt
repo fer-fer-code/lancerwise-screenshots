@@ -1,0 +1,5 @@
+/Users/myoffice/lancerwise         99255f19 [main]
+/Users/myoffice/lancerwise-agent1  99255f19 (detached HEAD)
+/Users/myoffice/lancerwise-agent2  99255f19 (detached HEAD)
+/Users/myoffice/lancerwise-agent3  99255f19 (detached HEAD)
+/Users/myoffice/lancerwise-cp-a    3925de7c [cp-a-redo]
