@@ -1,0 +1,20 @@
+HTTP probe — 18 sitemap URLs — 2026-05-19
+============================================
+200  no-X-Robots-Tag  https://www.lancerwise.com
+200  no-X-Robots-Tag  https://www.lancerwise.com/about
+200  no-X-Robots-Tag  https://www.lancerwise.com/api-docs
+200  no-X-Robots-Tag  https://www.lancerwise.com/blog
+200  no-X-Robots-Tag  https://www.lancerwise.com/blog/best-time-tracking-methods-freelancers
+200  no-X-Robots-Tag  https://www.lancerwise.com/blog/freelance-invoice-template
+200  no-X-Robots-Tag  https://www.lancerwise.com/blog/how-to-calculate-freelance-hourly-rate
+200  no-X-Robots-Tag  https://www.lancerwise.com/blog/how-to-write-freelance-contract
+200  no-X-Robots-Tag  https://www.lancerwise.com/changelog
+200  no-X-Robots-Tag  https://www.lancerwise.com/contact
+200  no-X-Robots-Tag  https://www.lancerwise.com/cookie-policy
+200  no-X-Robots-Tag  https://www.lancerwise.com/demo
+200  no-X-Robots-Tag  https://www.lancerwise.com/faq
+200  no-X-Robots-Tag  https://www.lancerwise.com/n8n-templates
+200  no-X-Robots-Tag  https://www.lancerwise.com/pricing
+200  no-X-Robots-Tag  https://www.lancerwise.com/privacy
+200  no-X-Robots-Tag  https://www.lancerwise.com/terms
+200  no-X-Robots-Tag  https://www.lancerwise.com/tools/rate-calculator
