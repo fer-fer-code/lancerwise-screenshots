@@ -1,0 +1,21 @@
+url,http_code,x_robots_tag,meta_robots,canonical,category,notes
+https://www.lancerwise.com,200,none,index, follow,https://www.lancerwise.com,homepage,clean
+https://www.lancerwise.com/pricing,200,none,index, follow,https://www.lancerwise.com/pricing,marketing,clean
+https://www.lancerwise.com/tools/rate-calculator,200,none,index, follow,https://www.lancerwise.com/tools/rate-calculator,tools,clean
+https://www.lancerwise.com/demo,200,none,index, follow,https://www.lancerwise.com/demo,marketing,clean
+https://www.lancerwise.com/blog,200,none,index, follow,https://www.lancerwise.com/blog,blog-index,clean
+https://www.lancerwise.com/faq,200,none,index, follow,https://www.lancerwise.com/faq,marketing,clean
+https://www.lancerwise.com/about,200,none,index, follow,https://www.lancerwise.com/about,marketing,clean
+https://www.lancerwise.com/contact,200,none,index, follow,https://www.lancerwise.com/contact,marketing,clean
+https://www.lancerwise.com/api-docs,200,none,index, follow,https://www.lancerwise.com/api-docs,resources,clean
+https://www.lancerwise.com/n8n-templates,200,none,index, follow,https://www.lancerwise.com/n8n-templates,tools,clean
+https://www.lancerwise.com/changelog,200,none,index, follow,https://www.lancerwise.com/changelog,resources,clean
+https://www.lancerwise.com/privacy,200,none,index, nofollow,https://www.lancerwise.com/privacy,legal,clean
+https://www.lancerwise.com/terms,200,none,index, nofollow,https://www.lancerwise.com/terms,legal,clean
+https://www.lancerwise.com/cookie-policy,200,none,index, follow,https://www.lancerwise.com/cookie-policy,legal,clean
+https://www.lancerwise.com/blog/best-time-tracking-methods-freelancers,200,none,index, follow,https://www.lancerwise.com/blog/best-time-tracking-methods-freelancers,blog-post,clean
+https://www.lancerwise.com/blog/how-to-write-freelance-contract,200,none,index, follow,https://www.lancerwise.com/blog/how-to-write-freelance-contract,blog-post,clean
+https://www.lancerwise.com/blog/freelance-invoice-template,200,none,index, follow,https://www.lancerwise.com/blog/freelance-invoice-template,blog-post,clean
+https://www.lancerwise.com/blog/how-to-calculate-freelance-hourly-rate,200,none,index, follow,https://www.lancerwise.com/blog/how-to-calculate-freelance-hourly-rate,blog-post,clean
+https://www.lancerwise.com/login,200,none,index, nofollow,https://www.lancerwise.com/login,auth,clean
+https://www.lancerwise.com/register,200,none,index, nofollow,https://www.lancerwise.com/register,auth,clean

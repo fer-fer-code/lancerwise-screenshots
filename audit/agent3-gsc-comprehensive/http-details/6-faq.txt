@@ -1,0 +1,26 @@
+URL: https://www.lancerwise.com/faq
+HTTP: 200
+X-Robots-Tag: (none)
+Meta robots: index, follow
+Canonical: https://www.lancerwise.com/faq
+
+--- Response headers ---
+HTTP/2 200 
+age: 0
+cache-control: private, no-cache, no-store, max-age=0, must-revalidate
+content-type: text/html; charset=utf-8
+date: Mon, 18 May 2026 18:43:59 GMT
+link: </_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2>; rel=preload; as="font"; crossorigin=""; type="font/woff2"
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-content-type-options: nosniff
+x-dns-prefetch-control: on
+x-frame-options: SAMEORIGIN
+x-matched-path: /faq
+x-powered-by: Next.js
+x-vercel-cache: MISS
+x-vercel-id: hkg1::iad1::2k7sq-1779129838899-6223f2f2b07d
+
