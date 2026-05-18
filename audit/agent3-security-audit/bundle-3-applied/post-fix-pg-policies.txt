@@ -1,0 +1,17 @@
+      tablename       |               policyname                |  cmd   |                                      qual                                      
+----------------------+-----------------------------------------+--------+--------------------------------------------------------------------------------
+ client_portals       | Users manage portals                    | ALL    | (auth.uid() = user_id)
+ client_portals       | Users manage their portals              | ALL    | (auth.uid() = user_id)
+ client_surveys       | Users manage their surveys              | ALL    | (auth.uid() = user_id)
+ client_surveys       | Public can submit surveys               | UPDATE | (status = 'pending'::text)
+ portal_files         | Users manage portal files               | ALL    | (auth.uid() = user_id)
+ quotes               | Users manage their quotes               | ALL    | (auth.uid() = user_id)
+ survey_responses     | Users manage their survey responses     | ALL    | (auth.uid() = user_id)
+ survey_responses     | Public can insert responses             | INSERT | 
+ survey_responses     | Survey owners can read responses        | SELECT | (EXISTS ( SELECT 1                                                            +
+                      |                                         |        |    FROM client_surveys cs                                                     +
+                      |                                         |        |   WHERE ((cs.id = survey_responses.survey_id) AND (cs.user_id = auth.uid()))))
+ testimonial_requests | Users manage testimonial requests 797   | ALL    | (auth.uid() = user_id)
+ testimonial_requests | Users manage their testimonial requests | ALL    | (auth.uid() = user_id)
+(11 строк)
+
