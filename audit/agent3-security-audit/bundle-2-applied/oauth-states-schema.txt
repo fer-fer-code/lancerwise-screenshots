@@ -1,0 +1,17 @@
+                                         Таблица "public.oauth_states"
+  Столбец   |           Тип            | Правило сортировки | Допустимость NULL |         По умолчанию         
+------------+--------------------------+--------------------+-------------------+------------------------------
+ state      | text                     |                    | not null          | 
+ user_id    | uuid                     |                    | not null          | 
+ provider   | text                     |                    | not null          | 
+ expires_at | timestamp with time zone |                    | not null          | now() + '00:10:00'::interval
+ created_at | timestamp with time zone |                    | not null          | now()
+Индексы:
+    "oauth_states_pkey" PRIMARY KEY, btree (state)
+    "oauth_states_expires_idx" btree (expires_at)
+Ограничения-проверки:
+    "oauth_states_provider_check" CHECK (provider = ANY (ARRAY['gmail'::text, 'outlook'::text]))
+Ограничения внешнего ключа:
+    "oauth_states_user_id_fkey" FOREIGN KEY (user_id) REFERENCES auth.users(id) ON DELETE CASCADE
+Политики (защита строк включена): (Нет)
+
