@@ -1,0 +1,41 @@
+HTTP/2 200 
+cache-control: private, no-cache, no-store, max-age=0, must-revalidate
+content-type: text/html; charset=utf-8
+server: Vercel
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+HTTP/2 200 
+cache-control: private, no-cache, no-store, max-age=0, must-revalidate
+content-type: text/html; charset=utf-8
+server: Vercel
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+HTTP/2 200 
+cache-control: private, no-cache, no-store, max-age=0, must-revalidate
+content-type: text/html; charset=utf-8
+server: Vercel
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+HTTP/2 200 
+cache-control: private, no-cache, no-store, max-age=0, must-revalidate
+content-type: text/html; charset=utf-8
+server: Vercel
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+location: /login
+server: Vercel
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+
+--- https://lancerwise.com/ ---
+HTTP/2 308 
+location: https://www.lancerwise.com/
+server: Vercel
+
+--- https://www.lancerwise.com/ ---
+HTTP/2 200 
+server: Vercel
+
