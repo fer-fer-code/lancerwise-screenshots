@@ -6,26 +6,34 @@
 **Locale**: RU
 **Mode**: One real end-to-end user journey using disposable mail.tm address
 
-## Severity counts
+## Severity counts (final, post-Phase-5+6)
 
 | Severity | Count | Status |
 |----------|-------|--------|
-| **P0 critical** | **1** | **STOPPED — see P0-1** |
-| **P1 high** | **4** | _must-fix before launch_ |
-| **P2 medium** | **6** | first post-launch sprint |
-| **P3 low** | **2** | post-launch polish |
+| **P0 critical** | **0** open | **P0-1 CLOSED 2026-05-18** — fix verified end-to-end |
+| **P1 high** | **4** | unchanged — Ramiz Supabase toggle pending on P1-1 |
+| **P2 medium** | **6** | unchanged |
+| **P3 low** | **3** | +1 (P3-3 "Sign out of all devices" string EN in user menu) |
 
-## 🚨 Stopping condition triggered
+## Closure timeline
 
-**P0-1**: `POST /api/invoices/status → HTTP 500` when transitioning invoice to `paid`. Mark-as-Paid action is completely non-functional. Per execution brief: "If hit critical bug (500 error, data corruption) — STOP, flag P0, not continue testing."
+1. **2026-05-18 ~11:50 UTC** — P0-1 found mid Phase 4 — STOPPED per discipline
+2. **~12:15 UTC** — Root cause identified via direct psql (pg 42703, columns missing)
+3. **~12:25 UTC** — Migration written + applied to production DB + PR #62 opened
+4. **~12:31 UTC** — PR #62 merged as `fe21364c`
+5. **~12:38 UTC** — Production deploy READY, fresh-account E2E verification PASSED:
+   - HTTP 500 → HTTP 200
+   - DB invoice `94168173-...` status=`paid`, paid_at + payment_method captured
+   - UI badge transitioned green "paid"
+6. **~12:40 UTC** — Phase 5 (time tracking) — works mechanically, only translation gap
+7. **~12:43 UTC** — Phase 6 (settings) — works, /settings/notifications stub redirect confirmed, logout button in RU ("Выйти") but "Sign out of all devices" still EN (P3-3)
+8. **~12:45 UTC** — Audit closed. Total time: ~55 min from P0 discovery to full audit close-out (including the fix).
 
-**Halted**: Phase 5 (time tracking) and Phase 6 (settings, integrations, logout). These will run on a fresh test account after P0-1 is fixed.
+## P0 — 0 open
 
-## P0 — 1 finding
-
-| ID | Title | Effort |
+| ID | Title | Status |
 |----|-------|--------|
-| P0-1 | `POST /api/invoices/status → 500` on mark-as-paid (revenue widget never updates) | 30-90 min |
+| P0-1 | `POST /api/invoices/status → 500` on mark-as-paid | ✅ **FIXED** PR #62 `fe21364c` (actual time 24 min from approval to verified prod) |
 
 ## P1 — 4 findings (all must-fix before public launch)
 

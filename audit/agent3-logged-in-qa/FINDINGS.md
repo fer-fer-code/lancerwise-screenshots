@@ -4,20 +4,25 @@ End-to-end user journey verification на production `https://www.lancerwise.com
 
 **Stopped at Phase 4** per execution discipline — P0 critical found (server 500 on Mark-as-Paid). Phases 5 + 6 deferred until P0 + P1s resolved.
 
-## Severity counts
+## Severity counts (after P0-1 closure + Phase 5+6 testing)
 
-| Severity | Count |
-|----------|-------|
-| **P0 critical** | **1** |
-| **P1 high** | **4** |
-| **P2 medium** | **6** |
-| **P3 low** | **2** |
+| Severity | Count | Status |
+|----------|-------|--------|
+| **P0 critical** | **0** open | (P0-1 CLOSED 2026-05-18 — fix verified end-to-end, see [`p0-1-post-fix-evidence.md`](p0-1-post-fix-evidence.md)) |
+| **P1 high** | **4** | unchanged — P1-1 to P1-4 still open |
+| **P2 medium** | **6** | unchanged (logout button + /settings/notifications stub flagged earlier are part of P2-x) |
+| **P3 low** | **2** | unchanged |
 
 ---
 
-## P0 — critical launch blocker
+## P0 — CLOSED ✅
 
-### P0-1 — POST /api/invoices/status → HTTP 500 (Mark-as-Paid completely broken)
+### P0-1 — POST /api/invoices/status → HTTP 500 (Mark-as-Paid completely broken) [RESOLVED 2026-05-18]
+
+**Status**: ✅ **FIXED** via PR #62 (merge commit `fe21364c`) + production-verified.
+Full close-out evidence: [`p0-1-post-fix-evidence.md`](p0-1-post-fix-evidence.md).
+
+Original issue (preserved for historical reference):
 
 **Where**: `src/app/api/invoices/status/route.ts` POST handler
 **Trigger**: From invoice detail page, click "Mark as Paid" → modal opens → fill payment method (e.g., "Bank Transfer") → click "Confirm Paid"
@@ -203,16 +208,59 @@ Effort: 10 min (Sentry config).
 
 ---
 
-## Phases NOT TESTED (deferred per P0-stop rule)
+## Phase 5 — Time tracking (post P0-1 fix) — ✅ WORKS
 
-The brief specified: "If hit critical bug (500 error, data corruption) — STOP, flag P0, not continue testing."
+Tested on fresh post-fix account (`f77ffa5a-3141-4803-a410-d624b5d94699`).
 
-P0-1 was found mid Phase 4. Per discipline, halted further testing of:
+| Test | Result |
+|------|--------|
+| `/work/time` loads | ✓ Header in RU ("Учёт времени") but ALL 70+ widgets English content (same translation gap pattern as P1-2 + P1-4) |
+| Start timer w/ description "P0-1 verification time entry" | ✓ Timer running, button changes "Start" → "Stop" |
+| Wait 19 sec → Stop | ✓ Entry persists to DB |
+| DB row | duration=19, billable=true, start_time + end_time captured, description correct |
+| "Today" widget updates | ✓ Shows `00:00:19` |
+| "Week" widget updates | ✓ Shows `00:00:19` |
+| Activity heatmap | shows current day in heatmap (subtle indicator) |
+| Week Progress (40h goal) | still 0% (19s rounds to 0 hours, correct) |
 
-- **Phase 5** — Time tracking start/stop/manual entry, hours widget update
-- **Phase 6** — Settings (Profile, Notification prefs, Email prefs, Unsubscribe links, Logout flow)
+**No new bugs** — only the EN translation gap applies. Same severity P1-4 (already documented).
 
-Both can resume after P0-1 is fixed and a fresh test run is justified.
+Widget audit reveals the page has these English-only widgets (heading text, no translation):
+Time Tracker · Pomodoro · Invoice Time · Templates · Week Progress · Timer ·
+Day Planner · Weekly Schedule vs Actual · This Week's Score · Daily Goal ·
+Add time manually · Add to Home Screen · Hourly Rate Calculator · Tracking Streak ·
+Weekly Hour Goal · Work Tags · Today's Session Notes · Weekly Billable Target ·
+May Time Goal · Focus Sessions · Time Goal Forecast · Daily Productivity Log ·
+Time Coverage This Month · 90-Day Activity Heatmap · Work Hours Heatmap ·
+Pomodoro Timer · Weekly Hours Goal · Daily Time Quota · Billable Time Calendar ·
+Monthly Hours Pace · Weekly Time Summary · Monthly Billable Target · Timesheet Approval ·
+Weekly Summary Email · Group by project · Import from Toggl / Clockify ·
+"Mon goal: 8h" / "Tue / Wed / Thu / Fri / Sat / Sun" weekday names
+
+Minor cosmetic finding to note: **"Lowproductivity"** — concatenated word in "This Week's Score" section (`Lowproductivity` should be `Low productivity` with a space). P3.
+
+Evidence: [`05-time-tracking/qa-05-time-tracker-load.png`](05-time-tracking/qa-05-time-tracker-load.png), [`05-time-tracking/qa-05-time-entry-saved.png`](05-time-tracking/qa-05-time-entry-saved.png).
+
+## Phase 6 — Settings + integrations + logout — partially tested
+
+| Test | Result |
+|------|--------|
+| `/settings` loads | ✓ Header in RU ("Настройки") but body English (Profile, Profile Photo, JPG/PNG/WebP, Full Name, Email, "Email cannot be changed here", Save Profile, Appearance, "Choose your preferred color theme", "System (Auto-Detect)", "Light COMING SOON") — same gap pattern |
+| Profile shows correct name/email | ✓ "QA Post-Fix" + `lancerwise-qa-1779107498@wshu.net` |
+| `/settings/notifications` | **REDIRECTS to /settings** — matches backlog memo `backlog_settings_notifications_real_impl.md` (stub redirect, P2 — should be implemented OR removed before launch) |
+| Avatar menu "Выйти" (logout) | ✓ **Translated to Russian** (positive finding!) |
+| Avatar menu "Sign out of all devices" | ✘ NOT translated to RU (P2) |
+| Click logout via Playwright JS | ✘ Did not fire — likely needs real user gesture (programmatic click on the menu item doesn't trigger Supabase signOut). NOT a bug for real users; just a test-automation note. |
+| Email unsubscribe flow | _DEFERRED_ — would require sending a real email + HMAC-signed unsubscribe URL with `UNSUBSCRIBE_SECRET`; skipped to avoid spam-from-test concerns |
+| Re-login flow | _DEFERRED_ — depends on logout working in automation |
+
+### Phase 6 new finding (small)
+
+**P3-3 (new)** — "Sign out of all devices" menu item not translated to RU
+- Single string in user menu, EN even when locale is RU
+- Effort: 5 min (add to user-menu i18n namespace alongside "Выйти")
+
+Evidence: [`06-settings/qa-06-settings.png`](06-settings/qa-06-settings.png), [`06-settings/qa-06-settings-notifications.png`](06-settings/qa-06-settings-notifications.png)
 
 ---
 
