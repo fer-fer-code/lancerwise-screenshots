@@ -1,0 +1,146 @@
+[
+  {
+    "folder": "pricing",
+    "path": "/pricing",
+    "status": 200,
+    "title": "Pricing — Free Forever Plan & Pro from $15/mo | LancerWise",
+    "lang": "ru",
+    "error": null,
+    "finalUrl": "https://www.lancerwise.com/pricing"
+  },
+  {
+    "folder": "features",
+    "path": "/features",
+    "status": 404,
+    "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+    "lang": "ru",
+    "error": null,
+    "finalUrl": "https://www.lancerwise.com/features"
+  },
+  {
+    "folder": "faq",
+    "path": "/faq",
+    "status": 200,
+    "title": "Frequently Asked Questions | LancerWise",
+    "lang": "ru",
+    "error": null,
+    "finalUrl": "https://www.lancerwise.com/faq"
+  },
+  {
+    "folder": "about",
+    "path": "/about",
+    "status": 200,
+    "title": "About Us — Built by Freelancers, for Freelancers | LancerWise",
+    "lang": "ru",
+    "error": null,
+    "finalUrl": "https://www.lancerwise.com/about"
+  },
+  {
+    "folder": "contact",
+    "path": "/contact",
+    "status": 200,
+    "title": "Contact Support — Response Within 1 Business Day | LancerWise",
+    "lang": "ru",
+    "error": null,
+    "finalUrl": "https://www.lancerwise.com/contact"
+  },
+  {
+    "folder": "blog",
+    "path": "/blog",
+    "status": 200,
+    "title": "Blog — Freelance Tips, Guides & Resources | LancerWise",
+    "lang": "ru",
+    "error": null,
+    "finalUrl": "https://www.lancerwise.com/blog"
+  },
+  {
+    "folder": "rate-calculator",
+    "path": "/tools/rate-calculator",
+    "status": 200,
+    "title": "Freelance Rate Calculator — Find Your Minimum Hourly Rate | LancerWise",
+    "lang": "ru",
+    "error": null,
+    "finalUrl": "https://www.lancerwise.com/tools/rate-calculator"
+  },
+  {
+    "folder": "templates",
+    "path": "/templates",
+    "status": 404,
+    "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+    "lang": "ru",
+    "error": null,
+    "finalUrl": "https://www.lancerwise.com/templates"
+  },
+  {
+    "folder": "changelog",
+    "path": "/changelog",
+    "status": 200,
+    "title": "Changelog | LancerWise",
+    "lang": "ru",
+    "error": null,
+    "finalUrl": "https://www.lancerwise.com/changelog"
+  },
+  {
+    "folder": "api-docs",
+    "path": "/api-docs",
+    "status": 200,
+    "title": "API Documentation | LancerWise",
+    "lang": "ru",
+    "error": null,
+    "finalUrl": "https://www.lancerwise.com/api-docs"
+  },
+  {
+    "folder": "privacy",
+    "path": "/privacy",
+    "status": 200,
+    "title": "Privacy Policy | LancerWise",
+    "lang": "ru",
+    "error": null,
+    "finalUrl": "https://www.lancerwise.com/privacy"
+  },
+  {
+    "folder": "terms",
+    "path": "/terms",
+    "status": 200,
+    "title": "Terms of Service | LancerWise",
+    "lang": "ru",
+    "error": null,
+    "finalUrl": "https://www.lancerwise.com/terms"
+  },
+  {
+    "folder": "cookies",
+    "path": "/cookie-policy",
+    "status": 200,
+    "title": "Cookie Policy | LancerWise",
+    "lang": "ru",
+    "error": null,
+    "finalUrl": "https://www.lancerwise.com/cookie-policy"
+  },
+  {
+    "folder": "login",
+    "path": "/login",
+    "status": null,
+    "title": null,
+    "lang": null,
+    "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.lancerwise.com/login\", waiting until \"networkidle\"\n",
+    "finalUrl": null
+  },
+  {
+    "folder": "register",
+    "path": "/register",
+    "status": null,
+    "title": null,
+    "lang": null,
+    "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.lancerwise.com/register\", waiting until \"networkidle\"\n",
+    "finalUrl": null
+  },
+  {
+    "folder": "forgot-password",
+    "path": "/forgot-password",
+    "status": null,
+    "title": null,
+    "lang": null,
+    "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.lancerwise.com/forgot-password\", waiting until \"networkidle\"\n",
+    "finalUrl": null
+  }
+]
