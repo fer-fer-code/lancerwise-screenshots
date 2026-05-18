@@ -1,0 +1,20 @@
+HTTP/2 429 
+cache-control: public, max-age=0, must-revalidate
+content-type: application/json
+date: Mon, 18 May 2026 03:47:48 GMT
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+retry-after: 732
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+x-content-type-options: nosniff
+x-dns-prefetch-control: on
+x-frame-options: SAMEORIGIN
+x-matched-path: /api/contact-form
+x-ratelimit-limit: 3
+x-ratelimit-remaining: 0
+x-ratelimit-reset: 1779076800000
+x-vercel-cache: MISS
+x-vercel-enable-rewrite-caching: 1
+x-vercel-id: hkg1::iad1::bt5wj-1779076068391-3bf0c813c646
+
