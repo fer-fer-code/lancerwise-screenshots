@@ -1,0 +1,102 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# LemonSqueezy env vars — paste-ready template
+# ─────────────────────────────────────────────────────────────────────────────
+# Set all 5 in Vercel → Project Settings → Environment Variables.
+# Scope: Production + Preview (NOT Development — local .env.local gets these
+# manually for test purchases).
+#
+# Type: all "Encrypted" (Sensitive). None should be "Plain Text".
+# Prefix: NO NEXT_PUBLIC_ on any of these — server-side only.
+#
+# Order matters — set 1 → 5 because checkout/webhook routes throw `Error
+# missing` on first request if any are absent.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ─── 1. API key (server-only — never expose client-side) ───────────────────
+# Source: LS Dashboard → Settings → API → "Create API key"
+# Choose: "All permissions" scope
+# Format: starts with `eyJ0eXAi...` (LS uses JWT-style keys)
+# Test mode vs Live mode: separate keys exist; Preview = test key, Production = live key
+LEMONSQUEEZY_API_KEY=<paste from LS Dashboard → Settings → API>
+
+# ─── 2. Store ID (single numeric ID) ───────────────────────────────────────
+# Source: LS Dashboard → Stores → "View" → URL contains numeric ID
+#         e.g. https://app.lemonsqueezy.com/stores/12345/dashboard → ID=12345
+# Format: integer, ~5-6 digits
+# Same value in Production AND Preview (single store covers both)
+LEMONSQUEEZY_STORE_ID=<paste store ID number>
+
+# ─── 3. Pro tier variant ID ────────────────────────────────────────────────
+# Source: LS Dashboard → Products → "Pro plan" → Variants → copy ID
+# Create the product first: Name="Pro", Price=$15/month, Recurring=monthly
+# Format: integer
+# Same value in Production AND Preview
+LEMONSQUEEZY_VARIANT_PRO=<paste Pro variant ID>
+
+# ─── 4. Team tier variant ID ───────────────────────────────────────────────
+# Source: LS Dashboard → Products → "Team plan" → Variants → copy ID
+# Create the product first: Name="Team", Price=$39/month, Recurring=monthly
+# Format: integer
+# Same value in Production AND Preview
+LEMONSQUEEZY_VARIANT_TEAM=<paste Team variant ID>
+
+# ─── 5. Webhook signing secret ─────────────────────────────────────────────
+# Source: LS Dashboard → Webhooks → New webhook → set Endpoint URL =
+#         https://www.lancerwise.com/api/lemonsqueezy/webhook
+#         Subscribe to events: order_created, order_refunded, subscription_*
+#         After creating, click "Show signing secret" and copy
+# Format: ~32-char random string (hex or base64)
+# Used in `src/app/api/lemonsqueezy/webhook/route.ts` for HMAC SHA-256
+# verification of incoming `x-signature` header
+LEMONSQUEEZY_WEBHOOK_SECRET=<paste webhook signing secret>
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Reused existing var (already set on Vercel — do NOT re-set):
+# ─────────────────────────────────────────────────────────────────────────────
+# NEXT_PUBLIC_APP_URL=https://www.lancerwise.com
+#   Used by checkout route to build `redirectUrl` after successful purchase.
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# NOT NEEDED (despite earlier memory mention):
+# ─────────────────────────────────────────────────────────────────────────────
+# LEMONSQUEEZY_VARIANT_FREE     ← Free tier has no LS product. Free = no
+#                                   subscriptions row + profiles.plan='free'
+# NEXT_PUBLIC_LEMONSQUEEZY_STORE_URL ← not referenced in code; only needed if
+#                                       you add a "View on LemonSqueezy" link
+#                                       in UI (not required for launch)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Verification one-liner (after setting, before deploying):
+# ─────────────────────────────────────────────────────────────────────────────
+# vercel env ls production | grep -i LEMON  # should show 5 lines
+# vercel env ls preview    | grep -i LEMON  # should show 5 lines
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CLI gotcha (per memory feedback_vercel_cli_ai_agent_env.md):
+# ─────────────────────────────────────────────────────────────────────────────
+# If running from Claude Code (AI_AGENT env detected by Vercel CLI),
+# `vercel env add` outputs JSON guidance instead of running. Workaround:
+#
+# 1. Get current project ID:
+#    cat .vercel/project.json | jq -r .projectId
+#
+# 2. Add each var via REST API:
+#    curl -X POST "https://api.vercel.com/v10/projects/$PROJECT_ID/env" \
+#      -H "Authorization: Bearer $VERCEL_TOKEN" \
+#      -H "Content-Type: application/json" \
+#      -d '{
+#        "key": "LEMONSQUEEZY_API_KEY",
+#        "value": "...",
+#        "target": ["production", "preview"],
+#        "type": "encrypted"
+#      }'
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# After all 5 set: Vercel auto-redeploys on next git push.
+# Manually trigger via: vercel --prod  (or the Vercel UI "Redeploy" button)
+# ─────────────────────────────────────────────────────────────────────────────
