@@ -1,0 +1,119 @@
+=== LS API verification (post-creation) ===
+
+--- STORE ---
+{
+    "jsonapi": {
+        "version": "1.0"
+    },
+    "links": {
+        "self": "https://api.lemonsqueezy.com/v1/stores/370871"
+    },
+    "data": {
+        "type": "stores",
+        "id": "370871",
+        "attributes": {
+            "name": "LancerWise",
+            "slug": "lancerwise",
+            "domain": "lancerwise.lemonsqueezy.com",
+            "url": "https://lancerwise.lemonsqueezy.com",
+            "avatar_url": "https://eu.ui-avatars.com/api/?name=LancerWise&length=1&background=2DD272&color=fff&size=64&rounded=true",
+            "plan": "free",
+            "country": "VN",
+            "country_nicename": "Viet Nam",
+            "currency": "USD",
+
+--- PRODUCT 1067890 ---
+{
+    "jsonapi": {
+        "version": "1.0"
+    },
+    "links": {
+        "self": "https://api.lemonsqueezy.com/v1/products/1067890"
+    },
+    "data": {
+        "type": "products",
+        "id": "1067890",
+        "attributes": {
+            "store_id": 370871,
+            "name": "Pro",
+            "slug": "pro",
+            "description": "<p>Lancerwise Pro \u2014 unlimited clients, invoices, AI features</p>",
+            "status": "published",
+            "status_formatted": "Published",
+            "thumb_url": null,
+            "large_thumb_url": null,
+            "price": 1500,
+            "price_formatted": "$15.00/month",
+            "from_price": null,
+            "to_price": null,
+            "pay_what_you_want": false,
+            "buy_now_url": "https://lancerwise.lemonsqueezy.com/checkout/buy/2ab113ee-7299-42aa-87c8-9f47ffd3b52b",
+
+--- VARIANT 1673993 ---
+{
+    "jsonapi": {
+        "version": "1.0"
+    },
+    "links": {
+        "self": "https://api.lemonsqueezy.com/v1/variants/1673993"
+    },
+    "data": {
+        "type": "variants",
+        "id": "1673993",
+        "attributes": {
+            "price": 1500,
+            "is_subscription": true,
+            "interval": "month",
+            "interval_count": 1,
+            "has_free_trial": false,
+            "trial_interval": "day",
+            "trial_interval_count": 30,
+            "pay_what_you_want": false,
+            "min_price": 0,
+            "suggested_price": 0,
+            "product_id": 1067890,
+            "name": "Default",
+            "slug": "2ab113ee-7299-42aa-87c8-9f47ffd3b52b",
+            "description": "",
+            "links": [],
+            "has_license_keys": false,
+            "license_activation_limit": 5,
+            "is_license_limit_unlimited": false,
+            "license_length_value": 1,
+            "license_length_unit": "years",
+            "is_license_length_unlimited": false,
+            "sort": 1,
+            "status": "pending",
+            "status_formatted": "Pending",
+
+--- WEBHOOK 101618 ---
+{
+    "jsonapi": {
+        "version": "1.0"
+    },
+    "links": {
+        "self": "https://api.lemonsqueezy.com/v1/webhooks/101618"
+    },
+    "data": {
+        "type": "webhooks",
+        "id": "101618",
+        "attributes": {
+            "store_id": 370871,
+            "url": "https://www.lancerwise.com/api/lemonsqueezy/webhook",
+            "events": [
+                "order_created",
+                "order_refunded",
+                "subscription_created",
+                "subscription_updated",
+                "subscription_cancelled",
+                "subscription_resumed",
+                "subscription_expired",
+                "subscription_paused",
+                "subscription_unpaused",
+                "subscription_payment_success",
+                "subscription_payment_failed",
+                "subscription_payment_recovered",
+                "subscription_payment_refunded"
+            ],
+            "last_sent_at": null,
+            "created_at": "2026-05-19T05:39:31.000000Z",
