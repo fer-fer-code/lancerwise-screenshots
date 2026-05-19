@@ -1,0 +1,9 @@
+endpoint                                           method status  duration_s notes
+-------------------------------------------------- ------ ------- ----------
+/api/stripe/webhook                                POST   503     0.746947s x-matched-path: /api/stripe/webhook
+/api/lemonsqueezy/webhook                          POST   200     0.765188s x-matched-path: /_not-found
+/api/webhooks/test                                 POST   401     0.573467s x-matched-path: /api/webhooks/test
+/api/webhooks/fire                                 POST   401     0.491144s x-matched-path: /api/webhooks/fire
+/api/gmail/callback                                POST   405     0.782598s x-matched-path: /api/gmail/callback
+/api/outlook/callback                              POST   405     0.570313s x-matched-path: /api/outlook/callback
+/api/payments/webhook                              POST   503     0.502645s x-matched-path: /api/payments/webhook

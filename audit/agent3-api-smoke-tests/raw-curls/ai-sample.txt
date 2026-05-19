@@ -1,0 +1,5 @@
+endpoint                                           method status  duration_s
+-------------------------------------------------- ------ ------- ----------
+/api/v1/ai/invoice-description-writer              POST   401     1.489126s
+/api/ai/scan-receipt                               POST   400     1.677117s
+/api/v1/ai/generate-contract                       POST   401     0.929560s

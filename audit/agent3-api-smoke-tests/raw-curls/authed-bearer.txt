@@ -1,0 +1,13 @@
+endpoint                                           method status  duration_s x-matched
+-------------------------------------------------- ------ ------- ----------
+/api/clients                                       GET    401     0.566268s x-matched-path: /api/clients
+/api/invoices                                      GET    401     0.420614s x-matched-path: /api/invoices
+/api/time-entries                                  GET    401     0.455681s x-matched-path: /api/time-entries
+/api/projects                                      GET    401     0.844538s x-matched-path: /api/projects
+/api/profile                                       GET    401     0.682648s x-matched-path: /api/profile
+/api/settings                                      GET    401     0.430291s x-matched-path: /api/settings
+/api/billing/status                                GET    401     0.505235s x-matched-path: /api/billing/status
+/api/dashboard/stats                               GET    401     0.417887s x-matched-path: /api/dashboard/stats
+/api/expenses                                      GET    401     0.749027s x-matched-path: /api/expenses
+/api/notifications                                 GET    200     0.572372s x-matched-path: /api/notifications
+/api/analytics/forecast                            GET    401     0.480319s x-matched-path: /api/analytics/forecast

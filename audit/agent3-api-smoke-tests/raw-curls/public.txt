@@ -1,0 +1,15 @@
+endpoint                                      method status  duration_s notes
+--------------------------------------------- ------ ------- ----------
+/sitemap.xml                                  GET    200     0.397633s
+/robots.txt                                   GET    200     0.499406s
+/blog/rss.xml                                 GET    200     0.357765s
+/favicon.ico                                  GET    200     0.437334s
+/api/contact-form                             POST   403     0.586943s x-matched-path: /api/contact-form
+/api/tools/newsletter                         POST   401     0.505074s x-matched-path: /api/tools/newsletter
+/api/tools/welcome-kit                        GET    405     0.491043s x-matched-path: /api/tools/welcome-kit
+/api/tools/bio-generator                      GET    405     0.492844s x-matched-path: /api/tools/bio-generator
+/api/auth/login                               GET    404     1.299624s x-matched-path: /_not-found
+/api/auth/register                            GET    429     0.217466s 
+/api/sitemap                                  GET    404     1.249564s x-matched-path: /_not-found
+/api/health                                   GET    404     0.856170s x-matched-path: /_not-found
+/api/og                                       GET    404     0.837785s x-matched-path: /_not-found
