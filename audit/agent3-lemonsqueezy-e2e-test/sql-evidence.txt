@@ -1,0 +1,59 @@
+═══════════════════════════════════════════════
+PHASE 5 — After signed subscription_created webhook
+═══════════════════════════════════════════════
+
+🚨 P0 critical: profiles.plan must be 'pro'
+                  id                  |                   email                   | plan |    plan_expires_at     | lemonsqueezy_customer_id 
+--------------------------------------+-------------------------------------------+------+------------------------+--------------------------
+ 7572a8c5-980f-49ae-8b91-88e2b74c7995 | lancerwise-e2e-launch-1779170400@wshu.net | pro  | 2026-06-18 06:35:40+00 | 9999001
+
+subscriptions row
+               user_id                | lemonsqueezy_subscription_id | lemonsqueezy_customer_id | status | plan_id | variant_id |  current_period_start  |   current_period_end   
+--------------------------------------+------------------------------+--------------------------+--------+---------+------------+------------------------+------------------------
+ 7572a8c5-980f-49ae-8b91-88e2b74c7995 | e2e-test-sub-7572a8c5        | 9999001                  | active | pro     | 1673993    | 2026-05-19 06:35:40+00 | 2026-06-18 06:35:40+00
+
+subscription_events
+ lemonsqueezy_subscription_id |      event_type      |          created_at          
+------------------------------+----------------------+------------------------------
+ e2e-test-sub-7572a8c5        | subscription_created | 2026-05-19 06:35:41.61093+00
+
+
+═══════════════════════════════════════════════
+PHASE 7 — After signed subscription_cancelled webhook
+═══════════════════════════════════════════════
+
+subscriptions
+  status   | cancel_at_period_end |   current_period_end   
+-----------+----------------------+------------------------
+ cancelled | t                    | 2026-06-18 06:35:40+00
+
+profiles.plan must still be 'pro' (period not yet ended)
+ plan |    plan_expires_at     
+------+------------------------
+ pro  | 2026-06-18 06:35:40+00
+
+
+═══════════════════════════════════════════════
+PHASE 8 — After signed subscription_expired webhook
+═══════════════════════════════════════════════
+
+subscriptions
+ status  
+---------
+ expired
+
+🚨 profiles.plan MUST be 'free':
+ plan | plan_expires_at 
+------+-----------------
+ free | 
+
+
+═══════════════════════════════════════════════
+PHASE 9 — Cleanup verification (all 0 rows for test user)
+═══════════════════════════════════════════════
+          t          | count 
+---------------------+-------
+ profiles            |     0
+ subscriptions       |     0
+ subscription_events |     0
+ auth.users          |     0
