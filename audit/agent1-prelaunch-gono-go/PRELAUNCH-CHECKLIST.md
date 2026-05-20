@@ -18,14 +18,17 @@
 |---|---|---|---|---|---|
 | S1 | Turnstile bypass closed (memory #18) | ✅ | [AGENT 2] | done | `audit/agent2-turnstile-fix/` — Management API PATCH executed 2026-05-20 |
 | S2 | CAPTCHA enforced server-side | ✅ | [AGENT 2] | done | Same evidence. `security_captcha_enabled: true` post-PATCH. Confirmed via env broadcast: "CAPTCHA NOW ENABLED, 15/hr anon rate limit." |
-| S3 | #99 invoices RLS leak (anon SELECT) | ⏳ | [AGENT 2] | merging | PR #103 contains DROP. **Independent verification PASSED 4/4** ([AGENT 1] this session). Awaiting merge. |
-| S4 | #100 proposal_drafts RLS leak (anon SELECT) | ⏳ | [AGENT 2] | merging | Same PR #103. Same verification batch. |
-| S5 | #101 testimonials structural leak | ⏳ | TBD | queued | Issue [#101](https://github.com/fer-fer-code/lancerwise/issues/101) open. Fix: ~30min (drop 3 policies + change default). Currently 0 rows so no live exploit, but leaks on first insert. |
-| S6 | #97 PII scrub в Sentry | ⏳ | [AGENT 4] | PR open | PR #97 open, не merged. "fix(observability): scrub PII from Sentry events + apply #87 Path F (closes #89)" |
-| S7 | Comprehensive security audit (memory #15) | ⏳ | [AGENT 1] | partial | RLS audit of all 410 tables ✅ ([AGENT 1] `audit/agent1-rls-full-audit/`). Other surfaces (auth flow pen-test, OAuth state, secret rotation) **not done**. See ❌ items below. |
+| S3 | #99 invoices RLS leak (anon SELECT) | ✅ | [AGENT 2] | done | PR [#103](https://github.com/fer-fer-code/lancerwise/pull/103) merged 2026-05-20T05:08 UTC. Verification PASSED 4/4. |
+| S4 | #100 proposal_drafts RLS leak (anon SELECT) | ✅ | [AGENT 2] | done | Same PR #103, same verification batch. |
+| S5 | #101 testimonials structural leak | ✅ | [AGENT 2] | done | PR [#107](https://github.com/fer-fer-code/lancerwise/pull/107) merged 2026-05-20T05:41 UTC (consolidate RLS + flip is_public default). |
+| S6 | #97 PII scrub в Sentry (+ Path F build) | ✅ | [AGENT 4] | done | PR [#97](https://github.com/fer-fer-code/lancerwise/pull/97) merged 2026-05-20T14:43 UTC. Closes #87 (Path F) + #89 (source-map deprecation). Production-deployed via #117 cascade at 17:18 UTC. |
+| S7 | Comprehensive security audit (memory #15) | ⏳ | [AGENT 1] | partial | RLS audit of all 410 tables ✅ ([AGENT 1] `audit/agent1-rls-full-audit/`). **Auth flow regression suite ✅ added 2026-05-20** ([AGENT 1] `audit/agent1-auth-flow-regression/` — 7 flows × 2 locales; surfaced #114 + #115 both closed by PR #117). Remaining: OAuth state pen-test, secret rotation. Post-launch. |
 | S8 | #102 subscription_events `IS NULL` branch | ⏳ | TBD | deferred | P2/post-launch. 0 risk rows currently. |
+| S9 | **#116 next 16.2.6 — middleware bypass cluster** (added 2026-05-20 by [AGENT 3], P1 escalation from initial P2) | ⏳ | TBD | ~30 min | Issue [#116](https://github.com/fer-fer-code/lancerwise/issues/116). 6 of 13 applicable CVEs — including 3-high middleware-bypass cluster (GHSA-267c + GHSA-26hh + GHSA-492v) affecting auth gate on all 351 dynamic routes. Equivalent severity to closed RLS exploits #99/#100/#101. Full analysis: `audit/agent3-r1-next-upgrade-prep/`. |
+| S10 | **#114 Email verify + password reset session exchange** (added 2026-05-20 by [AGENT 1] auth audit) | ✅ | [AGENT 1] | done | PR [#117](https://github.com/fer-fer-code/lancerwise/pull/117) merged 2026-05-20T17:05 UTC, deployed 17:18 UTC. AuthHashHandler client component routes fragment-grant tokens. Smoke-verified live: signup → /onboarding, recovery → /reset-password. |
+| S11 | **#115 Onboarding cookie banner overlap** (P0 first-time UX) | ✅ | [AGENT 1] | done | Same PR #117. lw-app-main padding rule fires when banner open. Smoke-verified live: wizard step 1→2 advance без dismissing banner. |
 
-**Cannot launch without:** S1, S2, S3, S4, S5, S6.
+**Cannot launch without:** ~~S1, S2, S3, S4, S5, S6~~ ✅, **S9** ⏳ remaining.
 
 ---
 
@@ -35,8 +38,8 @@
 |---|---|---|---|---|---|
 | B1 | LANCERWISE-3 (#73 dashboard N+1) | ✅ | resolved | done | PRs #84 + #86 merged. Issue tracker shows "OPEN" but code-fixed and Sentry alert silent. Administrative close pending. |
 | B2 | LANCERWISE-4 (#74 invoices N+1) | ✅ | resolved | done | PR #91 merged 2026-05-19, #74 closed. |
-| B3 | #93 /work/time N+1 (95 calls) | ⏳ | TBD | 6-8h | Issue [#93](https://github.com/fer-fer-code/lancerwise/issues/93) open. Detailed fix scope в `audit/agent1-work-time-investigation/RECOMMENDED-FIX-SCOPE.md`. Mobile crash near-certain. |
-| B4 | #94 /settings N+1 (27 calls) | ⏳ | TBD | 3-4h | Issue [#94](https://github.com/fer-fer-code/lancerwise/issues/94) open. New-user onboarding path hits this. |
+| B3 | #93 /work/time N+1 (95 calls) | ⏳ | [AGENT 2] Phase 1 Stage 1 | 6-8h | Issue [#93](https://github.com/fer-fer-code/lancerwise/issues/93). Stage 1 в progress as of 2026-05-20. Detailed fix scope в `audit/agent1-work-time-investigation/RECOMMENDED-FIX-SCOPE.md`. Mobile crash near-certain без fix. |
+| B4 | #94 /settings N+1 (27 calls) | ⏳ | queued | 3-4h | Issue [#94](https://github.com/fer-fer-code/lancerwise/issues/94). Queued after #93 lands. New-user onboarding path hits this. |
 | B5 | LANCERWISE-7 Header notifications polling | ⏳ | TBD | post-launch | **Filed [#104](https://github.com/fer-fer-code/lancerwise/issues/104) (P2, post-launch, mobile-safari, observability).** Confirmed by orchestrator as separate scope от #90. Option A fix: ~30 min try/catch wrap + Sentry capture. Option B: ~2h Context refactor (would close с #90). |
 | B6 | New issues from QA campaign | ❌ | not yet | — | Will surface during memory #11 campaign. Buffer ~4-6h expected (per realistic estimate). |
 
@@ -52,11 +55,12 @@
 | I2 | Branch protection enabled (R2) | ✅ | done | Per env broadcast 2026-05-20: 3 required gates (eslint-i18n, locale-purity-ru, visual-regression). enforce_admins:false. |
 | I3 | #98 baseline refresh | ✅ | done | PR #98 merged 2026-05-20 03:23 UTC. |
 | I4 | Sentry release tagging | ✅ | done | Auto-wired via Vercel deploy hook. See `Architecture/SENTRY-OBSERVABILITY.md`. |
-| I5 | Sentry source maps (#89 deprecation warnings) | ⏳ | [AGENT 4] | PR #97 in flight ("closes #89") |
-| I6 | PII scrubbing | ⏳ | [AGENT 4] | Same PR #97 |
+| I5 | Sentry source maps (#89 deprecation warnings) | ✅ | done | PR #97 merged 2026-05-20T14:43 UTC. |
+| I6 | PII scrubbing | ✅ | done | Same PR #97. |
 | I7 | LemonSqueezy live + verified | ✅ | done | PR #75 webhook live; KYC cleared (per memory). |
+| I8 | **Vercel Enhanced Builds / build memory** (added 2026-05-20) | ✅ | done | Path F (PR #97) addressed OOM root cause. First post-Path-F production deploy verified clean: PR #117 (a548a2d8) at 2026-05-20T17:18 UTC. Note: #97 own first prod attempt transient-failed post-compile (see CLOSURES-2026-05-20 for analysis); recurrence не observed post-#117. |
 
-**Cannot launch without:** I5, I6 (PR #97 needs к merge — handles both в one cluster).
+**Cannot launch without:** ~~I5, I6~~ ✅ all closed.
 
 ---
 
@@ -89,15 +93,18 @@
 
 ## Summary by classification
 
-### Cannot launch without (true blockers)
+### Cannot launch without (true blockers) — updated 2026-05-20T18:00 UTC
 
 | Item | Status | Earliest unblock |
 |---|---|---|
-| S3+S4 #99/#100 RLS | ⏳ (PR #103 verified, awaiting merge) | within hours |
-| S5 #101 testimonials | ⏳ | ~30min once owned |
-| S6+I5+I6 PII scrub | ⏳ (PR #97) | within hours |
-| B3 #93 /work/time N+1 | ⏳ | 6-8h |
-| B4 #94 /settings N+1 | ⏳ | 3-4h |
+| ~~S3+S4 #99/#100 RLS~~ | ✅ PR #103 merged 05:08 UTC | resolved |
+| ~~S5 #101 testimonials~~ | ✅ PR #107 merged 05:41 UTC | resolved |
+| ~~S6+I5+I6 PII scrub + Path F~~ | ✅ PR #97 merged 14:43 UTC; deployed via #117 cascade 17:18 UTC | resolved |
+| ~~S10 #114 auth fragment exchange~~ | ✅ PR #117 merged 17:05, deployed 17:18 UTC, smoke 2/2 PASS | resolved |
+| ~~S11 #115 cookie banner overlap~~ | ✅ Same PR #117, smoke 1/1 PASS | resolved |
+| **S9 #116 next 16.2.6 middleware bypass** | ⏳ TBD owner | ~30 min once owned |
+| B3 #93 /work/time N+1 | ⏳ [AGENT 2] Phase 1 Stage 1 in progress | 6-8h |
+| B4 #94 /settings N+1 | ⏳ queued after #93 | 3-4h |
 
 ### Should fix pre-launch (raises risk if shipped without)
 
@@ -121,11 +128,12 @@
 
 ---
 
-## Open question marks (updated 2026-05-20 follow-up)
+## Open question marks (updated 2026-05-20T18:00 UTC)
 
 1. ~~B5 LANCERWISE-7~~ — **RESOLVED.** Confirmed separate от #90. Filed as [#104](https://github.com/fer-fer-code/lancerwise/issues/104), P2 post-launch.
-2. **D2 + D3** — Folder paths confirmed by orchestrator (`audit/agent4-incident-response-runbook/` + `audit/agent4-launch-observability-pkg/`) but **NOT yet pushed к screenshots repo `origin/main`** as of 2026-05-20 03:51 UTC. [AGENT 4] action needed.
-3. ~~D4 Privacy/ToS~~ — **RESOLVED via PR #105** (merged 2026-05-20 04:31 UTC). Three corrections shipped. RU translation tracked as P2 follow-up [#106](https://github.com/fer-fer-code/lancerwise/issues/106). **NOTE:** Subsequent /changelog cleanup PR #110 (commit 046bb0e3) merged 05:47 UTC but Vercel deploy OOM-failed — see #113. Production still serves stale "LemonSqueezy migration in progress" text on /changelog; defer pending #97 Path F.
+2. **D2 + D3** — Folder paths confirmed by orchestrator (`audit/agent4-incident-response-runbook/` + `audit/agent4-launch-observability-pkg/`). [AGENT 4] action needed. (Substitute: [`POST-LAUNCH-DAY-1-RUNBOOK.md`](../agent1-launch-readiness-master/POST-LAUNCH-DAY-1-RUNBOOK.md) covers minimal viable ops until [AGENT 4] docs land.)
+3. ~~D4 Privacy/ToS~~ — **RESOLVED via PR #105** (merged 04:31 UTC). ~~PR #110 changelog stale text~~ — also **RESOLVED**: deployed via #117 cascade at 17:18 UTC. Marketing re-verify 2026-05-20T18:00: `/privacy` has LemonSqueezy 6x + Roskomnadzor 2x + complaint 2x; `/changelog` "migration in progress" count = 0.
+4. **PR #97 first prod deploy transient failure** — `runAfterProductionCompile` step errored on first attempt (compile passed 21.8min, no OOM). Subsequent retry for #117 merge succeeded clean. Filed for monitoring; recurrence не observed. See CLOSURES-2026-05-20.
 
 ---
 

@@ -1,119 +1,137 @@
 # Estimate-to-Launch
 
 **Author:** [AGENT 1]
-**Date:** 2026-05-20
+**Date:** 2026-05-20 (revised T+18:00 UTC)
 **Method:** Sum hours from open blockers; identify critical path; surface dependencies.
+**Trajectory:** dramatically improved since morning estimate — see "Today's closures" below.
 
 ---
 
-## Optimistic timeline (everything goes well, no rework)
+## Today's closures (2026-05-20) — 12 items shipped
 
-Assumes: PR #103 merges cleanly, PR #97 merges cleanly, fixes pass CI first try, no unforeseen security/perf findings during final smoke.
+Documented в [`audit/agent1-launch-readiness-master/CLOSURES-2026-05-20.md`](../agent1-launch-readiness-master/CLOSURES-2026-05-20.md). Highlights:
+
+- ✅ S1+S2 Turnstile / server CAPTCHA enforcement
+- ✅ I1+I2 CI auth + branch protection + 3 required gates
+- ✅ I3 visual baseline refresh (PR #98)
+- ✅ S3+S4 RLS #99/#100 anon-leak (PR #103)
+- ✅ S5 #101 testimonials structural leak (PR #107)
+- ✅ D4 Privacy/ToS GDPR Art. 13(2)(d) (PR #105)
+- ✅ S6+I5+I6 PII scrub + source maps + Path F build (PR #97)
+- ✅ #114 + #115 auth fragment handler + onboarding cookie banner (PR #117)
+- ✅ #110 changelog stale text (deployed via #117 cascade)
+- ✅ I8 Vercel Enhanced Builds / build memory (Path F validated post-deploy)
+- ✅ Auth flow regression audit (7 flows × 2 locales)
+- ✅ #112 + #113 follow-up investigations filed
+
+---
+
+## What remains (revised T+18:00)
+
+### Critical path
+
+| Item | Status | Time | Notes |
+|---|---|---|---|
+| #93 /work/time N+1 | ⏳ Phase 1 Stage 1 in progress ([AGENT 2]) | ~6-8h focused | Biggest single bottleneck — 101 widgets one route. Serialised on one engineer. |
+| #94 /settings N+1 | ⏳ queued | ~3-4h | Can ship parallel к #93 (different files) |
+| #116 next 16.2.6 middleware bypass | ⏳ needs owner | ~30 min | Quick fix; cluster с next minor security cascade |
+| Final smoke + sign-off | ⏳ post-fixes | ~1-2h | Multiple full-flow checks desktop/mobile/EN/RU |
+
+**Critical-path duration: ~7-10h focused work** (assumes #93 and #94 parallel — max(#93,#94) + #116 + smoke).
+
+### Important но не strict blockers
+
+| Item | Status | Time | Notes |
+|---|---|---|---|
+| QA campaign (memory #11) | ❌ not started | 6-10h parallel | Triggers met (LemonSqueezy live + P1-A done + auth audit done) |
+| Re-baseline post-#93/#94 | ⏳ scheduled | ~1h | Capture + commit |
+| D2 + D3 ([AGENT 4] runbooks) | ⏳ awaiting push | — | Minimal viable substitutes already в `audit/agent1-launch-readiness-master/POST-LAUNCH-DAY-1-RUNBOOK.md` |
+
+QA campaign can run в parallel с #93/#94 work since it covers different surfaces. Re-baseline runs post-perf-fixes.
+
+---
+
+## Revised timelines
+
+### Optimistic (everything goes well, parallel work)
 
 | Step | Time | Cumulative |
 |---|---|---|
-| PR #103 merge (#99 + #100 RLS) | ~30 min (post-verification approval done) | T+0:30 |
-| PR #97 merge (PII scrub + #87 Path F) | ~30 min | T+1:00 |
-| #101 testimonials fix (drop 3 policies, change default, deploy) | ~1h | T+2:00 |
-| #94 /settings N+1 (3-4h focused) | 3-4h | T+5-6:00 |
-| #93 /work/time N+1 (6-8h focused) | 6-8h | **T+11-14:00** |
-| Re-baseline post-perf-fixes ([AGENT 3]) | ~1h | T+12-15:00 |
-| QA campaign sweep (memory #11) | 6-10h focused across 4 agents | T+18-25:00 |
-| Final smoke + sign-off | ~1-2h | T+20-27:00 |
+| #93 + #94 в parallel (max=#93) | 6-8h | T+8:00 |
+| #116 (concurrent с above) | 30 min | T+8:00 |
+| Re-baseline | 1h | T+9:00 |
+| QA campaign sweep (parallel) | overlapping; tail = ~1h after #93 | T+9-10:00 |
+| Final smoke + sign-off | 1-2h | **T+10-12:00** |
 
-**Optimistic ETA: ~20-27 hours focused work от 2026-05-20 03:50 UTC.** Roughly **1.5-2 work-days** if все agents parallel and no surprises.
+**Optimistic ETA: ~7-10 hours focused work** from 2026-05-20T18:00 UTC. About **1 work-day** with parallel agents.
 
----
-
-## Realistic timeline (с typical retry, rework, surprises)
-
-Assumes: 30-40% overhead from CI flakes, baseline drift, last-minute findings, scope reconciliation.
+### Realistic (с typical retry, rework, surprises)
 
 | Step | Realistic time | Reason for slippage |
 |---|---|---|
-| PR #103 merge | ~1h | Branch protection + CI gates can flake on visual-regression |
-| PR #97 merge | ~1h | Same |
-| #101 testimonials fix | ~2h | Includes regression check on testimonial display pages + schema migration tracking quirks |
+| #93 /work/time N+1 | 8-12h | 101 widgets is biggest refactor of this class; iOS real-device validation adds time |
 | #94 /settings N+1 | 5-6h | Settings has 41 widgets across many sub-pages; testing surface broad |
-| #93 /work/time N+1 | 8-12h | 101 widgets is the biggest refactor of this class. Real-device iOS validation adds time. |
-| Re-baseline | ~2h | Capture + manual review + commit |
+| #116 middleware bypass | 1h | npm upgrade + visual-regression baseline check |
+| Re-baseline | 2h | Capture + manual review + commit |
 | QA campaign | 12-18h | Typically surfaces 3-5 new P2/P3 items requiring small fixes mid-campaign |
-| Last-minute findings | 4-6h | Buffer for unforeseen issues that surface during campaign |
-| Final smoke + sign-off | 2-3h | Multiple full-flow checks across desktop/mobile/EN/RU |
+| Last-minute findings | 4-6h | Buffer for unforeseen issues |
+| Final smoke + sign-off | 2-3h | Multiple full-flow checks desktop/mobile/EN/RU |
 
-**Realistic ETA: ~36-50 hours focused work.** Roughly **3-4 work-days** with parallel agents.
+**Realistic ETA: ~15-20 hours focused work** (assumes #93/#94 parallel, QA campaign tail). About **2 work-days**.
 
 ---
 
-## Critical path bottlenecks
+## Critical path bottlenecks (today's view)
 
-The chain that determines fastest-possible launch:
+1. **#93 /work/time N+1** — still biggest single bottleneck. Phase 1 Stage 1 in progress. Cannot be parallelised.
+2. **QA campaign** — can run в parallel с code work; critical path is slowest tester.
+3. **#116 middleware bypass** — quick when started, just needs owner picked up.
 
-1. **#93 /work/time N+1 (6-8h optimistic, 8-12h realistic)** — the **biggest single bottleneck**. 101 widgets. Cannot be parallelised because it's all one file/route. Must serialise on one engineer.
-2. **QA campaign (6-10h optimistic, 12-18h realistic)** — must follow code-freeze of перf fixes. Can be parallelised across agents, но critical path is the slowest tester.
-3. **PR #103 merge** — gates next #101 fix (similar surface area, want к deploy in sequence к isolate diff effects).
-
-**Other items are parallel и not on critical path:**
-- #97 PII scrub — independent, can ship anytime
-- #94 /settings — can ship in parallel с #93 (different files)
-- D2/D3 (runbooks) — documentation, не gating
-- D4 (legal review) — out-of-band, can run async
+**No longer на critical path (now closed):**
+- ~~S3+S4+S5 RLS leaks~~
+- ~~S6/I5/I6 PII + Path F~~
+- ~~#114 + #115 auth flow~~
+- ~~Privacy/ToS GDPR review~~
 
 ---
 
 ## Dependencies
 
 ```
-PR #103 (#99 + #100) ─┐
-PR #97 (PII scrub) ───┼─→ Final smoke ─→ Launch decision
-#101 testimonials ────┤
-#94 /settings ────────┤
-#93 /work/time ────────┘
-       ↓
-   QA campaign (memory #11)
-       ↓
-   re-baseline ([AGENT 3])
-       ↓
-   Sign-off
+#94 /settings ────┐
+#93 /work/time ───┼─→ Re-baseline ─→ Final smoke ─→ Launch decision
+#116 next 16.2.6 ─┘                        ↑
+                                            │
+                              QA campaign (memory #11)
+                              (runs в parallel)
 ```
-
-#103 has my approval comment posted; awaits [AGENT 2] merge action. Once merged, #101 should follow within the same security-fix sprint.
 
 ---
 
-## What could push timeline out further
+## What could push timeline out
 
 | Risk | Probability | Cost |
 |---|---|---|
-| #93 fix introduces new regression (React error #418 fix complicates) | medium | +4-6h |
-| QA campaign surfaces new P1 (not just P2/P3) | low-medium | +8-12h |
+| #93 fix introduces new regression | medium | +4-6h |
+| QA campaign surfaces new P0/P1 (not just P2/P3) | low-medium | +8-12h |
 | Visual-regression baseline drifts again post-fix | medium | +2h per re-baseline |
-| Legal review of Privacy/ToS surfaces blocking change | low | +2-4h |
-| LemonSqueezy live-payment issue with first real customers | low | +emergency cycle (~1-2h) |
 | iOS real-device test on /work/time still crashes (different cause) | low-medium | +unknown, would need re-investigation |
+| Vercel `runAfterProductionCompile` flake recurs | low | +retry-cycle (~30min) — monitored post-#97 incident |
 
 ---
 
 ## Recommended sequence
 
-Given the dependencies and critical path:
+**Sprint 1 (perf cluster — in progress now):**
+- [AGENT 2] #93 /work/time (Phase 1 Stage 1 → Stage 2)
+- TBD #94 /settings (start parallel когда [AGENT 2] capacity allows)
+- TBD #116 middleware-bypass upgrade (can start anytime, 30 min)
 
-**Sprint 1 (security cluster) — within hours:**
-- Merge PR #103 (S3 + S4)
-- Merge PR #97 (S6 + I5 + I6)
-- Fix + ship #101 (S5)
-- All under [AGENT 2] + [AGENT 4]
+**Sprint 2 (QA campaign — parallel с Sprint 1):**
+- Memory #11 trigger met
+- All 4 agents в parallel surfaces (with PR #88 draft fixtures)
 
-**Sprint 2 (performance cluster) — same day:**
-- #94 /settings (~4h) — start as soon as PR #103 merged
-- #93 /work/time (~8h, parallel) — same start
-
-**Sprint 3 (QA campaign) — next 1-2 days:**
-- Memory #11 trigger
-- All 4 agents в parallel surfaces
-- Fixtures ready (PR #88 draft)
-
-**Sprint 4 (final smoke + launch):**
+**Sprint 3 (final smoke + launch):**
 - Re-baseline performance
 - Verify все security re-probe (anon SELECT each affected table)
 - Sign-off
@@ -122,12 +140,13 @@ Given the dependencies and critical path:
 
 ## Honest assessment
 
-**Earliest reasonable launch: ~2 calendar days от now (2026-05-22).**
-**Realistic launch: ~3-4 calendar days (2026-05-23 к 2026-05-24).**
+**Earliest reasonable launch: ~10-12 hours from now (2026-05-21 morning UTC).**
+**Realistic launch: ~1-2 calendar days (2026-05-21 к 2026-05-22).**
 
-If forced к launch sooner с some items deferred, см. RISK-ACCEPTANCE.md для what's safe vs not.
+This is а **dramatic improvement** от morning estimate (which had ~36-50h realistic). Today's 12 closures collapsed most of the blocker stack — only the perf cluster (#93/#94) + #116 remain on critical path, plus QA campaign.
 
 ## Cross-references
 
 - PRELAUNCH-CHECKLIST.md — full item status
 - RISK-ACCEPTANCE.md — what's defer-able с monitoring
+- [`CLOSURES-2026-05-20.md`](../agent1-launch-readiness-master/CLOSURES-2026-05-20.md) — today's 12 closures inventory
