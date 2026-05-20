@@ -1,0 +1,22 @@
+HTTP/2 200 
+date: Wed, 20 May 2026 03:33:24 GMT
+content-type: application/json; charset=utf-8
+content-length: 2
+content-range: */0
+cf-ray: 9fe84795189a06a5-HKG
+cf-cache-status: DYNAMIC
+content-location: /invoices?select=id
+server: cloudflare
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+x-content-type-options: nosniff
+content-profile: public
+preference-applied: count=exact
+sb-gateway-version: 1
+sb-project-ref: skfgwyzarrhhkzvltbgm
+sb-request-id: 019e4371-f92f-7ef5-8996-3003c8fde24e
+x-envoy-attempt-count: 1
+x-envoy-upstream-service-time: 571
+set-cookie: __cf_bm=GcQFthy1WetWeQgVXRDg.yFgx_Vv8fpmOogvVAYIAVk-1779248003.3718755-1.0.1.1-3DwsTlgjLXBq_u7SKgHYHaq_Zj7X.U.dO47faY2toAcH0rSvaeKv.oBHrmHURrOkmLNXF7Rm80oa6TQxxOtDa7RXDY6yB.M1oGh4XnrURUlESCWlpI14tJC8htpk0pHa; HttpOnly; SameSite=None; Secure; Path=/; Domain=supabase.co; Expires=Wed, 20 May 2026 04:03:24 GMT
+alt-svc: h3=":443"; ma=86400
+
+[]
