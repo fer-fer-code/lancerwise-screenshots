@@ -37,9 +37,10 @@
 | B2 | LANCERWISE-4 (#74 invoices N+1) | ✅ | resolved | done | PR #91 merged 2026-05-19, #74 closed. |
 | B3 | #93 /work/time N+1 (95 calls) | ⏳ | TBD | 6-8h | Issue [#93](https://github.com/fer-fer-code/lancerwise/issues/93) open. Detailed fix scope в `audit/agent1-work-time-investigation/RECOMMENDED-FIX-SCOPE.md`. Mobile crash near-certain. |
 | B4 | #94 /settings N+1 (27 calls) | ⏳ | TBD | 3-4h | Issue [#94](https://github.com/fer-fer-code/lancerwise/issues/94) open. New-user onboarding path hits this. |
-| B5 | LANCERWISE-7 Header notifications polling | ⚠️ | TBD | unknown | No issue # found в open list. May be tracked under #90 (notifications memoization gap is part of that FCP scope). Verify or file separately. |
+| B5 | LANCERWISE-7 Header notifications polling | ⏳ | TBD | post-launch | **Filed [#104](https://github.com/fer-fer-code/lancerwise/issues/104) (P2, post-launch, mobile-safari, observability).** Confirmed by orchestrator as separate scope от #90. Option A fix: ~30 min try/catch wrap + Sentry capture. Option B: ~2h Context refactor (would close с #90). |
+| B6 | New issues from QA campaign | ❌ | not yet | — | Will surface during memory #11 campaign. Buffer ~4-6h expected (per realistic estimate). |
 
-**Cannot launch without:** B3 (mobile crash), B4 (perf). B5 unclear — depends on actual scope.
+**Cannot launch without:** B3 (mobile crash), B4 (perf). **B5 (#104) deferred — P2 post-launch с monitoring** (Sentry alert on LANCERWISE-7 plus future Option B refactor).
 
 ---
 
@@ -78,9 +79,9 @@
 | # | Item | Status | Owner | Evidence |
 |---|---|---|---|---|
 | D1 | Obsidian vault seeded | ✅ | done | [AGENT 1] 24 files / 12,033 words / 59 wikilinks all resolved. `/Users/myoffice/lancerwise-knowledge/` |
-| D2 | Incident response runbook | ⚠️ | unknown | Referenced as [AGENT 4] deliverable. Filesystem search did NOT find a folder by that name под `audit/`. Awaiting confirmation from [AGENT 4] OR location pointer. |
-| D3 | Launch day monitoring checklist | ⚠️ | unknown | Same — referenced [AGENT 4] but no folder visible. Verify or create. |
-| D4 | Privacy Policy / ToS review | ⏳ | TBD | Privacy and Terms pages live и translated к RU (Bug #024). Content review by legal/Ramiz — status unclear. |
+| D2 | Incident response runbook | ⏳ | [AGENT 4] | **Per orchestrator: located at `audit/agent4-incident-response-runbook/` в screenshots repo (declaration / triage / rollback / templates / escalation).** Verified не yet pushed к `origin/main` as of 2026-05-20 03:51 UTC. Awaiting [AGENT 4] push. |
+| D3 | Launch day monitoring checklist | ⏳ | [AGENT 4] | **Per orchestrator: located at `audit/agent4-launch-observability-pkg/` (monitoring checklist + error budget + dashboard config + webhook monitoring).** Same — не yet pushed к origin. Awaiting [AGENT 4] push. |
+| D4 | Privacy Policy / ToS review | ⏳ | Ramiz | Privacy and Terms pages live и translated к RU (Bug #024). Legal sign-off pending — orchestrator surfacing к Ramiz. Will update когда confirmed. |
 
 **Recommended before launch:** D2 + D3 — operational essentials. D4 — legal sign-off.
 
@@ -120,11 +121,11 @@
 
 ---
 
-## Open question marks
+## Open question marks (updated 2026-05-20 follow-up)
 
-1. **B5 LANCERWISE-7** — Is это #90 (FCP notifications memoization), а separate issue, or off-tracker? Verify before launch.
-2. **D2 + D3** — Where are [AGENT 4]'s runbooks? If not in `audit/agent4-*` or similar, may not be done.
-3. **D4 Privacy/ToS** — Legal review status unclear. Content shipped (Bug #024 dark theme + i18n done) but who signed off?
+1. ~~B5 LANCERWISE-7~~ — **RESOLVED.** Confirmed separate от #90. Filed as [#104](https://github.com/fer-fer-code/lancerwise/issues/104), P2 post-launch.
+2. **D2 + D3** — Folder paths confirmed by orchestrator (`audit/agent4-incident-response-runbook/` + `audit/agent4-launch-observability-pkg/`) but **NOT yet pushed к screenshots repo `origin/main`** as of 2026-05-20 03:51 UTC. [AGENT 4] action needed.
+3. **D4 Privacy/ToS** — Orchestrator surfacing к Ramiz для sign-off. Pending.
 
 ## Cross-references
 
