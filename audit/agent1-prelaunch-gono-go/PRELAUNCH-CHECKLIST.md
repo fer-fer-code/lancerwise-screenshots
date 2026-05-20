@@ -125,7 +125,20 @@
 
 1. ~~B5 LANCERWISE-7~~ — **RESOLVED.** Confirmed separate от #90. Filed as [#104](https://github.com/fer-fer-code/lancerwise/issues/104), P2 post-launch.
 2. **D2 + D3** — Folder paths confirmed by orchestrator (`audit/agent4-incident-response-runbook/` + `audit/agent4-launch-observability-pkg/`) but **NOT yet pushed к screenshots repo `origin/main`** as of 2026-05-20 03:51 UTC. [AGENT 4] action needed.
-3. ~~D4 Privacy/ToS~~ — **PARTIALLY RESOLVED.** [AGENT 1] investigation @ [`audit/agent1-privacy-tos-status/`](../agent1-privacy-tos-status/) confirms: 3 pages live, cookie banner consent-gated correctly, zero tracking без consent. **Two ~7-minute blocker edits identified**: Privacy § 4 stale Stripe-billing mention, Privacy § 7 missing right-to-complain. RU translation deferred к post-launch с mitigation banner (Art. 12). Awaiting Ramiz approve-to-execute.
+3. ~~D4 Privacy/ToS~~ — **RESOLVED via PR #105** (merged 2026-05-20 04:31 UTC). Three corrections shipped. RU translation tracked as P2 follow-up [#106](https://github.com/fer-fer-code/lancerwise/issues/106). **NOTE:** Subsequent /changelog cleanup PR #110 (commit 046bb0e3) merged 05:47 UTC but Vercel deploy OOM-failed — see #113. Production still serves stale "LemonSqueezy migration in progress" text on /changelog; defer pending #97 Path F.
+
+---
+
+## Post-launch backlog additions (2026-05-20 dual investigation follow-up)
+
+| Issue | Title | Severity | Trigger date |
+|---|---|---|---|
+| [#112](https://github.com/fer-fer-code/lancerwise/issues/112) | public.proposals migration drift — 18 backend refs (REST v1 + AI advisor + 4 crons) | P2 post-launch | First user-visible failure: 2026-05-28 to 05-31 (monthly-revenue-forecast cron) |
+| [#113](https://github.com/fer-fer-code/lancerwise/issues/113) | /changelog stale text — PR #110 OOM blocked deploy (known until #97 Path F lands) | P3 post-launch | Cosmetic only; deferred |
+
+Sentry alert configured (UI recipe): [`SENTRY-ALERT-SPEC.md`](../agent1-proposals-migration-investigation/SENTRY-ALERT-SPEC.md) — catches `relation "public.proposals" does not exist` errors, Telegram + email notification, severity High.
+
+Investigation: [`audit/agent1-proposals-migration-investigation/`](../agent1-proposals-migration-investigation/).
 
 ## Cross-references
 
