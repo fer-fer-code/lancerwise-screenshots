@@ -24,11 +24,11 @@
 | S6 | #97 PII scrub в Sentry (+ Path F build) | ✅ | [AGENT 4] | done | PR [#97](https://github.com/fer-fer-code/lancerwise/pull/97) merged 2026-05-20T14:43 UTC. Closes #87 (Path F) + #89 (source-map deprecation). Production-deployed via #117 cascade at 17:18 UTC. |
 | S7 | Comprehensive security audit (memory #15) | ⏳ | [AGENT 1] | partial | RLS audit of all 410 tables ✅ ([AGENT 1] `audit/agent1-rls-full-audit/`). **Auth flow regression suite ✅ added 2026-05-20** ([AGENT 1] `audit/agent1-auth-flow-regression/` — 7 flows × 2 locales; surfaced #114 + #115 both closed by PR #117). Remaining: OAuth state pen-test, secret rotation. Post-launch. |
 | S8 | #102 subscription_events `IS NULL` branch | ⏳ | TBD | deferred | P2/post-launch. 0 risk rows currently. |
-| S9 | **#116 next 16.2.6 — middleware bypass cluster** (added 2026-05-20 by [AGENT 3], P1 escalation from initial P2) | ⏳ | TBD | ~30 min | Issue [#116](https://github.com/fer-fer-code/lancerwise/issues/116). 6 of 13 applicable CVEs — including 3-high middleware-bypass cluster (GHSA-267c + GHSA-26hh + GHSA-492v) affecting auth gate on all 351 dynamic routes. Equivalent severity to closed RLS exploits #99/#100/#101. Full analysis: `audit/agent3-r1-next-upgrade-prep/`. |
+| S9 | **#116 next 16.2.6 — middleware bypass cluster** | ✅ | [AGENT 3] | done | PR [#122](https://github.com/fer-fer-code/lancerwise/pull/122) merged. Production-deployed via commit `9d54ff73` at 2026-05-20T18:14 UTC (success state). 6 CVEs sealed. |
 | S10 | **#114 Email verify + password reset session exchange** (added 2026-05-20 by [AGENT 1] auth audit) | ✅ | [AGENT 1] | done | PR [#117](https://github.com/fer-fer-code/lancerwise/pull/117) merged 2026-05-20T17:05 UTC, deployed 17:18 UTC. AuthHashHandler client component routes fragment-grant tokens. Smoke-verified live: signup → /onboarding, recovery → /reset-password. |
 | S11 | **#115 Onboarding cookie banner overlap** (P0 first-time UX) | ✅ | [AGENT 1] | done | Same PR #117. lw-app-main padding rule fires when banner open. Smoke-verified live: wizard step 1→2 advance без dismissing banner. |
 
-**Cannot launch without:** ~~S1, S2, S3, S4, S5, S6~~ ✅, **S9** ⏳ remaining.
+**Cannot launch without:** ~~S1, S2, S3, S4, S5, S6, S9~~ ✅ all closed.
 
 ---
 
@@ -38,8 +38,8 @@
 |---|---|---|---|---|---|
 | B1 | LANCERWISE-3 (#73 dashboard N+1) | ✅ | resolved | done | PRs #84 + #86 merged. Issue tracker shows "OPEN" but code-fixed and Sentry alert silent. Administrative close pending. |
 | B2 | LANCERWISE-4 (#74 invoices N+1) | ✅ | resolved | done | PR #91 merged 2026-05-19, #74 closed. |
-| B3 | #93 /work/time N+1 (95 calls) | ⏳ | [AGENT 2] Phase 1 Stage 1 | 6-8h | Issue [#93](https://github.com/fer-fer-code/lancerwise/issues/93). Stage 1 в progress as of 2026-05-20. Detailed fix scope в `audit/agent1-work-time-investigation/RECOMMENDED-FIX-SCOPE.md`. Mobile crash near-certain без fix. |
-| B4 | #94 /settings N+1 (27 calls) | ⏳ | queued | 3-4h | Issue [#94](https://github.com/fer-fer-code/lancerwise/issues/94). Queued after #93 lands. New-user onboarding path hits this. |
+| B3 | #93 /work/time N+1 (95 calls) | ⏳ Stage 1 done | [AGENT 2] | ~3-5h remaining | Issue [#93](https://github.com/fer-fer-code/lancerwise/issues/93). **Stage 1 (infrastructure: DataProvider + Promise.all) shipped via PR [#119](https://github.com/fer-fer-code/lancerwise/pull/119) — production-deployed via `9d54ff73` at 18:14 UTC.** Stage 2 (widget migration к provider consumer) в flight. Detailed fix scope в `audit/agent1-work-time-investigation/RECOMMENDED-FIX-SCOPE.md`. |
+| B4 | #94 /settings N+1 (27 calls) | ⏳ | queued | 3-4h | Issue [#94](https://github.com/fer-fer-code/lancerwise/issues/94). Queued after #93 lands fully. New-user onboarding path hits this. |
 | B5 | LANCERWISE-7 Header notifications polling | ⏳ | TBD | post-launch | **Filed [#104](https://github.com/fer-fer-code/lancerwise/issues/104) (P2, post-launch, mobile-safari, observability).** Confirmed by orchestrator as separate scope от #90. Option A fix: ~30 min try/catch wrap + Sentry capture. Option B: ~2h Context refactor (would close с #90). |
 | B6 | New issues from QA campaign | ❌ | not yet | — | Will surface during memory #11 campaign. Buffer ~4-6h expected (per realistic estimate). |
 
@@ -93,18 +93,19 @@
 
 ## Summary by classification
 
-### Cannot launch without (true blockers) — updated 2026-05-20T18:00 UTC
+### Cannot launch without (true blockers) — updated 2026-05-20T19:15 UTC
 
 | Item | Status | Earliest unblock |
 |---|---|---|
 | ~~S3+S4 #99/#100 RLS~~ | ✅ PR #103 merged 05:08 UTC | resolved |
 | ~~S5 #101 testimonials~~ | ✅ PR #107 merged 05:41 UTC | resolved |
-| ~~S6+I5+I6 PII scrub + Path F~~ | ✅ PR #97 merged 14:43 UTC; deployed via #117 cascade 17:18 UTC | resolved |
+| ~~S6+I5+I6 PII scrub + Path F~~ | ✅ PR #97 merged 14:43, deployed via #117 cascade 17:18 UTC | resolved |
 | ~~S10 #114 auth fragment exchange~~ | ✅ PR #117 merged 17:05, deployed 17:18 UTC, smoke 2/2 PASS | resolved |
 | ~~S11 #115 cookie banner overlap~~ | ✅ Same PR #117, smoke 1/1 PASS | resolved |
-| **S9 #116 next 16.2.6 middleware bypass** | ⏳ TBD owner | ~30 min once owned |
-| B3 #93 /work/time N+1 | ⏳ [AGENT 2] Phase 1 Stage 1 in progress | 6-8h |
-| B4 #94 /settings N+1 | ⏳ queued after #93 | 3-4h |
+| ~~S9 #116 next 16.2.6 middleware bypass~~ | ✅ PR #122 merged, deployed via `9d54ff73` at 18:14 UTC | resolved |
+| B3 #93 /work/time N+1 Stage 1 | ✅ PR #119 merged, deployed `9d54ff73` at 18:14 UTC | Stage 1 done |
+| B3 #93 /work/time Stage 2 | ⏳ [AGENT 2] in flight | ~3-5h |
+| B4 #94 /settings N+1 | ⏳ queued | 3-4h |
 
 ### Should fix pre-launch (raises risk if shipped without)
 
