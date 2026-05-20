@@ -81,7 +81,7 @@
 | D1 | Obsidian vault seeded | ✅ | done | [AGENT 1] 24 files / 12,033 words / 59 wikilinks all resolved. `/Users/myoffice/lancerwise-knowledge/` |
 | D2 | Incident response runbook | ⏳ | [AGENT 4] | **Per orchestrator: located at `audit/agent4-incident-response-runbook/` в screenshots repo (declaration / triage / rollback / templates / escalation).** Verified не yet pushed к `origin/main` as of 2026-05-20 03:51 UTC. Awaiting [AGENT 4] push. |
 | D3 | Launch day monitoring checklist | ⏳ | [AGENT 4] | **Per orchestrator: located at `audit/agent4-launch-observability-pkg/` (monitoring checklist + error budget + dashboard config + webhook monitoring).** Same — не yet pushed к origin. Awaiting [AGENT 4] push. |
-| D4 | Privacy Policy / ToS review | ⏳ | Ramiz | Privacy and Terms pages live и translated к RU (Bug #024). Legal sign-off pending — orchestrator surfacing к Ramiz. Will update когда confirmed. |
+| D4 | Privacy Policy / ToS review | ⏳ | Ramiz | **Investigated by [AGENT 1]** — see [`audit/agent1-privacy-tos-status/`](../agent1-privacy-tos-status/). Findings: 3 pages live (/privacy, /terms, /cookie-policy, 700-950 words each, English-only content not translated). Cookie banner: ✅ EN+RU, consent-gated, zero tracking без consent. **Two blockers identified (~7 min to fix): Privacy § 4 stale Stripe-as-SaaS-billing (mention LemonSqueezy correctly), Privacy § 7 missing right-to-lodge-complaint (GDPR Art. 13(2)(d))**. Russian translation = recommended с mitigation banner, не launch blocker. |
 
 **Recommended before launch:** D2 + D3 — operational essentials. D4 — legal sign-off.
 
@@ -125,7 +125,7 @@
 
 1. ~~B5 LANCERWISE-7~~ — **RESOLVED.** Confirmed separate от #90. Filed as [#104](https://github.com/fer-fer-code/lancerwise/issues/104), P2 post-launch.
 2. **D2 + D3** — Folder paths confirmed by orchestrator (`audit/agent4-incident-response-runbook/` + `audit/agent4-launch-observability-pkg/`) but **NOT yet pushed к screenshots repo `origin/main`** as of 2026-05-20 03:51 UTC. [AGENT 4] action needed.
-3. **D4 Privacy/ToS** — Orchestrator surfacing к Ramiz для sign-off. Pending.
+3. ~~D4 Privacy/ToS~~ — **PARTIALLY RESOLVED.** [AGENT 1] investigation @ [`audit/agent1-privacy-tos-status/`](../agent1-privacy-tos-status/) confirms: 3 pages live, cookie banner consent-gated correctly, zero tracking без consent. **Two ~7-minute blocker edits identified**: Privacy § 4 stale Stripe-billing mention, Privacy § 7 missing right-to-complain. RU translation deferred к post-launch с mitigation banner (Art. 12). Awaiting Ramiz approve-to-execute.
 
 ## Cross-references
 
