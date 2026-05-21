@@ -1,0 +1,26 @@
+=== Sentry tail — 30 iter × 90s = 45min | smoke_t0=2026-05-21T18:13:55Z  prod_SHA=f27bb710a0ad3e0c65f4ea373f332ea75ae65a79 ===
+  iter=1 elapsed=0s now=18:15:38  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=2 elapsed=95s now=18:17:13  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=3 elapsed=190s now=18:18:48  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=4 elapsed=284s now=18:20:22  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=5 elapsed=379s now=18:21:57  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=6 elapsed=475s now=18:23:33  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=7 elapsed=570s now=18:25:08  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=8 elapsed=666s now=18:26:44  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=9 elapsed=762s now=18:28:20  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=10 elapsed=857s now=18:29:55  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=11 elapsed=952s now=18:31:30  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=12 elapsed=1047s now=18:33:05  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=13 elapsed=1142s now=18:34:40  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=14 elapsed=1238s now=18:36:16  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=15 elapsed=1333s now=18:37:51  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=16 elapsed=1428s now=18:39:26  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=17 elapsed=1523s now=18:41:01  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=18 elapsed=1618s now=18:42:36  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=19 elapsed=1713s now=18:44:11  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=20 elapsed=1808s now=18:45:46  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=21 elapsed=1903s now=18:47:21  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=22 elapsed=1998s now=18:48:56  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=23 elapsed=2093s now=18:50:31  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=24 elapsed=2218s now=18:52:36  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=25 elapsed=2343s now=18:54:41  LW5:c=4/ls=18:05:19  LW6:c=undefined/lr=?  LW9:c=15  new_since_smoke=0
