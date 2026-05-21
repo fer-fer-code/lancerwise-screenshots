@@ -1,11 +1,11 @@
 # Estimate-to-Launch
 
 **Author:** [AGENT 1]
-**Date:** 2026-05-20 (revised T+19:45 UTC — post-probe correction)
+**Date:** 2026-05-21 (revised post Stage 2 probe verdict)
 **Method:** Sum hours from open blockers; identify critical path; surface dependencies.
-**Trajectory:** improved significantly от morning estimate; one regression caught by post-deploy probe.
+**Trajectory:** continuing improvement; Stage 1 v3 PASS; Stage 2 shipped с partial verdict.
 
-**Post-probe correction (T+19:45):** [AGENT 3]'s probe protocol caught а Chromium widget tree crash в PR #119 (#93 Stage 1) deployment. Provider returned objects/maps; widgets expected arrays. /work/time broken on Chromium for all users had it not been caught. Per Ramiz decision: fix-forward (Stage 1 v2), not revert. Total verified closures: **13** (#119 reverted to not-closed; #122 remains legitimately closed). **Pre-launch QA infrastructure earned its keep today** — see CLOSURES "Risks caught + mitigated".
+**Stage 2 update (2026-05-21T11:09 UTC):** PR #127 deployed at commit `d0d7799f`. [AGENT 3] re-probe verdict: ⚠️ PARTIAL — bodyLen + pageerrors + console clean, **but fetch count 52 vs target 35-45 (FAIL criterion 4, +7 over upper bound)**. Real reduction **125→52 = -58%** is materially working but doesn't meet target band. 50 time_entries calls с 35 distinct query signatures remain. Per Ramiz decision: **Option B — Stage 2 v2 pre-launch** (issue #128 re-scoped) для remaining ~35 widgets. Expected post-v2 fetch count: 1-5.
 
 ---
 
@@ -30,18 +30,17 @@ Documented в [`audit/agent1-launch-readiness-master/CLOSURES-2026-05-20.md`](..
 
 ---
 
-## What remains (revised T+19:45 post-probe)
+## What remains (revised post Stage 2 verdict)
 
 ### Critical path
 
 | Item | Status | Time | Notes |
 |---|---|---|---|
-| #93 Stage 1 v2 fix-forward | ⏳ [AGENT 2] in flight | ~30-60 min | Restore Provider's array data-shape OR adapt all consumer widgets к objects/maps. CI gates + new probe (4-cell × 3-run matrix) before merge. |
-| #93 Stage 2 (widget migration к provider consumer) | ⏳ queued | ~3-5h focused | Awaits Stage 1 v2 PASS. |
-| #94 /settings N+1 | ⏳ queued | ~3-4h | Can ship parallel к #93 Stage 2 (different files) |
+| #93 Stage 2 v2 — migrate remaining ~35 widgets | ⏳ [AGENT 2] queued (Option B pre-launch per Ramiz) | ~2-4h focused | Issue [#128](https://github.com/fer-fer-code/lancerwise/issues/128) re-scoped. 50 time_entries calls с 35 distinct signatures + 1 invoices + 1 weekly_time_blocks. Many candidates can read existing Provider response. Expected post-v2 fetch count: 1-5. |
+| #94 /settings N+1 | ⏳ queued — diagnosis ready | ~3-4h optimistic / ~7-8h realistic | [AGENT 1] diagnosis в `audit/agent1-94-settings-diagnosis/`. Server-prefetch + initialProps pattern recommended (different от #93 Provider). Can ship parallel к #93 Stage 2 v2 (different files). |
 | Final smoke + sign-off | ⏳ post-fixes | ~1-2h | Multiple full-flow checks desktop/mobile/EN/RU |
 
-**Critical-path duration: ~7-9h focused work** (Stage 1 v2 sequential + max(Stage 2, #94) + smoke).
+**Critical-path duration: ~6-8h focused work** (max(#93 Stage 2 v2, #94) parallel + smoke).
 
 ### Important но не strict blockers
 
@@ -61,27 +60,25 @@ QA campaign can run в parallel с #93/#94 work since it covers different surfac
 
 | Step | Time | Cumulative |
 |---|---|---|
-| #93 Stage 1 v2 fix-forward | 30-60 min | T+1:00 |
-| #93 Stage 2 + #94 в parallel (max=#93 Stage 2) | 3-5h | T+6:00 |
-| Re-baseline | 1h | T+7:00 |
-| QA campaign sweep (parallel) | overlapping; tail = ~1h after #93 | T+7-8:00 |
-| Final smoke + sign-off | 1-2h | **T+8-9:00** |
+| #93 Stage 2 v2 + #94 в parallel (max=#94) | 3-4h | T+4:00 |
+| Re-baseline | 1h | T+5:00 |
+| QA campaign sweep (parallel) | overlapping; tail = ~1h | T+5-6:00 |
+| Final smoke + sign-off | 1-2h | **T+6-8:00** |
 
-**Optimistic ETA: ~7-9 hours focused work** from 2026-05-20T19:45 UTC.
+**Optimistic ETA: ~6-8 hours focused work** from 2026-05-21 post-Stage-2-verdict.
 
 ### Realistic (с typical retry, rework, surprises)
 
 | Step | Realistic time | Reason for slippage |
 |---|---|---|
-| #93 Stage 1 v2 fix-forward + probe verification | 1-1.5h | Provider contract restore + 4-cell × 3-run probe before merge |
-| #93 Stage 2 widget migration | 5-7h | 95+ widgets к refactor; iOS real-device validation adds time |
-| #94 /settings N+1 | 5-6h | Settings has 41 widgets across many sub-pages |
+| #93 Stage 2 v2 + probe verification | 3-5h | 35 widgets к migrate; probe 4-cell × 3-run before merge |
+| #94 /settings N+1 (server-prefetch + initialProps) | 7-8h | 28 widgets across 16 subroutes; Next.js client/server boundary edge cases |
 | Re-baseline | 2h | Capture + manual review + commit |
 | QA campaign | 12-18h | Typically surfaces 3-5 new P2/P3 items requiring small fixes mid-campaign |
-| Last-minute findings | 2-4h | Buffer (reduced since today already absorbed several probe-caught fixes) |
+| Last-minute findings | 2-4h | Buffer |
 | Final smoke + sign-off | 2-3h | Multiple full-flow checks desktop/mobile/EN/RU |
 
-**Realistic ETA: ~11-16 hours focused work** (assumes #93 Stage 2 + #94 parallel, QA campaign tail). About **1.5-2 work-days**.
+**Realistic ETA: ~10-14 hours focused work** (assumes Stage 2 v2 + #94 parallel, QA campaign tail). About **1.5-2 work-days**.
 
 ---
 
@@ -105,12 +102,10 @@ QA campaign can run в parallel с #93/#94 work since it covers different surfac
 ## Dependencies
 
 ```
-#93 Stage 1 v2 fix-forward
-        ↓
-#93 Stage 2 (widget migration) ─┐
-                                ┼─→ Re-baseline ─→ Final smoke ─→ Launch decision
-#94 /settings ──────────────────┘                        ↑
-                                                         │
+#93 Stage 2 v2 (~35 widgets) ─┐
+                              ┼─→ Re-baseline ─→ Final smoke ─→ Launch decision
+#94 /settings ────────────────┘                        ↑
+                                                       │
                                           QA campaign (memory #11)
                                           (runs в parallel с code work)
 ```

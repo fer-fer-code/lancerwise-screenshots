@@ -38,9 +38,9 @@
 |---|---|---|---|---|---|
 | B1 | LANCERWISE-3 (#73 dashboard N+1) | ✅ | resolved | done | PRs #84 + #86 merged. Issue tracker shows "OPEN" but code-fixed and Sentry alert silent. Administrative close pending. |
 | B2 | LANCERWISE-4 (#74 invoices N+1) | ✅ | resolved | done | PR #91 merged 2026-05-19, #74 closed. |
-| B3 | #93 /work/time Stage 1 (infra: DataProvider + Promise.all) | ❌ **FAIL** | [AGENT 2] | regression | PR [#119](https://github.com/fer-fer-code/lancerwise/pull/119) merged + deployed `9d54ff73` 18:14 UTC, **но [AGENT 3] post-deploy probe caught regression**: +30 fetch retries (95→125), widget tree crash 100% on Chromium, `TypeError: r.some is not a function`, error boundary replaces page (bodyLen -89%). Root cause: Provider returns objects/maps, widgets expected arrays. **/work/time broken на Chromium для все users.** WebKit roughly stable. **Pre-existing LW-9 bug ([AGENT 4]) was latent — Stage 1 changed data shape that surfaced widget-code's hidden assumption.** Probe protocol caught before real users → see CLOSURES "Risks caught + mitigated". |
-| B3.1v2 | #93 Stage 1 v2 — fix-forward (Provider data-shape contract restored) | ⏳ in flight | [AGENT 2] | ~30-60 min | Per Ramiz decision: fix-forward rather than revert. Restore array shape OR adapt all consumer widgets к objects/maps shape. CI gates + new probe (≥3-run matrix) before merge. |
-| B3.2 | #93 Stage 2 (widget migration к provider consumer) | ⏳ queued | [AGENT 2] | ~3-5h | Awaits Stage 1 v2 PASS. |
+| B3 | #93 /work/time Stage 1 (infra: DataProvider + Promise.all) | ❌ FAIL→✅ Stage 1 v3 PASS | [AGENT 2] | resolved | PR #119 v1 caught by [AGENT 3] probe (Provider returned objects/maps, widgets expected arrays). Stage 1 v3 fix-forward shipped + PASS verdict (`audit/agent3-93-stage-1-verify/VERDICT-v3.md`). |
+| B3.2 | #93 Stage 2 (31 widgets к provider consumer) | ⚠️ **PARTIAL** | [AGENT 2] | shipped с overshoot | PR [#127](https://github.com/fer-fer-code/lancerwise/pull/127) shipped 31 widgets к TimeTrackerDataContext. Production deploy READY 2026-05-21T11:09 UTC commit `d0d7799f`. [AGENT 3] re-probe: bodyLen 20,852 ✅, pageerrors 0 ✅, **fetch count 52 (target band 35-45, FAIL criterion 4 by +7 / +15% overshoot)**. Real reduction **125→52 = -58%**. Materially working but не в target band. **Option B Stage 2 v2 queued** для remaining ~35 distinct-signature widgets. Evidence: `audit/agent3-93-stage-2-verify/VERDICT-STAGE2-v1.md`. |
+| B3.3 | #93 Stage 2 v2 (~35 remaining mount-fetchers) | ⏳ queued | [AGENT 2] | ~2-4h | Issue [#128](https://github.com/fer-fer-code/lancerwise/issues/128) re-scoped Option A→B. 50 time_entries calls (35 distinct query signatures) + 1 invoices + 1 weekly_time_blocks. Many candidates can read от existing Provider response. Expected post-v2 fetch count: 1-5. |
 | B4 | #94 /settings N+1 (27 calls) | ⏳ | queued | 3-4h | Issue [#94](https://github.com/fer-fer-code/lancerwise/issues/94). Queued after #93 lands fully. New-user onboarding path hits this. |
 | B5 | LANCERWISE-7 Header notifications polling | ⏳ | TBD | post-launch | **Filed [#104](https://github.com/fer-fer-code/lancerwise/issues/104) (P2, post-launch, mobile-safari, observability).** Confirmed by orchestrator as separate scope от #90. Option A fix: ~30 min try/catch wrap + Sentry capture. Option B: ~2h Context refactor (would close с #90). |
 | B6 | New issues from QA campaign | ❌ | not yet | — | Will surface during memory #11 campaign. Buffer ~4-6h expected (per realistic estimate). |
@@ -106,9 +106,10 @@
 | ~~S10 #114 auth fragment exchange~~ | ✅ PR #117 merged 17:05, deployed 17:18 UTC, smoke 2/2 PASS | resolved |
 | ~~S11 #115 cookie banner overlap~~ | ✅ Same PR #117, smoke 1/1 PASS | resolved |
 | ~~S9 #116 next 16.2.6 middleware bypass~~ | ✅ PR #122 merged, deployed via `9d54ff73` at 18:14 UTC | resolved |
-| **B3.1v2 #93 Stage 1 v2 fix-forward** | ⏳ [AGENT 2] in flight | ~30-60 min |
-| B3.2 #93 /work/time Stage 2 | ⏳ queued (awaits Stage 1 v2 PASS) | ~3-5h |
-| B4 #94 /settings N+1 | ⏳ queued | 3-4h |
+| ~~B3.1v2 #93 Stage 1 v3 fix-forward~~ | ✅ PASS verdict | resolved |
+| ~~B3.2 #93 Stage 2 (31 widgets)~~ | ⚠️ **PARTIAL** — PR #127 merged `d0d7799f`, -58% reduction (125→52), но +7 over target band (FAIL criterion 4) | shipped с overshoot |
+| **B3.3 #93 Stage 2 v2 (~35 remaining)** | ⏳ [AGENT 2] queued — Option B pre-launch | ~2-4h |
+| B4 #94 /settings N+1 | ⏳ queued — diagnosis ready ([AGENT 1] `audit/agent1-94-settings-diagnosis/`) | 3-4h optimistic / 7-8h realistic |
 
 ### Should fix pre-launch (raises risk if shipped without)
 
