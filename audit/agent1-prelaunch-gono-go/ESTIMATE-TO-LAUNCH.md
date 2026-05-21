@@ -5,7 +5,7 @@
 **Method:** Sum hours from open blockers; identify critical path; surface dependencies.
 **Trajectory:** continuing improvement; Stage 1 v3 PASS; Stage 2 shipped с partial verdict.
 
-**Stage 2 update (2026-05-21T11:09 UTC):** PR #127 deployed at commit `d0d7799f`. [AGENT 3] re-probe verdict: ⚠️ PARTIAL — bodyLen + pageerrors + console clean, **but fetch count 52 vs target 35-45 (FAIL criterion 4, +7 over upper bound)**. Real reduction **125→52 = -58%** is materially working but doesn't meet target band. 50 time_entries calls с 35 distinct query signatures remain. Per Ramiz decision: **Option B — Stage 2 v2 pre-launch** (issue #128 re-scoped) для remaining ~35 widgets. Expected post-v2 fetch count: 1-5.
+**Stage 2 v2 PASS (2026-05-21T13:16 UTC):** PR #129 deployed at commit `23c191fb`. [AGENT 3] final verdict 5/5 PASS — **Chromium fetch count 3** (target <10, **-97% vs baseline ~95**). [AGENT 4] Sentry watch CLEAN. Phase 1 N+1 (#93) **CLOSED**. 80 widgets total migrated across Stages 1+1.5+2+2v2. Residual: 1 out-of-scope (GlobalTimerBar) + 2 P3 polish candidates filed as [#130](https://github.com/fer-fer-code/lancerwise/issues/130) post-launch.
 
 ---
 
@@ -30,17 +30,16 @@ Documented в [`audit/agent1-launch-readiness-master/CLOSURES-2026-05-20.md`](..
 
 ---
 
-## What remains (revised post Stage 2 verdict)
+## What remains (revised post Stage 2 v2 PASS)
 
 ### Critical path
 
 | Item | Status | Time | Notes |
 |---|---|---|---|
-| #93 Stage 2 v2 — migrate remaining ~35 widgets | ⏳ [AGENT 2] queued (Option B pre-launch per Ramiz) | ~2-4h focused | Issue [#128](https://github.com/fer-fer-code/lancerwise/issues/128) re-scoped. 50 time_entries calls с 35 distinct signatures + 1 invoices + 1 weekly_time_blocks. Many candidates can read existing Provider response. Expected post-v2 fetch count: 1-5. |
-| #94 /settings N+1 | ⏳ queued — diagnosis ready | ~3-4h optimistic / ~7-8h realistic | [AGENT 1] diagnosis в `audit/agent1-94-settings-diagnosis/`. Server-prefetch + initialProps pattern recommended (different от #93 Provider). Can ship parallel к #93 Stage 2 v2 (different files). |
-| Final smoke + sign-off | ⏳ post-fixes | ~1-2h | Multiple full-flow checks desktop/mobile/EN/RU |
+| **#94 /settings N+1** | ⏳ **ACTIVE** — diagnosis ready | ~3-4h optimistic / ~7-8h realistic | [AGENT 1] diagnosis в `audit/agent1-94-settings-diagnosis/`. Server-prefetch + initialProps pattern recommended (different от #93 Provider). 28 antipattern widgets, ~59 mount-fetches к eliminate. |
+| Final smoke + sign-off | ⏳ post-#94 | ~1-2h | Multiple full-flow checks desktop/mobile/EN/RU |
 
-**Critical-path duration: ~6-8h focused work** (max(#93 Stage 2 v2, #94) parallel + smoke).
+**Critical-path duration: ~4-6h focused work** (#94 + smoke).
 
 ### Important но не strict blockers
 
@@ -60,25 +59,24 @@ QA campaign can run в parallel с #93/#94 work since it covers different surfac
 
 | Step | Time | Cumulative |
 |---|---|---|
-| #93 Stage 2 v2 + #94 в parallel (max=#94) | 3-4h | T+4:00 |
+| #94 /settings | 3-4h | T+4:00 |
 | Re-baseline | 1h | T+5:00 |
-| QA campaign sweep (parallel) | overlapping; tail = ~1h | T+5-6:00 |
-| Final smoke + sign-off | 1-2h | **T+6-8:00** |
+| QA campaign sweep (parallel с #94) | overlapping; tail = ~1h | T+5-6:00 |
+| Final smoke + sign-off | 1-2h | **T+5-7:00** |
 
-**Optimistic ETA: ~6-8 hours focused work** from 2026-05-21 post-Stage-2-verdict.
+**Optimistic ETA: ~5-7 hours focused work** from 2026-05-21 post-Stage-2-v2-PASS.
 
 ### Realistic (с typical retry, rework, surprises)
 
 | Step | Realistic time | Reason for slippage |
 |---|---|---|
-| #93 Stage 2 v2 + probe verification | 3-5h | 35 widgets к migrate; probe 4-cell × 3-run before merge |
 | #94 /settings N+1 (server-prefetch + initialProps) | 7-8h | 28 widgets across 16 subroutes; Next.js client/server boundary edge cases |
 | Re-baseline | 2h | Capture + manual review + commit |
 | QA campaign | 12-18h | Typically surfaces 3-5 new P2/P3 items requiring small fixes mid-campaign |
 | Last-minute findings | 2-4h | Buffer |
 | Final smoke + sign-off | 2-3h | Multiple full-flow checks desktop/mobile/EN/RU |
 
-**Realistic ETA: ~10-14 hours focused work** (assumes Stage 2 v2 + #94 parallel, QA campaign tail). About **1.5-2 work-days**.
+**Realistic ETA: ~7-10 hours focused work** (#94 + QA campaign tail). About **1-1.5 work-days**.
 
 ---
 
@@ -102,12 +100,11 @@ QA campaign can run в parallel с #93/#94 work since it covers different surfac
 ## Dependencies
 
 ```
-#93 Stage 2 v2 (~35 widgets) ─┐
-                              ┼─→ Re-baseline ─→ Final smoke ─→ Launch decision
-#94 /settings ────────────────┘                        ↑
-                                                       │
-                                          QA campaign (memory #11)
-                                          (runs в parallel с code work)
+#94 /settings ─→ Re-baseline ─→ Final smoke ─→ Launch decision
+                                    ↑
+                                    │
+                       QA campaign (memory #11)
+                       (runs в parallel с code work)
 ```
 
 ---
@@ -147,10 +144,10 @@ QA campaign can run в parallel с #93/#94 work since it covers different surfac
 
 ## Honest assessment
 
-**Earliest reasonable launch: ~7-9 hours from now (2026-05-21 afternoon UTC, slipped from morning).**
-**Realistic launch: ~1.5 calendar days (2026-05-21).**
+**Earliest reasonable launch: ~5-7 hours from now (2026-05-21 evening UTC).**
+**Realistic launch: ~7-10 hours focused (2026-05-21 / early 2026-05-22).**
 
-This is still а **major improvement** от morning estimate (which had ~36-50h realistic). Today's 13 verified closures collapsed nearly the entire blocker stack. The Stage 1 probe regression slipped earliest-launch by ~1-2 hours, but the probe catch itself is а structural win — caught а 100%-Chromium-crash bug before any real user encountered it.
+Phase 1 N+1 (#93) closed at Stage 2 v2 PASS — single largest remaining code blocker eliminated. Only #94 /settings stands between current state и feature-complete pre-launch code. QA campaign can run в parallel.
 
 ## Cross-references
 
