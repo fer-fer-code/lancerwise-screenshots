@@ -1,11 +1,11 @@
 # Smoke testing execution — AGENT 4 channels
 
 **Author:** [AGENT 4]
-**Smoke window:** 2026-05-21T18:13:55Z → 18:52:36Z (38m 41s tail loop, 24 iterations)
-**Finalized:** 2026-05-22 ~01:25Z (delayed due to wrong-worktree write — see "Delivery gap" section at bottom)
+**Smoke window:** 2026-05-21T18:13:55Z → 19:03:09Z (49m 14s tail loop, **30 iterations complete** as planned)
+**Finalized:** 2026-05-22 ~01:25Z initial push; corrected 01:58Z after late background-task notification (loop actually completed all 30 iter, not 24 as initial draft inferred from a stale mid-flight file snapshot)
 **Production SHA:** `f27bb710a0ad3e0c65f4ea373f332ea75ae65a79` (#94 v2 / PR #135)
 **Parallel agent:** [AGENT 3] (browser flows F1–F9)
-**Verdict:** ✅ **CLEAN** on AGENT 4 channels (Sentry tail closed, API probes clean, email signal clean, no new LW-* tagged to deploy SHA across 24 iterations)
+**Verdict:** ✅ **CLEAN** on AGENT 4 channels (Sentry tail completed full 30 iter, API probes clean, email signal clean, no new LW-* tagged to deploy SHA across the full window)
 
 ---
 
@@ -37,25 +37,25 @@ Sentry metric_issue from alert rule `435759` (`/dashboard` p95 > 3s, production)
 
 ---
 
-## 2. Sentry tail loop — COMPLETE (24 iter × 90s = 36m active window, 2026-05-21T18:13:55Z → 18:52:36Z)
+## 2. Sentry tail loop — COMPLETE (30 iter × 90s = 49m active window, 2026-05-21T18:13:55Z → 19:03:09Z)
 
-The loop ran 24 of planned 30 iterations before terminating (likely curl timeout on one of the 4 sequential Sentry calls per iter; not a signal issue). 24 iterations is sufficient — the 36-minute active sample captures any post-deploy fault that would have surfaced.
+The loop ran the planned 30 iterations to completion. One transient hiccup at iter 25 (18:54:41Z) showed `LW6:c=undefined/lr=?` — a transient Sentry API timeout on the per-issue GET, not a real signal change. Recovered by iter 26 (18:56:46Z) with LW-6 count=7 / lastRelease=`2be51f08` unchanged. All other iterations clean.
 
 ### Result summary
 
-| Signal | Across all 24 iterations |
+| Signal | Across all 30 iterations (iter 25 transient noted) |
 |---|---|
 | LW-5 (`/dashboard` P95 metric_issue) count | **4** (frozen — incident #4 remained the same set of events, no further P95 breaches in tail window) |
 | LW-5 lastSeen | **2026-05-21T18:05:19Z** (frozen — 9 min pre-smoke) |
-| LW-6 (`/settings` profiles N+1) count | **7** (frozen) |
+| LW-6 (`/settings` profiles N+1) count | **7** (frozen except for iter 25 transient API timeout) |
 | LW-6 lastRelease | **`2be51f08`** (v1 SHA — did NOT advance to `f27bb710` v2; profiles N+1 did not re-fire on v2) |
 | LW-9 (TypeError /work/time) count | **15** (frozen — widget defense holding) |
-| New issues with `firstSeen >= smoke_t0` | **0** every iteration |
-| Issues tagged to `f27bb710` SHA | **0** every iteration |
+| New issues with `firstSeen >= smoke_t0` | **0** every iteration (30/30) |
+| Issues tagged to `f27bb710` SHA | **0** every iteration (30/30) |
 
 **Conclusion of Sentry tail:** ✅ **CLEAN.** Zero new issues introduced during smoke window. All 3 canary issues frozen. No exception fired that was attributable to smoke traffic on v2.
 
-Raw log: `sentry-tail.log` (25 lines, 2.7KB).
+Raw log: `sentry-tail.log` (32 lines, full 30 iter + final "tail loop complete" marker).
 
 ---
 

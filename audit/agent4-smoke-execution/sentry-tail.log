@@ -24,3 +24,9 @@
   iter=23 elapsed=2093s now=18:50:31  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
   iter=24 elapsed=2218s now=18:52:36  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
   iter=25 elapsed=2343s now=18:54:41  LW5:c=4/ls=18:05:19  LW6:c=undefined/lr=?  LW9:c=15  new_since_smoke=0
+  iter=26 elapsed=2468s now=18:56:46  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=27 elapsed=2562s now=18:58:20  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=28 elapsed=2657s now=18:59:55  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=29 elapsed=2755s now=19:01:33  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+  iter=30 elapsed=2851s now=19:03:09  LW5:c=4/ls=18:05:19  LW6:c=7/lr=2be51f08  LW9:c=15  new_since_smoke=0
+=== tail loop complete ===
