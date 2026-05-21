@@ -82,10 +82,8 @@ QA campaign can run в parallel с #93/#94 work since it covers different surfac
 
 ## Critical path bottlenecks (today's view)
 
-1. **#93 Stage 1 v2 fix-forward** — quick unblocker (~30-60 min), но must complete before Stage 2 can start.
-2. **#93 Stage 2 widget migration** — biggest single bottleneck remaining. ~3-5h.
-3. **QA campaign** — can run в parallel с code work; critical path is slowest tester.
-4. **#94 /settings** — parallel к #93 Stage 2, different files.
+1. **#94 /settings** — only remaining functional code blocker. ~3-4h optimistic / ~7-8h realistic. Server-prefetch + initialProps pattern (per [AGENT 1] diagnosis).
+2. **QA campaign** — can run в parallel с #94; critical path is slowest tester.
 
 **No longer на critical path (now closed):**
 - ~~S1+S2 Turnstile bypass + server-side CAPTCHA~~
@@ -94,6 +92,7 @@ QA campaign can run в parallel с #93/#94 work since it covers different surfac
 - ~~#114 + #115 auth flow~~
 - ~~Privacy/ToS GDPR review~~
 - ~~S9 #116 middleware bypass~~
+- ~~#93 /work/time N+1 (Phase 1 closed, 80 widgets, 4 PRs, -97% fetch reduction)~~
 
 ---
 
