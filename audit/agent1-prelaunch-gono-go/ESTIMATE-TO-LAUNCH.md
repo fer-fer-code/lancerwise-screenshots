@@ -5,7 +5,12 @@
 **Method:** Sum hours from open blockers; identify critical path; surface dependencies.
 **Trajectory:** continuing improvement; Stage 1 v3 PASS; Stage 2 shipped с partial verdict.
 
-**Stage 2 v2 PASS (2026-05-21T13:16 UTC):** PR #129 deployed at commit `23c191fb`. [AGENT 3] final verdict 5/5 PASS — **Chromium fetch count 3** (target <10, **-97% vs baseline ~95**). [AGENT 4] Sentry watch CLEAN. Phase 1 N+1 (#93) **CLOSED**. 80 widgets total migrated across Stages 1+1.5+2+2v2. Residual: 1 out-of-scope (GlobalTimerBar) + 2 P3 polish candidates filed as [#130](https://github.com/fer-fer-code/lancerwise/issues/130) post-launch.
+**Phase 1 N+1 — MISSION COMPLETE (2026-05-22):** All 4 hot N+1 routes closed.
+- #73 /dashboard (Context Provider, PRs #84+#86) — 22→0
+- #74 /invoices/[id] (Server prefetch, PR #91) — 10→0
+- #93 /work/time (Context Provider, PRs #119+#126+#127+#129) — 125→**3** (-97%)
+- #94 /settings (Server prefetch, PRs #132+#135) — 27→**2** (-93%), WebKit unexpected win preserved
+Full synthesis: [`audit/agent1-launch-readiness-master/CLOSURES-2026-05-21.md`](../agent1-launch-readiness-master/CLOSURES-2026-05-21.md). **Critical path remaining: smoke testing only.**
 
 ---
 
@@ -30,16 +35,16 @@ Documented в [`audit/agent1-launch-readiness-master/CLOSURES-2026-05-20.md`](..
 
 ---
 
-## What remains (revised post Stage 2 v2 PASS)
+## What remains (revised post Phase 1 N+1 COMPLETE)
 
 ### Critical path
 
 | Item | Status | Time | Notes |
 |---|---|---|---|
-| **#94 /settings N+1** | ⏳ **ACTIVE** — diagnosis ready | ~3-4h optimistic / ~7-8h realistic | [AGENT 1] diagnosis в `audit/agent1-94-settings-diagnosis/`. Server-prefetch + initialProps pattern recommended (different от #93 Provider). 28 antipattern widgets, ~59 mount-fetches к eliminate. |
-| Final smoke + sign-off | ⏳ post-#94 | ~1-2h | Multiple full-flow checks desktop/mobile/EN/RU |
+| **Smoke testing execution** | ⏳ ACTIVE | ~2-2.5h wall-clock (с 3-agent parallelism) | Protocol designed: [`SMOKE-TESTING-PROTOCOL.md`](../agent1-pre-launch-smoke/SMOKE-TESTING-PROTOCOL.md). 11 flows × 2 locales × 2 viewports × 3 auth states. [AGENT 3] browser flows, [AGENT 4] Sentry correlation, [AGENT 1] visual capture review. |
+| Final sign-off | ⏳ post-smoke | ~30 min | Ramiz go/no-go signal based on smoke verdict. |
 
-**Critical-path duration: ~4-6h focused work** (#94 + smoke).
+**Critical-path duration: ~2.5-3h focused work** (smoke + sign-off).
 
 ### Important но не strict blockers
 
@@ -59,24 +64,20 @@ QA campaign can run в parallel с #93/#94 work since it covers different surfac
 
 | Step | Time | Cumulative |
 |---|---|---|
-| #94 /settings | 3-4h | T+4:00 |
-| Re-baseline | 1h | T+5:00 |
-| QA campaign sweep (parallel с #94) | overlapping; tail = ~1h | T+5-6:00 |
-| Final smoke + sign-off | 1-2h | **T+5-7:00** |
+| Smoke testing (3-agent parallel) | 2-2.5h wall-clock | T+2:30 |
+| Final smoke triage + sign-off | 30 min | **T+3:00** |
 
-**Optimistic ETA: ~5-7 hours focused work** from 2026-05-21 post-Stage-2-v2-PASS.
+**Optimistic ETA: ~2-2.5 hours wall-clock** от Phase 1 closure (2026-05-22).
 
 ### Realistic (с typical retry, rework, surprises)
 
 | Step | Realistic time | Reason for slippage |
 |---|---|---|
-| #94 /settings N+1 (server-prefetch + initialProps) | 7-8h | 28 widgets across 16 subroutes; Next.js client/server boundary edge cases |
-| Re-baseline | 2h | Capture + manual review + commit |
-| QA campaign | 12-18h | Typically surfaces 3-5 new P2/P3 items requiring small fixes mid-campaign |
-| Last-minute findings | 2-4h | Buffer |
-| Final smoke + sign-off | 2-3h | Multiple full-flow checks desktop/mobile/EN/RU |
+| Smoke testing execution | 2.5-3h wall-clock | 11 flows × varied cells; possible P0/P1 surface findings mid-run |
+| Smoke-surface mid-run fixes | 1h buffer | Typical 1-2 P1 polish fixes mid-smoke; hotfix workflow per POST-LAUNCH-DAY-1-RUNBOOK |
+| Final smoke triage + sign-off | 30 min | Ramiz go/no-go decision |
 
-**Realistic ETA: ~7-10 hours focused work** (#94 + QA campaign tail). About **1-1.5 work-days**.
+**Realistic ETA: ~3-4 hours wall-clock** post Phase 1 closure.
 
 ---
 
@@ -143,10 +144,10 @@ QA campaign can run в parallel с #93/#94 work since it covers different surfac
 
 ## Honest assessment
 
-**Earliest reasonable launch: ~5-7 hours from now (2026-05-21 evening UTC).**
-**Realistic launch: ~7-10 hours focused (2026-05-21 / early 2026-05-22).**
+**Earliest reasonable launch: ~2-2.5 hours from now (2026-05-22, post Phase 1 N+1 closure).**
+**Realistic launch: ~3-4 hours wall-clock (2026-05-22).**
 
-Phase 1 N+1 (#93) closed at Stage 2 v2 PASS — single largest remaining code blocker eliminated. Only #94 /settings stands between current state и feature-complete pre-launch code. QA campaign can run в parallel.
+Phase 1 N+1 MISSION COMPLETE. All 4 hot routes closed. ~184 mount-time REST calls eliminated к 5 across the codebase. WebKit /settings + /work/time render fully restored. **No remaining code blockers.** Only smoke testing protocol execution stands between current state и launch trigger.
 
 ## Cross-references
 
