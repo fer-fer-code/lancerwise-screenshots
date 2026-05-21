@@ -1,15 +1,15 @@
 # Estimate-to-Launch
 
 **Author:** [AGENT 1]
-**Date:** 2026-05-20 (revised T+19:15 UTC — evening snapshot)
+**Date:** 2026-05-20 (revised T+19:45 UTC — post-probe correction)
 **Method:** Sum hours from open blockers; identify critical path; surface dependencies.
-**Trajectory:** dramatically improved since morning estimate — see "Today's closures" below.
+**Trajectory:** improved significantly от morning estimate; one regression caught by post-deploy probe.
 
-**Evening update:** 2 additional closures shipped between 18:00 and 19:15 UTC — PR #119 (#93 Stage 1 infrastructure) + PR #122 (#116 next 16.2.6 middleware bypass cluster). Production now serving `9d54ff73`. Total today's closures: **14**.
+**Post-probe correction (T+19:45):** [AGENT 3]'s probe protocol caught а Chromium widget tree crash в PR #119 (#93 Stage 1) deployment. Provider returned objects/maps; widgets expected arrays. /work/time broken on Chromium for all users had it not been caught. Per Ramiz decision: fix-forward (Stage 1 v2), not revert. Total verified closures: **13** (#119 reverted to not-closed; #122 remains legitimately closed). **Pre-launch QA infrastructure earned its keep today** — see CLOSURES "Risks caught + mitigated".
 
 ---
 
-## Today's closures (2026-05-20) — 14 items shipped
+## Today's closures (2026-05-20) — 13 items verified shipped (1 reverted)
 
 Documented в [`audit/agent1-launch-readiness-master/CLOSURES-2026-05-20.md`](../agent1-launch-readiness-master/CLOSURES-2026-05-20.md). Highlights:
 
@@ -26,21 +26,22 @@ Documented в [`audit/agent1-launch-readiness-master/CLOSURES-2026-05-20.md`](..
 - ✅ Auth flow regression audit (7 flows × 2 locales)
 - ✅ #112 + #113 follow-up investigations filed
 - ✅ **S9 #116 Next.js 16.2.4 → 16.2.6 middleware bypass cluster** (PR #122, deployed `9d54ff73` 18:14 UTC)
-- ✅ **B3.1 #93 /work/time Stage 1 — DataProvider + Promise.all infrastructure** (PR #119, same deploy)
+- ❌ ~~B3.1 #93 /work/time Stage 1 — DataProvider + Promise.all infrastructure~~ (PR #119 merged + deployed но [AGENT 3] probe caught 100% Chromium widget tree crash; fix-forward Stage 1 v2 в flight by [AGENT 2])
 
 ---
 
-## What remains (revised T+19:15 evening)
+## What remains (revised T+19:45 post-probe)
 
 ### Critical path
 
 | Item | Status | Time | Notes |
 |---|---|---|---|
-| #93 /work/time Stage 2 (widget migration к provider consumer) | ⏳ [AGENT 2] in flight | ~3-5h focused | Stage 1 infrastructure landed via #119. Stage 2 = migrating 95+ widgets к consume the new DataProvider context. |
+| #93 Stage 1 v2 fix-forward | ⏳ [AGENT 2] in flight | ~30-60 min | Restore Provider's array data-shape OR adapt all consumer widgets к objects/maps. CI gates + new probe (4-cell × 3-run matrix) before merge. |
+| #93 Stage 2 (widget migration к provider consumer) | ⏳ queued | ~3-5h focused | Awaits Stage 1 v2 PASS. |
 | #94 /settings N+1 | ⏳ queued | ~3-4h | Can ship parallel к #93 Stage 2 (different files) |
 | Final smoke + sign-off | ⏳ post-fixes | ~1-2h | Multiple full-flow checks desktop/mobile/EN/RU |
 
-**Critical-path duration: ~6-8h focused work** (assumes #93 Stage 2 ⊕ #94 parallel — max(#93 Stage 2, #94) + smoke).
+**Critical-path duration: ~7-9h focused work** (Stage 1 v2 sequential + max(Stage 2, #94) + smoke).
 
 ### Important но не strict blockers
 
@@ -60,33 +61,36 @@ QA campaign can run в parallel с #93/#94 work since it covers different surfac
 
 | Step | Time | Cumulative |
 |---|---|---|
-| #93 Stage 2 + #94 в parallel (max=#93 Stage 2) | 3-5h | T+5:00 |
-| Re-baseline | 1h | T+6:00 |
-| QA campaign sweep (parallel) | overlapping; tail = ~1h after #93 | T+6-7:00 |
-| Final smoke + sign-off | 1-2h | **T+7-9:00** |
+| #93 Stage 1 v2 fix-forward | 30-60 min | T+1:00 |
+| #93 Stage 2 + #94 в parallel (max=#93 Stage 2) | 3-5h | T+6:00 |
+| Re-baseline | 1h | T+7:00 |
+| QA campaign sweep (parallel) | overlapping; tail = ~1h after #93 | T+7-8:00 |
+| Final smoke + sign-off | 1-2h | **T+8-9:00** |
 
-**Optimistic ETA: ~6-8 hours focused work** from 2026-05-20T19:15 UTC. **Within а work-day** with parallel agents.
+**Optimistic ETA: ~7-9 hours focused work** from 2026-05-20T19:45 UTC.
 
 ### Realistic (с typical retry, rework, surprises)
 
 | Step | Realistic time | Reason for slippage |
 |---|---|---|
-| #93 Stage 2 widget migration | 5-7h | 95+ widgets к refactor к provider consumer; iOS real-device validation adds time |
-| #94 /settings N+1 | 5-6h | Settings has 41 widgets across many sub-pages; testing surface broad |
+| #93 Stage 1 v2 fix-forward + probe verification | 1-1.5h | Provider contract restore + 4-cell × 3-run probe before merge |
+| #93 Stage 2 widget migration | 5-7h | 95+ widgets к refactor; iOS real-device validation adds time |
+| #94 /settings N+1 | 5-6h | Settings has 41 widgets across many sub-pages |
 | Re-baseline | 2h | Capture + manual review + commit |
 | QA campaign | 12-18h | Typically surfaces 3-5 new P2/P3 items requiring small fixes mid-campaign |
-| Last-minute findings | 3-5h | Buffer for unforeseen issues |
+| Last-minute findings | 2-4h | Buffer (reduced since today already absorbed several probe-caught fixes) |
 | Final smoke + sign-off | 2-3h | Multiple full-flow checks desktop/mobile/EN/RU |
 
-**Realistic ETA: ~10-15 hours focused work** (assumes #93 Stage 2 + #94 parallel, QA campaign tail). About **1.5-2 work-days**.
+**Realistic ETA: ~11-16 hours focused work** (assumes #93 Stage 2 + #94 parallel, QA campaign tail). About **1.5-2 work-days**.
 
 ---
 
 ## Critical path bottlenecks (today's view)
 
-1. **#93 Stage 2 widget migration** — biggest single bottleneck remaining. Foundation set by Stage 1; Stage 2 is the widget refactor.
-2. **QA campaign** — can run в parallel с code work; critical path is slowest tester.
-3. **#94 /settings** — parallel к #93 Stage 2, different files. Should ship before final smoke.
+1. **#93 Stage 1 v2 fix-forward** — quick unblocker (~30-60 min), но must complete before Stage 2 can start.
+2. **#93 Stage 2 widget migration** — biggest single bottleneck remaining. ~3-5h.
+3. **QA campaign** — can run в parallel с code work; critical path is slowest tester.
+4. **#94 /settings** — parallel к #93 Stage 2, different files.
 
 **No longer на critical path (now closed):**
 - ~~S3+S4+S5 RLS leaks~~
@@ -94,19 +98,20 @@ QA campaign can run в parallel с #93/#94 work since it covers different surfac
 - ~~#114 + #115 auth flow~~
 - ~~Privacy/ToS GDPR review~~
 - ~~S9 #116 middleware bypass~~
-- ~~B3.1 #93 Stage 1 infrastructure~~
 
 ---
 
 ## Dependencies
 
 ```
-#94 /settings ────────────────┐
-#93 Stage 2 (widget migration)┼─→ Re-baseline ─→ Final smoke ─→ Launch decision
-                              ┘                        ↑
-                                                       │
+#93 Stage 1 v2 fix-forward
+        ↓
+#93 Stage 2 (widget migration) ─┐
+                                ┼─→ Re-baseline ─→ Final smoke ─→ Launch decision
+#94 /settings ──────────────────┘                        ↑
+                                                         │
                                           QA campaign (memory #11)
-                                          (runs в parallel)
+                                          (runs в parallel с code work)
 ```
 
 ---
@@ -125,7 +130,11 @@ QA campaign can run в parallel с #93/#94 work since it covers different surfac
 
 ## Recommended sequence
 
-**Sprint 1 (perf cluster — Stage 2 в progress now):**
+**Sprint 1a (Stage 1 v2 fix-forward — в progress now):**
+- [AGENT 2] #93 Stage 1 v2 — restore Provider data-shape contract
+- [AGENT 3] post-merge probe (4-cell × 3-run matrix) before declaring PASS
+
+**Sprint 1b (perf cluster — post Stage 1 v2):**
 - [AGENT 2] #93 /work/time Stage 2 (widget migration к DataProvider consumer)
 - TBD #94 /settings (start parallel когда [AGENT 2] capacity allows)
 
@@ -142,10 +151,10 @@ QA campaign can run в parallel с #93/#94 work since it covers different surfac
 
 ## Honest assessment
 
-**Earliest reasonable launch: ~7-9 hours from now (2026-05-21 morning UTC, before noon).**
-**Realistic launch: ~1-1.5 calendar days (2026-05-21).**
+**Earliest reasonable launch: ~7-9 hours from now (2026-05-21 afternoon UTC, slipped from morning).**
+**Realistic launch: ~1.5 calendar days (2026-05-21).**
 
-This is а **dramatic improvement** от morning estimate (which had ~36-50h realistic). Today's 14 closures collapsed nearly the entire blocker stack — only #93 Stage 2 + #94 remain on critical path, plus QA campaign.
+This is still а **major improvement** от morning estimate (which had ~36-50h realistic). Today's 13 verified closures collapsed nearly the entire blocker stack. The Stage 1 probe regression slipped earliest-launch by ~1-2 hours, but the probe catch itself is а structural win — caught а 100%-Chromium-crash bug before any real user encountered it.
 
 ## Cross-references
 
