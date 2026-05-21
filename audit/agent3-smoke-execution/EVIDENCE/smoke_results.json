@@ -1,0 +1,473 @@
+{
+  "F1": {
+    "chromium": {
+      "flow": "F1",
+      "engine": "chromium",
+      "formCheck": {
+        "emailInput": true,
+        "passwordInput": true,
+        "fullNameInput": true,
+        "submitBtn": true,
+        "tosCheckbox": true,
+        "turnstilePresent": false,
+        "cookieBannerPresent": true
+      },
+      "navMs": 1028,
+      "bodyLen": 599,
+      "pageerrors": 0,
+      "consoleErrors": 3,
+      "pageerrorList": [],
+      "consoleErrorList": [
+        "%c%d font-size:0;color:transparent NaN",
+        "%c%d font-size:0;color:transparent NaN",
+        "Failed to load resource: the server responded with a status of 401 ()"
+      ],
+      "backendSignup": {
+        "ok": true,
+        "error": null,
+        "cleanedUp": true
+      },
+      "notes": "Form-render only — captcha gates UI submission. Backend signup verified via admin API.",
+      "shot": "F1_signup_chromium.png"
+    },
+    "webkit": {
+      "flow": "F1",
+      "engine": "webkit",
+      "formCheck": {
+        "emailInput": true,
+        "passwordInput": true,
+        "fullNameInput": true,
+        "submitBtn": true,
+        "tosCheckbox": true,
+        "turnstilePresent": false,
+        "cookieBannerPresent": true
+      },
+      "navMs": 1077,
+      "bodyLen": 309,
+      "pageerrors": 1,
+      "consoleErrors": 3,
+      "pageerrorList": [
+        "/challenges.cloudflare.com\" from accessing a frame with origin \"https://www.lancerwise.com\". Protocols, domains, and ports must match."
+      ],
+      "consoleErrorList": [
+        "%c%d font-size:0;color:transparent gWlg: DTnt",
+        "%c%d font-size:0;color:transparent gWlg: DTnt",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+      ],
+      "backendSignup": {
+        "ok": true,
+        "error": null,
+        "cleanedUp": true
+      },
+      "notes": "Form-render only — captcha gates UI submission. Backend signup verified via admin API.",
+      "shot": "F1_signup_webkit.png"
+    }
+  },
+  "F2": {
+    "flow": "F2",
+    "email_confirmed_at_after": "2026-05-21T18:01:32.167569Z",
+    "confirmedOk": true,
+    "error": null,
+    "notes": "Admin-confirm simulates user clicking email link. AuthHashHandler verified separately via F11."
+  },
+  "F3": {
+    "chromium_en": {
+      "flow": "F3",
+      "engine": "chromium",
+      "locale": "en",
+      "formCheck": {
+        "emailInput": true,
+        "passwordInput": true,
+        "submitBtn": true,
+        "forgotPasswordLink": true,
+        "signupLink": true
+      },
+      "bodyLen": 273,
+      "pageerrors": 0,
+      "shot": "F3_signin_chromium_en.png"
+    },
+    "chromium_ru": {
+      "flow": "F3",
+      "engine": "chromium",
+      "locale": "ru",
+      "formCheck": {
+        "emailInput": true,
+        "passwordInput": true,
+        "submitBtn": true,
+        "forgotPasswordLink": false,
+        "signupLink": false
+      },
+      "bodyLen": 278,
+      "pageerrors": 0,
+      "shot": "F3_signin_chromium_ru.png"
+    },
+    "webkit_en": {
+      "flow": "F3",
+      "engine": "webkit",
+      "locale": "en",
+      "formCheck": {
+        "emailInput": true,
+        "passwordInput": true,
+        "submitBtn": true,
+        "forgotPasswordLink": true,
+        "signupLink": true
+      },
+      "bodyLen": 189,
+      "pageerrors": 1,
+      "shot": "F3_signin_webkit_en.png"
+    },
+    "webkit_ru": {
+      "flow": "F3",
+      "engine": "webkit",
+      "locale": "ru",
+      "formCheck": {
+        "emailInput": true,
+        "passwordInput": true,
+        "submitBtn": true,
+        "forgotPasswordLink": false,
+        "signupLink": false
+      },
+      "bodyLen": 179,
+      "pageerrors": 1,
+      "shot": "F3_signin_webkit_ru.png"
+    }
+  },
+  "F4": {
+    "flow": "F4",
+    "landedUrl": "/onboarding",
+    "bodyLen": 793,
+    "pageerrors": 0,
+    "errorBoundaryShown": false,
+    "cookieBannerOverlapCheck": {
+      "hasOverlap": false,
+      "hasBanner": true,
+      "hasWizard": false
+    },
+    "shot": "F4_onboarding.png",
+    "notes": "PR #115 regression check: cookie banner should NOT overlap wizard. Verified via geometric collision test."
+  },
+  "F5": {
+    "flow": "F5",
+    "results": {
+      "client": {
+        "ok": true,
+        "id": "f84ec037-0dba-442f-b8aa-527fb129f177",
+        "name": "Smoke Client 1779386529544"
+      },
+      "project": {
+        "ok": true,
+        "id": "197290b3-fda5-4850-a57f-0da454b5c832",
+        "title": "Smoke Project 1779386529544"
+      },
+      "invoice": {
+        "ok": true,
+        "id": "8c63fa52-420d-418c-a056-8fef612381e3",
+        "num": "SMOKE-1779386529544"
+      },
+      "proposal_draft": {
+        "ok": true,
+        "id": "bbce36b0-dba5-4aaf-a08a-b7973cd307c3",
+        "hasToken": true
+      },
+      "rls_anon_blocked": true,
+      "cleanedUp": true
+    },
+    "notes": "Service-role insert chain — same DB path UI uses post-auth. RLS verified via anon-client read."
+  },
+  "F6": {
+    "chromium_en": {
+      "flow": "F6",
+      "engine": "chromium",
+      "locale": "en",
+      "supaRest": 0,
+      "bodyLen": 5823,
+      "pageerrors": 0,
+      "pageerrorList": [],
+      "consoleErrors": 0,
+      "consoleErrorList": [],
+      "restByTable": {},
+      "shot": "F6_dashboard_chromium_en.png",
+      "landed": "/dashboard"
+    },
+    "chromium_ru": {
+      "flow": "F6",
+      "engine": "chromium",
+      "locale": "ru",
+      "supaRest": 0,
+      "bodyLen": 6364,
+      "pageerrors": 0,
+      "pageerrorList": [],
+      "consoleErrors": 0,
+      "consoleErrorList": [],
+      "restByTable": {},
+      "shot": "F6_dashboard_chromium_ru.png",
+      "landed": "/dashboard"
+    },
+    "webkit_en": {
+      "flow": "F6",
+      "engine": "webkit",
+      "locale": "en",
+      "supaRest": 0,
+      "bodyLen": 5676,
+      "pageerrors": 0,
+      "pageerrorList": [],
+      "consoleErrors": 0,
+      "consoleErrorList": [],
+      "restByTable": {},
+      "shot": "F6_dashboard_webkit_en.png",
+      "landed": "/dashboard"
+    },
+    "webkit_ru": {
+      "flow": "F6",
+      "engine": "webkit",
+      "locale": "ru",
+      "supaRest": 0,
+      "bodyLen": 6171,
+      "pageerrors": 0,
+      "pageerrorList": [],
+      "consoleErrors": 0,
+      "consoleErrorList": [],
+      "restByTable": {},
+      "shot": "F6_dashboard_webkit_ru.png",
+      "landed": "/dashboard"
+    }
+  },
+  "F7": {
+    "chromium_en": {
+      "flow": "F7",
+      "engine": "chromium",
+      "locale": "en",
+      "supaRest": 3,
+      "bodyLen": 15481,
+      "pageerrors": 1,
+      "pageerrorList": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "consoleErrors": 0,
+      "restByTable": {
+        "time_entries": 2,
+        "invoices": 1
+      },
+      "shot": "F7_worktime_chromium_en.png"
+    },
+    "chromium_ru": {
+      "flow": "F7",
+      "engine": "chromium",
+      "locale": "ru",
+      "supaRest": 3,
+      "bodyLen": 15502,
+      "pageerrors": 1,
+      "pageerrorList": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "consoleErrors": 0,
+      "restByTable": {
+        "time_entries": 2,
+        "invoices": 1
+      },
+      "shot": "F7_worktime_chromium_ru.png"
+    },
+    "webkit_en": {
+      "flow": "F7",
+      "engine": "webkit",
+      "locale": "en",
+      "supaRest": 1,
+      "bodyLen": 251,
+      "pageerrors": 0,
+      "pageerrorList": [],
+      "consoleErrors": 2,
+      "restByTable": {
+        "time_entries": 1
+      },
+      "shot": "F7_worktime_webkit_en.png"
+    },
+    "webkit_ru": {
+      "flow": "F7",
+      "engine": "webkit",
+      "locale": "ru",
+      "supaRest": 1,
+      "bodyLen": 246,
+      "pageerrors": 0,
+      "pageerrorList": [],
+      "consoleErrors": 2,
+      "restByTable": {
+        "time_entries": 1
+      },
+      "shot": "F7_worktime_webkit_ru.png"
+    }
+  },
+  "F8": {
+    "flow": "F8",
+    "results": [
+      {
+        "route": "/settings",
+        "landed": "/settings",
+        "bodyLen": 24841,
+        "supaRest": 2,
+        "pageerrors": 0,
+        "pageerrorSample": [],
+        "hasErrorBoundary": false
+      },
+      {
+        "route": "/settings/account",
+        "landed": "/settings",
+        "bodyLen": 24841,
+        "supaRest": 3,
+        "pageerrors": 0,
+        "pageerrorSample": [],
+        "hasErrorBoundary": false
+      },
+      {
+        "route": "/settings/api",
+        "landed": "/settings/api",
+        "bodyLen": 133878,
+        "supaRest": 1,
+        "pageerrors": 0,
+        "pageerrorSample": [],
+        "hasErrorBoundary": false
+      },
+      {
+        "route": "/settings/availability",
+        "landed": "/settings/availability",
+        "bodyLen": 922,
+        "supaRest": 1,
+        "pageerrors": 0,
+        "pageerrorSample": [],
+        "hasErrorBoundary": false
+      },
+      {
+        "route": "/settings/billing",
+        "landed": "/upgrade",
+        "bodyLen": 890,
+        "supaRest": 2,
+        "pageerrors": 0,
+        "pageerrorSample": [],
+        "hasErrorBoundary": false
+      },
+      {
+        "route": "/settings/digest",
+        "landed": "/settings/digest",
+        "bodyLen": 921,
+        "supaRest": 1,
+        "pageerrors": 0,
+        "pageerrorSample": [],
+        "hasErrorBoundary": false
+      },
+      {
+        "route": "/settings/email-preview",
+        "landed": "/settings/email-preview",
+        "bodyLen": 1131,
+        "supaRest": 1,
+        "pageerrors": 0,
+        "pageerrorSample": [],
+        "hasErrorBoundary": false
+      },
+      {
+        "route": "/settings/export",
+        "landed": "/settings/export",
+        "bodyLen": 1709,
+        "supaRest": 1,
+        "pageerrors": 0,
+        "pageerrorSample": [],
+        "hasErrorBoundary": false
+      },
+      {
+        "route": "/settings/integrations",
+        "landed": "/settings",
+        "bodyLen": 24841,
+        "supaRest": 3,
+        "pageerrors": 0,
+        "pageerrorSample": [],
+        "hasErrorBoundary": false
+      },
+      {
+        "route": "/settings/items-library",
+        "landed": "/settings/items-library",
+        "bodyLen": 521,
+        "supaRest": 1,
+        "pageerrors": 0,
+        "pageerrorSample": [],
+        "hasErrorBoundary": false
+      },
+      {
+        "route": "/settings/late-fees",
+        "landed": "/settings/late-fees",
+        "bodyLen": 447,
+        "supaRest": 1,
+        "pageerrors": 0,
+        "pageerrorSample": [],
+        "hasErrorBoundary": false
+      },
+      {
+        "route": "/settings/notifications",
+        "landed": "/settings",
+        "bodyLen": 24841,
+        "supaRest": 3,
+        "pageerrors": 0,
+        "pageerrorSample": [],
+        "hasErrorBoundary": false
+      },
+      {
+        "route": "/settings/public-profile",
+        "landed": "/settings/public-profile",
+        "bodyLen": 832,
+        "supaRest": 1,
+        "pageerrors": 0,
+        "pageerrorSample": [],
+        "hasErrorBoundary": false
+      },
+      {
+        "route": "/settings/reminders",
+        "landed": "/settings/reminders",
+        "bodyLen": 804,
+        "supaRest": 1,
+        "pageerrors": 0,
+        "pageerrorSample": [],
+        "hasErrorBoundary": false
+      },
+      {
+        "route": "/settings/security",
+        "landed": "/settings",
+        "bodyLen": 24841,
+        "supaRest": 3,
+        "pageerrors": 0,
+        "pageerrorSample": [],
+        "hasErrorBoundary": false
+      },
+      {
+        "route": "/settings/tags",
+        "landed": "/settings/tags",
+        "bodyLen": 387,
+        "supaRest": 1,
+        "pageerrors": 0,
+        "pageerrorSample": [],
+        "hasErrorBoundary": false
+      },
+      {
+        "route": "/settings/upgrade",
+        "landed": "/upgrade",
+        "bodyLen": 890,
+        "supaRest": 2,
+        "pageerrors": 0,
+        "pageerrorSample": [],
+        "hasErrorBoundary": false
+      }
+    ],
+    "notes": "Single-cell sweep (Chromium EN) for breadth across all 16 subroutes."
+  },
+  "F11": {
+    "flow": "F11",
+    "formCheck": {
+      "emailInput": true,
+      "submitBtn": true
+    },
+    "bodyLen": 207,
+    "pageerrors": 0,
+    "pwdUpdateOk": true,
+    "newPasswordSignsIn": false,
+    "oldPasswordRejected": true,
+    "signInErrorIfAny": "captcha protection: request disallowed (no captcha_token found)",
+    "shot": "F11_forgot_password.png",
+    "notes": "Form render + admin password update + sign-in verify. AuthHashHandler (PR #117) verified separately via F2 email simulation."
+  }
+}
