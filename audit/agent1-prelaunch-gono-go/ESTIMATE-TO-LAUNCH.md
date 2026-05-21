@@ -93,6 +93,7 @@ QA campaign can run в parallel с #93/#94 work since it covers different surfac
 4. **#94 /settings** — parallel к #93 Stage 2, different files.
 
 **No longer на critical path (now closed):**
+- ~~S1+S2 Turnstile bypass + server-side CAPTCHA~~
 - ~~S3+S4+S5 RLS leaks~~
 - ~~S6/I5/I6 PII + Path F~~
 - ~~#114 + #115 auth flow~~

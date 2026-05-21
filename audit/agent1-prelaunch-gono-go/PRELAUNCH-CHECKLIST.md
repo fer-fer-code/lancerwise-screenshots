@@ -95,10 +95,11 @@
 
 ## Summary by classification
 
-### Cannot launch without (true blockers) — updated 2026-05-20T19:45 UTC
+### Cannot launch without (true blockers) — updated 2026-05-20T20:00 UTC
 
 | Item | Status | Earliest unblock |
 |---|---|---|
+| ~~S1+S2 Turnstile bypass + server-side CAPTCHA~~ | ✅ Supabase Management API PATCH 2026-05-20 (`security_captcha_enabled: true`); evidence в `audit/agent2-turnstile-fix/` | resolved |
 | ~~S3+S4 #99/#100 RLS~~ | ✅ PR #103 merged 05:08 UTC | resolved |
 | ~~S5 #101 testimonials~~ | ✅ PR #107 merged 05:41 UTC | resolved |
 | ~~S6+I5+I6 PII scrub + Path F~~ | ✅ PR #97 merged 14:43, deployed via #117 cascade 17:18 UTC | resolved |
