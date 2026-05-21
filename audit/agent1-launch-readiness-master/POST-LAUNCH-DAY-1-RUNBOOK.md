@@ -1,10 +1,10 @@
 # Post-Launch Day 1 Runbook
 
 **Author:** [AGENT 1]
-**Date:** 2026-05-20
+**Date:** 2026-05-21 (originally 2026-05-20; revised post Stage 2 v2 / PR #129 closure)
 **Scope:** First 24 hours post-launch — operational checklist, monitoring cadence, triage paths, hotfix workflow.
 
-**Note:** [AGENT 4]'s incident response runbook (`audit/agent4-incident-response-runbook/`) not yet pushed к screenshots repo as of 05:55 UTC. This document serves as minimal viable substitute until that lands; merge / supersede when AGENT 4 work arrives.
+**Note:** [AGENT 4]'s incident response runbook (`audit/agent4-incident-response-runbook/`) not yet pushed к screenshots repo as of 2026-05-21 audit. This document serves as minimal viable substitute until that lands; merge / supersede when AGENT 4 work arrives.
 
 ---
 
@@ -12,14 +12,15 @@
 
 Before Ramiz flips "public" switch:
 
-- [ ] All Tier 1 risks closed (#93, #94)
+- [x] **#93 /work/time N+1 ✅ closed** — Stage 2 v2 PASS via PR [#129](https://github.com/fer-fer-code/lancerwise/pull/129); fetch count 3 (-97% vs baseline). Verdict: [`audit/agent3-93-stage-2-v2-verify/VERDICT-STAGE2-V2-v1.md`](../agent3-93-stage-2-v2-verify/VERDICT-STAGE2-V2-v1.md)
+- [ ] #94 /settings N+1 — verify status before launch (active critical path per PRELAUNCH-CHECKLIST B4)
 - [ ] Sentry release tagged for current main commit
 - [ ] Vercel deploy state = READY for production environment
 - [ ] LemonSqueezy webhook URL configured in dashboard
-- [ ] Sentry alerts armed: #435759 (dashboard P95), any new alerts wired
+- [ ] Sentry alerts armed: #435759 (dashboard P95 — hard trip-wire 3500ms per [AGENT 4] Stage 2 v2 watch / #131), any new alerts wired
 - [ ] Telegram notify hook tested (notify.py works)
 - [ ] Cookie banner shown on first visit (incognito test)
-- [ ] Privacy/Terms accessible (200) с May 20 date
+- [ ] Privacy/Terms accessible (200) с May 20+ date
 - [ ] `curl https://www.lancerwise.com/changelog | grep -c "in progress"` → 0
 
 If ALL green → proceed.
@@ -47,7 +48,7 @@ If ALL green → proceed.
 |---|---|
 | Same error fires 10+ times in 30min | Investigate; consider hotfix |
 | LemonSqueezy webhook 5xx | Verify signature secret в Vercel env; check webhook endpoint logs |
-| Sentry P95 transaction > 5s on any route | Investigate (likely cold-edge) |
+| Sentry P95 transaction > 3500 ms (hard trip-wire per #131) | Investigate; >2800ms = P1 escalate; >3500ms = emergency rollback consideration |
 | New TypeError "Load failed" | Check Header.tsx polling (LW-7), capture user agent |
 | 5xx rate > 1% | Halt sign-ups, investigate |
 | Supabase connection pool exhausted | Check long-running queries; restart if needed |
@@ -71,10 +72,21 @@ If ALL green → proceed.
 
 1. Get URL + iOS version + Safari version
 2. Search Sentry для `TypeError: Load failed`
-3. If `/work/time` route → known issue #93 (will be fixed pre-launch — if seen, escalate immediately)
-4. If `/invoices/[id]` route → check if #74 fix shipped (PR #91 should be live)
-5. If `/clients/[id]` route → #95 latent, escalate к [AGENT 2]
-6. Workaround: have user try desktop browser as fallback
+3. If `/work/time` route → #93 **closed** via PRs #119 + #126 + #127 + #129 (Phase 1 N+1 closure). 2 residual P3 fetches tracked в #130. If user reports crash → verify regression of [`VERDICT-STAGE2-V2-v1.md`](../agent3-93-stage-2-v2-verify/VERDICT-STAGE2-V2-v1.md) still holds (rerun [AGENT 3] probe protocol)
+4. If `/settings` или subroute → #94 fix shipped (verify deploy timestamp); rerun probe против /settings root + subroute mentioned; check fetch count ≤ 10 baseline
+5. If `/invoices/[id]` route → check if #74 fix shipped (PR #91 should be live)
+6. If `/clients/[id]` route → #95 latent, escalate к [AGENT 2]
+7. Workaround: have user try desktop browser as fallback
+
+### Issue: User reports "/settings sub-route не renders" (post-#94 era)
+
+1. Get exact subroute URL (/settings, /settings/billing, /settings/items-library, etc.)
+2. Search Sentry: filter route + last 1h
+3. Check Vercel logs: is the subroute returning 200 in HTML response? Check bodyLen > 5000
+4. If bodyLen < 5000 → likely error boundary or empty hydration. Compare к pre-#94 baseline в [AGENT 1] diagnosis ([`agent1-94-settings-diagnosis/`](../agent1-94-settings-diagnosis/))
+5. If 5xx → check server-component prefetch failures (per #94 architecture — Promise.all fetch с graceful fallback)
+6. Escalation: ping [AGENT 2] + [AGENT 3] для re-probe (4-cell × 3-run matrix on /settings root)
+7. Workaround: navigate user direct к specific subroute they need (skip /settings root)
 
 ### Issue: User reports "payment failed"
 
@@ -202,8 +214,12 @@ These ranges inform realistic ETA for any hotfix scenario.
 
 ## Cross-references
 
-- LAUNCH-READINESS-MASTER.md — full pre-launch state
-- RISK-PROFILE.md — what ships с known risk
-- POST-LAUNCH-WEEK-1-BACKLOG.md — what к do first week
-- [[Operations/VERCEL-DEPLOY-TROUBLESHOOTING]] — Vercel-specific runbook
-- [[Operations/SUPABASE-MIGRATION-TRACKING-FIX]] — DB-specific workaround
+- [`LAUNCH-READINESS-MASTER.md`](./LAUNCH-READINESS-MASTER.md) — full pre-launch state
+- [`RISK-PROFILE.md`](./RISK-PROFILE.md) — what ships с known risk
+- [`POST-LAUNCH-WEEK-1-BACKLOG.md`](./POST-LAUNCH-WEEK-1-BACKLOG.md) — what к do first week
+- [`CLOSURES-2026-05-20.md`](./CLOSURES-2026-05-20.md) — closures inventory + Stage 2 v2 reference
+- [`audit/agent1-launch-day-runbook/RUNBOOK.md`](../agent1-launch-day-runbook/RUNBOOK.md) — T-30min → T+24h tactical (companion doc that hands off here at T+24h)
+- [`audit/agent1-pre-launch-smoke/SMOKE-TESTING-PROTOCOL.md`](../agent1-pre-launch-smoke/SMOKE-TESTING-PROTOCOL.md) — F1-F11 smoke flows
+- Obsidian vault references (для vault navigation, не GitHub):
+  - `[[Operations/VERCEL-DEPLOY-TROUBLESHOOTING]]` — Vercel-specific runbook (vault-only)
+  - `[[Operations/SUPABASE-MIGRATION-TRACKING-FIX]]` — DB-specific workaround (vault-only)
