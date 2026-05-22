@@ -1,0 +1,60 @@
+method	endpoint	probe	code	time	size	body_hint
+GET	/api/lemonsqueezy/webhook	unauth-GET	405	0.728825	0	
+POST	/api/lemonsqueezy/webhook	unauth-POST-empty	401	0.461474	29	{"error":"invalid signature"}
+POST	/api/lemonsqueezy/webhook	bad-sig	401	0.626905	29	{"error":"invalid signature"}
+GET	/api/lemonsqueezy/checkout	unauth-GET	405	1.186245	0	
+POST	/api/lemonsqueezy/checkout	unauth-POST-empty	401	0.428792	24	{"error":"Unauthorized"}
+GET	/api/stripe/webhook	unauth-GET	405	0.756012	0	
+POST	/api/stripe/webhook	unauth-POST-empty	503	0.432139	33	{"error":"Stripe not configured"}
+POST	/api/stripe/webhook	bad-sig	503	0.413454	33	{"error":"Stripe not configured"}
+GET	/api/stripe/checkout	unauth-GET	405	0.746321	0	
+POST	/api/stripe/checkout	unauth-POST-empty	503	0.423449	33	{"error":"Stripe not configured"}
+POST	/api/stripe/subscribe	unauth-POST-empty	503	0.722237	33	{"error":"Stripe not configured"}
+POST	/api/stripe/billing-portal	unauth-POST-empty	503	0.737793	33	{"error":"Stripe not configured"}
+POST	/api/webhooks/fire	unauth-POST	401	0.721344	24	{"error":"Unauthorized"}
+GET	/api/webhooks	unauth-GET	401	0.418592	24	{"error":"Unauthorized"}
+POST	/api/webhooks/test	unauth-POST	401	0.714892	24	{"error":"Unauthorized"}
+GET	/api/cron/cleanup-oauth-states	unauth-GET-no-secret	401	0.805714	24	{"error":"unauthorized"}
+GET	/api/cron/cleanup-oauth-states	fake-bearer	401	0.427553	24	{"error":"unauthorized"}
+GET	/api/cron/api-key-digest	unauth-GET-no-secret	401	1.051916	24	{"error":"Unauthorized"}
+GET	/api/cron/api-key-digest	fake-bearer	401	0.423894	24	{"error":"Unauthorized"}
+GET	/api/cron/at-risk-clients	unauth-GET-no-secret	401	0.748291	24	{"error":"Unauthorized"}
+GET	/api/cron/at-risk-clients	fake-bearer	401	0.400187	24	{"error":"Unauthorized"}
+GET	/api/cron/scope-creep-alert	unauth-GET-no-secret	401	0.944917	24	{"error":"Unauthorized"}
+GET	/api/cron/scope-creep-alert	fake-bearer	401	0.421371	24	{"error":"Unauthorized"}
+GET	/api/cron/client-revenue-drop	unauth-GET-no-secret	401	0.863579	24	{"error":"Unauthorized"}
+GET	/api/cron/client-revenue-drop	fake-bearer	401	0.429393	24	{"error":"Unauthorized"}
+GET	/api/cron/project-completion-followup	unauth-GET-no-secret	401	0.726711	24	{"error":"Unauthorized"}
+GET	/api/cron/project-completion-followup	fake-bearer	401	0.426938	24	{"error":"Unauthorized"}
+GET	/api/cron/monthly-revenue-forecast	unauth-GET-no-secret	401	0.793600	24	{"error":"Unauthorized"}
+GET	/api/cron/monthly-revenue-forecast	fake-bearer	401	0.515089	24	{"error":"Unauthorized"}
+GET	/api/cron/quarterly-review	unauth-GET-no-secret	401	1.438762	24	{"error":"Unauthorized"}
+GET	/api/cron/quarterly-review	fake-bearer	401	0.433063	24	{"error":"Unauthorized"}
+GET	/api/cron/weekly-summary	unauth-GET-no-secret	401	0.807866	24	{"error":"Unauthorized"}
+GET	/api/cron/weekly-summary	fake-bearer	401	0.422950	24	{"error":"Unauthorized"}
+GET	/api/cron/monthly-digest	unauth-GET-no-secret	401	0.779031	24	{"error":"Unauthorized"}
+GET	/api/cron/monthly-digest	fake-bearer	401	0.576969	24	{"error":"Unauthorized"}
+POST	/api/contact	sql-attempt	200	1.312205	101290	<!DOCTYPE html><html lang="en" class="h-full"><head><meta charSet="utf-8"/><meta
+POST	/api/contact-form	xss-attempt	403	0.902569	40	{"error":"CAPTCHA verification failed."}
+POST	/api/account/delete	unauth-POST	405	0.724083	0	
+DELETE	/api/account/delete	unauth-DELETE	401	0.434459	24	{"error":"Unauthorized"}
+GET	/api/clients	unauth-GET	401	0.792821	24	{"error":"Unauthorized"}
+GET	/api/projects	unauth-GET	401	0.809470	24	{"error":"Unauthorized"}
+GET	/api/invoices	unauth-GET	401	0.814801	24	{"error":"Unauthorized"}
+GET	/api/time-entries	unauth-GET	401	0.753727	24	{"error":"Unauthorized"}
+GET	/api/time-tracker/widget-data	unauth-GET	401	0.608029	24	{"error":"Unauthorized"}
+GET	/api/notifications	unauth-GET	200	0.419779	37	{"notifications":[],"unread_count":0}
+GET	/api/settings/notifications	unauth-GET	401	0.955652	24	{"error":"Unauthorized"}
+GET	/api/settings/schedule	unauth-GET	401	0.735815	24	{"error":"Unauthorized"}
+GET	/api/dashboard	unauth-GET	404	0.947999	101292	<!DOCTYPE html><html lang="en" class="h-full"><head><meta charSet="utf-8"/><meta
+GET	/api/dashboard/widget-data	unauth-GET	401	0.458206	24	{"error":"Unauthorized"}
+GET	/api/ai/advisor	unauth-GET	401	0.215570	24	{"error":"Unauthorized"}
+GET	/api/ai/chat	unauth-GET	401	0.233137	24	{"error":"Unauthorized"}
+GET	/api/email/send	unauth-GET	405	0.945367	0	
+GET	/api/admin	unauth-GET	404	0.727772	101288	<!DOCTYPE html><html lang="en" class="h-full"><head><meta charSet="utf-8"/><meta
+GET	/api/account/export	unauth-GET	401	0.723378	24	{"error":"Unauthorized"}
+GET	/api/budgets	unauth-GET	401	0.839416	24	{"error":"Unauthorized"}
+GET	/api/clients/new	unauth-GET	401	0.716177	24	{"error":"Unauthorized"}
+GET	/api/cash-flow-forecast	unauth-GET	401	0.713980	24	{"error":"Unauthorized"}
+GET	/api/calendar-events	unauth-GET	401	0.726608	24	{"error":"Unauthorized"}
+GET	/api/activity-feed	unauth-GET	401	0.762092	24	{"error":"Unauthorized"}
