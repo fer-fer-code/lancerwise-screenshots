@@ -1,0 +1,65 @@
+[
+  {
+    "name": "no_cookie_control",
+    "cookie_value": "__OMIT__",
+    "status": "307",
+    "location": "/login",
+    "set_cookie_auth": "null",
+    "body_len": 506,
+    "body_head_200chars": "HTTP/2 307 cache-control: public, max-age=0, must-revalidatecontent-type: text/plaindate: Fri, 22 May 2026 05:49:31 GMTlocation: /loginpermissions-policy: camera=(), microphone=(), geolocati"
+  },
+  {
+    "name": "empty_cookie",
+    "cookie_value": "",
+    "status": "307",
+    "location": "/login",
+    "set_cookie_auth": "null",
+    "body_len": 506,
+    "body_head_200chars": "HTTP/2 307 cache-control: public, max-age=0, must-revalidatecontent-type: text/plaindate: Fri, 22 May 2026 05:49:32 GMTlocation: /loginpermissions-policy: camera=(), microphone=(), geolocati"
+  },
+  {
+    "name": "random_string",
+    "cookie_value": "random-bad-cookie-value",
+    "status": "307",
+    "location": "/login",
+    "set_cookie_auth": "null",
+    "body_len": 506,
+    "body_head_200chars": "HTTP/2 307 cache-control: public, max-age=0, must-revalidatecontent-type: text/plaindate: Fri, 22 May 2026 05:49:32 GMTlocation: /loginpermissions-policy: camera=(), microphone=(), geolocati"
+  },
+  {
+    "name": "base64_prefix_invalid",
+    "cookie_value": "base64-INVALIDCOOKIESTRING",
+    "status": "307",
+    "location": "/login",
+    "set_cookie_auth": "sb-skfgwyzarrhhkzvltbgm-auth-token=",
+    "body_len": 602,
+    "body_head_200chars": "HTTP/2 307 cache-control: public, max-age=0, must-revalidatecontent-type: text/plaindate: Fri, 22 May 2026 05:49:32 GMTlocation: /loginpermissions-policy: camera=(), microphone=(), geolocati"
+  },
+  {
+    "name": "base64_prefix_truncated",
+    "cookie_value": "base64-eyJhY2Nlc3NfdG9rZW4iOiJleUpoYkdjaU9pSkZVekk",
+    "status": "307",
+    "location": "/login",
+    "set_cookie_auth": "null",
+    "body_len": 506,
+    "body_head_200chars": "HTTP/2 307 cache-control: public, max-age=0, must-revalidatecontent-type: text/plaindate: Fri, 22 May 2026 05:49:34 GMTlocation: /loginpermissions-policy: camera=(), microphone=(), geolocati"
+  },
+  {
+    "name": "empty_base64",
+    "cookie_value": "base64-",
+    "status": "307",
+    "location": "/login",
+    "set_cookie_auth": "null",
+    "body_len": 506,
+    "body_head_200chars": "HTTP/2 307 cache-control: public, max-age=0, must-revalidatecontent-type: text/plaindate: Fri, 22 May 2026 05:49:34 GMTlocation: /loginpermissions-policy: camera=(), microphone=(), geolocati"
+  },
+  {
+    "name": "valid_session_sanity",
+    "cookie_value": "base64-eyJhY2Nlc3NfdG9rZW4iOiJleUpoYkdjaU9pSkZVekkxTmlJc0ltdHBaQ0k2SW1FM1lUaGlOMlJoTFRnM05URXRORGt3TWkwNU1XTXpMVGM0WkRjNE1qaG1OMlUxTXlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcGMzTWlPaUpvZEhSd2N6b3ZMM05yWm1kM2VYcGhjbkpvYUd0NmRteDBZbWR0TG5OMWNHRmlZWE5sTG1OdkwyRjFkR2d2ZGpFaUxDSnpkV0lpT2lJME5tSTBPRFprTnkwMVptVmpMVFEzWVdZdFlUUTJOaTB6TWprMVpHTXhZek5pT1RVaUxDSmhkV1FpT2lKaGRYUm9aVzUwYVdOaGRHVmtJaXdpWlhod0lqb3hOemM1TkRNeU5UUXhMQ0pwWVhRaU9qRTNOemswTWpnNU5ERXNJbVZ0WVdsc0lqb2liR0Z1WTJWeWQybHpaUzF4WVMwNU0zTXhMV1pwZUdWa0xURTNOemt6TWpjM05UUkFkM05vZFM1dVpYUWlMQ0p3YUc5dVpTSTZJaUlzSW1Gd2NGOXRaWFJoWkdGMFlTSTZleUp3Y205MmFXUmxjaUk2SW1WdFlXbHNJaXdpY0hKdmRtbGtaWEp6SWpwYkltVnRZV2xzSWwxOUxDSjFjMlZ5WDIxbGRHRmtZWFJoSWpwN0ltVnRZV2xzWDNabGNtbG1hV1ZrSWpwMGNuVmxMQ0ptZFd4c1gyNWhiV1VpT2lKUlFTQlNaV0ZzYVhOMGFXTWdRV05qYjNWdWRDSXNJbWx6WDNGaFgyWnBlSFIxY21VaU9uUnlkV1Y5TENKeWIyeGxJam9pWVhWMGFHVnVkR2xqWVhSbFpDSXNJbUZoYkNJNkltRmhiREVpTENKaGJYSWlPbHQ3SW0xbGRHaHZaQ0k2SW05MGNDSXNJblJwYldWemRHRnRjQ0k2TVRjM09UUXlPRGswTVgxZExDSnpaWE56YVc5dVgybGtJam9pTmpWbFpUaGpNV010WVRsbU5pMDBOV0k1TFdKbVkyRXRNVFZtTkRVeU5qbGlZamc0SWl3aWFYTmZZVzV2Ym5sdGIzVnpJanBtWVd4elpYMC5JWUdfVkF2T1V0bEZZRFBSLWxBWXFFZjJuQktOOC1LVlVaTlB6elJwMk0waGVBNGtpYXZvWjVoNTdMMDRtR096WC1oYmU3UjNhZ1pZU3NmbjhxNzEydyIsInRva2VuX3R5cGUiOiJiZWFyZXIiLCJleHBpcmVzX2luIjozNjAwLCJleHBpcmVzX2F0IjoxNzc5NDMyNTQxLCJyZWZyZXNoX3Rva2VuIjoiMndsdHA1cTZvcmZxIiwidXNlciI6eyJpZCI6IjQ2YjQ4NmQ3LTVmZWMtNDdhZi1hNDY2LTMyOTVkYzFjM2I5NSIsImF1ZCI6ImF1dGhlbnRpY2F0ZWQiLCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImVtYWlsIjoibGFuY2Vyd2lzZS1xYS05M3MxLWZpeGVkLTE3NzkzMjc3NTRAd3NodS5uZXQiLCJlbWFpbF9jb25maXJtZWRfYXQiOiIyMDI2LTA1LTIxVDAxOjQyOjM3LjcyMjA4NVoiLCJwaG9uZSI6IiIsImNvbmZpcm1lZF9hdCI6IjIwMjYtMDUtMjFUMDE6NDI6MzcuNzIyMDg1WiIsInJlY292ZXJ5X3NlbnRfYXQiOiIyMDI2LTA1LTIyVDA1OjQ5OjAxLjIwODQ5NVoiLCJsYXN0X3NpZ25faW5fYXQiOiIyMDI2LTA1LTIyVDA1OjQ5OjAxLjQyNDU3ODk2OFoiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZnVsbF9uYW1lIjoiUUEgUmVhbGlzdGljIEFjY291bnQiLCJpc19xYV9maXh0dXJlIjp0cnVlfSwiaWRlbnRpdGllcyI6W3siaWRlbnRpdHlfaWQiOiI5NDFjMTAzMy05NDY3LTRjYWQtYjNiNC05YzAyNDhmZjlkN2IiLCJpZCI6IjQ2YjQ4NmQ3LTVmZWMtNDdhZi1hNDY2LTMyOTVkYzFjM2I5NSIsInVzZXJfaWQiOiI0NmI0ODZkNy01ZmVjLTQ3YWYtYTQ2Ni0zMjk1ZGMxYzNiOTUiLCJpZGVudGl0eV9kYXRhIjp7ImVtYWlsIjoibGFuY2Vyd2lzZS1xYS05M3MxLWZpeGVkLTE3NzkzMjc3NTRAd3NodS5uZXQiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwic3ViIjoiNDZiNDg2ZDctNWZlYy00N2FmLWE0NjYtMzI5NWRjMWMzYjk1In0sInByb3ZpZGVyIjoiZW1haWwiLCJsYXN0X3NpZ25faW5fYXQiOiIyMDI2LTA1LTIxVDAxOjQyOjM3LjcxMDM2MloiLCJjcmVhdGVkX2F0IjoiMjAyNi0wNS0yMVQwMTo0MjozNy43MTA0NDJaIiwidXBkYXRlZF9hdCI6IjIwMjYtMDUtMjFUMDE6NDI6MzcuNzEwNDQyWiIsImVtYWlsIjoibGFuY2Vyd2lzZS1xYS05M3MxLWZpeGVkLTE3NzkzMjc3NTRAd3NodS5uZXQifV0sImNyZWF0ZWRfYXQiOiIyMDI2LTA1LTIxVDAxOjQyOjM3LjU4NjU3MloiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wNS0yMlQwNTo0OTowMS40NDI4NDNaIiwiaXNfYW5vbnltb3VzIjpmYWxzZX19",
+    "status": "200",
+    "location": "null",
+    "set_cookie_auth": "null",
+    "body_len": 155629,
+    "body_head_200chars": "HTTP/2 200 age: 0cache-control: private, no-cache, no-store, max-age=0, must-revalidatecontent-type: text/html; charset=utf-8date: Fri, 22 May 2026 05:49:38 GMTlink: </_next/static/media/83a"
+  }
+]
