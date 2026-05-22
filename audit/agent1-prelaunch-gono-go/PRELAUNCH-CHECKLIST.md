@@ -1,7 +1,7 @@
 # Pre-Launch GO/NO-GO Checklist
 
 **Author:** [AGENT 1]
-**Date:** 2026-05-21 (originally 2026-05-20; revised post Stage 2 v2 closure + INFRA verification)
+**Date:** 2026-05-22 (originally 2026-05-20; revised post Stage 2 v2 closure + INFRA verification + Comprehensive QA Batches 1-4)
 **Method:** Cross-referenced against GitHub issues + open PRs + audit folders + memory rules. Status verified от primary sources, not assumed.
 
 **Legend:**
@@ -79,8 +79,9 @@
 | Q4 | RLS audit all tables | ✅ | done | [AGENT 1] 410-table pen-test. 2 leaks found (#99, #100 verifying), 1 structural (#101), 1 defensive (#102). |
 | Q5 | Known issue: /invoices AI modal backdrop RU mobile | ⏳ | queued | See vault `Bugs/INVOICES-AI-MODAL-BACKDROP.md` — P3. Fix during QA campaign. |
 | Q6 | **Smoke testing protocol designed** (added 2026-05-21) | ✅ | [AGENT 1] | done | 11 flows × 2 locales × 2 viewports × 3 auth states. Owner mapping + PASS criteria + P0-P3 categorization + ~2-2.5h wall-clock execution с 3-agent parallelism. Evidence: [`audit/agent1-pre-launch-smoke/SMOKE-TESTING-PROTOCOL.md`](../agent1-pre-launch-smoke/SMOKE-TESTING-PROTOCOL.md). |
+| Q7 | **Comprehensive QA Batches 1-4 — ✅ Complete** (added 2026-05-22) | ✅ | [AGENT 1] | done | 4 batches: (1) public/auth pages + mobile responsive, (2) signed-in flows visual regression × 5 routes, (3) widget overlap detection, (4) a11y + design consistency + cross-cutting checks. **Cumulative findings: 0 P0, 1 P1 in flight by [AGENT 2] (FAB backdrop, ~15 min), 3 P2, 6 P3.** All P2+P3 (10 issues #143-#153) filed post-launch backlog. Evidence: [`audit/agent1-comprehensive-qa-2026-05-21/QA-FINDINGS.md`](../agent1-comprehensive-qa-2026-05-21/QA-FINDINGS.md) — commit `2e3c928`. |
 
-**Recommended before launch:** Q1 (QA campaign sweep). Acceptable к defer if resourcing forces it, но raises risk.
+**Recommended before launch:** ~~Q1 (QA campaign sweep)~~ ✅ **Closed via Q7.** All comprehensive QA complete. Only P1 fix (FAB backdrop, [AGENT 2] in flight) blocks launch.
 
 ---
 
@@ -114,17 +115,20 @@
 | ~~S9 #116 next 16.2.6 middleware bypass~~ | ✅ PR #122 merged, deployed via `9d54ff73` at 18:14 UTC | resolved |
 | ~~B3 #93 /work/time N+1 (Phase 1 closure)~~ | ✅ **RESOLVED** — 80 widgets, 4 PRs (#119+#126+#127+#129), fetch count 3 (-97% vs baseline) | resolved |
 | ~~B4 #94 /settings N+1~~ | ✅ **RESOLVED** — v1→v2 (#132 + #135), fetch count 2 (-93% vs baseline), WebKit win preserved | resolved |
-| **✨ Phase 1 N+1 mission complete** | ✅ ALL 4 routes closed (#73 + #74 + #93 + #94). Critical path: smoke testing only. | next |
+| **✨ Phase 1 N+1 mission complete** | ✅ ALL 4 routes closed (#73 + #74 + #93 + #94). | resolved |
+| ~~Q1 QA campaign — comprehensive QA Batches 1-4~~ | ✅ **RESOLVED 2026-05-22** — 4 batches complete, 1 P1 (FAB backdrop) routed к [AGENT 2], 3 P2 + 6 P3 filed (#143-#153). | resolved |
+| **FAB Quick Add overlap (P1, only remaining blocker)** | ⏳ [AGENT 2] in flight — ~15 min fix (backdrop-blur + bg-black/40 scrim). Smoke retest post-merge. | **next** |
 
 ### Should fix pre-launch (raises risk if shipped without)
 
 | Item | Status |
 |---|---|
-| Q1 QA campaign | ❌ not started |
+| ~~Q1 QA campaign~~ | ✅ **Q7 closed 2026-05-22** — 4 batches done, only P1 FAB backdrop remains |
+| **FAB Quick Add overlap P1 (only launch blocker)** | ⏳ [AGENT 2] in flight |
 | Q2 Re-baseline post-perf-fixes | needs scheduling |
 | D2 Incident runbook | ⚠️ verify |
 | D3 Monitoring checklist | ⚠️ verify |
-| D4 Privacy/ToS legal review | ⏳ |
+| ~~D4 Privacy/ToS legal review~~ | ✅ PR #105 merged |
 
 ### Acceptable post-launch (with monitoring)
 
@@ -158,8 +162,23 @@
 | [#121](https://github.com/fer-fer-code/lancerwise/issues/121) | scripts/auth-audit-setup.mjs cleanup regex | P3 post-launch | 5-min fix anytime |
 | [#130](https://github.com/fer-fer-code/lancerwise/issues/130) | Residual /work/time fetches — 2 widget polish | P3 post-launch | Optional polish |
 | [#131](https://github.com/fer-fer-code/lancerwise/issues/131) | Stage 2 v2 /work/time p95 24h re-check | P3 post-launch | T+24h after launch |
-| (TBD — file post-#94) | **CSP missing on production — add к Next.js middleware** | **P1 pre-launch or week-1** | INFRA audit 2026-05-21; see I9 + INFRA-CHECKS-2026-05-21.md |
-| (TBD) | DMARC enforcement ramp `p=none` → `p=quarantine` → `p=reject` | P3 post-launch month-1+ | After 30-day aggregate report review |
+| [#133](https://github.com/fer-fer-code/lancerwise/issues/133) | CSP missing on production — add к Next.js middleware | P1 post-launch (day 1-3 hot follow-up) | Per Ramiz preference; INFRA audit 2026-05-21 |
+| [#134](https://github.com/fer-fer-code/lancerwise/issues/134) | DMARC enforcement ramp `p=none` → `p=quarantine` → `p=reject` | P3 post-launch month-1+ | After 30-day aggregate report review |
+
+### Comprehensive QA Batches 1-4 backlog (filed 2026-05-22)
+
+| Issue | Title | Severity | Source |
+|---|---|---|---|
+| [#143](https://github.com/fer-fer-code/lancerwise/issues/143) | /settings accessibility debt — 82 icon-only buttons + 23 unlabeled inputs | P2 post-launch | QA Batch 4 |
+| [#144](https://github.com/fer-fer-code/lancerwise/issues/144) | /settings duplicate `<h1>` headings | P2 post-launch | QA Batch 4 |
+| [#145](https://github.com/fer-fer-code/lancerwise/issues/145) | Cookie banner overlap /register Sign in link | P2 post-launch | QA Batch 1 |
+| [#146](https://github.com/fer-fer-code/lancerwise/issues/146) | Missing skip-to-content link for accessibility | P3 post-launch | QA Batch 4 |
+| [#148](https://github.com/fer-fer-code/lancerwise/issues/148) | Browser-default focus ring vs brand violet inconsistency | P3 post-launch | QA Batch 4 |
+| [#149](https://github.com/fer-fer-code/lancerwise/issues/149) | 12px KPI sub-text readability | P3 post-launch | QA Batch 4 |
+| [#150](https://github.com/fer-fer-code/lancerwise/issues/150) | Signed-in route titles все generic marketing string | P3 post-launch | QA Batch 4 |
+| [#151](https://github.com/fer-fer-code/lancerwise/issues/151) | CF Turnstile widget locale drift (EN page shows RU strings) | P3 post-launch | QA Batch 1 (i18n) |
+| [#152](https://github.com/fer-fer-code/lancerwise/issues/152) | Page `<title>` tag не translated RU/EN | P3 post-launch | QA Batch 1 (i18n) |
+| [#153](https://github.com/fer-fer-code/lancerwise/issues/153) | Dead Stripe endpoints — remove `src/app/api/stripe/*` (5 files) | P3 post-launch | [AGENT 4] API-FINDINGS |
 
 Sentry alert configured (UI recipe): [`SENTRY-ALERT-SPEC.md`](../agent1-proposals-migration-investigation/SENTRY-ALERT-SPEC.md) — catches `relation "public.proposals" does not exist` errors, Telegram + email notification, severity High.
 
