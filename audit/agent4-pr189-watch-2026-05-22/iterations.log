@@ -1,0 +1,16 @@
+=== PR #189 watch (Timezone fix) — 12 iter × 75s | watch_start=2026-05-22T18:19:40Z  deploy_t0=2026-05-22T18:15:35Z  SHA=599c91fd5e6a60351dbf5279d4f9172296718f62 ===
+  baseline: LW-5=6 LW-6=7 LW-9=15 LW-A=3 LW-B=3  mw_iss=0  tz_iss=0  settings_iss=0
+  iter=1 elapsed=0s now=18:19:40 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  tz=0  settings=0  api=0  new_since_deploy=0
+  iter=2 elapsed=86s now=18:21:06 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  tz=0  settings=0  api=0  new_since_deploy=0
+  iter=3 elapsed=171s now=18:22:31 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  tz=0  settings=0  api=0  new_since_deploy=0
+  iter=4 elapsed=257s now=18:23:57 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  tz=0  settings=0  api=0  new_since_deploy=0
+  iter=5 elapsed=343s now=18:25:23 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  tz=0  settings=0  api=0  new_since_deploy=0
+  iter=6 elapsed=458s now=18:27:18 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  tz=0  settings=0  api=0  new_since_deploy=0
+  iter=7 elapsed=544s now=18:28:44 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  tz=0  settings=0  api=0  new_since_deploy=0
+  iter=8 elapsed=632s now=18:30:12 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  tz=0  settings=0  api=0  new_since_deploy=0
+  iter=9 elapsed=720s now=18:31:40 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  tz=0  settings=0  api=0  new_since_deploy=0
+  iter=10 elapsed=805s now=18:33:05 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  tz=0  settings=0  api=0  new_since_deploy=0
+  iter=11 elapsed=893s now=18:34:33 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  tz=0  settings=0  api=0  new_since_deploy=0
+  iter=12 elapsed=979s now=18:35:59 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  tz=0  settings=0  api=0  new_since_deploy=0
+
+=== PR #189 watch complete ===
