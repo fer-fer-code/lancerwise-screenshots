@@ -76,6 +76,30 @@ The wrapper IS present and covers full viewport — it's just too transparent fo
 
 **Verification:** Re-run probe + visually confirm backdrop separation. Check OTHER modals across app for same `bg-black/40` pattern (likely shared component).
 
+#### IQA-P1-002 — Modal backdrop opacity bug is SYSTEMATIC across multiple routes [P1]
+
+Auto-collected DOM info (`EVIDENCE/backdrop-aggregate-DOM.json`) shows the bug is NOT isolated to /invoices/new — it's a systematic pattern across multiple template/AI modals:
+
+| Route | Modal | Backdrop class | Opacity | Severity |
+|-------|-------|----------------|:-------:|:--------:|
+| `/invoices/new` | "Generate Line Items with AI" | `bg-black/40` | 40% | P1 |
+| `/projects/new` | "Project Templates" | `bg-black/40` | 40% | P1 |
+| `/contracts/new` | "Contract Templates" | `bg-black/30` | **30%** | **P1 WORST** |
+
+**`/contracts/new` is worst** — at 30% backdrop, the underlying form labels ("Title *", "Client", "End Date (optional)", "Contract Value (optional)", "Contract Content *") are **fully readable and interleaved with the modal content** ("Web Development / Freelance Design / Consulting / NDA"). User can't tell where modal ends and page starts.
+
+**Code scope check:** `grep -rln "bg-black/4[0-9]\|bg-black/3[0-9]\|bg-black/5[0-9]\|bg-black/2[0-9]\|bg-black/6[0-9]" src/ --include="*.tsx"` returns **61 files** — backdrop pattern is duplicated across the codebase rather than centralized in a shared `<Modal>` component.
+
+**Fix scope:**
+- **Quick:** Global find+replace `bg-black/40` → `bg-black/70` and `bg-black/30` → `bg-black/70` (~10 min, applies to 61 files)
+- **Proper:** Extract shared `<ModalBackdrop>` component with `bg-slate-950/80 backdrop-blur-sm` default; consumers stop hand-rolling. ~1h.
+
+**Evidence:**
+- `EVIDENCE/p1-revenue/contracts-new_01_template-modal.png` — 30% (worst case)
+- `EVIDENCE/p1-revenue/projects-new_05_use-template-clicked.png` — 40% Project Templates modal
+- `EVIDENCE/p1-revenue/invoices-new_03_AI-modal-OPEN.png` — 40% AI modal (Ramiz original)
+- `EVIDENCE/backdrop-aggregate-DOM.json` — auto-captured CSS classes + computed bg colors
+
 ### P2 visible interactive bugs
 
 _(populating as sweep progresses)_

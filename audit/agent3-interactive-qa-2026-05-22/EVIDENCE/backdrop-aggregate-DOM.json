@@ -1,0 +1,16 @@
+{
+  "projects-new_use-template-clicked": [
+    {
+      "classes": "fixed inset-0 bg-black/40 flex items-start justify-center z-50 p-4 pt-[10vh]",
+      "bg": "oklab(0 0 0 / 0.4)",
+      "visible": true
+    }
+  ],
+  "contracts-new_template-modal": [
+    {
+      "classes": "fixed inset-0 bg-black/30 z-50 flex items-center justify-center p-4",
+      "bg": "oklab(0 0 0 / 0.3)",
+      "visible": true
+    }
+  ]
+}
