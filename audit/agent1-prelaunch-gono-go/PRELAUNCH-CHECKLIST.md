@@ -146,7 +146,7 @@ After fixes, re-run smoke + AGENT 3 probe sequences к confirm. See `ESTIMATE-TO
 | ~~Q1 QA campaign — comprehensive QA Batches 1-4 ([AGENT 1])~~ | ✅ **RESOLVED 2026-05-22** — 4 batches complete, 1 P1 (FAB backdrop) routed к [AGENT 2], 3 P2 + 6 P3 filed (#143-#153). | resolved |
 | **Q1' Comprehensive QA ([AGENT 3] independent)** | 🚨 **DONE 2026-05-22 evening — surfaces 1 P0 + 6 P1.** Full inventory in [QA-FINDINGS.md](../agent3-comprehensive-qa-2026-05-21/QA-FINDINGS.md). | reset critical path |
 | **[#154] P0 middleware cookie crash (QA-P0-001)** | ❌ **ACTIVE BLOCKER** — bare Vercel 500 on malformed cookie. ~15 min 1-line fix. Owner TBD. | **🚨 NEXT** |
-| **[#155] P1 i18n authed routes (QA-001+007+009)** | ❌ ACTIVE — KPI labels, table headers, CTAs all English on RU. ~4-8h focused. | pre-launch |
+| **[#155] P1 i18n authed routes (QA-001+007+009)** | ✅ **SUBSTANTIAL PROGRESS** — PR [#190](https://github.com/fer-fer-code/lancerwise/pull/190) merged 2026-05-23, achieves ~70% RU coverage on /clients, /invoices, /projects, /contracts. Residual ~40 strings (shared component buttons + table headers + DB enums) filed как [#194](https://github.com/fer-fer-code/lancerwise/issues/194) P2 post-launch. /upgrade RU covered by PR #191. **Launch acceptable** с ~70% authed-route coverage + 100% brand/marketing-page coverage (verified [AGENT 1] Batch 1). Umbrella [#155](https://github.com/fer-fer-code/lancerwise/issues/155) stays open для #194 + future widget sweep. | shipped-partial |
 | **[#156] P1 /upgrade CTA contradiction (QA-008)** | ❌ ACTIVE — Pro user sees "Upgrade к Pro" with "Current plan" badge. ~30 min. | pre-launch |
 | **[#157] P1 Timezone UTC hardcoded (QA-011)** | ❌ ACTIVE — /settings/digest + /settings/reminders show UTC instead of local. ~2-4h. | pre-launch |
 | **[#158] P1 /clients/pipeline NaN + KPI mismatch (QA-P1-101)** | ❌ ACTIVE — "USD NaN" string + KPI totals don't reflect Kanban. ~1-2h. | pre-launch |
@@ -158,7 +158,7 @@ After fixes, re-run smoke + AGENT 3 probe sequences к confirm. See `ESTIMATE-TO
 |---|---|---|
 | ~~Q1 [AGENT 1] QA campaign batches 1-4~~ | ✅ Q7 closed | done |
 | **🚨 #154 P0 middleware cookie crash** | ❌ **MUST FIX** | ~15 min |
-| **#155 P1 i18n authed routes** | ❌ MUST FIX | ~4-8h |
+| ~~#155 P1 i18n authed routes~~ | ✅ PR #190 + #191 shipped — ~70% RU coverage; residual ~40 strings → [#194](https://github.com/fer-fer-code/lancerwise/issues/194) post-launch. **Launch acceptable.** | done-partial |
 | **#156 P1 /upgrade CTA contradiction** | ❌ MUST FIX | ~30 min |
 | **#157 P1 Timezone UTC hardcoded** | ❌ MUST FIX | ~2-4h |
 | **#158 P1 /clients/pipeline NaN + KPI** | ❌ MUST FIX | ~1-2h |
