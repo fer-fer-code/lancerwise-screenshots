@@ -26,15 +26,54 @@ This document updates incrementally as the QA passes execute. Each batch commit 
 
 | Pass | Status | Findings count | Pushed batch |
 |------|:------:|----------------|:------------:|
-| PART C batch 1 — main authed pages (dashboard/clients/projects/invoices/proposals) | ✅ DONE | 1 P1, 2 P2, 3 P3 | commit 95558dc |
+| PART C batch 1 — main authed pages | ✅ DONE | 1 P1, 2 P2, 3 P3 | commit 95558dc |
 | PART C batch 1 — unauth (register/login/forgot-password) | ✅ DONE | 0 (Turnstile present) | commit 95558dc |
-| PART C batch 2 — work/time + /settings/* (10) + /upgrade + /analytics + /contracts | ✅ DONE | findings below | pending push |
-| PART C batch 2 — public unauth (/, /pricing, /about, /contact, /privacy, /terms, /blog, /faq) | ✅ DONE | findings below | pending push |
-| PART A — auth flow probes (signup/signin/forgot/reset/logout/expiry) | ⏳ pending | — | — |
-| PART B — CRUD flows (clients/projects/invoices/proposals/time/contracts) | ⏳ pending | — | — |
-| PART D — widget overlap scan | ⏳ pending | — | — |
-| PART E — edge cases (empty/full/error/search/filter/pagination) | ⏳ pending | — | — |
-| PART F — design consistency audit | ⏳ pending | — | — |
+| PART C batch 2 — work/time + /settings/* (10) + /upgrade + /analytics + /contracts | ✅ DONE | 3 P1, 4 P2, 6 P3 | commit 8732fc3 |
+| PART C batch 2 — public unauth (/, /pricing, /about, /contact, /privacy, /terms, /blog, /faq) | ✅ DONE | 1 P2, 1 P3 | commit 8732fc3 |
+| PART A — auth flow probes (signup/signin/forgot/reset/logout/expiry) | ✅ **P0 FOUND** | **1 P0** | commit 37784d5 |
+| PART D — widget overlap scan | ✅ DONE | 1 P2 + 5 P3 (cross-ref existing) | commit 8732fc3 |
+| PART E — edge cases (404/search/filter/empty/full/error) | ✅ DONE | 1 P1, 5 P2 | commit feda749 |
+| PART B — CRUD entry forms (/clients/new, /invoices/new, /projects/new, /contracts/new, /proposals/generate) | ✅ DONE | 0 (all forms clean) | commit feda749 |
+| PART F — design consistency audit | ✅ DONE | 0 new (4 P3 cross-ref existing) | commit 8732fc3 |
+
+---
+
+## 🎯 FINAL VERDICT
+
+**Aggregate severity inventory** (after all 4 batches + 3 worker passes):
+
+| Severity | Count | Items |
+|:--------:|:-----:|-------|
+| **P0 LAUNCH-BLOCKER** | **1** | QA-P0-001 (malformed cookie crashes middleware) |
+| **P1 broken UX** | **6** | QA-001 (i18n authed routes), QA-007 (/upgrade RU 100% English), QA-008 (Current plan + Upgrade-to-Pro CTA contradiction), QA-009 (i18n coverage matrix), QA-011 (timezone UTC hardcoded), QA-P1-101 (/clients/pipeline USD NaN + KPI mismatch) |
+| **P2 visible bugs** | **10** | QA-002 (welcome modal blocks dashboard), QA-005 (hardcoded $), QA-010 (Timer 3 unlabeled inputs), QA-017 (/pricing↔/upgrade feature mismatch), QA-018 (/privacy+/terms 100% English RU), QA-P2-101 (two proposal generators), QA-P2-102 (work/time tabs not URL-sync), QA-P2-103 (/analytics/overview 404), QA-P2-104 (/clients filter KPI mismatch), QA-020 (welcome modal scroll-lock) |
+| **P3 polish** | **15+** | QA-004 (Budget pill collision), QA-006 (en-US dates), QA-012 (mobile pricing badges crowd), QA-013 (FAB overlap textarea), QA-014 (Save-Settings always-enabled), QA-015 (Availability casing mix), QA-016 (Settings/api RU), QA-019 (pricing card width), QA-021-025 (widget stacking), QA-031-034 (header/casing/icon variation), QA-P2-105 (proposals/new URL inconsistency), plus inherited backlog re-confirmations |
+
+**P0 fix urgency:** before ANY user-visible launch traffic. Estimated 1-line fix.
+
+**P1 fix urgency:** within 24-48h before launch — these are quality-perception bombs (especially i18n + plan-status contradiction).
+
+**P2 fix urgency:** week 1 post-launch maintenance window acceptable.
+
+**P3:** quarterly polish backlog.
+
+### LAUNCH-READINESS CALL
+
+**❌ DO NOT LAUNCH** until QA-P0-001 is fixed + verified. The 500 crash on malformed cookie is real-world reachable + customer-stranding (no recovery CTA + bare Vercel error page).
+
+**Recommended pre-launch P1 fixes:**
+1. QA-P0-001 (cookie middleware) — 1-line try/catch (~15 min)
+2. QA-008 (/upgrade Current plan + Upgrade CTA logic) — small UI conditional (~30 min)
+3. QA-P1-101 (/clients/pipeline NaN + KPI mismatch) — null-handling + KPI query consistency (~1-2h)
+4. QA-001 + QA-007 + QA-009 (i18n gap on authed surfaces) — message catalog completion (largest scope, ~4-8h)
+
+**P0 + P1 fix total estimate: ~6-12h focused work.**
+
+After fixes, re-run probes to confirm:
+- `node /tmp/qa_session_variants.js` — confirm all variants land at /login (no more 500)
+- `node /tmp/qa_capture.js --engine chromium --locale ru --viewport desktop --routes /clients,/invoices,/proposals,/upgrade,/work/time --authed true` — confirm RU text replaces English where it should
+
+---
 
 ---
 
