@@ -1,0 +1,363 @@
+{
+  "clients_ru": {
+    "heading": "Клиенты",
+    "topBarTitle": [
+      "Клиенты",
+      "Поиск...",
+      "🇷🇺 RU"
+    ],
+    "kpiLabels": [
+      "ВСЕГО КЛИЕНТОВ",
+      "АКТИВНЫЕ",
+      "ДОХОД С НАЧАЛА ГОДА",
+      "С ПРОСРОЧКОЙ"
+    ],
+    "actionButtons": [
+      "Финансы",
+      "Клиенты",
+      "Работа",
+      "Договоры",
+      "Аналитика",
+      "Горячие клавиши",
+      "Поиск...\n⌘K",
+      "🇷🇺 RU",
+      "QRA",
+      "More",
+      "All Tiers",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "New",
+      "Filters",
+      "A · 92",
+      "D · 42",
+      "C · 52",
+      "D · 42",
+      "D · 47",
+      "B · 81",
+      "D · 47",
+      "B · 74",
+      "🚀\n4/7 setup"
+    ],
+    "englishLeaks": [
+      "Active",
+      "More",
+      "All Tiers",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Filters",
+      "View",
+      "Prospect",
+      "Inactive",
+      "clients"
+    ],
+    "mainTextSnippet": "ВСЕГО КЛИЕНТОВ\n8\nАКТИВНЫЕ\n8\nДОХОД С НАЧАЛА ГОДА\n$20,072\nС ПРОСРОЧКОЙ\n2\nНовый клиент\nВоронка\nMore\n\n8 клиентов\n\nActive\nProspect\nInactive\nAll Tiers\nGold\nSilver\nBronze\nNew\nFilters\nCLIENT\tTIER\tCONTACT\tSTATUS\tTAGS\tHEALTH\tREVENUE\tADDED\tLAST ACTIVE\t\n\nP\nPixel Forge Studios\nPixel Forge Studios\n\t\nSilver\t\ncontact@pixelforgestudios.example\n+1-555-0110\n\tactive\t\ndesign\nactive\n\tA · 92\t$3,980\t1 day ago\t1 day ago\tView →\n\nC\nCobalt Code Lab\nCobalt Code Lab\n\t\nNew\t\ncontact@cobaltcodelab.example\n+1-555-0111\n\tactive\t\ndevelopment\npaused\n\tD · 42\t—\t1 day ago\t1 day ago\tView →\n\nN\nNorth Star Marketing\nNorth Star Marketing\n",
+    "errors": 0
+  },
+  "invoices_ru": {
+    "heading": "Счета",
+    "topBarTitle": [
+      "Счета",
+      "Поиск...",
+      "🇷🇺 RU"
+    ],
+    "kpiLabels": [
+      "ОПЛАЧЕНО",
+      "В ОЖИДАНИИ",
+      "ПРОСРОЧЕНО",
+      "НЕ ВЫСТАВЛЕНО"
+    ],
+    "actionButtons": [
+      "Финансы",
+      "Клиенты",
+      "Работа",
+      "Договоры",
+      "Аналитика",
+      "Горячие клавиши",
+      "Поиск...\n⌘K",
+      "🇷🇺 RU",
+      "QRA",
+      "More",
+      "Quick",
+      "Filters",
+      "Date",
+      "Amount",
+      "Client",
+      "Invoice #",
+      "Paid",
+      "Remind",
+      "Paid",
+      "Paid",
+      "Paid",
+      "Paid",
+      "Paid",
+      "Remind",
+      "🚀\n4/7 setup"
+    ],
+    "englishLeaks": [
+      "Paid",
+      "Overdue",
+      "More",
+      "Quick",
+      "Filters",
+      "Sort",
+      "Date",
+      "Amount",
+      "Client",
+      "Invoice",
+      "Status",
+      "draft",
+      "paid",
+      "sent",
+      "overdue",
+      "Remind"
+    ],
+    "mainTextSnippet": "ОПЛАЧЕНО\n$20,072\nВ ОЖИДАНИИ\n$11,027\nПРОСРОЧЕНО\n$6,000\nНЕ ВЫСТАВЛЕНО\n$20,640.83\n190.0 ч учтено\n5 счетов просрочено — $13,900 к получению\nОчередь взысканий →\nВсе (15)\n3 черновик\n4 отправлено\n5 оплачено\n2 просрочено\nНовый счёт\nШаблоны\nВзыскания\n5\nMore\nQuick\nFilters\nSort:\nDate\nAmount\nClient\nInvoice #\n\tINVOICE\tCLIENT\tAMOUNT\tDUE DATE\tSTATUS\t\n\n\tQA-0003\tRiptide Growth\t$1,166\t\nJun 9, 2026\n\tdraft\t\nView →\n\n\n\tQA-0002\tAnchor Strategy Partners\t$7,796\t\nJun 1, 2026\n\tdraft\t\nView →\n\n\n\tQA-0009\tPixel Forge Studios\t$2,093\t\nMay 31, 2026\n\tpaid\t\nView →\n\n\n\tQA-0014\tNorth Star Marketing\t$3,127\t\nMay 25, 2026\n3d overdue\n\t",
+    "errors": 0
+  },
+  "projects_ru": {
+    "heading": "Проекты",
+    "topBarTitle": [
+      "Проекты",
+      "Поиск...",
+      "🇷🇺 RU"
+    ],
+    "kpiLabels": [
+      "АКТИВНЫЕ",
+      "В ОЖИДАНИИ",
+      "АКТИВНЫЙ БЮДЖЕТ",
+      "ВСЕГО ЗАРАБОТАНО"
+    ],
+    "actionButtons": [
+      "Финансы",
+      "Клиенты",
+      "Работа",
+      "Договоры",
+      "Аналитика",
+      "Горячие клавиши",
+      "Поиск...\n⌘K",
+      "🇷🇺 RU",
+      "QRA",
+      "More",
+      "All",
+      "high-value",
+      "long-term",
+      "new-client",
+      "passive",
+      "retainer",
+      "urgent",
+      "Filters",
+      "Select all",
+      "Grid",
+      "Board",
+      "🚀\n4/7 setup",
+      "Настроить",
+      "Отклонить",
+      "Принять все"
+    ],
+    "englishLeaks": [
+      "Active",
+      "Pending",
+      "Active Budget",
+      "More",
+      "Board",
+      "Filters",
+      "Grid",
+      "Board",
+      "pending",
+      "priority",
+      "routine",
+      "q1"
+    ],
+    "mainTextSnippet": "Все (20)\n5 активные\n5 в ожидании\n5 завершённые\n5 отменённые\nНовый проект\nСоздать через AI\nMore\nСписок\nДоска\nЛента\nГантт\nАКТИВНЫЕ\n5\nВ ОЖИДАНИИ\n5\nАКТИВНЫЙ БЮДЖЕТ\n$30,383\nВСЕГО ЗАРАБОТАНО\n$20,072\nLabels:\nAll\nhigh-value\nlong-term\nnew-client\npassive\nretainer\nurgent\nFilters\nSelect all\nGrid\nBoard\npending\nBrand refresh — full system\n\nPixel Forge Studios\n\npriority\nq1\n0% of $12,055\n$12,055+$1,887\npending\nMobile app redesign sprint\n\nCobalt Code Lab\n\nroutine\nNo budget\npending\nCRM integration (Phase 1)\n\nNorth Star Marketing\n\npriority\nq1\nNo budget\npending\nCRM integration (Phase 2 — billing)\n\nRidgeline Consu",
+    "errors": 0
+  },
+  "contracts_ru": {
+    "heading": "Договоры",
+    "topBarTitle": [
+      "Договоры",
+      "Поиск...",
+      "🇷🇺 RU"
+    ],
+    "kpiLabels": [],
+    "actionButtons": [
+      "Финансы",
+      "Клиенты",
+      "Работа",
+      "Договоры",
+      "Аналитика",
+      "Горячие клавиши",
+      "Поиск...\n⌘K",
+      "🇷🇺 RU",
+      "QRA",
+      "Новый договор",
+      "More",
+      "Настроить",
+      "Отклонить",
+      "Принять все"
+    ],
+    "englishLeaks": [
+      "More"
+    ],
+    "mainTextSnippet": "Договоры\nНовый договор\nСоздать через AI\nMore\nСоздайте первый AI-договор\n\nОпределите объём работ, условия и подписи за минуты. Отслеживайте сроки действия и получайте уведомления до истечения.\n\nСгенерировать через AI\nПосмотреть шаблоны",
+    "errors": 0
+  },
+  "clients_en": {
+    "heading": "Clients",
+    "topBarTitle": [
+      "Clients",
+      "Search...",
+      "🇬🇧 EN"
+    ],
+    "kpiLabels": [
+      "TOTAL CLIENTS",
+      "REVENUE YTD",
+      "WITH OVERDUE"
+    ],
+    "actionButtons": [
+      "Money",
+      "Clients",
+      "Work",
+      "Contracts",
+      "Insights",
+      "Shortcuts",
+      "Search...\n⌘K",
+      "🇬🇧 EN",
+      "QRA",
+      "More",
+      "All Tiers",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "New",
+      "Filters",
+      "A · 92",
+      "D · 42",
+      "C · 52",
+      "D · 42",
+      "D · 47",
+      "B · 81",
+      "D · 47",
+      "B · 74",
+      "🚀\n4/7 setup"
+    ],
+    "englishLeaks": [],
+    "mainTextSnippet": "TOTAL CLIENTS\n8\nACTIVE\n8\nREVENUE YTD\n$20,072\nWITH OVERDUE\n2\nNew Client\nPipeline\nMore\n\n8 clients\n\nActive\nProspect\nInactive\nAll Tiers\nGold\nSilver\nBronze\nNew\nFilters\nCLIENT\tTIER\tCONTACT\tSTATUS\tTAGS\tHEALTH\tREVENUE\tADDED\tLAST ACTIVE\t\n\nP\nPixel Forge Studios\nPixel Forge Studios\n\t\nSilver\t\ncontact@pixelforgestudios.example\n+1-555-0110\n\tactive\t\ndesign\nactive\n\tA · 92\t$3,980\t1 day ago\t1 day ago\tView →\n\nC\nCobalt Code Lab\nCobalt Code Lab\n\t\nNew\t\ncontact@cobaltcodelab.example\n+1-555-0111\n\tactive\t\ndevelopment\npaused\n\tD · 42\t—\t1 day ago\t1 day ago\tView →\n\nN\nNorth Star Marketing\nNorth Star Marketing\n\t\nNew\t\ncontac",
+    "errors": 0
+  },
+  "invoices_en": {
+    "heading": "Invoices",
+    "topBarTitle": [
+      "Invoices",
+      "Search...",
+      "🇬🇧 EN"
+    ],
+    "kpiLabels": [
+      "PENDING",
+      "OVERDUE",
+      "UNBILLED"
+    ],
+    "actionButtons": [
+      "Money",
+      "Clients",
+      "Work",
+      "Contracts",
+      "Insights",
+      "Shortcuts",
+      "Search...\n⌘K",
+      "🇬🇧 EN",
+      "QRA",
+      "More",
+      "Quick",
+      "Filters",
+      "Date",
+      "Amount",
+      "Client",
+      "Invoice #",
+      "Paid",
+      "Remind",
+      "Paid",
+      "Paid",
+      "Paid",
+      "Paid",
+      "Paid",
+      "Remind",
+      "🚀\n4/7 setup"
+    ],
+    "englishLeaks": [],
+    "mainTextSnippet": "PAID\n$20,072\nPENDING\n$11,027\nOVERDUE\n$6,000\nUNBILLED\n$20,640.83\n190.0h tracked\n5 invoices overdue — $13,900 outstanding\nView Collections Queue →\nAll (15)\n3 draft\n4 sent\n5 paid\n2 overdue\nNew Invoice\nTemplates\nCollections\n5\nMore\nQuick\nFilters\nSort:\nDate\nAmount\nClient\nInvoice #\n\tINVOICE\tCLIENT\tAMOUNT\tDUE DATE\tSTATUS\t\n\n\tQA-0003\tRiptide Growth\t$1,166\t\nJun 9, 2026\n\tdraft\t\nView →\n\n\n\tQA-0002\tAnchor Strategy Partners\t$7,796\t\nJun 1, 2026\n\tdraft\t\nView →\n\n\n\tQA-0009\tPixel Forge Studios\t$2,093\t\nMay 31, 2026\n\tpaid\t\nView →\n\n\n\tQA-0014\tNorth Star Marketing\t$3,127\t\nMay 25, 2026\n3d overdue\n\toverdue\t\nPaid\nRemind\nV",
+    "errors": 0
+  },
+  "projects_en": {
+    "heading": "Projects",
+    "topBarTitle": [
+      "Projects",
+      "Search...",
+      "🇬🇧 EN"
+    ],
+    "kpiLabels": [
+      "PENDING",
+      "ACTIVE BUDGET",
+      "TOTAL EARNED"
+    ],
+    "actionButtons": [
+      "Money",
+      "Clients",
+      "Work",
+      "Contracts",
+      "Insights",
+      "Shortcuts",
+      "Search...\n⌘K",
+      "🇬🇧 EN",
+      "QRA",
+      "More",
+      "All",
+      "high-value",
+      "long-term",
+      "new-client",
+      "passive",
+      "retainer",
+      "urgent",
+      "Filters",
+      "Select all",
+      "Grid",
+      "Board",
+      "🚀\n4/7 setup",
+      "Customize",
+      "Reject",
+      "Accept All"
+    ],
+    "englishLeaks": [],
+    "mainTextSnippet": "All (20)\n5 active\n5 pending\n5 completed\n5 cancelled\nNew Project\nGenerate with AI\nMore\nList\nBoard\nTimeline\nGantt\nACTIVE\n5\nPENDING\n5\nACTIVE BUDGET\n$30,383\nTOTAL EARNED\n$20,072\nLabels:\nAll\nhigh-value\nlong-term\nnew-client\npassive\nretainer\nurgent\nFilters\nSelect all\nGrid\nBoard\npending\nBrand refresh — full system\n\nPixel Forge Studios\n\npriority\nq1\n0% of $12,055\n$12,055+$1,887\npending\nMobile app redesign sprint\n\nCobalt Code Lab\n\nroutine\nNo budget\npending\nCRM integration (Phase 1)\n\nNorth Star Marketing\n\npriority\nq1\nNo budget\npending\nCRM integration (Phase 2 — billing)\n\nRidgeline Consulting\n\nroutine\n0% o",
+    "errors": 0
+  },
+  "contracts_en": {
+    "heading": "Contracts",
+    "topBarTitle": [
+      "Contracts",
+      "Search...",
+      "🇬🇧 EN"
+    ],
+    "kpiLabels": [],
+    "actionButtons": [
+      "Money",
+      "Clients",
+      "Work",
+      "Contracts",
+      "Insights",
+      "Shortcuts",
+      "Search...\n⌘K",
+      "🇬🇧 EN",
+      "QRA",
+      "New Contract",
+      "More",
+      "Customize",
+      "Reject",
+      "Accept All"
+    ],
+    "englishLeaks": [],
+    "mainTextSnippet": "Contracts\nNew Contract\nGenerate AI\nMore\nGenerate your first AI contract\n\nDefine scope, terms, and signatures in minutes. Track expiry dates and get urgency alerts before contracts lapse.\n\nGenerate with AI\nBrowse Templates",
+    "errors": 0
+  }
+}
