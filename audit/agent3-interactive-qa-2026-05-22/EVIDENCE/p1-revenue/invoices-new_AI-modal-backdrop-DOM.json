@@ -1,0 +1,40 @@
+[
+  {
+    "tag": "DIV",
+    "role": null,
+    "classes": "fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4",
+    "bg": "oklab(0 0 0 / 0.4)",
+    "opacity": "1",
+    "zindex": "50",
+    "position": "fixed",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900,
+      "top": 0,
+      "right": 1440,
+      "bottom": 900,
+      "left": 0
+    }
+  },
+  {
+    "tag": "DIV",
+    "role": "dialog",
+    "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+    "bg": "rgba(0, 0, 0, 0)",
+    "opacity": "1",
+    "zindex": "40",
+    "position": "fixed",
+    "rect": {
+      "x": 224,
+      "y": 833,
+      "width": 1216,
+      "height": 67,
+      "top": 833,
+      "right": 1440,
+      "bottom": 900,
+      "left": 224
+    }
+  }
+]

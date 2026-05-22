@@ -1,0 +1,234 @@
+[
+  {
+    "idx": 0,
+    "tag": "BUTTON",
+    "text": "Money",
+    "classes": "w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors text-s",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 1,
+    "tag": "BUTTON",
+    "text": "Clients",
+    "classes": "w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors text-s",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 2,
+    "tag": "BUTTON",
+    "text": "Work",
+    "classes": "w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors text-s",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 3,
+    "tag": "BUTTON",
+    "text": "Contracts",
+    "classes": "w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors text-s",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 4,
+    "tag": "BUTTON",
+    "text": "Insights",
+    "classes": "w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors text-s",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 5,
+    "tag": "BUTTON",
+    "text": "Shortcuts",
+    "classes": "text-xs text-slate-500 hover:text-slate-300 transition-colors",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 6,
+    "tag": "BUTTON",
+    "text": "",
+    "classes": "w-9 h-9 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-8",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 8,
+    "tag": "BUTTON",
+    "text": "Search...\n⌘K",
+    "classes": "hidden sm:flex items-center gap-2 w-56 bg-card border border-subtle hover:border-line rounded-lg px-",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 9,
+    "tag": "BUTTON",
+    "text": "🇬🇧 EN",
+    "classes": "flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-sm text-slate-400 hover:text-slate-200 hover",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 10,
+    "tag": "BUTTON",
+    "text": "",
+    "classes": "relative w-11 h-11 rounded-lg hover:bg-slate-700/50 flex items-center justify-center text-slate-500 ",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 11,
+    "tag": "BUTTON",
+    "text": "?",
+    "classes": "hidden md:flex w-7 h-7 rounded-md border border-slate-700 items-center justify-center text-slate-500",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 12,
+    "tag": "BUTTON",
+    "text": "QRA",
+    "classes": "relative w-11 h-11 rounded-full bg-violet-900/20 flex items-center justify-center text-violet-400 fo",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 13,
+    "tag": "BUTTON",
+    "text": "Templates",
+    "classes": "flex items-center gap-2 text-sm text-slate-400 border border-slate-700 hover:bg-slate-700/50 hover:t",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 14,
+    "tag": "BUTTON",
+    "text": "",
+    "classes": "absolute right-2 top-2 transition-colors text-slate-600 hover:text-violet-400",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 15,
+    "tag": "BUTTON",
+    "text": "",
+    "classes": "text-slate-500 hover:text-red-400 transition-colors",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 16,
+    "tag": "BUTTON",
+    "text": "",
+    "classes": "text-slate-600 hover:text-violet-400 transition-colors",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 17,
+    "tag": "BUTTON",
+    "text": "Generate with AI",
+    "classes": "flex items-center gap-1.5 text-sm font-semibold text-white bg-gradient-to-br from-violet-600 via-pur",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 18,
+    "tag": "BUTTON",
+    "text": "Add item",
+    "classes": "flex items-center gap-2 text-sm text-violet-400 hover:text-indigo-300 font-medium",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 19,
+    "tag": "BUTTON",
+    "text": "Saved items",
+    "classes": "flex items-center gap-1.5 text-xs font-medium border px-3 py-1.5 rounded-lg transition-colors min-h-",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 20,
+    "tag": "BUTTON",
+    "text": "From Library",
+    "classes": "flex items-center gap-1.5 text-sm text-violet-400 hover:text-violet-400 font-medium",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 21,
+    "tag": "BUTTON",
+    "text": "From Time Entries",
+    "classes": "flex items-center gap-1.5 text-sm text-slate-500 hover:text-slate-300 font-medium",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 22,
+    "tag": "BUTTON",
+    "text": "Save as template",
+    "classes": "flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-300 transition-colors",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 23,
+    "tag": "BUTTON",
+    "text": "Create Invoice",
+    "classes": "bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 24,
+    "tag": "BUTTON",
+    "text": "Quick add",
+    "classes": "w-14 h-14 rounded-full flex items-center justify-center text-white transition-all duration-150 activ",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 25,
+    "tag": "BUTTON",
+    "text": "🚀\n4/7 setup",
+    "classes": "lw-onboarding-bubble",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 30,
+    "tag": "BUTTON",
+    "text": "Customize",
+    "classes": "px-4 py-2 text-xs font-medium text-slate-300 border border-slate-600 rounded-lg hover:bg-slate-800 t",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 31,
+    "tag": "BUTTON",
+    "text": "Reject",
+    "classes": "px-4 py-2 text-xs font-medium text-slate-300 border border-slate-600 rounded-lg hover:bg-slate-800 t",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 32,
+    "tag": "BUTTON",
+    "text": "Accept All",
+    "classes": "px-5 py-2 text-xs font-semibold text-white bg-gradient-to-br from-violet-600 via-purple-500 to-pink-",
+    "disabled": false,
+    "visible": true
+  },
+  {
+    "idx": 33,
+    "tag": "BUTTON",
+    "text": "Reject all and close",
+    "classes": "text-slate-500 hover:text-slate-300 transition-colors flex-shrink-0 self-center ml-1",
+    "disabled": false,
+    "visible": true
+  }
+]
