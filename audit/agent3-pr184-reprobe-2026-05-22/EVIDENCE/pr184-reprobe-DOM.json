@@ -1,0 +1,261 @@
+{
+  "invoices_new_AI": {
+    "backdropOpen": [
+      {
+        "tag": "DIV",
+        "role": "dialog",
+        "classes": "fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 ",
+        "bg": "oklab(0.128998 -0.0038857 -0.0418156 / 0.8)",
+        "backdropFilter": "blur(8px)",
+        "opacity": "1",
+        "zIndex": "50",
+        "position": "fixed",
+        "width": 1440,
+        "height": 900,
+        "visible": true
+      },
+      {
+        "tag": "DIV",
+        "role": "dialog",
+        "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+        "bg": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "opacity": "1",
+        "zIndex": "40",
+        "position": "fixed",
+        "width": 1216,
+        "height": 67,
+        "visible": false
+      }
+    ],
+    "bodyBefore": {
+      "overflow": "visible",
+      "overflowY": "visible",
+      "paddingRight": "0px",
+      "bodyScrollHeight": 900,
+      "bodyClientHeight": 900
+    },
+    "bodyDuring": {
+      "overflow": "hidden",
+      "overflowY": "hidden",
+      "paddingRight": "0px",
+      "bodyScrollHeight": 900,
+      "bodyClientHeight": 900
+    },
+    "afterClickOutside": [
+      {
+        "tag": "DIV",
+        "role": "dialog",
+        "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+        "bg": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "opacity": "1",
+        "zIndex": "40",
+        "position": "fixed",
+        "width": 1216,
+        "height": 67,
+        "visible": false
+      }
+    ],
+    "afterEsc": [
+      {
+        "tag": "DIV",
+        "role": "dialog",
+        "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+        "bg": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "opacity": "1",
+        "zIndex": "40",
+        "position": "fixed",
+        "width": 1216,
+        "height": 67,
+        "visible": false
+      }
+    ]
+  },
+  "projects_new_template": {
+    "backdropOpen": [
+      {
+        "tag": "DIV",
+        "role": null,
+        "classes": "fixed inset-0 bg-black/40 flex items-start justify-center z-50 p-4 pt-[10vh]",
+        "bg": "oklab(0 0 0 / 0.4)",
+        "backdropFilter": "none",
+        "opacity": "1",
+        "zIndex": "50",
+        "position": "fixed",
+        "width": 1440,
+        "height": 900,
+        "visible": true
+      },
+      {
+        "tag": "DIV",
+        "role": "dialog",
+        "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+        "bg": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "opacity": "1",
+        "zIndex": "40",
+        "position": "fixed",
+        "width": 1216,
+        "height": 67,
+        "visible": false
+      }
+    ],
+    "expected": "unchanged (PR #184 skipped ProjectTemplateSelector)"
+  },
+  "contracts_new_template": {
+    "backdropOpen": [
+      {
+        "tag": "DIV",
+        "role": "dialog",
+        "classes": "fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 ",
+        "bg": "oklab(0.128998 -0.0038857 -0.0418156 / 0.8)",
+        "backdropFilter": "blur(8px)",
+        "opacity": "1",
+        "zIndex": "50",
+        "position": "fixed",
+        "width": 1440,
+        "height": 900,
+        "visible": true
+      },
+      {
+        "tag": "DIV",
+        "role": "dialog",
+        "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+        "bg": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "opacity": "1",
+        "zIndex": "40",
+        "position": "fixed",
+        "width": 1216,
+        "height": 67,
+        "visible": false
+      }
+    ],
+    "bodyBefore": {
+      "overflow": "visible",
+      "overflowY": "visible",
+      "paddingRight": "0px",
+      "bodyScrollHeight": 900,
+      "bodyClientHeight": 900
+    },
+    "bodyDuring": {
+      "overflow": "hidden",
+      "overflowY": "hidden",
+      "paddingRight": "0px",
+      "bodyScrollHeight": 900,
+      "bodyClientHeight": 900
+    },
+    "afterClickOutside": [
+      {
+        "tag": "DIV",
+        "role": "dialog",
+        "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+        "bg": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "opacity": "1",
+        "zIndex": "40",
+        "position": "fixed",
+        "width": 1216,
+        "height": 67,
+        "visible": false
+      }
+    ],
+    "afterEsc": [
+      {
+        "tag": "DIV",
+        "role": "dialog",
+        "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+        "bg": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "opacity": "1",
+        "zIndex": "40",
+        "position": "fixed",
+        "width": 1216,
+        "height": 67,
+        "visible": false
+      }
+    ]
+  },
+  "pipeline_move_dropdown": {
+    "backdropOpen": [
+      {
+        "tag": "DIV",
+        "role": null,
+        "classes": "fixed inset-0 z-10",
+        "bg": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "opacity": "1",
+        "zIndex": "10",
+        "position": "fixed",
+        "width": 1440,
+        "height": 900,
+        "visible": true
+      },
+      {
+        "tag": "DIV",
+        "role": "dialog",
+        "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+        "bg": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "opacity": "1",
+        "zIndex": "40",
+        "position": "fixed",
+        "width": 1216,
+        "height": 67,
+        "visible": false
+      }
+    ],
+    "expected": "no modal backdrop (popover only)"
+  },
+  "dashboard_fab": {
+    "backdropOpen": [
+      {
+        "tag": "DIV",
+        "role": null,
+        "classes": "fixed inset-0 -z-10",
+        "bg": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "opacity": "1",
+        "zIndex": "-10",
+        "position": "fixed",
+        "width": 1440,
+        "height": 900,
+        "visible": true
+      },
+      {
+        "tag": "DIV",
+        "role": "dialog",
+        "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+        "bg": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "opacity": "1",
+        "zIndex": "40",
+        "position": "fixed",
+        "width": 1216,
+        "height": 67,
+        "visible": false
+      }
+    ],
+    "expected": "no modal backdrop (flyout only)"
+  },
+  "work_time_templates": {
+    "backdropOpen": [
+      {
+        "tag": "DIV",
+        "role": "dialog",
+        "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+        "bg": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "opacity": "1",
+        "zIndex": "40",
+        "position": "fixed",
+        "width": 1216,
+        "height": 67,
+        "visible": false
+      }
+    ],
+    "expected": "no modal backdrop (popover only)"
+  }
+}
