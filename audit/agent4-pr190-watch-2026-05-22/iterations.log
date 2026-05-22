@@ -1,0 +1,16 @@
+=== PR #190 watch (RU i18n 4 routes) — 12 iter × 75s | watch_start=2026-05-22T19:11:40Z  deploy_t0=2026-05-22T18:54:04Z  SHA=205e7c34198f4f7c9540831a8577f77793713a02 ===
+  baseline: LW-5=7 (pre-deploy tick at 18:49Z) LW-6=7 LW-9=15 LW-A=3 LW-B=3  mw_iss=0  i18n_iss=0
+  iter=1 elapsed=0s now=19:11:40 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  pg=0  api=0  new_since_deploy=0
+  iter=2 elapsed=90s now=19:13:10 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  pg=0  api=0  new_since_deploy=0
+  iter=3 elapsed=176s now=19:14:36 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  pg=0  api=0  new_since_deploy=0
+  iter=4 elapsed=262s now=19:16:02 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  pg=0  api=0  new_since_deploy=0
+  iter=5 elapsed=377s now=19:17:57 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  pg=0  api=0  new_since_deploy=0
+  iter=6 elapsed=463s now=19:19:23 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  pg=0  api=0  new_since_deploy=0
+  iter=7 elapsed=548s now=19:20:48 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  pg=0  api=0  new_since_deploy=0
+  iter=8 elapsed=633s now=19:22:13 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  pg=0  api=0  new_since_deploy=0
+  iter=9 elapsed=718s now=19:23:38 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  pg=0  api=0  new_since_deploy=0
+  iter=10 elapsed=803s now=19:25:03 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  pg=0  api=0  new_since_deploy=0
+  iter=11 elapsed=888s now=19:26:28 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  pg=0  api=0  new_since_deploy=0
+  iter=12 elapsed=972s now=19:27:52 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  pg=0  api=0  new_since_deploy=0
+
+=== PR #190 watch complete ===
