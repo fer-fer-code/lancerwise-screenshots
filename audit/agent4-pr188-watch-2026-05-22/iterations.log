@@ -1,0 +1,16 @@
+=== PR #188 watch (Pipeline NaN + KPI fix) — 12 iter × 75s | watch_start=2026-05-22T17:42:56Z  deploy_t0=2026-05-22T17:40:15Z  SHA=1234b0366f181c9c944290453071acd87d5dac78 ===
+  baseline: LW-5=6 LW-6=7 LW-9=15 LW-A=3 LW-B=3  mw_iss=0  pipeline_iss=0  nan_iss=0
+  iter=1 elapsed=0s now=17:42:56 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  pl_iss=0  nan_iss=0  api_iss=0  new_since_deploy=0
+  iter=2 elapsed=87s now=17:44:23 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  pl_iss=0  nan_iss=0  api_iss=0  new_since_deploy=0
+  iter=3 elapsed=173s now=17:45:49 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  pl_iss=0  nan_iss=0  api_iss=0  new_since_deploy=0
+  iter=4 elapsed=258s now=17:47:14 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  pl_iss=0  nan_iss=0  api_iss=0  new_since_deploy=0
+  iter=5 elapsed=344s now=17:48:40 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  pl_iss=0  nan_iss=0  api_iss=0  new_since_deploy=0
+  iter=6 elapsed=430s now=17:50:06 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  pl_iss=0  nan_iss=0  api_iss=0  new_since_deploy=0
+  iter=7 elapsed=546s now=17:52:02 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  pl_iss=0  nan_iss=0  api_iss=0  new_since_deploy=0
+  iter=8 elapsed=633s now=17:53:29 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  pl_iss=0  nan_iss=0  api_iss=0  new_since_deploy=0
+  iter=9 elapsed=717s now=17:54:53 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  pl_iss=0  nan_iss=0  api_iss=0  new_since_deploy=0
+  iter=10 elapsed=803s now=17:56:19 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  pl_iss=0  nan_iss=0  api_iss=0  new_since_deploy=0
+  iter=11 elapsed=889s now=17:57:45 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  pl_iss=0  nan_iss=0  api_iss=0  new_since_deploy=0
+  iter=12 elapsed=974s now=17:59:10 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  pl_iss=0  nan_iss=0  api_iss=0  new_since_deploy=0
+
+=== PR #188 watch complete ===
