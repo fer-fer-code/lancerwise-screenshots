@@ -103,16 +103,55 @@ This is a model defense pattern for any public-facing POST endpoint. ✅
 
 Carry-over from prior smoke audit (`audit/agent4-smoke-execution/SMOKE-RESULTS-AGENT4-2026-05-21.md`): the `/api/health` endpoint referenced in `PRE-LAUNCH-CHECKLIST.md` does not exist. Either create the endpoint OR update the checklist. Recommendation: create a minimal `/api/health/route.ts` that returns `{ok:true, sha:process.env.VERCEL_GIT_COMMIT_SHA, ts:Date.now()}`.
 
+### ⚠️ Finding 9 — LANCERWISE-B: `Error: Invalid UTF-8 sequence` on Upstash Redis pipeline (P1 to investigate)
+
+**Caught during 1h Sentry tail close-out, NOT a result of my probes.** Surfaced to Ramiz via Telegram at 2026-05-22T03:36Z.
+
+| Field | Value |
+|---|---|
+| Sentry group | `7498815846` (LANCERWISE-B) |
+| firstSeen | 2026-05-22T03:03:42Z |
+| lastSeen | 2026-05-22T03:34:26Z (during tail window) |
+| count | 3 events |
+| userCount | **3 distinct users** |
+| isUnhandled | true |
+| priority | high |
+| release | `f27bb710a0ad...` (current production) ✅ tagged |
+| transaction | `GET /proxy` |
+| Exception | `Error: Invalid UTF-8 sequence` |
+| Stacktrace frames | 0 (server-side bundled code, stripped) |
+| Breadcrumbs | fetch to `https://desired-quetzal-124604.upstash.io/pipeline` (Upstash Redis serverless endpoint) |
+
+**Root-cause hypothesis:** `@upstash/redis ^1.38.0` or `@upstash/ratelimit ^2.0.8` (both in `package.json`) internally fetches the Upstash pipeline endpoint. The response occasionally contains bytes that JavaScript's UTF-8 decoder cannot parse — rare upstream edge case at Upstash's CDN/regional layer. The exception bubbles up unhandled.
+
+**Source investigation:**
+- No `/proxy` route in `src/app/api/`, `src/app/`, `src/middleware.ts`, `next.config.ts` rewrites, or `vercel.json`
+- `/proxy` is most likely an internal transaction name from the Upstash SDK (or a Vercel edge function naming pattern for the pipeline call)
+
+**Impact assessment:**
+- 3 errors / 3 users in 1h = small but real
+- Affects whichever code paths use Upstash Redis (rate-limit, cache, session, etc.)
+- isUnhandled means user-visible error or silent failure depending on context
+- Pre-launch — surfaces NOW; will compound with traffic
+
+**Recommendation (P1 to investigate, not necessarily P1 to fix pre-launch):**
+1. Identify which code path hits Upstash and whether the failure is user-facing
+2. Wrap Upstash calls in try/catch to convert to graceful degradation (rate-limit fallback to allow, cache fallback to DB)
+3. File a separate GH issue with full Sentry link
+4. Consider opening a support ticket with Upstash for the UTF-8 edge case
+
+**Why this is NOT launch-blocking:** the affected code paths almost certainly have fallback (the codebase has been operating on Upstash for weeks; this is a long-tail edge case). But surface NOW because pattern will recur post-launch.
+
 ---
 
 ## Aggregate verdict
 
 ✅ **CLEAN — auth boundary, cron boundary, webhook signature verification all working as designed.**
 
-3 ⚠️ flags, none launch-blocking:
+3 ⚠️ flags surfaced:
 1. Stripe 503 endpoint provider-name disclosure (P3 polish)
 2. `/api/health` 404 (P3 doc gap)
-3. (no third — placeholder for findings that may emerge from full Sentry tail at end of window)
+3. **LANCERWISE-B — Upstash UTF-8 error (P1 to investigate, see Finding 9)** — surfaced 2026-05-22T03:36Z
 
 **No 5xx server failures observed in 60 probes.**
 **No SQL/XSS injection vector reached business logic in tested paths.**
