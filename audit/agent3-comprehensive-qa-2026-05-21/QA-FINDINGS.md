@@ -42,7 +42,68 @@ This document updates incrementally as the QA passes execute. Each batch commit 
 
 ### P0 launch-blockers
 
-_(none yet — will populate as discovered)_
+#### QA-P0-001 — Malformed auth cookie crashes middleware with 500 INTERNAL_SERVER_ERROR (no redirect to /login) [P0 LAUNCH BLOCKER]
+
+**Repro (deterministic across 6 cookie variant tests):**
+| Cookie value | Status | Lands at | Verdict |
+|--------------|:------:|----------|:------:|
+| no cookie | 200 | `/login` | ✅ correct |
+| empty string `""` | 200 | `/login` | ✅ correct |
+| random non-prefixed string | 200 | `/login` | ✅ correct |
+| **`base64-INVALIDCOOKIESTRING`** | **500** | **`/dashboard`** | ❌ **CRASH** |
+| truncated valid cookie | 200 | `/login` | ✅ correct |
+| `base64-` (empty payload) | 200 | `/login` | ✅ correct |
+
+**Symptom:** When the auth cookie `sb-<ref>-auth-token` starts with `base64-` prefix AND contains characters that decode to non-JSON bytes, the Next.js middleware throws an uncaught exception. The user sees a bare Vercel error page:
+```
+500: INTERNAL_SERVER_ERROR
+Code: `MIDDLEWARE_INVOCATION_FAILED`
+ID: `hkg1::8b5zr-1779419022150-e361fee96665`
+```
+
+**Where:** Any authed route (/dashboard tested explicitly; suspected to affect ALL protected routes since middleware runs globally)
+
+**Real-world repro vectors:**
+- Browser corrupts cookie storage (Chrome version updates have done this historically)
+- User pastes a partial cookie from devtools/clipboard
+- Cookie length proxied through CDN/load balancer with header-size limits
+- Ad blockers / privacy extensions partially scrub cookies but leave `base64-` prefix
+- Session expiry where Supabase rotates the cookie partially
+
+**Suspect root cause:** `middleware.ts` (or equivalent) calls something like:
+```ts
+const session = JSON.parse(Buffer.from(cookieValue.slice(7), 'base64').toString());
+```
+without try/catch — and `JSON.parse("garbage")` throws. Need to wrap in try/catch + clear cookie + 302 → /login.
+
+**Evidence:**
+- `EVIDENCE/auth-flows/session_variant_base64_prefix_invalid_chromium_desktop.png` — the 500 error page
+- `EVIDENCE/auth-flows/session_variants.json` — full 6-variant matrix
+- `EVIDENCE/auth-flows/session_expiry_redirect_chromium_desktop.png` — earlier capture of same bug
+
+**Impact:** Any production user whose cookie becomes malformed gets a bare Vercel 500 with NO LancerWise branding, NO recovery CTA, NO sign-in link. They're stranded with a Vercel error ID and no path forward. Brand-damaging on launch + customer-support flood likely.
+
+**Severity rationale:** P0 because:
+1. Real-world occurrence rate non-zero (cookie corruption happens in field)
+2. Error page is BARE Vercel default — no branding, no recovery
+3. Affects ALL protected routes (middleware runs globally)
+4. Easy 1-line fix (wrap JSON.parse in try/catch + return redirect)
+5. Discoverability low (engineers won't see this themselves with valid sessions)
+
+**Fix sketch:**
+```ts
+// middleware.ts
+try {
+  const session = JSON.parse(Buffer.from(cookieValue.slice(7), 'base64').toString());
+  // proceed with auth check
+} catch (e) {
+  const response = NextResponse.redirect(new URL('/login', req.url));
+  response.cookies.delete(`sb-${REF}-auth-token`);
+  return response;
+}
+```
+
+**Verify after fix:** re-run `node /tmp/qa_session_variants.js` and confirm `base64_prefix_invalid` variant lands at /login (not 500).
 
 ### P1 broken UX
 
@@ -69,10 +130,8 @@ _(none yet — will populate as discovered)_
 - **Note:** Modal IS dismissible (× + Esc + skip). Intended behavior for onboarding. The bug is that this overlay is also shown to fixture users who already have a populated account — onboarding flag not respecting `seeded data` state. Verify whether persistent users see modal on every session, or only once per cookie lifetime
 - **P2 rationale:** Not a blocker (dismissible) but creates poor first-impression for non-onboarding users + RU translation missing inside modal copy
 
-#### QA-003 — Welcome tour modal: copy in English on RU locale [P1→P2 inside QA-002]
-- See QA-002. Inside the welcome modal, "👋 Welcome to LancerWise" + "Quick 60-second tour…" + "1 of 5" + "Back / Next →" remain English on RU locale
-- **Evidence:** `dashboard_chromium_ru_desktop_above-fold.png`, `dashboard_webkit_ru_mobile_above-fold.png`
-- **Suspect file:** `WelcomeTour.tsx` or `OnboardingTour.tsx` — hardcoded English strings instead of `t('welcome.title')` keys
+#### QA-003 — RETRACTED — Welcome tour modal IS translated to RU
+- Original observation was a misread (mixed-up cell screenshots). On re-verification: `dashboard_chromium_ru_desktop_above-fold.png` shows "Добро пожаловать в LancerWise" + "Короткий 60-секундный тур по интерфейсу. Можно пропустить — нажмите Esc." + "1 из 5" + "← Назад" / "Далее →" all in RU. Modal IS correctly localized.
 
 ### P3 polish
 
@@ -234,6 +293,45 @@ This strengthens QA-009 conclusion: i18n discipline IS in place for marketing su
 - **Symptom:** Pro card is wider + has purple highlight background, Free + Business cards are narrower with dark borders — visual asymmetry intentional but creates layout instability when comparing feature lists side-by-side
 - **Evidence:** `pricing_chromium_en_desktop_above-fold.png`
 - **Severity:** P3 — design choice, not a bug per se
+
+---
+
+## PART D — Widget overlap detection (sweep from all captured screenshots)
+
+### P2 (batch D)
+
+#### QA-020 — /dashboard welcome tour modal locks body scroll [P2 — restating QA-002]
+- All `dashboard_*_full.png` show identical content to `_above-fold.png` because the welcome modal sets `body { overflow: hidden }` while open
+- Effect: full-page screenshots can't capture full dashboard scroll length while modal is open — this is intended modal-behavior but blocks accessibility for users who can't dismiss the modal (e.g. keyboard-only with broken focus trap)
+- **Evidence:** every `dashboard_*_full.png` file (4 cells, identical to above-fold)
+- **Severity:** P2 (modal scroll-lock works as designed but worth verifying ESC keyboard dismissal + screen-reader announcement)
+
+### P3 (batch D)
+
+#### QA-021 — Cookie consent banner persistently visible at bottom [P3]
+- **Where:** Every captured page (all 28 routes × 4 cells = 112 cells)
+- **Symptom:** Cookie consent banner "Cookie preferences: We use cookies…" + Customize/Reject/Accept All persists at bottom of viewport on every page. Always visible until user makes a choice
+- **Evidence:** Visible in every screenshot
+- **Impact:** Slightly reduces vertical space for content (banner is ~50px on desktop, ~80px on mobile). No measurement of overlap with critical CTAs needed because banner uses sticky-bottom positioning + opaque background — content is not hidden, just compressed
+- **Severity:** P3 — standard GDPR consent pattern; user dismisses once
+
+#### QA-022 — Notifications "4/7 setup" pill bottom-left + Cookie banner bottom-center potential overlap on mobile [P3]
+- **Where:** Mobile WebKit views — both /clients, /dashboard, etc.
+- **Symptom:** The "4/7 setup" notifications pill (with bell icon) sits at bottom-left of viewport; the cookie banner sits across the bottom. On WebKit mobile 393×852, when notifications pill is positioned `fixed bottom-4 left-4`, it may stack below or beside the cookie banner depending on z-index + cookie banner height
+- **Evidence:** `clients_webkit_*_mobile_above-fold.png`, `dashboard_webkit_*_mobile_above-fold.png`
+- **Severity:** P3 — minor stacking; verify on real iPhone for clarity
+
+#### QA-023 — /proposals mobile FAB overlaps Project Scope textarea [P3 — restating QA-013]
+- See QA-013
+
+#### QA-024 — /upgrade mobile "Most popular" + "Current plan" badges crowd each other [P3 — restating QA-012]
+- See QA-012
+
+#### QA-025 — /work/time: GlobalTimerBar floating widget bottom-right + FAB bottom-right potential overlap [P3]
+- **Where:** Any authed page (GlobalTimerBar mounts globally per smoke F6 verdict)
+- **Symptom:** The lightning FAB (bottom-right purple circle) + GlobalTimerBar (when timer running) both occupy bottom-right area. Smoke verdict noted GlobalTimerBar fires `time_entries` REST on every authed route. If timer is RUNNING, both widgets may stack visually
+- **Note:** Fixture user has no active timer in current screenshots so GlobalTimerBar shell visible at top-banner area as "Week Progress" not as floating widget. To repro overlap, start a timer + capture mobile screenshot
+- **Severity:** P3 — verify post-launch with active-timer user
 
 ---
 

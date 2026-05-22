@@ -1,0 +1,56 @@
+[
+  {
+    "name": "no_cookie",
+    "cookie": null,
+    "respStatus": 200,
+    "landed": "https://www.lancerwise.com/login",
+    "navMs": 3014,
+    "bodyText": "Back to LancerWise\nWelcome back\n\nSign in to your LancerWise account\n\nEmail\nPassword\nForgot password?\nSign in\n\nDon't have an account? Sign up free\n\n🍪\n\nCookie preferences: We use cookies to improve you",
+    "errors": []
+  },
+  {
+    "name": "empty_cookie",
+    "cookie": "",
+    "respStatus": 200,
+    "landed": "https://www.lancerwise.com/login",
+    "navMs": 2741,
+    "bodyText": "Back to LancerWise\nWelcome back\n\nSign in to your LancerWise account\n\nEmail\nPassword\nForgot password?\nSign in\n\nDon't have an account? Sign up free\n\n🍪\n\nCookie preferences: We use cookies to improve you",
+    "errors": []
+  },
+  {
+    "name": "random_string",
+    "cookie": "random-bad-cookie-value",
+    "respStatus": 200,
+    "landed": "https://www.lancerwise.com/login",
+    "navMs": 2773,
+    "bodyText": "Back to LancerWise\nWelcome back\n\nSign in to your LancerWise account\n\nEmail\nPassword\nForgot password?\nSign in\n\nDon't have an account? Sign up free\n\n🍪\n\nCookie preferences: We use cookies to improve you",
+    "errors": []
+  },
+  {
+    "name": "base64_prefix_invalid",
+    "cookie": "base64-INVALIDCOOKIESTRING",
+    "respStatus": 500,
+    "landed": "https://www.lancerwise.com/dashboard",
+    "navMs": 2447,
+    "bodyText": "500: INTERNAL_SERVER_ERROR\nCode: MIDDLEWARE_INVOCATION_FAILED\nID: hkg1::g677c-1779419124259-dd6abcc9516f",
+    "errors": []
+  },
+  {
+    "name": "base64_prefix_truncated",
+    "cookie": "base64-eyJhY2Nlc3NfdG9rZW4iOiJleUpoYkdjaU9pSkZVekk",
+    "respStatus": 200,
+    "landed": "https://www.lancerwise.com/login",
+    "navMs": 3057,
+    "bodyText": "Back to LancerWise\nWelcome back\n\nSign in to your LancerWise account\n\nEmail\nPassword\nForgot password?\nSign in\n\nDon't have an account? Sign up free\n\n🍪\n\nCookie preferences: We use cookies to improve you",
+    "errors": []
+  },
+  {
+    "name": "empty_base64",
+    "cookie": "base64-",
+    "respStatus": 200,
+    "landed": "https://www.lancerwise.com/login",
+    "navMs": 3024,
+    "bodyText": "Back to LancerWise\nWelcome back\n\nSign in to your LancerWise account\n\nEmail\nPassword\nForgot password?\nSign in\n\nDon't have an account? Sign up free\n\n🍪\n\nCookie preferences: We use cookies to improve you",
+    "errors": []
+  }
+]
