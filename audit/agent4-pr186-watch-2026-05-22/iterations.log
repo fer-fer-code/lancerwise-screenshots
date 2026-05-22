@@ -1,0 +1,16 @@
+=== PR #186 watch — 12 iter × 75s | watch_start=2026-05-22T16:21:22Z  deploy_t0=2026-05-22T14:00:00Z  SHA=499c98bca01f3d7bf42df936ff8fde05db43c123 ===
+  baseline: LW-5=6 LW-6=7 LW-9=15 LW-A=3 LW-B=3  mw_iss=0  cookie_iss=0
+  iter=1 elapsed=0s now=16:21:22 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  cookie_iss=0  api_iss=0  new_since_deploy=0
+  iter=2 elapsed=85s now=16:22:47 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  cookie_iss=0  api_iss=0  new_since_deploy=0
+  iter=3 elapsed=199s now=16:24:41 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  cookie_iss=0  api_iss=0  new_since_deploy=0
+  iter=4 elapsed=284s now=16:26:06 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  cookie_iss=0  api_iss=0  new_since_deploy=0
+  iter=5 elapsed=370s now=16:27:32 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  cookie_iss=0  api_iss=0  new_since_deploy=0
+  iter=6 elapsed=456s now=16:28:58 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  cookie_iss=0  api_iss=0  new_since_deploy=0
+  iter=7 elapsed=541s now=16:30:23 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  cookie_iss=0  api_iss=0  new_since_deploy=0
+  iter=8 elapsed=627s now=16:31:49 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  cookie_iss=0  api_iss=0  new_since_deploy=0
+  iter=9 elapsed=711s now=16:33:13 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  cookie_iss=0  api_iss=0  new_since_deploy=0
+  iter=10 elapsed=799s now=16:34:41 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  cookie_iss=0  api_iss=0  new_since_deploy=0
+  iter=11 elapsed=885s now=16:36:07 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  cookie_iss=0  api_iss=0  new_since_deploy=0
+  iter=12 elapsed=972s now=16:37:34 LW5=6 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  cookie_iss=0  api_iss=0  new_since_deploy=0
+
+=== PR #186 watch complete ===
