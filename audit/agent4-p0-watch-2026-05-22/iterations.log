@@ -1,0 +1,16 @@
+=== P0 watch — 12 iter × 75s | watch_start=2026-05-22T05:50:16Z  deploy_t0=2026-05-22T05:47:04Z  SHA=a603831b8465bd73be422546a1fea634486edd90 ===
+  baseline: LW-5=5 LW-6=7 LW-9=15 LW-A=3 LW-B=3  middleware_issues=0
+  iter=1 elapsed=0s now=05:50:16 LW5=5 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  api_iss=0  new_since_deploy=0
+  iter=2 elapsed=175s now=05:53:11 LW5=5 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  api_iss=0  new_since_deploy=0
+  iter=3 elapsed=259s now=05:54:35 LW5=5 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  api_iss=0  new_since_deploy=0
+  iter=4 elapsed=343s now=05:55:59 LW5=5 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  api_iss=0  new_since_deploy=0
+  iter=5 elapsed=457s now=05:57:53 LW5=5 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  api_iss=0  new_since_deploy=0
+  iter=6 elapsed=543s now=05:59:19 LW5=5 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  api_iss=0  new_since_deploy=0
+  iter=7 elapsed=626s now=06:00:42 LW5=5 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  api_iss=0  new_since_deploy=0
+  iter=8 elapsed=714s now=06:02:10 LW5=5 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  api_iss=0  new_since_deploy=0
+  iter=9 elapsed=798s now=06:03:34 LW5=5 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  api_iss=0  new_since_deploy=0
+  iter=10 elapsed=885s now=06:05:01 LW5=5 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  api_iss=0  new_since_deploy=0
+  iter=11 elapsed=1001s now=06:06:57 LW5=5 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  api_iss=0  new_since_deploy=0
+  iter=12 elapsed=1086s now=06:08:22 LW5=5 LW6=7 LW9=15 LWA=3 LWB=3  mw_iss=0  api_iss=0  new_since_deploy=0
+
+=== P0 watch complete ===
