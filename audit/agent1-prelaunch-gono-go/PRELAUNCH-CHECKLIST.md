@@ -1,8 +1,35 @@
 # Pre-Launch GO/NO-GO Checklist
 
 **Author:** [AGENT 1]
-**Date:** 2026-05-22 (originally 2026-05-20; revised post Stage 2 v2 closure + INFRA verification + Comprehensive QA Batches 1-4)
+**Date:** 2026-05-22 (originally 2026-05-20; revised post Stage 2 v2 closure + INFRA verification + Comprehensive QA Batches 1-4 + **🚨 [AGENT 3] P0 + 6 P1 surfaced**)
 **Method:** Cross-referenced against GitHub issues + open PRs + audit folders + memory rules. Status verified от primary sources, not assumed.
+
+---
+
+## 🚨 CRITICAL ALERT — [AGENT 3] comprehensive QA surfaced 1 P0 + 6 P1 (2026-05-22 evening)
+
+**Previous "ready к launch" state revised.** Aggregate inventory from [AGENT 3] [QA-FINDINGS.md](../agent3-comprehensive-qa-2026-05-21/QA-FINDINGS.md) (commits 95558dc / 8732fc3 / 37784d5 / feda749 / 861812c):
+
+| Severity | Count | Items |
+|:---:|:---:|---|
+| **P0 LAUNCH BLOCKER** | 1 | [#154](https://github.com/fer-fer-code/lancerwise/issues/154) middleware crash on malformed cookie → bare Vercel 500 (QA-P0-001) |
+| **P1 broken UX** | 6 (merged к 4 GH issues) | [#155](https://github.com/fer-fer-code/lancerwise/issues/155) i18n authed routes (QA-001+007+009), [#156](https://github.com/fer-fer-code/lancerwise/issues/156) /upgrade Current-plan + Upgrade-to-Pro contradiction (QA-008), [#157](https://github.com/fer-fer-code/lancerwise/issues/157) Timezone UTC hardcoded (QA-011), [#158](https://github.com/fer-fer-code/lancerwise/issues/158) /clients/pipeline NaN + KPI mismatch (QA-P1-101) |
+| **P2 visible bugs** | 10 (9 unique GH) | #159-#167 — welcome modal, currency hardcoded, timer unlabeled inputs, pricing↔upgrade mismatch, legal pages RU, two proposal generators, work/time URL-sync, analytics 404, clients filter KPI |
+| **P3 polish** | 15+ (15 unique GH) | #168-#182 — budget pill collision, en-US dates, pricing badges, FAB textarea, save-settings, casing, /settings/api RU, pricing card width, notifications stacking, timerbar stacking, page header pattern, section header casing, floating widgets, KPI icon position, /proposals/new URL |
+
+**[AGENT 3] verdict:** ❌ DO NOT LAUNCH until QA-P0-001 fixed + verified.
+
+**Recommended pre-launch fix sequence (P0 + 6 P1):**
+1. QA-P0-001 middleware cookie crash — **~15 min** (1-line try/catch + redirect к /login)
+2. #156 /upgrade Current-plan CTA contradiction — **~30 min** (UI conditional)
+3. #158 /clients/pipeline NaN + KPI alignment — **~1-2h** (null-coalesce + query reconciliation)
+4. #155 i18n authed routes (KPI labels, headers, CTAs RU) — **~4-8h** (largest scope: message catalog completion across 8+ routes)
+5. #157 Timezone UTC hardcoded — **~2-4h** (helper + audit)
+6. (FAB Quick Add P1 backdrop fix — [AGENT 2] in flight, ~15 min)
+
+**P0 + 6 P1 fix total estimate: ~7.5-15h focused work.**
+
+After fixes, re-run smoke + AGENT 3 probe sequences к confirm. See `ESTIMATE-TO-LAUNCH.md` для revised timeline.
 
 **Legend:**
 - ✅ — done, verified
@@ -116,19 +143,33 @@
 | ~~B3 #93 /work/time N+1 (Phase 1 closure)~~ | ✅ **RESOLVED** — 80 widgets, 4 PRs (#119+#126+#127+#129), fetch count 3 (-97% vs baseline) | resolved |
 | ~~B4 #94 /settings N+1~~ | ✅ **RESOLVED** — v1→v2 (#132 + #135), fetch count 2 (-93% vs baseline), WebKit win preserved | resolved |
 | **✨ Phase 1 N+1 mission complete** | ✅ ALL 4 routes closed (#73 + #74 + #93 + #94). | resolved |
-| ~~Q1 QA campaign — comprehensive QA Batches 1-4~~ | ✅ **RESOLVED 2026-05-22** — 4 batches complete, 1 P1 (FAB backdrop) routed к [AGENT 2], 3 P2 + 6 P3 filed (#143-#153). | resolved |
-| **FAB Quick Add overlap (P1, only remaining blocker)** | ⏳ [AGENT 2] in flight — ~15 min fix (backdrop-blur + bg-black/40 scrim). Smoke retest post-merge. | **next** |
+| ~~Q1 QA campaign — comprehensive QA Batches 1-4 ([AGENT 1])~~ | ✅ **RESOLVED 2026-05-22** — 4 batches complete, 1 P1 (FAB backdrop) routed к [AGENT 2], 3 P2 + 6 P3 filed (#143-#153). | resolved |
+| **Q1' Comprehensive QA ([AGENT 3] independent)** | 🚨 **DONE 2026-05-22 evening — surfaces 1 P0 + 6 P1.** Full inventory in [QA-FINDINGS.md](../agent3-comprehensive-qa-2026-05-21/QA-FINDINGS.md). | reset critical path |
+| **[#154] P0 middleware cookie crash (QA-P0-001)** | ❌ **ACTIVE BLOCKER** — bare Vercel 500 on malformed cookie. ~15 min 1-line fix. Owner TBD. | **🚨 NEXT** |
+| **[#155] P1 i18n authed routes (QA-001+007+009)** | ❌ ACTIVE — KPI labels, table headers, CTAs all English on RU. ~4-8h focused. | pre-launch |
+| **[#156] P1 /upgrade CTA contradiction (QA-008)** | ❌ ACTIVE — Pro user sees "Upgrade к Pro" with "Current plan" badge. ~30 min. | pre-launch |
+| **[#157] P1 Timezone UTC hardcoded (QA-011)** | ❌ ACTIVE — /settings/digest + /settings/reminders show UTC instead of local. ~2-4h. | pre-launch |
+| **[#158] P1 /clients/pipeline NaN + KPI mismatch (QA-P1-101)** | ❌ ACTIVE — "USD NaN" string + KPI totals don't reflect Kanban. ~1-2h. | pre-launch |
+| **FAB Quick Add overlap (P1, [AGENT 1] batch 4)** | ⏳ [AGENT 2] in flight — ~15 min fix (backdrop-blur + bg-black/40 scrim). | pre-launch |
 
-### Should fix pre-launch (raises risk if shipped without)
+### Should fix pre-launch (raises risk if shipped without) — **REVISED 2026-05-22 evening**
 
-| Item | Status |
-|---|---|
-| ~~Q1 QA campaign~~ | ✅ **Q7 closed 2026-05-22** — 4 batches done, only P1 FAB backdrop remains |
-| **FAB Quick Add overlap P1 (only launch blocker)** | ⏳ [AGENT 2] in flight |
-| Q2 Re-baseline post-perf-fixes | needs scheduling |
-| D2 Incident runbook | ⚠️ verify |
-| D3 Monitoring checklist | ⚠️ verify |
-| ~~D4 Privacy/ToS legal review~~ | ✅ PR #105 merged |
+| Item | Status | Time |
+|---|---|---|
+| ~~Q1 [AGENT 1] QA campaign batches 1-4~~ | ✅ Q7 closed | done |
+| **🚨 #154 P0 middleware cookie crash** | ❌ **MUST FIX** | ~15 min |
+| **#155 P1 i18n authed routes** | ❌ MUST FIX | ~4-8h |
+| **#156 P1 /upgrade CTA contradiction** | ❌ MUST FIX | ~30 min |
+| **#157 P1 Timezone UTC hardcoded** | ❌ MUST FIX | ~2-4h |
+| **#158 P1 /clients/pipeline NaN + KPI** | ❌ MUST FIX | ~1-2h |
+| **FAB Quick Add overlap P1** | ⏳ [AGENT 2] in flight | ~15 min |
+| Smoke retest post-fixes | ❌ required after fixes land | ~2-3h |
+| Q2 Re-baseline post-perf-fixes | needs scheduling | ~1h |
+| D2 Incident runbook | ⚠️ verify | — |
+| D3 Monitoring checklist | ⚠️ verify | — |
+| ~~D4 Privacy/ToS legal review~~ | ✅ PR #105 merged | done |
+
+**Pre-launch fix total estimate: ~7.5-15h focused work + ~2-3h smoke retest = 10-18h wall-clock.**
 
 ### Acceptable post-launch (with monitoring)
 
@@ -164,6 +205,37 @@
 | [#131](https://github.com/fer-fer-code/lancerwise/issues/131) | Stage 2 v2 /work/time p95 24h re-check | P3 post-launch | T+24h after launch |
 | [#133](https://github.com/fer-fer-code/lancerwise/issues/133) | CSP missing on production — add к Next.js middleware | P1 post-launch (day 1-3 hot follow-up) | Per Ramiz preference; INFRA audit 2026-05-21 |
 | [#134](https://github.com/fer-fer-code/lancerwise/issues/134) | DMARC enforcement ramp `p=none` → `p=quarantine` → `p=reject` | P3 post-launch month-1+ | After 30-day aggregate report review |
+
+### [AGENT 3] Comprehensive QA backlog (filed 2026-05-22 evening) — P2 + P3 only
+
+P0 + 6 P1 listed above в Critical Bugs section. P2 + P3 below:
+
+| Issue | Title | Severity |
+|---|---|---|
+| [#159](https://github.com/fer-fer-code/lancerwise/issues/159) | /dashboard welcome modal shown к populated users + scroll-lock (QA-002+020) | P2 |
+| [#160](https://github.com/fer-fer-code/lancerwise/issues/160) | Currency $ hardcoded — formatCurrency() helper needed (QA-005) | P2 |
+| [#161](https://github.com/fer-fer-code/lancerwise/issues/161) | /work/time Timer card 3 unlabeled inputs (QA-010) | P2 |
+| [#162](https://github.com/fer-fer-code/lancerwise/issues/162) | /pricing ↔ /upgrade feature list inconsistency (QA-017) | P2 |
+| [#163](https://github.com/fer-fer-code/lancerwise/issues/163) | /privacy + /terms 100% English on RU (QA-018) — likely dup #106 | P2 |
+| [#164](https://github.com/fer-fer-code/lancerwise/issues/164) | Two proposal generators (QA-P2-101) | P2 |
+| [#165](https://github.com/fer-fer-code/lancerwise/issues/165) | /work/time tabs не sync к URL (QA-P2-102) | P2 |
+| [#166](https://github.com/fer-fer-code/lancerwise/issues/166) | /analytics/overview 404 (QA-P2-103) | P2 |
+| [#167](https://github.com/fer-fer-code/lancerwise/issues/167) | /clients filter applied но KPI cards don't update (QA-P2-104) | P2 |
+| [#168](https://github.com/fer-fer-code/lancerwise/issues/168) | /proposals Budget label collides с Estimate-with-AI pill (QA-004) | P3 |
+| [#169](https://github.com/fer-fer-code/lancerwise/issues/169) | Date format en-US hardcoded (QA-006) | P3 |
+| [#170](https://github.com/fer-fer-code/lancerwise/issues/170) | /upgrade mobile badges crowd (QA-012) | P3 |
+| [#171](https://github.com/fer-fer-code/lancerwise/issues/171) | /proposals mobile FAB overlaps textarea (QA-013) | P3 |
+| [#172](https://github.com/fer-fer-code/lancerwise/issues/172) | /settings/late-fees Save-Settings always-enabled (QA-014) | P3 |
+| [#173](https://github.com/fer-fer-code/lancerwise/issues/173) | /settings/availability label casing (QA-015) | P3 |
+| [#174](https://github.com/fer-fer-code/lancerwise/issues/174) | /settings/api page heading RU (QA-016) | P3 |
+| [#175](https://github.com/fer-fer-code/lancerwise/issues/175) | /pricing card width inconsistent (QA-019) | P3 |
+| [#176](https://github.com/fer-fer-code/lancerwise/issues/176) | Notifications pill + cookie banner mobile stacking (QA-022) | P3 |
+| [#177](https://github.com/fer-fer-code/lancerwise/issues/177) | GlobalTimerBar + FAB stacking (QA-025) | P3 |
+| [#178](https://github.com/fer-fer-code/lancerwise/issues/178) | Page header pattern inconsistent (QA-031) | P3 |
+| [#179](https://github.com/fer-fer-code/lancerwise/issues/179) | Section header casing mixed (QA-032) | P3 |
+| [#180](https://github.com/fer-fer-code/lancerwise/issues/180) | Floating widgets stacking — mobile real-estate (QA-033) | P3 |
+| [#181](https://github.com/fer-fer-code/lancerwise/issues/181) | KPI card icon position varies (QA-034) | P3 |
+| [#182](https://github.com/fer-fer-code/lancerwise/issues/182) | /proposals/new redirect URL convention (QA-P2-105) | P3 |
 
 ### Comprehensive QA Batches 1-4 backlog (filed 2026-05-22)
 
