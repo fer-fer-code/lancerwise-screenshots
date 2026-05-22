@@ -1,0 +1,156 @@
+{
+  "digest_en": {
+    "errors": [],
+    "timezoneInfo": {
+      "utcMatches": [
+        "06:00 UTC",
+        "07:00 UTC",
+        "08:00 UTC",
+        "09:00 UTC",
+        "10:00 UTC",
+        "11:00 UTC",
+        "12:00 UTC",
+        "13:00 UTC",
+        "14:00 UTC",
+        "15:00 UTC",
+        "16:00 UTC",
+        "17:00 UTC",
+        "18:00 UTC"
+      ],
+      "localMatches": [
+        "02:00 EDT",
+        "03:00 EDT",
+        "04:00 EDT",
+        "05:00 EDT",
+        "06:00 EDT",
+        "07:00 EDT",
+        "08:00 EDT",
+        "09:00 EDT",
+        "10:00 EDT",
+        "11:00 EDT",
+        "12:00 EDT",
+        "13:00 EDT",
+        "14:00 EDT"
+      ],
+      "containsUTC": true,
+      "containsLocal": false,
+      "containsDualFormat": false,
+      "deliveryTimeLabel": "LancerWise\nHome\nMoney\nClients\nWork\nContracts\nInsights\nSettings\nNotifications\nShortcuts\nSettings\nSearch...\n⌘K\n🇬🇧 EN\n?\nQRA\nWeekly Digest Settings\n\nGet a Monday morning summary of your business\n\nEnable"
+    },
+    "mainTextSnippet": "Weekly Digest Settings\n\nGet a Monday morning summary of your business\n\nEnabled\nDelivery Settings\nDelivery Day\nSun\nMon\nTue\nWed\nThu\nFri\nSat\nDelivery Time\n06:00 UTC (02:00 EDT)\n07:00 UTC (03:00 EDT)\n08:00 UTC (04:00 EDT)\n09:00 UTC (05:00 EDT)\n10:00 UTC (06:00 EDT)\n11:00 UTC (07:00 EDT)\n12:00 UTC (08:00 EDT)\n13:00 UTC (09:00 EDT)\n14:00 UTC (10:00 EDT)\n15:00 UTC (11:00 EDT)\n16:00 UTC (12:00 EDT)\n17:00 UTC (13:00 EDT)\n18:00 UTC (14:00 EDT)\nSend To\n\nYour account email — change it in Profile settings\n\nSections to Include\nRevenue Summary\nWeekly earnings from paid invoices\nPending & Overdue Invoices\nInvoices needing attention\nUpcoming Milestones\nDeadlines in the next 7 days\nProposal Pipeline\nPending proposals and estimated value\nSave Preferences\nPreview & Send\nPreview This Week's Digest\nSend to my email now",
+    "selectOptions": [
+      {
+        "name": null,
+        "options": [
+          "06:00 UTC (02:00 EDT)",
+          "07:00 UTC (03:00 EDT)",
+          "08:00 UTC (04:00 EDT)",
+          "09:00 UTC (05:00 EDT)",
+          "10:00 UTC (06:00 EDT)",
+          "11:00 UTC (07:00 EDT)",
+          "12:00 UTC (08:00 EDT)",
+          "13:00 UTC (09:00 EDT)",
+          "14:00 UTC (10:00 EDT)",
+          "15:00 UTC (11:00 EDT)",
+          "16:00 UTC (12:00 EDT)",
+          "17:00 UTC (13:00 EDT)",
+          "18:00 UTC (14:00 EDT)"
+        ]
+      }
+    ]
+  },
+  "reminders_en": {
+    "errors": [],
+    "timezoneInfo": {
+      "utcMatches": [
+        "10:00 AM UTC"
+      ],
+      "localMatches": [
+        "06:00 EDT"
+      ],
+      "containsUTC": true,
+      "containsLocal": false,
+      "containsDualFormat": false,
+      "dailyText": [
+        "Runs daily at 10:00 AM UTC (06:00 EDT) — sends emails to clients with overdue invoices"
+      ]
+    }
+  },
+  "digest_ru": {
+    "errors": [],
+    "timezoneInfo": {
+      "utcMatches": [
+        "06:00 UTC",
+        "07:00 UTC",
+        "08:00 UTC",
+        "09:00 UTC",
+        "10:00 UTC",
+        "11:00 UTC",
+        "12:00 UTC",
+        "13:00 UTC",
+        "14:00 UTC",
+        "15:00 UTC",
+        "16:00 UTC",
+        "17:00 UTC",
+        "18:00 UTC"
+      ],
+      "localMatches": [
+        "02:00 EDT",
+        "03:00 EDT",
+        "04:00 EDT",
+        "05:00 EDT",
+        "06:00 EDT",
+        "07:00 EDT",
+        "08:00 EDT",
+        "09:00 EDT",
+        "10:00 EDT",
+        "11:00 EDT",
+        "12:00 EDT",
+        "13:00 EDT",
+        "14:00 EDT"
+      ],
+      "containsUTC": true,
+      "containsLocal": false,
+      "containsDualFormat": false,
+      "deliveryTimeLabel": "LancerWise\nГлавная\nФинансы\nКлиенты\nРабота\nДоговоры\nАналитика\nНастройки\nУведомления\nГорячие клавиши\nНастройки\nПоиск...\n⌘K\n🇷🇺 RU\n?\nQRA\nWeekly Digest Settings\n\nGet a Monday morning summary of your busi"
+    },
+    "mainTextSnippet": "Weekly Digest Settings\n\nGet a Monday morning summary of your business\n\nEnabled\nDelivery Settings\nDelivery Day\nSun\nMon\nTue\nWed\nThu\nFri\nSat\nDelivery Time\n06:00 UTC (02:00 EDT)\n07:00 UTC (03:00 EDT)\n08:00 UTC (04:00 EDT)\n09:00 UTC (05:00 EDT)\n10:00 UTC (06:00 EDT)\n11:00 UTC (07:00 EDT)\n12:00 UTC (08:00 EDT)\n13:00 UTC (09:00 EDT)\n14:00 UTC (10:00 EDT)\n15:00 UTC (11:00 EDT)\n16:00 UTC (12:00 EDT)\n17:00 UTC (13:00 EDT)\n18:00 UTC (14:00 EDT)\nSend To\n\nYour account email — change it in Profile settings\n\nSections to Include\nRevenue Summary\nWeekly earnings from paid invoices\nPending & Overdue Invoices\nInvoices needing attention\nUpcoming Milestones\nDeadlines in the next 7 days\nProposal Pipeline\nPending proposals and estimated value\nSave Preferences\nPreview & Send\nPreview This Week's Digest\nSend to my email now",
+    "selectOptions": [
+      {
+        "name": null,
+        "options": [
+          "06:00 UTC (02:00 EDT)",
+          "07:00 UTC (03:00 EDT)",
+          "08:00 UTC (04:00 EDT)",
+          "09:00 UTC (05:00 EDT)",
+          "10:00 UTC (06:00 EDT)",
+          "11:00 UTC (07:00 EDT)",
+          "12:00 UTC (08:00 EDT)",
+          "13:00 UTC (09:00 EDT)",
+          "14:00 UTC (10:00 EDT)",
+          "15:00 UTC (11:00 EDT)",
+          "16:00 UTC (12:00 EDT)",
+          "17:00 UTC (13:00 EDT)",
+          "18:00 UTC (14:00 EDT)"
+        ]
+      }
+    ]
+  },
+  "reminders_ru": {
+    "errors": [],
+    "timezoneInfo": {
+      "utcMatches": [
+        "10:00 AM UTC"
+      ],
+      "localMatches": [
+        "06:00 EDT"
+      ],
+      "containsUTC": true,
+      "containsLocal": false,
+      "containsDualFormat": false,
+      "dailyText": [
+        "Runs daily at 10:00 AM UTC (06:00 EDT) — sends emails to clients with overdue invoices"
+      ]
+    }
+  }
+}
