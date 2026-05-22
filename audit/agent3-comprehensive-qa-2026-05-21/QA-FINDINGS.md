@@ -26,9 +26,10 @@ This document updates incrementally as the QA passes execute. Each batch commit 
 
 | Pass | Status | Findings count | Pushed batch |
 |------|:------:|----------------|:------------:|
-| PART C batch 1 — main authed pages (dashboard/clients/projects/invoices/proposals) | ✅ DONE | 1 P1, 2 P2, 3 P3 | pending push |
-| PART C batch 2 — work/time + /settings/* + /analytics + /pricing/upgrade | ⏳ pending | — | — |
-| PART C batch 3 — auth/unauth pages (register/login/forgot-password) | ⏳ pending | — | — |
+| PART C batch 1 — main authed pages (dashboard/clients/projects/invoices/proposals) | ✅ DONE | 1 P1, 2 P2, 3 P3 | commit 95558dc |
+| PART C batch 1 — unauth (register/login/forgot-password) | ✅ DONE | 0 (Turnstile present) | commit 95558dc |
+| PART C batch 2 — work/time + /settings/* (10) + /upgrade + /analytics + /contracts | ✅ DONE | findings below | pending push |
+| PART C batch 2 — public unauth (/, /pricing, /about, /contact, /privacy, /terms, /blog, /faq) | ✅ DONE | findings below | pending push |
 | PART A — auth flow probes (signup/signin/forgot/reset/logout/expiry) | ⏳ pending | — | — |
 | PART B — CRUD flows (clients/projects/invoices/proposals/time/contracts) | ⏳ pending | — | — |
 | PART D — widget overlap scan | ⏳ pending | — | — |
@@ -94,6 +95,145 @@ _(none yet — will populate as discovered)_
 - **Symptom:** en-US date format renders for RU users too ("May 25, 2026" / "Jun 9, 2026")
 - **Evidence:** `invoices_chromium_ru_desktop_above-fold.png`
 - **Note:** Pre-existing memory `backlog_date_format_localization` P1 — re-confirmed visually
+
+---
+
+## Batch 2 findings — /work/time + /settings/* + /upgrade + /analytics + /contracts
+
+### P1 broken UX (batch 2)
+
+#### QA-007 — /upgrade page 100% English on RU locale [P1]
+- **Where:** /upgrade (and presumably /pricing)
+- **Symptom:** Entire pricing page is English on RU locale — only sidebar nav is translated. Page heading "Upgrade your plan", subhead "You're on the Pro plan", Monthly/Yearly toggle, "Save 17-20%", "Free" / "$0 forever" / "Pro" / "$15/month", feature lists, "Most popular" + "Current plan" badges, "Upgrade to Pro" CTA, "Free forever" CTA — all English
+- **Evidence:** `upgrade_chromium_ru_desktop_above-fold.png`, `upgrade_webkit_ru_mobile_above-fold.png`
+- **Impact:** Conversion-critical surface, untranslated for half the audience
+- **Severity:** P1 — pricing conversion is launch-revenue path
+
+#### QA-008 — /upgrade "Current plan" + "Upgrade to Pro" CTA contradiction [P1]
+- **Where:** /upgrade for fixture user already on Pro plan
+- **Symptom:** Pro card has "Current plan" green badge BUT primary CTA reads "Upgrade to Pro" — user is being asked to upgrade to a plan they're already on
+- **Evidence:** `upgrade_chromium_en_desktop_above-fold.png`, `upgrade_chromium_ru_desktop_above-fold.png`
+- **Expected:** Button should be `disabled` with copy "Manage plan" / "Manage subscription" / "Cancel subscription" / "Your current plan"
+- **Impact:** Confusing UX; potential to double-charge if button is functional (need to verify backend); brand-damaging on launch
+- **Severity:** P1 — UX bug touching paid plan management
+
+### P1 broken UX (batch 2) — i18n continued
+
+#### QA-009 — i18n coverage matrix: ALL authed routes have partial-to-zero RU coverage [P1 — single root issue, multiple surfaces]
+
+Summarising RU coverage observed in batch 1 + 2 (both confirmed):
+
+| Route | Sidebar | Page heading | Body content | Sub-nav | CTAs/buttons | Coverage |
+|-------|:------:|:-----:|:-----:|:-----:|:-----:|:-:|
+| /dashboard | ✅ | ✅ | partial — KPIs untranslated | n/a | partial | ~50% |
+| /clients | ✅ | ✅ (Клиенты) | ❌ table headers + filter chips + KPIs all English | ✅ | ❌ "New Client" English | ~30% |
+| /projects | ✅ | ✅ | ❌ KPIs + status pills + filter chips + view tabs all English | ✅ | ❌ "New Project" English | ~30% |
+| /invoices | ✅ | ✅ (Счета) | ❌ KPIs + filter chips + status badges + banner all English | ✅ | ❌ "New Invoice" English | ~30% |
+| /proposals | ✅ | ✅ (Коммерческие предложения) | ❌ entire Proposal Generator form English | ✅ | ❌ all CTAs English | ~10% |
+| /contracts | ✅ | ❌ "Contracts" English | ✅ empty-state body translated | ✅ | ❌ "New Contract" / "Generate AI" / "More" English | ~50% |
+| /work/time | ✅ | ✅ (Учёт времени) | ❌ Timer/Timesheet/Analytics tabs + Time Tracker + all buttons English | ✅ | ❌ Pomodoro/Invoice Time/Export CSV English | ~20% |
+| /analytics | ✅ | ✅ (Аналитика) | partial — KPI cards translated, heatmap chart card NOT translated | ❌ subnav (Overview/Time/Forecast/...) English | ✅ tab labels translated | ~50% |
+| /settings root | ✅ | ✅ (Настройки) | ✅ Profile + Appearance translated | n/a | ✅ Save Profile translated | ~95% (only "Profile Photo / JPG, PNG or WebP" caption English) |
+| /settings/api | ✅ | ❌ "API Keys" English | ❌ all English | n/a | ❌ "+ New Key" English | ~5% (probably acceptable — API docs convention) |
+| /upgrade | ✅ | ❌ all English | ❌ all English | n/a | ❌ all English | ~5% |
+
+- **Suspect file(s):** likely a mix of:
+  - Hardcoded English strings instead of `t('...')` calls in widget components (Dashboard KPI cards, Clients table headers, Projects view tabs, Invoices banner, Work/Time tracker UI)
+  - Missing keys in `messages/ru.json` (translations not authored yet)
+  - TopBar uses route name from layout metadata not from i18n catalog (causes "Contracts"/"API Keys" page-heading bleed)
+- **Severity:** P1 — half-translated product feels broken for RU users; launch-quality risk
+
+### P2 visible bugs (batch 2)
+
+#### QA-010 — /work/time Timer card: 3 empty unlabeled input fields [P2]
+- **Where:** /work/time Timer tab, between Templates button and the Start/Billable controls
+- **Symptom:** Three empty input fields render with no labels, no placeholder text. User can't tell what to type (client? project? task? notes?)
+- **Evidence:** `work_time_chromium_en_desktop_above-fold.png`
+- **Suspect file:** `TimerWidget.tsx` (or equivalent) — input fields missing placeholder OR label props
+- **Impact:** Core Time Tracker feature is unusable until user discovers labels via tooltip/focus
+- **Severity:** P2 (not P1 because Start button still works — but UX is broken without context)
+
+#### QA-011 — Timezone hardcoded UTC re-confirmed in /settings/digest + /settings/reminders [P1 inherited backlog]
+- **Where:** /settings/digest "Delivery Time (UTC)" dropdown, /settings/reminders "Runs daily at 10:00 AM UTC"
+- **Symptom:** All time-of-day UI surfaces use UTC instead of user's local timezone
+- **Evidence:** `settings_digest_*.png`, `settings_reminders_*.png`
+- **Note:** Pre-existing memory `backlog_timezone_hardcoded` P1 — re-confirmed across 2 more routes
+- **Severity:** P1 — confusing for users globally; will cause reminder send-time complaints
+
+### P3 polish (batch 2)
+
+#### QA-012 — /upgrade mobile: "Most popular" + "Current plan" badges overlap visually on Pro card [P3]
+- **Where:** /upgrade WebKit iPhone 14 Pro mobile
+- **Symptom:** Two absolutely-positioned pills (purple "Most popular" + green "Current plan") align on the same row above the Pro card; on mobile narrow width they appear visually crowded
+- **Evidence:** `upgrade_webkit_en_mobile_above-fold.png`, `upgrade_webkit_ru_mobile_above-fold.png`
+- **Severity:** P3 — cosmetic, not blocking
+
+#### QA-013 — /work/time mobile: purple Floating Action Button overlaps Project Scope textarea on /proposals [P3]
+- Wait — actually proposals, not /work/time. Affecting /proposals mobile WebKit.
+- **Where:** /proposals WebKit mobile
+- **Symptom:** The purple lightning/AI FAB (bottom-right) overlaps the bottom of the "Project Scope *" textarea, partially covering placeholder text "Describe the project: what needs to be built, key requirements, special constraints..."
+- **Evidence:** `proposals_webkit_en_mobile_above-fold.png`
+- **Suspect:** FAB positioned `fixed bottom-4 right-4` without scroll-padding adjustment on form pages
+- **Severity:** P3 — placeholder text is partially obscured but content still typeable
+
+#### QA-014 — /settings/late-fees "Save Settings" CTA always-enabled [P3]
+- **Where:** /settings/late-fees
+- **Symptom:** Save Settings purple primary CTA is enabled by default; clicking with no changes still triggers PATCH
+- **Evidence:** `settings_late-fees_chromium_en_desktop_above-fold.png`
+- **Severity:** P3 — standard form-dirty pattern improvement; not blocking
+
+#### QA-015 — /settings/availability label-case inconsistency [P3]
+- **Where:** /settings/availability — 2x2 status pill grid
+- **Symptom:** Pill names mix one-word ("Available", "Limited", "Unavailable") with three-word ("Open to Work") — inconsistent casing convention. Section headers are SCREAMING-CAPS ("AVAILABILITY STATUS", "WEEKLY CAPACITY", "AVAILABILITY NOTE") which is loud
+- **Evidence:** `settings_availability_chromium_en_desktop_above-fold.png`
+- **Severity:** P3 — design-system polish
+
+#### QA-016 — /settings/api → /upgrade redirect + page-heading "API Keys" English-only on RU [P3]
+- **Where:** /settings/api
+- **Symptom:** Renders but everything is English (1053 endpoints, API Reference, BASE URL etc.) — probably acceptable for developer docs convention, but at least empty state copy "No API keys yet. Create one to get started." + "+ New Key" CTA should translate
+- **Evidence:** `settings_api_chromium_ru_desktop_above-fold.png`
+- **Severity:** P3 — developer audience tolerates English API docs
+
+---
+
+## Batch 2-unauth findings — public marketing pages (/, /pricing, /about, /contact, /privacy, /terms, /blog, /faq)
+
+### POSITIVE — public pages are FULLY localized to RU [contrast with authed]
+
+The complete marketing surface translates cleanly:
+- `/` homepage: hero copy, dashboard mockup labels, all CTAs, top nav, cookie banner — all RU ✓
+- `/pricing`: tier names, prices, feature lists, "Most popular" / "Coming soon" badges, all CTAs — all RU ✓
+- `/about`: "Our Story" hero, mission copy — all RU ✓
+- `/contact`: form, "General support", response time copy — all RU ✓
+- `/blog`: "LancerWise Blog" + "Freelance Knowledge Base" + category chips — all RU ✓
+- `/faq`: "Frequently Asked Questions" + category headers — all RU ✓
+
+This strengthens QA-009 conclusion: i18n discipline IS in place for marketing surfaces; the gap is **specifically inside authed-app message catalogs**, not the framework.
+
+### P2 visible bugs (batch 2-unauth)
+
+#### QA-017 — /pricing public ↔ /upgrade authed feature-list inconsistency [P2]
+- **Where:** /pricing (logged-out) vs /upgrade (logged-in)
+- **Symptom:** Pro plan feature list differs between public + app surfaces:
+  - **/pricing public:** 8 features (Unlimited clients, Unlimited AI generations (12+ features), AI Business Advisor, AI Contract Risk Analyzer, Payment reminder automation, Recurring invoices, Custom branding, Priority email support)
+  - **/upgrade authed:** 12 features (above 8 PLUS Revenue forecasting, Project profitability reports, Pre-signing checklists, ...wait `/pricing` lacks: Revenue forecasting, Project profitability reports, Pre-signing checklists, Custom branding)
+- **Evidence:** `pricing_chromium_en_desktop_above-fold.png` + `upgrade_chromium_en_desktop_above-fold.png`
+- **Also:** /pricing public "Save 20%" toggle copy vs /upgrade authed "Save 17-20%" copy — inconsistent
+- **Severity:** P2 — pricing-surface inconsistency hurts trust + perception of feature coverage; pre-launch must align
+
+#### QA-018 — /privacy + /terms 100% English on RU locale [P2 GDPR risk]
+- **Where:** /privacy, /terms
+- **Symptom:** Top nav RU but legal-doc body untranslated. GDPR Art. 12 requires "clear and plain language" — does NOT explicitly mandate locale-specific translation, but national consumer-protection laws in RU + EU may require local-language privacy disclosure when targeting users in those locales
+- **Evidence:** `privacy_chromium_ru_desktop_above-fold.png`, `terms_chromium_ru_desktop_above-fold.png`
+- **Severity:** P2 (compliance/legal risk) — verify with legal counsel pre-launch; if not legally required, downgrade to P3
+
+### P3 polish (batch 2-unauth)
+
+#### QA-019 — /pricing card width inconsistent across 3 tiers [P3]
+- **Where:** /pricing public — Free / Pro / Business cards
+- **Symptom:** Pro card is wider + has purple highlight background, Free + Business cards are narrower with dark borders — visual asymmetry intentional but creates layout instability when comparing feature lists side-by-side
+- **Evidence:** `pricing_chromium_en_desktop_above-fold.png`
+- **Severity:** P3 — design choice, not a bug per se
 
 ---
 
