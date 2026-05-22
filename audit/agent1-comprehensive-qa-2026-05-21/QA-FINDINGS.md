@@ -157,3 +157,96 @@ Batch 2-4 require ~2-3h focused work each. Will execute when triggered post-laun
 - **Mobile responsive /register:** clean
 
 **Batch 1 verdict:** ✅ no launch-blockers. 1 P2 to file post-launch (cookie banner extending к unauth pages). Continue к batches 2-4 when triggered.
+
+---
+
+## Batch 2 + 3 — Signed-in flows visual + widget overlap detection
+
+### Auth setup
+
+Logged in via magic link as fixture user `46b486d7-5fec-47af-a466-3295dc1c3b95` (QA Realistic Account, `lancerwise-qa-93s1-fixed-1779327754@wshu.net`).
+
+### Pages inspected (5 signed-in surfaces)
+
+| Page | Locale | Viewport | Screenshot |
+|---|---|---|---|
+| /dashboard | EN | 1366×768 | `EVIDENCE/visual-regression/b2-dashboard-en-1366.png` |
+| /work/time | EN | 1366×768 | `EVIDENCE/visual-regression/b2-worktime-en-1366.png` |
+| /settings (post #94 v2) | EN | 1366×768 | `EVIDENCE/visual-regression/b2-settings-en-1366.png` |
+| /clients | EN | 1366×768 | `EVIDENCE/visual-regression/b2-clients-en-1366.png` |
+| /invoices | EN | 1366×768 | `EVIDENCE/visual-regression/b2-invoices-en-1366.png` |
+
+### Visual regression vs baselines
+
+- **/dashboard:** Clean render. "Good morning, QA" greeting, Today's Agenda с 2 overdue invoices, 4 KPI cards (Revenue $8,474 / Open $17,027 / Hours 17.7h / Proposals 0), Revenue 12-week chart, Activity Feed. Sidebar "Home" highlighted purple. Quick Add FAB visible. **No regression.**
+- **/work/time:** Renders post-#93 Stage 2 v2. Time Tracker tabs (Timer / Timesheet / Analytics), action buttons (Pomodoro / Invoice Time / Export CSV), Timer card 00:00:00 (fixture week reset since smoke), Templates button, Start + Billable buttons, This Week histogram с weekday columns. Sidebar Work expanded showing Projects/Tasks/Time Tracker (highlighted). **No regression.**
+- **/settings (post #94 v2):** Settings header, Profile card (QR avatar, Full Name "QA Realistic Account", Email field, Save Profile button), Appearance card (theme System auto-detect). Sidebar Settings highlighted. **Server-component conversion confirmed working visually** — page renders без race conditions.
+- **/clients:** 4 KPI cards (Total 8 / Active 8 / Revenue YTD $20,072 / With Overdue 2). "+ New Client" + Pipeline + More buttons. Filter tabs (Active / Prospect / Inactive / All Tiers / Gold / Silver / Bronze / New). Filters dropdown. Search clients input. Table headers (CLIENT / TIER / CONTACT / STATUS / TAGS / HEALTH / REVENUE / ADDED / LAST ACTIVE). 8 sample clients с `.example` emails. **No regression.**
+- **/invoices:** 4 KPI cards (PAID $20,072 / PENDING $11,027 / OVERDUE $6,000 / UNBILLED $20,640.83 + 190.0h tracked). Yellow alert "5 invoices overdue — $13,900 outstanding" + "View Collections Queue" link. Filter chips (All 15 / 3 draft / 4 sent / 5 paid / 2 overdue). "+ New Invoice / Templates / Collections (5) / More / Quick" action buttons. Sort by Date/Amount/Client/Invoice #. Filters dropdown. Table с QA-0003 + QA-0002 visible. **No regression.**
+
+### NEW P2 FINDING — Quick Add FAB menu overlaps content
+
+**P2-2 — Quick Add FAB menu items obscure underlying table data**
+
+- **Severity:** P2 (visual hierarchy issue, mis-click risk)
+- **Evidence:** [b3-quickadd-fab-overlap-clients-table.png](EVIDENCE/overlap/b3-quickadd-fab-overlap-clients-table.png)
+- **Route:** /clients (likely affects all routes when FAB activated)
+- **Locale:** EN
+- **Description:** Clicking Quick Add FAB (bottom-right purple lightning) opens action menu с 6 items ("New Client", "New Project", "New Invoice", "Add Expense", "Add Task", "Log Time"). Menu items expand leftward and **directly overlay the clients table content** — covering "ADDED" + "LAST ACTIVE" columns + "Filters" button + "Search clients" input partial. Menu items have dark-card backgrounds but **no semi-transparent backdrop/scrim к dim underlying content**, creating visual confusion (user может read both menu items AND underlying table data — overlap blur).
+- **Suspected fix:** Add semi-transparent backdrop (`backdrop-blur` + `bg-black/40`) к dim underlying content when FAB menu is open. Standard menu/modal pattern.
+- **Reproduction:** signed-in user → any route с FAB → click Quick Add FAB → observe action menu overlaying underlying content без backdrop.
+
+### Language switcher dropdown — CORRECT behavior
+
+[b3-language-switcher-dropdown-clean.png](EVIDENCE/overlap/b3-language-switcher-dropdown-clean.png) shows language dropdown opens cleanly над "OVERDUE" KPI card area. Dark dropdown background covers underlying icon. **This is expected dropdown overlay behavior, NOT а bug.** Z-index proper. Не filed as finding.
+
+### Cookie banner display inconsistency observation
+
+Cookie banner appears on /dashboard, /work/time, /settings, /invoices but NOT visible on /clients during same session. Possible explanations:
+- Dismissed during /clients visit OR auto-dismissed after а timeout
+- Different consent-state-check per route
+- **Severity: P3 (minor inconsistency)** — banner should appear consistently OR consistently NOT appear across signed-in routes per consent rules
+
+---
+
+## Batch 4 — Accessibility quick pass + design consistency (deferred, partial coverage)
+
+Time-boxed batches 2+3 took ~1h focused work. Batch 4 (a11y + design consistency) requires additional ~1h focused work. Deferred к later trigger.
+
+**Quick observations during batches 2+3:**
+
+### Design consistency (✅ generally consistent)
+
+- ✅ Typography hierarchy: H1 page titles (white, large), H2 section titles (white, medium), body text (slate-300)
+- ✅ Brand palette: violet/purple #6366f1 (sidebar active, primary CTAs), green (success/paid), red (overdue), yellow (warnings)
+- ✅ Spacing consistent across cards (p-6, gap-3, mb-4 patterns)
+- ✅ Icons: lucide-react consistently sized 16-20px
+- ⚠️ Loading skeletons: not directly observed during this batch (data prefetched server-side per #94 v2 architecture)
+
+### A11y observations (quick pass)
+
+- ✅ Page <title> tags present (но pre-existing P3 i18n leak — always EN)
+- ✅ Form fields have visible labels (verified Profile form, Email/Password forms)
+- ✅ Focus indicators visible на purple-highlighted buttons (violet ring/outline)
+- ⚠️ Some KPI cards lack explicit aria-label на iconographic elements (e.g., $ icon next к REVENUE THIS MONTH)
+- ⚠️ Quick Add FAB lacks visible label при focus state (icon-only button)
+- ✅ Tab navigation works in form fields (auth flow tested in smoke)
+- **Full a11y audit deferred к batch 4** — color contrast measurements, alt text scan, keyboard nav full trace, focus indicator inventory
+
+---
+
+## Batch 2 + 3 summary
+
+- **Pages inspected:** 5 signed-in routes + 1 dropdown interaction + 1 modal-style FAB menu = 7 screenshots
+- **P0:** 0
+- **P1:** 0
+- **P2:** 1 NEW — Quick Add FAB menu obscures content (no backdrop)
+- **P3:** 1 NEW — Cookie banner inconsistent across routes
+
+**Cumulative findings (batches 1+2+3):**
+- P0: 0
+- P1: 0
+- P2: 2 (cookie banner /register overlap, Quick Add FAB menu obscures content)
+- P3: 3 (CF Turnstile locale drift, page title не translated, cookie banner cross-route inconsistency)
+
+**Batch 2+3 verdict:** ✅ no launch-blockers. 2 P2 findings filed pre-launch для post-launch backlog. Continuing с batch 4 (a11y + design consistency) when triggered.
