@@ -1,0 +1,16 @@
+=== PR #185 watch (LW-B Upstash UTF-8 fix) — 12 iter × 75s | watch_start=2026-05-22T16:56:58Z  deploy_t0=2026-05-22T16:54:32Z  SHA=4b860e2aca00f0bc94d86b40ddbec33fbecd45f8 ===
+  baseline: LW-B=3 (FIX TARGET, lastSeen=2026-05-22T03:34:26Z 13h+ ago)  LW-5=6 LW-6=7 LW-9=15 LW-A=3  mw_iss=0  rl_iss=0
+  iter=1 elapsed=0s now=16:56:58 LWB:c=3/uc=3/ls=03:34:26/lr=f27bb710  LW5=6 LW6=7 LW9=15 LWA=3  mw_iss=0  rl_iss=0  api_iss=0  new_since_deploy=0
+  iter=2 elapsed=85s now=16:58:23 LWB:c=3/uc=3/ls=03:34:26/lr=f27bb710  LW5=6 LW6=7 LW9=15 LWA=3  mw_iss=0  rl_iss=0  api_iss=0  new_since_deploy=0
+  iter=3 elapsed=172s now=16:59:50 LWB:c=3/uc=3/ls=03:34:26/lr=f27bb710  LW5=6 LW6=7 LW9=15 LWA=3  mw_iss=0  rl_iss=0  api_iss=0  new_since_deploy=0
+  iter=4 elapsed=257s now=17:01:15 LWB:c=3/uc=3/ls=03:34:26/lr=f27bb710  LW5=6 LW6=7 LW9=15 LWA=3  mw_iss=0  rl_iss=0  api_iss=0  new_since_deploy=0
+  iter=5 elapsed=345s now=17:02:43 LWB:c=3/uc=3/ls=03:34:26/lr=f27bb710  LW5=6 LW6=7 LW9=15 LWA=3  mw_iss=0  rl_iss=0  api_iss=0  new_since_deploy=0
+  iter=6 elapsed=431s now=17:04:09 LWB:c=3/uc=3/ls=03:34:26/lr=f27bb710  LW5=6 LW6=7 LW9=15 LWA=3  mw_iss=0  rl_iss=0  api_iss=0  new_since_deploy=0
+  iter=7 elapsed=516s now=17:05:34 LWB:c=3/uc=3/ls=03:34:26/lr=f27bb710  LW5=6 LW6=7 LW9=15 LWA=3  mw_iss=0  rl_iss=0  api_iss=0  new_since_deploy=0
+  iter=8 elapsed=602s now=17:07:00 LWB:c=3/uc=3/ls=03:34:26/lr=f27bb710  LW5=6 LW6=7 LW9=15 LWA=3  mw_iss=0  rl_iss=0  api_iss=0  new_since_deploy=0
+  iter=9 elapsed=689s now=17:08:27 LWB:c=3/uc=3/ls=03:34:26/lr=f27bb710  LW5=6 LW6=7 LW9=15 LWA=3  mw_iss=0  rl_iss=0  api_iss=0  new_since_deploy=0
+  iter=10 elapsed=834s now=17:10:52 LWB:c=3/uc=3/ls=03:34:26/lr=f27bb710  LW5=6 LW6=7 LW9=15 LWA=3  mw_iss=0  rl_iss=0  api_iss=0  new_since_deploy=0
+  iter=11 elapsed=924s now=17:12:22 LWB:c=3/uc=3/ls=03:34:26/lr=f27bb710  LW5=6 LW6=7 LW9=15 LWA=3  mw_iss=0  rl_iss=0  api_iss=0  new_since_deploy=0
+  iter=12 elapsed=1013s now=17:13:51 LWB:c=3/uc=3/ls=03:34:26/lr=f27bb710  LW5=6 LW6=7 LW9=15 LWA=3  mw_iss=0  rl_iss=0  api_iss=0  new_since_deploy=0
+
+=== PR #185 watch complete ===
