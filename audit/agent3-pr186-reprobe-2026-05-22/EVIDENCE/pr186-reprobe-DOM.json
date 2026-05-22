@@ -1,0 +1,107 @@
+{
+  "en_modal": {
+    "backdropOpen": [
+      {
+        "tag": "DIV",
+        "role": "dialog",
+        "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+        "bg": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "zIndex": "40",
+        "width": 1216,
+        "height": 67,
+        "visible": false
+      }
+    ],
+    "initialPrefs": {
+      "localStorage_keys": [],
+      "localStorage_values": {},
+      "documentCookieHasConsent": false
+    },
+    "modalContents": {
+      "found": true,
+      "text": "LancerWise\nHome\nMoney\nClients\nWork\nContracts\nInsights\nSettings\nNotifications\nShortcuts\nDashboard\nSearch...\n⌘K\n🇬🇧 EN\n?\nQRA\nGood night, QA\n\nFriday, May 22, 2026\n\nToday's Agenda\n2 items\nQA-0013\nOverdue invoice\n$2,873\nQA-0014\nOverdue invoice\n$3,127\nRevenue & Activity Hub\nToday: $0 earned · 0 new invoices · 0h logged · 0 new clients\nREVENUE THIS MONTH\n$8,474\n▼ 26.9%\n3 paid · average: $2,825\nOPEN INVOICES\n$17,027\n6 overdue ($17,027)\nHOURS THIS WEEK\n17.7 h\n$3,980 billable · 11 invoices sent\nPROPOSALS PENDING\n0\n0 sent this week\nRevenue — Last 12 Weeks\nTotal: $17,979\n$0\n$2,109\n$4,217\n$6,326\n$8,434\n$1",
+      "buttonCount": 17,
+      "toggleCount": 0
+    },
+    "afterClickOutside": [
+      {
+        "tag": "DIV",
+        "role": "dialog",
+        "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+        "bg": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "zIndex": "40",
+        "width": 1216,
+        "height": 67,
+        "visible": false
+      }
+    ],
+    "afterEsc": [
+      {
+        "tag": "DIV",
+        "role": "dialog",
+        "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+        "bg": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "zIndex": "40",
+        "width": 1216,
+        "height": 67,
+        "visible": false
+      }
+    ]
+  },
+  "toggles_inventory": [],
+  "ru_modal": {
+    "backdropOpen": [
+      {
+        "tag": "DIV",
+        "role": "dialog",
+        "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+        "bg": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "zIndex": "40",
+        "width": 1216,
+        "height": 67,
+        "visible": false
+      }
+    ],
+    "initialPrefs": {
+      "localStorage_keys": [],
+      "localStorage_values": {},
+      "documentCookieHasConsent": false
+    },
+    "modalContents": {
+      "found": true,
+      "text": "LancerWise\nГлавная\nФинансы\nКлиенты\nРабота\nДоговоры\nАналитика\nНастройки\nУведомления\nГорячие клавиши\nГлавная\nПоиск...\n⌘K\n🇷🇺 RU\n?\nQRA\nДоброй ночи, QA\n\nпятница, 22 мая 2026 г.\n\nПлан на сегодня\n2 пункта\nQA-0013\nПросроченный счёт\n2 873 $\nQA-0014\nПросроченный счёт\n3 127 $\nДоход и активность\nСегодня: заработано $0 · новых счетов: 0 · учтено: 0 ч · новых клиентов: 0\nДОХОД ЗА МЕСЯЦ\n$8,474\n▼ 26.9%\nоплачено: 3 · среднее: $2,825\nОТКРЫТЫЕ СЧЕТА\n$17,027\nпросрочено: 6 ($17,027)\nЧАСЫ ЗА НЕДЕЛЮ\n17.7 ч\nоплачиваемых: $3,980 · счетов отправлено: 11\nПРЕДЛОЖЕНИЙ В ОЖИДАНИИ\n0\nза неделю отправлено: 0\nДоход — последн",
+      "buttonCount": 17,
+      "toggleCount": 0
+    },
+    "afterClickOutside": [
+      {
+        "tag": "DIV",
+        "role": "dialog",
+        "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+        "bg": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "zIndex": "40",
+        "width": 1216,
+        "height": 67,
+        "visible": false
+      }
+    ],
+    "afterEsc": [
+      {
+        "tag": "DIV",
+        "role": "dialog",
+        "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+        "bg": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "zIndex": "40",
+        "width": 1216,
+        "height": 67,
+        "visible": false
+      }
+    ]
+  }
+}

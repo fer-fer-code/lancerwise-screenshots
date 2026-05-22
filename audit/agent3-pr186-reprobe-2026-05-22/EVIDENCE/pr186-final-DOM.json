@@ -1,0 +1,61 @@
+{
+  "en_modalOpen": [
+    {
+      "classes": "fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4",
+      "bg": "oklab(0.128998 -0.0038857 -0.0418156 / 0.8)",
+      "backdropFilter": "blur(8px)",
+      "zIndex": "50",
+      "width": 1440,
+      "height": 900,
+      "visible": true
+    }
+  ],
+  "en_afterClickOutside": [],
+  "en_afterEsc": [
+    {
+      "classes": "fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4",
+      "bg": "oklab(0.128998 -0.0038857 -0.0418156 / 0.8)",
+      "backdropFilter": "blur(8px)",
+      "zIndex": "50",
+      "width": 1440,
+      "height": 900,
+      "visible": true
+    }
+  ],
+  "toggleStateChange": {
+    "before": [],
+    "after": []
+  },
+  "afterSave": {
+    "modal": [],
+    "bannerStillVisible": false
+  },
+  "storageStateAfterSave": {
+    "cc_consent": "{\"analytics\":true,\"timestamp\":1779467094564,\"expires\":1795019094564}",
+    "_cookies": []
+  },
+  "bannerAfterReload": false,
+  "ru_modalOpen": [
+    {
+      "classes": "fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4",
+      "bg": "oklab(0.128998 -0.0038857 -0.0418156 / 0.8)",
+      "backdropFilter": "blur(8px)",
+      "zIndex": "50",
+      "width": 1440,
+      "height": 900,
+      "visible": true
+    }
+  ],
+  "ru_afterClickOutside": [],
+  "ru_afterEsc": [
+    {
+      "classes": "fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4",
+      "bg": "oklab(0.128998 -0.0038857 -0.0418156 / 0.8)",
+      "backdropFilter": "blur(8px)",
+      "zIndex": "50",
+      "width": 1440,
+      "height": 900,
+      "visible": true
+    }
+  ]
+}
