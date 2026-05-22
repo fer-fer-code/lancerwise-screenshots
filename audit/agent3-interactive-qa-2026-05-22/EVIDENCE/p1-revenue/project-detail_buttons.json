@@ -1,0 +1,122 @@
+[
+  {
+    "text": "Money",
+    "visible": true
+  },
+  {
+    "text": "Clients",
+    "visible": true
+  },
+  {
+    "text": "Work",
+    "visible": true
+  },
+  {
+    "text": "Contracts",
+    "visible": true
+  },
+  {
+    "text": "Insights",
+    "visible": true
+  },
+  {
+    "text": "Shortcuts",
+    "visible": true
+  },
+  {
+    "text": "Search...\n⌘K",
+    "visible": true
+  },
+  {
+    "text": "🇬🇧 EN",
+    "visible": true
+  },
+  {
+    "text": "?",
+    "visible": true
+  },
+  {
+    "text": "QRA",
+    "visible": true
+  },
+  {
+    "text": "Activate",
+    "visible": true
+  },
+  {
+    "text": "Delete",
+    "visible": true
+  },
+  {
+    "text": "Clone",
+    "visible": true
+  },
+  {
+    "text": "Status Report",
+    "visible": true
+  },
+  {
+    "text": "Client View",
+    "visible": true
+  },
+  {
+    "text": "Send Status Update",
+    "visible": true
+  },
+  {
+    "text": "Export to Calendar",
+    "visible": true
+  },
+  {
+    "text": "Save as Template",
+    "visible": true
+  },
+  {
+    "text": "Copy Report",
+    "visible": true
+  },
+  {
+    "text": "Budget Breakdown",
+    "visible": true
+  },
+  {
+    "text": "Set estimated hours",
+    "visible": true
+  },
+  {
+    "text": "Set time budget for this project",
+    "visible": true
+  },
+  {
+    "text": "Kickoff Checklist\n0/10",
+    "visible": true
+  },
+  {
+    "text": "Log time to this project",
+    "visible": true
+  },
+  {
+    "text": "Set estimated hours to predict completion",
+    "visible": true
+  },
+  {
+    "text": "Add Milestone",
+    "visible": true
+  },
+  {
+    "text": "Log change",
+    "visible": true
+  },
+  {
+    "text": "Save Today's Stand-up",
+    "visible": true
+  },
+  {
+    "text": "Use standard freelance milestones",
+    "visible": true
+  },
+  {
+    "text": "Add milestone",
+    "visible": true
+  }
+]
