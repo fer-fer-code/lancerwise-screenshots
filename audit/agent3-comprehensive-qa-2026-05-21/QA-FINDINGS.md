@@ -327,6 +327,148 @@ This strengthens QA-009 conclusion: i18n discipline IS in place for marketing su
 #### QA-024 — /upgrade mobile "Most popular" + "Current plan" badges crowd each other [P3 — restating QA-012]
 - See QA-012
 
+## PART E — edge cases + PART B — CRUD entry points
+
+### ✅ POSITIVE — 404 page is branded + has recovery CTAs
+
+`/this-route-does-not-exist-12345` returns 404 status correctly, with LancerWise-branded error page: large "404 / Page not found" + "The page you're looking for doesn't exist or has been moved." + dual CTAs ("Go to dashboard" purple + "Back to home" outline). Cookie banner present. Both authed + unauth sessions get the same page.
+
+**Evidence:** `EVIDENCE/edge-cases/E1_404_authed_chromium_desktop.png`, `E2_404_unauth_chromium_desktop.png`
+
+**This sharply contrasts with QA-P0-001's bare Vercel 500 page** — 404 has full branding + CTAs; 500 has none. Fix for QA-P0-001 should align with the 404 branding pattern.
+
+### ✅ POSITIVE — All CRUD entry forms render cleanly
+
+| Route | Form / Layout | Verdict |
+|-------|---------------|:------:|
+| /clients/new | 3-step wizard (Basic Info / Project Context / Review) | ✅ clean |
+| /invoices/new | Single page, Templates CTA, Line Items table, Currency dropdown | ✅ clean |
+| /projects/new | Single page, Quick Templates pills, AI Name Generator panel, AI Milestones hint | ✅ clean |
+| /proposals/generate (redirect from /new) | AI Proposal Generator, 3 Tone cards (Friendly/Formal/Technical) | ✅ clean BUT different from /proposals root form (see QA-P2-NEW-001) |
+| /contracts/new | Title / Client / End Date / Contract Value / Content | ✅ clean |
+
+**Evidence:** `EVIDENCE/edge-cases/E6_clients_new_step1.png`, `E7_invoices_new.png`, `E8_projects_new.png`, `E11_proposals_new.png`, `E12_contracts_new.png`
+
+### ✅ POSITIVE — search functionality works via URL query
+
+- `/clients?q=Pixel` → 200 status, table filtered to matching clients, URL preserves search term (✓ shareable + bookmarkable)
+- `/clients?q=ZZZZNOMATCH` → 200 status, empty-results state rendered
+- **Evidence:** `E3_clients_search_pixel_*.png`, `E4_clients_search_no_match_*.png`
+
+### P1 broken UX (PART E new findings)
+
+#### QA-P1-101 — /clients/pipeline "USD NaN" + KPI mismatch [P1]
+- **Where:** /clients/pipeline (Pipeline view)
+- **Symptom 1:** One card "Ridgeline Consulting / Marketing" displays "USD NaN" instead of a numeric value — JavaScript's `NaN` exposed to user
+- **Symptom 2:** KPI cards show ACTIVE LEADS 0 / PIPELINE VALUE USD 0 / FOLLOW-UPS DUE 0 but the kanban shows 6 visible client cards with values summing ~USD 25,000+ (1,500 + 5,000 + 12,000 + 5,000 + NaN + 1,500). KPI totals don't reflect cards on screen
+- **Evidence:** `EVIDENCE/edge-cases/E13_clients_pipeline_chromium_desktop.png`
+- **Suspect:** `PipelinePage.tsx` (or component) — null/undefined budget field for Ridgeline Consulting → `Number(undefined).toLocaleString()` produces NaN; KPI computation may be querying a different leads dataset (or empty results)
+- **Severity:** P1 — visible data quality bug + numeric "NaN" string in customer-facing UI is brand-damaging
+
+### P2 visible bugs (PART E new findings)
+
+#### QA-P2-101 — /proposals two different generators on /proposals vs /proposals/generate [P2]
+- **Where:** /proposals (root) vs /proposals/generate (redirect target of /proposals/new)
+- **Symptom:** Two distinct proposal-generation forms exist:
+  - **/proposals root:** "Proposal Generator" with Your Name / Client Name / Client Email / Service Type (Web Development dropdown) / Project Scope / Budget+Currency / Timeline / Tone (4 options: Professional/Friendly/Bold/Concise) / Expiry Date / + Templates + AI Brief + Generate with AI buttons
+  - **/proposals/generate:** "AI Proposal Generator" with Project Type (Website Development) / Client Industry / Budget Range / Timeline / Key Requirements / Your Relevant Experience / Tone (3 cards: Friendly/Formal/Technical) / + Use Template / Generate Proposal
+- **User experience:** Confusing — two routes, two forms, same purpose. Unclear which to use
+- **Severity:** P2 — consolidate or clearly differentiate (e.g. "Quick proposal" vs "AI-assisted detailed proposal")
+
+#### QA-P2-102 — /work/time tabs don't sync to URL query string [P2]
+- **Where:** /work/time?tab=timesheet, /work/time?tab=analytics
+- **Symptom:** URL accepts `?tab=` query param but state doesn't activate the corresponding tab — pages all show the default Timer view. Identical bodyLen (15,243) across all 3 query params confirms no state switch occurred
+- **Impact:**
+  - Users can't bookmark a specific tab
+  - "Open in new tab" link sharing from sidebar nav broken
+  - Browser back/forward doesn't navigate tabs
+- **Suspect file:** `WorkTimePage.tsx` (or equivalent) — tab state should be `useSearchParams` + push, not pure useState
+- **Evidence:** `E14_work_time_timesheet_*.png`, `E15_work_time_analytics_*.png`
+- **Severity:** P2 — affects shareability + accessibility
+
+#### QA-P2-103 — /analytics/overview returns 404 but is linked from /analytics sidebar [P2]
+- **Where:** /analytics page sidebar shows "Overview" sub-nav link, but `/analytics/overview` returns 404
+- **Evidence:** `E17_analytics_overview_chromium_desktop.png` (404 page rendered correctly but accessed from a sidebar link in /analytics)
+- **Note:** Pre-existing memory `backlog_dead_urls_cleanup` lists 6 dead routes; /analytics/overview is one
+- **Severity:** P2 — clean sidebar + remove dead routes pre-launch
+
+#### QA-P2-104 — /clients filter chip applied but KPI cards don't update [P2/P3]
+- **Where:** /clients with Gold tier filter active
+- **Symptom:** Filter chip "Gold" applied → table filtered to 1 client, NEW "Top Clients by Revenue" section appears, but KPI cards (TOTAL CLIENTS 8 / ACTIVE 8 / REVENUE YTD $20,072 / WITH OVERDUE 2) remain unchanged — they show ALL-client stats
+- **Expected behavior:** Either (a) KPI cards update to filtered subset OR (b) KPI cards have label clarifying "(all clients)" while table shows filtered
+- **Evidence:** `E5_clients_filter_gold_chromium_desktop.png`
+- **Severity:** P2 — confusing UX; the mismatch implies cards are non-respecting filter
+
+#### QA-P2-105 — /proposals/new → /proposals/generate redirect chains [P3]
+- **Where:** /proposals/new (no slash, no path) → redirects to /proposals/generate
+- **Symptom:** Inconsistent route convention — most "new" routes use `/{entity}/new` pattern (clients/new, invoices/new, projects/new, contracts/new), but /proposals uses `/proposals/generate` and `/proposals/new` redirects to it
+- **Severity:** P3 — minor URL inconsistency; consider unifying to /proposals/new
+
+### POSITIVE polishes observed in /clients/new wizard
+
+- Clear 3-step indicator with current step highlighted
+- Required field markers (*) consistent
+- Optional fields explicitly labeled "(optional)"
+- "Share Intake Form Instead" alternative CTA top-right — smart UX for delegating data entry to client
+- Country dropdown — supports international clients
+
+---
+
+## PART F — design consistency observations (sweep from all captured screenshots)
+
+### P3 polish
+
+#### QA-031 — Page header pattern inconsistent across routes [P3]
+- **Where:** Top-bar page heading
+- **Symptom:** Different routes use different header rendering patterns:
+  - `/dashboard`: top-bar shows "Dashboard" only; main content has "Good morning, QA" hero
+  - `/clients`: top-bar "Clients", main heading also "Clients" (duplicate)
+  - `/projects`: same duplicate pattern
+  - `/invoices`: same duplicate
+  - `/proposals`: top-bar "Proposals" + main heading "Proposal Generator" (different)
+  - `/contracts`: top-bar "Contracts" + main heading "Contracts" (duplicate)
+  - `/work/time`: top-bar "Time Tracker" + main heading also "Time Tracker" (duplicate)
+  - `/settings`: top-bar "Settings" + main heading also "Settings" (duplicate)
+  - `/settings/api`: top-bar "Settings" + main heading "API Keys" (different — better pattern)
+  - `/upgrade`: top-bar "LancerWise" (logo only) + main heading "Upgrade your plan"
+- **Suggestion:** Pick one consistent pattern. Recommended: top-bar = route path, main heading = "Action context" (e.g. /clients top-bar "Clients", main heading "Your clients" or "8 clients"); /settings/api shows the pattern done right.
+- **Note:** Already covered by pre-existing memory `backlog_page_header_pattern.md`
+- **Severity:** P3 — design-system consistency call
+
+#### QA-032 — Section header casing inconsistent (UPPERCASE vs Title Case) [P3]
+- **Where:** Various card section headers
+- **Symptom:** Mixed conventions across the app:
+  - `/dashboard`: "Today's Agenda", "Revenue & Activity Hub", "Activity Feed", "Revenue — Last 12 Weeks" → Title Case + Sentence Case
+  - `/clients`: KPI labels "TOTAL CLIENTS", "ACTIVE", "REVENUE YTD", "WITH OVERDUE" → ALL CAPS
+  - `/invoices`: KPI labels "PAID", "PENDING", "OVERDUE", "UNBILLED" → ALL CAPS
+  - `/settings/availability`: "AVAILABILITY STATUS", "WEEKLY CAPACITY", "AVAILABILITY NOTE" → ALL CAPS
+  - `/settings/digest`: "Delivery Settings", "Sections to Include" → Title Case
+  - `/settings/reminders`: "AUTOMATION SETTINGS", "EMAIL TEMPLATE PREVIEWS", "RECENT REMINDERS SENT" → ALL CAPS
+- **Suggestion:** KPI-card mini-labels stay UPPERCASE (looks like data-row labels). Card section headers should be Title Case for readability.
+- **Note:** Already covered by `backlog_label_casing_consistency.md`
+- **Severity:** P3
+
+#### QA-033 — Floating widgets stacking in bottom-right [P3]
+- **Where:** Authed pages — bottom-right corner
+- **Symptom:** Up to 3 widgets occupy bottom-right area: purple lightning FAB (always visible), Notifications "4/7 setup" pill (bottom-LEFT), GlobalTimerBar (when timer running), Shortcuts pill (bottom-left, mobile). Plus cookie banner sticky-bottom across entire viewport
+- **Risk:** On mobile (393×852), bottom-half viewport is dominated by floating widgets + cookie banner. Real content forced to ~70% of viewport height
+- **Evidence:** Multiple `*_webkit_*_mobile_above-fold.png` show this pattern
+- **Severity:** P3 — minor mobile real-estate loss; verify post-cookie-banner-dismiss
+
+#### QA-034 — KPI card icon position varies [P3]
+- **Where:** /dashboard, /clients, /projects, /invoices, /analytics KPI rows
+- **Symptom:** Some KPI cards have small icon top-right ($, ⏱, etc.), some don't, some have different visual weight
+- **Severity:** P3 — design-system polish
+
+### POSITIVE — design strengths observed
+
+- **Empty states are CONSISTENT** across /contracts, /settings/tags: icon + headline + body + dual CTA pattern (verified visually)
+- **Dark theme contrast is consistent** across all routes
+- **Sidebar nav is identical pattern** across all authed pages
+- **Cookie banner is identical** across all pages (sticky bottom, 3 buttons, same copy)
+- **Loading states present** — most pages have visible content within 5s networkidle
+- **Currency symbol is consistent** ($ everywhere — though this is the P0/P1 hardcoded bug, the consistency at least means easy global find-replace)
+
 #### QA-025 — /work/time: GlobalTimerBar floating widget bottom-right + FAB bottom-right potential overlap [P3]
 - **Where:** Any authed page (GlobalTimerBar mounts globally per smoke F6 verdict)
 - **Symptom:** The lightning FAB (bottom-right purple circle) + GlobalTimerBar (when timer running) both occupy bottom-right area. Smoke verdict noted GlobalTimerBar fires `time_entries` REST on every authed route. If timer is RUNNING, both widgets may stack visually
