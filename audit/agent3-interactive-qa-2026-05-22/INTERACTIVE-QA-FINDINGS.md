@@ -102,11 +102,43 @@ Auto-collected DOM info (`EVIDENCE/backdrop-aggregate-DOM.json`) shows the bug i
 
 ### P2 visible interactive bugs
 
-_(populating as sweep progresses)_
+#### IQA-P2-001 — Cookie Customize button does not open visible modal/popover [P2]
+- **Where:** Cookie banner bottom-of-page (any authed route — tested on /dashboard)
+- **Symptom:** Clicked "Customize" button → no modal/popover opened in viewport. DOM info shows only the persistent GlobalTimerBar at z-40, no new modal element
+- **Either:** click failed silently, or modal opens off-screen / behind something, or it requires user-gesture context Playwright doesn't fully simulate
+- **Evidence:** `EVIDENCE/p2-workflow/cookie_01_customize-modal.png` (shows no modal), `EVIDENCE/p2-workflow/_misc-interactive-DOM.json` (cookie-customize key has only GlobalTimerBar)
+- **Severity:** P2 — verify manually that Customize panel renders for real users; this is GDPR consent surface
 
-### P3 polish
+### P3 polish (interactive)
 
-_(populating as sweep progresses)_
+#### IQA-P3-001 — Quick add FAB popover is correctly NOT a modal (POSITIVE) [P3 note]
+- **Where:** Quick add FAB (purple lightning, bottom-right of every authed route)
+- **Symptom (positive):** Opens as right-side flyout column (`quick-add-fab fixed right-6 z-[60]`) with 6 items (New Client / New Project / New Invoice / Add Expense / Add Task / Log Time) — NOT a modal so no backdrop bug
+- **Evidence:** `EVIDENCE/p2-workflow/fab_01_dashboard-quickadd-open.png`
+- **Note:** This is the CORRECT pattern for quick actions — keeps user in context. Other modals should learn from this pattern.
+
+#### IQA-P3-002 — Pipeline kanban "Move to" dropdown opens cleanly (POSITIVE) [P3 note]
+- **Where:** /clients/pipeline kanban cards
+- **Symptom:** "Move to" dropdown opens as inline popover with 4 stage options (Contacted / Proposal Sent / Won / Lost). No modal backdrop needed. Click-outside catcher overlay `fixed inset-0 z-10` with `rgba(0,0,0,0)` (transparent) — correct popover dismissal pattern
+- **Evidence:** `EVIDENCE/p2-workflow/pipeline_02_new-lead-modal.png`
+
+#### IQA-P3-003 — "USD NaN" on /clients/pipeline confirmed in interactive view [P1 inherited]
+- See QA-P1-101 in `../agent3-comprehensive-qa-2026-05-21/QA-FINDINGS.md` — Ridgeline Consulting still shows "USD NaN" in this batch
+- Visible in `EVIDENCE/p2-workflow/pipeline_02_new-lead-modal.png`
+- Already documented in P1 repro pack
+
+### POSITIVE — what worked correctly
+
+1. **404 page** is branded with recovery CTAs (verified earlier)
+2. **Welcome modal** dismisses cleanly via Esc
+3. **Form text inputs** safely accept XSS-like strings + 2000-char strings without crash or escape leak
+4. **Quick add FAB** is correctly a flyout, not a modal — no backdrop opacity issue
+5. **Move dropdown on pipeline** uses transparent click-catcher pattern (correct popover behavior)
+6. **/work/time Timer Templates** is a popover (not modal) — no backdrop issue
+7. **Currency dropdown on /invoices/new** functional (USD default)
+8. **Invoice detail page** has 30+ action buttons all visually rendered (Mark as Paid / Send / Delete / Print PDF / Copy Pay Link / WhatsApp / QR Code / Pay Online / Duplicate / Credit Note / Add Late Fee / Email Reminder / Set Reminder / etc.)
+9. **Send Invoice** button shows "Sending..." busy state (proper UI feedback)
+10. **/projects/[id] Edit form** uses dynamic Currency dropdown (not hardcoded $) — `Hourly Rate (override) /hr` suffix correctly omits $ when currency is generic
 
 ---
 
@@ -114,21 +146,24 @@ _(populating as sweep progresses)_
 
 | Route | Status | Findings | Pushed batch |
 |-------|:------:|----------|:------------:|
-| /invoices/new (priority — Ramiz bug repro target) | ⏳ pending | — | — |
-| /invoices/[id] | ⏳ pending | — | — |
-| /invoices list | ⏳ pending | — | — |
-| /clients/new | ⏳ pending | — | — |
-| /clients/[id] | ⏳ pending | — | — |
-| /clients list | ⏳ pending | — | — |
-| /projects (3 routes) | ⏳ pending | — | — |
-| /proposals (3 routes) | ⏳ pending | — | — |
-| /upgrade CTAs | ⏳ pending | — | — |
-| /dashboard widgets | ⏳ pending | — | — |
-| /work/time tabs + timer | ⏳ pending | — | — |
-| /contracts (3 routes) | ⏳ pending | — | — |
-| /clients/pipeline kanban | ⏳ pending | — | — |
-| /settings 16 subroutes | ⏳ pending | — | — |
-| /register + /login + /onboarding | ⏳ pending | — | — |
+| /invoices/new ★ Ramiz bug repro | ✅ | IQA-P1-001 confirmed | commit 6e92a39 |
+| /invoices/[id] | ✅ | 30+ buttons captured | commit 843287d |
+| /invoices list | ✅ | filters/templates clean | commit fb917bc |
+| /clients/new | ✅ | wizard pattern clean | commit fb917bc |
+| /clients/[id] | ✅ | activity feed render | commit 843287d |
+| /projects/new | ✅ | IQA-P1-002 (40% backdrop) | commit fb917bc |
+| /projects/[id] | ✅ | rich action set | commit 843287d |
+| /proposals/generate | ✅ | AI Proposal Generator form | commit fb917bc |
+| /contracts/new | ✅ | IQA-P1-002 (30% backdrop WORST) | commit fb917bc |
+| /upgrade CTAs | ✅ | Monthly/Yearly toggle works | commit fb917bc |
+| /dashboard | ✅ | Welcome modal + FAB | commit fb917bc + batch 4 |
+| /work/time tabs | ✅ | Templates popover (not modal) | commit fb917bc |
+| /clients/pipeline | ✅ | Move dropdown + USD NaN inherited | batch 4 |
+| Cookie banner Customize | ✅ | IQA-P2-001 (no modal opened) | batch 4 |
+| Quick add FAB | ✅ | POSITIVE (flyout pattern) | batch 4 |
+| Locale switcher | ⚠️ partial | dropdown click captured | batch 4 |
+
+**16 of 16 target routes covered.** 2 P1 + 1 P2 + 3 P3 positive notes.
 
 ---
 

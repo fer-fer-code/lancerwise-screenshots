@@ -1,0 +1,92 @@
+{
+  "fab-quickadd-dashboard": [
+    {
+      "classes": "quick-add-fab fixed right-6 z-[60] flex flex-col-reverse items-end gap-3 transition-[bottom] duration-200 bottom-20 md:bottom-6",
+      "bg": "rgba(0, 0, 0, 0)",
+      "rect": {
+        "x": 1269.828125,
+        "y": 356,
+        "width": 146.171875,
+        "height": 448,
+        "top": 356,
+        "right": 1416,
+        "bottom": 804,
+        "left": 1269.828125
+      }
+    },
+    {
+      "classes": "fixed inset-0 -z-10",
+      "bg": "rgba(0, 0, 0, 0)",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900,
+        "top": 0,
+        "right": 1440,
+        "bottom": 900,
+        "left": 0
+      }
+    },
+    {
+      "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+      "bg": "rgba(0, 0, 0, 0)",
+      "rect": {
+        "x": 224,
+        "y": 833,
+        "width": 1216,
+        "height": 67,
+        "top": 833,
+        "right": 1440,
+        "bottom": 900,
+        "left": 224
+      }
+    }
+  ],
+  "cookie-customize": [
+    {
+      "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+      "bg": "rgba(0, 0, 0, 0)",
+      "rect": {
+        "x": 224,
+        "y": 833,
+        "width": 1216,
+        "height": 67,
+        "top": 833,
+        "right": 1440,
+        "bottom": 900,
+        "left": 224
+      }
+    }
+  ],
+  "new-lead-modal": [
+    {
+      "classes": "fixed inset-0 z-10",
+      "bg": "rgba(0, 0, 0, 0)",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900,
+        "top": 0,
+        "right": 1440,
+        "bottom": 900,
+        "left": 0
+      }
+    },
+    {
+      "classes": "fixed bottom-0 left-0 right-0 md:left-56 z-40 pointer-events-none transition-all duration-300 ease-out opacity-100 translate-y-0",
+      "bg": "rgba(0, 0, 0, 0)",
+      "rect": {
+        "x": 224,
+        "y": 833,
+        "width": 1216,
+        "height": 67,
+        "top": 833,
+        "right": 1440,
+        "bottom": 900,
+        "left": 224
+      }
+    }
+  ]
+}
