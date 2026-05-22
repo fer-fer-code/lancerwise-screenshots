@@ -1,0 +1,144 @@
+{
+  "kpiCards": [
+    {
+      "text": "ACTIVE LEADS | 0 | PIPELINE VALUE | USD 37,000 | FOLLOW-UPS DUE | 0",
+      "w": 1120,
+      "h": 104,
+      "y": 186
+    },
+    {
+      "text": "ACTIVE LEADS | 0",
+      "w": 357,
+      "h": 104,
+      "y": 186
+    },
+    {
+      "text": "ACTIVE LEADS",
+      "w": 315,
+      "h": 20,
+      "y": 207
+    },
+    {
+      "text": "PIPELINE VALUE | USD 37,000",
+      "w": 357,
+      "h": 104,
+      "y": 186
+    },
+    {
+      "text": "PIPELINE VALUE",
+      "w": 315,
+      "h": 20,
+      "y": 207
+    },
+    {
+      "text": "FOLLOW-UPS DUE | 0",
+      "w": 357,
+      "h": 104,
+      "y": 186
+    },
+    {
+      "text": "FOLLOW-UPS DUE",
+      "w": 315,
+      "h": 20,
+      "y": 207
+    }
+  ],
+  "stageColumns": [
+    {
+      "text": "Lead",
+      "y": 314
+    },
+    {
+      "text": "Contacted",
+      "y": 314
+    },
+    {
+      "text": "Proposal Sent",
+      "y": 314
+    },
+    {
+      "text": "Won",
+      "y": 314
+    },
+    {
+      "text": "Lost",
+      "y": 314
+    }
+  ],
+  "dealCards": [
+    {
+      "text": "PIPELINE VALUE | USD 37,000",
+      "money": [
+        "USD 37,000"
+      ],
+      "y": 186
+    },
+    {
+      "text": "USD 37,000",
+      "money": [
+        "USD 37,000"
+      ],
+      "y": 239
+    },
+    {
+      "text": "Pixel Forge Studios | Design | USD 1,500 | Move → | Move to",
+      "money": [
+        "USD 1,500\n\n"
+      ],
+      "y": 346
+    },
+    {
+      "text": "North Star Marketing | Strategy | USD 12,000 | Move → | Move to",
+      "money": [
+        "USD 12,000\n\n"
+      ],
+      "y": 476
+    },
+    {
+      "text": "Lumen Type Co | Design | USD 1,500 | Move → | Move to",
+      "money": [
+        "USD 1,500\n\n"
+      ],
+      "y": 712
+    },
+    {
+      "text": "Riptide Growth | Strategy | USD 12,000 | Move → | Move to",
+      "money": [
+        "USD 12,000\n\n"
+      ],
+      "y": 842
+    },
+    {
+      "text": "Cobalt Code Lab | Development | USD 5,000 | Move → | Move to | Iron Mountain Devs | Development | USD 5,000 | Move → | Move to",
+      "money": [
+        "USD 5,000\n\n",
+        "USD 5,000\n\n"
+      ],
+      "y": 346
+    },
+    {
+      "text": "Cobalt Code Lab | Development | USD 5,000 | Move → | Move to",
+      "money": [
+        "USD 5,000\n\n"
+      ],
+      "y": 346
+    },
+    {
+      "text": "Iron Mountain Devs | Development | USD 5,000 | Move → | Move to",
+      "money": [
+        "USD 5,000\n\n"
+      ],
+      "y": 476
+    }
+  ],
+  "allMoneyMatches": [
+    "USD 37,000\n",
+    "USD 1,500\n\n",
+    "USD 12,000\n\n",
+    "USD 5,000\n\n"
+  ],
+  "hasNaN": false,
+  "hasUndefined": false,
+  "hasNullLiteral": false,
+  "bodySnippet": "LancerWise\nHome\nMoney\nClients\nAll Clients\nPipeline\nWork\nContracts\nInsights\nSettings\nNotifications\nShortcuts\nPipeline\nSearch...\n⌘K\n🇬🇧 EN\n?\nQRA\nPipeline\n\nLeads and proposals across stages\n\nNew Lead\nExport CSV\nACTIVE LEADS\n0\nPIPELINE VALUE\nUSD 37,000\nFOLLOW-UPS DUE\n0\nLead\n6\n\nPixel Forge Studios\n\nDesign\n\nUSD 1,500\n\nMove →\nMove to\n\nNorth Star Marketing\n\nStrategy\n\nUSD 12,000\n\nMove →\nMove to\n\nRidgeline Consulting\n\nMarketing\n\nMove →\nMove to\n\nLumen Type Co\n\nDesign\n\nUSD 1,500\n\nMove →\nMove to\n\nRiptide Growth\n\nStrategy\n\nUSD 12,000\n\nMove →\nMove to\n\nAnchor Strategy Partners\n\nMarketing\n\nMove →\nMove to\nContacted\n0\nDrop leads here\nProposal Sent\n2\n\nCobalt Code Lab\n\nDevelopment\n\nUSD 5,000\n\nMove →\nMove to\n\nIron Mountain Devs\n\nDevelopment\n\nUSD 5,000\n\nMove →\nMove to\nWon\n0\nDrop leads here\nLost\n0\nDrop leads her"
+}
