@@ -210,6 +210,56 @@ main.lw-app-main { color: rgb(226 232 240); /* slate-200 */ }
 - ⏳ [AGENT 2] Invoices — pending
 - ⏳ [AGENT 4] Time + Tasks — pending
 
+### T+85 (~12:00 UTC) — Ramiz update + INTERIM AGGREGATE posted
+
+Ramiz pushed update: 3 PRs shipped since T+45, [AGENT 3] opened PR #218, plus PR #209 recovery situation.
+
+**PRs MERGED:**
+- [PR #216](https://github.com/fer-fer-code/lancerwise/pull/216) (input text color #207) → merge SHA `ac77090` (11:23Z). **GitHub auto-close cascade:** #207 + #205 should close on merge (PR body updated к reference canonical #207 before merge — Ramiz fix).
+- [PR #201](https://github.com/fer-fer-code/lancerwise/pull/201) (sidebar dead links + Timer) → `9a2d95e` (11:24Z)
+- [PR #203](https://github.com/fer-fer-code/lancerwise/pull/203) (Phase 1 palette rollout) → `89ae1df` (11:38Z)
+
+**PRs IN FLIGHT:**
+- [PR #218](https://github.com/fer-fer-code/lancerwise/pull/218) — [AGENT 3] bell dropdown #211 fix; CI running
+- [AGENT 5] fix for #210 forecast light theme — still in progress, PR не yet opened
+
+**🚨 RECOVERY NEEDED:**
+- [PR #209](https://github.com/fer-fer-code/lancerwise/pull/209) (Phase 2 palette) **auto-closed by GitHub** when PR #203 squash-merged + deleted Phase 1 base branch. **Phase 2 palette NOT shipped к production.** [AGENT 2] needs к re-create PR с `base=main` after Phase 1 deploy verify.
+
+**Coordination lesson logged:** PRs stacked atop another PR are vulnerable когда base merges с squash + delete. Future pattern: rebase stacked PR onto main BEFORE base merges, OR use merge commit (preserves base SHA).
+
+**Dupe filings cleaned by Ramiz:**
+- #208 → dup of #207 (was closed by [AGENT 1])
+- #213 → dup of #210 (closed by Ramiz)
+- #212 → dup of #166 (closed by Ramiz)
+
+**Final canonical P1 list (post-cleanup):**
+- #207 systematic input color — **CLOSING via PR #216 merge**
+- #210 forecast light theme — [AGENT 5] fixing
+- #211 bell dropdown — **PR #218 in flight**
+- #183 AI generate modal transparent — unassigned (pre-existing)
+- #204 invoice $0 — needs repro, could be cleared by PR #216 cascade
+
+**P2/P3 open:**
+- #214 expenses delete no-confirm
+- #215 logout INCONCLUSIVE (needs manual repro)
+- #166 /analytics/overview 404 (P2 post-launch from earlier campaign)
+
+**Agent state:**
+- [AGENT 2] finishing Phase 1 deploy verify → Phase 2 recovery needed (PR #209 dead)
+- [AGENT 3] PR #218 background poll active (`b6mx3airc`)
+- [AGENT 4] Vercel deploy poll active (`b9s2mw3ob`)
+- [AGENT 5] на #210 forecast light theme fix
+- [AGENT 6] idle armed (Phase 2 work shipped via PR #209 но auto-closed)
+
+**INTERIM AGGREGATE posted к #206:** [comment-4525251816](https://github.com/fer-fer-code/lancerwise/issues/206#issuecomment-4525251816) — 85-line synthesis с launch readiness assessment ("HEALTHY trajectory"), per-area coverage, P0/P1 inventory (3 shipped + 1 in flight + 1 unassigned), recovery items, и coordination concerns documented.
+
+**Monitor re-armed Phase 2:** task `bwv3bbmmo`, 30-min window (1800000ms), watching:
+1. New issues ≥ next free number
+2. PR state changes на #216+ range (catches PR #218 merge + PR #209 re-create)
+3. New comments на #206
+4. New RESULT.md files (catches [AGENT 2] / [AGENT 4] late surfaces)
+
 ### T+45 (TBD)
 *(awaiting poll)*
 
