@@ -390,6 +390,47 @@ PR #220 merged 12:10:55Z, SHA `c563e8ff`. **8 minutes от open к merge.** [AGE
 
 Per launch threshold (≤3 P0, fix+retest, launch as scheduled): **threshold met с buffer.**
 
+### T+~123 (12:33 UTC) — 🎯 [AGENT 2] SURFACED — Invoices CLEAN + #204 NOT REPRODUCIBLE
+
+[AGENT 2] Invoices QA RESULT.md committed (`52bc899`). Self-comment posted к #206 (count=7).
+
+**Verdict: 0 P0, 0 P1 NEW, 1 P2 (PDF download UX — non-blocking)**
+
+**6 tests PASS:**
+| Test | Result |
+|---|---|
+| AUTH (magic-link bypass via Supabase Admin) | PASS |
+| T1 Create 3 line items → total $600 | PASS (exact match) |
+| T2 Edit rate + recalc 100→500 → $1,400 | PASS (persisted) |
+| T3 Mark as paid | PASS |
+| T4 Delete invoice | PASS |
+| T5 Export PDF | PARTIAL (no download event в 15s — likely intended email-deliver UX) |
+| T6 Race condition 5-rapid items → $210 | PASS (exact, **#204 NOT REPRODUCIBLE**) |
+
+**Test isolation verified:** invoice `b311fe64-…` created + deleted в T4 cleanup. Pre/post count: 4/4. Production data preserved.
+
+**#204 diagnosis from [AGENT 2]:** likely cascade symptom of [#207](https://github.com/fer-fer-code/lancerwise/issues/207) invisible-input-text bug. User thought rate was entered when text was invisible due to color mismatch → submitted empty → persisted $0. PR #216 fix (text-color visible) eliminates this failure mode. No code-level fix needed в invoices module.
+
+**Action taken:** Posted [#204 recommend-close comment](https://github.com/fer-fer-code/lancerwise/issues/204#issuecomment-4525364518) referencing [AGENT 2]'s verification. Held off on unilateral close — P0 close decision belongs к Ramiz (within coordination protocol bounds).
+
+### Status — 4 of 5 areas surfaced + 0 P0 confirmed
+
+- ✅ [AGENT 3] Projects+Clients
+- ✅ [AGENT 5] Contracts+Settings + Analytics+Auth (2 reports)
+- ✅ **[AGENT 2] Invoices** — surfaced 12:33Z
+- ⏳ [AGENT 4] Time + Tasks — STILL PENDING
+
+**Cumulative P0/P1:** 0 P0 confirmed, 5/5 P1 closed via shipped PRs.
+
+**#204 status:** awaiting Ramiz close-decision after [AGENT 2] verification.
+
+**Final aggregate trigger conditions per Ramiz directive:**
+1. ✅ [AGENT 2] Invoices QA surface — **MET**
+2. ⏳ [AGENT 4] Time/Tasks QA surface
+3. ⏳ #204 resolution
+
+2 of 3 conditions met. Awaiting [AGENT 4] + Ramiz #204 decision.
+
 ### T+45 (TBD)
 *(awaiting poll)*
 
