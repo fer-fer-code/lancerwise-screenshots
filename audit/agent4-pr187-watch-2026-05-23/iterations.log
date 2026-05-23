@@ -1,0 +1,16 @@
+=== PR #187 watch (Upgrade CTA fix) — 12 iter × 75s | watch_start=2026-05-23T04:53:50Z  deploy_t0=2026-05-23T04:44:16Z  SHA=04f28ee49ac7c6cff8b7cc8e4e87825307097b2c ===
+  baseline: LW-5=7 LW-6=7 LW-9=15 LW-A=3 LW-B=3  mw_iss=0  PlansGrid=0  tier=0  upgrade=1 (LW-7 stale, baseline noise)
+  iter=1 elapsed=0s now=04:53:50 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  PlansGrid=0  tier=0  api=0  new=0
+  iter=2 elapsed=85s now=04:55:15 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  PlansGrid=0  tier=0  api=0  new=0
+  iter=3 elapsed=170s now=04:56:40 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  PlansGrid=0  tier=0  api=0  new=0
+  iter=4 elapsed=256s now=04:58:06 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  PlansGrid=0  tier=0  api=0  new=0
+  iter=5 elapsed=341s now=04:59:31 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  PlansGrid=0  tier=0  api=0  new=0
+  iter=6 elapsed=426s now=05:00:56 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  PlansGrid=0  tier=0  api=0  new=0
+  iter=7 elapsed=514s now=05:02:24 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  PlansGrid=0  tier=0  api=0  new=0
+  iter=8 elapsed=629s now=05:04:19 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  PlansGrid=0  tier=0  api=0  new=0
+  iter=9 elapsed=715s now=05:05:45 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  PlansGrid=0  tier=0  api=0  new=0
+  iter=10 elapsed=800s now=05:07:10 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  PlansGrid=0  tier=0  api=0  new=0
+  iter=11 elapsed=892s now=05:08:42 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  PlansGrid=0  tier=0  api=0  new=0
+  iter=12 elapsed=979s now=05:10:09 LW5=7 LW6=7 LW9=15 LWA=3 LWB=3  mw=0  PlansGrid=0  tier=0  api=0  new=0
+
+=== PR #187 watch complete ===
