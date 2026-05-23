@@ -12,7 +12,7 @@
 |---|---|---|---|---|
 | 1 | **Twitter / X** | ✅ Live | [@lancerwise](https://x.com/lancerwise) | Profile complete + 3 warmup tweets posted |
 | 2 | **Reddit** | ✅ Live | u/NaturalLonely1232 (display: "Lancerwise") | Google OAuth signup, auto-assigned username |
-| 3 | **Product Hunt** | ✅ Maker live + DRAFT saved | [@lancerwise on PH](https://www.producthunt.com/@lancerwise) (#9841200) | Product DRAFT in backend; Ramiz finalizes Monday |
+| 3 | **Product Hunt** | ✅ Maker live + Launch **SCHEDULED** Tue 2026-05-26 12:01 AM PT | [@lancerwise on PH](https://www.producthunt.com/@lancerwise) (#9841200); [Pre-Launch Dashboard](https://www.producthunt.com/products/lancerwise/lancerwise/prelaunch) | Required checklist 100% complete; 5-image gallery uploaded |
 | 4 | **LinkedIn** | ⏸️ DEFERRED | n/a | Per Ramiz decision — defer to post-launch |
 | 5 | **Hacker News** | ⏸️ DEFERRED | n/a | New zero-karma accounts get auto-deprioritized on Show HN. Ramiz to use any existing personal HN account if available, else defer post-launch |
 
@@ -104,14 +104,20 @@ Reddit auto-assigned `NaturalLonely1232` via the Google OAuth signup path. Reddi
 - Launch tag: `CRM`
 - First comment: ~1,650-char maker story drafted (Ramiz, Vietnam freelancer journey + product features)
 
-### TODO for Ramiz before publishing Monday
-- [ ] Upload **Gallery images** (Images and media step) from agent6's deliverables (`audit/agent6-visual-assets-2026-05-22/`)
-- [ ] Verify **Makers** step (Ramiz listed as Maker — link real person if desired)
-- [ ] **Extras** step (LinkedIn social, hunters, badges)
-- [ ] **Launch checklist** — final review of all sections
-- [ ] **Set scheduled launch date** — recommend **Tue 2026-05-26, 12:01 AM PST** per [PRODUCTHUNT.md §9](./PRODUCTHUNT.md). Saturday/Sunday launches perform poorly on PH.
-- [ ] CAPTCHA was solved during onboarding — should not reappear for Ramiz on subsequent logins
-- [ ] Tagline / topic tags / launch date can still be changed before going live
+### Sections completed (auto by Agent 5)
+- [x] **Main info** — name, tagline, link, description, CRM tag, maker first comment
+- [x] **Images and media** — 5 gallery images (1 auto-OG + 4 agent6 composites 1270×760)
+- [x] **Makers** — Lancerwise added as solo Maker (auto-pull from X OAuth)
+- [x] **Extras** — pricing set to "Paid (with a free trial or plan)"
+- [x] **Launch checklist** — Required 100% complete, launch **SCHEDULED Tue 2026-05-26 12:01 AM PT**
+
+### TODO for Ramiz (optional polish before Tue launch)
+- [ ] **Shoutouts** — add 3 stack credits (Supabase / Vercel / Anthropic recommended). Improves ranking.
+- [ ] **Video / Loom** — short demo video. Increases conversion on the listing.
+- [ ] **Product categories** — Extras step has additional category fields beyond launch tag
+- [ ] **Additional Makers** — optional; current = solo
+- [ ] **Replace thumbnail** — currently the lightning-bolt 240×240 default. Optional: upload tighter brand thumbnail.
+- [ ] **Final review** — preview public listing via Pre-Launch Dashboard "View launch" link before T-2 hours
 
 ### How to resume the draft
 Log into producthunt.com as @lancerwise → go to `producthunt.com/posts/new/submission` — PH auto-loads the saved draft from backend. Alternatively click "Submit" button (top right) → it opens the same draft if one exists.
