@@ -1,0 +1,14 @@
+=== Prod health monitor — 10 cycles × 2 min | t0=2026-05-23T11:49:29Z  known_prod_sha=89ae1df ===
+  alerting on: HTTP !== 200, time > 5s, new Sentry release tag, errors spike
+  iter=1 elapsed=0s now=11:49:29 root=200|4.955763 login=200|0.917442 pricing=200|0.539310 vid=hkg1::iad1::7hz2b-177953697645 releases=198f1b7bbd59@11:49 f3d702659304@11:46 60396878b260@11:43  ALERT: ★NEW-RELEASE:198f1b7bbd59
+  iter=2 elapsed=128s now=11:51:37 root=200|0.970224 login=200|0.912951 pricing=200|1.299149 vid=hkg1::iad1::dk99g-177953710118 releases=198f1b7bbd59@11:49 f3d702659304@11:46 60396878b260@11:43
+  iter=3 elapsed=253s now=11:53:42 root=200|0.552102 login=200|1.289326 pricing=200|2.118154 vid=hkg1::iad1::b7zwm-177953722871 releases=04475a34d4b0@11:52 198f1b7bbd59@11:49 f3d702659304@11:46
+  iter=4 elapsed=380s now=11:55:49 root=200|2.975099 login=200|0.942698 pricing=200|1.150130 vid=hkg1::iad1::6q6bp-177953735659 releases=04475a34d4b0@11:52 198f1b7bbd59@11:49 f3d702659304@11:46
+  iter=5 elapsed=508s now=11:57:57 root=200|0.689387 login=200|0.866205 pricing=200|0.572799 vid=hkg1::iad1::nrkds-177953748083 releases=04475a34d4b0@11:52 198f1b7bbd59@11:49 f3d702659304@11:46
+  iter=6 elapsed=632s now=12:00:01 root=200|1.753049 login=200|1.862168 pricing=200|0.782597 vid=hkg1::iad1::d5b6v-177953760800 releases=26db41b6d986@11:58 04475a34d4b0@11:52 198f1b7bbd59@11:49
+  iter=7 elapsed=760s now=12:02:09 root=200|0.824858 login=200|0.544143 pricing=200|1.144116 vid=hkg1::iad1::qbnv7-177953773244 releases=26db41b6d986@11:58 04475a34d4b0@11:52 198f1b7bbd59@11:49
+  iter=8 elapsed=884s now=12:04:13 root=200|1.131650 login=200|0.494995 pricing=200|1.720661 vid=hkg1::iad1::dk99g-177953785832 releases=0ff61081f9b8@undefined 26db41b6d986@11:58 04475a34d4b0@11:52
+  iter=9 elapsed=1010s now=12:06:19 root=200|1.454788 login=200|0.496552 pricing=200|1.543053 vid=hkg1::iad1::zmqq5-177953798370 releases=0ff61081f9b8@12:04 26db41b6d986@11:58 04475a34d4b0@11:52
+  iter=10 elapsed=1135s now=12:08:24 root=200|0.741242 login=200|1.622666 pricing=200|0.856287 vid=hkg1::iad1::ddclv-177953810826 releases=0ff61081f9b8@12:04 26db41b6d986@11:58 04475a34d4b0@11:52
+
+=== monitor complete: 10 cycles, NEW_RELEASE_DETECTED=198f1b7bbd59 ===
