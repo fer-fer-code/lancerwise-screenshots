@@ -95,7 +95,9 @@
 | [#201](https://github.com/fer-fer-code/lancerwise/pull/201) | Sidebar dead links + Timer | `9a2d95e` 11:24Z |
 | [#203](https://github.com/fer-fer-code/lancerwise/pull/203) | Phase 1 palette rollout | `89ae1df` 11:38Z |
 | [#219](https://github.com/fer-fer-code/lancerwise/pull/219) | Phase 2 palette rollout (recovery от auto-closed #209) | `(see PR)` 11:48:15Z |
-| [#221](https://github.com/fer-fer-code/lancerwise/pull/221) | AI modal opaque backdrop + Card surface (token migration) | OPEN at template-time — [TBD merge status] |
+| [#221](https://github.com/fer-fer-code/lancerwise/pull/221) | AI modal opaque backdrop + Card surface (token migration) | `a3e4385` 12:42:54Z |
+| [#222](https://github.com/fer-fer-code/lancerwise/pull/222) | ISR cache `/`, `/pricing` — eliminate cold-start spikes (P2 perf от [AGENT 4]) | `e7d79cb` 13:05:55Z |
+| [#223](https://github.com/fer-fer-code/lancerwise/pull/223) | Mobile bell dropdown opaque bg (cascade fix #211, missed `Header.tsx`) | `46b8aaf` 13:09:43Z |
 
 **8 PRs shipped в campaign window** (5 P1 fixes + 3 design-system).
 
