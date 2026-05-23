@@ -306,6 +306,51 @@ Monitor surfaced PR state change: **#216, #217, #218, #219 all MERGED**.
 
 **Estimated:** ~30-60 min к full clearance с parallel work.
 
+### T+~100 (12:03 UTC) — PR #220 opened для #183 — last unassigned P1 picked up
+
+[PR #220](https://github.com/fer-fer-code/lancerwise/pull/220) opened — title `fix(ui): AI generate + 23 other modals solid card background (#183)`. Branch `fix/p1-ai-modal-transparency`.
+
+**Scope much wider than initial diagnosis:**
+- Initial filing of #183 mentioned /invoices/new "Сгенерировать с AI" modal + suspected /proposals/generate, /contracts/new, /work/time Timer, /projects/new
+- **Actual scope per PR analysis: 24 modal call-sites affected**
+
+**The bug (per PR body):**
+- PR #184 ModalBackdrop earlier campaign fixed OUTER backdrop (slate-950/80 + blur on backdrop layer)
+- BUT 24 per-call-site `contentClassName="bg-slate-800/50 ..."` had **inner content card** still translucent
+- Result: modals feel "see-through" — particularly visible on /invoices/new AI modal
+
+**Fix:** Single regex replacement across 24 files
+```diff
+- contentClassName="bg-slate-800/50 rounded-2xl shadow-xl ..."
++ contentClassName="bg-slate-800 rounded-2xl shadow-xl ..."
+```
+
+Diff: +28/-28 across 24 files. 1-line change per file (2 в files с 2 modals).
+
+**Affected modal families covered:**
+- AI generators + Templates (invoices/new AI + Time-to-Invoice + InvoiceTemplates, contracts/new ContractTemplates)
+- Project actions (ProjectActions, SaveAsTemplate, SendSurveyButton, StatusReportModal, risks/page, board/TaskKanbanBoard)
+- Time-tracker (EditEntryModal, SubmitForApprovalButton, BillTime, QuickTimeLog)
+- Client flows (clients/intake ×2, clients/win-back)
+- Money (savings, goals, expenses, packages, work-log, invoices/collections, InvoicePreviewModal)
+- Shared (MilestonePicker, projects/onboarding)
+
+**Build passes.** CI + visual verify pending.
+
+**Architectural pattern note:** This is а 2-layer fix tightly coupled с PR #184. Future shared `<Modal>` primitive could fold the `bg-slate-800` (solid card) into the component default, removing the per-call-site responsibility и preventing future drift. Post-launch refactor candidate.
+
+### Status update — only #204 remains pre-launch
+
+- ✅ #207 + #205 — PR #216
+- ✅ #210 — PR #217
+- ✅ #211 — PR #218
+- ⏳ #183 — **PR #220 in flight**
+- ❓ #204 — still needs repro / verification
+
+**5 of 5 P1 candidates either closed OR fix-in-flight.** Only #204 invoice $0 remains as unverified item (could be cleared by PR #216 cascade — same `<Input>` component family).
+
+**Trajectory: 🟢 very strong** — entire P1 backlog effectively cleared в ~100 min от campaign start.
+
 ### T+45 (TBD)
 *(awaiting poll)*
 
