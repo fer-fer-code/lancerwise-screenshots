@@ -1,0 +1,13 @@
+{
+  "test_user_email": "lancerwise-e2e-1779525426327@wshu.net",
+  "test_user_id": "97a37993-4525-432f-a7ba-a653020b2909",
+  "landed_url": "https://www.lancerwise.com/dashboard",
+  "navMs": 10530,
+  "isOnboardingURL": false,
+  "isDashboardURL": true,
+  "hasOnboardingHeading": false,
+  "hasDashboardHeading": true,
+  "bodyTextSnippet": "LancerWise\nHome\nMoney\nClients\nWork\nContracts\nInsights\nSettings\nNotifications\nShortcuts\nDashboard\nSearch...\n⌘K\n🇬🇧 EN\n?\nETU1\nGood afternoon, E2E\n\nSaturday, May 23, 2026\n\nRevenue & Activity Hub\nToday: $0 earned · 0 new invoices · 0h logged · 0 new clients\nREVENUE THIS MONTH\n$0\n0 paid · average: $0\nOPEN INVOICES\n$0\nNothing overdue\nHOURS THIS WEEK\n0.0 h\nNo time logged yet\nPROPOSALS PENDING\n0\n0 sent t",
+  "errors": [],
+  "cleanup": "user_deleted"
+}

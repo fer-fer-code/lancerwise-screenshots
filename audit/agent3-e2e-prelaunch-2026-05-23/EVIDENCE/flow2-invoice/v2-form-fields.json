@@ -1,0 +1,125 @@
+[
+  {
+    "idx": 0,
+    "tag": "INPUT",
+    "type": "text",
+    "name": "",
+    "placeholder": "",
+    "id": "",
+    "visible": true
+  },
+  {
+    "idx": 1,
+    "tag": "SELECT",
+    "type": "select-one",
+    "name": "",
+    "id": "",
+    "visible": true
+  },
+  {
+    "idx": 2,
+    "tag": "INPUT",
+    "type": "date",
+    "name": "",
+    "placeholder": "",
+    "id": "",
+    "visible": true
+  },
+  {
+    "idx": 3,
+    "tag": "INPUT",
+    "type": "date",
+    "name": "",
+    "placeholder": "",
+    "id": "",
+    "visible": true
+  },
+  {
+    "idx": 4,
+    "tag": "SELECT",
+    "type": "select-one",
+    "name": "",
+    "id": "",
+    "visible": true
+  },
+  {
+    "idx": 5,
+    "tag": "INPUT",
+    "type": "text",
+    "name": "",
+    "placeholder": "Description",
+    "id": "",
+    "visible": true
+  },
+  {
+    "idx": 6,
+    "tag": "INPUT",
+    "type": "number",
+    "name": "",
+    "placeholder": "Qty",
+    "id": "",
+    "visible": true
+  },
+  {
+    "idx": 7,
+    "tag": "INPUT",
+    "type": "number",
+    "name": "",
+    "placeholder": "Rate",
+    "id": "",
+    "visible": true
+  },
+  {
+    "idx": 8,
+    "tag": "INPUT",
+    "type": "text",
+    "name": "",
+    "placeholder": "Enter code",
+    "id": "",
+    "visible": true
+  },
+  {
+    "idx": 9,
+    "tag": "SELECT",
+    "type": "select-one",
+    "name": "",
+    "id": "",
+    "visible": true
+  },
+  {
+    "idx": 10,
+    "tag": "INPUT",
+    "type": "number",
+    "name": "",
+    "placeholder": "0",
+    "id": "",
+    "visible": true
+  },
+  {
+    "idx": 11,
+    "tag": "INPUT",
+    "type": "number",
+    "name": "",
+    "placeholder": "",
+    "id": "",
+    "visible": true
+  },
+  {
+    "idx": 12,
+    "tag": "TEXTAREA",
+    "type": "textarea",
+    "name": "",
+    "placeholder": "Payment terms, thank you note...",
+    "id": "",
+    "visible": true
+  },
+  {
+    "idx": 13,
+    "tag": "TEXTAREA",
+    "type": "textarea",
+    "name": "",
+    "placeholder": "Bank transfer details, preferred payment method, etc.",
+    "id": "",
+    "visible": true
+  }
+]

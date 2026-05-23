@@ -1,0 +1,12 @@
+{
+  "baselineInvoiceCount": 15,
+  "postLoginInvoiceCount": 15,
+  "dataPersisted": true,
+  "relandedUrl": "https://www.lancerwise.com/dashboard",
+  "dashboardState": {
+    "hasGreeting": true,
+    "hasAgenda": true,
+    "hasRevenue": true,
+    "hasKpi": true
+  }
+}

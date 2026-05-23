@@ -1,0 +1,172 @@
+{
+  "homepage": {
+    "url": "/",
+    "errors": 0,
+    "docWidth": 393,
+    "viewportWidth": 393,
+    "hasHorizontalOverflow": false,
+    "bodyHeight": 10864,
+    "tapTargets": {
+      "total": 29,
+      "tooSmall": 19,
+      "smallSample": [
+        {
+          "w": 145,
+          "h": 32
+        },
+        {
+          "w": 139,
+          "h": 20
+        },
+        {
+          "w": 57,
+          "h": 17
+        },
+        {
+          "w": 46,
+          "h": 17
+        },
+        {
+          "w": 100,
+          "h": 17
+        }
+      ]
+    }
+  },
+  "pricing": {
+    "url": "/pricing",
+    "errors": 0,
+    "docWidth": 393,
+    "viewportWidth": 393,
+    "hasHorizontalOverflow": false,
+    "bodyHeight": 2750,
+    "tapTargets": {
+      "total": 25,
+      "tooSmall": 19,
+      "smallSample": [
+        {
+          "w": 145,
+          "h": 32
+        },
+        {
+          "w": 139,
+          "h": 20
+        },
+        {
+          "w": 57,
+          "h": 17
+        },
+        {
+          "w": 46,
+          "h": 17
+        },
+        {
+          "w": 100,
+          "h": 17
+        }
+      ]
+    }
+  },
+  "login": {
+    "url": "/login",
+    "errors": 1,
+    "docWidth": 393,
+    "viewportWidth": 393,
+    "hasHorizontalOverflow": false,
+    "bodyHeight": 852,
+    "tapTargets": {
+      "total": 8,
+      "tooSmall": 7,
+      "smallSample": [
+        {
+          "w": 154,
+          "h": 20
+        },
+        {
+          "w": 101,
+          "h": 15
+        },
+        {
+          "w": 28,
+          "h": 50
+        },
+        {
+          "w": 81,
+          "h": 17
+        },
+        {
+          "w": 60,
+          "h": 15
+        }
+      ]
+    }
+  },
+  "register": {
+    "url": "/register",
+    "errors": 1,
+    "docWidth": 393,
+    "viewportWidth": 393,
+    "hasHorizontalOverflow": false,
+    "bodyHeight": 852,
+    "tapTargets": {
+      "total": 9,
+      "tooSmall": 8,
+      "smallSample": [
+        {
+          "w": 154,
+          "h": 20
+        },
+        {
+          "w": 28,
+          "h": 50
+        },
+        {
+          "w": 97,
+          "h": 15
+        },
+        {
+          "w": 245,
+          "h": 34
+        },
+        {
+          "w": 45,
+          "h": 17
+        }
+      ]
+    }
+  },
+  "dashboard": {
+    "url": "/dashboard",
+    "errors": 0,
+    "docWidth": 393,
+    "viewportWidth": 393,
+    "hasHorizontalOverflow": false,
+    "bodyHeight": 852,
+    "tapTargets": {
+      "total": 52,
+      "tooSmall": 13,
+      "smallSample": [
+        {
+          "w": 84,
+          "h": 32
+        },
+        {
+          "w": 101,
+          "h": 16
+        },
+        {
+          "w": 132,
+          "h": 21
+        },
+        {
+          "w": 30,
+          "h": 44
+        },
+        {
+          "w": 107,
+          "h": 35
+        }
+      ]
+    }
+  }
+}
