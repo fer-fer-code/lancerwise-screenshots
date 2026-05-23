@@ -1,0 +1,1 @@
+F12 status=307 location=location: /login cookie_clear=1

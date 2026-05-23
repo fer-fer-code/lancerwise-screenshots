@@ -1,0 +1,22 @@
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 262
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline; filename="og-image.png"
+content-type: image/png
+date: Sat, 23 May 2026 08:23:31 GMT
+etag: "6883e48713f8c273d197014d0342d7fd"
+last-modified: Sat, 23 May 2026 08:19:08 GMT
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+x-content-type-options: nosniff
+x-dns-prefetch-control: on
+x-frame-options: SAMEORIGIN
+x-matched-path: /og-image.png
+x-vercel-cache: HIT
+x-vercel-id: hkg1::kfd27-1779524611632-2c49d11d00aa
+content-length: 55475
+

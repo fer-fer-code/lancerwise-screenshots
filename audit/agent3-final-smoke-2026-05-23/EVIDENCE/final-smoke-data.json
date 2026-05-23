@@ -1,0 +1,91 @@
+{
+  "F13": {
+    "pass": true,
+    "backdrop1": {
+      "bg": "oklab(0.128998 -0.0038857 -0.0418156 / 0.8)",
+      "backdropFilter": "blur(8px)",
+      "classes": "fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 "
+    },
+    "backdrop2": {
+      "bg": "oklab(0.128998 -0.0038857 -0.0418156 / 0.8)",
+      "backdropFilter": "blur(8px)",
+      "classes": "fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 "
+    }
+  },
+  "F14": {
+    "pass": false,
+    "opened": true,
+    "modalInfo": {
+      "width": 1440,
+      "height": 900,
+      "text": "Cookie Preferences← BackEssentialAuth, session, securityAlways ONAnalyticsGoogle Analytics 4 — traffic & usageReject AllSave",
+      "hasSave": true,
+      "hasReject": true,
+      "hasAnalytics": true
+    },
+    "closedAfterOutside": false
+  },
+  "F15": {
+    "pass": true,
+    "info": {
+      "hasNaN": false,
+      "hasZeroValue": false,
+      "pipelineValue": "USD 37,000\n"
+    }
+  },
+  "F16": {
+    "pass": true,
+    "digestOk": true,
+    "remindersOk": true
+  },
+  "F17": {
+    "pass": true,
+    "results": {
+      "/clients": {
+        "heading": "Клиенты",
+        "hasCyrillic": true,
+        "headingOk": true
+      },
+      "/invoices": {
+        "heading": "Счета",
+        "hasCyrillic": true,
+        "headingOk": true
+      },
+      "/projects": {
+        "heading": "Проекты",
+        "hasCyrillic": true,
+        "headingOk": true
+      },
+      "/contracts": {
+        "heading": "Договоры",
+        "hasCyrillic": true,
+        "headingOk": true
+      }
+    }
+  },
+  "F19": {
+    "pass": true,
+    "info": {
+      "hasUpgradeToPro": false,
+      "hasCurrentPlan": true,
+      "hasYourCurrentPlan": true
+    }
+  },
+  "F20": {
+    "pass": true,
+    "monthlyInfo": {
+      "hasEzhemesyachno": true,
+      "hasEzhegodno": true,
+      "hasSamiyPopularniy": true,
+      "hasTekushiyTarif": true,
+      "hasVashTekushiyTarif": true,
+      "hasUpgradeToProEn": false
+    },
+    "yearlyInfo": {
+      "hasSchet": true,
+      "hasGod": true,
+      "hasEkonomiya": true
+    },
+    "yearlyClicked": true
+  }
+}
