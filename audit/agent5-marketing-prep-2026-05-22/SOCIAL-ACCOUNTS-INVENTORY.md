@@ -188,6 +188,25 @@ All Playwright captures live in `social-setup/` subdirectory:
 
 ---
 
+## Monday T-30 pre-launch checklist — ProductHunt manual finalization
+
+**Launch:** Tue 2026-05-26 12:01 AM PDT • **Window for these tasks:** Mon 2026-05-25 (any time, ~5 min total)
+
+1. **Add 3 shoutouts manually via PH product edit UI** (~3 min)
+   - URL: https://www.producthunt.com/posts/lancerwise/edit → Shoutouts section
+   - Recommended: **Supabase** (database/auth), **Vercel** (hosting), **Anthropic** (Claude API)
+   - **Why manual:** Add-shoutout product-picker uses a hover-reveal popup that Playwright/MCP can't trigger correctly. Ramiz has to click + type product names in PH's native UI.
+   - **Impact:** Improves PH ranking algorithm + earns cross-promo backlinks on Supabase/Vercel/Anthropic PH pages (founder review surfaces on each).
+
+2. **Optional: review gallery (5 images vs target 9)**
+   - **5 is acceptable** — above PH's recommended 3–5 minimum. Ship as-is is fine.
+   - Files live: `post-audit-improvements/ph-gallery/01..05-*.png` (1270×760)
+   - To extend to 9: ask agent6 to generate 4 more composites (time-tracker / proposals / multi-language / mobile angles), then upload via PH edit → Images and media. Otherwise launch with 5.
+
+**Neither task is a launch blocker.** Launch will proceed as scheduled on Tue 2026-05-26 12:01 AM PDT whether or not these are done.
+
+---
+
 ## Next steps for Ramiz
 
 **Before launch (Day -2 / Day -1):**
