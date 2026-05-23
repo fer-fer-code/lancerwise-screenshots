@@ -1,0 +1,69 @@
+{
+  "steps": [
+    {
+      "id": "AUTH",
+      "status": "PASS",
+      "note": "CDP-reused session authenticated, on /dashboard"
+    },
+    {
+      "id": "TIME-LANDING",
+      "status": "PASS",
+      "note": "loaded at https://www.lancerwise.com/work/time"
+    },
+    {
+      "id": "TIME-T1",
+      "status": "PASS",
+      "note": "start clicked; counter='00:00:00'"
+    },
+    {
+      "id": "TIME-T2",
+      "status": "FAIL",
+      "note": "stop button not found"
+    },
+    {
+      "id": "TIME-T3",
+      "status": "PASS",
+      "note": "15m manual entry saved"
+    },
+    {
+      "id": "TIME-T4",
+      "status": "PARTIAL",
+      "note": "edit button not found by aria-label"
+    },
+    {
+      "id": "TIME-T5",
+      "status": "PARTIAL",
+      "note": "delete button not found"
+    },
+    {
+      "id": "TASKS-LANDING",
+      "status": "PASS",
+      "note": "loaded at https://www.lancerwise.com/tasks"
+    },
+    {
+      "id": "TASKS-T1",
+      "status": "PARTIAL",
+      "note": "enter submitted; task visible in list=false"
+    },
+    {
+      "id": "TASKS-T2",
+      "status": "PARTIAL",
+      "note": "no checkbox found"
+    },
+    {
+      "id": "TASKS-T3",
+      "status": "PARTIAL",
+      "note": "created task title not findable"
+    },
+    {
+      "id": "TASKS-T4",
+      "status": "PARTIAL",
+      "note": "delete button not found by aria-label"
+    },
+    {
+      "id": "TASKS-T5",
+      "status": "PARTIAL",
+      "note": "date nav present; no search/sort UI (matches source: feature not implemented). dateNav=2; search=0; sort=0"
+    }
+  ]
+}

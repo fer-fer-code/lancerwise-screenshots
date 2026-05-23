@@ -1,0 +1,15 @@
+=== Prod health monitor — 10 cycles × 2 min | t0=2026-05-23T12:20:46Z  prev_known_prod_sha=0ff61081f9b8 ===
+  alerting on: HTTP !== 200, time > 5s sustained, new Sentry release
+  iter=1 elapsed=0s now=12:20:46 root=200|0.542974 login=200|3.601377 pricing=200|1.174029 releases=c563e8ff0be0@12:12 0ff61081f9b8@12:04 26db41b6d986@11:58  ALERT: ★NEW:c563e8ff0be0
+  iter=2 elapsed=126s now=12:22:52 root=200|10.005279 login=200|2.129592 pricing=200|3.611771 releases=c563e8ff0be0@12:12 0ff61081f9b8@12:04 26db41b6d986@11:58
+  iter=3 elapsed=263s now=12:25:09 root=200|1.109832 login=200|4.210855 pricing=200|0.786165 releases=c563e8ff0be0@12:12 0ff61081f9b8@12:04 26db41b6d986@11:58
+  iter=4 elapsed=390s now=12:27:16 root=000|10.005981 login=200|0.787874 pricing=200|1.040991 releases=96602cf41dea@12:25 c563e8ff0be0@12:12 0ff61081f9b8@12:04  ALERT: root=000 ★NEW:96602cf41dea
+  iter=5 elapsed=523s now=12:29:29 root=200|0.862593 login=200|1.003712 pricing=200|0.777254 releases=96602cf41dea@12:25 c563e8ff0be0@12:12 0ff61081f9b8@12:04
+  iter=6 elapsed=646s now=12:31:32 root=200|10.006151 login=200|2.781481 pricing=200|4.697215 releases=96602cf41dea@12:25 c563e8ff0be0@12:12 0ff61081f9b8@12:04
+  iter=7 elapsed=784s now=12:33:50 root=200|1.847781 login=200|4.207480 pricing=200|1.613588 releases=96602cf41dea@12:25 c563e8ff0be0@12:12 0ff61081f9b8@12:04
+  iter=8 elapsed=914s now=12:36:00 root=200|1.219583 login=200|1.586274 pricing=200|0.881882 releases=96602cf41dea@12:25 c563e8ff0be0@12:12 0ff61081f9b8@12:04
+  iter=9 elapsed=1038s now=12:38:04 root=200|0.945425 login=200|1.694242 pricing=200|1.558861 releases=96602cf41dea@12:25 c563e8ff0be0@12:12 0ff61081f9b8@12:04
+  iter=10 elapsed=1164s now=12:40:10 root=200|3.066600 login=200|5.969465 pricing=200|0.888536 releases=96602cf41dea@12:25 c563e8ff0be0@12:12 0ff61081f9b8@12:04
+
+=== monitor complete: new_releases_detected=' c563e8ff0be0 96602cf41dea' ===
+MON_DIR=/Users/myoffice/lancerwise-screenshots/audit/agent4-prod-health-monitor-20260523T122046Z
