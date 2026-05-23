@@ -1,0 +1,264 @@
+[
+  {
+    "slug": "bonsai",
+    "url": "https://www.hellobonsai.com",
+    "ok": true,
+    "design": {
+      "bodyBg": "rgb(255, 255, 255)",
+      "bodyColor": "rgb(0, 0, 0)",
+      "htmlBg": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Geist, Arial, sans-serif",
+      "h1Font": "Geist, Arial, sans-serif",
+      "h1Size": "56px",
+      "h1Weight": "500",
+      "ctas": [
+        {
+          "text": "Try Bonsai for free\nTry Bonsai for free",
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "Geist, Arial, sans-serif",
+          "fontWeight": "500"
+        },
+        {
+          "text": "Try Bonsai for free\nTry Bonsai for free",
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "Geist, Arial, sans-serif",
+          "fontWeight": "500"
+        }
+      ],
+      "title": "Bonsai - Business management software"
+    },
+    "error": null
+  },
+  {
+    "slug": "honeybook",
+    "url": "https://www.honeybook.com",
+    "ok": true,
+    "design": {
+      "bodyBg": "rgb(255, 255, 255)",
+      "bodyColor": "rgb(20, 33, 39)",
+      "htmlBg": "rgba(0, 0, 0, 0)",
+      "fontFamily": "\"STK Bureau Sans\", Arial, sans-serif",
+      "h1Font": "\"STK Bureau Serif\", Arial, sans-serif",
+      "h1Size": "64px",
+      "h1Weight": "400",
+      "ctas": [],
+      "title": "HoneyBook | AI-powered client relationship platform"
+    },
+    "error": null
+  },
+  {
+    "slug": "plutio",
+    "url": "https://www.plutio.com",
+    "ok": true,
+    "design": {
+      "bodyBg": "rgb(255, 255, 255)",
+      "bodyColor": "rgb(0, 0, 0)",
+      "htmlBg": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Roboto, arial",
+      "h1Font": "Inter, \"Inter Fallback\", Roboto, arial",
+      "h1Size": "56px",
+      "h1Weight": "900",
+      "ctas": [
+        {
+          "text": "Try for free",
+          "bg": "rgb(61, 14, 191)",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "Roboto, arial",
+          "fontWeight": "500"
+        },
+        {
+          "text": "Try Plutio Free",
+          "bg": "rgb(61, 14, 191)",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "Roboto, arial",
+          "fontWeight": "500"
+        }
+      ],
+      "title": "Plutio - One app to run, grow, and automate your business"
+    },
+    "error": null
+  },
+  {
+    "slug": "indy",
+    "url": "https://weareindy.com",
+    "ok": true,
+    "design": {
+      "bodyBg": "rgb(255, 255, 255)",
+      "bodyColor": "rgb(20, 20, 20)",
+      "htmlBg": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Greycliff, \"Open Sans\", sans-serif",
+      "h1Font": "__greycliffFont_619ee1, __greycliffFont_Fallback_619ee1, sans-serif",
+      "h1Size": "64px",
+      "h1Weight": "700",
+      "ctas": [
+        {
+          "text": "Start for free",
+          "bg": "rgb(239, 239, 239)",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "__greycliffFont_619ee1, __greycliffFont_Fallback_619ee1, sans-serif",
+          "fontWeight": "700"
+        }
+      ],
+      "title": "Indy | The Best CRM for Freelancers and Independent Business"
+    },
+    "error": null
+  },
+  {
+    "slug": "hectic",
+    "url": "https://hecticapp.com",
+    "ok": true,
+    "design": {
+      "bodyBg": "rgb(255, 255, 255)",
+      "bodyColor": "rgb(16, 17, 15)",
+      "fontFamily": "stratos-lights, sans-serif",
+      "h1Font": "stratos, sans-serif",
+      "h1Size": "56px",
+      "ctas": [
+        {
+          "text": "Get started",
+          "bg": "rgb(201, 3, 96)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Start your free trial",
+          "bg": "rgb(92, 0, 226)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "title": "All-in-One Freelance Business Management Software | Moxie™"
+    },
+    "error": null
+  },
+  {
+    "slug": "fiverr-workspace",
+    "url": "https://workspace.fiverr.com",
+    "ok": true,
+    "design": {
+      "bodyBg": "rgb(255, 255, 255)",
+      "bodyColor": "rgb(116, 118, 126)",
+      "htmlBg": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Macan, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "h1Font": "Macan, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "h1Size": "24px",
+      "h1Weight": "700",
+      "ctas": [],
+      "title": "It needs a human touch"
+    },
+    "error": null
+  },
+  {
+    "slug": "linear",
+    "url": "https://linear.app",
+    "ok": true,
+    "design": {
+      "bodyBg": "rgb(8, 9, 10)",
+      "bodyColor": "rgb(247, 248, 248)",
+      "htmlBg": "rgb(8, 9, 10)",
+      "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+      "h1Font": "\"Inter Variable\", \"SF Pro Display\", -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+      "h1Size": "64px",
+      "h1Weight": "510",
+      "ctas": [
+        {
+          "text": "Skip to content →",
+          "bg": "rgb(94, 106, 210)",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+          "fontWeight": "510"
+        },
+        {
+          "text": "Sign up",
+          "bg": "rgb(229, 229, 230)",
+          "color": "rgb(8, 9, 10)",
+          "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+          "fontWeight": "510"
+        },
+        {
+          "text": "Faster app launch",
+          "bg": "rgba(255, 255, 255, 0.04)",
+          "color": "rgb(208, 214, 224)",
+          "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+          "fontWeight": "510"
+        }
+      ],
+      "title": "Linear – The system for product development"
+    },
+    "error": null
+  },
+  {
+    "slug": "notion",
+    "url": "https://www.notion.so",
+    "ok": true,
+    "design": {
+      "bodyBg": "rgb(25, 25, 24)",
+      "bodyColor": "rgba(0, 0, 0, 0.95)",
+      "htmlBg": "rgb(255, 255, 255)",
+      "fontFamily": "NotionInter, Inter, -apple-system, \"system-ui\", \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+      "h1Font": "NotionInter, Inter, -apple-system, \"system-ui\", \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+      "h1Size": "64px",
+      "h1Weight": "700",
+      "ctas": [
+        {
+          "text": "Get Notion free",
+          "bg": "rgb(69, 93, 211)",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "NotionInter, Inter, -apple-system, \"system-ui\", \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "fontWeight": "500"
+        },
+        {
+          "text": "Get Notion free",
+          "bg": "rgb(69, 93, 211)",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "NotionInter, Inter, -apple-system, \"system-ui\", \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "fontWeight": "500"
+        },
+        {
+          "text": "Request a demo",
+          "bg": "rgb(33, 49, 131)",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "NotionInter, Inter, -apple-system, \"system-ui\", \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "fontWeight": "500"
+        },
+        {
+          "text": "",
+          "bg": "rgba(255, 255, 255, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "NotionInter, Inter, -apple-system, \"system-ui\", \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "fontWeight": "500"
+        },
+        {
+          "text": "",
+          "bg": "rgba(255, 255, 255, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "NotionInter, Inter, -apple-system, \"system-ui\", \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "fontWeight": "500"
+        },
+        {
+          "text": "",
+          "bg": "rgba(255, 255, 255, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "NotionInter, Inter, -apple-system, \"system-ui\", \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "fontWeight": "500"
+        },
+        {
+          "text": "",
+          "bg": "rgba(255, 255, 255, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "NotionInter, Inter, -apple-system, \"system-ui\", \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "fontWeight": "500"
+        },
+        {
+          "text": "",
+          "bg": "rgba(255, 255, 255, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "NotionInter, Inter, -apple-system, \"system-ui\", \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "fontWeight": "500"
+        }
+      ],
+      "title": "The AI workspace that works for you. | Notion"
+    },
+    "error": null
+  }
+]
