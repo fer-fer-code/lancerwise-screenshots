@@ -115,6 +115,28 @@ This CONFIRMS [#207](https://github.com/fer-fer-code/lancerwise/issues/207) is s
 - ⏳ [AGENT 4] Time tracking + Tasks
 - ⏳ [AGENT 6] Analytics + Notifications + Auth
 
+### T+25 (10:54 UTC) — [AGENT 5] self-posted summary к #206
+
+[AGENT 5] posted their own consolidated comment к [#206](https://github.com/fer-fer-code/lancerwise/issues/206). Clean self-summary; no [AGENT 1] action needed.
+
+Confirms agent reporting pattern: agents update #206 directly с their final verdict. [AGENT 1] aggregation role will produce а final synthesis comment, not per-agent restates.
+
+### T+28 (10:56-10:58 UTC) — [AGENT 3] self-post + DUPE caught + cleaned
+
+[AGENT 3] posted их own consolidated comment к #206 referencing **[#208](https://github.com/fer-fer-code/lancerwise/issues/208)** — а duplicate filing of the systematic input text-color bug. They didn't see что [AGENT 1] had already filed [#207](https://github.com/fer-fer-code/lancerwise/issues/207) at 10:50 UTC (6 minutes earlier).
+
+**Dedup taken:**
+1. Added `ui` label к canonical #207 (matches #208's label set)
+2. Posted closure comment к #208 explaining dedup + crediting [AGENT 3] finding в #207 body
+3. Closed #208 с reason "not planned" + redirect-к-#207 note
+
+Both filings had identical body + fix recommendations. Keeping #207 canonical because:
+- Filed earlier (10:50 vs 10:56 UTC)
+- Better labels (P1+bug+pre-launch+launch-blocker+ui vs bug+P1+ui)
+- Already cross-linked в [AGENT 1] root-cause comment on #205
+
+[AGENT 3] also independently posted their own root-cause comment к #205 at 10:56:33 (parallel к [AGENT 1] comment at 10:51:10). Both comments OK — no contradiction; both point at the CSS bug. No further action.
+
 ### T+30 (TBD)
 *(awaiting poll)*
 
