@@ -431,6 +431,52 @@ Per launch threshold (≤3 P0, fix+retest, launch as scheduled): **threshold met
 
 2 of 3 conditions met. Awaiting [AGENT 4] + Ramiz #204 decision.
 
+### T+~150 (13:00 UTC) — ⚠️ [AGENT 4] PIVOTED — cold-start investigation, NOT Time/Tasks QA
+
+**Coverage gap surfaced:** [AGENT 4] did NOT execute Time + Tasks functional QA. Instead they ran а **cold-start tail latency investigation** triggered by Health Monitor Round-2 findings (10s timeout + 3-10s spikes on /, /login, /pricing). Severity: **P2 pre-launch** (upgraded от P3 per Ramiz earlier).
+
+**[AGENT 4] deliverable:** [`audit/agent4-cold-start-investigation/RESULT.md`](../agent4-cold-start-investigation/RESULT.md) (245 lines).
+
+**Findings (4 architectural causes of tail latency):**
+1. Single-region deploy (`iad1` only) — non-US traffic +100-200ms baseline
+2. No Edge runtime on marketing pages — Node.js serverless cold-start 500ms-2s vs Edge 50-200ms
+3. Heavy `/` server bundle — 25 lucide icons + getTranslations + 5 marketing component imports
+4. No static revalidation — `/` + `/pricing` re-render on every request
+
+**Sentry confirms:** `/` p99 = 4,875ms over 24h.
+
+**PR #222 opened by [AGENT 4]** — `perf: ISR cache /, /pricing` — adds `export const revalidate = 3600` к both files (+12/-0). Eliminates 90%+ of tail spikes per [AGENT 4]'s top recommendation. Currently OPEN, awaiting CI.
+
+**Other [AGENT 4] surfaces also pushed к screenshots repo:**
+- `agent2-phase2-prod-verify-2026-05-23/` — Phase 2 prod-verify (attributed к [AGENT 2])
+- `agent3-e2e-prelaunch-2026-05-23/`, `agent3-final-smoke-2026-05-23/`, `agent3-visual-tour-2026-05-23/` — [AGENT 3] follow-up work
+- `agent3-pr187-reprobe-2026-05-23/`, `agent3-pr191-reprobe-2026-05-23/` — [AGENT 3] PR re-probes
+
+### Critical coordination question для Ramiz
+
+[AGENT 4] effectively pivoted от Time+Tasks QA к cold-start investigation. Two paths forward:
+
+**Path A: WAIT** для [AGENT 4] к return к Time + Tasks QA. Risk: indefinite delay (could be never).
+
+**Path B: ACCEPT GAP** — finalize aggregate с 4/5 areas + explicit note "[AGENT 4] redirected к cold-start investigation; Time + Tasks unverified этой campaign — book as week-1 follow-up". Plus include #222 perf signal as bonus context.
+
+[AGENT 1] recommendation: **Path B** (accept gap). 4/5 functional areas с 0 P0 + 0 P1 NEW от tested surfaces is а strong signal. Time + Tasks coverage gap is acceptable as follow-up since:
+- Time tracking + Tasks aren't payment-critical
+- Existing smoke testing protocol F7 covered /work/time render
+- Risk is bounded — these features still render
+
+**Trigger criteria revision needed** (per original Ramiz directive). Awaiting signal.
+
+### Status update — 4/5 areas + 1 pivot
+
+- ✅ [AGENT 3] Projects+Clients
+- ✅ [AGENT 5] Contracts+Settings
+- ✅ [AGENT 5] Analytics+Auth
+- ✅ [AGENT 2] Invoices
+- ⚠️ **[AGENT 4] PIVOTED** — cold-start investigation (P2 perf) instead of Time + Tasks QA
+
+**Bonus signal от pivot:** PR #222 (ISR cache) addresses real Sentry-confirmed `/` p99 4,875ms. Worth shipping pre-launch given PH traffic surge expected Tuesday.
+
 ### T+45 (TBD)
 *(awaiting poll)*
 
