@@ -137,8 +137,49 @@ Both filings had identical body + fix recommendations. Keeping #207 canonical be
 
 [AGENT 3] also independently posted their own root-cause comment к #205 at 10:56:33 (parallel к [AGENT 1] comment at 10:51:10). Both comments OK — no contradiction; both point at the CSS bug. No further action.
 
-### T+30 (TBD)
-*(awaiting poll)*
+### T+35 (11:10 UTC) — [AGENT 5] surfaced SECOND report (covers [AGENT 6] area)
+
+**RESULT.md:** [`audit/agent5-functional-qa-analytics-auth-2026-05-23/RESULT.md`](../agent5-functional-qa-analytics-auth-2026-05-23/RESULT.md) (176 lines)
+
+**Coverage note:** [AGENT 5] finished their original Contracts+Settings task quickly (T+22, 25 min total) и picked up additional Analytics + Expenses + Notifications + Auth area which was supposed to be [AGENT 6]'s assignment. [AGENT 6] status now unknown — может waiting on dependency OR offline. [AGENT 5] effectively covered 2 of 5 agent areas.
+
+**Verdict:** ⚠️ **2 NEW P1 bugs confirmed + 1 P2 cross-confirm + 1 inconclusive (potential P1)**
+
+### NEW P1 bugs filed
+
+- 🚨 **[#210](https://github.com/fer-fer-code/lancerwise/issues/210)** `/analytics/forecast` forced light theme — `html.h-full light` + body white background; KPI text washed-out, chart axes nearly invisible. 3 routes affected (forecast severe, cash-flow + profitability lurking). Cross-ref project memory `project_lancerwise_light_theme_audit` pre-existing hypothesis. ~15-30 min fix.
+- 🚨 **[#211](https://github.com/fer-fer-code/lancerwise/issues/211)** Bell notification dropdown 50% transparent — `backgroundColor: oklab(... / 0.5)`. Underlying "Лента активности" content visibly bleeds through dropdown items. Avatar dropdown OK (different component). ~5 min CSS fix.
+
+### Cross-confirm of existing issue
+
+- **[#166](https://github.com/fer-fer-code/lancerwise/issues/166)** /analytics/overview 404 but linked from sidebar — [AGENT 5] re-verified. Already P2 post-launch backlog. No re-file needed.
+
+### Inconclusive (deferred к manual repro)
+
+- Logout click from avatar dropdown registers (3 dispatched click variants), но URL stays /dashboard. Could be (a) real bug, (b) MCP synthetic-event limitation, (c) modal auto-dismiss artifact. **Recommend** Ramiz manual repro в real Chrome before filing as P1. NOT auto-filed yet.
+
+### What WORKED (from AGENT 5)
+
+- Expenses full CRUD: create/edit-inferred/delete/filter — all PASS, stats updated $590→$632.5 correctly
+- /forgot-password renders Russian-language reset form с Turnstile CAPTCHA
+- Session persists across navigation
+- /notifications page renders properly с filter tabs + empty state
+
+### P3 observations (not filed)
+
+- Expense delete instant без confirm (data loss risk) — UX recommendation, не bug
+- Bell dropdown items без click handlers (couldn't navigate when clicked) — needs human repro
+
+### Status — 3/5 (effective 4/5) coverage
+
+- ✅ [AGENT 3] Projects+Clients — 1 P1 systematic ([#207](https://github.com/fer-fer-code/lancerwise/issues/207))
+- ✅ [AGENT 5] Contracts+Settings — 0 P0/P1, cross-confirms #207
+- ✅ [AGENT 5] **also** covered Analytics+Auth — 2 P1 NEW ([#210](https://github.com/fer-fer-code/lancerwise/issues/210), [#211](https://github.com/fer-fer-code/lancerwise/issues/211)) + 1 inconclusive logout + 1 cross-confirm
+- ⏳ [AGENT 2] Invoices
+- ⏳ [AGENT 4] Time + Tasks
+- ⚠️ [AGENT 6] Analytics+Notif+Auth — [AGENT 5] picked up the slack; [AGENT 6] OWN report still pending or won't surface
+
+**Cumulative P1 count so far: 3** (#207 systematic CSS, #210 forecast light-mode, #211 bell dropdown)
 
 ### T+45 (TBD)
 *(awaiting poll)*
