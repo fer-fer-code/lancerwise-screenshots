@@ -1,0 +1,16 @@
+=== PR #191 watch (/upgrade RU translation — FINAL P1) — 12 iter × 75s | watch_start=2026-05-23T05:54:57Z  deploy_t0=2026-05-23T05:51:48Z  SHA=2c05b4b626f7cf02e2b73ded0706cf94bac35296 ===
+  baseline: LW-5=7 LW-6=7 LW-9=15 LW-A=3 LW-B=3 LW-7=6 (stale 4d)  mw=0 i18n=0 PlansGrid=0
+  iter=1 elapsed=0s now=05:54:57 LW5=7 LW6=7 LW7=6 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  PlansGrid=0  api=0  new=0
+  iter=2 elapsed=93s now=05:56:30 LW5=7 LW6=7 LW7=6 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  PlansGrid=0  api=0  new=0
+  iter=3 elapsed=180s now=05:57:57 LW5=7 LW6=7 LW7=6 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  PlansGrid=0  api=0  new=0
+  iter=4 elapsed=266s now=05:59:23 LW5=7 LW6=7 LW7=6 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  PlansGrid=0  api=0  new=0
+  iter=5 elapsed=352s now=06:00:49 LW5=7 LW6=7 LW7=6 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  PlansGrid=0  api=0  new=0
+  iter=6 elapsed=439s now=06:02:16 LW5=7 LW6=7 LW7=6 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  PlansGrid=0  api=0  new=0
+  iter=7 elapsed=557s now=06:04:14 LW5=7 LW6=7 LW7=6 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  PlansGrid=0  api=0  new=0
+  iter=8 elapsed=644s now=06:05:41 LW5=7 LW6=7 LW7=6 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  PlansGrid=0  api=0  new=0
+  iter=9 elapsed=739s now=06:07:16 LW5=7 LW6=7 LW7=6 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  PlansGrid=0  api=0  new=0
+  iter=10 elapsed=854s now=06:09:11 LW5=7 LW6=7 LW7=6 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  PlansGrid=0  api=0  new=0
+  iter=11 elapsed=939s now=06:10:36 LW5=7 LW6=7 LW7=6 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  PlansGrid=0  api=0  new=0
+  iter=12 elapsed=1027s now=06:12:04 LW5=7 LW6=7 LW7=6 LW9=15 LWA=3 LWB=3  mw=0  i18n=0  PlansGrid=0  api=0  new=0
+
+=== PR #191 watch complete ===
