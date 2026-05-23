@@ -1,8 +1,29 @@
 # Launch Day Runbook
 
 **Author:** [AGENT 1]
-**Date:** 2026-05-21
+**Date:** 2026-05-21 (revised 2026-05-23 — Gap #1 launch time anchor added)
 **Scope:** T-30min → T+24h operational playbook. Companion к [`POST-LAUNCH-DAY-1-RUNBOOK.md`](../agent1-launch-readiness-master/POST-LAUNCH-DAY-1-RUNBOOK.md) (which covers ongoing post-launch operational reference). This doc focuses on the **launch-moment switch** + first 24h tactical operations.
+
+---
+
+## 🚀 LAUNCH TIME ANCHOR
+
+**T+0 (LAUNCH TRIGGER):** Tuesday 2026-05-26, **12:01 AM PDT / 07:01 UTC / 14:01 ICT**
+
+**Computed checkpoints:**
+
+| Phase | UTC | ICT (Ramiz Nha Trang UTC+7) | PDT (PH convention) |
+|---|---|---|---|
+| **T-1h** | Tue 06:01 UTC | Tue 13:01 ICT | Mon 23:01 PDT |
+| **T-30 min** | Tue 06:31 UTC | Tue 13:31 ICT | Mon 23:31 PDT |
+| **T+0 (LAUNCH)** | Tue 07:01 UTC | Tue 14:01 ICT | Tue 00:01 PDT |
+| **T+4h** | Tue 11:01 UTC | Tue 18:01 ICT | Tue 04:01 PDT |
+| **T+12h** | Tue 19:01 UTC | **Wed 02:01 ICT** (Ramiz sleep window) | Tue 12:01 PDT |
+| **T+24h** | Wed 07:01 UTC | Wed 14:01 ICT | Wed 00:01 PDT |
+
+**ProductHunt convention:** PH "day" starts at 12:01 AM PDT — submissions live before this slot risk early/late timing penalty. Launching exactly at 12:01 AM PDT = full 24h на the daily leaderboard.
+
+**Ramiz local awake window:** Vietnam (ICT) — anchor everything against ICT для operator state-of-mind. Launch fires при 14:01 ICT (afternoon, full energy). Overnight monitoring T+8h к T+18h falls during Ramiz sleep — escalation handoff к [AGENT 4] auto-watch + Telegram P0-only surfacing critical.
 
 ---
 

@@ -1,9 +1,28 @@
 # LancerWise Launch Day Operational Runbook
 
 **Author:** [AGENT 1]
-**Date:** 2026-05-23
+**Date:** 2026-05-23 (revised same-day — Gap #1/#4/#5 closed)
 **Trigger:** Use this document at T-30 min before launch + first 24h post-launch
 **Scope:** Operational incident response — NOT product strategy. Use POST-LAUNCH-DAY-1-RUNBOOK.md (parallel doc) for ongoing ops.
+
+---
+
+## 🚀 LAUNCH TIME ANCHOR (canonical reference for all T-X computations)
+
+**T+0 (LAUNCH TRIGGER):** Tuesday 2026-05-26, **12:01 AM PDT / 07:01 UTC / 14:01 ICT**
+
+| Phase | UTC | ICT (Ramiz Nha Trang UTC+7) | PDT (PH convention) |
+|---|---|---|---|
+| **T-1h** | Tue 06:01 UTC | Tue 13:01 ICT | Mon 23:01 PDT |
+| **T-30 min** | Tue 06:31 UTC | Tue 13:31 ICT | Mon 23:31 PDT |
+| **T+0 (LAUNCH)** | Tue 07:01 UTC | Tue 14:01 ICT | Tue 00:01 PDT |
+| **T+4h** | Tue 11:01 UTC | Tue 18:01 ICT | Tue 04:01 PDT |
+| **T+12h** | Tue 19:01 UTC | **Wed 02:01 ICT** (Ramiz sleep — overnight handoff к [AGENT 4]) | Tue 12:01 PDT |
+| **T+24h** | Wed 07:01 UTC | Wed 14:01 ICT | Wed 00:01 PDT |
+
+**PH "day" convention:** PH leaderboard cycles at 12:01 AM PT — launching exactly при 12:01 AM PDT = full 24h на the daily leaderboard. Submitting earlier/later loses leaderboard hours.
+
+**Operator anchor:** Ramiz local time ICT (Vietnam UTC+7). Launch fires при 14:01 ICT (afternoon, full energy). T+12h falls inside Ramiz sleep window (22:00 ICT → 07:00 ICT) — escalation auto-handoff к [AGENT 4] Telegram P0-only paging critical.
 
 ---
 
@@ -53,7 +72,7 @@ Walk this checklist top-to-bottom. **All must be ✅ before triggering §2 LAUNC
 | 1.12 | Tweet thread (3 follow-ups) drafted | Same | Ramiz |
 | 1.13 | Reddit post r/freelance drafted (text + headline) | Saved draft в Reddit OR comms folder | Ramiz |
 | 1.14 | Email blast template ready (если list exists) | Resend campaign OR mailto template review | Ramiz |
-| 1.15 | ProductHunt Tuesday-launch scheduled | PH dashboard → Schedule for Tuesday confirms | Ramiz |
+| 1.15 | ProductHunt scheduled for **Tue 2026-05-26 12:01 AM PDT** (= Tue 14:01 ICT local) | PH dashboard → Schedule confirms exact slot 12:01 AM PT Tuesday | Ramiz |
 | 1.16 | Status-page (если есть) shows "All Systems Operational" | <https://status.lancerwise.com> OR Twitter pinned "Status: ✅" tweet | Ramiz |
 
 ### Pre-flight verification
@@ -163,6 +182,59 @@ After each step, record в `audit/agent1-launch-runbook-2026-05-23/T0-LOG.md`:
 
 ---
 
+## §2.5 — Discrete checkpoint actions (Gap #4 closure)
+
+Hourly cadence в §3 is the steady-state. These are **discrete checkpoint moments** с specific actionable items.
+
+### T-1h (Tue 13:01 ICT / 06:01 UTC / Mon 23:01 PDT)
+
+**Goal:** ready operator + frozen production state before launch fires.
+
+- [ ] **Branch freeze:** `git tag launch-2026-05-26 main; git push --tags` — creates restore point если rollback needed
+- [ ] **Final smoke F12-F20** per `audit/agent1-pre-launch-smoke/SMOKE-TESTING-PROTOCOL.md` (~10 min)
+- [ ] **CI green confirm:** all main-branch gates passed (eslint i18n, locale-purity-ru, visual-regression, Vercel deploy)
+- [ ] **Sentry baseline snapshot:** capture error count / event rate for "last 1h" — establishes "before-launch" reference
+- [ ] **ProductHunt dashboard:** confirm submission scheduled exactly при 12:01 AM PDT slot
+- [ ] **Phone notifications:** silence everything EXCEPT Telegram + Sentry critical alerts
+- [ ] **Tea/coffee + 5-min walk** — calm operator before T-0. Not joke — bad-mood launches are bad launches.
+- [ ] **Tabs open:** Sentry / Vercel / Vercel Analytics / Supabase / LemonSqueezy / PH submission / Twitter / Telegram — 8 tabs total
+
+### T+4h (Tue 18:01 ICT / 11:01 UTC / Tue 04:01 PDT)
+
+**Goal:** first-wave US East Coast assessment + Asia evening signal.
+
+- [ ] **PH traction snapshot:** upvote count, rank, comment count. Target T+4h ≥ top-30 (если top-30+ — fine; if not ranked, see PH throttle playbook в `ANNOUNCEMENT-DRAFT.md`)
+- [ ] **Sentry rolling-1h vs T+0 baseline:** error rate trending up >50% → investigate; flat/down → healthy
+- [ ] **First-wave signups:** Supabase `auth.users` count delta vs T+0 — meaningful targets in §7 metrics dashboard
+- [ ] **Twitter mentions check:** Twitter Search → `@lancerwise OR "lancerwise.com"` last 4h — reply к organic mentions
+- [ ] **Reply к top-3 PH comments + top-3 Reddit comments** (personal engagement scoring on both platforms)
+- [ ] **LemonSqueezy webhook count:** confirm no silent webhook failures (Sales tab → "all webhook attempts" filter)
+- [ ] **Vercel deploy stability:** still single READY deploy, no mid-day rebuilds fired
+
+### T+12h (Wed 02:01 ICT / Tue 19:01 UTC / Tue 12:01 PDT)
+
+**⚠️ CRITICAL OVERNIGHT HANDOFF — Ramiz sleep window 22:00-07:00 ICT**
+
+US Pacific noon = peak US activity. Most signups happen во время Ramiz sleep. Pre-arrange handoff before going к bed.
+
+- [ ] **Before bed (T+8h ≈ Tue 22:00 ICT):** Sentry triage final-of-day snapshot. Last "hands-on" check.
+- [ ] **Telegram-only paging configured:** [AGENT 4] auto-watch fires Telegram только для P0 (not P1/P2). Avoid waking on minor noise.
+- [ ] **Pre-arranged P0 wakeup criteria:**
+  - 5xx rate > 5% sustained 5min (Sentry / Vercel)
+  - Vercel deploy ERROR state (auto-redeploy fail)
+  - LemonSqueezy webhook 5xx
+  - Supabase database unreachable
+  - Sentry MIDDLEWARE_INVOCATION_FAILED (#147 regression class)
+- [ ] **Phone bedside, ringer on, Telegram pings allowed through Do Not Disturb**
+- [ ] **Backup operator option:** if Ramiz has а trusted second человека available, hand off Telegram + Sentry access for а 4-6h overnight window
+- [ ] **Wake-up auto-check at 06:30 ICT:** before alarm, glance Telegram для any overnight P0 surfaces. If clean, sleep peacefully through 07:00 ICT.
+
+### T+24h handoff к §3 hourly cadence
+
+T+24h (Wed 14:01 ICT) — see existing §3 + `RUNBOOK.md §D` для p95 re-check + error rate baseline. Discrete checkpoint structure relaxes к steady-state hourly monitoring.
+
+---
+
 ## §3 — T+1h к T+24h MONITORING
 
 ### Hourly cadence (T+1h, T+2h, T+3h, ...)
@@ -212,6 +284,9 @@ After each step, record в `audit/agent1-launch-runbook-2026-05-23/T0-LOG.md`:
 | New `MIDDLEWARE_INVOCATION_FAILED` not in our known list | P1 | Investigate stack — could be Path F regression. |
 | New `Invalid UTF-8 sequence` Upstash | P2 | LW-B class — defensive wrap shipped via PR #185 should handle. Verify fail-open path. |
 | Slow `/api/*` (p95 > 5s) | P2 | Profile + investigate. Not blocking. |
+| **Supabase: `auth.signup` 429 OR rate-limit warning visible** | **P1** | **Free-tier auth rate limit hit. Run §4 P1.2 Supabase rate-limit playbook.** |
+| **Supabase: Auth user-insert errors in logs (`auth.users` write failing)** | **P0** | **Database write path broken. Connection pool OR RLS regression. Run §4 P0 rollback playbook.** |
+| **Supabase: Realtime / Postgres connection count >80% pool capacity** | **P1** | **Connection pool exhaustion imminent. Investigate connection leaks; consider tier upgrade.** |
 
 ### Triage SLA
 
@@ -313,6 +388,68 @@ vercel inspect <new-prod-deploy-url>
 - Reply к affected users individually на Twitter/email — acknowledge + thank
 - DO NOT make а public broadcast announcement unless >10 users affected (over-announcing erodes trust)
 - Update status page если broadcasted earlier
+
+### P1.2 — Supabase rate-limit hit (signup throttling)
+
+**Symptoms:**
+- Sentry shows `auth.signup` returning 429 OR clustered `rate_limit_exceeded` errors
+- Twitter / Reddit / PH comments report "I can't sign up — getting an error"
+- Supabase Dashboard → Auth → Logs shows rate-limit deny events
+
+**Detection signals (Supabase Dashboard):**
+
+```
+https://supabase.com/dashboard/project/skfgwyzarrhhkzvltbgm/auth/users
+→ Right-pane Auth log shows rate-limit events
+https://supabase.com/dashboard/project/skfgwyzarrhhkzvltbgm/reports/database
+→ Connection pool usage graph
+```
+
+**Triage (~3 min):**
+
+1. Open Supabase Dashboard → Settings → Auth → Rate Limits — note current values (free tier: ~30 emails/hr, 5 sign-ups/IP/hr default)
+2. Auth → Logs → filter "rate_limit" — confirm scope (per-IP burst vs global ceiling)
+3. Sentry → check `/api/auth/signup` error timeline last 30 min vs T-1h baseline
+
+**Mitigation options (pick fastest viable):**
+
+#### A. Wait it out (per-IP burst — most common)
+
+- Default per-IP signup limit refills hourly
+- Affected users wait 15-60 min, then succeed
+- **Communication:** post Twitter holding pattern: "Some users hitting our signup rate limit due к traffic burst — bucket refills automatically в an hour. Apologies для inconvenience."
+- ✅ Zero-risk, no infra change
+
+#### B. Tier upgrade (если global limit hit)
+
+- Supabase Pro tier $25/mo has 10× rate-limit ceiling
+- Upgrade live в Dashboard → Billing → Pro plan
+- No downtime — upgrade takes effect immediately
+- **Trade-off:** $25 month-1 cost vs not delaying launch momentum
+
+#### C. Manual signup workaround (для specific users)
+
+- Если known affected user reports specifically (e.g., commenting on PH):
+- Use Supabase Admin `generate_link` к bypass rate limit для that user only
+- DM them direct signup link
+- Useful для VIPs / influencers / valued early users
+
+#### D. Disable signup temporarily (LAST RESORT — only if abuse OR runaway bot detected)
+
+- Set `enable_signup: false` via Supabase Management API
+- Post Twitter status: "Temporarily pausing new signups while investigating an issue — back в ~30 min"
+- Investigate, re-enable когда clean
+- ⚠️ This kills launch momentum; only use if abuse is real risk
+
+**Acceptance:** confirmed rate-limit no longer hit (Sentry `auth.signup` 429s drop к zero) + affected users successfully signed up.
+
+**Estimated mitigation time:**
+- Path A: 0 min (passive wait) + 15-60 min for users
+- Path B: ~5 min (Dashboard click) + immediate effect
+- Path C: ~10 min per affected user, manual
+- Path D: ~2 min disable + 30 min investigate + 2 min re-enable
+
+**Post-incident note:** if Path B (tier upgrade) used, file follow-up: Supabase upgrade financials в `audit/incidents/2026-05-26-supabase-tier-upgrade.md` для accounting.
 
 ### P2 — Broken secondary feature
 
