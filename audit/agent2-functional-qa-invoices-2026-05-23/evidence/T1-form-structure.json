@@ -1,0 +1,86 @@
+{
+  "url": "https://www.lancerwise.com/invoices/new",
+  "inputs": [],
+  "buttons": [
+    {
+      "text": "Money",
+      "type": "submit"
+    },
+    {
+      "text": "Clients",
+      "type": "submit"
+    },
+    {
+      "text": "Work",
+      "type": "submit"
+    },
+    {
+      "text": "Contracts",
+      "type": "submit"
+    },
+    {
+      "text": "Insights",
+      "type": "submit"
+    },
+    {
+      "text": "Shortcuts",
+      "type": "submit"
+    },
+    {
+      "text": "",
+      "type": "submit"
+    },
+    {
+      "text": "",
+      "type": "submit"
+    },
+    {
+      "text": "Search...\n⌘K",
+      "type": "button"
+    },
+    {
+      "text": "🇬🇧 EN",
+      "type": "button"
+    },
+    {
+      "text": "",
+      "type": "submit"
+    },
+    {
+      "text": "?",
+      "type": "submit"
+    },
+    {
+      "text": "",
+      "type": "submit"
+    },
+    {
+      "text": "",
+      "type": "button"
+    },
+    {
+      "text": "",
+      "type": "submit"
+    },
+    {
+      "text": "More",
+      "type": "submit"
+    },
+    {
+      "text": "Customize",
+      "type": "submit"
+    },
+    {
+      "text": "Accept All",
+      "type": "submit"
+    },
+    {
+      "text": "",
+      "type": "submit"
+    },
+    {
+      "text": "Customize",
+      "type": "submit"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "inputCount": 14,
+  "sample": [
+    {
+      "type": "text",
+      "placeholder": "",
+      "name": "",
+      "value": "INV-006",
+      "visible": true
+    },
+    {
+      "type": "date",
+      "placeholder": "",
+      "name": "",
+      "value": "2026-05-23",
+      "visible": true
+    },
+    {
+      "type": "date",
+      "placeholder": "",
+      "name": "",
+      "value": "2026-06-06",
+      "visible": true
+    },
+    {
+      "type": "text",
+      "placeholder": "Description",
+      "name": "",
+      "value": "",
+      "visible": true
+    },
+    {
+      "type": "number",
+      "placeholder": "Qty",
+      "name": "",
+      "value": "1",
+      "visible": true
+    },
+    {
+      "type": "number",
+      "placeholder": "Rate",
+      "name": "",
+      "value": "0",
+      "visible": true
+    },
+    {
+      "type": "text",
+      "placeholder": "Description",
+      "name": "",
+      "value": "",
+      "visible": true
+    },
+    {
+      "type": "number",
+      "placeholder": "Qty",
+      "name": "",
+      "value": "1",
+      "visible": true
+    },
+    {
+      "type": "number",
+      "placeholder": "Rate",
+      "name": "",
+      "value": "0",
+      "visible": true
+    },
+    {
+      "type": "text",
+      "placeholder": "Enter code",
+      "name": "",
+      "value": "",
+      "visible": true
+    },
+    {
+      "type": "number",
+      "placeholder": "0",
+      "name": "",
+      "value": "",
+      "visible": true
+    },
+    {
+      "type": "number",
+      "placeholder": "",
+      "name": "",
+      "value": "0",
+      "visible": true
+    },
+    {
+      "type": "textarea",
+      "placeholder": "Payment terms, thank you note...",
+      "name": "",
+      "value": "",
+      "visible": true
+    },
+    {
+      "type": "textarea",
+      "placeholder": "Bank transfer details, preferred payment method, etc.",
+      "name": "",
+      "value": "",
+      "visible": true
+    }
+  ]
+}

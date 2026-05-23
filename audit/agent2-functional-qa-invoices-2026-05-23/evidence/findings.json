@@ -1,0 +1,135 @@
+{
+  "tests": [
+    {
+      "name": "AUTH (magic link)",
+      "verdict": "PASS"
+    },
+    {
+      "name": "T1: line-item-fields-render",
+      "verdict": "RENDERS-OK",
+      "detail": "14 inputs visible"
+    },
+    {
+      "name": "T1: total-calc",
+      "verdict": "PASS",
+      "detail": "expected $600, got total=\"600\" subtotal=\"600\""
+    },
+    {
+      "name": "T1: invoice-created",
+      "verdict": "PASS",
+      "detail": "id=b311fe64-4662-4ff1-950c-c95399a254f4"
+    },
+    {
+      "name": "T1: persistence",
+      "verdict": "PASS",
+      "detail": "id found in list"
+    },
+    {
+      "name": "T2: edit-form-render",
+      "verdict": "RENDERS-OK",
+      "detail": "4 rate inputs, total=$600"
+    },
+    {
+      "name": "T2: total-recalc",
+      "verdict": "FAIL",
+      "detail": "expected $1400, got $1,400"
+    },
+    {
+      "name": "T2: edit-persistence",
+      "verdict": "FAIL",
+      "detail": "persisted total=$1,400"
+    },
+    {
+      "name": "T3: paid-status-transition",
+      "verdict": "PASS",
+      "detail": "{\"hasPaid\":true,\"hasReceived\":false,\"pageTitle\":\"LancerWise — Free Freelancer CRM, Invoices & AI Contracts\"}"
+    },
+    {
+      "name": "T4: delete-removes-from-list",
+      "verdict": "PASS",
+      "detail": "still present in list: false"
+    },
+    {
+      "name": "T5: export-pdf",
+      "verdict": "PARTIAL",
+      "note": "PDF button clicked but no download event fired in 15s"
+    },
+    {
+      "name": "T6: race-condition-not-zero",
+      "verdict": "PASS",
+      "detail": "total=$210 expected=$210, rateCount=6"
+    }
+  ],
+  "startedAt": "2026-05-23T12:28:01.889Z",
+  "createdInvoiceIds": [
+    "b311fe64-4662-4ff1-950c-c95399a254f4"
+  ],
+  "consoleErrors": [],
+  "networkErrors": [
+    "GET https://www.lancerwise.com/register?_rsc=5CB68i4pnAekjehf — net::ERR_ABORTED",
+    "GET https://www.lancerwise.com/register?_rsc=tXyZJ52UQVBCVsD3 — net::ERR_ABORTED",
+    "GET https://www.lancerwise.com/cookie-policy?_rsc=tXyZJ52UQVBCVsD3 — net::ERR_ABORTED",
+    "GET https://www.lancerwise.com/blog?_rsc=tXyZJ52UQVBCVsD3 — net::ERR_ABORTED",
+    "GET https://www.lancerwise.com/onboarding?_rsc=2Md0sTUZcnjCijMr — net::ERR_ABORTED",
+    "GET https://www.lancerwise.com/dashboard?_rsc=kO6ePcYrtMIGnt3p — net::ERR_ABORTED",
+    "GET https://www.lancerwise.com/notifications?_rsc=2aJYTFki0jf8MTAs — net::ERR_ABORTED",
+    "GET https://www.lancerwise.com/settings?_rsc=wQzGa_uxW6cljI_O — net::ERR_ABORTED",
+    "POST https://www.lancerwise.com/monitoring-tunnel?o=4511391751536640&p=4511391765954560&r=us — net::ERR_ABORTED",
+    "GET https://www.lancerwise.com/money/invoices?_rsc=EFxsQUzdEwPYobu_ — net::ERR_ABORTED",
+    "GET https://www.lancerwise.com/money/expenses?_rsc=eThPKSLHtvyBCxKg — net::ERR_ABORTED",
+    "GET https://www.lancerwise.com/money/invoices/recurring?_rsc=eThPKSLHtvyBCxKg — net::ERR_ABORTED",
+    "GET https://www.lancerwise.com/invoices/b311fe64-4662-4ff1-950c-c95399a254f4?_rsc=4aLlRi4OPez5IhCK — net::ERR_ABORTED",
+    "GET https://www.lancerwise.com/invoices/b311fe64-4662-4ff1-950c-c95399a254f4/edit?_rsc=_0K1KarmQdprN59y — net::ERR_ABORTED",
+    "POST https://www.lancerwise.com/monitoring-tunnel?o=4511391751536640&p=4511391765954560&r=us — net::ERR_ABORTED"
+  ],
+  "apiRequests": [
+    {
+      "method": "GET",
+      "url": "https://www.lancerwise.com/api/invoices/next-number",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/rest/v1/invoices?select=id",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "url": "https://www.lancerwise.com/api/invoices/next-number",
+      "status": 200
+    },
+    {
+      "method": "PATCH",
+      "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/rest/v1/invoices?id=eq.b311fe64-4662-4ff1-950c-c95399a254f4",
+      "status": 204
+    },
+    {
+      "method": "GET",
+      "url": "https://www.lancerwise.com/api/invoices/b311fe64-4662-4ff1-950c-c95399a254f4/installments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "https://www.lancerwise.com/api/invoices/b311fe64-4662-4ff1-950c-c95399a254f4/payments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/rest/v1/invoices?select=id%2Ctotal%2Ccurrency%2Csent_at%2Cdue_date%2Cstatus%2Cclients%28name%29&user_id=eq.a6cbdc12-c0f1-4adb-9255-ca6e9598fb9d&status=in.%28se",
+      "status": 200
+    }
+  ],
+  "consoleErrorsT2_T6": [],
+  "apiActsT2_T6": [
+    {
+      "method": "PATCH",
+      "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/rest/v1/invoices?id=eq.b311fe64-4662-4ff1-950c-c95399a254f4",
+      "status": 204
+    },
+    {
+      "method": "DELETE",
+      "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/rest/v1/invoices?id=eq.b311fe64-4662-4ff1-950c-c95399a254f4",
+      "status": 204
+    }
+  ]
+}
