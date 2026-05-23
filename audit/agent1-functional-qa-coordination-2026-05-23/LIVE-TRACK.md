@@ -48,8 +48,39 @@ Polling cadence: T+15 / T+30 / T+45 / T+60 min ticks. Updates appended below.
 - All 5 agents в-flight per #206 assignment
 - [AGENT 1] coordination role armed
 
-### T+15 (TBD)
-*(awaiting poll)*
+### T+15 (10:49 UTC) — [AGENT 3] surfaced FIRST
+
+**RESULT.md:** [`audit/agent3-functional-qa-projects-clients-2026-05-23/RESULT.md`](../agent3-functional-qa-projects-clients-2026-05-23/RESULT.md) (195 lines)
+
+**Verdict:** Projects + Clients CRUD — **functional path works** (POST 201, DB persist verified end-to-end after create + delete cycle на test project). 🚨 BUT systematic root-cause bug identified.
+
+**Critical finding — `#205` root cause uncovered:**
+
+The "Project Title input не принимает ввод" bug is **NOT** а React-state OR focus problem. It's а **CSS text-color contrast bug**:
+- Input text rendered с `color: rgb(23, 23, 23)` (near-black)
+- On dark-theme background `rgb(2, 6, 23)` text becomes а faint ghost outline
+- DOM value updates correctly + API submits succeed
+- User-perceived bug: "I can't type." Actual bug: "I can't see what I type."
+
+**Systematic** — same color bug confirmed на `/clients/new` Full Name input. Likely shared `<Input>` primitive component. 1-component CSS fix propagates к all forms.
+
+**[AGENT 3] severity reassessment:** #205 P0 → P1 (DOM works, submit works, visual contrast fails). Still pre-launch fix-required.
+
+**[AGENT 3] explicit recommendations к [AGENT 1]:**
+1. Update #205 с root-cause analysis (CSS not React state)
+2. File NEW issue: "Systematic form input text color bug — typed text invisible on dark theme"
+3. Fix scope ~5-15 min CSS change в shared `<Input>` component
+
+**Steps NOT exercised (require Ramiz approval — would mutate production):**
+- Edit project / Status change / Delete project
+- Edit client / Delete client
+
+**Status update queue:**
+- ✅ [AGENT 3] Projects+Clients — surfaced, 1 P1 systematic bug
+- ⏳ [AGENT 2] Invoices — pending
+- ⏳ [AGENT 4] Time tracking + Tasks — pending
+- ⏳ [AGENT 5] Contracts + Settings — pending
+- ⏳ [AGENT 6] Analytics + Notifications + Auth — pending
 
 ### T+30 (TBD)
 *(awaiting poll)*
