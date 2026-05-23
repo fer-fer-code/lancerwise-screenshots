@@ -1,0 +1,325 @@
+[
+  {
+    "slug": "analytics-forecast",
+    "finalUrl": "https://www.lancerwise.com/analytics/forecast",
+    "issues": [
+      "GRADIENT BTN: 2 gradient buttons on non-exception route",
+      "  - '2:41:21' cls=fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 pl-3 pr-1.5 py-1.5 ro",
+      "  - '' cls=w-14 h-14 rounded-full flex items-center justify-center text-white transition-al"
+    ],
+    "pass": {
+      "css_var_canvas_defined": true,
+      "canvas": true,
+      "sidebar_surface": true,
+      "header_surface": true,
+      "cards": true
+    },
+    "hardcoded_total": 29,
+    "hardcoded_breakdown": [
+      "bg-slate-=3",
+      "text-slate-=10",
+      "bg-violet-=1",
+      "text-white=6",
+      "from-violet=3",
+      "via-purple=3",
+      "to-pink=3"
+    ]
+  },
+  {
+    "slug": "clients",
+    "finalUrl": "https://www.lancerwise.com/clients",
+    "issues": [
+      "GRADIENT BTN: 2 gradient buttons on non-exception route",
+      "  - '2:39:03' cls=fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 pl-3 pr-1.5 py-1.5 ro",
+      "  - '' cls=w-14 h-14 rounded-full flex items-center justify-center text-white transition-al"
+    ],
+    "pass": {
+      "css_var_canvas_defined": true,
+      "canvas": true,
+      "sidebar_surface": true,
+      "header_surface": true,
+      "cards": true
+    },
+    "hardcoded_total": 108,
+    "hardcoded_breakdown": [
+      "bg-slate-=5",
+      "text-slate-=59",
+      "bg-violet-=11",
+      "border-violet-=4",
+      "text-white=20",
+      "from-violet=3",
+      "via-purple=3",
+      "to-pink=3"
+    ]
+  },
+  {
+    "slug": "dashboard",
+    "finalUrl": "https://www.lancerwise.com/dashboard",
+    "issues": [],
+    "pass": {
+      "css_var_canvas_defined": true,
+      "canvas": true,
+      "sidebar_surface": true,
+      "header_surface": true,
+      "cards": true,
+      "gradient_btns_allowed": "1 (allowed)"
+    },
+    "hardcoded_total": 41,
+    "hardcoded_breakdown": [
+      "bg-slate-=8",
+      "border-slate-=1",
+      "text-slate-=16",
+      "bg-violet-=1",
+      "text-white=9",
+      "from-violet=2",
+      "via-purple=2",
+      "to-pink=2"
+    ]
+  },
+  {
+    "slug": "invoices",
+    "finalUrl": "https://www.lancerwise.com/invoices",
+    "issues": [
+      "GRADIENT BTN: 2 gradient buttons on non-exception route",
+      "  - '2:40:14' cls=fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 pl-3 pr-1.5 py-1.5 ro",
+      "  - '' cls=w-14 h-14 rounded-full flex items-center justify-center text-white transition-al"
+    ],
+    "pass": {
+      "css_var_canvas_defined": true,
+      "canvas": true,
+      "sidebar_surface": true,
+      "header_surface": true,
+      "cards": true
+    },
+    "hardcoded_total": 116,
+    "hardcoded_breakdown": [
+      "bg-slate-=14",
+      "border-slate-=8",
+      "text-slate-=66",
+      "bg-violet-=2",
+      "border-violet-=1",
+      "text-white=11",
+      "bg-gray-=5",
+      "from-violet=3",
+      "via-purple=3",
+      "to-pink=3"
+    ]
+  },
+  {
+    "slug": "landing",
+    "finalUrl": "https://www.lancerwise.com/",
+    "issues": [],
+    "pass": {
+      "css_var_canvas_defined": true,
+      "canvas": true,
+      "cards": true,
+      "gradient_btns_allowed": "2 (allowed)"
+    },
+    "hardcoded_total": 335,
+    "hardcoded_breakdown": [
+      "bg-slate-=52",
+      "border-slate-=40",
+      "text-slate-=154",
+      "bg-violet-=35",
+      "border-violet-=14",
+      "text-white=30",
+      "from-violet=4",
+      "via-purple=3",
+      "to-pink=3"
+    ]
+  },
+  {
+    "slug": "login",
+    "finalUrl": "https://www.lancerwise.com/dashboard",
+    "issues": [
+      "GRADIENT BTN: 1 gradient buttons on non-exception route",
+      "  - '' cls=w-14 h-14 rounded-full flex items-center justify-center text-white transition-al"
+    ],
+    "pass": {
+      "css_var_canvas_defined": true,
+      "canvas": true,
+      "sidebar_surface": true,
+      "header_surface": true,
+      "cards": true
+    },
+    "hardcoded_total": 41,
+    "hardcoded_breakdown": [
+      "bg-slate-=8",
+      "border-slate-=1",
+      "text-slate-=16",
+      "bg-violet-=1",
+      "text-white=9",
+      "from-violet=2",
+      "via-purple=2",
+      "to-pink=2"
+    ]
+  },
+  {
+    "slug": "pricing",
+    "finalUrl": "https://www.lancerwise.com/pricing",
+    "issues": [
+      "CARD: card '\u0421\u0430\u043c\u044b\u0439 \u043f\u043e\u043f\u0443\u043b\u044f\u0440\u043d\u044b\u0439Pro$15/\u043c\u0435\u0441\u0414\u043b\u044f ' gradient on non-allowed route (linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(36.1758 69.)",
+      "GRADIENT BTN: 1 gradient buttons on non-exception route",
+      "  - '\u041d\u0430\u0447\u0430\u0442\u044c' cls=bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-5"
+    ],
+    "pass": {
+      "css_var_canvas_defined": true,
+      "canvas": true
+    },
+    "hardcoded_total": 103,
+    "hardcoded_breakdown": [
+      "bg-slate-=8",
+      "border-slate-=8",
+      "text-slate-=60",
+      "bg-violet-=6",
+      "border-violet-=1",
+      "text-white=16",
+      "from-violet=2",
+      "via-purple=1",
+      "to-pink=1"
+    ]
+  },
+  {
+    "slug": "projects",
+    "finalUrl": "https://www.lancerwise.com/projects",
+    "issues": [
+      "GRADIENT BTN: 2 gradient buttons on non-exception route",
+      "  - '2:39:47' cls=fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 pl-3 pr-1.5 py-1.5 ro",
+      "  - '' cls=w-14 h-14 rounded-full flex items-center justify-center text-white transition-al"
+    ],
+    "pass": {
+      "css_var_canvas_defined": true,
+      "canvas": true,
+      "sidebar_surface": true,
+      "header_surface": true,
+      "cards": true
+    },
+    "hardcoded_total": 87,
+    "hardcoded_breakdown": [
+      "bg-slate-=10",
+      "border-slate-=11",
+      "text-slate-=41",
+      "bg-violet-=3",
+      "border-violet-=1",
+      "text-white=12",
+      "from-violet=3",
+      "via-purple=3",
+      "to-pink=3"
+    ]
+  },
+  {
+    "slug": "settings",
+    "finalUrl": "https://www.lancerwise.com/settings",
+    "issues": [
+      "GRADIENT BTN: 28 gradient buttons on non-exception route",
+      "  - '2:41:34' cls=fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 pl-3 pr-1.5 py-1.5 ro",
+      "  - 'Upload Logo' cls=flex items-center gap-2 text-sm font-medium text-white bg-gradient-to-br from-vi",
+      "  - 'Save Branding' cls=flex items-center gap-2 bg-gradient-to-br from-violet-600 via-purple-500 to-pink",
+      "PRIMARY BTN: 'Save Branding' has gradient on non-exception route",
+      "PRIMARY BTN: 'Save Portal Branding' has gradient on non-exception route",
+      "PRIMARY BTN: '\u0421\u043e\u0445\u0440\u0430\u043d\u0438\u0442\u044c \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438' has gradient on non-exception route"
+    ],
+    "pass": {
+      "css_var_canvas_defined": true,
+      "canvas": true,
+      "sidebar_surface": true,
+      "header_surface": true,
+      "cards": true
+    },
+    "hardcoded_total": 1395,
+    "hardcoded_breakdown": [
+      "bg-slate-=287",
+      "border-slate-=208",
+      "text-slate-=632",
+      "bg-violet-=110",
+      "border-violet-=26",
+      "text-white=43",
+      "from-violet=29",
+      "via-purple=29",
+      "to-pink=29",
+      "bg-purple-=2"
+    ]
+  },
+  {
+    "slug": "tasks",
+    "finalUrl": "https://www.lancerwise.com/tasks",
+    "issues": [
+      "GRADIENT BTN: 2 gradient buttons on non-exception route",
+      "  - '2:41:02' cls=fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 pl-3 pr-1.5 py-1.5 ro",
+      "  - '' cls=w-14 h-14 rounded-full flex items-center justify-center text-white transition-al"
+    ],
+    "pass": {
+      "css_var_canvas_defined": true,
+      "canvas": true,
+      "sidebar_surface": true,
+      "header_surface": true,
+      "cards": true
+    },
+    "hardcoded_total": 58,
+    "hardcoded_breakdown": [
+      "bg-slate-=9",
+      "border-slate-=6",
+      "text-slate-=23",
+      "bg-violet-=2",
+      "text-white=7",
+      "border-gray-=2",
+      "from-violet=3",
+      "via-purple=3",
+      "to-pink=3"
+    ]
+  },
+  {
+    "slug": "upgrade",
+    "finalUrl": "https://www.lancerwise.com/upgrade",
+    "issues": [],
+    "pass": {
+      "css_var_canvas_defined": true,
+      "canvas": true,
+      "sidebar_surface": true,
+      "header_surface": true,
+      "cards": true,
+      "gradient_btns_allowed": "1 (allowed)"
+    },
+    "hardcoded_total": 72,
+    "hardcoded_breakdown": [
+      "bg-slate-=8",
+      "border-slate-=3",
+      "text-slate-=43",
+      "bg-violet-=4",
+      "border-violet-=1",
+      "text-white=7",
+      "from-violet=2",
+      "via-purple=2",
+      "to-pink=2"
+    ]
+  },
+  {
+    "slug": "work-time",
+    "finalUrl": "https://www.lancerwise.com/work/time",
+    "issues": [
+      "GRADIENT BTN: 5 gradient buttons on non-exception route",
+      "  - 'Start' cls=flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-white transition",
+      "  - '' cls=flex items-center gap-1 bg-gradient-to-br from-violet-600 via-purple-500 to-pink",
+      "  - 'Start' cls=flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold text-white "
+    ],
+    "pass": {
+      "css_var_canvas_defined": true,
+      "canvas": true,
+      "sidebar_surface": true,
+      "header_surface": true,
+      "cards": true
+    },
+    "hardcoded_total": 461,
+    "hardcoded_breakdown": [
+      "bg-slate-=108",
+      "border-slate-=89",
+      "text-slate-=209",
+      "bg-violet-=13",
+      "border-violet-=5",
+      "text-white=19",
+      "from-violet=6",
+      "via-purple=6",
+      "to-pink=6"
+    ]
+  }
+]

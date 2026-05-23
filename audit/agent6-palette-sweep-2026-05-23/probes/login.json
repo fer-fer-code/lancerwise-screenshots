@@ -1,0 +1,258 @@
+{
+  "url": "https://www.lancerwise.com/dashboard",
+  "timestamp": "2026-05-23T13:01:57.112Z",
+  "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+  "cssVars": {
+    "--canvas": "#0b0b12",
+    "--surface": "#11111a",
+    "--card": "#15151f",
+    "--elevated": "#1b1b26",
+    "--accent-primary": "#6a5ae0",
+    "--text-primary": "#f4f4f6",
+    "--text-secondary": "#a0a0ae",
+    "--text-muted": "#6b6b7b",
+    "--border-subtle": "#ffffff0f",
+    "--border": "#ffffff14",
+    "--border-strong": "#ffffff1a"
+  },
+  "body": {
+    "selector": "body",
+    "found": true,
+    "backgroundColor": "rgb(10, 10, 10)",
+    "backgroundImage": "none",
+    "color": "rgb(237, 237, 237)",
+    "borderColor": "rgb(237, 237, 237)"
+  },
+  "html": {
+    "selector": "html",
+    "found": true,
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "none",
+    "color": "rgb(255, 255, 255)",
+    "borderColor": "rgb(255, 255, 255)"
+  },
+  "main": {
+    "selector": "main",
+    "found": true,
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "none",
+    "color": "rgb(226, 232, 240)",
+    "borderColor": "rgb(226, 232, 240)"
+  },
+  "sidebar": {
+    "selector": "[data-sidebar], aside, nav[class*=\"sidebar\"]",
+    "found": true,
+    "backgroundColor": "rgb(17, 17, 26)",
+    "backgroundImage": "none",
+    "color": "rgb(237, 237, 237)",
+    "borderColor": "rgba(255, 255, 255, 0.06)"
+  },
+  "header": {
+    "selector": "header",
+    "found": true,
+    "backgroundColor": "rgb(17, 17, 26)",
+    "backgroundImage": "none",
+    "color": "rgb(237, 237, 237)",
+    "borderColor": "rgba(255, 255, 255, 0.06)"
+  },
+  "cards": [
+    {
+      "tag": "button",
+      "cls": "hidden sm:flex items-center gap-2 w-56 bg-card border border-subtle hover:border-strong rounded-lg px-3 py-2 min-h-[44px] transition-colors",
+      "text": "Поиск...⌘K",
+      "backgroundColor": "rgb(21, 21, 31)",
+      "backgroundImage": "none",
+      "color": "rgb(237, 237, 237)",
+      "borderColor": "rgba(255, 255, 255, 0.06)",
+      "borderTopColor": "rgba(255, 255, 255, 0.06)"
+    },
+    {
+      "tag": "button",
+      "cls": "hidden md:flex w-7 h-7 rounded-md border border-strong items-center justify-center text-text-muted hover:text-text-secondary text-xs font-semibold hover:bg-elevated transition-colors",
+      "text": "?",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgba(255, 255, 255, 0.1)",
+      "borderTopColor": "rgba(255, 255, 255, 0.1)"
+    },
+    {
+      "tag": "div",
+      "cls": "relative overflow-hidden rounded-xl border border-line px-5 sm:px-6 py-4 sm:py-4",
+      "text": "Добрый вечер, RamizSaturday, May 23, 2026",
+      "backgroundColor": "rgb(20, 16, 30)",
+      "backgroundImage": "radial-gradient(70% 60% at 12% 10%, rgba(124, 58, 237, 0.3) 0%, rgba(0, 0, 0, 0) 60%), radial-gradient(50% 60% at 90% 30%, rgba(236, 72, 153, 0.18) 0%, rgba(0, 0, 0, 0) 55%), none",
+      "color": "rgb(226, 232, 240)",
+      "borderColor": "rgba(255, 255, 255, 0.08)",
+      "borderTopColor": "rgba(255, 255, 255, 0.08)"
+    },
+    {
+      "tag": "div",
+      "cls": "w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white/8 backdrop-blur-sm border border-white/10 flex items-center justify-center flex-shrink-0",
+      "text": "",
+      "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.08)",
+      "backgroundImage": "none",
+      "color": "rgb(226, 232, 240)",
+      "borderColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+      "borderTopColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)"
+    },
+    {
+      "tag": "div",
+      "cls": "bg-card border border-subtle rounded-xl px-6 py-5 text-white h-20 opacity-50",
+      "text": "",
+      "backgroundColor": "rgb(21, 21, 31)",
+      "backgroundImage": "none",
+      "color": "rgb(255, 255, 255)",
+      "borderColor": "rgba(255, 255, 255, 0.06)",
+      "borderTopColor": "rgba(255, 255, 255, 0.06)"
+    },
+    {
+      "tag": "div",
+      "cls": "bg-slate-800/50 border border-slate-700 rounded-xl p-5 animate-pulse",
+      "text": "",
+      "backgroundColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.5)",
+      "backgroundImage": "none",
+      "color": "rgb(226, 232, 240)",
+      "borderColor": "lab(26.9569 -1.47016 -15.6993)",
+      "borderTopColor": "lab(26.9569 -1.47016 -15.6993)"
+    },
+    {
+      "tag": "div",
+      "cls": "bg-card border border-subtle rounded-xl px-6 py-5 text-slate-100 mb-4 h-[120px] opacity-50 animate-pulse",
+      "text": "",
+      "backgroundColor": "rgb(21, 21, 31)",
+      "backgroundImage": "none",
+      "color": "lab(96.286 -0.852436 -2.46847)",
+      "borderColor": "rgba(255, 255, 255, 0.06)",
+      "borderTopColor": "rgba(255, 255, 255, 0.06)"
+    },
+    {
+      "tag": "div",
+      "cls": "bg-card border border-subtle rounded-xl px-6 py-5 text-slate-100 mb-4 h-[120px] opacity-50 animate-pulse",
+      "text": "",
+      "backgroundColor": "rgb(21, 21, 31)",
+      "backgroundImage": "none",
+      "color": "lab(96.286 -0.852436 -2.46847)",
+      "borderColor": "rgba(255, 255, 255, 0.06)",
+      "borderTopColor": "rgba(255, 255, 255, 0.06)"
+    }
+  ],
+  "headings": [
+    {
+      "tag": "h1",
+      "cls": "text-lg font-semibold text-text-primary",
+      "text": "Главная",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(244, 244, 246)",
+      "borderColor": "rgb(244, 244, 246)",
+      "borderTopColor": "rgb(244, 244, 246)"
+    },
+    {
+      "tag": "h2",
+      "cls": "text-base sm:text-lg font-semibold text-white leading-tight text-balance",
+      "text": "Добрый вечер, Ramiz",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(255, 255, 255)",
+      "borderTopColor": "rgb(255, 255, 255)"
+    }
+  ],
+  "paragraphs": [
+    {
+      "tag": "p",
+      "cls": "text-xs text-slate-400 mt-0.5",
+      "text": "Saturday, May 23, 2026",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(65.5349 -2.25151 -14.5072)",
+      "borderColor": "lab(65.5349 -2.25151 -14.5072)",
+      "borderTopColor": "lab(65.5349 -2.25151 -14.5072)"
+    }
+  ],
+  "captions": [
+    {
+      "tag": "button",
+      "cls": "text-xs text-text-muted hover:text-text-secondary transition-colors",
+      "text": "Горячие клавиши",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgb(107, 107, 123)",
+      "borderTopColor": "rgb(107, 107, 123)"
+    },
+    {
+      "tag": "kbd",
+      "cls": "hidden lg:block text-xs text-text-muted bg-white/5 border border-subtle px-1.5 py-0.5 rounded font-mono flex-shrink-0",
+      "text": "⌘K",
+      "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgba(255, 255, 255, 0.06)",
+      "borderTopColor": "rgba(255, 255, 255, 0.06)"
+    },
+    {
+      "tag": "button",
+      "cls": "hidden md:flex w-7 h-7 rounded-md border border-strong items-center justify-center text-text-muted hover:text-text-secondary text-xs font-semibold hover:bg-elevated transition-colors",
+      "text": "?",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgba(255, 255, 255, 0.1)",
+      "borderTopColor": "rgba(255, 255, 255, 0.1)"
+    },
+    {
+      "tag": "button",
+      "cls": "relative w-11 h-11 rounded-full bg-violet-900/20 flex items-center justify-center text-violet-400 font-semibold text-xs overflow-hidden hover:ring-2 hover:ring-violet-500/50 transition-all",
+      "text": "",
+      "backgroundColor": "oklab(0.379994 0.0760902 -0.172985 / 0.2)",
+      "backgroundImage": "none",
+      "color": "lab(62.8239 34.9159 -60.0512)",
+      "borderColor": "lab(62.8239 34.9159 -60.0512)",
+      "borderTopColor": "lab(62.8239 34.9159 -60.0512)"
+    },
+    {
+      "tag": "p",
+      "cls": "text-xs text-slate-400 mt-0.5",
+      "text": "Saturday, May 23, 2026",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(65.5349 -2.25151 -14.5072)",
+      "borderColor": "lab(65.5349 -2.25151 -14.5072)",
+      "borderTopColor": "lab(65.5349 -2.25151 -14.5072)"
+    }
+  ],
+  "primaryButtons": [],
+  "gradientButtons": [
+    {
+      "tag": "button",
+      "cls": "w-14 h-14 rounded-full flex items-center justify-center text-white transition-all duration-150 active:scale-[0.95] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400/60 focu",
+      "text": "",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    }
+  ],
+  "hardcodedClassCounts": {
+    "[class*=\"bg-slate-\"]": 8,
+    "[class*=\"border-slate-\"]": 1,
+    "[class*=\"text-slate-\"]": 16,
+    "[class*=\"bg-violet-\"]": 1,
+    "[class*=\"border-violet-\"]": 0,
+    "[class*=\"text-white\"]": 9,
+    "[class*=\"bg-gray-\"]": 0,
+    "[class*=\"border-gray-\"]": 0,
+    "[class*=\"from-violet\"]": 2,
+    "[class*=\"via-purple\"]": 2,
+    "[class*=\"to-pink\"]": 2,
+    "[class*=\"from-purple\"]": 0,
+    "[class*=\"bg-purple-\"]": 0
+  },
+  "bodyClass": "inter_5972bc34-module__OU16Qa__className h-full antialiased",
+  "htmlClass": "h-full dark",
+  "routeSlug": "login",
+  "routeUrl": "https://www.lancerwise.com/login",
+  "finalUrl": "https://www.lancerwise.com/dashboard",
+  "redirected": true
+}

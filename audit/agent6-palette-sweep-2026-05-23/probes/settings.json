@@ -1,0 +1,617 @@
+{
+  "url": "https://www.lancerwise.com/settings",
+  "timestamp": "2026-05-23T13:05:25.457Z",
+  "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+  "cssVars": {
+    "--canvas": "#0b0b12",
+    "--surface": "#11111a",
+    "--card": "#15151f",
+    "--elevated": "#1b1b26",
+    "--accent-primary": "#6a5ae0",
+    "--text-primary": "#f4f4f6",
+    "--text-secondary": "#a0a0ae",
+    "--text-muted": "#6b6b7b",
+    "--border-subtle": "#ffffff0f",
+    "--border": "#ffffff14",
+    "--border-strong": "#ffffff1a"
+  },
+  "body": {
+    "selector": "body",
+    "found": true,
+    "backgroundColor": "rgb(10, 10, 10)",
+    "backgroundImage": "none",
+    "color": "rgb(237, 237, 237)",
+    "borderColor": "rgb(237, 237, 237)"
+  },
+  "html": {
+    "selector": "html",
+    "found": true,
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "none",
+    "color": "rgb(255, 255, 255)",
+    "borderColor": "rgb(255, 255, 255)"
+  },
+  "main": {
+    "selector": "main",
+    "found": true,
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "none",
+    "color": "rgb(226, 232, 240)",
+    "borderColor": "rgb(226, 232, 240)"
+  },
+  "sidebar": {
+    "selector": "[data-sidebar], aside, nav[class*=\"sidebar\"]",
+    "found": true,
+    "backgroundColor": "rgb(17, 17, 26)",
+    "backgroundImage": "none",
+    "color": "rgb(237, 237, 237)",
+    "borderColor": "rgba(255, 255, 255, 0.06)"
+  },
+  "header": {
+    "selector": "header",
+    "found": true,
+    "backgroundColor": "rgb(17, 17, 26)",
+    "backgroundImage": "none",
+    "color": "rgb(237, 237, 237)",
+    "borderColor": "rgba(255, 255, 255, 0.06)"
+  },
+  "cards": [
+    {
+      "tag": "button",
+      "cls": "hidden sm:flex items-center gap-2 w-56 bg-card border border-subtle hover:border-strong rounded-lg px-3 py-2 min-h-[44px] transition-colors",
+      "text": "Поиск...⌘K",
+      "backgroundColor": "rgb(21, 21, 31)",
+      "backgroundImage": "none",
+      "color": "rgb(237, 237, 237)",
+      "borderColor": "rgba(255, 255, 255, 0.06)",
+      "borderTopColor": "rgba(255, 255, 255, 0.06)"
+    },
+    {
+      "tag": "button",
+      "cls": "hidden md:flex w-7 h-7 rounded-md border border-strong items-center justify-center text-text-muted hover:text-text-secondary text-xs font-semibold hover:bg-elevated transition-colors",
+      "text": "?",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgba(255, 255, 255, 0.1)",
+      "borderTopColor": "rgba(255, 255, 255, 0.1)"
+    },
+    {
+      "tag": "div",
+      "cls": "bg-slate-800/50 rounded-xl border border-slate-700 p-6",
+      "text": "ПрофильProfile PhotoJPG, PNG or WebPПолное имяEmailEmail нел",
+      "backgroundColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.5)",
+      "backgroundImage": "none",
+      "color": "rgb(226, 232, 240)",
+      "borderColor": "lab(26.9569 -1.47016 -15.6993)",
+      "borderTopColor": "lab(26.9569 -1.47016 -15.6993)"
+    },
+    {
+      "tag": "input",
+      "cls": "w-full border border-slate-700 rounded-lg px-4 py-2.5 text-sm bg-slate-900 text-slate-100 placeholder-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40",
+      "text": "",
+      "backgroundColor": "lab(7.78673 1.82345 -15.0537)",
+      "backgroundImage": "none",
+      "color": "rgb(226, 232, 240)",
+      "borderColor": "lab(26.9569 -1.47016 -15.6993)",
+      "borderTopColor": "lab(26.9569 -1.47016 -15.6993)"
+    },
+    {
+      "tag": "input",
+      "cls": "w-full border border-slate-700 rounded-lg px-4 py-2.5 text-sm bg-slate-900/50 text-slate-500 cursor-not-allowed min-h-[44px]",
+      "text": "",
+      "backgroundColor": "oklab(0.207998 -0.00311187 -0.0418783 / 0.5)",
+      "backgroundImage": "none",
+      "color": "rgb(226, 232, 240)",
+      "borderColor": "lab(26.9569 -1.47016 -15.6993)",
+      "borderTopColor": "lab(26.9569 -1.47016 -15.6993)"
+    },
+    {
+      "tag": "div",
+      "cls": "bg-slate-800/50 rounded-xl border border-slate-700 p-6",
+      "text": "Внешний видВыберите цветовую темуСистемная (авто)СветлаяСкор",
+      "backgroundColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.5)",
+      "backgroundImage": "none",
+      "color": "rgb(226, 232, 240)",
+      "borderColor": "lab(26.9569 -1.47016 -15.6993)",
+      "borderTopColor": "lab(26.9569 -1.47016 -15.6993)"
+    },
+    {
+      "tag": "label",
+      "cls": "flex items-center gap-3 p-3 rounded-lg border border-slate-700 transition-colors hover:bg-slate-700/50 cursor-pointer",
+      "text": "Системная (авто)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(226, 232, 240)",
+      "borderColor": "lab(26.9569 -1.47016 -15.6993)",
+      "borderTopColor": "lab(26.9569 -1.47016 -15.6993)"
+    },
+    {
+      "tag": "label",
+      "cls": "flex items-center gap-3 p-3 rounded-lg border border-slate-700 transition-colors opacity-50 cursor-not-allowed",
+      "text": "СветлаяСкоро",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(226, 232, 240)",
+      "borderColor": "lab(26.9569 -1.47016 -15.6993)",
+      "borderTopColor": "lab(26.9569 -1.47016 -15.6993)"
+    }
+  ],
+  "headings": [
+    {
+      "tag": "h1",
+      "cls": "text-lg font-semibold text-text-primary",
+      "text": "Настройки",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(244, 244, 246)",
+      "borderColor": "rgb(244, 244, 246)",
+      "borderTopColor": "rgb(244, 244, 246)"
+    },
+    {
+      "tag": "h1",
+      "cls": "text-2xl font-bold text-slate-100",
+      "text": "Настройки",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(96.286 -0.852436 -2.46847)",
+      "borderColor": "lab(96.286 -0.852436 -2.46847)",
+      "borderTopColor": "lab(96.286 -0.852436 -2.46847)"
+    },
+    {
+      "tag": "h2",
+      "cls": "text-base font-semibold text-slate-100",
+      "text": "Профиль",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(96.286 -0.852436 -2.46847)",
+      "borderColor": "lab(96.286 -0.852436 -2.46847)",
+      "borderTopColor": "lab(96.286 -0.852436 -2.46847)"
+    },
+    {
+      "tag": "h2",
+      "cls": "text-base font-semibold text-slate-100",
+      "text": "Внешний вид",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(96.286 -0.852436 -2.46847)",
+      "borderColor": "lab(96.286 -0.852436 -2.46847)",
+      "borderTopColor": "lab(96.286 -0.852436 -2.46847)"
+    },
+    {
+      "tag": "h2",
+      "cls": "text-base font-semibold text-slate-100",
+      "text": "Invoice Branding",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(96.286 -0.852436 -2.46847)",
+      "borderColor": "lab(96.286 -0.852436 -2.46847)",
+      "borderTopColor": "lab(96.286 -0.852436 -2.46847)"
+    },
+    {
+      "tag": "h2",
+      "cls": "text-base font-semibold text-slate-100",
+      "text": "Client Portal Branding",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(96.286 -0.852436 -2.46847)",
+      "borderColor": "lab(96.286 -0.852436 -2.46847)",
+      "borderTopColor": "lab(96.286 -0.852436 -2.46847)"
+    }
+  ],
+  "paragraphs": [
+    {
+      "tag": "p",
+      "cls": "text-sm font-medium text-slate-100",
+      "text": "Profile Photo",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(96.286 -0.852436 -2.46847)",
+      "borderColor": "lab(96.286 -0.852436 -2.46847)",
+      "borderTopColor": "lab(96.286 -0.852436 -2.46847)"
+    },
+    {
+      "tag": "p",
+      "cls": "text-xs text-slate-500",
+      "text": "JPG, PNG or WebP",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    },
+    {
+      "tag": "p",
+      "cls": "text-xs text-slate-500 mt-1",
+      "text": "Email нельзя изменить здесь",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    },
+    {
+      "tag": "p",
+      "cls": "text-xs text-slate-500",
+      "text": "Выберите цветовую тему",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    },
+    {
+      "tag": "p",
+      "cls": "mt-3 text-xs text-slate-500",
+      "text": "Светлая тема в процессе развёртывания — системная авто-настр",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    },
+    {
+      "tag": "p",
+      "cls": "text-xs text-slate-500",
+      "text": "Logo, accent color and footer shown on invoices",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    }
+  ],
+  "captions": [
+    {
+      "tag": "button",
+      "cls": "text-xs text-text-muted hover:text-text-secondary transition-colors",
+      "text": "Горячие клавиши",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgb(107, 107, 123)",
+      "borderTopColor": "rgb(107, 107, 123)"
+    },
+    {
+      "tag": "kbd",
+      "cls": "hidden lg:block text-xs text-text-muted bg-white/5 border border-subtle px-1.5 py-0.5 rounded font-mono flex-shrink-0",
+      "text": "⌘K",
+      "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgba(255, 255, 255, 0.06)",
+      "borderTopColor": "rgba(255, 255, 255, 0.06)"
+    },
+    {
+      "tag": "button",
+      "cls": "hidden md:flex w-7 h-7 rounded-md border border-strong items-center justify-center text-text-muted hover:text-text-secondary text-xs font-semibold hover:bg-elevated transition-colors",
+      "text": "?",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgba(255, 255, 255, 0.1)",
+      "borderTopColor": "rgba(255, 255, 255, 0.1)"
+    },
+    {
+      "tag": "button",
+      "cls": "relative w-11 h-11 rounded-full bg-violet-900/20 flex items-center justify-center text-violet-400 font-semibold text-xs overflow-hidden hover:ring-2 hover:ring-violet-500/50 transition-all",
+      "text": "",
+      "backgroundColor": "oklab(0.379994 0.0760902 -0.172985 / 0.2)",
+      "backgroundImage": "none",
+      "color": "lab(62.8239 34.9159 -60.0512)",
+      "borderColor": "lab(62.8239 34.9159 -60.0512)",
+      "borderTopColor": "lab(62.8239 34.9159 -60.0512)"
+    },
+    {
+      "tag": "span",
+      "cls": "font-mono font-semibold text-xs tabular-nums",
+      "text": "2:41:34",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(255, 255, 255)",
+      "borderTopColor": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "p",
+      "cls": "text-xs text-slate-500",
+      "text": "JPG, PNG or WebP",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    }
+  ],
+  "primaryButtons": [
+    {
+      "tag": "button",
+      "cls": "bg-violet-600 hover:bg-violet-500 disabled:opacity-60 text-white text-sm font-medium px-5 py-2.5 rounded-lg transition-colors min-h-[44px]",
+      "text": "Сохранить профиль",
+      "backgroundColor": "lab(41.088 68.9966 -91.995)",
+      "backgroundImage": "none"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-2 bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-600/30 dis",
+      "text": "Save Branding",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-2 bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-600/30 dis",
+      "text": "Save Portal Branding",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)"
+    },
+    {
+      "tag": "button",
+      "cls": "bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-600/30 text-white text-sm font-med",
+      "text": "Сохранить настройки",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-2 bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-600/30 dis",
+      "text": "Save Invoice Branding",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)"
+    },
+    {
+      "tag": "button",
+      "cls": "bg-amber-600 hover:bg-amber-700 disabled:opacity-60 text-white text-sm font-medium px-5 py-2.5 rounded-lg transition-colors min-h-[44px]",
+      "text": "Save Late Fee Settings",
+      "backgroundColor": "lab(60.3514 40.5624 87.1228)",
+      "backgroundImage": "none"
+    }
+  ],
+  "gradientButtons": [
+    {
+      "tag": "a",
+      "cls": "fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 pl-3 pr-1.5 py-1.5 rounded-full bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover",
+      "text": "2:41:34",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-2 text-sm font-medium text-white bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] sha",
+      "text": "Upload Logo",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-2 bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-600/30 dis",
+      "text": "Save Branding",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-2 bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-600/30 dis",
+      "text": "Save Portal Branding",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-600/30 text-white text-sm font-med",
+      "text": "Сохранить настройки",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "a",
+      "cls": "bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-600/30 text-white text-sm font-med",
+      "text": "Перейти на Pro",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-1.5 text-xs bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-",
+      "text": "New Package",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-1.5 text-xs bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-",
+      "text": "Save",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-1.5 text-xs bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-",
+      "text": "Save",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-1.5 text-xs bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-",
+      "text": "Save",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-1.5 text-xs bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-",
+      "text": "Save",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-1.5 text-xs bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-",
+      "text": "Save",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-1.5 text-xs bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-",
+      "text": "Save",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-1.5 text-xs bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-",
+      "text": "Save",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-1.5 text-xs bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-",
+      "text": "Suggest Goals",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "w-full text-sm font-semibold py-2 rounded-lg transition-all disabled:opacity-60 flex items-center justify-center gap-2 bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-50",
+      "text": "Save Settings",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "w-full text-sm font-semibold py-2 rounded-lg transition-all disabled:opacity-60 flex items-center justify-center gap-2 bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-50",
+      "text": "Save Reminder Settings",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-2 bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-600/30 dis",
+      "text": "Save Invoice Branding",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex-1 text-sm font-semibold py-2 rounded-lg transition-all disabled:opacity-60 bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-40",
+      "text": "Save Signature",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "w-full text-sm font-semibold py-2 rounded-lg transition-all disabled:opacity-60 min-h-[44px] bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hov",
+      "text": "Save Profile",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "w-full text-sm font-semibold py-2 rounded-lg transition-all disabled:opacity-60 bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-40",
+      "text": "Save Public Profile",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "mt-4 w-full text-sm font-semibold py-2.5 rounded-lg transition-all disabled:opacity-60 flex items-center justify-center gap-2 bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-vi",
+      "text": "Save Profile Details",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "text-sm font-semibold px-5 py-2.5 rounded-lg transition-all disabled:opacity-60 flex items-center gap-2 bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-pur",
+      "text": "Save Portfolio Settings",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "w-full text-sm font-semibold py-2 rounded-lg transition-all disabled:opacity-60 min-h-[44px] bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hov",
+      "text": "Save Tax Settings",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-2 bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-600/30 tex",
+      "text": "Copy card link",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-600/30 disabled:opacity-60 text-wh",
+      "text": "Save",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-1.5 text-sm font-medium bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg sh",
+      "text": "Add Webhook",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-2 bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-600/30 dis",
+      "text": "Set Up 2FA",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    }
+  ],
+  "hardcodedClassCounts": {
+    "[class*=\"bg-slate-\"]": 287,
+    "[class*=\"border-slate-\"]": 208,
+    "[class*=\"text-slate-\"]": 632,
+    "[class*=\"bg-violet-\"]": 110,
+    "[class*=\"border-violet-\"]": 26,
+    "[class*=\"text-white\"]": 43,
+    "[class*=\"bg-gray-\"]": 0,
+    "[class*=\"border-gray-\"]": 0,
+    "[class*=\"from-violet\"]": 29,
+    "[class*=\"via-purple\"]": 29,
+    "[class*=\"to-pink\"]": 29,
+    "[class*=\"from-purple\"]": 0,
+    "[class*=\"bg-purple-\"]": 2
+  },
+  "bodyClass": "inter_5972bc34-module__OU16Qa__className h-full antialiased",
+  "htmlClass": "h-full dark",
+  "routeSlug": "settings",
+  "routeUrl": "https://www.lancerwise.com/settings",
+  "finalUrl": "https://www.lancerwise.com/settings",
+  "redirected": false
+}

@@ -1,0 +1,255 @@
+{
+  "url": "https://www.lancerwise.com/tasks",
+  "timestamp": "2026-05-23T13:04:52.591Z",
+  "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+  "cssVars": {
+    "--canvas": "#0b0b12",
+    "--surface": "#11111a",
+    "--card": "#15151f",
+    "--elevated": "#1b1b26",
+    "--accent-primary": "#6a5ae0",
+    "--text-primary": "#f4f4f6",
+    "--text-secondary": "#a0a0ae",
+    "--text-muted": "#6b6b7b",
+    "--border-subtle": "#ffffff0f",
+    "--border": "#ffffff14",
+    "--border-strong": "#ffffff1a"
+  },
+  "body": {
+    "selector": "body",
+    "found": true,
+    "backgroundColor": "rgb(10, 10, 10)",
+    "backgroundImage": "none",
+    "color": "rgb(237, 237, 237)",
+    "borderColor": "rgb(237, 237, 237)"
+  },
+  "html": {
+    "selector": "html",
+    "found": true,
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "none",
+    "color": "rgb(255, 255, 255)",
+    "borderColor": "rgb(255, 255, 255)"
+  },
+  "main": {
+    "selector": "main",
+    "found": true,
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "none",
+    "color": "rgb(226, 232, 240)",
+    "borderColor": "rgb(226, 232, 240)"
+  },
+  "sidebar": {
+    "selector": "[data-sidebar], aside, nav[class*=\"sidebar\"]",
+    "found": true,
+    "backgroundColor": "rgb(17, 17, 26)",
+    "backgroundImage": "none",
+    "color": "rgb(237, 237, 237)",
+    "borderColor": "rgba(255, 255, 255, 0.06)"
+  },
+  "header": {
+    "selector": "header",
+    "found": true,
+    "backgroundColor": "rgb(17, 17, 26)",
+    "backgroundImage": "none",
+    "color": "rgb(237, 237, 237)",
+    "borderColor": "rgba(255, 255, 255, 0.06)"
+  },
+  "cards": [
+    {
+      "tag": "button",
+      "cls": "hidden sm:flex items-center gap-2 w-56 bg-card border border-subtle hover:border-strong rounded-lg px-3 py-2 min-h-[44px] transition-colors",
+      "text": "Поиск...⌘K",
+      "backgroundColor": "rgb(21, 21, 31)",
+      "backgroundImage": "none",
+      "color": "rgb(237, 237, 237)",
+      "borderColor": "rgba(255, 255, 255, 0.06)",
+      "borderTopColor": "rgba(255, 255, 255, 0.06)"
+    },
+    {
+      "tag": "button",
+      "cls": "hidden md:flex w-7 h-7 rounded-md border border-strong items-center justify-center text-text-muted hover:text-text-secondary text-xs font-semibold hover:bg-elevated transition-colors",
+      "text": "?",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgba(255, 255, 255, 0.1)",
+      "borderTopColor": "rgba(255, 255, 255, 0.1)"
+    },
+    {
+      "tag": "div",
+      "cls": "flex flex-col gap-2 p-3 rounded-xl border border-dashed border-slate-600 bg-slate-900/50",
+      "text": "HMLNo projectpress n to focus",
+      "backgroundColor": "oklab(0.207998 -0.00311187 -0.0418783 / 0.5)",
+      "backgroundImage": "none",
+      "color": "rgb(226, 232, 240)",
+      "borderColor": "lab(35.5623 -1.74978 -15.4316)",
+      "borderTopColor": "lab(35.5623 -1.74978 -15.4316)"
+    },
+    {
+      "tag": "button",
+      "cls": "text-xs px-3 py-2 rounded-lg font-medium transition-colors border min-h-[44px] border-slate-600 text-slate-400 hover:border-gray-400",
+      "text": "H",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(65.5349 -2.25151 -14.5072)",
+      "borderColor": "lab(35.5623 -1.74978 -15.4316)",
+      "borderTopColor": "lab(35.5623 -1.74978 -15.4316)"
+    },
+    {
+      "tag": "button",
+      "cls": "text-xs px-3 py-2 rounded-lg font-medium transition-colors border min-h-[44px] bg-blue-500 border-blue-500 text-white",
+      "text": "M",
+      "backgroundColor": "lab(54.1736 13.3369 -74.6839)",
+      "backgroundImage": "none",
+      "color": "rgb(255, 255, 255)",
+      "borderColor": "lab(54.1736 13.3369 -74.6839)",
+      "borderTopColor": "lab(54.1736 13.3369 -74.6839)"
+    },
+    {
+      "tag": "button",
+      "cls": "text-xs px-3 py-2 rounded-lg font-medium transition-colors border min-h-[44px] border-slate-600 text-slate-400 hover:border-gray-400",
+      "text": "L",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(65.5349 -2.25151 -14.5072)",
+      "borderColor": "lab(35.5623 -1.74978 -15.4316)",
+      "borderTopColor": "lab(35.5623 -1.74978 -15.4316)"
+    },
+    {
+      "tag": "input",
+      "cls": "w-16 text-xs bg-slate-800/50 border border-slate-700 rounded-lg px-2 py-2 outline-none text-slate-300 placeholder-gray-400 min-h-[44px]",
+      "text": "",
+      "backgroundColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.5)",
+      "backgroundImage": "none",
+      "color": "rgb(226, 232, 240)",
+      "borderColor": "lab(26.9569 -1.47016 -15.6993)",
+      "borderTopColor": "lab(26.9569 -1.47016 -15.6993)"
+    },
+    {
+      "tag": "select",
+      "cls": "text-xs bg-slate-800/50 border border-slate-700 rounded-lg px-2 py-2 outline-none text-slate-300 max-w-[140px] min-h-[44px]",
+      "text": "No project",
+      "backgroundColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.5)",
+      "backgroundImage": "none",
+      "color": "rgb(226, 232, 240)",
+      "borderColor": "lab(26.9569 -1.47016 -15.6993)",
+      "borderTopColor": "lab(26.9569 -1.47016 -15.6993)"
+    }
+  ],
+  "headings": [
+    {
+      "tag": "h1",
+      "cls": "text-lg font-semibold text-text-primary",
+      "text": "Задачи",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(244, 244, 246)",
+      "borderColor": "rgb(244, 244, 246)",
+      "borderTopColor": "rgb(244, 244, 246)"
+    }
+  ],
+  "paragraphs": [],
+  "captions": [
+    {
+      "tag": "button",
+      "cls": "text-xs text-text-muted hover:text-text-secondary transition-colors",
+      "text": "Горячие клавиши",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgb(107, 107, 123)",
+      "borderTopColor": "rgb(107, 107, 123)"
+    },
+    {
+      "tag": "kbd",
+      "cls": "hidden lg:block text-xs text-text-muted bg-white/5 border border-subtle px-1.5 py-0.5 rounded font-mono flex-shrink-0",
+      "text": "⌘K",
+      "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgba(255, 255, 255, 0.06)",
+      "borderTopColor": "rgba(255, 255, 255, 0.06)"
+    },
+    {
+      "tag": "button",
+      "cls": "hidden md:flex w-7 h-7 rounded-md border border-strong items-center justify-center text-text-muted hover:text-text-secondary text-xs font-semibold hover:bg-elevated transition-colors",
+      "text": "?",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgba(255, 255, 255, 0.1)",
+      "borderTopColor": "rgba(255, 255, 255, 0.1)"
+    },
+    {
+      "tag": "button",
+      "cls": "relative w-11 h-11 rounded-full bg-violet-900/20 flex items-center justify-center text-violet-400 font-semibold text-xs overflow-hidden hover:ring-2 hover:ring-violet-500/50 transition-all",
+      "text": "",
+      "backgroundColor": "oklab(0.379994 0.0760902 -0.172985 / 0.2)",
+      "backgroundImage": "none",
+      "color": "lab(62.8239 34.9159 -60.0512)",
+      "borderColor": "lab(62.8239 34.9159 -60.0512)",
+      "borderTopColor": "lab(62.8239 34.9159 -60.0512)"
+    },
+    {
+      "tag": "span",
+      "cls": "font-mono font-semibold text-xs tabular-nums",
+      "text": "2:41:02",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(255, 255, 255)",
+      "borderTopColor": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "text-xs px-3 py-2 rounded-lg font-medium transition-colors border min-h-[44px] border-slate-600 text-slate-400 hover:border-gray-400",
+      "text": "H",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(65.5349 -2.25151 -14.5072)",
+      "borderColor": "lab(35.5623 -1.74978 -15.4316)",
+      "borderTopColor": "lab(35.5623 -1.74978 -15.4316)"
+    }
+  ],
+  "primaryButtons": [],
+  "gradientButtons": [
+    {
+      "tag": "a",
+      "cls": "fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 pl-3 pr-1.5 py-1.5 rounded-full bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover",
+      "text": "2:41:02",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "w-14 h-14 rounded-full flex items-center justify-center text-white transition-all duration-150 active:scale-[0.95] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400/60 focu",
+      "text": "",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    }
+  ],
+  "hardcodedClassCounts": {
+    "[class*=\"bg-slate-\"]": 9,
+    "[class*=\"border-slate-\"]": 6,
+    "[class*=\"text-slate-\"]": 23,
+    "[class*=\"bg-violet-\"]": 2,
+    "[class*=\"border-violet-\"]": 0,
+    "[class*=\"text-white\"]": 7,
+    "[class*=\"bg-gray-\"]": 0,
+    "[class*=\"border-gray-\"]": 2,
+    "[class*=\"from-violet\"]": 3,
+    "[class*=\"via-purple\"]": 3,
+    "[class*=\"to-pink\"]": 3,
+    "[class*=\"from-purple\"]": 0,
+    "[class*=\"bg-purple-\"]": 0
+  },
+  "bodyClass": "inter_5972bc34-module__OU16Qa__className h-full antialiased",
+  "htmlClass": "h-full dark",
+  "routeSlug": "tasks",
+  "routeUrl": "https://www.lancerwise.com/tasks",
+  "finalUrl": "https://www.lancerwise.com/tasks",
+  "redirected": false
+}

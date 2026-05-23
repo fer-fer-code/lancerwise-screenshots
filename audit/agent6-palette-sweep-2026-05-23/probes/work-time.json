@@ -1,0 +1,390 @@
+{
+  "url": "https://www.lancerwise.com/work/time",
+  "timestamp": "2026-05-23T13:04:34.405Z",
+  "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+  "cssVars": {
+    "--canvas": "#0b0b12",
+    "--surface": "#11111a",
+    "--card": "#15151f",
+    "--elevated": "#1b1b26",
+    "--accent-primary": "#6a5ae0",
+    "--text-primary": "#f4f4f6",
+    "--text-secondary": "#a0a0ae",
+    "--text-muted": "#6b6b7b",
+    "--border-subtle": "#ffffff0f",
+    "--border": "#ffffff14",
+    "--border-strong": "#ffffff1a"
+  },
+  "body": {
+    "selector": "body",
+    "found": true,
+    "backgroundColor": "rgb(10, 10, 10)",
+    "backgroundImage": "none",
+    "color": "rgb(237, 237, 237)",
+    "borderColor": "rgb(237, 237, 237)"
+  },
+  "html": {
+    "selector": "html",
+    "found": true,
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "none",
+    "color": "rgb(255, 255, 255)",
+    "borderColor": "rgb(255, 255, 255)"
+  },
+  "main": {
+    "selector": "main",
+    "found": true,
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "none",
+    "color": "rgb(226, 232, 240)",
+    "borderColor": "rgb(226, 232, 240)"
+  },
+  "sidebar": {
+    "selector": "[data-sidebar], aside, nav[class*=\"sidebar\"]",
+    "found": true,
+    "backgroundColor": "rgb(17, 17, 26)",
+    "backgroundImage": "none",
+    "color": "rgb(237, 237, 237)",
+    "borderColor": "rgba(255, 255, 255, 0.06)"
+  },
+  "header": {
+    "selector": "header",
+    "found": true,
+    "backgroundColor": "rgb(17, 17, 26)",
+    "backgroundImage": "none",
+    "color": "rgb(237, 237, 237)",
+    "borderColor": "rgba(255, 255, 255, 0.06)"
+  },
+  "cards": [
+    {
+      "tag": "button",
+      "cls": "hidden sm:flex items-center gap-2 w-56 bg-card border border-subtle hover:border-strong rounded-lg px-3 py-2 min-h-[44px] transition-colors",
+      "text": "Поиск...⌘K",
+      "backgroundColor": "rgb(21, 21, 31)",
+      "backgroundImage": "none",
+      "color": "rgb(237, 237, 237)",
+      "borderColor": "rgba(255, 255, 255, 0.06)",
+      "borderTopColor": "rgba(255, 255, 255, 0.06)"
+    },
+    {
+      "tag": "button",
+      "cls": "hidden md:flex w-7 h-7 rounded-md border border-strong items-center justify-center text-text-muted hover:text-text-secondary text-xs font-semibold hover:bg-elevated transition-colors",
+      "text": "?",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgba(255, 255, 255, 0.1)",
+      "borderTopColor": "rgba(255, 255, 255, 0.1)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-2 text-sm font-medium px-3 py-2 min-h-[44px] rounded-lg border transition-colors text-slate-400 border-slate-600 hover:bg-slate-900/50",
+      "text": "Pomodoro",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(65.5349 -2.25151 -14.5072)",
+      "borderColor": "lab(35.5623 -1.74978 -15.4316)",
+      "borderTopColor": "lab(35.5623 -1.74978 -15.4316)"
+    },
+    {
+      "tag": "a",
+      "cls": "flex items-center gap-1.5 text-sm text-slate-400 border border-slate-600 hover:text-violet-300 hover:border-violet-700/50 hover:bg-violet-500/10 font-medium px-3 py-2 rounded-lg transition-colors min-",
+      "text": "Invoice Time",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(65.5349 -2.25151 -14.5072)",
+      "borderColor": "lab(35.5623 -1.74978 -15.4316)",
+      "borderTopColor": "lab(35.5623 -1.74978 -15.4316)"
+    },
+    {
+      "tag": "a",
+      "cls": "flex items-center gap-2 text-sm text-slate-400 border border-slate-600 hover:bg-slate-900/50 font-medium px-3 py-2 rounded-lg transition-colors min-h-[44px]",
+      "text": "Export CSV",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(65.5349 -2.25151 -14.5072)",
+      "borderColor": "lab(35.5623 -1.74978 -15.4316)",
+      "borderTopColor": "lab(35.5623 -1.74978 -15.4316)"
+    },
+    {
+      "tag": "div",
+      "cls": "bg-slate-800/50 rounded-xl border border-slate-700 p-6",
+      "text": "Timer Today: 00:00:00|Week: 00:00:00Templates No project00:0",
+      "backgroundColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.5)",
+      "backgroundImage": "none",
+      "color": "rgb(226, 232, 240)",
+      "borderColor": "lab(26.9569 -1.47016 -15.6993)",
+      "borderTopColor": "lab(26.9569 -1.47016 -15.6993)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-1.5 text-xs font-medium px-3 py-2 rounded-xl bg-slate-800 text-slate-400 border border-slate-700 hover:bg-slate-700 hover:text-slate-200 transition-colors min-h-[44px]",
+      "text": "Templates",
+      "backgroundColor": "lab(16.132 -0.318035 -14.6672)",
+      "backgroundImage": "none",
+      "color": "lab(65.5349 -2.25151 -14.5072)",
+      "borderColor": "lab(26.9569 -1.47016 -15.6993)",
+      "borderTopColor": "lab(26.9569 -1.47016 -15.6993)"
+    },
+    {
+      "tag": "input",
+      "cls": "w-full border border-slate-600 rounded-lg px-4 py-2.5 pr-10 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 disabled:bg-slate-900/50",
+      "text": "",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(226, 232, 240)",
+      "borderColor": "lab(35.5623 -1.74978 -15.4316)",
+      "borderTopColor": "lab(35.5623 -1.74978 -15.4316)"
+    }
+  ],
+  "headings": [
+    {
+      "tag": "h1",
+      "cls": "text-lg font-semibold text-text-primary",
+      "text": "Учёт времени",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(244, 244, 246)",
+      "borderColor": "rgb(244, 244, 246)",
+      "borderTopColor": "rgb(244, 244, 246)"
+    },
+    {
+      "tag": "h1",
+      "cls": "text-xl font-bold text-slate-100",
+      "text": "Time Tracker",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(96.286 -0.852436 -2.46847)",
+      "borderColor": "lab(96.286 -0.852436 -2.46847)",
+      "borderTopColor": "lab(96.286 -0.852436 -2.46847)"
+    },
+    {
+      "tag": "h3",
+      "cls": "font-semibold text-slate-100",
+      "text": "Timer",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(96.286 -0.852436 -2.46847)",
+      "borderColor": "lab(96.286 -0.852436 -2.46847)",
+      "borderTopColor": "lab(96.286 -0.852436 -2.46847)"
+    },
+    {
+      "tag": "h3",
+      "cls": "font-semibold text-slate-100 text-sm",
+      "text": "This Week",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(96.286 -0.852436 -2.46847)",
+      "borderColor": "lab(96.286 -0.852436 -2.46847)",
+      "borderTopColor": "lab(96.286 -0.852436 -2.46847)"
+    },
+    {
+      "tag": "h3",
+      "cls": "text-sm font-semibold text-slate-100 mb-4",
+      "text": "Weekly Schedule vs Actual",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(96.286 -0.852436 -2.46847)",
+      "borderColor": "lab(96.286 -0.852436 -2.46847)",
+      "borderTopColor": "lab(96.286 -0.852436 -2.46847)"
+    },
+    {
+      "tag": "h3",
+      "cls": "text-sm font-semibold text-slate-100 mb-4",
+      "text": "This Week's Score",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(96.286 -0.852436 -2.46847)",
+      "borderColor": "lab(96.286 -0.852436 -2.46847)",
+      "borderTopColor": "lab(96.286 -0.852436 -2.46847)"
+    }
+  ],
+  "paragraphs": [
+    {
+      "tag": "p",
+      "cls": "text-xs text-slate-500 mt-2",
+      "text": "Dark bar = billable, light bar = total",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    },
+    {
+      "tag": "p",
+      "cls": "text-sm text-slate-500 text-center py-4",
+      "text": "No blocks planned yet. Add tasks above.",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    },
+    {
+      "tag": "p",
+      "cls": "text-xs text-slate-500 mb-3",
+      "text": "Summarizes your time entries from this week into a professio",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    },
+    {
+      "tag": "p",
+      "cls": "text-xs text-slate-500 text-center",
+      "text": "Fill in your target income and hours to calculate your rate.",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    },
+    {
+      "tag": "p",
+      "cls": "text-xs text-slate-500 mt-3",
+      "text": "Lock weeks to mark them as billed and finalized.",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    },
+    {
+      "tag": "p",
+      "cls": "mt-2 text-xs text-slate-500",
+      "text": "Start tracking today to build your streak.",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    }
+  ],
+  "captions": [
+    {
+      "tag": "button",
+      "cls": "text-xs text-text-muted hover:text-text-secondary transition-colors",
+      "text": "Горячие клавиши",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgb(107, 107, 123)",
+      "borderTopColor": "rgb(107, 107, 123)"
+    },
+    {
+      "tag": "kbd",
+      "cls": "hidden lg:block text-xs text-text-muted bg-white/5 border border-subtle px-1.5 py-0.5 rounded font-mono flex-shrink-0",
+      "text": "⌘K",
+      "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgba(255, 255, 255, 0.06)",
+      "borderTopColor": "rgba(255, 255, 255, 0.06)"
+    },
+    {
+      "tag": "button",
+      "cls": "hidden md:flex w-7 h-7 rounded-md border border-strong items-center justify-center text-text-muted hover:text-text-secondary text-xs font-semibold hover:bg-elevated transition-colors",
+      "text": "?",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgba(255, 255, 255, 0.1)",
+      "borderTopColor": "rgba(255, 255, 255, 0.1)"
+    },
+    {
+      "tag": "button",
+      "cls": "relative w-11 h-11 rounded-full bg-violet-900/20 flex items-center justify-center text-violet-400 font-semibold text-xs overflow-hidden hover:ring-2 hover:ring-violet-500/50 transition-all",
+      "text": "",
+      "backgroundColor": "oklab(0.379994 0.0760902 -0.172985 / 0.2)",
+      "backgroundImage": "none",
+      "color": "lab(62.8239 34.9159 -60.0512)",
+      "borderColor": "lab(62.8239 34.9159 -60.0512)",
+      "borderTopColor": "lab(62.8239 34.9159 -60.0512)"
+    },
+    {
+      "tag": "span",
+      "cls": "text-indigo-200 text-xs mx-1",
+      "text": "·",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(84.4329 3.18977 -23.9688)",
+      "borderColor": "lab(84.4329 3.18977 -23.9688)",
+      "borderTopColor": "lab(84.4329 3.18977 -23.9688)"
+    },
+    {
+      "tag": "span",
+      "cls": "text-violet-100 text-xs truncate max-w-[200px]",
+      "text": "Tracking time",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(93.0838 4.35197 -9.88284)",
+      "borderColor": "lab(93.0838 4.35197 -9.88284)",
+      "borderTopColor": "lab(93.0838 4.35197 -9.88284)"
+    }
+  ],
+  "primaryButtons": [],
+  "gradientButtons": [
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-white transition-all bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pi",
+      "text": "Start",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-1 bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] shadow-lg shadow-violet-600/30 tex",
+      "text": "",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold text-white transition-colors min-h-[44px] bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:",
+      "text": "Start",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex-1 py-2.5 rounded-xl text-sm font-semibold text-white transition-colors bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 ac",
+      "text": "Start",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "w-14 h-14 rounded-full flex items-center justify-center text-white transition-all duration-150 active:scale-[0.95] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400/60 focu",
+      "text": "",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    }
+  ],
+  "hardcodedClassCounts": {
+    "[class*=\"bg-slate-\"]": 108,
+    "[class*=\"border-slate-\"]": 89,
+    "[class*=\"text-slate-\"]": 209,
+    "[class*=\"bg-violet-\"]": 13,
+    "[class*=\"border-violet-\"]": 5,
+    "[class*=\"text-white\"]": 19,
+    "[class*=\"bg-gray-\"]": 0,
+    "[class*=\"border-gray-\"]": 0,
+    "[class*=\"from-violet\"]": 6,
+    "[class*=\"via-purple\"]": 6,
+    "[class*=\"to-pink\"]": 6,
+    "[class*=\"from-purple\"]": 0,
+    "[class*=\"bg-purple-\"]": 0
+  },
+  "bodyClass": "inter_5972bc34-module__OU16Qa__className h-full antialiased",
+  "htmlClass": "h-full dark",
+  "routeSlug": "work-time",
+  "routeUrl": "https://www.lancerwise.com/work/time",
+  "finalUrl": "https://www.lancerwise.com/work/time",
+  "redirected": false
+}

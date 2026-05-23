@@ -1,0 +1,250 @@
+{
+  "url": "https://www.lancerwise.com/pricing",
+  "timestamp": "2026-05-23T13:01:36.389Z",
+  "title": "Pricing — Free Forever Plan & Pro from $15/mo | LancerWise",
+  "cssVars": {
+    "--canvas": "#0b0b12",
+    "--surface": "#11111a",
+    "--card": "#15151f",
+    "--elevated": "#1b1b26",
+    "--accent-primary": "#6a5ae0",
+    "--text-primary": "#f4f4f6",
+    "--text-secondary": "#a0a0ae",
+    "--text-muted": "#6b6b7b",
+    "--border-subtle": "#ffffff0f",
+    "--border": "#ffffff14",
+    "--border-strong": "#ffffff1a"
+  },
+  "body": {
+    "selector": "body",
+    "found": true,
+    "backgroundColor": "rgb(10, 10, 10)",
+    "backgroundImage": "none",
+    "color": "rgb(237, 237, 237)",
+    "borderColor": "rgb(237, 237, 237)"
+  },
+  "html": {
+    "selector": "html",
+    "found": true,
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "none",
+    "color": "rgb(255, 255, 255)",
+    "borderColor": "rgb(255, 255, 255)"
+  },
+  "main": {
+    "selector": "main",
+    "found": true,
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "none",
+    "color": "rgb(237, 237, 237)",
+    "borderColor": "rgb(237, 237, 237)"
+  },
+  "sidebar": {
+    "selector": "[data-sidebar], aside, nav[class*=\"sidebar\"]",
+    "found": false
+  },
+  "header": {
+    "selector": "header",
+    "found": false
+  },
+  "cards": [
+    {
+      "tag": "div",
+      "cls": "inline-flex items-center gap-3 bg-slate-800 border border-slate-700 rounded-xl p-1",
+      "text": "ПомесячноГодовойЭкономия 20%",
+      "backgroundColor": "lab(16.132 -0.318035 -14.6672)",
+      "backgroundImage": "none",
+      "color": "rgb(237, 237, 237)",
+      "borderColor": "lab(26.9569 -1.47016 -15.6993)",
+      "borderTopColor": "lab(26.9569 -1.47016 -15.6993)"
+    },
+    {
+      "tag": "span",
+      "cls": "bg-green-500/20 text-green-400 text-xs font-bold px-2 py-0.5 rounded-full border border-green-500/30",
+      "text": "Экономия 20%",
+      "backgroundColor": "oklab(0.722997 -0.18884 0.110898 / 0.2)",
+      "backgroundImage": "none",
+      "color": "lab(78.503 -64.9265 39.7492)",
+      "borderColor": "oklab(0.722997 -0.18884 0.110898 / 0.3)",
+      "borderTopColor": "oklab(0.722997 -0.18884 0.110898 / 0.3)"
+    },
+    {
+      "tag": "div",
+      "cls": "rounded-2xl p-7 border relative flex flex-col transition-transform bg-slate-800/50 border-slate-700",
+      "text": "Free$0навсегдаИдеально, чтобы начатьДо 2 клиентовБезлимит сч",
+      "backgroundColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.5)",
+      "backgroundImage": "none",
+      "color": "rgb(237, 237, 237)",
+      "borderColor": "lab(26.9569 -1.47016 -15.6993)",
+      "borderTopColor": "lab(26.9569 -1.47016 -15.6993)"
+    },
+    {
+      "tag": "div",
+      "cls": "rounded-2xl p-7 border relative flex flex-col transition-transform bg-gradient-to-br from-violet-600 to-purple-700 border-violet-500 shadow-2xl shadow-violet-900/50 scale-105 ring-2 ring-violet-500/50",
+      "text": "Самый популярныйPro$15/месДля растущих фрилансеровБезлимит к",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(36.1758 69.8525 -80.0381) 100%)",
+      "color": "rgb(237, 237, 237)",
+      "borderColor": "lab(49.9355 55.1776 -81.8963)",
+      "borderTopColor": "lab(49.9355 55.1776 -81.8963)"
+    },
+    {
+      "tag": "div",
+      "cls": "rounded-2xl p-7 border relative flex flex-col transition-transform bg-slate-800/50 border-slate-700",
+      "text": "СкороBusinessСкороДля агентств и небольших командВсё из ProД",
+      "backgroundColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.5)",
+      "backgroundImage": "none",
+      "color": "rgb(237, 237, 237)",
+      "borderColor": "lab(26.9569 -1.47016 -15.6993)",
+      "borderTopColor": "lab(26.9569 -1.47016 -15.6993)"
+    },
+    {
+      "tag": "div",
+      "cls": "absolute -top-3.5 left-1/2 -translate-x-1/2 bg-slate-700 text-slate-200 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap border border-slate-600",
+      "text": "Скоро",
+      "backgroundColor": "lab(26.9569 -1.47016 -15.6993)",
+      "backgroundImage": "none",
+      "color": "lab(91.7353 -0.998765 -4.76968)",
+      "borderColor": "lab(35.5623 -1.74978 -15.4316)",
+      "borderTopColor": "lab(35.5623 -1.74978 -15.4316)"
+    }
+  ],
+  "headings": [
+    {
+      "tag": "h1",
+      "cls": "sr-only",
+      "text": "Тарифы LancerWise — Free и Pro $15/мес (тариф Business скоро",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(237, 237, 237)",
+      "borderColor": "rgb(237, 237, 237)",
+      "borderTopColor": "rgb(237, 237, 237)"
+    },
+    {
+      "tag": "h2",
+      "cls": "text-3xl md:text-4xl font-bold text-slate-100 mb-4",
+      "text": "Простые и прозрачные тарифы",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(96.286 -0.852436 -2.46847)",
+      "borderColor": "lab(96.286 -0.852436 -2.46847)",
+      "borderTopColor": "lab(96.286 -0.852436 -2.46847)"
+    }
+  ],
+  "paragraphs": [
+    {
+      "tag": "p",
+      "cls": "text-slate-500 text-lg mb-6",
+      "text": "Начните бесплатно. Перейдёте на платный, когда будете готовы",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    },
+    {
+      "tag": "p",
+      "cls": "text-center text-xs text-indigo-200 mt-3",
+      "text": "Гарантия возврата средств 30 дней",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(84.4329 3.18977 -23.9688)",
+      "borderColor": "lab(84.4329 3.18977 -23.9688)",
+      "borderTopColor": "lab(84.4329 3.18977 -23.9688)"
+    },
+    {
+      "tag": "p",
+      "cls": "text-sm text-slate-500 leading-relaxed",
+      "text": "Универсальная платформа для серьёзных независимых профессион",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    }
+  ],
+  "captions": [
+    {
+      "tag": "span",
+      "cls": "bg-green-500/20 text-green-400 text-xs font-bold px-2 py-0.5 rounded-full border border-green-500/30",
+      "text": "Экономия 20%",
+      "backgroundColor": "oklab(0.722997 -0.18884 0.110898 / 0.2)",
+      "backgroundImage": "none",
+      "color": "lab(78.503 -64.9265 39.7492)",
+      "borderColor": "oklab(0.722997 -0.18884 0.110898 / 0.3)",
+      "borderTopColor": "oklab(0.722997 -0.18884 0.110898 / 0.3)"
+    },
+    {
+      "tag": "div",
+      "cls": "absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-400 text-amber-900 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap",
+      "text": "Самый популярный",
+      "backgroundColor": "lab(80.1641 16.6016 99.2089)",
+      "backgroundImage": "none",
+      "color": "lab(31.2288 30.2627 40.0378)",
+      "borderColor": "lab(31.2288 30.2627 40.0378)",
+      "borderTopColor": "lab(31.2288 30.2627 40.0378)"
+    },
+    {
+      "tag": "p",
+      "cls": "text-center text-xs text-indigo-200 mt-3",
+      "text": "Гарантия возврата средств 30 дней",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(84.4329 3.18977 -23.9688)",
+      "borderColor": "lab(84.4329 3.18977 -23.9688)",
+      "borderTopColor": "lab(84.4329 3.18977 -23.9688)"
+    },
+    {
+      "tag": "div",
+      "cls": "absolute -top-3.5 left-1/2 -translate-x-1/2 bg-slate-700 text-slate-200 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap border border-slate-600",
+      "text": "Скоро",
+      "backgroundColor": "lab(26.9569 -1.47016 -15.6993)",
+      "backgroundImage": "none",
+      "color": "lab(91.7353 -0.998765 -4.76968)",
+      "borderColor": "lab(35.5623 -1.74978 -15.4316)",
+      "borderTopColor": "lab(35.5623 -1.74978 -15.4316)"
+    },
+    {
+      "tag": "div",
+      "cls": "flex flex-wrap items-center justify-center gap-6 text-xs text-slate-500",
+      "text": "SSL-шифрованиеСоответствие GDPRСкоро мобильное приложение",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    }
+  ],
+  "primaryButtons": [],
+  "gradientButtons": [
+    {
+      "tag": "a",
+      "cls": "bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] text-white text-sm font-semibold px-4 py-2.5 rounded-lg sh",
+      "text": "Начать",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    }
+  ],
+  "hardcodedClassCounts": {
+    "[class*=\"bg-slate-\"]": 8,
+    "[class*=\"border-slate-\"]": 8,
+    "[class*=\"text-slate-\"]": 60,
+    "[class*=\"bg-violet-\"]": 6,
+    "[class*=\"border-violet-\"]": 1,
+    "[class*=\"text-white\"]": 16,
+    "[class*=\"bg-gray-\"]": 0,
+    "[class*=\"border-gray-\"]": 0,
+    "[class*=\"from-violet\"]": 2,
+    "[class*=\"via-purple\"]": 1,
+    "[class*=\"to-pink\"]": 1,
+    "[class*=\"from-purple\"]": 0,
+    "[class*=\"bg-purple-\"]": 0
+  },
+  "bodyClass": "inter_5972bc34-module__OU16Qa__className h-full antialiased",
+  "htmlClass": "h-full dark",
+  "routeSlug": "pricing",
+  "routeUrl": "https://www.lancerwise.com/pricing",
+  "finalUrl": "https://www.lancerwise.com/pricing",
+  "redirected": false
+}

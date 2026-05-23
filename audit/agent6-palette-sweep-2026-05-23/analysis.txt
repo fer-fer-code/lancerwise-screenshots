@@ -1,0 +1,84 @@
+====================================================================================================
+PALETTE SWEEP — Per-route results
+====================================================================================================
+
+[NOTES] analytics-forecast        final=https://www.lancerwise.com/analytics/forecast
+  passes: ['css_var_canvas_defined', 'canvas', 'sidebar_surface', 'header_surface', 'cards']
+  hardcoded utility hits: 29 (bg-slate-=3, text-slate-=10, bg-violet-=1, text-white=6, from-violet=3, via-purple=3, to-pink=3)
+  • GRADIENT BTN: 2 gradient buttons on non-exception route
+  •   - '2:41:21' cls=fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 pl-3 pr-1.5 py-1.5 ro
+  •   - '' cls=w-14 h-14 rounded-full flex items-center justify-center text-white transition-al
+
+[NOTES] clients                   final=https://www.lancerwise.com/clients
+  passes: ['css_var_canvas_defined', 'canvas', 'sidebar_surface', 'header_surface', 'cards']
+  hardcoded utility hits: 108 (bg-slate-=5, text-slate-=59, bg-violet-=11, border-violet-=4, text-white=20, from-violet=3, via-purple=3, to-pink=3)
+  • GRADIENT BTN: 2 gradient buttons on non-exception route
+  •   - '2:39:03' cls=fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 pl-3 pr-1.5 py-1.5 ro
+  •   - '' cls=w-14 h-14 rounded-full flex items-center justify-center text-white transition-al
+
+[PASS] dashboard                 final=https://www.lancerwise.com/dashboard
+  passes: ['css_var_canvas_defined', 'canvas', 'sidebar_surface', 'header_surface', 'cards', 'gradient_btns_allowed']
+  hardcoded utility hits: 41 (bg-slate-=8, border-slate-=1, text-slate-=16, bg-violet-=1, text-white=9, from-violet=2, via-purple=2, to-pink=2)
+
+[NOTES] invoices                  final=https://www.lancerwise.com/invoices
+  passes: ['css_var_canvas_defined', 'canvas', 'sidebar_surface', 'header_surface', 'cards']
+  hardcoded utility hits: 116 (bg-slate-=14, border-slate-=8, text-slate-=66, bg-violet-=2, border-violet-=1, text-white=11, bg-gray-=5, from-violet=3, via-purple=3, to-pink=3)
+  • GRADIENT BTN: 2 gradient buttons on non-exception route
+  •   - '2:40:14' cls=fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 pl-3 pr-1.5 py-1.5 ro
+  •   - '' cls=w-14 h-14 rounded-full flex items-center justify-center text-white transition-al
+
+[PASS] landing                   final=https://www.lancerwise.com/
+  passes: ['css_var_canvas_defined', 'canvas', 'cards', 'gradient_btns_allowed']
+  hardcoded utility hits: 335 (bg-slate-=52, border-slate-=40, text-slate-=154, bg-violet-=35, border-violet-=14, text-white=30, from-violet=4, via-purple=3, to-pink=3)
+
+[NOTES] login                     final=https://www.lancerwise.com/dashboard
+  passes: ['css_var_canvas_defined', 'canvas', 'sidebar_surface', 'header_surface', 'cards']
+  hardcoded utility hits: 41 (bg-slate-=8, border-slate-=1, text-slate-=16, bg-violet-=1, text-white=9, from-violet=2, via-purple=2, to-pink=2)
+  • GRADIENT BTN: 1 gradient buttons on non-exception route
+  •   - '' cls=w-14 h-14 rounded-full flex items-center justify-center text-white transition-al
+
+[NOTES] pricing                   final=https://www.lancerwise.com/pricing
+  passes: ['css_var_canvas_defined', 'canvas']
+  hardcoded utility hits: 103 (bg-slate-=8, border-slate-=8, text-slate-=60, bg-violet-=6, border-violet-=1, text-white=16, from-violet=2, via-purple=1, to-pink=1)
+  • CARD: card 'Самый популярныйPro$15/месДля ' gradient on non-allowed route (linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(36.1758 69.)
+  • GRADIENT BTN: 1 gradient buttons on non-exception route
+  •   - 'Начать' cls=bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-5
+
+[NOTES] projects                  final=https://www.lancerwise.com/projects
+  passes: ['css_var_canvas_defined', 'canvas', 'sidebar_surface', 'header_surface', 'cards']
+  hardcoded utility hits: 87 (bg-slate-=10, border-slate-=11, text-slate-=41, bg-violet-=3, border-violet-=1, text-white=12, from-violet=3, via-purple=3, to-pink=3)
+  • GRADIENT BTN: 2 gradient buttons on non-exception route
+  •   - '2:39:47' cls=fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 pl-3 pr-1.5 py-1.5 ro
+  •   - '' cls=w-14 h-14 rounded-full flex items-center justify-center text-white transition-al
+
+[DRIFT] settings                  final=https://www.lancerwise.com/settings
+  passes: ['css_var_canvas_defined', 'canvas', 'sidebar_surface', 'header_surface', 'cards']
+  hardcoded utility hits: 1395 (bg-slate-=287, border-slate-=208, text-slate-=632, bg-violet-=110, border-violet-=26, text-white=43, from-violet=29, via-purple=29, to-pink=29, bg-purple-=2)
+  • GRADIENT BTN: 28 gradient buttons on non-exception route
+  •   - '2:41:34' cls=fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 pl-3 pr-1.5 py-1.5 ro
+  •   - 'Upload Logo' cls=flex items-center gap-2 text-sm font-medium text-white bg-gradient-to-br from-vi
+  •   - 'Save Branding' cls=flex items-center gap-2 bg-gradient-to-br from-violet-600 via-purple-500 to-pink
+  • PRIMARY BTN: 'Save Branding' has gradient on non-exception route
+  • PRIMARY BTN: 'Save Portal Branding' has gradient on non-exception route
+  • PRIMARY BTN: 'Сохранить настройки' has gradient on non-exception route
+
+[NOTES] tasks                     final=https://www.lancerwise.com/tasks
+  passes: ['css_var_canvas_defined', 'canvas', 'sidebar_surface', 'header_surface', 'cards']
+  hardcoded utility hits: 58 (bg-slate-=9, border-slate-=6, text-slate-=23, bg-violet-=2, text-white=7, border-gray-=2, from-violet=3, via-purple=3, to-pink=3)
+  • GRADIENT BTN: 2 gradient buttons on non-exception route
+  •   - '2:41:02' cls=fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 pl-3 pr-1.5 py-1.5 ro
+  •   - '' cls=w-14 h-14 rounded-full flex items-center justify-center text-white transition-al
+
+[PASS] upgrade                   final=https://www.lancerwise.com/upgrade
+  passes: ['css_var_canvas_defined', 'canvas', 'sidebar_surface', 'header_surface', 'cards', 'gradient_btns_allowed']
+  hardcoded utility hits: 72 (bg-slate-=8, border-slate-=3, text-slate-=43, bg-violet-=4, border-violet-=1, text-white=7, from-violet=2, via-purple=2, to-pink=2)
+
+[DRIFT] work-time                 final=https://www.lancerwise.com/work/time
+  passes: ['css_var_canvas_defined', 'canvas', 'sidebar_surface', 'header_surface', 'cards']
+  hardcoded utility hits: 461 (bg-slate-=108, border-slate-=89, text-slate-=209, bg-violet-=13, border-violet-=5, text-white=19, from-violet=6, via-purple=6, to-pink=6)
+  • GRADIENT BTN: 5 gradient buttons on non-exception route
+  •   - 'Start' cls=flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-white transition
+  •   - '' cls=flex items-center gap-1 bg-gradient-to-br from-violet-600 via-purple-500 to-pink
+  •   - 'Start' cls=flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold text-white 
+
+→ analysis.json written: /Users/myoffice/lancerwise-screenshots/audit/agent6-palette-sweep-2026-05-23/analysis.json

@@ -1,0 +1,354 @@
+{
+  "url": "https://www.lancerwise.com/",
+  "timestamp": "2026-05-23T13:01:16.064Z",
+  "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+  "cssVars": {
+    "--canvas": "#0b0b12",
+    "--surface": "#11111a",
+    "--card": "#15151f",
+    "--elevated": "#1b1b26",
+    "--accent-primary": "#6a5ae0",
+    "--text-primary": "#f4f4f6",
+    "--text-secondary": "#a0a0ae",
+    "--text-muted": "#6b6b7b",
+    "--border-subtle": "#ffffff0f",
+    "--border": "#ffffff14",
+    "--border-strong": "#ffffff1a"
+  },
+  "body": {
+    "selector": "body",
+    "found": true,
+    "backgroundColor": "rgb(10, 10, 10)",
+    "backgroundImage": "none",
+    "color": "rgb(237, 237, 237)",
+    "borderColor": "rgb(237, 237, 237)"
+  },
+  "html": {
+    "selector": "html",
+    "found": true,
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "none",
+    "color": "rgb(255, 255, 255)",
+    "borderColor": "rgb(255, 255, 255)"
+  },
+  "main": {
+    "selector": "main",
+    "found": false
+  },
+  "sidebar": {
+    "selector": "[data-sidebar], aside, nav[class*=\"sidebar\"]",
+    "found": false
+  },
+  "header": {
+    "selector": "header",
+    "found": false
+  },
+  "cards": [
+    {
+      "tag": "div",
+      "cls": "inline-flex items-center gap-2 bg-white/10 text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/15 backdrop-blur-sm",
+      "text": "На базе AI",
+      "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+      "backgroundImage": "none",
+      "color": "rgb(255, 255, 255)",
+      "borderColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.15)",
+      "borderTopColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.15)"
+    },
+    {
+      "tag": "div",
+      "cls": "inline-flex items-center gap-2 bg-green-500/15 text-green-300 text-xs font-semibold px-3 py-1.5 rounded-full border border-green-400/25 backdrop-blur-sm",
+      "text": "Бесплатно навсегда",
+      "backgroundColor": "oklab(0.722997 -0.18884 0.110898 / 0.15)",
+      "backgroundImage": "none",
+      "color": "lab(86.9953 -47.2691 25.0054)",
+      "borderColor": "oklab(0.791996 -0.18403 0.0990587 / 0.25)",
+      "borderTopColor": "oklab(0.791996 -0.18403 0.0990587 / 0.25)"
+    },
+    {
+      "tag": "a",
+      "cls": "inline-flex items-center justify-center gap-2 bg-white/20 backdrop-blur-sm border-2 border-white/60 hover:bg-white/30 hover:border-white/80 text-white font-semibold px-8 py-4 rounded-xl text-lg transi",
+      "text": "Посмотреть демо",
+      "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.2)",
+      "backgroundImage": "none",
+      "color": "rgb(255, 255, 255)",
+      "borderColor": "oklab(0.999994 0.0000455677 0.0000200868 / 0.6)",
+      "borderTopColor": "oklab(0.999994 0.0000455677 0.0000200868 / 0.6)"
+    },
+    {
+      "tag": "div",
+      "cls": "bg-gradient-to-br from-slate-900 to-slate-950 rounded-2xl overflow-hidden border border-slate-800/50 shadow-2xl shadow-violet-500/10",
+      "text": "app.lancerwise.comС начала года$48,240+34%Заработано в этом ",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "linear-gradient(to right bottom, lab(7.78673 1.82345 -15.0537) 0%, lab(1.76974 1.32743 -9.28855) 100%)",
+      "color": "rgb(237, 237, 237)",
+      "borderColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.5)",
+      "borderTopColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.5)"
+    },
+    {
+      "tag": "div",
+      "cls": "flex items-center gap-1 px-2 py-1 bg-green-500/10 rounded-md border border-green-500/20",
+      "text": "+34%",
+      "backgroundColor": "oklab(0.722997 -0.18884 0.110898 / 0.1)",
+      "backgroundImage": "none",
+      "color": "rgb(237, 237, 237)",
+      "borderColor": "oklab(0.722997 -0.18884 0.110898 / 0.2)",
+      "borderTopColor": "oklab(0.722997 -0.18884 0.110898 / 0.2)"
+    },
+    {
+      "tag": "div",
+      "cls": "mb-6 p-4 bg-slate-800/30 rounded-xl border border-slate-700/30",
+      "text": "ИюнИюлАвгСенОктНояДекЯнвФевМарАпрМай",
+      "backgroundColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.3)",
+      "backgroundImage": "none",
+      "color": "rgb(237, 237, 237)",
+      "borderColor": "oklab(0.371997 -0.00968689 -0.0429107 / 0.3)",
+      "borderTopColor": "oklab(0.371997 -0.00968689 -0.0429107 / 0.3)"
+    },
+    {
+      "tag": "div",
+      "cls": "p-3 bg-slate-800/40 rounded-xl border border-slate-700/30",
+      "text": "Клиенты14+3 за месяц",
+      "backgroundColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.4)",
+      "backgroundImage": "none",
+      "color": "rgb(237, 237, 237)",
+      "borderColor": "oklab(0.371997 -0.00968689 -0.0429107 / 0.3)",
+      "borderTopColor": "oklab(0.371997 -0.00968689 -0.0429107 / 0.3)"
+    },
+    {
+      "tag": "div",
+      "cls": "p-3 bg-slate-800/40 rounded-xl border border-slate-700/30",
+      "text": "Экономия12дна админ-задачи",
+      "backgroundColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.4)",
+      "backgroundImage": "none",
+      "color": "rgb(237, 237, 237)",
+      "borderColor": "oklab(0.371997 -0.00968689 -0.0429107 / 0.3)",
+      "borderTopColor": "oklab(0.371997 -0.00968689 -0.0429107 / 0.3)"
+    }
+  ],
+  "headings": [
+    {
+      "tag": "h1",
+      "cls": "text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-3 lg:mb-6",
+      "text": "Универсальный бизнес-хаб для фрилансеров",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(255, 255, 255)",
+      "borderTopColor": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "h2",
+      "cls": "text-5xl sm:text-6xl font-bold text-white tracking-tight tabular-nums",
+      "text": "$48,240",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(255, 255, 255)",
+      "borderTopColor": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "h2",
+      "cls": "text-3xl md:text-4xl font-bold text-slate-100 mb-4",
+      "text": "Возможности для управления фриланс-бизнесом",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(96.286 -0.852436 -2.46847)",
+      "borderColor": "lab(96.286 -0.852436 -2.46847)",
+      "borderTopColor": "lab(96.286 -0.852436 -2.46847)"
+    },
+    {
+      "tag": "h3",
+      "cls": "font-semibold text-slate-100 mb-2 group-hover:text-indigo-300 transition-colors",
+      "text": "Управление счетами",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(96.286 -0.852436 -2.46847)",
+      "borderColor": "lab(96.286 -0.852436 -2.46847)",
+      "borderTopColor": "lab(96.286 -0.852436 -2.46847)"
+    },
+    {
+      "tag": "h3",
+      "cls": "font-semibold text-slate-100 mb-2 group-hover:text-indigo-300 transition-colors",
+      "text": "Генератор договоров",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(96.286 -0.852436 -2.46847)",
+      "borderColor": "lab(96.286 -0.852436 -2.46847)",
+      "borderTopColor": "lab(96.286 -0.852436 -2.46847)"
+    },
+    {
+      "tag": "h3",
+      "cls": "font-semibold text-slate-100 mb-2 group-hover:text-indigo-300 transition-colors",
+      "text": "Учёт времени",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(96.286 -0.852436 -2.46847)",
+      "borderColor": "lab(96.286 -0.852436 -2.46847)",
+      "borderTopColor": "lab(96.286 -0.852436 -2.46847)"
+    }
+  ],
+  "paragraphs": [
+    {
+      "tag": "p",
+      "cls": "text-base sm:text-xl text-indigo-200 max-w-xl mx-auto lg:mx-0 mb-5 lg:mb-10",
+      "text": "Отправляйте профессиональные счета, создавайте договоры с по",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(84.4329 3.18977 -23.9688)",
+      "borderColor": "lab(84.4329 3.18977 -23.9688)",
+      "borderTopColor": "lab(84.4329 3.18977 -23.9688)"
+    },
+    {
+      "tag": "p",
+      "cls": "text-sm text-indigo-300 hidden sm:block",
+      "text": "Ранний доступ — будьте в числе первых фрилансеров, использую",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(74.0235 8.54138 -41.6075)",
+      "borderColor": "lab(74.0235 8.54138 -41.6075)",
+      "borderTopColor": "lab(74.0235 8.54138 -41.6075)"
+    },
+    {
+      "tag": "p",
+      "cls": "text-sm text-slate-400 mt-2",
+      "text": "Заработано в этом году — путь к $72k",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(65.5349 -2.25151 -14.5072)",
+      "borderColor": "lab(65.5349 -2.25151 -14.5072)",
+      "borderTopColor": "lab(65.5349 -2.25151 -14.5072)"
+    },
+    {
+      "tag": "p",
+      "cls": "text-slate-500 text-lg max-w-xl mx-auto",
+      "text": "Замените Freshbooks, Toggl, HelloSign и таблицы одной платфо",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    },
+    {
+      "tag": "p",
+      "cls": "text-sm text-slate-500 leading-relaxed",
+      "text": "Создавайте профессиональные счета с позициями, скидками и на",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    },
+    {
+      "tag": "p",
+      "cls": "text-sm text-slate-500 leading-relaxed",
+      "text": "Договоры на базе AI. Свои оговорки, электронная подпись, экс",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    }
+  ],
+  "captions": [
+    {
+      "tag": "div",
+      "cls": "inline-flex items-center gap-2 bg-white/10 text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/15 backdrop-blur-sm",
+      "text": "На базе AI",
+      "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+      "backgroundImage": "none",
+      "color": "rgb(255, 255, 255)",
+      "borderColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.15)",
+      "borderTopColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.15)"
+    },
+    {
+      "tag": "div",
+      "cls": "inline-flex items-center gap-2 bg-green-500/15 text-green-300 text-xs font-semibold px-3 py-1.5 rounded-full border border-green-400/25 backdrop-blur-sm",
+      "text": "Бесплатно навсегда",
+      "backgroundColor": "oklab(0.722997 -0.18884 0.110898 / 0.15)",
+      "backgroundImage": "none",
+      "color": "lab(86.9953 -47.2691 25.0054)",
+      "borderColor": "oklab(0.791996 -0.18403 0.0990587 / 0.25)",
+      "borderTopColor": "oklab(0.791996 -0.18403 0.0990587 / 0.25)"
+    },
+    {
+      "tag": "div",
+      "cls": "flex-1 mx-3 px-3 py-1 bg-slate-800/50 rounded-md text-xs text-slate-400 text-center",
+      "text": "app.lancerwise.com",
+      "backgroundColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.5)",
+      "backgroundImage": "none",
+      "color": "lab(65.5349 -2.25151 -14.5072)",
+      "borderColor": "lab(65.5349 -2.25151 -14.5072)",
+      "borderTopColor": "lab(65.5349 -2.25151 -14.5072)"
+    },
+    {
+      "tag": "span",
+      "cls": "text-xs text-slate-400 uppercase tracking-wider font-medium",
+      "text": "С начала года",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(65.5349 -2.25151 -14.5072)",
+      "borderColor": "lab(65.5349 -2.25151 -14.5072)",
+      "borderTopColor": "lab(65.5349 -2.25151 -14.5072)"
+    },
+    {
+      "tag": "span",
+      "cls": "text-xs font-semibold text-green-400",
+      "text": "+34%",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(78.503 -64.9265 39.7492)",
+      "borderColor": "lab(78.503 -64.9265 39.7492)",
+      "borderTopColor": "lab(78.503 -64.9265 39.7492)"
+    },
+    {
+      "tag": "span",
+      "cls": "text-xs font-semibold text-slate-400",
+      "text": "Клиенты",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(65.5349 -2.25151 -14.5072)",
+      "borderColor": "lab(65.5349 -2.25151 -14.5072)",
+      "borderTopColor": "lab(65.5349 -2.25151 -14.5072)"
+    }
+  ],
+  "primaryButtons": [],
+  "gradientButtons": [
+    {
+      "tag": "a",
+      "cls": "bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] text-white text-sm font-semibold px-4 py-2.5 rounded-lg sh",
+      "text": "Начать",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "a",
+      "cls": "inline-flex items-center gap-2 bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-400 active:scale-[0.98] text-white text-sm font-sem",
+      "text": "Рассчитать ставку",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    }
+  ],
+  "hardcodedClassCounts": {
+    "[class*=\"bg-slate-\"]": 52,
+    "[class*=\"border-slate-\"]": 40,
+    "[class*=\"text-slate-\"]": 154,
+    "[class*=\"bg-violet-\"]": 35,
+    "[class*=\"border-violet-\"]": 14,
+    "[class*=\"text-white\"]": 30,
+    "[class*=\"bg-gray-\"]": 0,
+    "[class*=\"border-gray-\"]": 0,
+    "[class*=\"from-violet\"]": 4,
+    "[class*=\"via-purple\"]": 3,
+    "[class*=\"to-pink\"]": 3,
+    "[class*=\"from-purple\"]": 0,
+    "[class*=\"bg-purple-\"]": 0
+  },
+  "bodyClass": "inter_5972bc34-module__OU16Qa__className h-full antialiased",
+  "htmlClass": "h-full dark",
+  "routeSlug": "landing",
+  "routeUrl": "https://www.lancerwise.com/",
+  "finalUrl": "https://www.lancerwise.com/",
+  "redirected": false
+}

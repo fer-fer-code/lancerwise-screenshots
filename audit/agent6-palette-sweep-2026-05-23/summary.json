@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "landing",
+    "finalUrl": "https://www.lancerwise.com/"
+  },
+  {
+    "slug": "pricing",
+    "finalUrl": "https://www.lancerwise.com/pricing"
+  },
+  {
+    "slug": "login",
+    "finalUrl": "https://www.lancerwise.com/dashboard"
+  },
+  {
+    "slug": "dashboard",
+    "finalUrl": "https://www.lancerwise.com/dashboard"
+  },
+  {
+    "slug": "clients",
+    "finalUrl": "https://www.lancerwise.com/clients"
+  },
+  {
+    "slug": "projects",
+    "finalUrl": "https://www.lancerwise.com/projects"
+  },
+  {
+    "slug": "invoices",
+    "finalUrl": "https://www.lancerwise.com/invoices"
+  },
+  {
+    "slug": "work-time",
+    "finalUrl": "https://www.lancerwise.com/work/time"
+  },
+  {
+    "slug": "tasks",
+    "finalUrl": "https://www.lancerwise.com/tasks"
+  },
+  {
+    "slug": "analytics-forecast",
+    "finalUrl": "https://www.lancerwise.com/analytics/forecast"
+  },
+  {
+    "slug": "settings",
+    "finalUrl": "https://www.lancerwise.com/settings"
+  },
+  {
+    "slug": "upgrade",
+    "finalUrl": "https://www.lancerwise.com/upgrade"
+  }
+]

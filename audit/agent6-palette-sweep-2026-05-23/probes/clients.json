@@ -1,0 +1,266 @@
+{
+  "url": "https://www.lancerwise.com/clients",
+  "timestamp": "2026-05-23T13:02:53.565Z",
+  "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+  "cssVars": {
+    "--canvas": "#0b0b12",
+    "--surface": "#11111a",
+    "--card": "#15151f",
+    "--elevated": "#1b1b26",
+    "--accent-primary": "#6a5ae0",
+    "--text-primary": "#f4f4f6",
+    "--text-secondary": "#a0a0ae",
+    "--text-muted": "#6b6b7b",
+    "--border-subtle": "#ffffff0f",
+    "--border": "#ffffff14",
+    "--border-strong": "#ffffff1a"
+  },
+  "body": {
+    "selector": "body",
+    "found": true,
+    "backgroundColor": "rgb(10, 10, 10)",
+    "backgroundImage": "none",
+    "color": "rgb(237, 237, 237)",
+    "borderColor": "rgb(237, 237, 237)"
+  },
+  "html": {
+    "selector": "html",
+    "found": true,
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "none",
+    "color": "rgb(255, 255, 255)",
+    "borderColor": "rgb(255, 255, 255)"
+  },
+  "main": {
+    "selector": "main",
+    "found": true,
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "none",
+    "color": "rgb(226, 232, 240)",
+    "borderColor": "rgb(226, 232, 240)"
+  },
+  "sidebar": {
+    "selector": "[data-sidebar], aside, nav[class*=\"sidebar\"]",
+    "found": true,
+    "backgroundColor": "rgb(17, 17, 26)",
+    "backgroundImage": "none",
+    "color": "rgb(237, 237, 237)",
+    "borderColor": "rgba(255, 255, 255, 0.06)"
+  },
+  "header": {
+    "selector": "header",
+    "found": true,
+    "backgroundColor": "rgb(17, 17, 26)",
+    "backgroundImage": "none",
+    "color": "rgb(237, 237, 237)",
+    "borderColor": "rgba(255, 255, 255, 0.06)"
+  },
+  "cards": [
+    {
+      "tag": "button",
+      "cls": "hidden sm:flex items-center gap-2 w-56 bg-card border border-subtle hover:border-strong rounded-lg px-3 py-2 min-h-[44px] transition-colors",
+      "text": "Поиск...⌘K",
+      "backgroundColor": "rgb(21, 21, 31)",
+      "backgroundImage": "none",
+      "color": "rgb(237, 237, 237)",
+      "borderColor": "rgba(255, 255, 255, 0.06)",
+      "borderTopColor": "rgba(255, 255, 255, 0.06)"
+    },
+    {
+      "tag": "button",
+      "cls": "hidden md:flex w-7 h-7 rounded-md border border-strong items-center justify-center text-text-muted hover:text-text-secondary text-xs font-semibold hover:bg-elevated transition-colors",
+      "text": "?",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgba(255, 255, 255, 0.1)",
+      "borderTopColor": "rgba(255, 255, 255, 0.1)"
+    },
+    {
+      "tag": "div",
+      "cls": "bg-card border border-subtle rounded-xl p-5",
+      "text": "Всего клиентов2",
+      "backgroundColor": "rgb(21, 21, 31)",
+      "backgroundImage": "none",
+      "color": "rgb(226, 232, 240)",
+      "borderColor": "rgba(255, 255, 255, 0.06)",
+      "borderTopColor": "rgba(255, 255, 255, 0.06)"
+    },
+    {
+      "tag": "div",
+      "cls": "bg-card border border-subtle rounded-xl p-5",
+      "text": "Активные0",
+      "backgroundColor": "rgb(21, 21, 31)",
+      "backgroundImage": "none",
+      "color": "rgb(226, 232, 240)",
+      "borderColor": "rgba(255, 255, 255, 0.06)",
+      "borderTopColor": "rgba(255, 255, 255, 0.06)"
+    },
+    {
+      "tag": "div",
+      "cls": "bg-card border border-subtle rounded-xl p-5",
+      "text": "Доход с начала года$0",
+      "backgroundColor": "rgb(21, 21, 31)",
+      "backgroundImage": "none",
+      "color": "rgb(226, 232, 240)",
+      "borderColor": "rgba(255, 255, 255, 0.06)",
+      "borderTopColor": "rgba(255, 255, 255, 0.06)"
+    },
+    {
+      "tag": "div",
+      "cls": "bg-card border border-subtle rounded-xl p-5",
+      "text": "С просрочкой0",
+      "backgroundColor": "rgb(21, 21, 31)",
+      "backgroundImage": "none",
+      "color": "rgb(226, 232, 240)",
+      "borderColor": "rgba(255, 255, 255, 0.06)",
+      "borderTopColor": "rgba(255, 255, 255, 0.06)"
+    },
+    {
+      "tag": "a",
+      "cls": "flex items-center gap-2 bg-white/[0.04] hover:bg-white/[0.07] border border-subtle hover:border-line text-white text-sm font-medium px-3 py-2 rounded-lg transition-colors min-h-[44px]",
+      "text": "Воронка",
+      "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.04)",
+      "backgroundImage": "none",
+      "color": "rgb(255, 255, 255)",
+      "borderColor": "rgba(255, 255, 255, 0.06)",
+      "borderTopColor": "rgba(255, 255, 255, 0.06)"
+    },
+    {
+      "tag": "button",
+      "cls": "flex items-center gap-1.5 text-sm text-white bg-white/[0.04] hover:bg-white/[0.07] border border-subtle hover:border-line font-medium px-3 py-2 rounded-lg transition-colors min-h-[44px]",
+      "text": "More",
+      "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.04)",
+      "backgroundImage": "none",
+      "color": "rgb(255, 255, 255)",
+      "borderColor": "rgba(255, 255, 255, 0.06)",
+      "borderTopColor": "rgba(255, 255, 255, 0.06)"
+    }
+  ],
+  "headings": [
+    {
+      "tag": "h1",
+      "cls": "text-lg font-semibold text-text-primary",
+      "text": "Клиенты",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(244, 244, 246)",
+      "borderColor": "rgb(244, 244, 246)",
+      "borderTopColor": "rgb(244, 244, 246)"
+    }
+  ],
+  "paragraphs": [
+    {
+      "tag": "p",
+      "cls": "text-sm text-slate-500",
+      "text": "2 клиента",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    }
+  ],
+  "captions": [
+    {
+      "tag": "button",
+      "cls": "text-xs text-text-muted hover:text-text-secondary transition-colors",
+      "text": "Горячие клавиши",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgb(107, 107, 123)",
+      "borderTopColor": "rgb(107, 107, 123)"
+    },
+    {
+      "tag": "kbd",
+      "cls": "hidden lg:block text-xs text-text-muted bg-white/5 border border-subtle px-1.5 py-0.5 rounded font-mono flex-shrink-0",
+      "text": "⌘K",
+      "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgba(255, 255, 255, 0.06)",
+      "borderTopColor": "rgba(255, 255, 255, 0.06)"
+    },
+    {
+      "tag": "button",
+      "cls": "hidden md:flex w-7 h-7 rounded-md border border-strong items-center justify-center text-text-muted hover:text-text-secondary text-xs font-semibold hover:bg-elevated transition-colors",
+      "text": "?",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(107, 107, 123)",
+      "borderColor": "rgba(255, 255, 255, 0.1)",
+      "borderTopColor": "rgba(255, 255, 255, 0.1)"
+    },
+    {
+      "tag": "button",
+      "cls": "relative w-11 h-11 rounded-full bg-violet-900/20 flex items-center justify-center text-violet-400 font-semibold text-xs overflow-hidden hover:ring-2 hover:ring-violet-500/50 transition-all",
+      "text": "",
+      "backgroundColor": "oklab(0.379994 0.0760902 -0.172985 / 0.2)",
+      "backgroundImage": "none",
+      "color": "lab(62.8239 34.9159 -60.0512)",
+      "borderColor": "lab(62.8239 34.9159 -60.0512)",
+      "borderTopColor": "lab(62.8239 34.9159 -60.0512)"
+    },
+    {
+      "tag": "span",
+      "cls": "font-mono font-semibold text-xs tabular-nums",
+      "text": "2:39:03",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(255, 255, 255)",
+      "borderTopColor": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "span",
+      "cls": "text-xs uppercase tracking-wider text-slate-500 font-medium",
+      "text": "Всего клиентов",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "color": "lab(48.0876 -2.03595 -16.5814)",
+      "borderColor": "lab(48.0876 -2.03595 -16.5814)",
+      "borderTopColor": "lab(48.0876 -2.03595 -16.5814)"
+    }
+  ],
+  "primaryButtons": [],
+  "gradientButtons": [
+    {
+      "tag": "a",
+      "cls": "fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 pl-3 pr-1.5 py-1.5 rounded-full bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover",
+      "text": "2:39:03",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "button",
+      "cls": "w-14 h-14 rounded-full flex items-center justify-center text-white transition-all duration-150 active:scale-[0.95] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400/60 focu",
+      "text": "",
+      "backgroundImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    }
+  ],
+  "hardcodedClassCounts": {
+    "[class*=\"bg-slate-\"]": 5,
+    "[class*=\"border-slate-\"]": 0,
+    "[class*=\"text-slate-\"]": 59,
+    "[class*=\"bg-violet-\"]": 11,
+    "[class*=\"border-violet-\"]": 4,
+    "[class*=\"text-white\"]": 20,
+    "[class*=\"bg-gray-\"]": 0,
+    "[class*=\"border-gray-\"]": 0,
+    "[class*=\"from-violet\"]": 3,
+    "[class*=\"via-purple\"]": 3,
+    "[class*=\"to-pink\"]": 3,
+    "[class*=\"from-purple\"]": 0,
+    "[class*=\"bg-purple-\"]": 0
+  },
+  "bodyClass": "inter_5972bc34-module__OU16Qa__className h-full antialiased",
+  "htmlClass": "h-full dark",
+  "routeSlug": "clients",
+  "routeUrl": "https://www.lancerwise.com/clients",
+  "finalUrl": "https://www.lancerwise.com/clients",
+  "redirected": false
+}
