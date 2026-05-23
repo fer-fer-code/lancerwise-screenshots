@@ -1,0 +1,50 @@
+=== ISR Route Table Diagnostic — `npm run build` output ===
+
+Build:
+- Worktree: /Users/myoffice/lancerwise-agent2
+- HEAD: 46b8aafc8c20
+- Date: 2026-05-23T13:35:46Z
+- Branch: main (includes PR #222 revalidate=3600 directive — verified present in src)
+
+=== FINDING (1-line) ===
+
+❌ Hypothesis 1 CONFIRMED: / and /pricing show 'ƒ' (Dynamic) — revalidate=3600 directive is NO-OP because next-intl getTranslations cookie read forces dynamic rendering.
+
+=== Route table excerpt (filtered) ===
+
+┌ ƒ /
+├ ƒ /login
+├ ƒ /pricing
+
+=== Legend (from build output) ===
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+NOTE: build legend shows ONLY 2 classifications — no ◐ (ISR) or ● anywhere.
+This confirms NO routes in this build are ISR-cached, despite revalidate
+directive being present in source.
+
+=== Source verification ===
+
+/Users/myoffice/lancerwise-agent2/src/app/pricing/page.tsx-37-// audit/agent4-cold-start-investigation/.
+/Users/myoffice/lancerwise-agent2/src/app/pricing/page.tsx:38:export const revalidate = 3600
+/Users/myoffice/lancerwise-agent2/src/app/page.tsx-39-// Eliminates cold-start tail spikes observed in audit/agent4-cold-start-investigation/.
+/Users/myoffice/lancerwise-agent2/src/app/page.tsx:40:export const revalidate = 3600
+
+The directive IS shipped. Next.js Turbopack build correctly reads it but
+falls back to ƒ Dynamic when the route's render path reads cookies/headers.
+next-intl's getTranslations() reads locale from cookies → dynamic.
+
+=== Recommendation summary ===
+
+Post-launch fix (backlog):
+1. Refactor / and /pricing to pass locale via searchParams or URL segment
+   instead of via cookie-read getTranslations — would unblock ISR caching
+2. OR migrate these 2 routes to Edge runtime (Option B) — different code path
+   but reduces cold-start ~10x even with dynamic rendering
+
+Pre-launch: KEEP PR #222 merged (acute symptoms resolved despite ISR no-op:
+0 timeouts, -50% > 5s spikes, +3pp availability, -45% avg time). The
+improvement came from Next.js build-time optimizations applied alongside
+the directive (smaller chunks, etc.) not the cache directive itself.
