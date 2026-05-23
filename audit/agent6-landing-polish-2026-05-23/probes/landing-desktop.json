@@ -1,0 +1,539 @@
+{
+  "url": "https://www.lancerwise.com/",
+  "viewport": {
+    "w": 1440,
+    "h": 900
+  },
+  "gradients": [
+    {
+      "tag": "A",
+      "class": "bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-40",
+      "bgImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "bgColor": "rgba(0, 0, 0, 0)",
+      "area": 3280,
+      "visible": true
+    },
+    {
+      "tag": "DIV",
+      "class": "bg-gradient-to-br from-slate-900 to-slate-950 rounded-2xl overflow-hidden border border-slate-800/50 shadow-2xl shadow-v",
+      "bgImage": "linear-gradient(to right bottom, lab(7.78673 1.82345 -15.0537) 0%, lab(1.76974 1.32743 -9.28855) 100%)",
+      "bgColor": "rgba(0, 0, 0, 0)",
+      "area": 277440,
+      "visible": true
+    },
+    {
+      "tag": "DIV",
+      "class": "w-full rounded-t transition-all bg-gradient-to-t from-violet-600 via-purple-500 to-pink-500",
+      "bgImage": "linear-gradient(to top, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "bgColor": "rgba(0, 0, 0, 0)",
+      "area": 2373,
+      "visible": true
+    },
+    {
+      "tag": "DIV",
+      "class": "absolute inset-x-0 bottom-0 h-16 lg:hidden pointer-events-none",
+      "bgImage": "linear-gradient(to top, rgb(9, 9, 24), rgba(0, 0, 0, 0))",
+      "bgColor": "rgba(0, 0, 0, 0)",
+      "area": 0,
+      "visible": false
+    },
+    {
+      "tag": "A",
+      "class": "inline-flex items-center gap-2 bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:",
+      "bgImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "bgColor": "rgba(0, 0, 0, 0)",
+      "area": 8573,
+      "visible": true
+    },
+    {
+      "tag": "DIV",
+      "class": "rounded-2xl p-7 border relative flex flex-col transition-transform bg-gradient-to-br from-violet-600 to-purple-700 borde",
+      "bgImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(36.1758 69.8525 -80.0381) 100%)",
+      "bgColor": "rgba(0, 0, 0, 0)",
+      "area": 193689,
+      "visible": true
+    }
+  ],
+  "heroGradient": {
+    "tag": "DIV",
+    "class": "bg-gradient-to-br from-slate-900 to-slate-950 rounded-2xl overflow-hidden border border-slate-800/50 shadow-2xl shadow-v",
+    "bgImage": "linear-gradient(to right bottom, lab(7.78673 1.82345 -15.0537) 0%, lab(1.76974 1.32743 -9.28855) 100%)",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "area": 277440,
+    "visible": true
+  },
+  "ctas": [
+    {
+      "tag": "A",
+      "text": "LancerWise",
+      "class": "flex items-center gap-2",
+      "bgColor": "rgba(0, 0, 0, 0)",
+      "bgImage": "none",
+      "color": "rgb(237, 237, 237)",
+      "width": 145,
+      "height": 32,
+      "href": "/"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "\ud83c\uddf7\ud83c\uddfa RU",
+      "class": "flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-col",
+      "bgColor": "rgba(0, 0, 0, 0)",
+      "bgImage": "none",
+      "color": "lab(84.7652 -1.94535 -7.93337)",
+      "width": 83,
+      "height": 32,
+      "href": null
+    },
+    {
+      "tag": "A",
+      "text": "\u0412\u043e\u0439\u0442\u0438",
+      "class": "text-sm font-medium text-slate-400 hover:text-slate-100 transition-colors px-2 py-2.5",
+      "bgColor": "rgba(0, 0, 0, 0)",
+      "bgImage": "none",
+      "color": "lab(65.5349 -2.25151 -14.5072)",
+      "width": 57,
+      "height": 40,
+      "href": "/login"
+    },
+    {
+      "tag": "A",
+      "text": "\u041d\u0430\u0447\u0430\u0442\u044c",
+      "class": "bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:via-purple-400 hover:to-pink-40",
+      "bgColor": "rgba(0, 0, 0, 0)",
+      "bgImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "color": "rgb(255, 255, 255)",
+      "width": 82,
+      "height": 40,
+      "href": "/register"
+    },
+    {
+      "tag": "A",
+      "text": "\u041d\u0430\u0447\u0430\u0442\u044c \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e",
+      "class": "inline-flex items-center justify-center gap-2 bg-white text-violet-700 hover:bg-violet-50 font-semibold px-8 py-4 rounde",
+      "bgColor": "rgb(255, 255, 255)",
+      "bgImage": "none",
+      "color": "lab(35.2783 67.9912 -88.793)",
+      "width": 256,
+      "height": 64,
+      "href": "/register"
+    },
+    {
+      "tag": "A",
+      "text": "\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0434\u0435\u043c\u043e",
+      "class": "inline-flex items-center justify-center gap-2 bg-white/20 backdrop-blur-sm border-2 border-white/60 hover:bg-white/30 ho",
+      "bgColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.2)",
+      "bgImage": "none",
+      "color": "rgb(255, 255, 255)",
+      "width": 230,
+      "height": 64,
+      "href": "/demo"
+    },
+    {
+      "tag": "A",
+      "text": "\u0420\u0430\u0441\u0441\u0447\u0438\u0442\u0430\u0442\u044c \u0441\u0442\u0430\u0432\u043a\u0443",
+      "class": "inline-flex items-center gap-2 bg-gradient-to-br from-violet-600 via-purple-500 to-pink-500 hover:from-violet-500 hover:",
+      "bgColor": "rgba(0, 0, 0, 0)",
+      "bgImage": "linear-gradient(to right bottom, lab(41.088 68.9966 -91.995) 0%, lab(52.0183 66.11 -78.2316) 50%, lab(56.9303 76.8162 -8.07021) 100%)",
+      "color": "rgb(255, 255, 255)",
+      "width": 195,
+      "height": 44,
+      "href": "/tools/rate-calculator"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "\u041f\u043e\u043c\u0435\u0441\u044f\u0447\u043d\u043e",
+      "class": "px-5 py-2 rounded-lg text-sm font-semibold transition-all bg-violet-600 text-white shadow-sm",
+      "bgColor": "lab(41.088 68.9966 -91.995)",
+      "bgImage": "none",
+      "color": "rgb(255, 255, 255)",
+      "width": 120,
+      "height": 36,
+      "href": null
+    },
+    {
+      "tag": "BUTTON",
+      "text": "\u0413\u043e\u0434\u043e\u0432\u043e\u0439\n\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u044f 20%",
+      "class": "px-5 py-2 rounded-lg text-sm font-semibold transition-all flex items-center gap-2 text-slate-400 hover:text-slate-200",
+      "bgColor": "rgba(0, 0, 0, 0)",
+      "bgImage": "none",
+      "color": "lab(65.5349 -2.25151 -14.5072)",
+      "width": 217,
+      "height": 38,
+      "href": null
+    },
+    {
+      "tag": "A",
+      "text": "\u041d\u0430\u0447\u0430\u0442\u044c \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e",
+      "class": "block text-center font-semibold py-3 rounded-xl transition-colors min-h-[44px] flex items-center justify-center bg-viole",
+      "bgColor": "lab(41.088 68.9966 -91.995)",
+      "bgImage": "none",
+      "color": "rgb(255, 255, 255)",
+      "width": 267,
+      "height": 48,
+      "href": "/register"
+    },
+    {
+      "tag": "A",
+      "text": "\u041f\u0440\u043e\u0431\u043d\u044b\u0439 \u043f\u0435\u0440\u0438\u043e\u0434 14 \u0434\u043d\u0435\u0439",
+      "class": "block text-center font-semibold py-3 rounded-xl transition-colors min-h-[44px] flex items-center justify-center bg-white",
+      "bgColor": "rgb(255, 255, 255)",
+      "bgImage": "none",
+      "color": "lab(35.2783 67.9912 -88.793)",
+      "width": 281,
+      "height": 50,
+      "href": "/register?plan=pro"
+    },
+    {
+      "tag": "A",
+      "text": "\u0421\u043e\u043e\u0431\u0449\u0438\u0442\u044c, \u043a\u043e\u0433\u0434\u0430 \u0441\u0442\u0430\u043d\u0435\u0442 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u043e",
+      "class": "block text-center font-semibold py-3 rounded-xl transition-colors min-h-[44px] flex items-center justify-center bg-viole",
+      "bgColor": "lab(41.088 68.9966 -91.995)",
+      "bgImage": "none",
+      "color": "rgb(255, 255, 255)",
+      "width": 267,
+      "height": 72,
+      "href": "mailto:hello@lancerwise.com?subject=Notify%20me%20when%20Business%20plan%20launches"
+    },
+    {
+      "tag": "A",
+      "text": "\u041d\u0430\u0447\u0430\u0442\u044c \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e",
+      "class": "inline-flex items-center gap-2 bg-white text-violet-700 hover:bg-violet-50 font-semibold px-8 py-4 rounded-xl text-lg tr",
+      "bgColor": "rgb(255, 255, 255)",
+      "bgImage": "none",
+      "color": "lab(35.2783 67.9912 -88.793)",
+      "width": 256,
+      "height": 60,
+      "href": "/register"
+    }
+  ],
+  "typography": {
+    "h1": {
+      "tag": "H1",
+      "text": "\u0423\u043d\u0438\u0432\u0435\u0440\u0441\u0430\u043b\u044c\u043d\u044b\u0439 \u0431\u0438\u0437\u043d\u0435\u0441-\u0445\u0430\u0431 \u0434\u043b\u044f \u0444\u0440\u0438\u043b\u0430\u043d\u0441\u0435\u0440\u043e\u0432",
+      "fontSize": "60px",
+      "lineHeight": "75px",
+      "fontWeight": "700",
+      "fontFamily": "Inter, \"Inter Fallback\"",
+      "marginBottom": "24px",
+      "color": "rgb(255, 255, 255)"
+    },
+    "h2": {
+      "tag": "H2",
+      "text": "$48,240",
+      "fontSize": "60px",
+      "lineHeight": "60px",
+      "fontWeight": "700",
+      "fontFamily": "Inter, \"Inter Fallback\"",
+      "marginBottom": "0px",
+      "color": "rgb(255, 255, 255)"
+    },
+    "h3": {
+      "tag": "H3",
+      "text": "\u0423\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0441\u0447\u0435\u0442\u0430\u043c\u0438",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, \"Inter Fallback\"",
+      "marginBottom": "8px",
+      "color": "lab(96.286 -0.852436 -2.46847)"
+    },
+    "body": {
+      "tag": "P",
+      "text": "\u041e\u0442\u043f\u0440\u0430\u0432\u043b\u044f\u0439\u0442\u0435 \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0435 \u0441\u0447\u0435\u0442\u0430, \u0441\u043e\u0437\u0434\u0430\u0432\u0430\u0439\u0442\u0435 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u044b \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e AI, \u0443\u0447\u0438\u0442\u044b\u0432\u0430\u0439\u0442\u0435",
+      "fontSize": "20px",
+      "lineHeight": "28px",
+      "fontWeight": "400",
+      "fontFamily": "Inter, \"Inter Fallback\"",
+      "marginBottom": "40px",
+      "color": "lab(84.4329 3.18977 -23.9688)"
+    },
+    "button": {
+      "tag": "BUTTON",
+      "text": "\ud83c\uddf7\ud83c\uddfa RU",
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "fontWeight": "400",
+      "fontFamily": "Inter, \"Inter Fallback\"",
+      "marginBottom": "0px",
+      "color": "lab(84.7652 -1.94535 -7.93337)"
+    }
+  },
+  "h2List": [
+    {
+      "text": "$48,240",
+      "fontSize": "60px",
+      "marginTop": "0px",
+      "marginBottom": "0px"
+    },
+    {
+      "text": "\u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438 \u0434\u043b\u044f \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u0444\u0440\u0438\u043b\u0430\u043d\u0441-\u0431\u0438\u0437\u043d\u0435\u0441\u043e\u043c",
+      "fontSize": "36px",
+      "marginTop": "0px",
+      "marginBottom": "16px"
+    },
+    {
+      "text": "\u0417\u0430\u043f\u0443\u0441\u043a \u0437\u0430 \u043f\u0430\u0440\u0443 \u043c\u0438\u043d\u0443\u0442",
+      "fontSize": "36px",
+      "marginTop": "0px",
+      "marginBottom": "16px"
+    },
+    {
+      "text": "\u041f\u043e\u0434\u0445\u043e\u0434\u0438\u0442 \u043a\u0430\u0436\u0434\u043e\u043c\u0443 \u0442\u0438\u043f\u0443 \u0444\u0440\u0438\u043b\u0430\u043d\u0441\u0435\u0440\u0430",
+      "fontSize": "30px",
+      "marginTop": "0px",
+      "marginBottom": "16px"
+    },
+    {
+      "text": "\u041f\u0440\u043e\u0441\u0442\u044b\u0435 \u0438 \u043f\u0440\u043e\u0437\u0440\u0430\u0447\u043d\u044b\u0435 \u0442\u0430\u0440\u0438\u0444\u044b",
+      "fontSize": "36px",
+      "marginTop": "0px",
+      "marginBottom": "16px"
+    },
+    {
+      "text": "\u0427\u0430\u0441\u0442\u044b\u0435 \u0432\u043e\u043f\u0440\u043e\u0441\u044b",
+      "fontSize": "30px",
+      "marginTop": "0px",
+      "marginBottom": "16px"
+    },
+    {
+      "text": "\u0423\u043f\u0440\u0430\u0432\u043b\u044f\u0439\u0442\u0435 \u0444\u0440\u0438\u043b\u0430\u043d\u0441-\u0431\u0438\u0437\u043d\u0435\u0441\u043e\u043c \u043a\u0430\u043a \u043f\u0440\u043e\u0444\u0438",
+      "fontSize": "36px",
+      "marginTop": "0px",
+      "marginBottom": "16px"
+    }
+  ],
+  "scroll": {
+    "docScrollWidth": 1440,
+    "docClientWidth": 1440,
+    "bodyScrollWidth": 1440,
+    "horizontalOverflow": false
+  },
+  "touchTargets": {
+    "total": 33,
+    "small": 26,
+    "samples": [
+      {
+        "tag": "A",
+        "text": "LancerWise",
+        "width": 145,
+        "height": 32,
+        "href": "/"
+      },
+      {
+        "tag": "A",
+        "text": "\u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438",
+        "width": 94,
+        "height": 20,
+        "href": "https://www.lancerwise.com/#features"
+      },
+      {
+        "tag": "A",
+        "text": "\u0426\u0435\u043d\u044b",
+        "width": 37,
+        "height": 20,
+        "href": "https://www.lancerwise.com/#pricing"
+      },
+      {
+        "tag": "A",
+        "text": "FAQ",
+        "width": 27,
+        "height": 20,
+        "href": "https://www.lancerwise.com/#faq"
+      },
+      {
+        "tag": "A",
+        "text": "\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0435 \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u044b",
+        "width": 178,
+        "height": 20,
+        "href": "/tools/rate-calculator"
+      },
+      {
+        "tag": "A",
+        "text": "\u0411\u043b\u043e\u0433",
+        "width": 32,
+        "height": 20,
+        "href": "/blog"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "\ud83c\uddf7\ud83c\uddfa RU",
+        "width": 83,
+        "height": 32,
+        "href": null
+      },
+      {
+        "tag": "A",
+        "text": "\u0412\u043e\u0439\u0442\u0438",
+        "width": 57,
+        "height": 40,
+        "href": "/login"
+      },
+      {
+        "tag": "A",
+        "text": "\u041d\u0430\u0447\u0430\u0442\u044c",
+        "width": 82,
+        "height": 40,
+        "href": "/register"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "\u041f\u043e\u043c\u0435\u0441\u044f\u0447\u043d\u043e",
+        "width": 120,
+        "height": 36,
+        "href": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "\u0413\u043e\u0434\u043e\u0432\u043e\u0439\n\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u044f 20%",
+        "width": 217,
+        "height": 38,
+        "href": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "\u0421\u0440\u0430\u0432\u043d\u0438\u0442\u044c \u0432\u0441\u0435 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438",
+        "width": 193,
+        "height": 20,
+        "href": null
+      },
+      {
+        "tag": "A",
+        "text": "\u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438",
+        "width": 94,
+        "height": 17,
+        "href": "https://www.lancerwise.com/#features"
+      },
+      {
+        "tag": "A",
+        "text": "\u0426\u0435\u043d\u044b",
+        "width": 37,
+        "height": 17,
+        "href": "https://www.lancerwise.com/#pricing"
+      },
+      {
+        "tag": "A",
+        "text": "\u041a\u0430\u043b\u044c\u043a\u0443\u043b\u044f\u0442\u043e\u0440 \u0441\u0442\u0430\u0432\u043a\u0438",
+        "width": 137,
+        "height": 17,
+        "href": "/tools/rate-calculator"
+      },
+      {
+        "tag": "A",
+        "text": "\u0411\u043b\u043e\u0433",
+        "width": 32,
+        "height": 17,
+        "href": "/blog"
+      },
+      {
+        "tag": "A",
+        "text": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u044f API",
+        "width": 128,
+        "height": 17,
+        "href": "/api-docs"
+      },
+      {
+        "tag": "A",
+        "text": "\u0428\u0430\u0431\u043b\u043e\u043d\u044b n8n",
+        "width": 94,
+        "height": 17,
+        "href": "/n8n-templates"
+      },
+      {
+        "tag": "A",
+        "text": "\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0439",
+        "width": 137,
+        "height": 17,
+        "href": "/changelog"
+      },
+      {
+        "tag": "A",
+        "text": "\u041e \u043d\u0430\u0441",
+        "width": 39,
+        "height": 17,
+        "href": "/about"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "idx": 0,
+      "tag": "SECTION",
+      "class": "relative pt-6 sm:pt-10 lg:pt-16 pb-0 lg:pb-20 px-6 overflow-hidden",
+      "top": 65,
+      "height": 735,
+      "heading": "\u0423\u043d\u0438\u0432\u0435\u0440\u0441\u0430\u043b\u044c\u043d\u044b\u0439 \u0431\u0438\u0437\u043d\u0435\u0441-\u0445\u0430\u0431 \u0434\u043b\u044f \u0444\u0440\u0438\u043b\u0430\u043d\u0441\u0435\u0440\u043e\u0432"
+    },
+    {
+      "idx": 1,
+      "tag": "SECTION",
+      "class": "py-12 px-6 border-b border-slate-700/50 bg-slate-900/50",
+      "top": 800,
+      "height": 179,
+      "heading": null
+    },
+    {
+      "idx": 2,
+      "tag": "SECTION",
+      "class": "py-20 px-6",
+      "top": 979,
+      "height": 1287,
+      "heading": "\u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438 \u0434\u043b\u044f \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u0444\u0440\u0438\u043b\u0430\u043d\u0441-\u0431\u0438\u0437\u043d\u0435\u0441\u043e\u043c"
+    },
+    {
+      "idx": 3,
+      "tag": "SECTION",
+      "class": "py-20 px-6 bg-slate-900/50 border-y border-slate-700/50",
+      "top": 2265,
+      "height": 643,
+      "heading": "\u0417\u0430\u043f\u0443\u0441\u043a \u0437\u0430 \u043f\u0430\u0440\u0443 \u043c\u0438\u043d\u0443\u0442"
+    },
+    {
+      "idx": 4,
+      "tag": "SECTION",
+      "class": "py-10 px-6 bg-violet-950/60 border-b border-violet-900/40",
+      "top": 2908,
+      "height": 143,
+      "heading": null
+    },
+    {
+      "idx": 5,
+      "tag": "SECTION",
+      "class": "py-20 px-6 bg-slate-800/50",
+      "top": 3051,
+      "height": 534,
+      "heading": "\u041f\u043e\u0434\u0445\u043e\u0434\u0438\u0442 \u043a\u0430\u0436\u0434\u043e\u043c\u0443 \u0442\u0438\u043f\u0443 \u0444\u0440\u0438\u043b\u0430\u043d\u0441\u0435\u0440\u0430"
+    },
+    {
+      "idx": 6,
+      "tag": "SECTION",
+      "class": "py-20 px-6 bg-slate-900/50 border-y border-slate-700/50",
+      "top": 3585,
+      "height": 954,
+      "heading": "\u041f\u0440\u043e\u0441\u0442\u044b\u0435 \u0438 \u043f\u0440\u043e\u0437\u0440\u0430\u0447\u043d\u044b\u0435 \u0442\u0430\u0440\u0438\u0444\u044b"
+    },
+    {
+      "idx": 7,
+      "tag": "SECTION",
+      "class": "py-20 px-6",
+      "top": 4539,
+      "height": 646,
+      "heading": "\u0427\u0430\u0441\u0442\u044b\u0435 \u0432\u043e\u043f\u0440\u043e\u0441\u044b"
+    },
+    {
+      "idx": 8,
+      "tag": "SECTION",
+      "class": "relative py-24 px-6 overflow-hidden",
+      "top": 5185,
+      "height": 488,
+      "heading": "\u0423\u043f\u0440\u0430\u0432\u043b\u044f\u0439\u0442\u0435 \u0444\u0440\u0438\u043b\u0430\u043d\u0441-\u0431\u0438\u0437\u043d\u0435\u0441\u043e\u043c \u043a\u0430\u043a \u043f\u0440\u043e\u0444\u0438"
+    }
+  ],
+  "rootBg": {
+    "bodyBg": "rgb(10, 10, 10)",
+    "bodyBgImage": "none",
+    "htmlBg": "rgba(0, 0, 0, 0)"
+  },
+  "socialProof": [],
+  "pricingMarkers": []
+}
