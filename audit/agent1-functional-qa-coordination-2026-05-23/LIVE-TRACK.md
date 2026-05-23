@@ -181,6 +181,35 @@ Both filings had identical body + fix recommendations. Keeping #207 canonical be
 
 **Cumulative P1 count so far: 3** (#207 systematic CSS, #210 forecast light-mode, #211 bell dropdown)
 
+### T+41 (11:16 UTC) — Fix sprint kicking off: PR #216 opened для #207/#208
+
+[AGENT 3] posted second #206 comment announcing **[PR #216](https://github.com/fer-fer-code/lancerwise/pull/216)** opened к close the systematic input text-color bug.
+
+**PR scope (much wider than initial diagnosis):**
+- Affected count: **267 input className occurrences across 93 files**
+- Root cause: Tailwind v4 preflight does NOT force `color: inherit` (v3 did)
+- Fix: 2-rule CSS addition к `src/app/globals.css` (24 lines total)
+- Branch: `fix/p1-input-text-color-dark-theme`
+- CI status: 2/4 green (eslint-i18n, locale-purity-ru); visual-regression in progress; Vercel preview pending
+
+**CSS fix:**
+```css
+input, select, textarea { color: inherit; }
+main.lw-app-main { color: rgb(226 232 240); /* slate-200 */ }
+```
+
+**Coordination note:** PR body says "Closes #208" — but #208 is the closed dupe (per earlier dedup). Canonical issue is **[#207](https://github.com/fer-fer-code/lancerwise/issues/207)**. PR will functionally close both когда merged, но GH auto-close keyword only matches #208 reference. **Will leave note к [AGENT 2/3] на the PR after their review request** к update body OR manually close #207 post-merge.
+
+**Severity context updated:** #207 originally scored as "≥4 form pages affected" based on [AGENT 3]'s + [AGENT 5]'s confirmation. PR #216 reveals true scope is **267 inputs / 93 files** — much wider than thought, but the fix is а 2-line CSS rule в globals.css (lowest possible blast radius). Excellent ratio fix-effort / coverage.
+
+### Status — 3/5 reports, 4/5 areas, 3 P1, 1 PR in flight
+
+- ✅ [AGENT 3] Projects+Clients — 1 P1 systematic ([#207](https://github.com/fer-fer-code/lancerwise/issues/207)) → **PR [#216](https://github.com/fer-fer-code/lancerwise/pull/216) in flight**
+- ✅ [AGENT 5] Contracts+Settings — 0 P0/P1
+- ✅ [AGENT 5] also Analytics+Auth — 2 P1 NEW ([#210](https://github.com/fer-fer-code/lancerwise/issues/210), [#211](https://github.com/fer-fer-code/lancerwise/issues/211))
+- ⏳ [AGENT 2] Invoices — pending
+- ⏳ [AGENT 4] Time + Tasks — pending
+
 ### T+45 (TBD)
 *(awaiting poll)*
 
