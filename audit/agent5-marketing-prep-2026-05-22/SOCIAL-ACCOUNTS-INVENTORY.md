@@ -30,11 +30,13 @@
 - Location: `Remote`
 - Website: `https://www.lancerwise.com` (clickable on profile)
 - Avatar: agent6 branded 400×400 (purple gradient + lightning bolt) — uploaded 2026-05-23, commit 1e70aab
-- Banner: agent6 branded 1500×500 (purple gradient + "Lancerwise" wordmark + value-prop pills "AI-powered / Free to start / EN + RU bilingual / No CC needed" + `lancerwise.com` watermark) — uploaded 2026-05-23, commit 1e70aab
+- Banner v1: agent6 1500×500 — uploaded 2026-05-23 (commit 1e70aab)
+- Banner v3: agent6 typography fix (Playwright Chromium + Inter 800 from Google Fonts CDN; uniform glyph weights, 0.00px center delta) — **redeployed 2026-05-23**
 
 ### Final verification
-- Public profile: https://x.com/lancerwise — confirmed live with new branded banner + avatar matching `lancerwise.com` purple gradient identity
-- Side-by-side screenshot: `twitter-final-profile.png` in this directory
+- Public profile: https://x.com/lancerwise — v3 branded banner + avatar live with uniform Inter-800 "Lancerwise" wordmark, centered 3-row layout, purple gradient matching `lancerwise.com` identity
+- v1 verification screenshot: `twitter-final-profile.png`
+- v3 verification screenshot: `twitter-final-profile-v3.png`
 
 ### Warmup tweets posted (3, clean English)
 
