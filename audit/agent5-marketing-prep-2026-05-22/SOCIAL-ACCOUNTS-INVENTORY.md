@@ -29,8 +29,12 @@
 - Bio: `All-in-one CRM for freelancers. Invoices, contracts, time tracking — AI that actually saves time. lancerwise.com`
 - Location: `Remote`
 - Website: `https://www.lancerwise.com` (clickable on profile)
-- Avatar: `lancerwise.com/logo.png` (lightning bolt logo, 512×512)
-- Banner: same logo image (placeholder — replace with agent6's 1500×500 banner pre-launch)
+- Avatar: agent6 branded 400×400 (purple gradient + lightning bolt) — uploaded 2026-05-23, commit 1e70aab
+- Banner: agent6 branded 1500×500 (purple gradient + "Lancerwise" wordmark + value-prop pills "AI-powered / Free to start / EN + RU bilingual / No CC needed" + `lancerwise.com` watermark) — uploaded 2026-05-23, commit 1e70aab
+
+### Final verification
+- Public profile: https://x.com/lancerwise — confirmed live with new branded banner + avatar matching `lancerwise.com` purple gradient identity
+- Side-by-side screenshot: `twitter-final-profile.png` in this directory
 
 ### Warmup tweets posted (3, clean English)
 
