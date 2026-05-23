@@ -1,0 +1,229 @@
+{
+  "cycles": [
+    {
+      "cycle": 1,
+      "step-2-url-after-click": "https://www.lancerwise.com/login",
+      "step-2-redirected": true,
+      "step-3-auth-cookie-cleared": true,
+      "step-4-dashboard-redirects-to-login": true,
+      "step-5-supabase-signout-api": [
+        {
+          "method": "POST",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/logout?scope=global",
+          "status": 204
+        }
+      ],
+      "all-auth-api-calls": [
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/verify?token=057ce92ddeba34a0b0ba6294411786ce2d88abbe7fd45d45723153e1&type=magiclink&redirect_to=https://www.lancerwise.com",
+          "status": 303
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/user",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/user",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/user",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/logout?scope=global",
+          "status": 204
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/verify?token=68a812d4c1ca08e3e64185b7075117420ce340817c1c71673aa8d3a6&type=magiclink&redirect_to=https://www.lancerwise.com",
+          "status": 303
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/user",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/user",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/user",
+          "status": 200
+        }
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "%c%d font-size:0;color:transparent NaN",
+        "%c%d font-size:0;color:transparent NaN",
+        "Failed to load resource: the server responded with a status of 401 ()"
+      ],
+      "step-6-relogin": true,
+      "step-6-final-dashboard-url": "https://www.lancerwise.com/dashboard",
+      "step-6-can-reach-dashboard": true
+    },
+    {
+      "cycle": 2,
+      "step-2-url-after-click": "https://www.lancerwise.com/login",
+      "step-2-redirected": true,
+      "step-3-auth-cookie-cleared": true,
+      "step-4-dashboard-redirects-to-login": true,
+      "step-5-supabase-signout-api": [
+        {
+          "method": "POST",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/logout?scope=global",
+          "status": 204
+        }
+      ],
+      "all-auth-api-calls": [
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/verify?token=fa5397c1240e5ab765036002044eda022023c595e64fcc0deb7da08c&type=magiclink&redirect_to=https://www.lancerwise.com",
+          "status": 303
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/user",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/user",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/user",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/logout?scope=global",
+          "status": 204
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/verify?token=1bf2221917878c82a028c9858ea6f95779804f5f7e98c8d6320849f1&type=magiclink&redirect_to=https://www.lancerwise.com",
+          "status": 303
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/user",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/user",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/user",
+          "status": 200
+        }
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "%c%d font-size:0;color:transparent NaN",
+        "%c%d font-size:0;color:transparent NaN",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "%c%d font-size:0;color:transparent NaN",
+        "%c%d font-size:0;color:transparent NaN"
+      ],
+      "step-6-relogin": true,
+      "step-6-final-dashboard-url": "https://www.lancerwise.com/dashboard",
+      "step-6-can-reach-dashboard": true
+    },
+    {
+      "cycle": 3,
+      "step-2-url-after-click": "https://www.lancerwise.com/login",
+      "step-2-redirected": true,
+      "step-3-auth-cookie-cleared": true,
+      "step-4-dashboard-redirects-to-login": true,
+      "step-5-supabase-signout-api": [
+        {
+          "method": "POST",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/logout?scope=global",
+          "status": 204
+        }
+      ],
+      "all-auth-api-calls": [
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/verify?token=71dbf50a9dd3d6cd176158245c5726e8dbbfd1e65d759da89b400765&type=magiclink&redirect_to=https://www.lancerwise.com",
+          "status": 303
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/user",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/user",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/user",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/logout?scope=global",
+          "status": 204
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/verify?token=4df96185ba97707b30b4a342d808a332243ce7ea318022241a336fba&type=magiclink&redirect_to=https://www.lancerwise.com",
+          "status": 303
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/user",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/user",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "url": "https://skfgwyzarrhhkzvltbgm.supabase.co/auth/v1/user",
+          "status": 200
+        }
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "%c%d font-size:0;color:transparent NaN"
+      ],
+      "step-6-relogin": true,
+      "step-6-final-dashboard-url": "https://www.lancerwise.com/dashboard",
+      "step-6-can-reach-dashboard": true
+    }
+  ],
+  "startedAt": "2026-05-23T13:36:22.559Z"
+}
