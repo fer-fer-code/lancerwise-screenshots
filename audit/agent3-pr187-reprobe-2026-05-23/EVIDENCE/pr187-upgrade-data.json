@@ -1,0 +1,130 @@
+{
+  "pro-user": {
+    "plan": "pro",
+    "cards": [
+      {
+        "text": "Free | $0 | forever | Up to 2 clients | Unlimited invoices | Time tracker | 3 AI generations / month | Basic reports | GDPR data export | Mobile responsive | Free forever",
+        "bgColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.5)",
+        "borderColor": "lab(26.9569 -1.47016 -15.6993)",
+        "hasUpgradeBtn": false,
+        "hasCurrentBadge": false,
+        "hasMostPopular": false,
+        "hasComingSoon": false,
+        "ctaButtons": []
+      },
+      {
+        "text": "Most popular | Current plan | Pro | $15 | /month | Unlimited clients | Unlimited AI generations (12+ features) | AI Business Advisor | AI Contract Risk Analyzer | Payment reminder automation | Recurring invoices | Revenue forecasting | Project profitability reports | Pre-signing checklists | Custom branding | Priority email support | Your current plan",
+        "bgColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.5)",
+        "borderColor": "lab(49.9355 55.1776 -81.8963)",
+        "hasUpgradeBtn": false,
+        "hasCurrentBadge": true,
+        "hasMostPopular": true,
+        "hasComingSoon": false,
+        "ctaButtons": []
+      }
+    ],
+    "errors": []
+  },
+  "free-user": {
+    "plan": "free",
+    "cards": [
+      {
+        "text": "Current plan | Free | $0 | forever | Up to 2 clients | Unlimited invoices | Time tracker | 3 AI generations / month | Basic reports | GDPR data export | Mobile responsive | Your current plan",
+        "bgColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.5)",
+        "borderColor": "lab(26.9569 -1.47016 -15.6993)",
+        "hasUpgradeBtn": false,
+        "hasCurrentBadge": true,
+        "hasMostPopular": false,
+        "hasComingSoon": false,
+        "ctaButtons": []
+      },
+      {
+        "text": "Most popular | Pro | $15 | /month | Unlimited clients | Unlimited AI generations (12+ features) | AI Business Advisor | AI Contract Risk Analyzer | Payment reminder automation | Recurring invoices | Revenue forecasting | Project profitability reports | Pre-signing checklists | Custom branding | Priority email support | Upgrade to Pro",
+        "bgColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.5)",
+        "borderColor": "lab(49.9355 55.1776 -81.8963)",
+        "hasUpgradeBtn": true,
+        "hasCurrentBadge": false,
+        "hasMostPopular": true,
+        "hasComingSoon": false,
+        "ctaButtons": [
+          {
+            "text": "Upgrade to Pro",
+            "disabled": false,
+            "ariaLabel": null,
+            "tagName": "BUTTON",
+            "href": null
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "business-user": {
+    "plan": "business",
+    "cards": [
+      {
+        "text": "Current plan | Free | $0 | forever | Up to 2 clients | Unlimited invoices | Time tracker | 3 AI generations / month | Basic reports | GDPR data export | Mobile responsive | Your current plan",
+        "bgColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.5)",
+        "borderColor": "lab(26.9569 -1.47016 -15.6993)",
+        "hasUpgradeBtn": false,
+        "hasCurrentBadge": true,
+        "hasMostPopular": false,
+        "hasComingSoon": false,
+        "ctaButtons": []
+      },
+      {
+        "text": "Most popular | Pro | $15 | /month | Unlimited clients | Unlimited AI generations (12+ features) | AI Business Advisor | AI Contract Risk Analyzer | Payment reminder automation | Recurring invoices | Revenue forecasting | Project profitability reports | Pre-signing checklists | Custom branding | Priority email support | Upgrade to Pro",
+        "bgColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.5)",
+        "borderColor": "lab(49.9355 55.1776 -81.8963)",
+        "hasUpgradeBtn": true,
+        "hasCurrentBadge": false,
+        "hasMostPopular": true,
+        "hasComingSoon": false,
+        "ctaButtons": [
+          {
+            "text": "Upgrade to Pro",
+            "disabled": false,
+            "ariaLabel": null,
+            "tagName": "BUTTON",
+            "href": null
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "null-plan": {
+    "plan": null,
+    "cards": [
+      {
+        "text": "Current plan | Free | $0 | forever | Up to 2 clients | Unlimited invoices | Time tracker | 3 AI generations / month | Basic reports | GDPR data export | Mobile responsive | Your current plan",
+        "bgColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.5)",
+        "borderColor": "lab(26.9569 -1.47016 -15.6993)",
+        "hasUpgradeBtn": false,
+        "hasCurrentBadge": true,
+        "hasMostPopular": false,
+        "hasComingSoon": false,
+        "ctaButtons": []
+      },
+      {
+        "text": "Most popular | Pro | $15 | /month | Unlimited clients | Unlimited AI generations (12+ features) | AI Business Advisor | AI Contract Risk Analyzer | Payment reminder automation | Recurring invoices | Revenue forecasting | Project profitability reports | Pre-signing checklists | Custom branding | Priority email support | Upgrade to Pro",
+        "bgColor": "oklab(0.278998 -0.00710082 -0.0403727 / 0.5)",
+        "borderColor": "lab(49.9355 55.1776 -81.8963)",
+        "hasUpgradeBtn": true,
+        "hasCurrentBadge": false,
+        "hasMostPopular": true,
+        "hasComingSoon": false,
+        "ctaButtons": [
+          {
+            "text": "Upgrade to Pro",
+            "disabled": false,
+            "ariaLabel": null,
+            "tagName": "BUTTON",
+            "href": null
+          }
+        ]
+      }
+    ],
+    "errors": []
+  }
+}
