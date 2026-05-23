@@ -111,8 +111,16 @@ Reddit auto-assigned `NaturalLonely1232` via the Google OAuth signup path. Reddi
 - [x] **Extras** — pricing set to "Paid (with a free trial or plan)"
 - [x] **Launch checklist** — Required 100% complete, launch **SCHEDULED Tue 2026-05-26 12:01 AM PT**
 
+### Public preview captured 2026-05-23
+- File: `ph-preview-final.png` at kit root
+- URL: https://www.producthunt.com/products/lancerwise?launch=lancerwise
+- Banner: "This product is scheduled for May 26th, 2026 12:01 AM PDT. Only people with the link can see this page."
+- Gallery shows 3+ slides (auto-OG hero + dashboard composite + mobile)
+- Maker first comment fully visible and on-brand
+- Launch tag: CRM • Pricing: Free • Launch Team: Lancerwise (solo)
+
 ### TODO for Ramiz (optional polish before Tue launch)
-- [ ] **Shoutouts** — add 3 stack credits (Supabase / Vercel / Anthropic recommended). Improves ranking.
+- [ ] **Shoutouts** — UI requires interaction not triggerable via MCP Playwright (Add shoutout button + suggestions panel but no obvious search-input flow). Ramiz to add manually: Supabase / Vercel / Anthropic. Improves PH algorithm.
 - [ ] **Video / Loom** — short demo video. Increases conversion on the listing.
 - [ ] **Product categories** — Extras step has additional category fields beyond launch tag
 - [ ] **Additional Makers** — optional; current = solo
