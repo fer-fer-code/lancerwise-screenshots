@@ -351,6 +351,45 @@ Diff: +28/-28 across 24 files. 1-line change per file (2 в files с 2 modals).
 
 **Trajectory: 🟢 very strong** — entire P1 backlog effectively cleared в ~100 min от campaign start.
 
+### T+~108 (12:10:55 UTC) — 🏆 PR #220 MERGED — ALL P1 PRs SHIPPED
+
+PR #220 merged 12:10:55Z, SHA `c563e8ff`. **8 minutes от open к merge.** [AGENT 3] posted к #206 confirming third visual P1 shipped this batch.
+
+**#183 ✅ AUTO-CLOSED** via PR cascade (PR #220 body referenced canonical #183 correctly — no manual close needed unlike #210 earlier).
+
+### 🎯 P1 CAMPAIGN COMPLETE — final scorecard
+
+| Issue | Closed by | Merge SHA | Time |
+|---|---|---|---|
+| #207 systematic input color | PR #216 | `ac77090` | 11:23Z |
+| #205 Project Title symptom | #216 cascade | (same) | (same) |
+| #211 bell dropdown | PR #218 | `04475a34` | 11:48:53Z |
+| #210 forecast light theme | PR #217 | (manual close) | 11:56:58Z |
+| #183 AI modal + 23 siblings | PR #220 | `c563e8ff` | 12:10:55Z |
+
+**All 5 P1 candidates from functional QA campaign: CLOSED.**
+
+**Bonus PR #219** — Phase 2 palette rollout, recovery от auto-closed #209, merged 11:48:15Z. Не QA P1 directly но cross-cutting visual ship.
+
+**5 PRs total merged в 47 min window (11:23-12:10 UTC).**
+
+### Remaining open issues
+
+| Issue | Status | Owner |
+|---|---|---|
+| **#204 P0 Invoice $0** | OPEN, **needs repro** | Ramiz manual OR [AGENT 4] post-Vercel poll |
+| #214 P2 expense delete no-confirm | OPEN | post-launch backlog |
+| #215 P1? Logout INCONCLUSIVE | OPEN | needs Ramiz manual repro |
+
+**#204 may be cleared by PR #216 cascade** if root cause was the same `<Input>` text-color bug (user types amount, doesn't see it visually, submits feeling like the number вышло, but state captured $0 by default). Needs verification на production post-deploy.
+
+### Outstanding non-blockers
+
+- [AGENT 2] Invoices QA RESULT.md — not yet surfaced
+- [AGENT 4] Time/Tasks QA RESULT.md — not yet surfaced
+
+Per launch threshold (≤3 P0, fix+retest, launch as scheduled): **threshold met с buffer.**
+
 ### T+45 (TBD)
 *(awaiting poll)*
 
