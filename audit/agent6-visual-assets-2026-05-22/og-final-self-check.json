@@ -1,0 +1,51 @@
+{
+  "file": "og-image-final-1200x630.png",
+  "dimensions": "1200×630",
+  "fileSizeBytes": 55475,
+  "fileSizeKB": 54.17,
+  "centerX": 600,
+  "safeZoneMarginPx": 100,
+  "typography": {
+    "family": "Inter",
+    "wordmarkWeight": 800,
+    "wordmarkSizePx": 112,
+    "taglineWeight": 500,
+    "taglineSizePx": 42,
+    "gradientFill": "linear-gradient(135deg, #ffffff 0%, #F897FE 100%)"
+  },
+  "alignmentChecks": [
+    {
+      "label": "wordmark-row (bolt+text)",
+      "center": 599.99,
+      "delta": 0.01,
+      "ok": true
+    },
+    {
+      "label": "tagline",
+      "center": 599.99,
+      "delta": 0.01,
+      "ok": true
+    }
+  ],
+  "pass": true,
+  "boxes": {
+    "wordmarkRow": {
+      "x": 226.90625,
+      "y": 218.84375,
+      "w": 746.171875,
+      "h": 112
+    },
+    "wordmark": {
+      "x": 358.90625,
+      "y": 218.84375,
+      "w": 614.171875,
+      "h": 112
+    },
+    "tagline": {
+      "x": 295.421875,
+      "y": 362.84375,
+      "w": 609.140625,
+      "h": 48.296875
+    }
+  }
+}
