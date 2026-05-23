@@ -1,0 +1,37 @@
+{
+  "step1_list": {
+    "url": "/work/projects",
+    "hasNewProjectBtn": true,
+    "bodyLen": 372,
+    "projectCardsCount": 5,
+    "pageErrors": 0
+  },
+  "step2_title_inspect": [
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "name": "",
+      "id": "",
+      "placeholder": "Website Redesign",
+      "ariaLabel": null,
+      "disabled": false,
+      "readonly": false,
+      "visible": true
+    }
+  ],
+  "step2_title_input": {
+    "fillMethod": {
+      "typed": "E2E Test Project 1779532762825",
+      "actualValue": "E2E Test Project 1779532762825",
+      "matches": true
+    },
+    "afterBlur": {
+      "actualValue": null,
+      "persisted": false
+    },
+    "keyboardError": "locator.click: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator('input[name*=\"title\" i], input[placeholder*=\"project\" i], input[aria-label*=\"title\" i]').first()\n"
+  },
+  "step2d_create": {
+    "error": "no Create button found"
+  }
+}

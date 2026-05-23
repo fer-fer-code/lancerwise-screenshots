@@ -1,0 +1,14 @@
+{
+  "client_name_field": {
+    "tag": "INPUT",
+    "type": "text",
+    "color": "rgb(23, 23, 23)",
+    "background": "rgba(0, 0, 0, 0)",
+    "placeholder": "John Smith"
+  },
+  "client_creation": {},
+  "client_detail": {
+    "id": "89126945-c5c9-486f-8408-19a1d37d4fbb",
+    "bodyLen": 4733
+  }
+}

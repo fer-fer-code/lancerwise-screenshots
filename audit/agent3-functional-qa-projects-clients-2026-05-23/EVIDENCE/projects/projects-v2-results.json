@@ -1,0 +1,43 @@
+{
+  "titleDetailed": {
+    "labelText": "Project Title *",
+    "labelRect": {
+      "x": 273,
+      "y": 329,
+      "w": 622
+    },
+    "inputRect": {
+      "x": 273,
+      "y": 355,
+      "w": 622,
+      "h": 42
+    },
+    "inputTag": "INPUT",
+    "inputType": "text",
+    "placeholder": "Website Redesign",
+    "name": "",
+    "disabled": false,
+    "readonly": false,
+    "pointerEvents": "auto",
+    "visibility": "visible",
+    "display": "inline-block",
+    "zIndex": "auto",
+    "hasOnChange": false,
+    "currentValue": "",
+    "parentClasses": ""
+  },
+  "test1_targetedTyping": {
+    "valueViaInputValue": "Targeted Title Test",
+    "valueViaEvaluate": "Targeted Title Test"
+  },
+  "test2_blur": {
+    "exists": false
+  },
+  "test3_nativeDispatch": {
+    "error": "el gone"
+  },
+  "test3_postCheck": {
+    "error": "gone"
+  },
+  "errors": []
+}

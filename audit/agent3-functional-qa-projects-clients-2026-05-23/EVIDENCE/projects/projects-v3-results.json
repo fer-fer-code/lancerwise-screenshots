@@ -1,0 +1,34 @@
+{
+  "afterTyping": {
+    "exists": true,
+    "value": "My Cool Project ABC",
+    "placeholder": "Website Redesign",
+    "computedColor": "rgb(23, 23, 23)",
+    "computedFontSize": "14px",
+    "placeholderVisible": false,
+    "rect": {
+      "x": 273,
+      "y": 355,
+      "width": 622,
+      "height": 42,
+      "top": 355,
+      "right": 895,
+      "bottom": 397,
+      "left": 273
+    }
+  },
+  "afterBlurEmpty": {
+    "exists": true,
+    "value": "My Cool Project ABC",
+    "placeholderVisible": false,
+    "urlNow": "/projects/new"
+  },
+  "creationResult": {
+    "status": 201,
+    "projectId": "984d3c65-b7fa-4c51-af3e-120999cb4104",
+    "bodyKeys": [
+      "0"
+    ],
+    "landedUrl": "https://www.lancerwise.com/projects/984d3c65-b7fa-4c51-af3e-120999cb4104"
+  }
+}
