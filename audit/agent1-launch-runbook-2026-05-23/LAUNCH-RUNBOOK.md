@@ -349,20 +349,56 @@ gh issue create \
 
 ## §5 — KEY URLS
 
-| Resource | URL |
-|---|---|
-| **Production** | <https://www.lancerwise.com> |
-| **Sentry** | <https://lancerwise.sentry.io/projects/lancerwise/> (или per workspace URL) |
-| **Vercel Dashboard** | <https://vercel.com/fer-fer-codes-projects/lancerwise> |
-| **Supabase Dashboard** | <https://supabase.com/dashboard/project/skfgwyzarrhhkzvltbgm> |
-| **LemonSqueezy Dashboard** | <https://app.lemonsqueezy.com/> (Ramiz fill specific store path) |
-| **Twitter @lancerwise** | <https://x.com/lancerwise> (unclaimed as of 2026-05-23 per PR #193 — confirm pre-launch) |
-| **ProductHunt page** | TBD (Ramiz fill после Tuesday launch URL generated) |
-| **GitHub repo (code)** | <https://github.com/fer-fer-code/lancerwise> |
-| **GitHub repo (screenshots/audits)** | <https://github.com/fer-fer-code/lancerwise-screenshots> |
-| **Cloudflare DNS / Email** | <https://dash.cloudflare.com/> (Ramiz account) |
-| **Resend (email)** | <https://resend.com/> |
-| **Upstash (Redis ratelimit)** | <https://console.upstash.com/> |
+Discovered via codebase grep + Vercel env list + DNS lookup. Public dashboard paths only — no secrets.
+
+| Resource | URL | Discovery source |
+|---|---|---|
+| **Production** | <https://www.lancerwise.com> | known |
+| **Sentry — project issues** | <https://lancerwise.sentry.io/issues/?project=4511391765954560> | `next.config.ts` (`org: 'lancerwise', project: 'lancerwise'`) + DSN project ID `4511391765954560` |
+| **Sentry — alerts** | <https://lancerwise.sentry.io/alerts/rules/> | same |
+| **Sentry — releases** | <https://lancerwise.sentry.io/releases/> | same |
+| **Vercel project Dashboard** | <https://vercel.com/fer-fer-codes-projects/lancerwise> | PR comment URLs across reviews |
+| **Vercel — deployments tab** | <https://vercel.com/fer-fer-codes-projects/lancerwise/deployments> | same |
+| **Vercel — analytics** | <https://vercel.com/fer-fer-codes-projects/lancerwise/analytics> | same |
+| **Supabase project Dashboard** | <https://supabase.com/dashboard/project/skfgwyzarrhhkzvltbgm> | `.env` `NEXT_PUBLIC_SUPABASE_URL` |
+| **Supabase — Auth/Users** | <https://supabase.com/dashboard/project/skfgwyzarrhhkzvltbgm/auth/users> | same |
+| **Supabase — SQL editor** | <https://supabase.com/dashboard/project/skfgwyzarrhhkzvltbgm/sql> | confirmed via codebase reference в SQL audit scripts |
+| **Supabase — Reports (connection pool)** | <https://supabase.com/dashboard/project/skfgwyzarrhhkzvltbgm/reports/database> | standard Supabase URL pattern |
+| **LemonSqueezy Dashboard** | <https://app.lemonsqueezy.com/> | Vercel env confirms LS integration; store-specific URL path = Ramiz fill |
+| **LemonSqueezy — Webhooks** | <https://app.lemonsqueezy.com/settings/webhooks> | standard LS dashboard path |
+| **LemonSqueezy — Sales** | <https://app.lemonsqueezy.com/sales> | standard LS dashboard path |
+| **Cloudflare zone — lancerwise.com** | <https://dash.cloudflare.com/?to=/:account/lancerwise.com> | DNS check confirms CF zone (brenna/javon.ns.cloudflare.com nameservers) |
+| **Cloudflare — Email Routing** | <https://dash.cloudflare.com/?to=/:account/lancerwise.com/email/routing> | MX records confirm CF Email Routing (route1/2/3.mx.cloudflare.net) |
+| **Resend Dashboard** | <https://resend.com/overview> | Vercel env confirms `RESEND_FROM_EMAIL=LancerWise <hello@lancerwise.com>` |
+| **Resend — Emails (delivery log)** | <https://resend.com/emails> | standard Resend dashboard path |
+| **Upstash Redis console** | <https://console.upstash.com/redis> | Vercel env confirms instance `desired-quetzal-124604.upstash.io` |
+| **Upstash — instance metrics** | <https://console.upstash.com/redis> → instance `desired-quetzal-124604` | same |
+| **Twitter @lancerwise** | <https://x.com/lancerwise> | per PR #193 — confirm claimed pre-launch (was 404 on 2026-05-23) |
+| **ProductHunt page** | `[FILL POST-LAUNCH Tuesday]` — PH generates URL on launch | — |
+| **Status page** | `[NOT CONFIGURED]` — using Twitter incident tweet template as substitute (см §4) | — |
+| **GitHub repo (code)** | <https://github.com/fer-fer-code/lancerwise> | known |
+| **GitHub repo (screenshots/audits)** | <https://github.com/fer-fer-code/lancerwise-screenshots> | known |
+| **GitHub — open issues** | <https://github.com/fer-fer-code/lancerwise/issues> | known |
+| **GitHub — PRs** | <https://github.com/fer-fer-code/lancerwise/pulls> | known |
+
+### Quick command reference
+
+```bash
+# Sentry — list recent issues via gh OR direct browser
+open "https://lancerwise.sentry.io/issues/?project=4511391765954560&statsPeriod=1h"
+
+# Vercel — current production status
+vercel inspect $(vercel ls --scope fer-fer-codes-projects 2>&1 | grep -m1 "Ready.*Production" | awk '{print $1}')
+
+# Supabase — connection check
+curl -s -o /dev/null -w "%{http_code}\n" https://skfgwyzarrhhkzvltbgm.supabase.co/rest/v1/
+
+# Cloudflare email routing — verify MX records
+dig +short MX lancerwise.com
+
+# Production smoke
+curl -s -o /dev/null -w "%{http_code}\n" https://www.lancerwise.com/
+```
 
 ---
 
@@ -532,9 +568,11 @@ Print this section и keep within arm's reach на launch day.
 │                                                 │
 │  P2/P3?        → File к backlog, defer          │
 │                                                 │
-│  SENTRY:       lancerwise.sentry.io             │
-│  VERCEL:       vercel.com/fer-fer-codes/...     │
-│  SUPABASE:     supabase.com/dashboard/...       │
+│  SENTRY:       lancerwise.sentry.io/issues      │
+│  VERCEL:       vercel.com/fer-fer-codes-        │
+│                  projects/lancerwise            │
+│  SUPABASE:     supabase.com/dashboard/          │
+│                  project/skfgwyzarrhhkzvltbgm   │
 │                                                 │
 │  TELEGRAM:     notify.py command                │
 │  ESCALATE:     Ramiz Telegram (primary)         │
