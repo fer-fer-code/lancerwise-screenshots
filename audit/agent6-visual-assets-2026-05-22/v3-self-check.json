@@ -1,0 +1,52 @@
+{
+  "file": "twitter-banner-final-1500x500-v3.png",
+  "dimensions": "1500×500",
+  "centerX": 750,
+  "alignmentChecks": [
+    {
+      "label": "wordmark-row (logo+text)",
+      "center": "750.00",
+      "delta": "0.00",
+      "ok": true
+    },
+    {
+      "label": "tagline",
+      "center": "750.00",
+      "delta": "0.00",
+      "ok": true
+    },
+    {
+      "label": "pills",
+      "center": "750.00",
+      "delta": "0.00",
+      "ok": true
+    }
+  ],
+  "pass": true,
+  "boxes": {
+    "wordmarkRowBox": {
+      "x": 430.78125,
+      "y": 137.09375,
+      "w": 638.4375,
+      "h": 96
+    },
+    "wordmark": {
+      "x": 542.78125,
+      "y": 137.09375,
+      "w": 526.4375,
+      "h": 96
+    },
+    "tagline": {
+      "x": 474.4375,
+      "y": 255.09375,
+      "w": 551.125,
+      "h": 41.796875
+    },
+    "pills": {
+      "x": 392.984375,
+      "y": 318.890625,
+      "w": 714.03125,
+      "h": 44
+    }
+  }
+}
