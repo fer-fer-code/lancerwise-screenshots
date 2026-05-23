@@ -1,0 +1,74 @@
+[
+  {
+    "label": "text-primary #F4F4F6 on canvas #0B0B12",
+    "ratio": "17.85",
+    "aaNormal": "PASS",
+    "aaLarge": "PASS"
+  },
+  {
+    "label": "text-secondary #A0A0AE on card #15151F",
+    "ratio": "7.02",
+    "aaNormal": "PASS",
+    "aaLarge": "PASS"
+  },
+  {
+    "label": "text-secondary #A0A0AE on canvas #0B0B12",
+    "ratio": "7.60",
+    "aaNormal": "PASS",
+    "aaLarge": "PASS"
+  },
+  {
+    "label": "text-muted #6B6B7B on canvas #0B0B12",
+    "ratio": "3.75",
+    "aaNormal": "FAIL",
+    "aaLarge": "PASS"
+  },
+  {
+    "label": "text-muted #6B6B7B on card #15151F",
+    "ratio": "3.46",
+    "aaNormal": "FAIL",
+    "aaLarge": "PASS"
+  },
+  {
+    "label": "accent #6A5AE0 on canvas #0B0B12",
+    "ratio": "3.88",
+    "aaNormal": "FAIL",
+    "aaLarge": "PASS"
+  },
+  {
+    "label": "white #FFFFFF on accent #6A5AE0",
+    "ratio": "5.06",
+    "aaNormal": "PASS",
+    "aaLarge": "PASS"
+  },
+  {
+    "label": "accent #6A5AE0 on white #FFFFFF",
+    "ratio": "5.06",
+    "aaNormal": "PASS",
+    "aaLarge": "PASS"
+  },
+  {
+    "label": "text-slate-500 #64748B on canvas #0B0B12",
+    "ratio": "4.12",
+    "aaNormal": "FAIL",
+    "aaLarge": "PASS"
+  },
+  {
+    "label": "text-slate-500 #64748B on card #15151F",
+    "ratio": "3.81",
+    "aaNormal": "FAIL",
+    "aaLarge": "PASS"
+  },
+  {
+    "label": "text-slate-400 #94A3B8 on canvas #0B0B12",
+    "ratio": "7.65",
+    "aaNormal": "PASS",
+    "aaLarge": "PASS"
+  },
+  {
+    "label": "text-slate-300 #CBD5E1 on canvas #0B0B12",
+    "ratio": "13.21",
+    "aaNormal": "PASS",
+    "aaLarge": "PASS"
+  }
+]
