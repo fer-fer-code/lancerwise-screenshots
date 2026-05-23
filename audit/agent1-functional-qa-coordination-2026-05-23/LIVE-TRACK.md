@@ -82,6 +82,39 @@ The "Project Title input не принимает ввод" bug is **NOT** а Rea
 - ⏳ [AGENT 5] Contracts + Settings — pending
 - ⏳ [AGENT 6] Analytics + Notifications + Auth — pending
 
+### T+22 (10:52 UTC) — [AGENT 5] surfaced SECOND
+
+**RESULT.md:** [`audit/agent5-functional-qa-contracts-settings-2026-05-23/RESULT.md`](../agent5-functional-qa-contracts-settings-2026-05-23/RESULT.md) (181 lines)
+
+**Verdict:** Contracts + Settings — **18/18 PASS** (6 fully-exercised + 12 render-only). **Zero P0/P1 FAILs.** Test artifacts cleaned (test contract `24f76f94-9e3e-43f0-bd1d-fc9e26d50654` created + edit-verified + deleted).
+
+**Coverage:**
+- Contracts (steps 1-6): full CRUD end-to-end exercised (list, AI generate, templates, view, edit+persist, delete)
+- Settings step 7 + 15: Profile name persist + Theme toggle (Light disabled per design, Dark applies `html.dark`)
+- Settings steps 8-14, 16-18: section-presence DOM scan PASS (interaction not exercised к avoid mutating live invoice config)
+
+**Cross-correlation с [AGENT 3] systematic input bug ([#207](https://github.com/fer-fer-code/lancerwise/issues/207)):**
+
+🎯 **[AGENT 5] independently observed the same low-contrast issue** на:
+- `/contracts/generate` form inputs
+- `/contracts/[id]/edit` form inputs
+
+Quote от [AGENT 5]: *"Several inputs on /contracts/generate and /contracts/[id]/edit had nearly-invisible text in viewport screenshots."*
+
+This CONFIRMS [#207](https://github.com/fer-fer-code/lancerwise/issues/207) is systematic across ≥4 form pages: /projects/new, /clients/new, /contracts/generate, /contracts/[id]/edit. Filing #207 pre-emptively was correct — prevented dupe filing.
+
+**Other [AGENT 5] non-blocking observations (P2/P3 candidates):**
+1. Mixed RU/EN labels на /settings (some H2s RU, sub-features EN) — cross-ref [#194](https://github.com/fer-fer-code/lancerwise/issues/194) residual i18n bleed
+2. Color picker `input[type="text"]` first в DOM order on /settings — cosmetic
+3. Onboarding banner persistent after onboarding completed — **NEW P2 candidate** (not yet filed)
+
+**Status update queue:**
+- ✅ [AGENT 3] Projects+Clients — 1 P1 systematic ([#207](https://github.com/fer-fer-code/lancerwise/issues/207) tracking)
+- ✅ [AGENT 5] Contracts+Settings — 0 P0/P1; cross-confirms #207 systematic + 3 P2/P3 observations
+- ⏳ [AGENT 2] Invoices
+- ⏳ [AGENT 4] Time tracking + Tasks
+- ⏳ [AGENT 6] Analytics + Notifications + Auth
+
 ### T+30 (TBD)
 *(awaiting poll)*
 
