@@ -106,6 +106,30 @@ If drift is recent, points к а regression-causing PR shipped после 2026-0
 
 **Next:** [AGENT 5] should pick up PR #1 (Tier 1+2+3 = 33 edits) per plan. ETA after PR #1 deploy: should resolve perceived cast in single ship.
 
+### T+32 (17:03 UTC) — PR [#226](https://github.com/fer-fer-code/lancerwise/pull/226) OPEN ([AGENT 5])
+
+**Title:** `fix(palette): map .dark --background к --canvas token (SEV1 Bug 1)`
+**Branch:** `fix/palette-dark-canvas-token-map`
+**Diff:** +1/-1 (1 file: `src/app/globals.css:89`)
+**Scope:** **ONLY Tier 2 (Bug 1) — `.dark { --background: #0a0a0a }` → `--background: var(--canvas)`**
+
+**CI status (initial):**
+- eslint i18n: ✅ SUCCESS
+- locale-purity (ru): ✅ SUCCESS
+- visual-regression: ⏳ pending
+- Vercel: ⏳ PENDING
+- Vercel Preview Comments: ✅ SUCCESS
+
+**Deviation от plan:** REMEDIATION-PLAN recommended **combining Tier 1 + Tier 2 + Tier 3 into single PR (~33 edits)**. PR #226 covers ONLY Tier 2 (1 edit). [AGENT 5] либо:
+- Splitting Tier 1/2/3 into separate PRs (likely — preceded plan: ship riskless line first, then bulk shell)
+- OR addressing only Bug 1 + leaving Tier 1+3 follow-up
+
+**Impact assessment:** Bug 1 alone is **subtle drift** — rgb(10,10,10) → rgb(11,11,18) is 1-unit per channel on G+B. Won't materially resolve the perceived navy cast. **Tier 1 (5 chrome files) is the dominant fix** and STILL pending.
+
+Watching для:
+- PR #226 CI completion + merge
+- PR #227 surface = expected Tier 1 (5 chrome files) — the actual SEV1 critical path
+
 ---
 
 ## PR tracking table
