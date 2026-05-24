@@ -61,9 +61,53 @@ CDP connect failed: browserType.connectOverCDP: connect ECONNREFUSED ::1:59736
 
 1. **HTTP layer is GO for launch** — 90 min of clean probing, including 28 min post-deploy on `40db601b331a`
 2. **Visual verification of palette fix MUST come from another agent** — AGENT 6 (palette work owner), AGENT 3 (visual flow specialist), or Ramiz directly. The CDP profile they're using is alive in another session; mine was not.
-3. **For future deploy-watch tasks involving screenshots**, the launcher should either:
-   - Spawn a dedicated isolated Chrome with `chromium.launchPersistentContext()` + own profile dir (cannot share lock), OR
-   - Verify port 59736 is alive before kicking off the monitor (single `curl http://localhost:59736/json/version` check), and SKIP screenshot calls if down rather than failing each time
+
+---
+
+## Future improvements (apply to next monitor script)
+
+### F1 — CDP preflight check (mandatory before any screenshot-capable monitor)
+
+Before kicking off a monitor that depends on `chromium.connectOverCDP(http://localhost:59736)`, run a single liveness probe:
+
+```bash
+CDP_LIVE=$(curl -s --max-time 3 http://localhost:59736/json/version | grep -q '"Browser"' && echo yes || echo no)
+```
+
+Then branch behavior:
+- **CDP_LIVE=yes** → proceed normally with screenshot triggers on new-deploy detection
+- **CDP_LIVE=no** → skip screenshot trigger entirely (log "CDP DOWN — skipping screenshots, HTTP-only mode"), proceed with HTTP probes only
+
+This avoids 30+ seconds of cumulative timeout per failed screenshot attempt (each Playwright `connectOverCDP` call hangs ~30s before erroring), and produces a cleaner log when the visual layer isn't available.
+
+### F2 — Spawn isolated Chrome instead of relying on shared MCP profile
+
+The shared profile at `/Users/myoffice/Library/Caches/ms-playwright/mcp-chrome-d284463` is owned by whichever agent has the lock — it goes up/down outside my control. For long-running monitors (1+ hours), an isolated profile owned by the monitor itself is more robust:
+
+```js
+const ctx = await chromium.launchPersistentContext('/tmp/agent4-monitor-chrome', {
+  headless: true,
+  viewport: { width: 1440, height: 900 },
+})
+```
+
+Tradeoff: isolated profile starts unauthenticated. Either (a) accept that screenshots are of public/unauth pages only, OR (b) seed the isolated profile by injecting a known-good session cookie before the monitor starts (cookie can be exported from the MCP profile once at setup time).
+
+### F3 — Pre-check known auth state at monitor start
+
+Even with a live CDP connection, the existing tab may have been logged out by another agent. Add an auth-state probe at cycle 0:
+
+```js
+await page.goto('https://www.lancerwise.com/dashboard', { waitUntil: 'domcontentloaded', timeout: 15000 })
+const authed = !page.url().includes('/login')
+console.log('auth state:', authed ? 'OK' : 'UNAUTHENTICATED — screenshots will be public-pages-only')
+```
+
+If unauthenticated, the monitor still works for `/`, `/pricing`, `/login` (public) but auth-required routes (`/dashboard`, `/work/time`, etc.) will only get the login-page screenshot, which is OK if expected but should be flagged in the report.
+
+### F4 — Save reusable monitor template
+
+Template stored at `audit/agent4-monitor-template.sh` (committed alongside this report) with F1+F2+F3 baked in. Reuse for any future deploy-watch with screenshot needs.
 
 ---
 
