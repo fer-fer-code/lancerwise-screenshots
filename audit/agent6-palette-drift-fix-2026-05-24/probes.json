@@ -1,0 +1,72 @@
+{
+  "_note": "Live computed-style probes could not be captured this pass — CDP on port 50565 launched without --remote-allow-origins flag; WebSocket handshake returns 403. Playwright MCP locked by another agent on shared user-data-dir. Forensics in REMEDIATION-PLAN.md are based on static source analysis (grep + Read), which is sufficient because drift is in source-code Tailwind class strings, not runtime computed style. A future Playwright-isolated pass should re-run /tmp/cdp_palette_probe.py (working script saved) to confirm computed RGB on production for visual regression baseline.",
+  "static_analysis_summary": {
+    "globals_css": {
+      "file": "src/app/globals.css",
+      "phase1_canvas_def_line": 14,
+      "phase1_canvas_value": "#0B0B12",
+      "dark_background_def_line_range": "88-91",
+      "dark_background_value": "#0a0a0a",
+      "drift_root_cause": "dark.--background NOT mapped to var(--canvas); body uses var(--background)",
+      "body_rule_lines": "93-97"
+    },
+    "app_shell_drift": {
+      "src/app/(app)/layout.tsx": {
+        "line": 88,
+        "class": "bg-slate-950",
+        "computed_rgb": "rgb(2,6,23)",
+        "expected_token": "bg-canvas",
+        "expected_rgb": "rgb(11,11,18)"
+      },
+      "src/components/layout/Sidebar.tsx": {
+        "line": 148,
+        "class": "bg-slate-900",
+        "computed_rgb": "rgb(15,23,42)",
+        "expected_token": "bg-surface",
+        "expected_rgb": "rgb(17,17,26)"
+      },
+      "src/components/layout/NewSidebar.tsx": {
+        "line": 188,
+        "class": "bg-slate-900",
+        "computed_rgb": "rgb(15,23,42)",
+        "expected_token": "bg-surface",
+        "expected_rgb": "rgb(17,17,26)"
+      },
+      "src/components/layout/Header.tsx": {
+        "line": 139,
+        "class": "bg-slate-800/50",
+        "computed_rgb": "rgba(30,41,59,0.5)",
+        "expected_token": "bg-surface",
+        "expected_rgb": "rgb(17,17,26)"
+      },
+      "src/components/layout/MobileBottomNav.tsx": {
+        "line": 96,
+        "class": "bg-slate-900",
+        "computed_rgb": "rgb(15,23,42)",
+        "expected_token": "bg-surface",
+        "expected_rgb": "rgb(17,17,26)"
+      }
+    },
+    "drift_inventory": {
+      "total_occurrences": 3548,
+      "total_files": 874,
+      "authed_route_occurrences": 3303,
+      "page_level_shell_wrappers": 26,
+      "phase1_token_files": 29,
+      "phase1_token_occurrences": 53,
+      "token_adoption_pct": 1.5
+    },
+    "tier_top_drift_files": [
+      {"file": "src/app/(app)/analytics/work-location/page.tsx", "count": 29},
+      {"file": "src/app/(app)/team/TeamPageClient.tsx", "count": 27},
+      {"file": "src/app/(app)/invoices/new/page.tsx", "count": 25},
+      {"file": "src/app/(app)/time-tracker/page.tsx", "count": 23},
+      {"file": "src/app/(app)/settings/page.tsx", "count": 23},
+      {"file": "src/app/(app)/analytics/time/page.tsx", "count": 21},
+      {"file": "src/app/(app)/reports/annual/AnnualReportClient.tsx", "count": 20},
+      {"file": "src/app/(app)/analytics/heatmap/WorkHeatmapPage.tsx", "count": 20},
+      {"file": "src/app/(app)/time-tracker/analytics/page.tsx", "count": 19},
+      {"file": "src/app/(app)/proposals/page.tsx", "count": 19}
+    ]
+  }
+}
