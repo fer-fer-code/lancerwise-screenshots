@@ -1,0 +1,66 @@
+=== Palette-fix monitor — up to 45 cycles × 2 min (90 min total) | t0=2026-05-24T16:32:01Z  baseline_prod_sha=3a1c8ecb95f2 ===
+  probing: /, /pricing, /login, /dashboard, /work/time
+  triggers: HTTP !== 200, > 5s sustained, new prod release → screenshot capture
+
+[cycle 0] baseline screenshot…
+16:32:01 | connecting CDP localhost:59736…
+16:32:02 | CDP connect failed: browserType.connectOverCDP: connect ECONNREFUSED ::1:59736
+Call log:
+  - <ws preparing> retrieving websocket url from http://localhost:59736
+
+
+  iter=1 elapsed=1s now=16:32:02 root=200|1.207505|0.976991 pricing=200|0.879557|0.580981 login=200|1.698888|1.266270 dashboard=307|0.479275|0.478723 worktime=307|1.294699|0.879031 vcache=MISS vid=hkg1::iad1::nqsc2-1779640 rel=3a1c8ecb95f2
+  iter=2 elapsed=128s now=16:34:09 root=200|0.705415|0.564070 pricing=200|0.900060|0.477187 login=200|0.569378|0.487711 dashboard=307|0.254183|0.253589 worktime=307|0.582838|0.486276 vcache=MISS vid=hkg1::iad1::p56q5-1779640 rel=3a1c8ecb95f2
+  iter=3 elapsed=252s now=16:36:13 root=200|0.819124|0.542368 pricing=200|0.928580|0.496849 login=200|0.950392|0.515450 dashboard=307|0.259579|0.259454 worktime=307|0.820239|0.610128 vcache=MISS vid=hkg1::iad1::p9nmq-1779640 rel=3a1c8ecb95f2
+  iter=4 elapsed=377s now=16:38:18 root=200|1.103070|0.591386 pricing=200|1.023231|0.510162 login=200|0.764138|0.492325 dashboard=307|0.249981|0.249725 worktime=307|0.613567|0.543025 vcache=MISS vid=hkg1::iad1::64nwf-1779640 rel=3a1c8ecb95f2
+  iter=5 elapsed=503s now=16:40:24 root=200|1.033583|0.879421 pricing=200|0.625457|0.525912 login=200|0.912440|0.502535 dashboard=307|0.260850|0.260743 worktime=307|0.923906|0.511130 vcache=MISS vid=hkg1::iad1::ck5qf-1779640 rel=3a1c8ecb95f2
+  iter=6 elapsed=629s now=16:42:30 root=200|1.038782|0.563335 pricing=200|0.992550|0.577322 login=200|0.936677|0.530285 dashboard=307|0.296311|0.296038 worktime=307|0.732698|0.512104 vcache=MISS vid=hkg1::iad1::ql92d-1779640 rel=3a1c8ecb95f2
+  iter=7 elapsed=754s now=16:44:35 root=200|0.868365|0.554793 pricing=200|0.779980|0.535680 login=200|0.606807|0.521012 dashboard=307|0.254018|0.253661 worktime=307|0.643025|0.518917 vcache=MISS vid=hkg1::iad1::nt7ws-1779641 rel=3a1c8ecb95f2
+  iter=8 elapsed=879s now=16:46:40 root=200|1.009822|0.542857 pricing=200|0.962951|0.536242 login=200|0.771198|0.513305 dashboard=307|0.276732|0.276505 worktime=307|0.622823|0.520964 vcache=MISS vid=hkg1::iad1::2svh6-1779641 rel=3a1c8ecb95f2
+  iter=9 elapsed=1005s now=16:48:46 root=200|1.015997|0.626682 pricing=200|1.177322|0.673934 login=200|0.972258|0.852292 dashboard=307|0.269203|0.268919 worktime=307|0.555926|0.494847 vcache=MISS vid=hkg1::iad1::wms7t-1779641 rel=3a1c8ecb95f2
+  iter=10 elapsed=1130s now=16:50:51 root=200|1.090083|0.851459 pricing=200|0.961331|0.533666 login=200|0.775003|0.526873 dashboard=307|0.282438|0.280726 worktime=307|0.589600|0.497472 vcache=MISS vid=hkg1::iad1::5rfw2-1779641 rel=3a1c8ecb95f2
+  iter=11 elapsed=1255s now=16:52:56 root=200|1.179890|0.626428 pricing=200|0.941437|0.514455 login=200|0.970610|0.516497 dashboard=307|0.387873|0.387691 worktime=307|0.762589|0.680531 vcache=MISS vid=hkg1::iad1::74mbs-1779641 rel=3a1c8ecb95f2
+  iter=12 elapsed=1381s now=16:55:02 root=200|1.078273|0.603825 pricing=200|0.977822|0.736389 login=200|0.775873|0.500720 dashboard=307|0.269786|0.269574 worktime=307|0.692751|0.518283 vcache=MISS vid=hkg1::iad1::ckjtb-1779641 rel=3a1c8ecb95f2
+  iter=13 elapsed=1507s now=16:57:08 root=200|0.904490|0.671895 pricing=200|0.874449|0.798235 login=200|0.582457|0.458998 dashboard=307|0.289049|0.288715 worktime=307|0.846926|0.475709 vcache=MISS vid=hkg1::iad1::5hn6r-1779641 rel=3a1c8ecb95f2
+  iter=14 elapsed=1633s now=16:59:14 root=200|1.374899|1.242529 pricing=200|0.562644|0.487289 login=200|0.926270|0.488484 dashboard=307|0.263843|0.257639 worktime=307|0.936672|0.467829 vcache=MISS vid=hkg1::iad1::p9nmq-1779641 rel=3a1c8ecb95f2
+  iter=15 elapsed=1758s now=17:01:19 root=200|1.032105|0.510856 pricing=200|0.943449|0.506544 login=200|0.729404|0.487251 dashboard=307|0.241398|0.240949 worktime=307|0.668894|0.588102 vcache=MISS vid=hkg1::iad1::tjdl8-1779642 rel=3a1c8ecb95f2
+  iter=16 elapsed=1885s now=17:03:26 root=200|1.019631|0.529003 pricing=200|0.987236|0.641656 login=200|0.749654|0.559208 dashboard=307|0.263459|0.262701 worktime=307|0.925986|0.522119 vcache=MISS vid=hkg1::iad1::kgblm-1779642 rel=40db601b331a ★NEW:40db601b331a
+
+[cycle 16] new deploy detected, capturing screenshots…
+17:03:31 | connecting CDP localhost:59736…
+17:03:32 | CDP connect failed: browserType.connectOverCDP: connect ECONNREFUSED ::1:59736
+Call log:
+  - <ws preparing> retrieving websocket url from http://localhost:59736
+
+
+  iter=17 elapsed=2011s now=17:05:32 root=200|1.086981|0.875722 pricing=200|1.109961|0.527708 login=200|0.778035|0.522020 dashboard=307|0.287827|0.285195 worktime=307|1.287379|0.521011 vcache=MISS vid=hkg1::iad1::pkfqz-1779642 rel=40db601b331a
+  iter=18 elapsed=2137s now=17:07:38 root=200|1.030656|0.535494 pricing=200|0.922963|0.494278 login=200|0.979600|0.505039 dashboard=307|0.295540|0.295316 worktime=307|0.756199|0.543959 vcache=MISS vid=hkg1::iad1::ql92d-1779642 rel=40db601b331a
+  iter=19 elapsed=2262s now=17:09:43 root=200|1.648687|0.547921 pricing=200|0.796864|0.676737 login=200|0.592454|0.520184 dashboard=307|0.267527|0.267144 worktime=307|1.758476|0.711996 vcache=MISS vid=hkg1::iad1::f59kh-1779642 rel=40db601b331a
+  iter=20 elapsed=2389s now=17:11:50 root=200|1.044096|0.555123 pricing=200|0.611454|0.505297 login=200|0.949443|0.503735 dashboard=307|0.314652|0.314321 worktime=307|0.756748|0.536114 vcache=MISS vid=hkg1::iad1::f59kh-1779642 rel=40db601b331a
+  iter=21 elapsed=2515s now=17:13:56 root=200|0.993785|0.699828 pricing=200|0.846595|0.680228 login=200|0.919305|0.652549 dashboard=307|0.395833|0.395614 worktime=307|1.138085|0.787632 vcache=MISS vid=hkg1::iad1::zp4fr-1779642 rel=40db601b331a
+  iter=22 elapsed=2641s now=17:16:02 root=200|1.131059|0.789313 pricing=200|0.962034|0.866592 login=200|0.955694|0.532452 dashboard=307|0.252626|0.252347 worktime=307|0.569770|0.481726 vcache=MISS vid=hkg1::iad1::svt26-1779642 rel=40db601b331a
+  iter=23 elapsed=2766s now=17:18:07 root=200|1.145573|0.561584 pricing=200|0.958169|0.524861 login=200|0.595448|0.513467 dashboard=307|0.288303|0.287988 worktime=307|0.667483|0.597784 vcache=MISS vid=hkg1::iad1::64nwf-1779643 rel=40db601b331a
+  iter=24 elapsed=2892s now=17:20:13 root=200|1.092468|0.928961 pricing=200|1.139191|0.499584 login=200|0.976919|0.554193 dashboard=307|0.274639|0.274157 worktime=307|0.737375|0.512906 vcache=MISS vid=hkg1::iad1::5hb9x-1779643 rel=40db601b331a
+  iter=25 elapsed=3018s now=17:22:19 root=200|1.085667|0.598503 pricing=200|0.975265|0.743846 login=200|0.928891|0.510600 dashboard=307|0.263793|0.263506 worktime=307|0.926671|0.501903 vcache=MISS vid=hkg1::iad1::lmqgt-1779643 rel=40db601b331a
+  iter=26 elapsed=3143s now=17:24:24 root=200|0.737029|0.523686 pricing=200|0.720563|0.503452 login=200|0.582863|0.495373 dashboard=307|0.253091|0.252646 worktime=307|1.148268|1.041780 vcache=MISS vid=hkg1::iad1::wn4r5-1779643 rel=40db601b331a
+  iter=27 elapsed=3268s now=17:26:29 root=200|0.821609|0.506568 pricing=200|0.937859|0.508734 login=200|0.615486|0.523495 dashboard=307|0.272777|0.272583 worktime=307|0.603069|0.520470 vcache=MISS vid=hkg1::iad1::mvl78-1779643 rel=40db601b331a
+  iter=28 elapsed=3393s now=17:28:34 root=200|1.167773|0.575413 pricing=200|1.131451|0.696031 login=200|0.948945|0.527076 dashboard=307|0.275277|0.274800 worktime=307|0.619098|0.519747 vcache=MISS vid=hkg1::iad1::5rfw2-1779643 rel=40db601b331a
+  iter=29 elapsed=3520s now=17:30:41 root=200|0.671138|0.524501 pricing=200|0.916493|0.495081 login=200|0.740308|0.521307 dashboard=307|0.346192|0.345958 worktime=307|0.935117|0.505212 vcache=MISS vid=hkg1::iad1::zp4fr-1779643 rel=40db601b331a
+  iter=30 elapsed=3646s now=17:32:47 root=200|1.126481|0.638088 pricing=200|0.941689|0.523616 login=200|0.909926|0.484838 dashboard=307|0.322072|0.317705 worktime=307|0.900406|0.501666 vcache=MISS vid=hkg1::iad1::mvl78-1779643 rel=40db601b331a
+  iter=31 elapsed=3772s now=17:34:53 root=200|0.977741|0.509997 pricing=200|0.973670|0.519306 login=200|0.930243|0.521021 dashboard=307|0.268006|0.267654 worktime=307|0.558180|0.481215 vcache=MISS vid=hkg1::iad1::p56q5-1779644 rel=40db601b331a
+  iter=32 elapsed=3897s now=17:36:58 root=200|0.767051|0.558383 pricing=200|0.609524|0.503812 login=200|0.573651|0.503908 dashboard=307|0.296582|0.296223 worktime=307|0.743727|0.525901 vcache=MISS vid=hkg1::iad1::74mbs-1779644 rel=40db601b331a
+  iter=33 elapsed=4022s now=17:39:03 root=200|0.759577|0.598267 pricing=200|0.652129|0.528580 login=200|1.080822|0.514275 dashboard=307|0.252742|0.252528 worktime=307|0.931008|0.867153 vcache=MISS vid=hkg1::iad1::vwsbk-1779644 rel=40db601b331a
+  iter=34 elapsed=4148s now=17:41:09 root=200|1.002348|0.534037 pricing=200|0.792407|0.507409 login=200|0.926137|0.509954 dashboard=307|0.273596|0.273233 worktime=307|0.641799|0.543128 vcache=MISS vid=hkg1::iad1::lmqgt-1779644 rel=40db601b331a
+  iter=35 elapsed=4274s now=17:43:15 root=200|0.921743|0.502402 pricing=200|0.946337|0.512567 login=200|0.787279|0.508744 dashboard=307|0.263153|0.262903 worktime=307|0.576222|0.510494 vcache=MISS vid=hkg1::iad1::xp74r-1779644 rel=40db601b331a
+  iter=36 elapsed=4399s now=17:45:20 root=200|0.737672|0.617446 pricing=200|0.932716|0.782186 login=200|1.154939|0.465513 dashboard=307|0.280644|0.280302 worktime=307|0.872186|0.465853 vcache=MISS vid=hkg1::iad1::jzcv7-1779644 rel=40db601b331a
+  iter=37 elapsed=4524s now=17:47:25 root=200|0.740380|0.613420 pricing=200|0.922241|0.503253 login=200|0.806354|0.753215 dashboard=307|0.242863|0.242597 worktime=307|0.827594|0.581281 vcache=MISS vid=hkg1::iad1::xp74r-1779644 rel=40db601b331a
+  iter=38 elapsed=4649s now=17:49:30 root=200|1.064300|0.579106 pricing=200|0.633927|0.521583 login=200|0.790387|0.730307 dashboard=307|0.264470|0.264223 worktime=307|0.910046|0.509197 vcache=MISS vid=hkg1::iad1::lmqgt-1779644 rel=40db601b331a
+  iter=39 elapsed=4775s now=17:51:36 root=200|0.958919|0.621978 pricing=200|0.937560|0.565427 login=200|0.764478|0.499516 dashboard=307|0.256957|0.256685 worktime=307|0.937802|0.520041 vcache=MISS vid=hkg1::iad1::ql92d-1779645 rel=40db601b331a
+  iter=40 elapsed=4901s now=17:53:42 root=200|1.009920|0.608262 pricing=200|0.921401|0.501755 login=200|0.773228|0.512447 dashboard=307|0.440400|0.440034 worktime=307|0.932381|0.511144 vcache=MISS vid=hkg1::iad1::f59kh-1779645 rel=40db601b331a
+  iter=41 elapsed=5027s now=17:55:48 root=200|1.013271|0.533870 pricing=200|0.941182|0.526813 login=200|0.905624|0.489767 dashboard=307|0.280337|0.279974 worktime=307|0.580588|0.514197 vcache=MISS vid=hkg1::iad1::7n69h-1779645 rel=40db601b331a
+  iter=42 elapsed=5152s now=17:57:53 root=200|1.096275|0.703789 pricing=200|0.743946|0.635056 login=200|1.057251|0.555845 dashboard=307|0.275390|0.274972 worktime=307|0.739879|0.525212 vcache=MISS vid=hkg1::iad1::f59kh-1779645 rel=40db601b331a
+  iter=43 elapsed=5277s now=17:59:58 root=200|1.056308|0.761647 pricing=200|0.951332|0.530454 login=200|0.622146|0.553523 dashboard=307|0.253342|0.253064 worktime=307|0.784266|0.719269 vcache=MISS vid=hkg1::iad1::c8ww8-1779645 rel=40db601b331a
+  iter=44 elapsed=5408s now=18:02:09 root=200|0.978186|0.510645 pricing=200|1.977530|0.493006 login=200|1.067575|0.513180 dashboard=307|0.295577|0.295366 worktime=307|0.885124|0.803207 vcache=MISS vid=hkg1::iad1::cbbhp-1779645 rel=40db601b331a
+  iter=45 elapsed=5535s now=18:04:16 root=200|1.099269|0.948754 pricing=200|0.894706|0.498892 login=200|0.911465|0.494812 dashboard=307|0.256106|0.255793 worktime=307|0.726674|0.500873 vcache=MISS vid=hkg1::iad1::5s7lv-1779645 rel=40db601b331a
+
+=== monitor complete: 45 cycles | final_known_sha=40db601b331a ===
