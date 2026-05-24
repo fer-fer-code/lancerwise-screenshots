@@ -146,6 +146,16 @@ Watching для:
 
 No Ramiz ping at this tick — material critical path unchanged (Tier 1 chrome STILL the gating fix). Will surface на PR #226 merge OR PR #227 open, whichever earlier.
 
+### T+60 (17:30 UTC) — ⚠️ TIMING CONCERN SURFACED К RAMIZ
+
+PR #226 idle 25 min с green CI; PR #227 (Tier 1 chrome — real SEV1 fix) NOT surfaced. [AGENT 5] 6 min past late edge of 30-45 min ETA window.
+
+Pinged Ramiz с decision request: (a) wait / (b) ping [AGENT 5] / (c) reassign / (d) accept partial. Phase 2 Monitor re-armed (task `bdrdlil3v`, 30-min window).
+
+### T+73 / Phase 2 T+15 (17:44 UTC) — status unchanged
+
+PR #226 still OPEN ready-to-merge. PR #227 still not surfaced. Ramiz response к decision question not yet. Silent watch — no double-ping.
+
 ---
 
 ## PR tracking table
