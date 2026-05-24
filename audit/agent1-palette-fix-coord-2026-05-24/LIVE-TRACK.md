@@ -130,6 +130,22 @@ Watching для:
 - PR #226 CI completion + merge
 - PR #227 surface = expected Tier 1 (5 chrome files) — the actual SEV1 critical path
 
+### T+45 (17:15 UTC) — PR #226 CI complete, awaiting merge
+
+| CI gate | Status |
+|---|---|
+| eslint i18n | ✅ SUCCESS |
+| locale-purity (ru) | ✅ SUCCESS |
+| visual-regression | ✅ SUCCESS |
+| Vercel | ✅ SUCCESS |
+| Vercel Preview Comments | ✅ SUCCESS |
+
+**PR #226 mergeable: ✅ MERGEABLE.** Awaiting merge action от [AGENT 5] / Ramiz.
+
+**Tier 1 PR still NOT surfaced.** [AGENT 5] at late edge of 30-45 min ETA window (16:39 plan delivery → 17:24 end of window; currently 17:15). 9 min remaining в window.
+
+No Ramiz ping at this tick — material critical path unchanged (Tier 1 chrome STILL the gating fix). Will surface на PR #226 merge OR PR #227 open, whichever earlier.
+
 ---
 
 ## PR tracking table
