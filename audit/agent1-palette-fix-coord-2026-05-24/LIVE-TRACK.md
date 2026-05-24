@@ -70,6 +70,42 @@ If drift is recent, points к а regression-causing PR shipped после 2026-0
 - Monitor armed для PR #226+ + #206 comments + new RESULT.md files + new issues с palette/regression labels
 - First aggregate status к Ramiz: scheduled +15 min (T+15, ~16:46 UTC)
 
+### T+8 (16:39 UTC) — [AGENT 6] REMEDIATION-PLAN.md SURFACED (ahead of 20-min ETA)
+
+**File:** [`audit/agent6-palette-drift-fix-2026-05-24/REMEDIATION-PLAN.md`](../agent6-palette-drift-fix-2026-05-24/REMEDIATION-PLAN.md) (288 lines)
+
+**Root cause analysis (2 compounding bugs):**
+
+1. **Bug 1 — `globals.css .dark`** sets `--background: #0a0a0a` directly, NOT mapped к `var(--canvas)` (#0B0B12). Subtle near-black drift.
+2. **Bug 2 — App shell hardcodes `bg-slate-*` instead of Phase 1 tokens** (dominant cause of perceived navy cast):
+   - `src/app/(app)/layout.tsx:88` → `bg-slate-950` (#020617, blue-tinted)
+   - `src/components/layout/Sidebar.tsx:148` → `bg-slate-900` (#0F172A, navy)
+   - `src/components/layout/NewSidebar.tsx:188` → `bg-slate-900` (same)
+   - `src/components/layout/Header.tsx:139` → `bg-slate-800/50` (slate-navy)
+   - `src/components/layout/MobileBottomNav.tsx:96` → `bg-slate-900`
+
+**Drift scope:**
+- 874 files contain slate/neutral/zinc/gray drift utilities
+- 3,548 total occurrences across `src/**`
+- 3,303 occurrences inside `src/app/(app)/` authed routes
+- Only 29 files use Phase 1 tokens correctly → **~1.5% token adoption**
+
+**My earlier suspect on PR #225 — INCORRECT.** PR #225 was text-slate-500 → text-slate-400 (TEXT colors, not BACKGROUND). Real cause: Phase 1 token adoption never completed; chrome files still hardcode slate-*. Drift is pre-existing.
+
+**[AGENT 6] PR strategy recommended:**
+
+| PR | Scope | Edits | Minutes |
+|---|---|---:|---:|
+| **PR #1 (SEV1 critical)** | Tier 1 app shell + Tier 2 globals.css + Tier 3 page wrappers | 33 | **~22** |
+| PR #2 | Top 30 widget container files | ~450 | ~120 |
+| PR #3+ | Long-tail widget cleanup | ~3,500 total | ~6 h (incremental) |
+
+**Single-edit fallback** (if Ramiz approves ONE only): `src/app/(app)/layout.tsx:88` `bg-slate-950` → `bg-canvas`. Resolves dominant visible cast in single change.
+
+**OUT OF SCOPE (preserve):** button gradients, decorative hero gradients (landing/dashboard/upgrade), semantic status tints (`bg-blue-900/20` etc.), email inline styles, `/analytics/forecast` light theme.
+
+**Next:** [AGENT 5] should pick up PR #1 (Tier 1+2+3 = 33 edits) per plan. ETA after PR #1 deploy: should resolve perceived cast in single ship.
+
 ---
 
 ## PR tracking table
