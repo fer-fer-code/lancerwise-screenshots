@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lancerwise · Бизнес-план на год (2026-05 → 2027-05)</title>
+<style>
+  :root {
+    --canvas: #0B0B12; --surface: #11111A; --card: #15151F; --elevated: #1B1B26;
+    --border-subtle: rgba(255,255,255,0.06); --border: rgba(255,255,255,0.08);
+    --accent: #6A5AE0; --accent-subtle: rgba(106,90,224,0.12);
+    --brand-gradient: linear-gradient(135deg, #483ACC 0%, #935AF0 50%, #F897FE 100%);
+    --text-primary: #F4F4F6; --text-secondary: #A0A0AE; --text-muted: #6B6B7B;
+    --success: #43C97A; --warning: #E5BC2E; --error: #E25E5E; --pink: #F897FE;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--canvas); color: var(--text-primary); font-family: -apple-system, system-ui, sans-serif; padding: 48px 24px; line-height: 1.6; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .hero { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 40px; margin-bottom: 48px; }
+  .hero .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 600; margin-bottom: 8px; }
+  .hero h1 { font-size: 38px; line-height: 1.15; margin-bottom: 12px; background: var(--brand-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero .sub { color: var(--text-secondary); font-size: 17px; max-width: 750px; }
+  .hero .meta { display: flex; gap: 32px; margin-top: 28px; flex-wrap: wrap; }
+  .hero .meta-item .label-small { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 4px; }
+  .hero .meta-item .value { font-size: 18px; font-weight: 600; }
+  .section { margin-bottom: 56px; }
+  .section-label { display: inline-flex; gap: 8px; background: var(--accent-subtle); color: var(--accent); padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px; }
+  .section h2 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+  .section .lead { color: var(--text-secondary); font-size: 15px; max-width: 800px; margin-bottom: 24px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 28px; margin-bottom: 16px; }
+  .card h3 { font-size: 18px; font-weight: 600; margin-bottom: 12px; }
+  .card p { color: var(--text-secondary); font-size: 14px; margin-bottom: 12px; }
+  .card ul { padding-left: 20px; color: var(--text-secondary); font-size: 14px; }
+  .card ul li { margin-bottom: 6px; }
+  .card strong { color: var(--text-primary); font-weight: 600; }
+  .callout { background: linear-gradient(135deg, rgba(248,151,254,0.08), rgba(106,90,224,0.08)); border: 1px solid rgba(248,151,254,0.2); border-radius: 16px; padding: 24px 28px; margin-bottom: 32px; }
+  .callout .label-pink { display: inline-block; background: rgba(248,151,254,0.15); color: var(--pink); padding: 4px 10px; border-radius: 6px; font-size: 10px; font-weight: 600; text-transform: uppercase; margin-bottom: 12px; }
+  .callout h3 { font-size: 16px; margin-bottom: 10px; }
+  .callout p { color: var(--text-secondary); font-size: 14px; }
+  .callout p + p { margin-top: 8px; }
+  .quarter { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; margin-bottom: 16px; }
+  .quarter-header { padding: 20px 24px; border-bottom: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 16px; }
+  .quarter-tag { background: var(--brand-gradient); color: white; padding: 6px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; }
+  .quarter-title { font-size: 18px; font-weight: 600; }
+  .quarter-sub { margin-left: auto; font-size: 12px; color: var(--text-muted); }
+  .quarter-body { padding: 24px; }
+  .quarter-section { margin-bottom: 20px; }
+  .quarter-section-title { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 600; margin-bottom: 10px; }
+  .quarter-section ul { list-style: none; padding: 0; }
+  .quarter-section ul li { padding: 8px 0; border-bottom: 1px solid var(--border-subtle); font-size: 14px; color: var(--text-secondary); display: flex; gap: 12px; }
+  .quarter-section ul li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-top: 8px; flex-shrink: 0; }
+  .quarter-section ul li strong { color: var(--text-primary); }
+  .quarter-kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 16px; }
+  .quarter-kpi { background: var(--elevated); border-radius: 10px; padding: 12px 14px; }
+  .quarter-kpi .kpi-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px; }
+  .quarter-kpi .kpi-value { font-size: 18px; font-weight: 700; }
+  .budget-table { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+  .budget-row { display: grid; grid-template-columns: 1fr 130px 130px; padding: 14px 24px; border-bottom: 1px solid var(--border-subtle); align-items: center; font-size: 14px; }
+  .budget-row.header { background: var(--elevated); font-size: 10px; text-transform: uppercase; color: var(--text-muted); font-weight: 600; }
+  .budget-row.total { background: var(--accent-subtle); font-weight: 700; }
+  .budget-cat { color: var(--text-secondary); }
+  .budget-row strong { color: var(--text-primary); }
+  .budget-amount { text-align: right; font-variant-numeric: tabular-nums; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .kpi-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+  .kpi-card .label-line { display: flex; justify-content: space-between; margin-bottom: 12px; }
+  .kpi-card .name { font-size: 12px; color: var(--text-secondary); }
+  .kpi-card .badge { font-size: 10px; padding: 2px 8px; border-radius: 4px; font-weight: 600; }
+  .badge-green { background: rgba(67,201,122,0.15); color: var(--success); }
+  .badge-yellow { background: rgba(229,188,46,0.15); color: var(--warning); }
+  .badge-pink { background: rgba(248,151,254,0.15); color: var(--pink); }
+  .kpi-card .big-num { font-size: 28px; font-weight: 700; background: var(--brand-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 6px; }
+  .kpi-card .desc { font-size: 11px; color: var(--text-muted); }
+  .risk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .risk { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+  .risk .severity { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 9px; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; }
+  .sev-high { background: rgba(226,94,94,0.15); color: var(--error); }
+  .sev-medium { background: rgba(229,188,46,0.15); color: var(--warning); }
+  .sev-low { background: rgba(67,201,122,0.15); color: var(--success); }
+  .risk h4 { font-size: 14px; margin-bottom: 6px; }
+  .risk p { font-size: 13px; color: var(--text-secondary); margin-bottom: 8px; }
+  .risk .mitigation { font-size: 12px; color: var(--text-muted); }
+  .risk .mitigation strong { color: var(--accent); }
+  .compete-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .compete { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+  .compete .name { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+  .compete .price { font-size: 11px; color: var(--accent); margin-bottom: 10px; }
+  .compete .diff { font-size: 11px; color: var(--text-secondary); }
+  .tactic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .tactic { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; }
+  .tactic h4 { font-size: 15px; margin-bottom: 8px; }
+  .tactic .tag { display: inline-block; background: var(--accent-subtle); color: var(--accent); padding: 2px 8px; border-radius: 5px; font-size: 10px; font-weight: 600; text-transform: uppercase; }
+  .tactic p { font-size: 13px; color: var(--text-secondary); margin-bottom: 8px; }
+  .tactic ul { padding-left: 18px; font-size: 13px; color: var(--text-secondary); }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .highlight { background: var(--accent-subtle); color: var(--accent); padding: 1px 6px; border-radius: 4px; font-weight: 600; }
+  .footer-note { text-align: center; color: var(--text-muted); font-size: 12px; padding: 24px 0; margin-top: 40px; border-top: 1px solid var(--border-subtle); }
+  @media (max-width: 768px) {
+    .quarter-kpi-row, .kpi-grid, .risk-grid, .tactic-grid, .grid-2 { grid-template-columns: 1fr; }
+    .compete-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero h1 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="hero">
+  <div class="label">Lancerwise · Год 1 (май 2026 → май 2027)</div>
+  <h1>Стратегия выхода из bootstrap в top-10 freelancer CRM globally</h1>
+  <p class="sub">Реалистичный план для solo founder с бюджетом $16K USD и full-time focus. Продукт + SEO + community-driven distribution. Цель года — устойчивый $15-20K MRR при 350+ Pro подписчиках и узнаваемом бренде в freelancer community.</p>
+  <div class="meta">
+    <div class="meta-item"><div class="label-small">Бюджет</div><div class="value">$25K AUD ($16.5K USD)</div></div>
+    <div class="meta-item"><div class="label-small">Time horizon</div><div class="value">12 месяцев</div></div>
+    <div class="meta-item"><div class="label-small">Founder time</div><div class="value">Full-time</div></div>
+    <div class="meta-item"><div class="label-small">Stack</div><div class="value">Bootstrap</div></div>
+  </div>
+</div>
+
+<div class="callout">
+  <span class="label-pink">⚠ Реалити-чек от Claude</span>
+  <h3>Где я поправил твои входные данные</h3>
+  <p><strong>1. "Top 3 globally" за год → нереалистично.</strong> Bonsai, HoneyBook, Dubsado имеют 8-15 лет на рынке, $50M+ revenue. С $16K bootstrap правильная цель — <span class="highlight">top-3 в narrow niche</span> ("AI-native CRM для solo freelancers") + <span class="highlight">top-10 в broad category</span>.</p>
+  <p><strong>2. Бюджет $16K USD = $1,375/мес.</strong> Bootstrap не growth. После infra (~$200) + AI API (~$400) остаётся ~$750 на distribution. Focus на <strong>organic + community + content SEO</strong>, не paid acquisition.</p>
+  <p><strong>3. Добавил revenue target.</strong> Top-N без MRR = vanity. <span class="highlight">$5K MRR к месяцу 6, $15-20K MRR к месяцу 12</span> — ~333 Pro подписчиков.</p>
+  <p><strong>4. "Global focus" → поэтапно.</strong> Q1-Q2 EN-speaking (US/UK/CA/AU — 60% мирового спроса), Q3 EU (DE/FR), Q4 Russia/CIS.</p>
+  <p><strong>5. SEO ≠ единственный distribution.</strong> SEO даёт результаты через 4-6 мес. До этого — <strong>community-driven</strong> (Indie Hackers, Reddit, X/Twitter, Telegram, ProductHunt).</p>
+</div>
+
+<div class="section">
+  <span class="section-label">🎯 Позиционирование</span>
+  <h2>Кто мы и почему freelancer выберет нас</h2>
+  <div class="card">
+    <h3>🎯 Single-sentence positioning</h3>
+    <p style="font-size: 16px; color: var(--text-primary); padding: 16px 20px; background: var(--elevated); border-radius: 10px; border-left: 3px solid var(--accent);"><strong>Lancerwise — AI-native CRM для solo freelancers, где счета, договоры, клиенты и налоговые подсказки работают в одной free-forever платформе вместо 5 разных subscriptions.</strong></p>
+    <p style="margin-top: 16px;"><strong>Tagline EN:</strong> «Free forever CRM for freelancers. Built by freelancers.»</p>
+    <p><strong>Tagline RU:</strong> «Бесплатный CRM для фрилансеров. Со встроенным AI.»</p>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <h3>💡 USP</h3>
+      <ul>
+        <li><strong>Free forever tier</strong> с настоящей ценностью (не trial)</li>
+        <li><strong>12 AI tools built-in</strong> (Pro): risk анализ, генерация инвойсов, AI-советник</li>
+        <li><strong>Дизайн уровня Linear/Notion</strong> — не B2B-уродство</li>
+        <li><strong>$15/mo Pro</strong> vs $25-49 у конкурентов</li>
+        <li><strong>Built by freelancer</strong> — authentic founder story</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>👥 ICP</h3>
+      <ul>
+        <li><strong>Solo freelancer</strong>: dev, дизайнер, консультант</li>
+        <li><strong>2-15 активных клиентов</strong></li>
+        <li><strong>$30-150/час, $30-150K годовой доход</strong></li>
+        <li><strong>1-7 лет опыта</strong> — устал от Notion-haos</li>
+        <li><strong>География:</strong> US 40%, UK 12%, DE 10%, CA/AU 10%, EE/PL 8%, RU/UA 5%</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <span class="section-label">⚔️ Конкуренция</span>
+  <h2>С кем боремся</h2>
+  <div class="compete-grid">
+    <div class="compete"><div class="name">HoneyBook</div><div class="price">$36/мес</div><div class="diff"><strong>Их сила:</strong> зрелый workflow. <strong>Мы:</strong> $15 vs $36, AI, чище UI.</div></div>
+    <div class="compete"><div class="name">Bonsai</div><div class="price">$24/мес</div><div class="diff"><strong>Их сила:</strong> бренд. <strong>Мы:</strong> AI, free tier, 2x дешевле Pro.</div></div>
+    <div class="compete"><div class="name">Dubsado</div><div class="price">$40/мес</div><div class="diff"><strong>Их сила:</strong> automation. <strong>Мы:</strong> проще onboarding, AI делает automation.</div></div>
+    <div class="compete"><div class="name">Plutio/17hats</div><div class="price">$20-30</div><div class="diff"><strong>Их сила:</strong> all-in-one. <strong>Мы:</strong> AI, modern, mobile.</div></div>
+    <div class="compete"><div class="name">Notion/Airtable</div><div class="price">$0-10</div><div class="diff"><strong>Их сила:</strong> customizable. <strong>Мы:</strong> готовое CRM без 40h setup.</div></div>
+    <div class="compete"><div class="name">FreshBooks</div><div class="price">$15-30</div><div class="diff"><strong>Их сила:</strong> бухгалтерия. <strong>Мы:</strong> CRM + contracts + AI.</div></div>
+    <div class="compete"><div class="name">Bitrix24 (RU)</div><div class="price">$0-50</div><div class="diff"><strong>Их сила:</strong> узнаваемость. <strong>Мы (Q4):</strong> в 100 раз проще, AI на русском.</div></div>
+    <div class="compete"><div class="name">Indie devs</div><div class="price">$10-20</div><div class="diff"><strong>Их сила:</strong> niche. <strong>Мы:</strong> broader coverage, стабильность.</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <span class="section-label">🗓 Roadmap по кварталам</span>
+  <h2>Стратегия Q1-Q4</h2>
+
+  <div class="quarter">
+    <div class="quarter-header"><span class="quarter-tag">Q1</span><div class="quarter-title">Launch & Initial Traction</div><div class="quarter-sub">Май → Авг 2026</div></div>
+    <div class="quarter-body">
+      <div class="quarter-section"><div class="quarter-section-title">📦 Продукт</div><ul><li><strong>ProductHunt launch</strong> Tue 26 мая (T-now ~52h)</li><li><strong>Tier 3+4 palette cleanup</strong></li><li><strong>Onboarding optimization</strong> — activation <2 min до first invoice</li><li><strong>AI Step-by-Step UI</strong> (Perplexity-inspired, ~12h)</li><li><strong>Email automation polish</strong></li></ul></div>
+      <div class="quarter-section"><div class="quarter-section-title">📣 Distribution</div><ul><li><strong>PH launch day</strong> — top 5 (300+ upvotes)</li><li><strong>Indie Hackers post</strong></li><li><strong>HackerNews "Show HN"</strong> через 2-3 нед</li><li><strong>Reddit:</strong> r/freelance r/Upwork r/SaaS — 2/week value-first</li><li><strong>X/Twitter build-in-public</strong> daily</li></ul></div>
+      <div class="quarter-section"><div class="quarter-section-title">🔍 SEO</div><ul><li><strong>Schema.org + GSC + sitemap</strong></li><li><strong>10 landing pages</strong> long-tail</li><li><strong>4 cornerstone blog posts</strong></li><li><strong>Free tools:</strong> Rate Calc, Invoice Gen, Contract Template Gen</li></ul></div>
+      <div class="quarter-kpi-row"><div class="quarter-kpi"><div class="kpi-label">Signups</div><div class="kpi-value">1,500</div></div><div class="quarter-kpi"><div class="kpi-label">WAU</div><div class="kpi-value">400</div></div><div class="quarter-kpi"><div class="kpi-label">Pro subs</div><div class="kpi-value">40</div></div><div class="quarter-kpi"><div class="kpi-label">MRR</div><div class="kpi-value">$600</div></div></div>
+    </div>
+  </div>
+
+  <div class="quarter">
+    <div class="quarter-header"><span class="quarter-tag">Q2</span><div class="quarter-title">Product Depth & AI Assistant</div><div class="quarter-sub">Сен → Ноя 2026</div></div>
+    <div class="quarter-body">
+      <div class="quarter-section"><div class="quarter-section-title">📦 Продукт</div><ul><li><strong>Phase 2 AI Assistant sidebar</strong> (pgvector + Tavily + Claude Sonnet, 120h)</li><li><strong>Citations в AI Бизнес-советнике</strong> (24h)</li><li><strong>Cmd+K Command Palette</strong> v2 (36h)</li><li><strong>Mobile PWA</strong> — installable, push, offline</li><li><strong>Integrations:</strong> Google Calendar, Zapier basic</li></ul></div>
+      <div class="quarter-section"><div class="quarter-section-title">📣 Distribution</div><ul><li><strong>Affiliate program launch</strong> — 30% recurring 12mo</li><li><strong>YouTube partnerships</strong> 5-10 micro-influencers</li><li><strong>Podcast tour</strong> 5+ shows</li><li><strong>Newsletter ads</strong> Indie Hackers, Freelance Folder</li><li><strong>Twitter ads</strong> $200/мес retargeting test</li></ul></div>
+      <div class="quarter-section"><div class="quarter-section-title">🔍 SEO</div><ul><li><strong>20+ blog posts</strong> cluster authority</li><li><strong>Backlink campaign</strong> 10+ guest posts + HARO</li><li><strong>Alternative pages:</strong> /alternatives/honeybook /bonsai /dubsado /plutio</li><li><strong>Free tools:</strong> Tax Calc per country, Quote Gen, NDA Gen</li><li><strong>Target:</strong> 5K organic clicks/мес</li></ul></div>
+      <div class="quarter-kpi-row"><div class="quarter-kpi"><div class="kpi-label">Signups</div><div class="kpi-value">5,000</div></div><div class="quarter-kpi"><div class="kpi-label">WAU</div><div class="kpi-value">1,500</div></div><div class="quarter-kpi"><div class="kpi-label">Pro subs</div><div class="kpi-value">150</div></div><div class="quarter-kpi"><div class="kpi-label">MRR</div><div class="kpi-value">$2,500</div></div></div>
+    </div>
+  </div>
+
+  <div class="quarter">
+    <div class="quarter-header"><span class="quarter-tag">Q3</span><div class="quarter-title">EU Expansion & Team Tier</div><div class="quarter-sub">Дек 2026 → Фев 2027</div></div>
+    <div class="quarter-body">
+      <div class="quarter-section"><div class="quarter-section-title">📦 Продукт</div><ul><li><strong>Team tier ship</strong> ($39/мес) — multi-seat, agency mode</li><li><strong>Localization:</strong> DE, FR, ES</li><li><strong>EU-specific:</strong> VAT, EUR, IBAN/SEPA, GDPR export</li><li><strong>Vault Phase 2</strong> — encrypted storage + e-signing</li><li><strong>Reports v2</strong> — Monthly Business Health Score</li><li><strong>Webhooks API</strong> — Pro/Team exclusive</li></ul></div>
+      <div class="quarter-section"><div class="quarter-section-title">📣 Distribution</div><ul><li><strong>EU launch campaign</strong> — local Reddit, German Twitter</li><li><strong>EU partnerships</strong> 2-3 freelancer associations</li><li><strong>Localized blog content</strong> — DE/FR/ES native</li><li><strong>10+ case studies</strong> written + video</li><li><strong>Conference experiment</strong> $1-2K sponsorship</li></ul></div>
+      <div class="quarter-section"><div class="quarter-section-title">🔍 SEO</div><ul><li><strong>Multi-language SEO</strong> — hreflang, sitemaps</li><li><strong>Country-specific guides</strong> — DE/FR/ES taxes, contracts</li><li><strong>50+ blog posts, 30+ landing pages, 10+ tools</strong></li><li><strong>Target:</strong> 25K organic clicks/мес, top-10 globally</li><li><strong>Programmatic SEO</strong> experiment</li></ul></div>
+      <div class="quarter-kpi-row"><div class="quarter-kpi"><div class="kpi-label">Signups</div><div class="kpi-value">12,000</div></div><div class="quarter-kpi"><div class="kpi-label">WAU</div><div class="kpi-value">3,500</div></div><div class="quarter-kpi"><div class="kpi-label">Subs</div><div class="kpi-value">300</div></div><div class="quarter-kpi"><div class="kpi-label">MRR</div><div class="kpi-value">$8,000</div></div></div>
+    </div>
+  </div>
+
+  <div class="quarter">
+    <div class="quarter-header"><span class="quarter-tag">Q4</span><div class="quarter-title">RU/CIS Launch & Scale</div><div class="quarter-sub">Мар → Май 2027</div></div>
+    <div class="quarter-body">
+      <div class="quarter-section"><div class="quarter-section-title">📦 Продукт</div><ul><li><strong>RU Level 3+ localization</strong> — universal CIS, 10-section договор</li><li><strong>RU-specific:</strong> Tinkoff/Yandex.Money если возможно, RUB display</li><li><strong>AI assistant RU mode</strong> — налоги СНГ (UA/KZ/BY), Yandex search</li><li><strong>API v1 public</strong></li><li><strong>Mobile native apps</strong> beta — React Native</li><li><strong>Performance:</strong> FCP < 2.5s, RSC cold-start fix</li></ul></div>
+      <div class="quarter-section"><div class="quarter-section-title">📣 Distribution</div><ul><li><strong>RU launch wave</strong> — Habr, VC.ru, 50+ Telegram channels</li><li><strong>Bitrix24 alternative narrative</strong></li><li><strong>UA/KZ sub-campaigns</strong></li><li><strong>Year-1 retrospective post</strong> (HN gold)</li><li><strong>Annual conferences</strong> 1-2 participation</li></ul></div>
+      <div class="quarter-section"><div class="quarter-section-title">🔍 SEO</div><ul><li><strong>Yandex SEO push</strong> — Webmaster setup, RU content</li><li><strong>RU/UA/KZ landing pages</strong></li><li><strong>DR target 35+</strong></li><li><strong>Target:</strong> 60K organic clicks/мес, top-5 "CRM фрилансера" RU</li><li><strong>Channel mix EOY:</strong> 60% SEO + 20% community + 10% referral</li></ul></div>
+      <div class="quarter-kpi-row"><div class="quarter-kpi"><div class="kpi-label">Signups</div><div class="kpi-value">25,000</div></div><div class="quarter-kpi"><div class="kpi-label">WAU</div><div class="kpi-value">7,500</div></div><div class="quarter-kpi"><div class="kpi-label">Subs</div><div class="kpi-value">700</div></div><div class="quarter-kpi"><div class="kpi-label">MRR</div><div class="kpi-value">$18,000</div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <span class="section-label">💰 Бюджет</span>
+  <h2>$16,500 USD на 12 месяцев</h2>
+  <p class="lead">60% — infra + AI API, 25% — distribution experiments, 15% — buffer. Все траты должны окупиться через 6-9 мес в MRR.</p>
+  <div class="budget-table">
+    <div class="budget-row header"><div>Категория</div><div class="budget-amount">$ Year</div><div class="budget-amount">$ Month</div></div>
+    <div class="budget-row"><div class="budget-cat"><strong>Infrastructure</strong> · Vercel Pro + Supabase Pro + LemonSqueezy + Sentry</div><div class="budget-amount">$2,400</div><div class="budget-amount">$200</div></div>
+    <div class="budget-row"><div class="budget-cat"><strong>AI API</strong> · Claude (Sonnet + Haiku) + Tavily + OpenAI fallback</div><div class="budget-amount">$4,800</div><div class="budget-amount">$400</div></div>
+    <div class="budget-row"><div class="budget-cat"><strong>Domain/email/legal</strong> · Domain + Cloudflare + Postmark + entity</div><div class="budget-amount">$1,200</div><div class="budget-amount">$100</div></div>
+    <div class="budget-row"><div class="budget-cat"><strong>Paid distribution experiments</strong> · Newsletter sponsorships, YouTube influencer</div><div class="budget-amount">$3,000</div><div class="budget-amount">$250</div></div>
+    <div class="budget-row"><div class="budget-cat"><strong>Tools</strong> · Ahrefs, Figma, GitHub Copilot, Loom, Notion</div><div class="budget-amount">$1,500</div><div class="budget-amount">$125</div></div>
+    <div class="budget-row"><div class="budget-cat"><strong>Design assets</strong> · Stock illustrations, PH gallery</div><div class="budget-amount">$600</div><div class="budget-amount">$50</div></div>
+    <div class="budget-row"><div class="budget-cat"><strong>Conference/community</strong> · 1-2 niche conferences</div><div class="budget-amount">$1,500</div><div class="budget-amount">$125</div></div>
+    <div class="budget-row"><div class="budget-cat"><strong>Buffer/emergency</strong> · DB scaling, cost spike, legal, contractor</div><div class="budget-amount">$1,500</div><div class="budget-amount">$125</div></div>
+    <div class="budget-row total"><div><strong>ВСЕГО</strong></div><div class="budget-amount">$16,500</div><div class="budget-amount">$1,375</div></div>
+  </div>
+  <div class="card" style="margin-top: 16px;">
+    <h3>💸 Когда MRR покрывает costs?</h3>
+    <p>Burn ~$700/мес (infra + AI + tools). Cash-flow positive при ~$1,000 MRR (margin 70%). По roadmap = <span class="highlight">Месяц 4-5</span> (Q2 mid). С месяца 6+ Lancerwise самофинансируется, бюджет $25K AUD становится "war chest".</p>
+  </div>
+</div>
+
+<div class="section">
+  <span class="section-label">📊 KPI Dashboard</span>
+  <h2>9 метрик еженедельно</h2>
+  <div class="kpi-grid">
+    <div class="kpi-card"><div class="label-line"><span class="name">Pro MRR</span><span class="badge badge-green">Primary</span></div><div class="big-num">$18K</div><div class="desc">Target к месяцу 12. North star.</div></div>
+    <div class="kpi-card"><div class="label-line"><span class="name">Активация (signup → first invoice)</span><span class="badge badge-green">Primary</span></div><div class="big-num">50%+</div><div class="desc">В первые 7 дней.</div></div>
+    <div class="kpi-card"><div class="label-line"><span class="name">Free → Pro conversion</span><span class="badge badge-green">Primary</span></div><div class="big-num">3-5%</div><div class="desc">Freemium SaaS benchmark.</div></div>
+    <div class="kpi-card"><div class="label-line"><span class="name">WAU/MAU ratio</span><span class="badge badge-yellow">Health</span></div><div class="big-num">40%+</div><div class="desc">Stickiness.</div></div>
+    <div class="kpi-card"><div class="label-line"><span class="name">Monthly churn</span><span class="badge badge-yellow">Health</span></div><div class="big-num">&lt;5%</div><div class="desc">Pro tier. >7% = PMF gap.</div></div>
+    <div class="kpi-card"><div class="label-line"><span class="name">NPS</span><span class="badge badge-yellow">Health</span></div><div class="big-num">40+</div><div class="desc">After 30 дней. SaaS avg 30.</div></div>
+    <div class="kpi-card"><div class="label-line"><span class="name">Organic clicks/мес</span><span class="badge badge-pink">Growth</span></div><div class="big-num">60K</div><div class="desc">EOY. SEO leading.</div></div>
+    <div class="kpi-card"><div class="label-line"><span class="name">CAC paid</span><span class="badge badge-pink">Growth</span></div><div class="big-num">&lt;$30</div><div class="desc">LTV $300+. 10x+ ratio.</div></div>
+    <div class="kpi-card"><div class="label-line"><span class="name">Domain Rating</span><span class="badge badge-pink">Growth</span></div><div class="big-num">35+</div><div class="desc">Ahrefs SEO authority.</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <span class="section-label">📣 Distribution Playbook</span>
+  <h2>8 тактик которые работают для bootstrap SaaS</h2>
+  <div class="tactic-grid">
+    <div class="tactic"><h4><span class="tag">PRIMARY</span> Build in Public X/Twitter</h4><p>Daily progress, weekly metrics, screenshots.</p><ul><li>5K+ followers к мес 6</li><li>Engagement 3%+</li><li>1 viral thread/мес</li></ul></div>
+    <div class="tactic"><h4><span class="tag">PRIMARY</span> SEO Content Engine</h4><p>2 posts/неделю + 1 tool/мес + 1 landing/мес.</p><ul><li>100+ posts к EOY</li><li>Tax guides, contracts, comparison</li><li>Target 60K clicks/мес</li></ul></div>
+    <div class="tactic"><h4><span class="tag">PRIMARY</span> Reddit Community</h4><p>Value-first ответы в r/freelance, r/Upwork, r/SaaS.</p><ul><li>3-5 comments/день</li><li>1 high-value post/неделю</li><li>Karma 5K к мес 6</li></ul></div>
+    <div class="tactic"><h4><span class="tag">EXPERIMENT</span> Newsletter Sponsorships</h4><p>$500-1000 в Indie Hackers, Freelance Folder.</p><ul><li>3 newsletters Q2 ($2K)</li><li>Measure CAC + LTV</li><li>Scale что работает</li></ul></div>
+    <div class="tactic"><h4><span class="tag">PRIMARY</span> Alternative Pages</h4><p>/alternatives/honeybook + bonsai + dubsado — high-intent SEO.</p><ul><li>10 pages к мес 6</li><li>~2000 слов each</li><li>30-40% trial conversion</li></ul></div>
+    <div class="tactic"><h4><span class="tag">SECONDARY</span> Affiliate Program</h4><p>30% recurring 12mo. Launch в Q2.</p><ul><li>20 active affiliates EOY</li><li>Freelance bloggers, YouTubers</li><li>15-20% от signups к Q4</li></ul></div>
+    <div class="tactic"><h4><span class="tag">SECONDARY</span> Podcast Tour</h4><p>10+ podcasts о freelance/SaaS/bootstrap за год.</p><ul><li>5 pitches/неделю</li><li>1 podcast/мес realistic</li><li>50-200 signups + backlink each</li></ul></div>
+    <div class="tactic"><h4><span class="tag">EXPERIMENT</span> YouTube Micro-Influencers</h4><p>10K-50K subs в freelance/digital nomad niche.</p><ul><li>$500-1000 per partnership</li><li>5 tests Q2-Q3 ($3K)</li><li>Sponsored review + affiliate combo</li></ul></div>
+  </div>
+</div>
+
+<div class="section">
+  <span class="section-label">⚠️ Риски</span>
+  <h2>Что может пойти не так</h2>
+  <div class="risk-grid">
+    <div class="risk"><span class="severity sev-high">HIGH</span><h4>Burnout solo founder</h4><p>12 мес full-time без отпуска. Особенно при slow growth первые 3-4 мес.</p><p class="mitigation"><strong>Mitigation:</strong> жёсткий schedule (5 work days), 1 нед отпуска Q2 + Q4, build-in-public community поддержка.</p></div>
+    <div class="risk"><span class="severity sev-high">HIGH</span><h4>ProductHunt flop</h4><p>Top 5 = 300+ upvotes. Если flop — пропали 500-1000 signups.</p><p class="mitigation"><strong>Mitigation:</strong> pre-launch waitlist, Twitter community pre-rallied, hunter с audience, EU+US timezones. Plan B: HN "Show HN" + IndieHackers.</p></div>
+    <div class="risk"><span class="severity sev-medium">MEDIUM</span><h4>SEO долго раскачивается</h4><p>До мес 6 organic minimal. Если community тоже flop — пустой funnel.</p><p class="mitigation"><strong>Mitigation:</strong> aggressive community Q1-Q2 для bridge. Paid newsletter experiments в Q2. Free tools для viral.</p></div>
+    <div class="risk"><span class="severity sev-medium">MEDIUM</span><h4>HoneyBook/Bonsai снижают цены</h4><p>Большие могут добавить free tier или AI быстрее.</p><p class="mitigation"><strong>Mitigation:</strong> moat — speed + design + founder story. Они не могут $15/мес из-за overhead. AI-native vs bolted-on.</p></div>
+    <div class="risk"><span class="severity sev-medium">MEDIUM</span><h4>AI API costs exponential</h4><p>5K active users → $400+ AI/мес, больше чем revenue первые 4 мес.</p><p class="mitigation"><strong>Mitigation:</strong> rate limits Free (5 AI calls/мес), aggressive caching, Haiku для simple tasks, monitor cost-per-user.</p></div>
+    <div class="risk"><span class="severity sev-low">LOW</span><h4>LemonSqueezy issues</h4><p>Моложе Stripe, могут быть payment issues.</p><p class="mitigation"><strong>Mitigation:</strong> Paddle/crypto backups в backlog. Switch за 1-2 нед если major. Stripe NOT used per founder decision.</p></div>
+    <div class="risk"><span class="severity sev-low">LOW</span><h4>Supabase/Vercel cost spike</h4><p>Hug-of-death при viral → $1K за день.</p><p class="mitigation"><strong>Mitigation:</strong> ISR cache, rate limits, CDN-first, AGENT 4 monitoring 24/7. Buffer $1500 specifically.</p></div>
+    <div class="risk"><span class="severity sev-low">LOW</span><h4>Russia/CIS geopolitics</h4><p>Q4 RU launch payment processing проблематичен.</p><p class="mitigation"><strong>Mitigation:</strong> defer если payments не работают. Focus UA/KZ/BY. RU principally secondary.</p></div>
+  </div>
+</div>
+
+<div class="section">
+  <span class="section-label">🚫 Anti-Roadmap</span>
+  <h2>Что НЕ делаем в год 1</h2>
+  <p class="lead">Equally important. Каждое из этого может казаться tempting, но убьёт focus.</p>
+  <div class="grid-2">
+    <div class="card">
+      <h3>❌ Не делаем</h3>
+      <ul>
+        <li><strong>Enterprise sales</strong> — слишком сложно solo</li>
+        <li><strong>Native mobile до Q4</strong> — PWA достаточно</li>
+        <li><strong>Fundraising в год 1</strong> — bootstrap сохраняет optionality</li>
+        <li><strong>Найм employees</strong> — contractor max</li>
+        <li><strong>Performance ads scaling</strong> пока LTV не доказан</li>
+        <li><strong>Multiple verticals</strong> — только freelancer</li>
+        <li><strong>Custom feature requests</strong> — roadmap-driven</li>
+        <li><strong>Conference speaking</strong> до Q3 — нет story</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>✅ Делаем</h3>
+      <ul>
+        <li><strong>100 user interviews</strong> в год — main signal</li>
+        <li><strong>Ship еженедельно</strong> — Friday release</li>
+        <li><strong>Public roadmap</strong> на сайте — trust</li>
+        <li><strong>Weekly KPI review публично</strong> в X</li>
+        <li><strong>Monthly retrospective</strong> в blog</li>
+        <li><strong>Cost-per-feature замер</strong> — impact в 30 дней</li>
+        <li><strong>4h response support</strong> — AI first line</li>
+        <li><strong>Honest pricing</strong> — free forever реально free</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <span class="section-label">🏆 Success</span>
+  <h2>Как поймём что год 1 успешен</h2>
+  <div class="card"><h3>📈 Минимальный успех (acceptable)</h3><p>$10K MRR, 200 paying subs, 5K active users, top-20 в "freelancer CRM". Lancerwise самофинансируется, founder продолжает full-time без external funding.</p></div>
+  <div class="card"><h3>🎯 Target success (planned)</h3><p>$18K MRR, 350-500 subs (Pro + Team), 7.5K WAU, top-10 globally, top-3 в narrow niche. DR 35+, 60K clicks/мес. Optional fundraise window opens.</p></div>
+  <div class="card"><h3>🚀 Stretch success (best case)</h3><p>$30K+ MRR, 700+ subs, 15K WAU, top-5 globally, established brand. Acquisition interest. Decision: solo / raise / hire / sell.</p></div>
+</div>
+
+<div class="footer-note">
+  Lancerwise · Year-1 Business Plan v1.0 · 2026-05-25 · Founder: Ramiz Fizev<br>
+  Ревизируется каждый месяц на основе KPI review.<br>
+  «No plan survives contact with the market. But planning is everything.»
+</div>
+
+</div>
+</body>
+</html>
