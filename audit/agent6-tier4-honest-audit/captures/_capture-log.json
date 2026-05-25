@@ -1,0 +1,32 @@
+[
+  {
+    "name": "00-landing-mobile",
+    "ok": true,
+    "final": "https://www.lancerwise.com/"
+  },
+  {
+    "name": "01-pricing-mobile",
+    "ok": true,
+    "final": "https://www.lancerwise.com/pricing"
+  },
+  {
+    "name": "02-login-mobile",
+    "ok": false,
+    "err": "page.goto: Timeout 25000ms exceeded.\nCall log:\n  - navigating to \"https://www.lancerwise.com/login\", waiting until \"networkidle\"\n"
+  },
+  {
+    "name": "03-register-mobile",
+    "ok": false,
+    "err": "page.goto: Timeout 25000ms exceeded.\nCall log:\n  - navigating to \"https://www.lancerwise.com/register\", waiting until \"networkidle\"\n"
+  },
+  {
+    "name": "04-dashboard-redirect",
+    "ok": false,
+    "err": "page.goto: Timeout 25000ms exceeded.\nCall log:\n  - navigating to \"https://www.lancerwise.com/dashboard\", waiting until \"networkidle\"\n"
+  },
+  {
+    "name": "05-settings-redirect",
+    "ok": false,
+    "err": "page.goto: Timeout 25000ms exceeded.\nCall log:\n  - navigating to \"https://www.lancerwise.com/settings\", waiting until \"networkidle\"\n"
+  }
+]
