@@ -1,12 +1,15 @@
-# /analytics widgets RU/EN i18n + palette — sessions 1+2 handoff
+# /analytics widgets RU/EN i18n + palette — sessions 1+2 + AGENT 5 batch 3 handoff
 
 **Date:** 2026-05-26
 **Session 1 by:** Claude (Sonnet 4.5 via claude.ai)
 **Session 2 by:** Claude (Opus 4.7 via Claude Code CLI)
+**Session 3 by:** [AGENT 5] (Opus 4.7) — Batch 3 mid + Batch 4 start (alphabetical InvoiceVelocityScore → ProjectROIByClient, 24 widgets)
 
-**Total status: 54/124 widgets done by [AGENT 2] (43.5%) — parallel agents shipped more in 80-100 JSON namespace range.**
+**Total status: 78+/124 widgets — [AGENT 2] 54 + [AGENT 5] 24 = 78 confirmed via own checkpoints. AGENT 1 also working in parallel; their commits land between checkpoints.**
 
-**Last commit on main (this agent):** `3d73e090`
+**Last commit on main:**
+- [AGENT 2] last: `3d73e090`
+- [AGENT 5] last: `c230b43b` (batch 3 checkpoint 4 — ProjectCompletionRate → ProjectROIByClient)
 
 ## Sessions log
 
@@ -32,23 +35,36 @@
 
 **Batch 2 (E-Inv*):** EffectiveRate, ExpenseTrend, ExpenseVsRevenueRatio, FreelancerBenchmark, FreelancerCard, FreelancerScorecard, FreelancerStats, HourlyIncomeCalendar, HourlyRateHistory, IncomeProjection, IncomeStabilityScore, InvoiceAgeingReport, InvoiceAgingTrend, InvoiceByDayOfMonth, InvoiceConversionFunnel, InvoiceFrequencyChart, InvoicePaymentGapTrend, InvoiceRecoveryRate, InvoiceSendToPayDelay, InvoiceSizeDistribution, InvoiceStatusFunnel, InvoiceValueTrend — 22 widgets ✓
 
+## Done by [AGENT 5] (Batch 3, 24 widgets, 4 checkpoints)
+
+**Range:** InvoiceVelocityScore → ProjectROIByClient (alphabetical)
+
+- `b2a49bfb` — CP1 (9 widgets): InvoiceVelocityScore, InvoiceWinRate, LargestInvoicesEver, LifetimeRevenueTimeline, LongestPayingClients, MonthlyClientAcquisition, MonthlyHoursHeatmap, MonthlyInvoiceVolume, MonthlyNewVsReturning
+- `7e55adee` — CP2 (5 widgets): MonthlyRecurringRevenue, MonthlyUniqueClients, NetRevenueRetention, OverdueByClient, OverdueInvoiceImpact
+- `52263251` — CP3 (5 widgets): PaymentSpeed, PeakHoursAnalysis, PeakRevenueMonth, ProfitCalculator, ProfitLoss
+- `c230b43b` — CP4 (5 widgets): ProjectCompletionRate, ProjectDurationAnalysis, ProjectEstimateAccuracy, ProjectProfitabilityIndex, ProjectROIByClient
+
+**Conflicts resolved during rebases:** 3× JSON merge conflicts in en.json/ru.json (interleaved namespace additions with AGENT 1 + AGENT 2 commits). Resolved by keeping both sides additive — never overwrite. Each conflict diff verified by `node JSON.parse` before `rebase --continue`.
+
+**Build verification:** `next build` exit 0 on every checkpoint.
+
 ## Done by parallel agents (not exhaustive — check git log)
 Per parallel-agent commits visible during rebases:
-- InvoiceVelocityScore → MonthlyNewVsReturning (batch 3 part)
-- MonthlyRecurringRevenue → OverdueInvoiceImpact (batch 3 part)
-- QuarterlyReview → RevenueByClient (batch 2/3 boundary)
+- QuarterlyReview → RevenueByClient (AGENT 1 batch 3 — checkpoints 2-3)
 - Some S-T range (SourceBreakdown, TaxEstimate, TimeByDayOfWeek, TimeToFirstInvoice)
 - Some T-W range (Time*, Top*, Y*)
 
-JSON now contains **101+ widget groups** in `analyticsPage.widgets.*` (some duplicate between mine + parallel agents — confirmed merged successfully via rebase resolver).
+JSON now contains **125+ widget groups** in `analyticsPage.widgets.*` (combined from all agents — confirmed merged successfully via rebase resolver).
 
-## Realistically remaining ([AGENT 2] backlog)
+## Realistically remaining
 
-Estimated **~30-40 widgets** still not touched by anyone, mostly in:
-- **InvoiceWinRate, LargestInvoicesEver, LifetimeRevenueTimeline, LongestPayingClients** (Inv*-L*)
-- **PaymentSpeed, PeakHoursAnalysis, PeakRevenueMonth, ProfitCalculator, ProfitLoss, ProjectCompletionRate, ProjectDurationAnalysis, ProjectEstimateAccuracy, ProjectProfitabilityIndex, ProjectROIByClient, ProjectsByMonth, ProjectsPerClient, ProjectSuccessRate, ProposalConversionRate, QuarterlyGrowthRate, RateSuggestion, RetentionRate** (P-R*)
+[AGENT 5]'s scope (Inv* → ProjectR*) = ✓ COMPLETE.
+
+Still pending (per other agents' progress):
+- **ProjectsByMonth, ProjectsPerClient, ProjectSuccessRate, ProposalConversionRate, QuarterlyGrowthRate** (AGENT 1 has these in their range — likely shipped)
+- **RateSuggestion, RetentionRate** (R-start)
 - **RevenueByDay, RevenueByDayOfMonth, RevenueByProjectType, RevenueByWeekOfMonth, RevenueCalendar, RevenueConcentrationHHI, RevenueConcentrationIndex, RevenueConcentrationRisk, RevenueForecastChart, RevenueGapMonths, RevenueGrowthRate, RevenueMomentum, RevenuePerHour, RevenuePerWorkingDay, RevenueSeasonality, RevenueVsExpenses, RevenueVsHoursTrend** (Rev*)
-- **TimeVsRevenueScatter, TopClientsByHoursTracked, TopEarningClients, TopEarningMonths, TopProjectsROI, TopRevenueMonths, TopRevenueWeeks, WeeklyRevenueVariance, WorkHoursChart, YearEndReview, YearOverYearComparison, YearToDateSummary, YearlyGrowthSummary** (T-Z, batches 3-4)
+- **TimeVsRevenueScatter, TopClientsByHoursTracked, TopEarningClients, TopEarningMonths, TopProjectsROI, TopRevenueMonths, TopRevenueWeeks, WeeklyRevenueVariance, WorkHoursChart, YearEndReview, YearOverYearComparison, YearToDateSummary, YearlyGrowthSummary** (T-Z, AGENT 4 likely picking up)
 
 **Verify which are done:** Run `grep -l 'useTranslations' src/app/\(app\)/analytics/*.tsx | wc -l` and cross-reference against `messages/en.json` `analyticsPage.widgets.*` keys.
 
