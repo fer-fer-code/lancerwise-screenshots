@@ -1,0 +1,136 @@
+=== ORIGIN/MAIN AUTHORITATIVE AUDIT (worktree b2627dda) ===
+Date: 2026-05-26
+Total time-tracker .tsx files:      102
+
+=== PART 1: useTranslations adoption (next-intl import) ===
+
+--- Phase 1+2 COVERED files (38) — useTranslations adoption ---
+  ADOPTED: BillTime                            | t() calls: 22
+  ADOPTED: BillabilityReport                   | t() calls: 16
+  ADOPTED: BillableGoal                        | t() calls: 7
+  ADOPTED: BillableRatioByProject              | t() calls: 5
+  ADOPTED: BillableReport                      | t() calls: 4
+  ADOPTED: BillableStreakCalendar              | t() calls: 5
+  ADOPTED: BillableTimeCalendar                | t() calls: 5
+  ADOPTED: BillableVsNonBillable               | t() calls: 7
+  ADOPTED: BulkActionBar                       | t() calls: 19
+  ADOPTED: DailyGoal                           | t() calls: 9
+  ADOPTED: DailySummary                        | t() calls: 5
+  ADOPTED: DailySummaryBar                     | t() calls: 3
+  ADOPTED: DailyTimeQuota                      | t() calls: 9
+  ADOPTED: EditEntryModal                      | t() calls: 15
+  ADOPTED: EditableEntry                       | t() calls: 13
+  ADOPTED: EmailReportButton                   | t() calls: 3
+  ADOPTED: EstimatedMonthEndHours              | t() calls: 10
+  MISSING: LiveEarningsCounter
+  ADOPTED: MonthlyBillableTarget               | t() calls: 8
+  ADOPTED: MonthlyTimeGoal                     | t() calls: 10
+  ADOPTED: MonthlyTimeReport                   | t() calls: 6
+  ADOPTED: PomodoroTimer                       | t() calls: 33
+  ADOPTED: PomodoroWidget                      | t() calls: 6
+  ADOPTED: SubmitForApprovalButton             | t() calls: 11
+  ADOPTED: TimeGoalForecast                    | t() calls: 7
+  ADOPTED: TimeGoalProgress                    | t() calls: 4
+  ADOPTED: TimeGoalVsPace                      | t() calls: 9
+  ADOPTED: TimerStreak                         | t() calls: 9
+  ADOPTED: TimesheetApproval                   | t() calls: 5
+  ADOPTED: TimesheetExport                     | t() calls: 10
+  ADOPTED: TodayTimeline                       | t() calls: 4
+  ADOPTED: WeeklyBillableTarget                | t() calls: 8
+  ADOPTED: WeeklyGoalChart                     | t() calls: 4
+  ADOPTED: WeeklyHoursGoal                     | t() calls: 9
+  ADOPTED: WeeklyProgressBar                   | t() calls: 2
+  ADOPTED: WeeklySummaryEmail                  | t() calls: 8
+  ADOPTED: WeeklyTimeSummary                   | t() calls: 4
+  ADOPTED: page                                | t() calls: 1
+  TOTAL: adopted=37 missing=1 of 38
+
+--- Phase 3 CANDIDATE files (63) — useTranslations adoption ---
+  Phase 3 NOT adopted (untouched widgets): 63
+  Phase 3 ALREADY adopted (unexpected — investigate): 0
+
+=== PART 2: TRUE BLUE/INDIGO palette residuals (origin/main authoritative) ===
+
+--- Phase 1+2 COVERED files — true blue residuals ---
+  PomodoroTimer                            | TRUE-BLUE hits: 1
+  page                                     | TRUE-BLUE hits: 3
+
+--- Phase 3 CANDIDATES — true blue inventory ---
+  BreakGapAnalysis                         | TRUE-BLUE hits: 1
+  DailySessionCount                        | TRUE-BLUE hits: 1
+  DeepWorkSessions                         | TRUE-BLUE hits: 1
+  EarlyLateStartPattern                    | TRUE-BLUE hits: 1
+  EntryCompleteness                        | TRUE-BLUE hits: 2
+  EntryQualityIndicator                    | TRUE-BLUE hits: 2
+  FocusBlockLogger                         | TRUE-BLUE hits: 1
+  HourlyProductivityRank                   | TRUE-BLUE hits: 1
+  IdleTimeEstimator                        | TRUE-BLUE hits: 1
+  LateNightEntries                         | TRUE-BLUE hits: 6
+  MonthlyProjectHours                      | TRUE-BLUE hits: 3
+  ProjectTimeAllocationChart               | TRUE-BLUE hits: 2
+  SessionStartPattern                      | TRUE-BLUE hits: 1
+  TagSuggestions                           | TRUE-BLUE hits: 1
+  TaskSwitchingAnalysis                    | TRUE-BLUE hits: 1
+  TimeByClient                             | TRUE-BLUE hits: 1
+  TimeVsRevenueCorrelation                 | TRUE-BLUE hits: 1
+  TopEntryDescriptions                     | TRUE-BLUE hits: 1
+  WeekdayVsWeekendHours                    | TRUE-BLUE hits: 1
+  WorkdayLengthDistribution                | TRUE-BLUE hits: 1
+  TOTAL Phase 3 blue/indigo hits: 30
+
+=== PART 3: page.tsx partial adoption deep dive ===
+
+page.tsx EN heading-like leafs (likely untranslated text):
+
+page.tsx EN literal-attrs (placeholder/title/aria-label):
+
+page.tsx TRUE-BLUE lines:
+611:            className={`flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full border transition-colors min-h-[44px] ${billable ? 'bg-violet-500/10 text-indigo-300 border-violet-500/30' : 'bg-elevated text-slate-400 border-subtle'}`}
+821:                className={`flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full border min-h-[44px] ${manual.billable ? 'bg-violet-500/10 text-indigo-300 border-violet-500/30' : 'bg-elevated text-slate-400 border-subtle'}`}>
+919:              <span className="text-sm font-semibold text-indigo-300">
+
+PomodoroTimer.tsx TRUE-BLUE residual (1 hit):
+412:                  ? 'text-indigo-300'
+
+LiveEarningsCounter.tsx (MISSING i18n) full body for review:
+      59 src/app/(app)/time-tracker/LiveEarningsCounter.tsx
+
+=== PART 4: Recount t-calls (broader pattern) — covered files ===
+  BillTime                                 | useTranslations: 2 | call-like: 28
+  BillabilityReport                        | useTranslations: 2 | call-like: 16
+  BillableGoal                             | useTranslations: 2 | call-like: 9
+  BillableRatioByProject                   | useTranslations: 2 | call-like: 5
+  BillableReport                           | useTranslations: 2 | call-like: 4
+  BillableStreakCalendar                   | useTranslations: 2 | call-like: 5
+  BillableTimeCalendar                     | useTranslations: 2 | call-like: 5
+  BillableVsNonBillable                    | useTranslations: 2 | call-like: 7
+  BulkActionBar                            | useTranslations: 2 | call-like: 19
+  DailyGoal                                | useTranslations: 2 | call-like: 10
+  DailySummary                             | useTranslations: 2 | call-like: 5
+  DailySummaryBar                          | useTranslations: 2 | call-like: 3
+  DailyTimeQuota                           | useTranslations: 2 | call-like: 10
+  EditEntryModal                           | useTranslations: 2 | call-like: 15
+  EditableEntry                            | useTranslations: 2 | call-like: 14
+  EmailReportButton                        | useTranslations: 2 | call-like: 3
+  EstimatedMonthEndHours                   | useTranslations: 2 | call-like: 10
+  LiveEarningsCounter                      | useTranslations: 0 | call-like: 0
+  MonthlyBillableTarget                    | useTranslations: 2 | call-like: 9
+  MonthlyTimeGoal                          | useTranslations: 2 | call-like: 11
+  MonthlyTimeReport                        | useTranslations: 2 | call-like: 6
+  PomodoroTimer                            | useTranslations: 2 | call-like: 33
+  PomodoroWidget                           | useTranslations: 2 | call-like: 6
+  SubmitForApprovalButton                  | useTranslations: 2 | call-like: 11
+  TimeGoalForecast                         | useTranslations: 2 | call-like: 7
+  TimeGoalProgress                         | useTranslations: 2 | call-like: 5
+  TimeGoalVsPace                           | useTranslations: 2 | call-like: 10
+  TimerStreak                              | useTranslations: 2 | call-like: 9
+  TimesheetApproval                        | useTranslations: 2 | call-like: 6
+  TimesheetExport                          | useTranslations: 2 | call-like: 10
+  TodayTimeline                            | useTranslations: 2 | call-like: 4
+  WeeklyBillableTarget                     | useTranslations: 2 | call-like: 9
+  WeeklyGoalChart                          | useTranslations: 2 | call-like: 4
+  WeeklyHoursGoal                          | useTranslations: 2 | call-like: 10
+  WeeklyProgressBar                        | useTranslations: 2 | call-like: 2
+  WeeklySummaryEmail                       | useTranslations: 2 | call-like: 9
+  WeeklyTimeSummary                        | useTranslations: 2 | call-like: 4
+  page                                     | useTranslations: 3 | call-like: 50
