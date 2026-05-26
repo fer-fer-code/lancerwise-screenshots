@@ -1,0 +1,347 @@
+
+=== /contracts/* ===
+src/app/(app)/contracts/ContractValueSummary.tsx:29:      { key: 'draft', label: 'Draft', color: 'text-slate-400', bg: 'bg-slate-900/50', bar: 'bg-gray-300' },
+src/app/(app)/contracts/ContractValueSummary.tsx:53:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/contracts/[id]/ContractActions.tsx:82:        className="flex items-center gap-2 text-slate-400 border border-slate-600 hover:bg-slate-900/50 text-sm font-medium px-4 py-2.5 rounded-lg transition-colors min-h-[44px]">
+src/app/(app)/contracts/[id]/ContractActions.tsx:86:        className="flex items-center gap-2 text-slate-400 border border-slate-600 hover:bg-slate-900/50 text-sm font-medium px-4 py-2.5 rounded-lg transition-colors min-h-[44px]">
+src/app/(app)/contracts/[id]/ContractActions.tsx:90:        className="flex items-center gap-2 text-slate-400 border border-slate-700 hover:text-rose-400 hover:border-rose-700/60 hover:bg-rose-900/15 disabled:opacity-60 text-sm font-medium px-4 py-2.5 rounded-lg transition-colors min-h-[44px]">
+src/app/(app)/contracts/[id]/ContractAmendment.tsx:131:            <button onClick={() => setOpen(false)} className="text-sm text-slate-400 hover:text-slate-300 px-4 py-2 rounded-lg border border-slate-700 transition-colors min-h-[44px]">
+src/app/(app)/contracts/[id]/ContractAmendment.tsx:144:          <div key={a.id} className="border border-slate-700/50 rounded-xl p-4 bg-slate-900/50 relative group">
+src/app/(app)/contracts/[id]/ContractAmendment.tsx:73:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/contracts/[id]/ContractAmendment.tsx:95:                className="w-full border border-slate-600 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/40 bg-slate-800/50">
+src/app/(app)/contracts/[id]/ContractChecklist.tsx:69:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/contracts/[id]/ContractRenewal.tsx:100:        className="flex items-center gap-1.5 text-xs text-slate-400 hover:text-violet-600 transition-colors border border-dashed border-slate-700 hover:border-violet-300 rounded-lg px-3 py-2 min-h-[44px]">
+src/app/(app)/contracts/[id]/ContractRenewal.tsx:108:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4 space-y-3">
+src/app/(app)/contracts/[id]/ContractRenewal.tsx:116:              className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40" />
+src/app/(app)/contracts/[id]/ContractRenewal.tsx:121:              className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 bg-slate-800/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40">
+src/app/(app)/contracts/[id]/ContractRenewal.tsx:129:              className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40" />
+src/app/(app)/contracts/[id]/ContractRenewal.tsx:139:          <button onClick={() => setEditing(false)} className="text-xs text-slate-400 px-3 py-1.5 rounded-lg hover:bg-slate-900/50 min-h-[44px]">Cancel</button>
+src/app/(app)/contracts/[id]/ContractRenewal.tsx:156:    <div className={`rounded-xl border p-4 ${wasRenewed ? 'bg-slate-900/50 border-slate-700/50' : isExpired ? 'bg-red-900/20 border-red-800/30' : shouldRemind ? 'bg-amber-900/20 border-amber-800/30' : 'bg-blue-900/20 border-blue-800/30'}`}>
+src/app/(app)/contracts/[id]/ContractRiskAnalysis.tsx:114:        <div className="border-t border-current border-opacity-20 p-4 text-sm bg-slate-800/50">
+src/app/(app)/contracts/[id]/ContractRiskAnalysis.tsx:64:        className="flex items-center gap-2 text-sm text-slate-400 border border-slate-600 hover:bg-slate-900/50 font-medium px-4 py-2.5 rounded-lg transition-colors min-h-[44px]">
+src/app/(app)/contracts/[id]/ContractRiskAnalysis.tsx:72:      <div className="flex items-center gap-2 text-sm text-slate-400 border border-slate-700 rounded-lg px-4 py-2.5 min-h-[44px]">
+src/app/(app)/contracts/[id]/ContractRiskAnalysis.tsx:99:        <div className="border-t border-current border-opacity-20 p-4 space-y-2 bg-slate-800/50">
+src/app/(app)/contracts/[id]/SendSigningLinkButton.tsx:52:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden">
+src/app/(app)/contracts/[id]/SendSigningLinkButton.tsx:53:      <div className="px-5 py-4 flex items-center gap-3 border-b border-slate-700/50">
+src/app/(app)/contracts/[id]/SendSigningLinkButton.tsx:68:            <div className="flex items-center gap-2 bg-slate-900/50 border border-slate-700 rounded-lg px-3 py-2 min-h-[44px]">
+src/app/(app)/contracts/[id]/SendSigningLinkButton.tsx:74:                className="flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-lg border border-slate-600 hover:bg-slate-900/50 transition-colors text-slate-300 min-h-[44px]"
+src/app/(app)/contracts/[id]/SendSigningLinkButton.tsx:86:                className="flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-lg border border-slate-600 hover:bg-slate-900/50 transition-colors text-slate-300 min-h-[44px]"
+src/app/(app)/contracts/[id]/ShareLinkButton.tsx:101:                className="flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-lg border border-slate-600 hover:bg-slate-900/50 transition-colors text-slate-300 min-h-[44px]"
+src/app/(app)/contracts/[id]/ShareLinkButton.tsx:50:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden">
+src/app/(app)/contracts/[id]/ShareLinkButton.tsx:51:      <div className="px-5 py-4 flex items-center gap-3 border-b border-slate-700/50">
+src/app/(app)/contracts/[id]/ShareLinkButton.tsx:83:            <div className="flex items-center gap-2 bg-slate-900/50 border border-slate-700 rounded-lg px-3 py-2 text-xs font-mono text-slate-400 truncate min-h-[44px]">
+src/app/(app)/contracts/[id]/ShareLinkButton.tsx:89:                className="flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-lg border border-slate-600 hover:bg-slate-900/50 transition-colors text-slate-300 min-h-[44px]"
+src/app/(app)/contracts/[id]/SignatureTracker.tsx:53:    <div className="bg-slate-800/50 rounded-xl border border-slate-700">
+src/app/(app)/contracts/[id]/SignatureTracker.tsx:56:        className="w-full flex items-center gap-3 px-5 py-4 text-left hover:bg-slate-900/50 transition-colors"
+src/app/(app)/contracts/[id]/SignatureTracker.tsx:68:        <div className="px-5 pb-5 border-t border-slate-700/50 pt-4">
+src/app/(app)/contracts/[id]/SignatureTracker.tsx:78:                      done ? 'bg-green-500 border-green-500' : 'bg-slate-800/50 border-slate-700'
+src/app/(app)/contracts/[id]/SignatureTracker.tsx:92:                          ? 'text-slate-400 border-slate-700 hover:border-red-800/30 hover:text-red-400 bg-slate-800/50'
+src/app/(app)/contracts/[id]/edit/page.tsx:52:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
+src/app/(app)/contracts/[id]/edit/page.tsx:71:                className="border border-slate-600 rounded-lg px-3 py-2.5 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-800/50 w-20">
+src/app/(app)/contracts/[id]/edit/page.tsx:90:            <Link href={`/contracts/${contractId}`} className="text-sm font-medium text-slate-400 px-4 py-2.5 rounded-lg border border-slate-600 hover:bg-slate-900/50 transition-colors min-h-[44px]">Cancel</Link>
+src/app/(app)/contracts/[id]/page.tsx:115:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-8">
+src/app/(app)/contracts/[id]/page.tsx:63:          className="flex items-center gap-2 text-sm text-slate-400 border border-slate-600 hover:bg-slate-900/50 font-medium px-4 py-2.5 rounded-lg transition-colors min-h-[44px]">
+src/app/(app)/contracts/[id]/page.tsx:67:          className="flex items-center gap-2 text-sm text-slate-400 border border-slate-600 hover:bg-slate-900/50 font-medium px-4 py-2.5 rounded-lg transition-colors min-h-[44px]">
+src/app/(app)/contracts/[id]/page.tsx:71:          className="flex items-center gap-2 text-sm text-slate-400 border border-slate-600 hover:bg-slate-900/50 font-medium px-4 py-2.5 rounded-lg transition-colors min-h-[44px]">
+src/app/(app)/contracts/analyze/ContractAnalyzer.tsx:225:        <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 space-y-4">
+src/app/(app)/contracts/analyze/ContractAnalyzer.tsx:237:            className="w-full min-h-[300px] p-4 text-sm font-mono border border-slate-700 rounded-lg resize-y focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-300 bg-slate-900/50 text-slate-200 placeholder-slate-500"
+src/app/(app)/contracts/analyze/ContractAnalyzer.tsx:310:            <div className="bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden">
+src/app/(app)/contracts/analyze/ContractAnalyzer.tsx:311:              <div className="px-5 py-3.5 border-b border-slate-700/50">
+src/app/(app)/contracts/analyze/ContractAnalyzer.tsx:351:            <div className="bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden">
+src/app/(app)/contracts/analyze/ContractAnalyzer.tsx:352:              <div className="px-5 py-3.5 border-b border-slate-700/50">
+src/app/(app)/contracts/analyze/ContractAnalyzer.tsx:410:              className="flex items-center gap-2 text-sm font-medium text-slate-300 border border-slate-600 hover:bg-slate-900/50 px-4 py-2.5 rounded-lg transition-colors min-h-[44px]"
+src/app/(app)/contracts/expiry/page.tsx:104:        <div className="bg-slate-900/50 border border-slate-700/50 rounded-xl p-4">
+src/app/(app)/contracts/expiry/page.tsx:121:                    'bg-slate-800/50 border rounded-xl p-4 space-y-2',
+src/app/(app)/contracts/expiry/page.tsx:155:              <div key={c.id} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4 space-y-2 opacity-75">
+src/app/(app)/contracts/new/ContractTemplates.tsx:139:            <div className="flex items-center justify-between p-5 border-b border-slate-700/50">
+src/app/(app)/contracts/new/page.tsx:168:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
+src/app/(app)/contracts/new/page.tsx:187:                className="w-full border border-slate-600 rounded-lg px-4 py-2.5 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-800/50">
+src/app/(app)/contracts/new/page.tsx:201:                  className="border border-slate-600 rounded-lg px-3 py-2.5 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-800/50 w-20">
+src/app/(app)/contracts/new/page.tsx:233:            <Link href="/contracts" className="text-sm font-medium text-slate-400 px-4 py-2.5 rounded-lg border border-slate-600 hover:bg-slate-900/50 transition-colors min-h-[44px]">Cancel</Link>
+src/app/(app)/contracts/page.tsx:115:      'bg-slate-800/50 border rounded-xl p-4 space-y-3 transition-all hover:shadow-sm',
+src/app/(app)/contracts/page.tsx:118:      'border-slate-700'
+src/app/(app)/contracts/page.tsx:266:    <div className="bg-slate-800/50 border border-violet-800/30 rounded-xl p-5 shadow-sm mb-4">
+src/app/(app)/contracts/page.tsx:282:            className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-300"
+src/app/(app)/contracts/page.tsx:290:            className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-300 bg-slate-800/50"
+src/app/(app)/contracts/page.tsx:308:              className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-300"
+src/app/(app)/contracts/page.tsx:316:              className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-300 bg-slate-800/50"
+src/app/(app)/contracts/page.tsx:328:            className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-300"
+src/app/(app)/contracts/page.tsx:337:            className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-300"
+src/app/(app)/contracts/page.tsx:347:            className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-300 resize-none"
+src/app/(app)/contracts/page.tsx:351:          <button type="button" onClick={onClose} className="text-sm px-4 py-2 border border-slate-700 rounded-lg hover:bg-slate-900/50 transition-colors min-h-[44px]">
+src/app/(app)/contracts/page.tsx:541:        <div className="bg-slate-800/50 rounded-xl border border-slate-700">
+src/app/(app)/contracts/renewals/RenewalCenterClient.tsx:135:        <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4">
+src/app/(app)/contracts/renewals/RenewalCenterClient.tsx:139:        <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4">
+src/app/(app)/contracts/renewals/RenewalCenterClient.tsx:143:        <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4">
+src/app/(app)/contracts/renewals/RenewalCenterClient.tsx:158:                  ? 'bg-slate-900/50 text-white border-slate-700'
+src/app/(app)/contracts/renewals/RenewalCenterClient.tsx:159:                  : 'border-slate-600 text-slate-400 hover:bg-slate-900/50'
+src/app/(app)/contracts/renewals/RenewalCenterClient.tsx:168:          className="flex items-center gap-1.5 text-xs text-slate-400 border border-slate-600 px-3 py-1.5 rounded-lg hover:bg-slate-900/50 transition-colors min-h-[44px]"
+src/app/(app)/contracts/renewals/RenewalCenterClient.tsx:175:      <div className="bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden">
+src/app/(app)/contracts/renewals/RenewalCenterClient.tsx:184:              <tr className="border-b border-slate-700/50 bg-slate-900/50">
+src/app/(app)/contracts/renewals/RenewalCenterClient.tsx:200:                    <tr key={c.id} className="hover:bg-slate-900/50 transition-colors">
+src/app/(app)/contracts/renewals/RenewalCenterClient.tsx:250:                                className="text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-800/50"
+src/app/(app)/contracts/renewals/RenewalCenterClient.tsx:260:                                className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-800/50"
+
+=== /tools/* ===
+src/app/(app)/tools/budgets/BudgetsClient.tsx:128:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4">
+src/app/(app)/tools/budgets/BudgetsClient.tsx:132:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4">
+src/app/(app)/tools/budgets/BudgetsClient.tsx:139:        <div className={`bg-slate-800/50 rounded-xl border p-4 ${overCount > 0 ? 'border-red-700' : 'border-slate-700'}`}>
+src/app/(app)/tools/budgets/BudgetsClient.tsx:149:        <div className="bg-slate-800/50 rounded-xl border border-dashed border-slate-600 p-12 text-center">
+src/app/(app)/tools/budgets/BudgetsClient.tsx:166:              <div key={b.id} className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/tools/budgets/BudgetsClient.tsx:218:        contentClassName="bg-slate-900 rounded-2xl shadow-2xl w-full max-w-md border border-slate-700"
+src/app/(app)/tools/budgets/BudgetsClient.tsx:221:            <div className="flex items-center justify-between p-5 border-b border-slate-700">
+src/app/(app)/tools/budgets/BudgetsClient.tsx:229:                  className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100 placeholder-slate-500"
+src/app/(app)/tools/budgets/BudgetsClient.tsx:236:                    className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100 placeholder-slate-500"
+src/app/(app)/tools/budgets/BudgetsClient.tsx:242:                    className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100 placeholder-slate-500"
+src/app/(app)/tools/budgets/BudgetsClient.tsx:250:                    className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100 capitalize">
+src/app/(app)/tools/budgets/BudgetsClient.tsx:257:                    className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100">
+src/app/(app)/tools/budgets/BudgetsClient.tsx:266:                  className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100">
+src/app/(app)/tools/budgets/BudgetsClient.tsx:275:                      className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100" />
+src/app/(app)/tools/budgets/BudgetsClient.tsx:280:                      className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100" />
+src/app/(app)/tools/budgets/BudgetsClient.tsx:287:                  className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100 placeholder-slate-500 resize-none"
+src/app/(app)/tools/budgets/BudgetsClient.tsx:291:            <div className="flex gap-3 p-5 border-t border-slate-700">
+src/app/(app)/tools/budgets/BudgetsClient.tsx:297:                className="px-4 py-2.5 text-sm font-medium text-slate-400 border border-slate-700 rounded-lg hover:bg-slate-700/50 transition-colors min-h-[44px]">
+src/app/(app)/tools/call-prep/page.tsx:237:              className="w-full px-3 py-2 rounded-lg border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus:border-transparent transition"
+src/app/(app)/tools/call-prep/page.tsx:255:              className="w-full px-3 py-2 rounded-lg border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus:border-transparent transition"
+src/app/(app)/tools/call-prep/page.tsx:276:                      : 'border-slate-700 bg-slate-800 text-slate-400 hover:border-slate-600'
+src/app/(app)/tools/call-prep/page.tsx:296:              className="w-full px-3 py-2 rounded-lg border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus:border-transparent transition"
+src/app/(app)/tools/call-prep/page.tsx:310:              className="w-full px-3 py-2 rounded-lg border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus:border-transparent transition resize-none"
+src/app/(app)/tools/call-prep/page.tsx:354:                    : 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700',
+src/app/(app)/tools/call-prep/page.tsx:366:            <div className="flex-1 flex flex-col items-center justify-center min-h-[320px] rounded-xl border border-dashed border-slate-700 text-center p-8">
+src/app/(app)/tools/capacity/page.tsx:293:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4 text-center">
+src/app/(app)/tools/capacity/page.tsx:298:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4 text-center">
+src/app/(app)/tools/capacity/page.tsx:308:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4 text-center">
+src/app/(app)/tools/capacity/page.tsx:313:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4 text-center">
+src/app/(app)/tools/capacity/page.tsx:332:        <div className="bg-slate-800/50 rounded-2xl border border-slate-700 overflow-hidden">
+src/app/(app)/tools/capacity/page.tsx:333:          <div className="px-5 py-4 border-b border-slate-700">
+src/app/(app)/tools/capacity/page.tsx:386:        <div className="bg-slate-800/50 rounded-2xl border border-slate-700 p-8 text-center">
+src/app/(app)/tools/capacity/page.tsx:421:      <div className="bg-slate-800/50 rounded-2xl border border-slate-700 p-5">
+src/app/(app)/tools/client-brief/page.tsx:227:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-8">
+src/app/(app)/tools/client-brief/page.tsx:236:                className="w-full border border-slate-700 rounded-lg px-3 py-2.5 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100"
+src/app/(app)/tools/client-brief/page.tsx:250:                className="w-full border border-slate-700 rounded-lg px-3 py-2.5 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100 placeholder-slate-500"
+src/app/(app)/tools/client-brief/page.tsx:261:                className="w-full border border-slate-700 rounded-lg px-3 py-2.5 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100 placeholder-slate-500"
+src/app/(app)/tools/client-brief/page.tsx:272:                className="w-full border border-slate-700 rounded-lg px-3 py-2.5 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100 placeholder-slate-500 resize-none min-h-32"
+src/app/(app)/tools/client-brief/page.tsx:291:          <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-8">
+src/app/(app)/tools/client-brief/page.tsx:320:                        className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 resize-none min-h-20 bg-slate-900 text-slate-100 placeholder-slate-500 transition-colors"
+src/app/(app)/tools/client-brief/page.tsx:379:            <div className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden">
+src/app/(app)/tools/client-brief/page.tsx:389:                    <span className="inline-block bg-slate-800/20 text-white text-xs px-2.5 py-1 rounded-full">
+src/app/(app)/tools/client-intelligence/ClientIntelligenceClient.tsx:125:          <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4">
+src/app/(app)/tools/client-intelligence/ClientIntelligenceClient.tsx:130:          <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4">
+src/app/(app)/tools/client-intelligence/ClientIntelligenceClient.tsx:134:          <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4">
+src/app/(app)/tools/client-intelligence/ClientIntelligenceClient.tsx:160:              <div key={c.id} className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden">
+src/app/(app)/tools/client-intelligence/ClientIntelligenceClient.tsx:199:                  <div className="border-t border-slate-700 p-4 space-y-4">
+src/app/(app)/tools/client-intelligence/ClientIntelligenceClient.tsx:302:        contentClassName="bg-slate-900 rounded-2xl shadow-2xl w-full max-w-md p-6 space-y-4 border border-slate-700"
+src/app/(app)/tools/client-intelligence/ClientIntelligenceClient.tsx:316:                    className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm bg-slate-900 text-slate-100" />
+src/app/(app)/tools/client-intelligence/ClientIntelligenceClient.tsx:323:                    className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm bg-slate-900 text-slate-100 placeholder-slate-500" />
+src/app/(app)/tools/client-intelligence/ClientIntelligenceClient.tsx:329:                    className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm bg-slate-900 text-slate-100" />
+src/app/(app)/tools/client-intelligence/ClientIntelligenceClient.tsx:343:                          className={`flex-1 py-2 rounded-lg text-sm font-medium border transition-all ${form.mood === m ? `${mc.color} ${mc.bg} ${mc.border} border-2` : 'border-slate-700 text-slate-400 hover:bg-slate-700/50'}`}>
+src/app/(app)/tools/client-intelligence/ClientIntelligenceClient.tsx:354:                    className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm bg-slate-900 text-slate-100 placeholder-slate-500" />
+src/app/(app)/tools/client-intelligence/ClientIntelligenceClient.tsx:360:                    className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm bg-slate-900 text-slate-100 placeholder-slate-500" />
+src/app/(app)/tools/client-intelligence/ClientIntelligenceClient.tsx:375:                          className={`flex items-center gap-2 py-2 px-3 rounded-lg text-sm border transition-all ${form.activity_type === t ? 'border-violet-500 bg-violet-900/30 text-indigo-300' : 'border-slate-700 text-slate-400 hover:bg-slate-700/50'}`}>
+src/app/(app)/tools/client-intelligence/ClientIntelligenceClient.tsx:386:                    className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm bg-slate-900 text-slate-100 placeholder-slate-500" />
+src/app/(app)/tools/client-intelligence/ClientIntelligenceClient.tsx:393:                className="flex-1 py-2 rounded-lg border border-slate-700 text-sm text-slate-400 hover:bg-slate-700/50 min-h-[44px]">Cancel</button>
+src/app/(app)/tools/complexity-estimator/page.tsx:337:      <div className="bg-slate-800/50 rounded-2xl border border-slate-700 p-6 space-y-5">
+src/app/(app)/tools/complexity-estimator/page.tsx:352:                    : 'border-slate-700 text-slate-400 hover:border-slate-600'
+src/app/(app)/tools/complexity-estimator/page.tsx:371:            className="w-full min-h-36 px-4 py-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 text-sm resize-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus:border-transparent transition"
+src/app/(app)/tools/complexity-estimator/page.tsx:386:              className="w-full px-4 py-2.5 rounded-xl border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 transition"
+src/app/(app)/tools/complexity-estimator/page.tsx:402:                className="w-full pl-7 pr-4 py-2.5 rounded-xl border border-slate-700 bg-slate-900 text-slate-100 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 transition"
+src/app/(app)/tools/complexity-estimator/page.tsx:430:              className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-sm text-slate-400 hover:text-slate-200 border border-slate-700 hover:bg-slate-700/50 transition min-h-[44px]"
+src/app/(app)/tools/complexity-estimator/page.tsx:467:            <div className="bg-slate-800/50 rounded-2xl border border-slate-700 p-6">
+src/app/(app)/tools/complexity-estimator/page.tsx:492:                <div className="mt-4 pt-4 border-t border-slate-700 flex justify-between items-center">
+src/app/(app)/tools/complexity-estimator/page.tsx:502:            <div className="bg-slate-800/50 rounded-2xl border border-slate-700 p-6">
+src/app/(app)/tools/complexity-estimator/page.tsx:508:                <div className="rounded-xl border border-slate-700 bg-slate-800/50 p-4 text-center">
+src/app/(app)/tools/complexity-estimator/page.tsx:600:            <div className="bg-slate-800/50 rounded-2xl border border-slate-700 p-6">
+src/app/(app)/tools/complexity-estimator/page.tsx:614:                className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium border border-slate-700 text-slate-300 hover:bg-slate-700/50 transition min-h-[44px]"
+src/app/(app)/tools/complexity-estimator/page.tsx:628:                className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium border border-slate-700 text-slate-300 hover:bg-slate-700/50 transition min-h-[44px]"
+src/app/(app)/tools/complexity-estimator/page.tsx:640:        <div className="bg-slate-800/50 rounded-2xl border border-slate-700 p-6">
+src/app/(app)/tools/complexity-estimator/page.tsx:648:                className="flex items-center gap-3 p-3 rounded-xl bg-slate-800 hover:bg-slate-700/50 transition group"
+src/app/(app)/tools/faq-builder/page.tsx:325:    <div className="min-h-screen bg-slate-900/50">
+src/app/(app)/tools/faq-builder/page.tsx:340:        <div className="flex gap-1 mb-6 bg-slate-800/50 border border-slate-700 rounded-xl p-1 w-fit">
+src/app/(app)/tools/faq-builder/page.tsx:362:              <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/tools/faq-builder/page.tsx:394:            <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6 text-center">
+src/app/(app)/tools/faq-builder/page.tsx:448:                  <div key={i} className="bg-slate-800/50 rounded-xl border border-slate-700 p-4">
+src/app/(app)/tools/faq-builder/page.tsx:460:                  <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4">
+src/app/(app)/tools/faq-builder/page.tsx:493:            <div className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden">
+src/app/(app)/tools/faq-builder/page.tsx:502:                <div className="px-5 pb-5 border-t border-slate-700 pt-4 space-y-3">
+src/app/(app)/tools/faq-builder/page.tsx:508:                    className="w-full px-3 py-2 border border-slate-700 rounded-lg text-sm bg-slate-900 text-slate-100 placeholder-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/tools/faq-builder/page.tsx:515:                    className="w-full px-3 py-2 border border-slate-700 rounded-lg text-sm bg-slate-900 text-slate-100 placeholder-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 resize-none"
+src/app/(app)/tools/faq-builder/page.tsx:521:                      className="px-3 py-2 border border-slate-700 rounded-lg text-sm bg-slate-900 text-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/tools/faq-builder/page.tsx:542:              <div className="text-center py-12 bg-slate-800/50 rounded-xl border border-slate-700">
+src/app/(app)/tools/faq-builder/page.tsx:548:                <div key={cat} className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden">
+src/app/(app)/tools/faq-builder/page.tsx:578:                                className="w-full px-3 py-2 border border-slate-700 rounded-lg text-sm bg-slate-900 text-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 resize-none"
+src/app/(app)/tools/faq-builder/page.tsx:634:              <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/tools/objection-handler/page.tsx:259:          <div className="bg-slate-800/50 rounded-xl border border-slate-700">
+src/app/(app)/tools/objection-handler/page.tsx:278:              <div className="px-4 pb-4 border-t border-slate-700 pt-3">
+src/app/(app)/tools/objection-handler/page.tsx:333:                        : 'border-slate-700 bg-slate-800/50 hover:border-violet-700 hover:bg-violet-900/10'
+src/app/(app)/tools/objection-handler/page.tsx:366:                    : 'border-slate-700 bg-slate-800/50 hover:border-violet-700 hover:bg-violet-900/10'
+src/app/(app)/tools/objection-handler/page.tsx:392:            <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4 space-y-3">
+src/app/(app)/tools/objection-handler/page.tsx:501:                    className="bg-slate-800/50 rounded-xl border border-slate-700 p-3 flex items-start gap-3"
+src/app/(app)/tools/objection-handler/page.tsx:544:                  className="bg-slate-800/50 rounded-lg border border-slate-700 p-2.5"
+src/app/(app)/tools/pricing-optimizer/page.tsx:188:        <div className="bg-slate-800 border border-white/5 rounded-xl p-4 space-y-1">
+src/app/(app)/tools/pricing-optimizer/page.tsx:195:        <div className="bg-slate-800 border border-white/5 rounded-xl p-4 space-y-1">
+src/app/(app)/tools/pricing-optimizer/page.tsx:202:        <div className="bg-slate-800 border border-white/5 rounded-xl p-4 space-y-1">
+src/app/(app)/tools/pricing-optimizer/page.tsx:211:        <div className="bg-slate-800 border border-white/5 rounded-xl p-4 space-y-1">
+src/app/(app)/tools/pricing-optimizer/page.tsx:222:        <div className="bg-slate-800 border border-white/5 rounded-xl p-5 space-y-4">
+src/app/(app)/tools/pricing-optimizer/page.tsx:269:        <div className="bg-slate-800 border border-white/5 rounded-xl p-5 space-y-4">
+src/app/(app)/tools/pricing-optimizer/page.tsx:286:                  <tr key={p.id} className="border-b border-white/5 hover:bg-slate-800/2 transition-colors">
+src/app/(app)/tools/pricing-optimizer/page.tsx:330:                className={`bg-slate-800 border rounded-xl p-4 space-y-2 ${
+src/app/(app)/tools/pricing-optimizer/page.tsx:355:      <div className="bg-slate-800 border border-white/5 rounded-xl p-5 space-y-4">
+src/app/(app)/tools/proposal-templates/page.tsx:348:                  className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100 placeholder-slate-500"
+src/app/(app)/tools/proposal-templates/page.tsx:357:                  className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100"
+src/app/(app)/tools/proposal-templates/page.tsx:375:                className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100 placeholder-slate-500 resize-y font-mono"
+src/app/(app)/tools/proposal-templates/page.tsx:396:              <button type="button" onClick={() => setShowNewForm(false)} className="text-sm text-slate-400 border border-slate-700 hover:bg-slate-700/50 px-4 py-2 rounded-lg min-h-[44px]">Cancel</button>
+src/app/(app)/tools/proposal-templates/page.tsx:408:              <div key={seed.id} className="bg-slate-800/50 border border-dashed border-slate-600 rounded-xl p-4 opacity-80 hover:opacity-100 transition-opacity">
+src/app/(app)/tools/proposal-templates/page.tsx:447:              className="w-full pl-9 pr-3 py-2 text-sm border border-slate-700 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100 placeholder-slate-500"
+src/app/(app)/tools/proposal-templates/page.tsx:460:                    : 'bg-slate-800 text-slate-400 border-slate-700 hover:border-violet-500'
+src/app/(app)/tools/proposal-templates/page.tsx:479:                  className={`relative bg-slate-800/50 rounded-xl border p-3.5 cursor-pointer transition-all ${
+src/app/(app)/tools/proposal-templates/page.tsx:482:                      : 'border-slate-700 hover:border-violet-600'
+src/app/(app)/tools/proposal-templates/page.tsx:513:            <div className="h-full bg-slate-800/50 rounded-xl border border-slate-700 flex flex-col items-center justify-center text-center p-12">
+src/app/(app)/tools/proposal-templates/page.tsx:530:            <div className="h-full bg-slate-800/50 rounded-xl border border-slate-700 flex flex-col overflow-hidden">
+src/app/(app)/tools/proposal-templates/page.tsx:532:              <div className="border-b border-slate-700 px-5 pt-4">
+src/app/(app)/tools/proposal-templates/page.tsx:540:                          ? 'bg-slate-800/50 border border-b-slate-800 border-slate-700 text-violet-400 -mb-px relative z-10'
+src/app/(app)/tools/proposal-templates/page.tsx:572:                                className="w-full border border-slate-700 rounded-lg px-3 py-1.5 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100 placeholder-slate-500"
+src/app/(app)/tools/proposal-templates/page.tsx:587:                            className="text-xs text-slate-400 border border-slate-700 hover:bg-slate-700/50 px-3 py-1.5 rounded-lg transition-colors min-h-[44px]"
+src/app/(app)/tools/proposal-templates/page.tsx:603:                      <div className="bg-slate-900 border border-slate-700 rounded-xl p-4 text-sm text-slate-300 whitespace-pre-wrap leading-relaxed font-sans min-h-[200px]">
+src/app/(app)/tools/proposal-templates/page.tsx:618:                          className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100"
+src/app/(app)/tools/proposal-templates/page.tsx:626:                          className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100"
+src/app/(app)/tools/proposal-templates/page.tsx:644:                        className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 bg-slate-900 text-slate-100 placeholder-slate-500 resize-y font-mono min-h-64"
+src/app/(app)/tools/proposal-templates/page.tsx:673:                            : 'text-slate-400 border-slate-700 hover:border-yellow-600'
+src/app/(app)/tools/proposal-templates/page.tsx:681:                    <div className="flex items-center gap-2 pt-2 border-t border-slate-700">
+src/app/(app)/tools/roi-calculator/page.tsx:356:                  : 'border-slate-700 bg-slate-800/50 hover:border-violet-700'
+src/app/(app)/tools/roi-calculator/page.tsx:375:            <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5 space-y-4">
+src/app/(app)/tools/roi-calculator/page.tsx:411:            <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5 space-y-4">
+src/app/(app)/tools/roi-calculator/page.tsx:451:            <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5 space-y-4">
+src/app/(app)/tools/roi-calculator/page.tsx:521:            <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/tools/roi-calculator/page.tsx:564:            <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/tools/roi-calculator/page.tsx:632:            <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4">
+src/app/(app)/tools/roi-calculator/page.tsx:668:              <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4 space-y-3">
+src/app/(app)/tools/roi-calculator/page.tsx:739:            'w-full text-sm rounded-lg border border-slate-700 bg-slate-900 text-slate-100 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40',
+src/app/(app)/tools/roi-calculator/page.tsx:766:      'rounded-xl border p-4 bg-slate-800/50',
+src/app/(app)/tools/roi-calculator/page.tsx:769:        : 'border-slate-700'
+src/app/(app)/tools/runway/page.tsx:185:    <div className={`rounded-xl border p-4 text-center transition-all ${active ? 'ring-2 ring-violet-400 border-violet-600 bg-violet-900/30' : 'border-slate-700 bg-slate-800/50'}`}>
+src/app/(app)/tools/runway/page.tsx:344:          <div className="bg-slate-800/50 rounded-2xl border border-slate-700 p-6 space-y-4">
+src/app/(app)/tools/runway/page.tsx:395:          <div className="bg-slate-800/50 rounded-2xl border border-slate-700 overflow-hidden">
+src/app/(app)/tools/runway/page.tsx:404:              <div className="px-5 pb-5 space-y-3 border-t border-slate-700 pt-3">
+src/app/(app)/tools/runway/page.tsx:452:          <div className="bg-slate-800/50 rounded-2xl border border-slate-700 p-5 space-y-4">
+src/app/(app)/tools/runway/page.tsx:542:          <div className="bg-slate-800/50 rounded-2xl border border-slate-700 p-5">
+src/app/(app)/tools/runway/page.tsx:576:          <div className="bg-slate-800/50 rounded-2xl border border-slate-700 p-5">
+src/app/(app)/tools/runway/page.tsx:591:          <div className="bg-slate-800/50 rounded-2xl border border-slate-700 p-5">
+src/app/(app)/tools/runway/page.tsx:619:                <div className="flex items-center gap-2 text-slate-400 text-xs mt-1 pt-1 border-t border-slate-700">
+src/app/(app)/tools/runway/page.tsx:635:            <div className="bg-slate-800/50 rounded-2xl border border-slate-700 p-5">
+src/app/(app)/tools/timezone/page.tsx:344:          <div className="bg-slate-800 border border-white/10 rounded-xl p-4 flex items-end gap-3">
+src/app/(app)/tools/timezone/page.tsx:372:        <div className="bg-slate-800 border border-white/10 rounded-xl p-5">
+src/app/(app)/tools/timezone/page.tsx:403:                  <div key={client.id} className="bg-slate-800 border border-white/10 rounded-xl p-4 flex flex-col gap-3 hover:border-white/20 transition-colors">
+src/app/(app)/tools/timezone/page.tsx:449:        <div className="bg-slate-800 border border-white/10 rounded-xl p-6">
+src/app/(app)/tools/timezone/page.tsx:498:                          ? 'bg-slate-800 border-white/5 text-slate-600 cursor-not-allowed'
+src/app/(app)/tools/timezone/page.tsx:535:                    <tr key={hour} className={`${isBest ? 'bg-violet-950/40' : ''} hover:bg-slate-800/[0.02] transition-colors`}>
+src/app/(app)/tools/timezone/page.tsx:602:          <div className="bg-slate-800 border border-amber-700/40 rounded-xl p-6">
+src/app/(app)/tools/welcome-kit/page.tsx:356:    <div className="min-h-screen bg-slate-900/50 p-6">
+src/app/(app)/tools/welcome-kit/page.tsx:380:            <div className="bg-slate-800/50 rounded-xl border border-slate-700 shadow-sm p-5 space-y-4">
+src/app/(app)/tools/welcome-kit/page.tsx:400:                    className="w-full px-3 py-2 text-sm rounded-lg border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus:border-transparent"
+src/app/(app)/tools/welcome-kit/page.tsx:403:                    <div className="absolute z-20 top-full mt-1 w-full bg-slate-900 border border-slate-700 rounded-lg shadow-lg max-h-48 overflow-y-auto">
+src/app/(app)/tools/welcome-kit/page.tsx:446:                  className="w-full px-3 py-2 text-sm rounded-lg border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus:border-transparent"
+src/app/(app)/tools/welcome-kit/page.tsx:458:                  className="w-full px-3 py-2 text-sm rounded-lg border border-slate-700 bg-slate-900 text-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus:border-transparent"
+src/app/(app)/tools/welcome-kit/page.tsx:480:                    className="w-full px-3 py-2 text-sm rounded-lg border border-slate-700 bg-slate-900 text-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus:border-transparent"
+src/app/(app)/tools/welcome-kit/page.tsx:490:                    className="w-full px-3 py-2 text-sm rounded-lg border border-slate-700 bg-slate-900 text-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus:border-transparent"
+src/app/(app)/tools/welcome-kit/page.tsx:511:                  className="w-full px-3 py-2 text-sm rounded-lg border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus:border-transparent resize-none"
+src/app/(app)/tools/welcome-kit/page.tsx:524:                    className="w-full px-3 py-2 text-sm rounded-lg border border-slate-700 bg-slate-900 text-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus:border-transparent"
+src/app/(app)/tools/welcome-kit/page.tsx:540:                    className="w-full px-3 py-2 text-sm rounded-lg border border-slate-700 bg-slate-900 text-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus:border-transparent"
+src/app/(app)/tools/welcome-kit/page.tsx:561:                    className="w-full px-3 py-2 text-sm rounded-lg border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus:border-transparent"
+src/app/(app)/tools/welcome-kit/page.tsx:573:                    className="w-full px-3 py-2 text-sm rounded-lg border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus:border-transparent"
+src/app/(app)/tools/welcome-kit/page.tsx:640:                      ? 'opacity-60 cursor-not-allowed bg-slate-700/50 border-slate-700 text-slate-400'
+src/app/(app)/tools/welcome-kit/page.tsx:666:                  className="bg-slate-800/50 rounded-xl border border-slate-700 shadow-sm overflow-hidden"
+src/app/(app)/tools/welcome-kit/page.tsx:695:                            className="flex items-center gap-1 px-2 py-1 rounded text-xs font-medium bg-slate-800/60 hover:bg-slate-800 text-slate-400 border border-slate-700 transition-colors min-h-[44px]"
+src/app/(app)/tools/welcome-kit/page.tsx:703:                              className="flex items-center gap-1 px-2 py-1 rounded text-xs font-medium bg-slate-800/60 hover:bg-slate-800 text-slate-400 border border-slate-700 transition-colors min-h-[44px]"
+src/app/(app)/tools/work-life/WorkLifeClient.tsx:138:          <div key={label} className={`rounded-xl border p-4 ${warn ? 'border-orange-700 bg-orange-900/20' : 'border-slate-700 bg-slate-800/50'}`}>
+src/app/(app)/tools/work-life/WorkLifeClient.tsx:147:      <div className="bg-slate-800/50 rounded-2xl border border-slate-700 p-5">
+src/app/(app)/tools/work-life/WorkLifeClient.tsx:175:        <div className="bg-slate-800/50 rounded-2xl border border-slate-700 p-5">
+src/app/(app)/tools/work-life/WorkLifeClient.tsx:193:        <Link href="/tools/burnout" className="text-sm font-medium text-slate-400 hover:text-slate-300 border border-slate-700 hover:bg-slate-700/50 rounded-lg px-4 py-2 min-h-[44px]">
+
+=== /settings/* ===
+src/app/(app)/settings/InvoiceBranding.tsx:37:        <div className="border-t border-slate-800 mt-0.5" />
+src/app/(app)/settings/api/APIKeysClient.tsx:1200:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
+src/app/(app)/settings/api/APIKeysClient.tsx:1222:          <form onSubmit={handleCreate} className="mb-5 p-4 bg-slate-900/50 rounded-lg space-y-3 border border-slate-700">
+src/app/(app)/settings/api/APIKeysClient.tsx:1232:                className="w-full border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/settings/api/APIKeysClient.tsx:1241:                  className="w-full border border-slate-700 bg-slate-900 text-slate-100 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/settings/api/APIKeysClient.tsx:1252:                  className="w-full border border-slate-700 bg-slate-900 text-slate-100 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/settings/api/APIKeysClient.tsx:1299:                    ? 'border-slate-700 bg-slate-800/50'
+src/app/(app)/settings/api/APIKeysClient.tsx:1348:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
+src/app/(app)/settings/api/APIKeysClient.tsx:1376:            <div className="divide-y divide-slate-700 border border-slate-700 rounded-lg overflow-hidden">
+src/app/(app)/settings/availability/page.tsx:250:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
+src/app/(app)/settings/availability/page.tsx:262:                  : 'border-slate-700 bg-slate-700/30 hover:border-slate-600'
+src/app/(app)/settings/availability/page.tsx:294:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
+src/app/(app)/settings/availability/page.tsx:345:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
+src/app/(app)/settings/availability/page.tsx:356:          className="w-full border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 resize-none"
+src/app/(app)/settings/availability/page.tsx:362:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
+src/app/(app)/settings/availability/page.tsx:390:                  className="w-full border border-slate-700 bg-slate-900 text-slate-100 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/settings/availability/page.tsx:400:                  className="w-full border border-slate-700 bg-slate-900 text-slate-100 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/settings/availability/page.tsx:409:                className="w-full border border-slate-700 bg-slate-900 text-slate-100 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/settings/availability/page.tsx:427:                className="text-sm text-slate-400 hover:text-slate-300 px-4 py-2 rounded-lg border border-slate-700 hover:bg-slate-700/50 transition-colors min-h-[44px]"
+src/app/(app)/settings/availability/page.tsx:446:                className="flex items-center gap-3 p-3 rounded-xl border border-slate-700/50 bg-slate-700/30 hover:bg-slate-700/50 transition-colors"
+src/app/(app)/settings/availability/page.tsx:472:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
+src/app/(app)/settings/email-preview/page.tsx:64:      <div className="rounded-xl border border-slate-700 bg-slate-900/50 overflow-hidden">
+src/app/(app)/settings/email-preview/page.tsx:65:        <div className="border-b border-slate-700 bg-slate-900/80 px-4 py-2.5 font-mono text-xs text-slate-400">
+src/app/(app)/settings/export/page.tsx:114:                className="flex flex-col gap-3 p-4 border border-slate-700/50 rounded-xl hover:border-slate-600 hover:bg-slate-700/50 transition-colors"
+src/app/(app)/settings/export/page.tsx:142:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
+src/app/(app)/settings/export/page.tsx:97:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
+src/app/(app)/settings/items-library/page.tsx:164:        <div className="bg-slate-800/50 rounded-xl border border-violet-700/50 p-5 mb-6">
+src/app/(app)/settings/items-library/page.tsx:174:                  className="w-full border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/settings/items-library/page.tsx:184:                  className="w-full border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/settings/items-library/page.tsx:196:                  className="w-full border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/settings/items-library/page.tsx:204:                  className="w-full border border-slate-700 bg-slate-900 text-slate-100 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/settings/items-library/page.tsx:240:                className="text-sm text-slate-400 hover:text-slate-300 px-4 py-2 rounded-lg border border-slate-700 hover:bg-slate-700/50 transition-colors min-h-[44px]"
+src/app/(app)/settings/items-library/page.tsx:250:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-12 text-center text-sm text-slate-400">
+src/app/(app)/settings/items-library/page.tsx:254:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-12 text-center">
+src/app/(app)/settings/items-library/page.tsx:263:              <div key={cat} className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden">
+src/app/(app)/settings/items-library/page.tsx:264:                <div className="px-5 py-3 bg-slate-900/50 border-b border-slate-700/50">
+src/app/(app)/settings/items-library/page.tsx:287:                              className="col-span-2 border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 rounded-lg px-3 py-1.5 text-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-violet-400"
+src/app/(app)/settings/items-library/page.tsx:298:                                className="w-full border border-slate-700 bg-slate-900 text-slate-100 rounded-lg pl-6 pr-3 py-1.5 text-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-violet-400"
+src/app/(app)/settings/items-library/page.tsx:304:                              className="border border-slate-700 bg-slate-900 text-slate-100 rounded-lg px-3 py-1.5 text-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-violet-400"
+src/app/(app)/settings/items-library/page.tsx:337:                              className="flex items-center gap-1 text-xs text-slate-400 px-3 py-1.5 rounded-lg border border-slate-700 hover:bg-slate-700/50 transition-colors min-h-[44px]"
+src/app/(app)/settings/late-fees/LateFeeSettings.tsx:112:          <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5 flex items-center justify-between gap-4">
+src/app/(app)/settings/late-fees/LateFeeSettings.tsx:129:            <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5 flex flex-col gap-4">
+src/app/(app)/settings/late-fees/LateFeeSettings.tsx:142:                    className="w-20 px-2.5 py-1.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-100 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/settings/late-fees/LateFeeSettings.tsx:160:                    className="w-20 px-2.5 py-1.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-100 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/settings/late-fees/LateFeeSettings.tsx:174:              <div className="bg-slate-900/50 border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-slate-300">
+src/app/(app)/settings/public-profile/PublicProfileEditorFull.tsx:197:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
+src/app/(app)/settings/public-profile/PublicProfileEditorFull.tsx:284:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
+src/app/(app)/settings/public-profile/PublicProfileEditorFull.tsx:293:              slugError ? 'border-rose-600' : 'border-slate-700 focus-within:border-violet-500 focus-within:ring-2 focus-within:ring-violet-500/40'
+src/app/(app)/settings/public-profile/PublicProfileEditorFull.tsx:296:            <span className="px-3 py-2.5 bg-slate-800/80 border-r border-slate-700 text-sm text-slate-400 font-mono whitespace-nowrap">
+src/app/(app)/settings/public-profile/PublicProfileEditorFull.tsx:29:  'w-full px-3.5 py-2.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus-visible:border-violet-500 transition-colors'
+src/app/(app)/settings/public-profile/PublicProfileEditorFull.tsx:373:          <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-10 text-center text-slate-400">
+src/app/(app)/settings/public-profile/PublicProfileEditorFull.tsx:380:              <div key={inq.id} className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/settings/reminders/ReminderSettings.tsx:144:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
+src/app/(app)/settings/reminders/ReminderSettings.tsx:191:            <div className="bg-slate-900/50 rounded-lg border border-slate-700 p-4 flex flex-col gap-3">
+src/app/(app)/settings/reminders/ReminderSettings.tsx:210:                      className="w-16 px-2.5 py-1.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-100 text-sm text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/settings/reminders/ReminderSettings.tsx:242:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
+src/app/(app)/settings/reminders/ReminderSettings.tsx:277:                      <div className="text-sm text-slate-200 px-3 py-2 rounded-md bg-slate-950/40 border border-slate-700">
+src/app/(app)/settings/reminders/ReminderSettings.tsx:285:                      <pre className="text-sm text-slate-300 px-3 py-2.5 rounded-md bg-slate-950/40 border border-slate-700 whitespace-pre-wrap break-words m-0 font-sans">
+src/app/(app)/settings/reminders/ReminderSettings.tsx:298:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
+src/app/(app)/settings/reminders/ReminderSettings.tsx:312:                <tr className="border-b border-slate-700">
+src/app/(app)/settings/reminders/ReminderSettings.tsx:331:                    <tr key={log.id} className="border-b border-slate-800">
+src/app/(app)/settings/tags/page.tsx:136:          className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 space-y-3"
+src/app/(app)/settings/tags/page.tsx:145:              className="flex-1 text-sm border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/settings/tags/page.tsx:187:      <div className="bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden">
+src/app/(app)/settings/tags/page.tsx:212:                        className="flex-1 text-sm border border-slate-700 bg-slate-900 text-slate-100 placeholder-slate-500 rounded-lg px-3 py-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+
+=== /onboarding/* ===
+src/app/(app)/onboarding/OnboardingWizard.tsx:290:                    : 'bg-slate-800 text-slate-400 cursor-default'
+src/app/(app)/onboarding/OnboardingWizard.tsx:296:                <div className={`w-8 h-0.5 rounded ${i < currentStep ? 'bg-violet-600' : 'bg-slate-800'}`} />
+src/app/(app)/onboarding/OnboardingWizard.tsx:312:        <div className="bg-slate-800/50 rounded-2xl border border-slate-700 shadow-sm flex-1">
+src/app/(app)/onboarding/OnboardingWizard.tsx:333:                    className="w-full px-4 py-2.5 border border-slate-600 rounded-lg bg-slate-800/50 text-slate-100 placeholder-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 text-sm"
+src/app/(app)/onboarding/OnboardingWizard.tsx:345:                    className="w-full px-4 py-2.5 border border-slate-600 rounded-lg bg-slate-800/50 text-slate-100 placeholder-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 text-sm"
+src/app/(app)/onboarding/OnboardingWizard.tsx:361:                        className="w-full pl-7 pr-4 py-2.5 border border-slate-600 rounded-lg bg-slate-800/50 text-slate-100 placeholder-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 text-sm"
+src/app/(app)/onboarding/OnboardingWizard.tsx:372:                      className="w-full px-4 py-2.5 border border-slate-600 rounded-lg bg-slate-800/50 text-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 text-sm"
+src/app/(app)/onboarding/OnboardingWizard.tsx:397:                      <img src={logoUrl} alt="Logo" className="w-16 h-16 object-contain rounded-lg border border-slate-700 bg-slate-900/50 p-1" />
+src/app/(app)/onboarding/OnboardingWizard.tsx:436:                      className="flex-1 px-4 py-2.5 border border-slate-600 rounded-lg bg-slate-800/50 text-slate-100 font-mono text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/onboarding/OnboardingWizard.tsx:454:                    className="w-full px-4 py-2.5 border border-slate-600 rounded-lg bg-slate-800/50 text-slate-100 placeholder-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 text-sm"
+src/app/(app)/onboarding/OnboardingWizard.tsx:492:                          className="w-full px-4 py-2.5 border border-slate-600 rounded-lg bg-slate-800/50 text-slate-100 placeholder-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 text-sm"
+src/app/(app)/onboarding/OnboardingWizard.tsx:502:                          className="w-full px-4 py-2.5 border border-slate-600 rounded-lg bg-slate-800/50 text-slate-100 placeholder-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 text-sm"
+src/app/(app)/onboarding/OnboardingWizard.tsx:514:                          className="w-full px-4 py-2.5 border border-slate-600 rounded-lg bg-slate-800/50 text-slate-100 placeholder-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 text-sm"
+src/app/(app)/onboarding/OnboardingWizard.tsx:522:                          className="w-full px-4 py-2.5 border border-slate-600 rounded-lg bg-slate-800/50 text-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 text-sm"
+src/app/(app)/onboarding/OnboardingWizard.tsx:557:                    className="w-full px-4 py-2.5 border border-slate-600 rounded-lg bg-slate-800/50 text-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 text-sm"
+src/app/(app)/onboarding/OnboardingWizard.tsx:573:                      className="w-full px-4 py-2.5 border border-slate-600 rounded-lg bg-slate-800/50 text-slate-100 placeholder-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 text-sm"
+src/app/(app)/onboarding/OnboardingWizard.tsx:582:                      className="w-full px-4 py-2.5 border border-slate-600 rounded-lg bg-slate-800/50 text-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 text-sm"
+src/app/(app)/onboarding/OnboardingWizard.tsx:593:                    className="w-full px-4 py-2.5 border border-slate-600 rounded-lg bg-slate-800/50 text-slate-100 placeholder-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 text-sm"
+src/app/(app)/onboarding/OnboardingWizard.tsx:635:                      className="flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-700 hover:border-violet-300 hover:shadow-sm transition-all group"
+src/app/(app)/onboarding/OnboardingWizard.tsx:665:            <div className="px-6 md:px-8 pb-6 border-t border-slate-700/50 pt-4 flex items-center justify-between gap-3">
