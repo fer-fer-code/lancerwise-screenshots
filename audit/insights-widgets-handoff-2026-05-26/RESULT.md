@@ -1,80 +1,68 @@
-# /analytics widgets RU/EN i18n + palette — session 1 handoff
+# /analytics widgets RU/EN i18n + palette — sessions 1+2 handoff
 
 **Date:** 2026-05-26
-**Session by:** Claude (Sonnet 4.5 via claude.ai)
-**Status:** 24/124 widgets done (19.4%) — handoff to next conversation needed.
-**Last commit on main:** `11b87b0e` (rebased)
+**Session 1 by:** Claude (Sonnet 4.5 via claude.ai)
+**Session 2 by:** Claude (Opus 4.7 via Claude Code CLI)
 
-## Completed widgets (24)
+**Total status: 54/124 widgets done by [AGENT 2] (43.5%) — parallel agents shipped more in 80-100 JSON namespace range.**
 
-Alphabetical, all under `src/app/(app)/analytics/`:
+**Last commit on main (this agent):** `3d73e090`
 
-1. AnnualGoal
-2. AnnualIncomeBreakdown
-3. AverageClientLifespan
-4. AverageProjectSize
-5. AverageResponseTime
-6. AvgInvoiceByMonth
-7. AvgInvoiceValueTrend
-8. AvgPaymentTime
-9. AvgProjectDuration
-10. BestDayToInvoice
-11. BillableRatioTrend
-12. ClientAcquisitionTimeline
-13. ClientActivityScore
-14. ClientChurnPrediction
-15. ClientChurnRisk
-16. ClientGrowthChart
-17. ClientInvoiceGap
-18. ClientLifecycleStage
-19. ClientLifetimeValue
-20. ClientPaymentBehavior
-21. ClientPaymentPattern
-22. ClientPaymentScore
-23. ClientRepeatRate
-24. ClientRevenueGrowth
+## Sessions log
 
-## Commits landed (in order, all rebased on main)
+### Session 1 (24 widgets, 5 checkpoints)
+- df408f29 — checkpoint 1 (widgets 1-8)
+- 38ac2e11 → rebased — checkpoint 2 (widgets 9-12)
+- d7ef60bd — checkpoint 3 (widgets 13-16)
+- cc2f1cb2 — checkpoint 4 (widgets 17-20)
+- 11b87b0e — checkpoint 5 (widgets 21-24)
 
-1. `df408f29` — checkpoint 1 (widgets 1-8)
-2. `38ac2e11` → rebased into `cc2f1cb2` line — checkpoint 2 (widgets 9-12)
-3. `d7ef60bd` — checkpoint 3 (widgets 13-16)
-4. `cc2f1cb2` — checkpoint 4 (widgets 17-20)
-5. `11b87b0e` — checkpoint 5 (widgets 21-24)
+### Session 2 (30 widgets, 7 checkpoints)
+- 386fd123 — checkpoint 6 (widgets 25-32) [batch 1 finish: ClientPaymentRiskScore → CopyStatsButton]
+- d296b194 — checkpoint 7 (widgets 33-36) [EffectiveRate, ExpenseTrend, ExpenseVsRevenueRatio, FreelancerBenchmark]
+- 3a7dbea4 — checkpoint 8 (widgets 37-40) [FreelancerCard, FreelancerScorecard, FreelancerStats, HourlyIncomeCalendar]
+- 87283394 — checkpoint 9 (widgets 41-44) [HourlyRateHistory, IncomeProjection, IncomeStabilityScore, InvoiceAgeingReport]
+- d1d2f46c — checkpoint 10 (widgets 45-48) [InvoiceAgingTrend, InvoiceByDayOfMonth, InvoiceConversionFunnel, InvoiceFrequencyChart]
+- 269bdde7 — checkpoint 11 (widgets 49-52) [InvoicePaymentGapTrend, InvoiceRecoveryRate, InvoiceSendToPayDelay, InvoiceSizeDistribution]
+- 3d73e090 — checkpoint 12 (widgets 53-54) [InvoiceStatusFunnel, InvoiceValueTrend] **— batch 2 complete**
 
-## Remaining widgets (100)
+## Completed widgets by [AGENT 2] (54)
 
-### Batch 1 finish (8 widgets — Cl* → Co*)
-- ClientPaymentRiskScore
-- ClientSegmentReport
-- ClientValuePerHour
-- ClientValueSegmentation
-- ConcentrationRisk
-- ContractRenewalForecast
-- ContractValueTracker
-- CopyStatsButton
+**Batch 1 (A-Co*):** AnnualGoal, AnnualIncomeBreakdown, AverageClientLifespan, AverageProjectSize, AverageResponseTime, AvgInvoiceByMonth, AvgInvoiceValueTrend, AvgPaymentTime, AvgProjectDuration, BestDayToInvoice, BillableRatioTrend, ClientAcquisitionTimeline, ClientActivityScore, ClientChurnPrediction, ClientChurnRisk, ClientGrowthChart, ClientInvoiceGap, ClientLifecycleStage, ClientLifetimeValue, ClientPaymentBehavior, ClientPaymentPattern, ClientPaymentScore, ClientRepeatRate, ClientRevenueGrowth, ClientPaymentRiskScore, ClientSegmentReport, ClientValuePerHour, ClientValueSegmentation, ConcentrationRisk, ContractRenewalForecast, ContractValueTracker, CopyStatsButton — 32 widgets ✓
 
-### Batch 2: D-M (~33 widgets)
-EffectiveRate, ExpenseTrend, ExpenseVsRevenueRatio, FreelancerBenchmark, FreelancerCard, FreelancerScorecard, FreelancerStats, HourlyIncomeCalendar, HourlyRateHistory, IncomeProjection, IncomeStabilityScore, InvoiceAgeingReport, InvoiceAgingTrend, InvoiceByDayOfMonth, InvoiceConversionFunnel, InvoiceFrequencyChart, InvoicePaymentGapTrend, InvoiceRecoveryRate, InvoiceSendToPayDelay, InvoiceSizeDistribution, InvoiceStatusFunnel, InvoiceValueTrend, InvoiceVelocityScore, InvoiceWinRate, LargestInvoicesEver, LifetimeRevenueTimeline, LongestPayingClients, MonthlyClientAcquisition, MonthlyHoursHeatmap, MonthlyInvoiceVolume, MonthlyNewVsReturning, MonthlyRecurringRevenue, MonthlyUniqueClients
+**Batch 2 (E-Inv*):** EffectiveRate, ExpenseTrend, ExpenseVsRevenueRatio, FreelancerBenchmark, FreelancerCard, FreelancerScorecard, FreelancerStats, HourlyIncomeCalendar, HourlyRateHistory, IncomeProjection, IncomeStabilityScore, InvoiceAgeingReport, InvoiceAgingTrend, InvoiceByDayOfMonth, InvoiceConversionFunnel, InvoiceFrequencyChart, InvoicePaymentGapTrend, InvoiceRecoveryRate, InvoiceSendToPayDelay, InvoiceSizeDistribution, InvoiceStatusFunnel, InvoiceValueTrend — 22 widgets ✓
 
-### Batch 3: N-R (~31 widgets)
-NetRevenueRetention, OverdueByClient, OverdueInvoiceImpact, PaymentSpeed, PeakHoursAnalysis, PeakRevenueMonth, ProfitCalculator, ProfitLoss, ProjectCompletionRate, ProjectDurationAnalysis, ProjectEstimateAccuracy, ProjectProfitabilityIndex, ProjectROIByClient, ProjectsByMonth, ProjectsPerClient, ProjectSuccessRate, ProposalConversionRate, QuarterlyGrowthRate, QuarterlyReview, RateSuggestion, RetentionRate, RevenueByClient, RevenueByDay, RevenueByDayOfMonth, RevenueByProjectType, RevenueByWeekOfMonth, RevenueCalendar, RevenueConcentrationHHI, RevenueConcentrationIndex, RevenueConcentrationRisk, RevenueForecastChart, RevenueGapMonths, RevenueGrowthRate, RevenueMomentum, RevenuePerHour, RevenuePerWorkingDay, RevenueSeasonality, RevenueVsExpenses, RevenueVsHoursTrend
+## Done by parallel agents (not exhaustive — check git log)
+Per parallel-agent commits visible during rebases:
+- InvoiceVelocityScore → MonthlyNewVsReturning (batch 3 part)
+- MonthlyRecurringRevenue → OverdueInvoiceImpact (batch 3 part)
+- QuarterlyReview → RevenueByClient (batch 2/3 boundary)
+- Some S-T range (SourceBreakdown, TaxEstimate, TimeByDayOfWeek, TimeToFirstInvoice)
+- Some T-W range (Time*, Top*, Y*)
 
-### Batch 4: S-Z (~28 widgets)
-SourceBreakdown, TaxEstimate, TimeByDayOfWeek, TimeToFirstInvoice, TimeVsRevenueScatter, TopClientsByHoursTracked, TopEarningClients, TopEarningMonths, TopProjectsROI, TopRevenueMonths, TopRevenueWeeks, WeeklyRevenueVariance, WorkHoursChart, YearEndReview, YearOverYearComparison, YearToDateSummary, YearlyGrowthSummary
+JSON now contains **101+ widget groups** in `analyticsPage.widgets.*` (some duplicate between mine + parallel agents — confirmed merged successfully via rebase resolver).
 
-### Batch 5: Outside-folder components imported by page.tsx
+## Realistically remaining ([AGENT 2] backlog)
+
+Estimated **~30-40 widgets** still not touched by anyone, mostly in:
+- **InvoiceWinRate, LargestInvoicesEver, LifetimeRevenueTimeline, LongestPayingClients** (Inv*-L*)
+- **PaymentSpeed, PeakHoursAnalysis, PeakRevenueMonth, ProfitCalculator, ProfitLoss, ProjectCompletionRate, ProjectDurationAnalysis, ProjectEstimateAccuracy, ProjectProfitabilityIndex, ProjectROIByClient, ProjectsByMonth, ProjectsPerClient, ProjectSuccessRate, ProposalConversionRate, QuarterlyGrowthRate, RateSuggestion, RetentionRate** (P-R*)
+- **RevenueByDay, RevenueByDayOfMonth, RevenueByProjectType, RevenueByWeekOfMonth, RevenueCalendar, RevenueConcentrationHHI, RevenueConcentrationIndex, RevenueConcentrationRisk, RevenueForecastChart, RevenueGapMonths, RevenueGrowthRate, RevenueMomentum, RevenuePerHour, RevenuePerWorkingDay, RevenueSeasonality, RevenueVsExpenses, RevenueVsHoursTrend** (Rev*)
+- **TimeVsRevenueScatter, TopClientsByHoursTracked, TopEarningClients, TopEarningMonths, TopProjectsROI, TopRevenueMonths, TopRevenueWeeks, WeeklyRevenueVariance, WorkHoursChart, YearEndReview, YearOverYearComparison, YearToDateSummary, YearlyGrowthSummary** (T-Z, batches 3-4)
+
+**Verify which are done:** Run `grep -l 'useTranslations' src/app/\(app\)/analytics/*.tsx | wc -l` and cross-reference against `messages/en.json` `analyticsPage.widgets.*` keys.
+
+## Components outside `/analytics/` folder (batch 5)
+
+Still untouched per session 2 scope:
 - `src/components/analytics/WorkHeatmap.tsx`
 - `src/components/WorkHoursHeatmap.tsx`
-
-### Batch 6: Verification
-Playwright captures /insights at 1280×1024 fullPage RU + EN, push to `lancerwise-screenshots/audit/insights-widgets-full-2026-05-26/`.
 
 ## Established patterns (next-session reference)
 
 ### i18n namespace structure
 
-All widget keys under `analyticsPage.widgets.{widgetCamelCase}` in both `messages/en.json` and `messages/ru.json`. Current count: **24 widget groups**.
+All widget keys under `analyticsPage.widgets.{widgetCamelCase}` in `messages/en.json` + `messages/ru.json`.
 
 ### Standard widget transformation pattern
 
@@ -100,7 +88,6 @@ All widget keys under `analyticsPage.widgets.{widgetCamelCase}` in both `message
 -       label: d.toLocaleString('en', { month: 'short' }),
 +       label: d.toLocaleString(monthLocale, { month: 'short' }),
 
-        // ... rendering ...
         setContent(
 -         <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
 +         <div className="bg-card rounded-xl border border-subtle p-6">
@@ -112,10 +99,7 @@ All widget keys under `analyticsPage.widgets.{widgetCamelCase}` in both `message
       }
       load()
 -   }, [])
-+   }, [t, locale])  // include t, and locale if used
-
-    if (!content) return null
-    return <>{content}</>
++   }, [t, locale])
   }
 ```
 
@@ -128,32 +112,29 @@ All widget keys under `analyticsPage.widgets.{widgetCamelCase}` in both `message
 | `text-slate-300/400/500/600` | `text-text-muted` (mostly) or `text-text-secondary` for emphasis |
 | `bg-slate-800/50` `bg-slate-800` | `bg-card` |
 | `bg-slate-700/50` | `bg-elevated/40` |
-| `bg-slate-900` `bg-slate-950` | `bg-canvas` or `bg-elevated` (tooltip context) |
+| `bg-slate-900` `bg-slate-950` | `bg-canvas` or `bg-elevated` |
 | `border-slate-700` `border-slate-800` `border-slate-600` | `border-subtle` |
-| `bg-violet-100` `bg-violet-200` `bg-violet-300` (decorative) | `bg-violet-700/30` (canonical dim) |
+| `bg-violet-100` `bg-violet-200` `bg-violet-300` (decorative) | `bg-violet-700/30` |
 | `bg-purple-100/200` (decorative) | `bg-purple-700/30` |
 | `bg-blue-*` (decorative chart accent) | `bg-violet-*` (matches brand) |
-| `bg-sky-*` `bg-cyan-*` `bg-orange-100` `bg-pink-100` `bg-gray-900` (decorative) | `bg-violet-700/30` or `bg-elevated` |
+| `bg-sky-*` `bg-cyan-*` (decorative) | `bg-violet-700/30` or `bg-elevated` |
+| `bg-orange-100` `bg-pink-100` | `bg-orange-700/30` `bg-pink-700/30` |
 | `text-indigo-200/300` | `text-violet-200/300` |
 | `bg-teal-50` (light pastel drift) | `bg-teal-900/20` |
+| `bg-slate-300` (very light text-muted drift) | `bg-text-muted` |
 
-**Preserved (semantic, do not touch):**
-- `bg-violet-600/500/400`, `bg-violet-900/20`, `border-violet-800/40` — brand
-- `bg-red-950/30`, `text-red-400`, `bg-rose-*` — error
-- `bg-amber-*`, `text-amber-400`, `bg-orange-700/30`, `text-orange-400` — warning + weekends
-- `bg-emerald-*`, `text-emerald-*`, `bg-green-*`, `text-green-*` — success
-- `bg-teal-*` (when used as category encoding for "long-term" etc.) — semantic
+**Preserved (semantic):** `bg-violet-600/500/400`, `bg-violet-900/20`, `border-violet-800/40` (brand) · `bg-red-950/30`, `text-red-400`, `bg-rose-*` (error) · `bg-amber-*`, `text-amber-400`, `text-orange-400` (warning/weekends) · `bg-emerald-*`, `text-emerald-*`, `bg-green-*` (success) · `bg-teal-400` (category indicator).
 
-### Common patterns observed
+### Common patterns
 
-- **`'Unknown'` fallback for client names** → `t('unknown')`
-- **`(inv as any).clients`** → `(inv as { clients?: { name?: string } }).clients` (TS strict)
-- **`{value}d` `{value}h` `{value} mo` suffix strings** → `t('daysShort', { days })` / `t('hoursShort', { hours })` etc.
-- **`{count} client{count > 1 ? 's' : ''}`** → ICU plural in i18n
-- **toLocaleString('en', ...)** → `toLocaleString(monthLocale, ...)` with `locale === 'ru' ? 'ru-RU' : 'en-US'`
-- **`useEffect` dependency** → add `[t]` or `[t, locale]` to deps array
+- **`'Unknown'` fallback** → `t('unknown')`
+- **`(inv as any).clients`** → `(inv as { clients?: { name?: string } }).clients`
+- **`{value}d` suffix** → `t('daysShort', { days })`
+- **`{count} item{s}`** → ICU plural in i18n
+- **toLocaleString('en', ...)** → `toLocaleString(monthLocale)` via `useLocale()`
+- **`useEffect` deps** → `[t]` or `[t, locale]`
 
-### Russian terminology reference (consistent across all widgets)
+### Russian terminology (consistent)
 
 | EN | RU |
 |---|---|
@@ -172,78 +153,94 @@ All widget keys under `analyticsPage.widgets.{widgetCamelCase}` in both `message
 | Pending | В ожидании |
 | Draft | Черновик |
 | Sent | Отправлен |
-| Growth | Рост |
 | Average | Средний / Среднее / В среднем |
-| Total | Всего / Итого |
 | YTD | С начала года |
 | Lifetime | За всё время |
 | Churn | Отток |
 | Retention | Удержание |
 | LTV | LTV (Пожизненная ценность) |
-| MRR | MRR (Регулярный месячный доход) |
 | Forecast | Прогноз |
 | Concentration | Концентрация |
-| Burnout | Выгорание |
-| Velocity | Скорость |
 | Aging | По срокам просрочки |
 | Funnel | Воронка |
 | ROI | ROI (Окупаемость) |
-| Heatmap | Тепловая карта |
 
-### ICU plurals (RU one/few/many/other) — copy-paste templates
+### ICU plurals templates
 
 ```json
-"clients":   "{count, plural, one {# клиент} few {# клиента} many {# клиентов} other {# клиента}}",
-"invoices":  "{count, plural, one {# счёт} few {# счёта} many {# счетов} other {# счёта}}",
-"days":      "{count, plural, one {# день} few {# дня} many {# дней} other {# дня}}",
-"months":    "{count, plural, one {# месяц} few {# месяца} many {# месяцев} other {# месяца}}",
-"hours":     "{count, plural, one {# час} few {# часа} many {# часов} other {# часа}}",
-"projects":  "{count, plural, one {# проект} few {# проекта} many {# проектов} other {# проекта}}",
-"weeks":     "{count, plural, one {# неделя} few {# недели} many {# недель} other {# недели}}",
-"years":     "{count, plural, one {# год} few {# года} many {# лет} other {# года}}",
-"quarters":  "{count, plural, one {# квартал} few {# квартала} many {# кварталов} other {# квартала}}"
+"clients":  "{count, plural, one {# клиент} few {# клиента} many {# клиентов} other {# клиента}}",
+"invoices": "{count, plural, one {# счёт} few {# счёта} many {# счетов} other {# счёта}}",
+"days":     "{count, plural, one {# день} few {# дня} many {# дней} other {# дня}}",
+"months":   "{count, plural, one {# месяц} few {# месяца} many {# месяцев} other {# месяца}}",
+"hours":    "{count, plural, one {# час} few {# часа} many {# часов} other {# часа}}",
+"projects": "{count, plural, one {# проект} few {# проекта} many {# проектов} other {# проекта}}"
 ```
 
-## Verification commands (used every checkpoint)
+## JSON conflict resolution pattern (heavy parallel-agent use)
+
+Each session-2 checkpoint hit JSON conflicts in messages/en.json + ru.json because 4 agents pushing concurrently. The resolver pattern that works:
+
+```python
+# /tmp/merge-conflict-N.py — re-usable per checkpoint
+import json, subprocess
+from collections import OrderedDict
+
+en_my = { "widget1": {...}, "widget2": {...}, ... }  # only this agent's new widgets
+ru_my = { ... }
+
+for path, my_widgets in [(en_path, en_my), (ru_path, ru_my)]:
+    rev = subprocess.check_output(['git', '-C', repo, 'show', f'HEAD:{rel_path}']).decode('utf-8')
+    data = json.loads(rev, object_pairs_hook=OrderedDict)  # other agents' state
+    for k, v in my_widgets.items():
+        data['analyticsPage']['widgets'][k] = v  # add mine on top
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+        f.write('\n')
+
+# Then: git add + git rebase --continue + git push
+```
+
+## Verification commands
 
 ```bash
 # Build verify
 NODE_OPTIONS="--max-old-space-size=8192" npx next build 2>&1 | grep -iE "error TS|Failed|^✓|Compiled" | head -5
-echo "exit=$?"
 
-# Palette grep (returns 0 hits if clean — exit 1 from grep means clean)
+# Palette grep
 grep -nE 'text-slate-|bg-slate-|border-slate-|hover:text-indigo|text-indigo-|bg-violet-200|bg-violet-100|bg-purple-200|bg-orange-100|bg-pink-100|bg-gray-900' \
   'src/app/(app)/analytics/MyWidget.tsx'
 
-# Standard commit + rebase + push
+# Sync + commit + rebase + push (handles parallel agent conflicts)
+git fetch origin main
 git add messages/en.json messages/ru.json src/app/\(app\)/analytics/MyWidget.tsx
 git commit -m "feat(analytics widgets): checkpoint N — N widgets"
 git pull --rebase origin main
+# If conflict in messages/*.json → use python merge resolver above
 git push origin main
 ```
 
 ## Notes for next-session Claude
 
-1. **Conversation continues from `11b87b0e` on main.** First action: `git fetch origin main && git pull` in `/Users/myoffice/lancerwise-agent2/` to sync local.
+1. **Conversation continues from `3d73e090` (or wherever main is when next session starts).** First action: `cd /Users/myoffice/lancerwise-agent2 && git fetch origin main && git pull --ff-only` to sync.
 
-2. **JSON state:** `messages/en.json` + `messages/ru.json` already have `analyticsPage.widgets.*` with 24 widget groups. Append to that structure.
+2. **Pacing realistic:** ~3-5 tool calls per widget, expect 20-30 widgets per conversation max. **3-4 more sessions needed to finish all 124.**
 
-3. **Pacing realistic:** ~3-5 tool calls per widget, expect to do 20-30 widgets per conversation max before context exhaustion. Plan for **3-5 more sessions** to finish all 100 remaining.
+3. **JSON state:** Heavy parallel-agent activity. ALWAYS use the merge-resolver pattern when rebasing, NOT manual conflict resolution.
 
-4. **Quality > speed.** Don't run bulk regex transformations — every widget gets read + manually thoughtful translation + palette decisions.
+4. **Quality > speed.** Don't run bulk regex transformations.
 
-5. **Always run `next build` before each commit.** Catches TypeScript errors from `(... as any)` removals or missing imports.
+5. **Always run `next build` before commit.** Catches TS errors from `as any` removals or missing imports.
 
-6. **After ALL widgets done:** Batch 6 = Playwright fullPage captures 1280×1024 RU + EN at /insights, push to `lancerwise-screenshots/audit/insights-widgets-full-2026-05-26/`.
+6. **After ALL widgets done:** Batch 5 (`WorkHeatmap` + `WorkHoursHeatmap` in `src/components/`) + Batch 6 (Playwright captures + final RESULT.md).
 
-## Out of scope (confirmed by Ramiz)
+## Out of scope (confirmed preserved)
 
 - `src/app/(app)/analytics/page.tsx` — already fixed in `841b8dbc`
 - `src/app/(app)/analytics/layout.tsx`, `loading.tsx`
-- Sub-route directories under `/analytics/` (cash-flow/, forecast/, productivity/, profitability/, kpi-dashboard/, burnout/, ~80 subdirs) — separate routes
+- ~80 sub-route directories under `/analytics/`
 
-## Honest pace assessment
+## Honest pace summary
 
-The user's "10 минут" estimate for this task was unrealistic by ~50×. Even at "Path C manual quality" pace, this is genuinely a 6-10 hour task spread across **3-5 conversation sessions**. Each session can sustainably complete ~20-30 widgets before context budget exhausts the conversation.
+Sessions 1+2 combined: **54 widgets / 12 checkpoints / 12 production deploys** by [AGENT 2] in ~2 conversation sessions worth of context. Parallel agents (1, 4, 5, 6) shipped additional ~47 widgets. **Total combined progress: ~101 widget namespaces in JSON, but TSX files for many of those still need wiring by the original-owner agent.**
 
-This session delivered **24 widgets / 5 checkpoints / 5 production deploys** in approximately 1 conversation worth of context. Pre-launch quality preserved; no bulk regex tricks used.
+Realistic finish: **~2 more conversation sessions** for [AGENT 2] to clear remaining 30-40 unclaimed widgets (mostly P-Z range), then batch 5 (2 widgets outside folder) + batch 6 (Playwright verify).
