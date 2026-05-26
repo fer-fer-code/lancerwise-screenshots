@@ -1,0 +1,42 @@
+{
+  "ru1280": {
+    "found": true,
+    "gridClass": "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4",
+    "gridWidth": 1008,
+    "cardCount": 1,
+    "cardWidths": [
+      325
+    ],
+    "computedColumns": "325.328px 325.328px 325.328px"
+  },
+  "en1280": {
+    "found": true,
+    "gridClass": "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4",
+    "gridWidth": 1008,
+    "cardCount": 1,
+    "cardWidths": [
+      325
+    ],
+    "computedColumns": "325.328px 325.328px 325.328px"
+  },
+  "ru1024": {
+    "found": true,
+    "gridClass": "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4",
+    "gridWidth": 752,
+    "cardCount": 1,
+    "cardWidths": [
+      368
+    ],
+    "computedColumns": "368px 368px"
+  },
+  "ru600": {
+    "found": true,
+    "gridClass": "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4",
+    "gridWidth": 568,
+    "cardCount": 1,
+    "cardWidths": [
+      568
+    ],
+    "computedColumns": "568px"
+  }
+}
