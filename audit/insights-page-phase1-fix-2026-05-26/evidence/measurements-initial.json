@@ -1,0 +1,46 @@
+{
+  "ru": {
+    "viewportW": 1280,
+    "sidebarW": 224,
+    "mainW": 1056,
+    "wrapperW": 1008,
+    "wrapperRightVoid": 24,
+    "docHeight": 1024,
+    "enLeaks": [
+      "Work Activity Heatmap",
+      "Work Hours Heatmap\nShow",
+      "May 2026 — Revenue Calendar",
+      "My Freelancer Stats Card",
+      "Profit Calculator",
+      "Monthly Expenses — Last 6 Months",
+      "Profit & Loss",
+      "Tax Estimate",
+      "Revenue by Day of Week",
+      "Work Hours by Day",
+      "Client Segments",
+      "Invoice Conversion Funnel",
+      "Top Projects by ROI ($/h)",
+      "Billable Ratio — Last 6 Months",
+      "May",
+      "Invoice Volume (12 months)",
+      "Avg Hours by Day of Week",
+      "Year to Date — 2026",
+      "Industry Benchmark",
+      "Client Growth",
+      "Revenue vs Expenses",
+      "Client Acquisition",
+      "Projects Started per Month",
+      "Client Repeat Rate",
+      "Projects per Client"
+    ]
+  },
+  "en": {
+    "viewportW": 1280,
+    "sidebarW": 224,
+    "mainW": 1056,
+    "wrapperW": 1008,
+    "wrapperRightVoid": 24,
+    "docHeight": 1024,
+    "enLeaks": []
+  }
+}
