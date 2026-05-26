@@ -1,0 +1,30 @@
+{
+  "viewportWidth": 1280,
+  "viewTogglePill": {
+    "width": 322,
+    "left": 934,
+    "right": 1256,
+    "cls": "flex bg-white/[0.04] rounded-lg p-0.5 gap-0.5 border border-subtle"
+  },
+  "viewToggleParentRow": {
+    "width": 1008,
+    "left": 248,
+    "right": 1256,
+    "cls": "flex items-center gap-2 flex-wrap justify-end"
+  },
+  "cardsGrid": {
+    "width": 1008,
+    "left": 248,
+    "right": 1256,
+    "cls": "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4",
+    "childCount": 5,
+    "cardWidths": [
+      325,
+      325,
+      325,
+      325,
+      325
+    ]
+  },
+  "cardsInFirstRow": 3
+}
