@@ -1,0 +1,342 @@
+src/app/(app)/clients/ImportButton.tsx:10:      className="flex items-center gap-2 text-sm text-slate-400 border border-slate-600 hover:bg-slate-900/50 font-medium px-4 py-2.5 rounded-lg transition-colors min-h-[44px]"
+src/app/(app)/clients/intake/page.tsx:134:        <div className="flex items-center gap-6 mb-6 px-4 py-3 bg-slate-800/50 rounded-xl border border-slate-700">
+src/app/(app)/clients/intake/page.tsx:165:        contentClassName="bg-card rounded-2xl shadow-xl border border-slate-700 w-full max-w-md p-6"
+src/app/(app)/clients/intake/page.tsx:189:                className="flex-1 px-4 py-2.5 rounded-lg border border-slate-600 text-sm font-medium text-slate-300 hover:bg-slate-900/50 transition-colors min-h-[44px]"
+src/app/(app)/clients/intake/page.tsx:210:        <div className="bg-slate-800/50 rounded-xl border border-dashed border-slate-600 p-12 text-center">
+src/app/(app)/clients/intake/page.tsx:224:            <div key={form.id} className="bg-slate-800/50 rounded-xl border border-slate-700 p-4 hover:border-violet-800/30 transition-colors">
+src/app/(app)/clients/intake/page.tsx:257:                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-700 text-xs font-medium text-slate-400 hover:bg-slate-900/50 transition-colors min-h-[44px]"
+src/app/(app)/clients/intake/page.tsx:272:                    className="p-1.5 rounded-lg border border-slate-700 text-slate-400 hover:bg-slate-900/50 transition-colors"
+src/app/(app)/clients/intake/page.tsx:308:                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-700 text-xs font-medium text-slate-400 hover:bg-slate-900/50 transition-colors min-h-[44px]"
+src/app/(app)/clients/intake/page.tsx:318:                    className="p-1.5 rounded-lg border border-slate-700 text-slate-400 hover:text-red-500 hover:border-red-800/30 hover:bg-red-900/20 transition-colors"
+src/app/(app)/clients/intake/page.tsx:333:        contentClassName="bg-card rounded-2xl shadow-xl border border-slate-700 w-full max-w-2xl max-h-[85vh] flex flex-col"
+src/app/(app)/clients/intake/page.tsx:336:            <div className="flex items-center justify-between px-6 py-4 border-b border-slate-700/50">
+src/app/(app)/clients/intake/page.tsx:357:            <div className="px-6 py-4 border-t border-slate-700/50 flex items-center gap-3">
+src/app/(app)/clients/intake/page.tsx:373:                className="inline-flex items-center gap-2 border border-slate-600 text-slate-300 text-sm font-medium px-4 py-2.5 rounded-lg hover:bg-slate-900/50 transition-colors min-h-[44px]"
+src/app/(app)/clients/new/page.tsx:70:const selectCls = `${inputCls} bg-slate-900 border-slate-700 text-slate-100`
+src/app/(app)/clients/new/page.tsx:337:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden">
+src/app/(app)/clients/new/page.tsx:339:        <div className="border-b border-slate-700/50 px-6 pt-6 pb-5">
+src/app/(app)/clients/new/page.tsx:489:                            : 'border-slate-700 text-slate-400 hover:border-violet-300 hover:text-violet-400 hover:bg-violet-900/20'
+src/app/(app)/clients/new/page.tsx:518:                <div className="bg-slate-900/50 rounded-xl border border-slate-700 divide-y divide-slate-700/50">
+src/app/(app)/clients/new/page.tsx:572:        <div className="border-t border-slate-700/50 px-6 py-4 flex items-center justify-between bg-slate-900/60 sticky bottom-0 z-10">
+src/app/(app)/clients/new/page.tsx:577:                className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-slate-100 px-4 py-2.5 rounded-lg border border-slate-600 bg-slate-800/50 hover:bg-slate-900/50 transition-colors min-h-[44px]"
+src/app/(app)/clients/new/page.tsx:582:              <Link href="/clients" className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-slate-300 px-4 py-2.5 rounded-lg border border-slate-700 hover:bg-slate-900/50 transition-colors min-h-[44px]">
+src/app/(app)/clients/referral-analytics/page.tsx:89:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/referral-analytics/page.tsx:97:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/referral-analytics/page.tsx:107:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/referral-analytics/page.tsx:118:        <div className="bg-slate-800/50 rounded-xl border border-dashed border-slate-600 py-16 text-center">
+src/app/(app)/clients/referral-analytics/page.tsx:129:          <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
+src/app/(app)/clients/referral-analytics/page.tsx:210:          <div className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden">
+src/app/(app)/clients/referral-analytics/page.tsx:211:            <div className="px-5 py-4 border-b border-slate-700/50">
+src/app/(app)/clients/referral-analytics/page.tsx:222:                      className="w-full flex items-center justify-between px-5 py-3.5 hover:bg-slate-900/50 transition-colors text-left"
+src/app/(app)/clients/referral-analytics/page.tsx:254:                                className="inline-flex flex-col px-3 py-2 bg-slate-800/50 border border-slate-700 rounded-lg hover:border-violet-300 hover:bg-violet-900/20 transition-colors group min-h-[44px]"
+src/app/(app)/clients/win-back/page.tsx:54:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/win-back/page.tsx:68:        className="flex items-center gap-2 text-sm border border-slate-700 rounded-lg px-3 py-2 hover:bg-slate-900/50 transition-colors min-h-[44px]"
+src/app/(app)/clients/win-back/page.tsx:75:        <div className="absolute top-full left-0 mt-1 bg-slate-800/50 border border-slate-700 rounded-lg shadow-lg z-10 py-1 min-w-[160px] min-h-[44px]">
+src/app/(app)/clients/win-back/page.tsx:80:              className="w-full text-left px-4 py-2 text-sm hover:bg-slate-900/50 flex items-center justify-between min-h-[44px]"
+src/app/(app)/clients/win-back/page.tsx:181:        <div className="flex items-center justify-between px-5 py-4 border-b border-slate-700">
+src/app/(app)/clients/win-back/page.tsx:198:              className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/clients/win-back/page.tsx:216:              className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 resize-none font-sans leading-relaxed"
+src/app/(app)/clients/win-back/page.tsx:243:        <div className="px-5 py-4 border-t border-slate-700 flex items-center gap-2">
+src/app/(app)/clients/win-back/page.tsx:247:            className="flex items-center gap-2 text-sm border border-slate-700 rounded-lg px-3 py-2 hover:bg-slate-900/50 transition-colors disabled:opacity-40 min-h-[44px]"
+src/app/(app)/clients/win-back/page.tsx:255:            className="flex items-center gap-2 text-sm border border-slate-700 rounded-lg px-3 py-2 hover:bg-slate-900/50 transition-colors disabled:opacity-40 min-h-[44px]"
+src/app/(app)/clients/win-back/page.tsx:345:    return 'bg-slate-900/50 text-slate-400 border border-slate-700/50'
+src/app/(app)/clients/win-back/page.tsx:368:            className="flex items-center gap-2 text-sm border border-slate-700 rounded-lg px-3 py-2 hover:bg-slate-900/50 transition-colors disabled:opacity-40 min-h-[44px]"
+src/app/(app)/clients/win-back/page.tsx:375:            className="text-sm text-slate-400 hover:text-slate-300 border border-slate-700 rounded-lg px-3 py-2 hover:bg-slate-900/50 transition-colors min-h-[44px]"
+src/app/(app)/clients/win-back/page.tsx:428:              <div key={i} className="bg-slate-800/50 rounded-xl border border-slate-700 p-5 animate-pulse">
+src/app/(app)/clients/win-back/page.tsx:440:          <div className="bg-slate-800/50 rounded-xl border border-slate-700 py-16 text-center">
+src/app/(app)/clients/win-back/page.tsx:448:          <div className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden">
+src/app/(app)/clients/win-back/page.tsx:452:                  <tr className="border-b border-slate-700/50 bg-slate-900/50">
+src/app/(app)/clients/win-back/page.tsx:461:                    <tr key={client.id} className="hover:bg-slate-900/50 transition-colors">
+src/app/(app)/clients/win-back/page.tsx:503:            <div className="px-5 py-3 border-t border-slate-700/50 bg-slate-900/50">
+src/app/(app)/clients/win-back/page.tsx:517:          <div className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden">
+src/app/(app)/clients/win-back/page.tsx:521:                  <tr className="border-b border-slate-700/50 bg-slate-900/50">
+src/app/(app)/clients/win-back/page.tsx:533:                      <tr key={c.id} className="hover:bg-slate-900/50 transition-colors">
+src/app/(app)/clients/[id]/ClientInvoiceHistory.tsx:51:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientInvoiceHistory.tsx:84:      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 border-t border-slate-700/50">
+src/app/(app)/clients/[id]/ClientNPS.tsx:66:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientNPS.tsx:80:        <div className="flex items-center gap-4 mb-4 p-3 bg-slate-900/50 rounded-lg">
+src/app/(app)/clients/[id]/ClientNPS.tsx:126:              className="text-xs text-slate-400 border border-slate-600 hover:bg-slate-900/50 px-3 py-1.5 rounded-lg transition-colors min-h-[44px]">Cancel</button>
+src/app/(app)/clients/[id]/ClientNPS.tsx:138:              <div key={entry.id} className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-slate-900/50 transition-colors">
+src/app/(app)/clients/[id]/ClientMoodTracker.tsx:12:  neutral: { label: 'Neutral', emoji: '😐', color: 'text-slate-400', bg: 'bg-slate-900/50 border-slate-700' },
+src/app/(app)/clients/[id]/ClientMoodTracker.tsx:79:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientMoodTracker.tsx:125:                  className={`flex-1 py-2 rounded-lg border-2 text-sm transition-all ${form.mood === m ? `border-current ${MOOD_CONFIG[m].bg} ${MOOD_CONFIG[m].color}` : 'border-slate-700 text-slate-400'}`}>
+src/app/(app)/clients/[id]/ClientMoodTracker.tsx:143:              className="text-xs text-slate-400 border border-slate-600 hover:bg-slate-900/50 px-3 py-1.5 rounded-lg transition-colors min-h-[44px]">Cancel</button>
+src/app/(app)/clients/[id]/ClientActivityLog.tsx:16:  { value: 'other', label: 'Other', icon: MoreHorizontal, color: 'text-slate-400 bg-slate-900/50' },
+src/app/(app)/clients/[id]/ClientActivityLog.tsx:66:    <div className="bg-slate-800/50 rounded-xl border border-slate-700">
+src/app/(app)/clients/[id]/ClientActivityLog.tsx:67:      <div className="flex items-center gap-2 px-5 py-4 border-b border-slate-700/50">
+src/app/(app)/clients/[id]/ClientActivityLog.tsx:76:          <div className="space-y-2.5 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
+src/app/(app)/clients/[id]/ClientActivityLog.tsx:80:                  className={`flex items-center gap-1 text-xs font-medium px-2.5 py-1.5 rounded-lg border transition-colors ${type === t.value ? 'bg-violet-600 text-white border-violet-600' : 'bg-slate-800/50 text-slate-400 border-slate-600 hover:bg-slate-900/50'}`}>
+src/app/(app)/clients/[id]/ClientActivityLog.tsx:122:                <div key={a.id} className="group flex items-start gap-3 p-2.5 rounded-lg hover:bg-slate-900/50 transition-colors">
+src/app/(app)/clients/[id]/ClientProposals.tsx:54:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientProposals.tsx:63:          <div key={p.id} className="border border-slate-700/50 rounded-lg overflow-hidden">
+src/app/(app)/clients/[id]/ClientProposals.tsx:64:            <div className="flex items-center gap-2 px-3 py-2.5 bg-slate-900/50 min-h-[44px]">
+src/app/(app)/clients/[id]/ClientProposals.tsx:87:              <div className="px-3 py-3 text-xs text-slate-400 whitespace-pre-wrap bg-slate-800/50 border-t border-slate-700/50 max-h-48 overflow-y-auto">
+src/app/(app)/clients/[id]/WelcomeEmailButton.tsx:29:      className="flex items-center gap-2 text-sm text-slate-400 border border-slate-600 hover:bg-slate-900/50 font-medium px-4 py-2 rounded-lg transition-colors disabled:opacity-50 min-h-[44px]"
+src/app/(app)/clients/[id]/RetainerTracker.tsx:98:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5 flex items-center gap-2">
+src/app/(app)/clients/[id]/RetainerTracker.tsx:105:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/RetainerTracker.tsx:132:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/RetainerTracker.tsx:166:            <div className="bg-slate-900/50 rounded-lg p-3">
+src/app/(app)/clients/[id]/RetainerTracker.tsx:171:            <div className="bg-slate-900/50 rounded-lg p-3">
+src/app/(app)/clients/[id]/RetainerTracker.tsx:192:              className="flex items-center gap-1 text-xs text-slate-400 border border-slate-600 hover:bg-slate-900/50 disabled:opacity-60 px-3 py-1.5 rounded-lg transition-colors min-h-[44px]">
+src/app/(app)/clients/[id]/RetainerTracker.tsx:241:          className="text-xs text-slate-400 border border-slate-600 px-4 py-2 rounded-lg hover:bg-slate-900/50 transition-colors min-h-[44px]">
+src/app/(app)/clients/[id]/ClientTimeline.tsx:97:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientTimeline.tsx:121:                  : 'bg-slate-800/50 text-slate-400 border-slate-700 hover:border-slate-600 hover:bg-slate-900/50'
+src/app/(app)/clients/[id]/ClientPrivateNotes.tsx:31:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientPrivateNotes.tsx:40:        className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2.5 resize-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 text-slate-300 placeholder-slate-500" />
+src/app/(app)/clients/[id]/ClientLTVForecast.tsx:34:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ReferralEmail.tsx:41:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ReferralEmail.tsx:70:              className="w-full text-sm text-slate-300 bg-slate-900/50 border border-slate-700 rounded-lg px-3 py-2 resize-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/clients/[id]/SatisfactionRating.tsx:61:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4 flex items-center gap-2">
+src/app/(app)/clients/[id]/SatisfactionRating.tsx:69:      <div className="bg-slate-800/50 rounded-xl border border-dashed border-slate-700 p-4 flex items-center justify-between">
+src/app/(app)/clients/[id]/SatisfactionRating.tsx:80:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4 space-y-3">
+src/app/(app)/clients/[id]/SatisfactionRating.tsx:95:          className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 resize-none" />
+src/app/(app)/clients/[id]/SatisfactionRating.tsx:97:          <button onClick={() => setEditing(false)} className="text-sm text-slate-400 border border-slate-700 px-3 py-1.5 rounded-lg min-h-[44px]">Cancel</button>
+src/app/(app)/clients/[id]/SatisfactionRating.tsx:104:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4">
+src/app/(app)/clients/[id]/SatisfactionRating.tsx:115:          className="text-xs text-slate-400 hover:text-violet-400 border border-slate-700 hover:border-violet-700 px-2.5 py-1 rounded-lg transition-colors min-h-[44px]">
+src/app/(app)/clients/[id]/SatisfactionTrend.tsx:44:        <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-slate-800/60 ml-auto">{healthScore}/100</span>
+src/app/(app)/clients/[id]/SatisfactionTrend.tsx:60:      <div className="mt-3 w-full bg-slate-800/40 rounded-full h-2">
+src/app/(app)/clients/[id]/ClientNotesLog.tsx:68:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden">
+src/app/(app)/clients/[id]/ClientNotesLog.tsx:71:        className="w-full flex items-center gap-2 px-5 py-4 border-b border-slate-700/50 hover:bg-slate-900/50 transition-colors text-left"
+src/app/(app)/clients/[id]/ClientNotesLog.tsx:83:          <div className="px-5 py-3 border-b border-slate-700/30 flex items-center justify-between">
+src/app/(app)/clients/[id]/ClientNotesLog.tsx:94:            <div className="px-5 py-4 border-b border-slate-700/50 space-y-3 bg-slate-900/50">
+src/app/(app)/clients/[id]/ClientNotesLog.tsx:104:                        : 'bg-slate-800/50 text-slate-400 border-slate-700 hover:border-slate-600'
+src/app/(app)/clients/[id]/ClientNotesLog.tsx:118:                className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 bg-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 resize-none"
+src/app/(app)/clients/[id]/ClientNotesLog.tsx:133:                  className="text-sm text-slate-400 border border-slate-700 px-4 py-2 rounded-lg hover:bg-slate-700/50 transition-colors min-h-[44px]"
+src/app/(app)/clients/[id]/ClientContacts.tsx:215:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientContacts.tsx:237:        <div className="mb-5 p-4 bg-slate-900/50 rounded-xl border border-slate-700 space-y-3">
+src/app/(app)/clients/[id]/ClientContacts.tsx:252:            className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-200 bg-slate-900"
+src/app/(app)/clients/[id]/ClientContacts.tsx:260:              className="text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-200 bg-slate-900"
+src/app/(app)/clients/[id]/ClientContacts.tsx:271:                className="text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-200 bg-slate-900"
+src/app/(app)/clients/[id]/ClientContacts.tsx:284:                className={`w-full text-sm border rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-200 bg-slate-900 ${emailError ? 'border-red-400' : 'border-slate-700'}`}
+src/app/(app)/clients/[id]/ClientContacts.tsx:292:              className="text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-200 bg-slate-900"
+src/app/(app)/clients/[id]/ClientContacts.tsx:302:            className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-200 bg-slate-900 resize-none"
+src/app/(app)/clients/[id]/ClientContacts.tsx:359:                  : 'border-slate-700 bg-slate-900/50 hover:border-slate-600'
+src/app/(app)/clients/[id]/ClientContacts.tsx:400:              <div className="flex items-center gap-1 mt-3 pt-3 border-t border-slate-700/70">
+src/app/(app)/clients/[id]/ClientContacts.tsx:403:                  className="flex items-center gap-1 text-xs text-slate-400 hover:text-violet-400 transition-colors px-2 py-1 rounded hover:bg-slate-800/50 min-h-[44px]"
+src/app/(app)/clients/[id]/ClientContacts.tsx:411:                    className="flex items-center gap-1 text-xs text-slate-400 hover:text-amber-400 transition-colors px-2 py-1 rounded hover:bg-slate-800/50 disabled:opacity-50 min-h-[44px]"
+src/app/(app)/clients/[id]/ClientContacts.tsx:423:                  className="flex items-center gap-1 text-xs text-slate-400 hover:text-red-500 transition-colors px-2 py-1 rounded hover:bg-slate-800/50 disabled:opacity-50 ml-auto min-h-[44px]"
+src/app/(app)/clients/[id]/ClientQuickNote.tsx:52:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientQuickNote.tsx:64:          className="flex-1 text-sm border border-slate-700 rounded-lg px-3 py-1.5 focus-visible:outline-none focus-visible:ring-2 focus:ring-yellow-200" />
+src/app/(app)/clients/[id]/ClientReminders.tsx:149:    <div className="bg-slate-800/50 rounded-xl border border-slate-700">
+src/app/(app)/clients/[id]/ClientReminders.tsx:150:      <div className="flex items-center justify-between px-5 py-4 border-b border-slate-700/50">
+src/app/(app)/clients/[id]/ClientReminders.tsx:166:        <div className="px-5 py-4 border-b border-slate-700/50 bg-slate-900/50 space-y-4">
+src/app/(app)/clients/[id]/ClientReminders.tsx:178:                      : 'bg-slate-800/50 text-slate-400 border-slate-700 hover:border-violet-300 hover:text-violet-400'
+src/app/(app)/clients/[id]/ClientReminders.tsx:195:              className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/clients/[id]/ClientReminders.tsx:206:              className="text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
+src/app/(app)/clients/[id]/ClientReminders.tsx:218:              className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 resize-none"
+src/app/(app)/clients/[id]/ClientReminders.tsx:282:            <div className="px-5 py-2 bg-slate-900/50 min-h-[44px]">
+src/app/(app)/clients/[id]/ClientProjectTimeline.tsx:22:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientRiskScore.tsx:94:      <div className="w-full bg-slate-800/60 rounded-full h-2 mb-4">
+src/app/(app)/clients/[id]/ClientAnalytics.tsx:83:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientAnalytics.tsx:87:            <div key={i} className="h-20 bg-slate-900/50 rounded-lg animate-pulse" />
+src/app/(app)/clients/[id]/ClientAnalytics.tsx:108:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5 space-y-6">
+src/app/(app)/clients/[id]/ClientAnalytics.tsx:126:        <div className="bg-slate-900/50 rounded-xl border border-slate-700/50 p-4">
+src/app/(app)/clients/[id]/ClientAnalytics.tsx:136:        <div className="bg-slate-900/50 rounded-xl border border-slate-700/50 p-4">
+src/app/(app)/clients/[id]/ClientAnalytics.tsx:143:        <div className="bg-slate-900/50 rounded-xl border border-slate-700/50 p-4">
+src/app/(app)/clients/[id]/ClientAnalytics.tsx:155:        <div className={`rounded-xl border p-4 ${data.pendingRevenue > 0 ? 'bg-amber-900/20 border-amber-800/30' : 'bg-slate-900/50 border-slate-700/50'}`}>
+src/app/(app)/clients/[id]/ClientAnalytics.tsx:172:        <div className="bg-slate-900/50 rounded-xl border border-slate-700/50 p-4">
+src/app/(app)/clients/[id]/ClientAnalytics.tsx:179:        <div className="bg-slate-900/50 rounded-xl border border-slate-700/50 p-4">
+src/app/(app)/clients/[id]/ClientAnalytics.tsx:268:      <div className="flex gap-4 pt-1 border-t border-slate-700/30 text-xs text-slate-400">
+src/app/(app)/clients/[id]/ReferralTracker.tsx:15:  lost: 'bg-slate-900/50 text-slate-400 border-slate-700',
+src/app/(app)/clients/[id]/ReferralTracker.tsx:78:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ReferralTracker.tsx:91:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ReferralTracker.tsx:131:            <button type="button" onClick={() => setAdding(false)} className="text-xs text-slate-400 border border-slate-700 px-3 py-1.5 rounded-lg min-h-[44px]">Cancel</button>
+src/app/(app)/clients/[id]/ReferralTracker.tsx:138:          <div key={r.id} className="flex items-center gap-3 py-2 border-b border-slate-700/30 last:border-0 group min-h-[44px]">
+src/app/(app)/clients/[id]/ReferralTracker.tsx:160:        <div className="mt-3 pt-3 border-t border-slate-700/50 text-xs text-slate-400">
+src/app/(app)/clients/[id]/MeetingLog.tsx:72:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden">
+src/app/(app)/clients/[id]/MeetingLog.tsx:75:        className="w-full flex items-center gap-2 px-5 py-4 border-b border-slate-700/50 hover:bg-slate-900/50 transition-colors text-left"
+src/app/(app)/clients/[id]/MeetingLog.tsx:86:          <div className="px-5 py-3 border-b border-slate-700/30">
+src/app/(app)/clients/[id]/MeetingLog.tsx:94:            <div className="px-5 py-4 border-b border-slate-700/50 space-y-3 bg-slate-900/50">
+src/app/(app)/clients/[id]/MeetingLog.tsx:99:                    className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 bg-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40" />
+src/app/(app)/clients/[id]/MeetingLog.tsx:104:                    className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 bg-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40" />
+src/app/(app)/clients/[id]/MeetingLog.tsx:109:                    className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 bg-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40">
+src/app/(app)/clients/[id]/MeetingLog.tsx:116:                className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 bg-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 resize-none" />
+src/app/(app)/clients/[id]/MeetingLog.tsx:119:                className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 bg-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 resize-none" />
+src/app/(app)/clients/[id]/MeetingLog.tsx:125:                <button onClick={() => setAdding(false)} className="text-sm text-slate-400 border border-slate-700 px-4 py-2 rounded-lg min-h-[44px]">Cancel</button>
+src/app/(app)/clients/[id]/ClientTierProgress.tsx:25:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5 space-y-3">
+src/app/(app)/clients/[id]/ClientBudgetSummary.tsx:37:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientBudgetSummary.tsx:45:        <div className="bg-slate-900/50 rounded-lg p-3">
+src/app/(app)/clients/[id]/ClientRiskAssessment.tsx:46:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientRiskAssessment.tsx:64:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5 space-y-4">
+src/app/(app)/clients/[id]/ClientRiskAssessment.tsx:92:        <div className={`rounded-xl border p-4 space-y-4 ${RISK_BG[result.risk_level] ?? 'bg-slate-900/50 border-slate-700'}`}>
+src/app/(app)/clients/[id]/ClientRiskAssessment.tsx:106:          <div className="w-full bg-slate-800/70 rounded-full h-2">
+src/app/(app)/clients/[id]/ClientRiskAssessment.tsx:118:            <div className="bg-slate-800/70 rounded-lg p-3 space-y-1.5">
+src/app/(app)/clients/[id]/ClientRiskAssessment.tsx:127:            <div className="bg-slate-800/70 rounded-lg p-3 space-y-1.5">
+src/app/(app)/clients/[id]/ClientValueTier.tsx:13:  { id: 'standard', label: 'Standard', description: 'Active client, typical terms', icon: Users, color: 'text-slate-400', bgColor: 'bg-slate-900/50 border-slate-700' },
+src/app/(app)/clients/[id]/ClientValueTier.tsx:54:    <div className={`rounded-xl border ${currentTier ? currentTier.bgColor : 'bg-slate-800/50 border-slate-700'}`}>
+src/app/(app)/clients/[id]/ClientValueTier.tsx:75:        <div className="px-5 pb-5 border-t border-slate-700/50/80 pt-4 space-y-4">
+src/app/(app)/clients/[id]/ClientValueTier.tsx:77:            <div className="text-xs text-slate-400 bg-slate-800/60 rounded-lg px-3 py-2 min-h-[44px]">
+src/app/(app)/clients/[id]/ClientValueTier.tsx:90:                    tier === t.id ? `${t.bgColor} border-current` : 'bg-slate-800/50 border-slate-700 hover:border-slate-600'
+src/app/(app)/clients/[id]/ClientBrief.tsx:51:    <div className="bg-slate-800/50 rounded-xl border border-slate-700">
+src/app/(app)/clients/[id]/ClientBrief.tsx:54:        className="w-full flex items-center gap-3 px-5 py-4 text-left hover:bg-slate-900/50 transition-colors"
+src/app/(app)/clients/[id]/ClientBrief.tsx:63:        <div className="px-5 pb-5 border-t border-slate-700/50 pt-4 space-y-4">
+src/app/(app)/clients/[id]/ClientBrief.tsx:106:              <div className="bg-slate-900/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientBrief.tsx:110:                <button onClick={copy} className="flex items-center gap-2 text-sm text-slate-400 border border-slate-600 hover:bg-slate-900/50 font-medium px-4 py-2 rounded-lg transition-colors min-h-[44px]">
+src/app/(app)/clients/[id]/ClientSummaryAI.tsx:50:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientSource.tsx:51:      <div className="bg-slate-900/50 rounded-lg p-3 space-y-2">
+src/app/(app)/clients/[id]/ClientSource.tsx:56:              className={`text-xs font-medium px-2.5 py-1 rounded-full border transition-colors ${source === s ? 'bg-violet-600 text-white border-violet-600' : 'bg-slate-800/50 text-slate-400 border-slate-600 hover:border-violet-300'}`}>
+src/app/(app)/clients/[id]/DeleteClientButton.tsx:37:        className="flex items-center gap-2 text-slate-400 border border-slate-700 hover:text-rose-400 hover:border-rose-700/60 hover:bg-rose-900/15 disabled:opacity-60 text-sm font-medium px-4 py-2 rounded-lg transition-colors min-h-[44px]">
+src/app/(app)/clients/[id]/ClientFollowUp.tsx:75:        className="flex items-center gap-1.5 text-xs text-slate-400 hover:text-violet-400 transition-colors border border-dashed border-slate-700 hover:border-violet-300 rounded-lg px-3 py-2 min-h-[44px]">
+src/app/(app)/clients/[id]/ClientFollowUp.tsx:83:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4 space-y-3">
+src/app/(app)/clients/[id]/ClientFollowUp.tsx:91:              className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40" />
+src/app/(app)/clients/[id]/ClientFollowUp.tsx:97:              className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40" />
+src/app/(app)/clients/[id]/ClientFollowUp.tsx:101:          <button onClick={() => setEditing(false)} className="text-xs text-slate-400 px-3 py-1.5 rounded-lg hover:bg-slate-900/50 min-h-[44px]">Cancel</button>
+src/app/(app)/clients/[id]/ClientFollowUp.tsx:112:    <div className={`rounded-xl border p-4 ${followUp!.done ? 'bg-slate-900/50 border-slate-700/50 opacity-60' : isOverdue ? 'bg-red-900/20 border-red-800/30' : isDueToday ? 'bg-amber-900/20 border-amber-800/30' : 'bg-blue-900/20 border-blue-800/30'}`}>
+src/app/(app)/clients/[id]/Testimonials.tsx:66:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/Testimonials.tsx:105:            <button onClick={() => setAdding(false)} className="text-xs text-slate-400 hover:text-slate-300 border border-slate-700 px-3 py-1.5 rounded-lg min-h-[44px]">Cancel</button>
+src/app/(app)/clients/[id]/ClientPaymentPreference.tsx:56:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientPaymentPreference.tsx:74:            className="w-full text-sm border border-slate-700 rounded-lg px-3 py-1.5 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-200">
+src/app/(app)/clients/[id]/ClientPaymentPreference.tsx:82:            className="w-full text-sm border border-slate-700 rounded-lg px-3 py-1.5 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-200">
+src/app/(app)/clients/[id]/ClientPaymentPreference.tsx:90:            className="w-full text-sm border border-slate-700 rounded-lg px-3 py-1.5 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-200">
+src/app/(app)/clients/[id]/ClientPaymentPreference.tsx:97:            placeholder="e.g. HSBC, PayPal" className="w-full text-sm border border-slate-700 rounded-lg px-3 py-1.5 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-200" />
+src/app/(app)/clients/[id]/ClientPaymentPreference.tsx:103:          placeholder="e.g. last 4 digits, email, notes" className="w-full text-sm border border-slate-700 rounded-lg px-3 py-1.5 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-200" />
+src/app/(app)/clients/[id]/ClientWinbackEmail.tsx:42:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientWinbackEmail.tsx:77:              className="w-full text-sm text-slate-300 bg-slate-900/50 border border-slate-700 rounded-lg px-3 py-2 resize-none focus-visible:outline-none focus-visible:ring-2 focus:ring-teal-500"
+src/app/(app)/clients/[id]/DocumentVault.tsx:29:  { value: 'other', label: 'Other', color: 'bg-slate-900/50 text-slate-400' },
+src/app/(app)/clients/[id]/DocumentVault.tsx:30:  { value: 'general', label: 'General', color: 'bg-slate-800/50 text-slate-400' },
+src/app/(app)/clients/[id]/DocumentVault.tsx:34:  return CATEGORIES.find(c => c.value === category)?.color ?? 'bg-slate-900/50 text-slate-400'
+src/app/(app)/clients/[id]/DocumentVault.tsx:185:    <div className="bg-slate-800/50 rounded-xl border border-slate-700">
+src/app/(app)/clients/[id]/DocumentVault.tsx:188:        className="w-full flex items-center gap-3 px-5 py-4 text-left hover:bg-slate-900/50 transition-colors"
+src/app/(app)/clients/[id]/DocumentVault.tsx:205:        <div className="px-5 pb-5 border-t border-slate-700/50 pt-4 space-y-3">
+src/app/(app)/clients/[id]/DocumentVault.tsx:291:                  className="flex items-center gap-3 p-3 rounded-lg border border-slate-700/50 bg-slate-900/50 hover:border-slate-700 transition-colors"
+src/app/(app)/clients/[id]/ClientHealthScore.tsx:55:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5 animate-pulse">
+src/app/(app)/clients/[id]/ClientHealthScore.tsx:57:        <div className="h-24 bg-slate-900/50 rounded" />
+src/app/(app)/clients/[id]/ClientHealthScore.tsx:70:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientHealthScore.tsx:128:      <div className="mt-5 pt-4 border-t border-slate-700/50">
+src/app/(app)/clients/[id]/ClientRevenueGoal.tsx:66:    <div className="bg-slate-800/50 rounded-xl border border-slate-700">
+src/app/(app)/clients/[id]/ClientRevenueGoal.tsx:69:        className="w-full flex items-center gap-3 px-5 py-4 text-left hover:bg-slate-900/50 transition-colors"
+src/app/(app)/clients/[id]/ClientRevenueGoal.tsx:85:        <div className="px-5 pb-5 border-t border-slate-700/50 pt-4 space-y-4">
+src/app/(app)/clients/[id]/SurveyLinkButton.tsx:75:      <button disabled className="flex items-center gap-2 text-sm text-slate-400 border border-slate-700 font-medium px-4 py-2 rounded-lg min-h-[44px]">
+src/app/(app)/clients/[id]/SurveyLinkButton.tsx:112:          <div className="flex items-center gap-2 bg-slate-900/50 border border-slate-700 rounded-lg px-3 py-2 min-h-[44px]">
+src/app/(app)/clients/[id]/SurveyLinkButton.tsx:137:        className="flex items-center gap-2 text-sm text-slate-400 border border-slate-600 hover:bg-slate-900/50 font-medium px-4 py-2 rounded-lg transition-colors disabled:opacity-60 min-h-[44px]"
+src/app/(app)/clients/[id]/ClientGoalTracker.tsx:58:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5 flex items-center gap-2">
+src/app/(app)/clients/[id]/ClientGoalTracker.tsx:67:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientGoalTracker.tsx:94:            <button onClick={() => setEditing(false)} className="flex items-center gap-1.5 text-xs text-slate-400 border border-slate-700 px-3 py-1.5 rounded-lg hover:bg-slate-900/50 transition-colors min-h-[44px]">
+src/app/(app)/clients/[id]/page.tsx:260:          <p className="text-sm text-slate-300 whitespace-pre-wrap mt-3 pt-3 border-t border-slate-700/50">
+src/app/(app)/clients/[id]/page.tsx:286:          <div className="flex items-center justify-between px-5 py-4 border-b border-slate-700/50">
+src/app/(app)/clients/[id]/page.tsx:308:          <div className="flex items-center justify-between px-5 py-4 border-b border-slate-700/50">
+src/app/(app)/clients/[id]/page.tsx:374:          <div className="flex items-center justify-between px-5 py-4 border-b border-slate-700/50">
+src/app/(app)/clients/[id]/CommunicationLog.tsx:16:  meeting: 'bg-amber-900/20 text-amber-400', other: 'bg-slate-900/50 text-slate-400',
+src/app/(app)/clients/[id]/CommunicationLog.tsx:72:    <div className="bg-slate-800/50 rounded-xl border border-slate-700">
+src/app/(app)/clients/[id]/CommunicationLog.tsx:75:        className="w-full flex items-center gap-3 px-5 py-4 text-left hover:bg-slate-900/50 transition-colors"
+src/app/(app)/clients/[id]/CommunicationLog.tsx:85:        <div className="px-5 pb-5 border-t border-slate-700/50 pt-4 space-y-3">
+src/app/(app)/clients/[id]/CommunicationLog.tsx:117:            <div className="border border-slate-700 rounded-lg p-4 bg-slate-900/50 space-y-3">
+src/app/(app)/clients/[id]/EmailComposer.tsx:75:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/EmailComposer.tsx:84:            className="flex items-center gap-2 text-sm text-slate-400 border border-slate-600 hover:bg-slate-900/50 font-medium px-4 py-2 rounded-lg transition-colors min-h-[44px]"
+src/app/(app)/clients/[id]/EmailComposer.tsx:99:          <div className="relative w-full max-w-lg bg-slate-800/50 shadow-xl flex flex-col h-full overflow-y-auto">
+src/app/(app)/clients/[id]/EmailComposer.tsx:101:            <div className="flex items-center justify-between px-6 py-4 border-b border-slate-700">
+src/app/(app)/clients/[id]/EmailComposer.tsx:123:                          : 'border-slate-700 text-slate-300 hover:bg-slate-900/50'
+src/app/(app)/clients/[id]/EmailComposer.tsx:177:                  <div className="border-t border-slate-700/50 pt-4">
+src/app/(app)/clients/[id]/EmailComposer.tsx:182:                      className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm bg-slate-900/50 text-slate-100 cursor-default min-h-[44px]"
+src/app/(app)/clients/[id]/EmailComposer.tsx:192:                      className="w-full border border-slate-700 rounded-lg px-3 py-2 text-sm bg-slate-900/50 text-slate-100 cursor-default resize-none whitespace-pre-wrap"
+src/app/(app)/clients/[id]/EmailComposer.tsx:199:                      className="flex items-center gap-2 text-sm text-slate-400 border border-slate-600 hover:bg-slate-900/50 font-medium px-4 py-2 rounded-lg transition-colors min-h-[44px]"
+src/app/(app)/clients/[id]/SatisfactionHistory.tsx:54:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5 space-y-4">
+src/app/(app)/clients/[id]/SatisfactionHistory.tsx:80:              survey.responded_at ? 'bg-green-900/20 border-green-800/20' : 'bg-slate-900/50 border-slate-700/50'
+src/app/(app)/clients/[id]/TimezoneTracker.tsx:99:    <div className="bg-slate-800/50 rounded-xl border border-slate-700">
+src/app/(app)/clients/[id]/TimezoneTracker.tsx:102:        className="w-full flex items-center gap-3 px-5 py-4 text-left hover:bg-slate-900/50 transition-colors"
+src/app/(app)/clients/[id]/TimezoneTracker.tsx:117:        <div className="px-5 pb-5 border-t border-slate-700/50 pt-4 space-y-4">
+src/app/(app)/clients/[id]/ClientContactBook.tsx:57:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientContactBook.tsx:72:        <div className="mb-4 p-3 bg-slate-900/50 rounded-lg border border-slate-700 space-y-2">
+src/app/(app)/clients/[id]/ClientContactBook.tsx:74:            placeholder="Name *" className="w-full text-sm border border-slate-700 rounded-lg px-3 py-1.5 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-200" />
+src/app/(app)/clients/[id]/ClientContactBook.tsx:76:            placeholder="Role (e.g. Project Manager)" className="w-full text-sm border border-slate-700 rounded-lg px-3 py-1.5 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-200" />
+src/app/(app)/clients/[id]/ClientContactBook.tsx:79:              placeholder="Email" className="text-sm border border-slate-700 rounded-lg px-3 py-1.5 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-200" />
+src/app/(app)/clients/[id]/ClientContactBook.tsx:81:              placeholder="Phone" className="text-sm border border-slate-700 rounded-lg px-3 py-1.5 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-200" />
+src/app/(app)/clients/[id]/ClientContactBook.tsx:99:          <div key={c.id} className="flex items-start justify-between p-3 bg-slate-900/50 rounded-lg group">
+src/app/(app)/clients/[id]/ClientPortalPanel.tsx:64:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientPortalPanel.tsx:87:              : 'border-slate-600 text-slate-400 bg-slate-900/50'
+src/app/(app)/clients/[id]/ClientPortalPanel.tsx:102:          <div className="flex items-center gap-2 bg-slate-900/50 border border-slate-700 rounded-lg px-3 py-2 overflow-hidden min-h-[44px]">
+src/app/(app)/clients/[id]/ClientPortalPanel.tsx:125:                  ? 'border-slate-600 text-slate-400 hover:bg-slate-900/50'
+src/app/(app)/clients/[id]/ClientPortalPanel.tsx:126:                  : 'border-slate-700 text-slate-400 pointer-events-none'
+src/app/(app)/clients/[id]/ClientPortalPanel.tsx:136:              className="flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-lg border border-slate-700 text-slate-400 hover:bg-slate-900/50 transition-colors disabled:opacity-60 ml-auto min-h-[44px]"
+src/app/(app)/clients/[id]/RecentSurveys.tsx:51:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5 space-y-4">
+src/app/(app)/clients/[id]/RecentSurveys.tsx:68:          <div key={survey.id} className={`rounded-lg border p-3 ${survey.status === 'submitted' ? 'bg-green-900/20 border-green-800/20' : 'bg-slate-900/50 border-slate-700/50'}`}>
+src/app/(app)/clients/[id]/ClientCreditLimit.tsx:46:    <div className={`rounded-xl border ${exceeded ? 'bg-red-900/20 border-red-800/30' : 'bg-slate-800/50 border-slate-700'}`}>
+src/app/(app)/clients/[id]/ClientCreditLimit.tsx:67:        <div className="px-5 pb-5 border-t border-slate-700/50/80 pt-4 space-y-4">
+src/app/(app)/clients/[id]/OnboardingChecklist.tsx:52:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden">
+src/app/(app)/clients/[id]/OnboardingChecklist.tsx:55:        className="w-full flex items-center gap-2 px-5 py-4 border-b border-slate-700/50 hover:bg-slate-900/50 transition-colors text-left"
+src/app/(app)/clients/[id]/OnboardingChecklist.tsx:74:                className={`w-full flex items-center gap-3 p-2.5 rounded-lg transition-colors text-left ${done ? 'opacity-40' : 'hover:bg-slate-900/50'}`}
+src/app/(app)/clients/[id]/OnboardingChecklist.tsx:83:          <div className="pt-2 border-t border-slate-700/30 mt-2">
+src/app/(app)/clients/[id]/statement/StatementView.tsx:153:                    ? 'bg-slate-800/50 text-slate-100 shadow-sm'
+src/app/(app)/clients/[id]/statement/StatementView.tsx:197:                  : 'text-slate-400 border-slate-600 hover:bg-slate-900/50'
+src/app/(app)/clients/[id]/statement/StatementView.tsx:210:              className="flex items-center gap-2 text-sm font-medium text-slate-400 border border-slate-600 hover:bg-slate-900/50 px-4 py-2 rounded-lg transition-colors min-h-[44px]"
+src/app/(app)/clients/[id]/statement/StatementView.tsx:219:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden print:rounded-none print:border-0 print:shadow-none">
+src/app/(app)/clients/[id]/statement/StatementView.tsx:258:            <div className="border border-slate-700 rounded-lg overflow-hidden">
+src/app/(app)/clients/[id]/statement/StatementView.tsx:286:              <div className="border border-slate-700 rounded-lg py-8 text-center text-sm text-slate-400">
+src/app/(app)/clients/[id]/statement/StatementView.tsx:290:              <div className="border border-slate-700 rounded-lg overflow-hidden">
+src/app/(app)/clients/[id]/statement/StatementView.tsx:295:                    <tr className="bg-slate-900/50 border-b border-slate-700">
+src/app/(app)/clients/[id]/statement/StatementView.tsx:314:                      <tr key={tx.id} className="hover:bg-slate-900/50 transition-colors print:hover:bg-transparent">
+src/app/(app)/clients/[id]/statement/StatementView.tsx:337:                    <tr className="border-t-2 border-slate-700 bg-slate-900/50">
+src/app/(app)/clients/[id]/statement/StatementView.tsx:367:          <div className="border-t border-slate-700/50 pt-6 flex items-end justify-between">
+src/app/(app)/clients/[id]/statement/StatementView.tsx:386:            className="flex items-center gap-2 text-sm font-medium text-slate-400 border border-slate-600 hover:bg-slate-900/50 px-5 py-2.5 rounded-lg transition-colors min-h-[44px]"
+src/app/(app)/clients/[id]/ClientTags.tsx:81:            <div className="absolute top-7 left-0 bg-slate-800/50 border border-slate-700 rounded-lg shadow-md p-1 z-10 flex flex-wrap gap-1 w-48">
+src/app/(app)/clients/[id]/ClientTags.tsx:93:          className="inline-flex items-center gap-1 text-xs text-slate-400 hover:text-violet-400 border border-dashed border-slate-700 hover:border-violet-300 rounded-full px-2.5 py-1 transition-colors min-h-[44px]">
+src/app/(app)/clients/[id]/ClientWelcomeKit.tsx:53:    <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/ClientWelcomeKit.tsx:86:              className="w-full text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-200" />
+src/app/(app)/clients/[id]/ClientWelcomeKit.tsx:91:                className="flex-1 text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-200" />
+src/app/(app)/clients/[id]/communications/page.tsx:27:  note:     { emoji: '📝', label: 'Note',     ring: 'ring-slate-600',   bg: 'bg-slate-900/50'   },
+src/app/(app)/clients/[id]/communications/page.tsx:30:  other:    { emoji: '•',  label: 'Other',    ring: 'ring-slate-700',   bg: 'bg-slate-900/50'   },
+src/app/(app)/clients/[id]/communications/page.tsx:170:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/communications/page.tsx:187:                      : `border-slate-700 bg-slate-800/50 text-slate-400 hover:border-slate-600 hover:bg-slate-900/50`
+src/app/(app)/clients/[id]/communications/page.tsx:265:          <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4">
+src/app/(app)/clients/[id]/communications/page.tsx:272:          <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4">
+src/app/(app)/clients/[id]/communications/page.tsx:279:          <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4">
+src/app/(app)/clients/[id]/communications/page.tsx:286:          <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4">
+src/app/(app)/clients/[id]/communications/page.tsx:298:        <div className="flex items-center gap-2 text-xs font-medium text-slate-400 bg-slate-900/50 border border-slate-700/50 rounded-lg px-4 py-2.5 min-h-[44px]">
+src/app/(app)/clients/[id]/communications/page.tsx:313:        <div className="bg-slate-800/50 rounded-xl border border-dashed border-slate-600 p-12 text-center">
+src/app/(app)/clients/[id]/communications/page.tsx:319:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/communications/page.tsx:341:                    <div className="bg-slate-900/50 rounded-lg border border-slate-700/50 px-4 py-3 hover:border-violet-800/30 transition-colors">
+src/app/(app)/clients/[id]/OnboardingEmailSequence.tsx:133:    <div className="bg-slate-800/50 rounded-xl border border-slate-700">
+src/app/(app)/clients/[id]/OnboardingEmailSequence.tsx:136:        className="w-full flex items-center gap-3 px-5 py-4 text-left hover:bg-slate-900/50 transition-colors"
+src/app/(app)/clients/[id]/OnboardingEmailSequence.tsx:150:        <div className="px-5 pb-5 border-t border-slate-700/50 pt-4 space-y-3">
+src/app/(app)/clients/[id]/OnboardingEmailSequence.tsx:155:              className={`flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-md transition-colors ${tab === 'auto' ? 'bg-slate-800/50 shadow-sm text-slate-100' : 'text-slate-400 hover:text-slate-300'}`}
+src/app/(app)/clients/[id]/OnboardingEmailSequence.tsx:161:              className={`flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-md transition-colors ${tab === 'manual' ? 'bg-slate-800/50 shadow-sm text-slate-100' : 'text-slate-400 hover:text-slate-300'}`}
+src/app/(app)/clients/[id]/OnboardingEmailSequence.tsx:179:                  <div key={step} className={`rounded-lg border p-4 flex items-center gap-3 ${isSent ? 'bg-green-900/20 border-green-800/30' : 'bg-slate-900/50 border-slate-700'}`}>
+src/app/(app)/clients/[id]/OnboardingEmailSequence.tsx:180:                    <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 ${isSent ? 'bg-green-500 text-white' : 'bg-slate-800/50 border-2 border-slate-700 text-slate-400'}`}>
+src/app/(app)/clients/[id]/OnboardingEmailSequence.tsx:214:                  <div key={step.id} className={`rounded-lg border p-4 space-y-3 ${isSent ? 'bg-green-900/20 border-green-800/30' : 'bg-slate-900/50 border-slate-700'}`}>
+src/app/(app)/clients/[id]/OnboardingEmailSequence.tsx:216:                      <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 ${isSent ? 'bg-green-500 text-white' : 'bg-slate-800/50 border-2 border-slate-700 text-slate-400'}`}>
+src/app/(app)/clients/[id]/OnboardingEmailSequence.tsx:244:                          <button onClick={copyEmail} className="flex items-center gap-1.5 text-xs text-slate-400 border border-slate-600 bg-slate-800/50 hover:bg-slate-900/50 font-medium px-3 py-1.5 rounded-lg transition-colors min-h-[44px]">
+src/app/(app)/clients/[id]/history/page.tsx:27:  return 'bg-slate-900/50 text-slate-400 border-slate-700'
+src/app/(app)/clients/[id]/history/page.tsx:89:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4">
+src/app/(app)/clients/[id]/history/page.tsx:96:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4">
+src/app/(app)/clients/[id]/history/page.tsx:103:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4">
+src/app/(app)/clients/[id]/history/page.tsx:110:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4">
+src/app/(app)/clients/[id]/history/page.tsx:121:        <div className="bg-slate-800/50 rounded-xl border border-dashed border-slate-600 p-10 text-center">
+src/app/(app)/clients/[id]/history/page.tsx:129:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/history/page.tsx:161:                    <div className="bg-slate-900/50 rounded-lg border border-slate-700/50 px-4 py-3 hover:border-violet-800/30 transition-colors">
+src/app/(app)/clients/[id]/history/page.tsx:182:                          <span className="inline-flex items-center gap-1 text-xs text-slate-400 bg-slate-800/50 border border-slate-700 px-2 py-0.5 rounded-full">
+src/app/(app)/clients/[id]/history/page.tsx:194:                          <span className="inline-flex items-center gap-1 text-xs text-slate-400 bg-slate-800/50 border border-slate-700 px-2 py-0.5 rounded-full">
+src/app/(app)/clients/[id]/onboarding/page.tsx:162:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden">
+src/app/(app)/clients/[id]/onboarding/page.tsx:174:                className={`flex items-center justify-between px-5 py-3.5 transition-colors ${item.completed ? 'bg-slate-900/50' : 'hover:bg-slate-900/50'}`}
+src/app/(app)/clients/[id]/onboarding/page.tsx:212:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4">
+src/app/(app)/clients/[id]/onboarding/page.tsx:221:            className="flex-1 text-sm border border-slate-700 rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus:ring-violet-300"
+src/app/(app)/clients/import/page.tsx:219:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden">
+src/app/(app)/clients/import/page.tsx:221:        <div className="px-6 pt-6 pb-5 border-b border-slate-700/50">
+src/app/(app)/clients/import/page.tsx:245:                  ${dragging ? 'border-violet-400 bg-violet-900/20' : 'border-slate-700 hover:border-violet-300 hover:bg-slate-900/50'}`}
+src/app/(app)/clients/import/page.tsx:285:              <div className="bg-slate-900/50 rounded-xl p-4 flex items-start justify-between gap-4">
+src/app/(app)/clients/import/page.tsx:306:                <div className="flex-1 bg-slate-900/50 rounded-lg p-3 text-center">
+src/app/(app)/clients/import/page.tsx:351:                <div className="overflow-x-auto rounded-lg border border-slate-700">
+src/app/(app)/clients/import/page.tsx:354:                      <tr className="bg-slate-900/50 border-b border-slate-700">
+src/app/(app)/clients/import/page.tsx:413:                <div className="text-center bg-slate-900/50 rounded-lg p-4">
+src/app/(app)/clients/import/page.tsx:437:                  className="text-sm font-medium text-slate-400 border border-slate-600 hover:bg-slate-900/50 px-4 py-2.5 rounded-lg transition-colors min-h-[44px]"
+src/app/(app)/clients/import/page.tsx:447:        <div className="border-t border-slate-700/50 px-6 py-4 flex items-center justify-between bg-slate-900/60">
+src/app/(app)/clients/import/page.tsx:450:              <Link href="/clients" className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-slate-300 px-4 py-2.5 rounded-lg border border-slate-700 hover:bg-slate-900/50 transition-colors min-h-[44px]">
+src/app/(app)/clients/import/page.tsx:457:                className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 px-4 py-2.5 rounded-lg border border-slate-600 hover:bg-slate-900/50 transition-colors min-h-[44px]"
+src/app/(app)/clients/[id]/edit/page.tsx:143:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
+src/app/(app)/clients/[id]/edit/page.tsx:237:            <Link href={`/clients/${clientId}`} className="text-sm font-medium text-slate-400 px-4 py-2.5 rounded-lg border border-slate-600 hover:bg-slate-900/50 transition-colors min-h-[44px]">
+src/app/(app)/clients/[id]/edit/page.tsx:245:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6 mt-5">
+src/app/(app)/clients/[id]/edit/page.tsx:322:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6 mt-5">
+src/app/(app)/clients/[id]/time-report/page.tsx:60:            className="flex items-center gap-2 text-sm text-slate-400 border border-slate-600 hover:bg-slate-900/50 font-medium px-3 py-2 rounded-lg transition-colors min-h-[44px]">
+src/app/(app)/clients/[id]/time-report/page.tsx:76:        <div className="bg-slate-900/50 rounded-xl border border-slate-700 p-4 text-center">
+src/app/(app)/clients/[id]/time-report/page.tsx:84:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5">
+src/app/(app)/clients/[id]/time-report/page.tsx:109:        <div key={projId} className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden">
+src/app/(app)/clients/[id]/time-report/page.tsx:110:          <div className="flex items-center justify-between px-5 py-3 bg-slate-900/50 border-b border-slate-700/50">
+src/app/(app)/clients/[id]/time-report/page.tsx:124:                <tr key={entry.id} className="hover:bg-slate-900/50">
+src/app/(app)/clients/[id]/time-report/page.tsx:142:        <div className="bg-slate-800/50 rounded-xl border border-slate-700 py-12 text-center text-slate-400 text-sm">
+src/app/(app)/clients/broadcast/page.tsx:189:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5 space-y-4">
+src/app/(app)/clients/broadcast/page.tsx:204:                  : 'bg-slate-800/50 text-slate-300 border-slate-600 hover:bg-slate-900/50'
+src/app/(app)/clients/broadcast/page.tsx:230:              <div className="border border-slate-700 rounded-lg max-h-60 overflow-y-auto divide-y divide-slate-700/50">
+src/app/(app)/clients/broadcast/page.tsx:237:                    <label key={c.id} className="flex items-center gap-3 px-4 py-2.5 hover:bg-slate-900/50 cursor-pointer min-h-[44px]">
+src/app/(app)/clients/broadcast/page.tsx:276:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5 space-y-4">
+src/app/(app)/clients/broadcast/page.tsx:333:            <div className="mt-3 border border-slate-700 rounded-xl overflow-hidden">
+src/app/(app)/clients/broadcast/page.tsx:334:              <div className="bg-slate-900/50 px-4 py-2 border-b border-slate-700 text-xs text-slate-400 font-medium min-h-[44px]">
+src/app/(app)/clients/broadcast/page.tsx:395:      <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-5 space-y-4">
