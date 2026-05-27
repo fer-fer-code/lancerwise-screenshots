@@ -1,0 +1,37 @@
+[
+  {
+    "route": "clients-winback-RU",
+    "lang": "ru",
+    "leaks": []
+  },
+  {
+    "route": "clients-intake-RU",
+    "lang": "ru",
+    "leaks": []
+  },
+  {
+    "route": "clients-import-RU",
+    "lang": "ru",
+    "leaks": []
+  },
+  {
+    "route": "clients-detail-RU-a9285114",
+    "lang": "ru",
+    "leaks": []
+  },
+  {
+    "route": "clients-statement-RU-a9285114",
+    "lang": "ru",
+    "leaks": []
+  },
+  {
+    "route": "clients-communications-RU-a9285114",
+    "lang": "ru",
+    "leaks": []
+  },
+  {
+    "route": "clients-history-RU-a9285114",
+    "lang": "ru",
+    "leaks": []
+  }
+]
