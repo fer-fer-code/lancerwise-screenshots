@@ -1,7 +1,7 @@
 # Lancerwise — AI-Native Pivot Discussion
 
 **Дата:** 27 мая 2026
-**Статус:** Под обсуждением, не утверждено
+**Статус:** UX vision утверждён · Technical spec следующий этап
 **Контекст:** Pre-launch session, Ramiz перенёс launch на неопределённое время после ощущения что текущий продукт "не то за что люди будут платить"
 
 ---
@@ -60,124 +60,140 @@ Lancerwise сейчас = **инструмент для ввода данных*
 
 ### Путь 1 — Полный pivot на AI Co-pilot
 - Убрать все виджеты
-- Pure conversational interface (Perplexity-style)
+- Pure conversational interface
 - ETA: 3-4 месяца
-- Risk: $15-20K AUD burn, не валидировано, may not land
+- Risk: $15-20K AUD burn, не валидировано
 - Reward: продукт может стать **тем самым**
 
 ### Путь 2 — Launch как есть + AI v2 параллельно
-- v1 launch через неделю с виджетами + формами
-- Waitlist banner "AI Co-pilot скоро" на дашборде
+- v1 launch с виджетами + формами
+- Waitlist banner "AI Co-pilot скоро"
 - v2 строится 4-6 месяцев параллельно
 - Risk: split focus, v1 churn до v2
-- Reward: revenue с week 1
 
-### Путь 3 — Одна magic feature + виджеты (РЕКОМЕНДОВАНО)
+### Путь 3 — Одна magic feature + виджеты
 - Auto-invoicing как hero feature
 - Виджеты остаются маленькими ниже
 - ETA: +6-8 недель к текущему launch
 - Risk: ниже всех вариантов
-- Reward: wow-эффект на launch day, marketing story "Счета. Сами."
 
-**Визуализация трёх путей:** `paths-comparison.png`
-
----
-
-## Mobile prototype Path 3
-
-Три ключевых экрана iPhone-формата:
-
-**Экран 1 — Главная с AI bar:**
-- Приветствие + дата
-- AI input строка с микрофоном и suggested chips
-- Smart cards "Готово к действию":
-  - "3 счёта готовы к отправке" (auto-invoicing)
-  - "Встреча со Stripe — учесть время?" (calendar integration)
-- Мини-виджеты (доход, часы) — secondary
-
-**Экран 2 — Голосовой ввод:**
-- Полноэкранный overlay с пульсирующим микрофоном
-- Live transcript: "«Учти 2 часа на проект Acme и сделай счёт за всю неделю»"
-- Web Speech API (бесплатно, native)
-
-**Экран 3 — Готовый результат:**
-- Banner "Готово · Учтено 2ч + сгенерирован счёт"
-- Превью счёта со всеми деталями (сумма, часы, ставка, проект, срок)
-- AI explainer: **"Почему так: Я взял твою ставку $120/ч из настроек, проект Acme из активных, и срок Net 14 как у прошлых счетов Acme"**
-- Кнопки: "Изменить" / "Отправить →"
-
-**Время на полное создание счёта: ~10 секунд** vs ~3 минуты с формами.
-
-**Визуализация прототипа:** `mobile-prototype.png`
+**Визуализация:** `paths-comparison.png`
 
 ---
 
-## Технический стек для AI bar
+## Финальный UX vision (утверждён 27 мая)
+
+### Главная страница Lancerwise — три зоны
+
+```
+┌─────────────────────────────────────────┐
+│  ✨ AI Bar (sticky наверху)              │
+│  Поисковая строка + микрофон 🎤          │
+├─────────────────────────────────────────┤
+│  💡 Слой подсказок (от системы)          │
+│  - Срочное (просрочки)                   │
+│  - Smart suggestions                      │
+│  - Напоминания (календарь)               │
+│  - Tips (настройки)                      │
+│  Каждое с крестиком ×                    │
+├─────────────────────────────────────────┤
+│  🎤 История голосовых команд              │
+│  - Каждая команда → виджет               │
+│  - Новейший наверху                      │
+│  - Цитата + результат + actions          │
+│  - Статусы: ожидает / готово / ответ     │
+│  - Крестик × + "Очистить все"            │
+└─────────────────────────────────────────┘
+```
+
+### Voice Input UX — финальные решения
+
+**#1 — Запуск записи: простой клик на 🎤**
+Юзер нажимает кнопку микрофона. Запись начинается. Ещё клик — останавливается.
+
+**#2 — Visual feedback во время записи: Live transcript**
+Текст печатается прямо в поисковую строку по мере речи. Wow-эффект как в SuperWhisper.
+
+**#3 — После транскрипции: Stacking widgets**
+- Текст распознан → ниже AI bar добавляется виджет
+- Виджет содержит: цитата сказанного + результат + кнопки actions
+- Виджеты накапливаются (новейший сверху, история)
+- Юзер закрывает крестиком когда хочет
+- Кнопка "Очистить все" массово
+
+**Над виджетами — слой подсказок:**
+AI proactively показывает что делать дальше. 4 типа:
+- ⚠️ Срочное — просроченные счета, дедлайны
+- ✨ Smart — auto-invoicing, thank-you после оплаты
+- 📅 Напоминания — встречи из календаря
+- ⚡ Tips — что настроить (ставка нового клиента)
+
+Все подсказки закрываются крестиком ×.
+
+---
+
+## Технический стек
+
+### Voice Recognition
+- **Free tier:** Web Speech API (бесплатно, native в браузере)
+- **Pro tier:** Groq Whisper Large v3 Turbo ($0.04/час = ~$0.0007 per command)
+- **AI cleanup:** Claude Haiku 4.5
+- **Voice capture:** Web MediaRecorder API
+- **Total cost per voice command:** ~$0.002
+- **Per active Pro user/month:** ~$0.50-1.50
+
+### Intent Parsing & Tool Calling
+- **Anthropic API + prompt caching + Haiku/Sonnet routing**
+- System prompt cached (90% discount)
+- Haiku для read queries, Sonnet для mutations
+- Total: ~$1.50/юзер/мес → 92% margin на $19 Pro plan
 
 ### Что НЕ использовать
-**Не использовать Claude Max подписку через browser proxy:**
-- Нарушение Anthropic ToS (account sharing, automated proxying)
-- Account ban risk — терять весь dev workflow (Claude Code + 4 агента)
-- Rate limit Max plan = умрёт после 10 юзеров
-- Сломается через 1-2 дня обновления Cloudflare
-- Юридический риск перед launch
+**Claude Max через browser proxy:**
+- Нарушение Anthropic ToS
+- Account ban risk → потеря dev workflow
+- Rate limit умирает после 10 юзеров
+- Юридический риск
 
-### Что использовать
-**Anthropic API + prompt caching + Haiku/Sonnet routing:**
-
-| Компонент | Модель | Стоимость |
-|---|---|---|
-| System prompt (cached) | $0.30/M | ~$0.0009/request |
-| User message | $3/M | ~$0.00015 |
-| Response | $15/M | ~$0.003 |
-| **Итого Sonnet** | | **~$0.004/command** |
-| **Итого Haiku (для read)** | | **~$0.001/command** |
-
-**Hybrid стратегия:**
-- Free tier (5 commands/день): Groq Cloud Llama 3.3 70B **бесплатно** с rate limits
-- Pro tier (unlimited): Anthropic API ~$1.50/юзер/мес → margin ~92% на $19 plan
-- Voice input: Web Speech API (бесплатно, native в браузерах)
-
----
-
-## Что нужно валидировать перед коммитом
-
-Прежде чем строить (особенно Путь 1) — обязательно:
-
-1. **User interviews** — 5-10 фрилансеров. Показать прототип, получить честный feedback. "Нужно ли тебе чтобы AI слушал твои встречи?" "Готов ли ты доверить AI создание счетов?"
-2. **Mental model test** — открыл приложение что ожидаешь увидеть? Пустую строку или dashboard с данными?
-3. **Trust gap** — финансовые мутации требуют explicit confirmation. Без этого юзеры не будут доверять.
-4. **Discoverability** — юзер видит пустую строку и… что? Quick action chips обязательны.
+**SuperWhisper API:**
+- Технически не существует
+- SuperWhisper это macOS app, не cloud сервис
+- Те же APIs (Groq) используются внутри SuperWhisper
 
 ---
 
 ## Открытые вопросы
 
-1. Какой путь финально выбираем (1 / 2 / 3)?
-2. Если Путь 3 — auto-invoicing первая hero feature или другая (email-to-action / voice-to-everything)?
-3. Кого из реальных фрилансеров можно показать прототип через 2-3 недели?
-4. ICP уточнение — конкретный фрилансер (имя, ниша, доход, болевые точки) для которого строим?
-5. Что делать с уже сделанной i18n + palette работой (Heavy 10 /clients, OnboardingWizard, /work/time, dashboard)? Если Путь 1 — большая часть UX переписывается.
+1. Финальный выбор между Путём 1 (полный pivot) и Путём 3 (hero feature)?
+2. ICP — конкретный фрилансер (имя, ниша, доход) для которого строим?
+3. Что делать с уже сделанной i18n + palette работой?
+4. Кого из реальных фрилансеров показать прототип через 2-3 недели?
+5. Codebase strategy — текущий Lancerwise или новая ветка v2?
 
 ---
 
 ## Следующие шаги
 
-После решения по пути — написать:
-- Конкретный technical spec выбранной hero feature
+После решения по пути:
+- Technical spec выбранной hero feature
 - Data model для AI co-pilot интеракций
 - Tool definitions для Anthropic API tool-use
-- Edge cases (fixed-price клиенты, multi-currency, AI не понял intent)
-- User research plan для валидации
+- Backend endpoints (/api/voice/transcribe, /api/voice/parse)
+- Frontend компонент VoiceInputBar + WidgetStack + HintsLayer
+- Schema для widget persistence
+- User research plan
 
 ---
 
 ## Файлы
 
 - `paths-comparison.png` — визуализация трёх путей desktop
-- `mobile-prototype.png` — прототип Path 3 на мобильном (3 экрана: главная / voice / result)
+- `mobile-prototype.png` — мобильный прототип Path 3
+- `voice-prototypes.png` — UX варианты для voice input
+- `stacking-widgets.png` — паттерн накопления виджетов
+- `hints-and-stack.png` — финальный UX vision (выбран средний экран)
 - `README.md` — этот документ
 
 ---
 
-*Last updated: 2026-05-27. Будем обсуждать ещё.*
+*Last updated: 2026-05-27. UX vision утверждён. Technical spec следующий.*
