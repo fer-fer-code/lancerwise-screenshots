@@ -1,0 +1,7 @@
+  File "<string>"
+ line 27
+blocked_url|blockedURI)["\':]+\s*["\']?([^"\\' 
+}]+)'
+ msg):
+                                                                                             ^
+SyntaxError: closing parenthesis '}' does not match opening parenthesis '('

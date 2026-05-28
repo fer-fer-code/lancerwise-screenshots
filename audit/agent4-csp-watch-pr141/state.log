@@ -1,0 +1,6 @@
+16:14:30 === PHASE 2: 30-min CSP-report monitor (PR #141 → 6d5a6c4d) ===
+16:14:30 Vercel project: prj_OfYhgE1ONf98IhDzAMzspTr7hC1A
+16:14:32 [csp 1/15] elapsed=0s window_count=0 rate=0.0/min total=0 domains=  File "<string>", line 27
+blocked_url|blockedURI)["\':]+\s*["\']?([^"\\' ,}]+)', msg):
+                                                                                             ^
+SyntaxError: closing parenthesis '}' does not match opening parenthesis '('

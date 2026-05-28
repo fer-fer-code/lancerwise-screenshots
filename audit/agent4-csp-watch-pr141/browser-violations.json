@@ -1,0 +1,10 @@
+{
+  "total": 0,
+  "routes_visited": 13,
+  "by_directive": {},
+  "by_host": {},
+  "expected_count": 0,
+  "unexpected_count": 0,
+  "unexpected_violations": [],
+  "sample_violations": []
+}
