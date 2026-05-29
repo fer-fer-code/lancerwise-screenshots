@@ -1,0 +1,362 @@
+[
+  {
+    "url": "/contracts",
+    "label": "contracts-list",
+    "loadMs": 8084,
+    "status": 200,
+    "finalUrl": "/contracts",
+    "errorBoundary": false,
+    "blankPage": false,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedReqs": 7,
+    "sampleConsole": [],
+    "samplePageErr": [],
+    "sampleFailed": [
+      "GET https://www.lancerwise.com/retainers?_rsc=DzmfcRRfJeItXkgz - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/dashboard?_rsc=DzmfcRRfJeItXkgz - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/notifications?_rsc=GLHxbs81CLxw9Stw - net::ERR_ABORTED"
+    ]
+  },
+  {
+    "url": "/contracts/generate",
+    "label": "contracts-generate",
+    "loadMs": 8547,
+    "status": 200,
+    "finalUrl": "/contracts/generate",
+    "errorBoundary": false,
+    "blankPage": false,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedReqs": 6,
+    "sampleConsole": [],
+    "samplePageErr": [],
+    "sampleFailed": [
+      "GET https://www.lancerwise.com/notifications?_rsc=SMrJoA6nnc7cnTab - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/settings?_rsc=z58higGmERXYcW92 - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/retainers?_rsc=HxbsyGTKR9AgaHkj - net::ERR_ABORTED"
+    ]
+  },
+  {
+    "url": "/quotes",
+    "label": "quotes-list",
+    "loadMs": 7927,
+    "status": 200,
+    "finalUrl": "/quotes",
+    "errorBoundary": false,
+    "blankPage": false,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedReqs": 4,
+    "sampleConsole": [],
+    "samplePageErr": [],
+    "sampleFailed": [
+      "GET https://www.lancerwise.com/dashboard?_rsc=m5tW8DuqCtK3UhTw - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/settings?_rsc=j-Dh3Mv3pmZC6pCN - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/time-tracker?_rsc=xr84oq77UgvMUcOt - net::ERR_ABORTED"
+    ]
+  },
+  {
+    "url": "/proposals",
+    "label": "proposals-list",
+    "loadMs": 9186,
+    "status": 200,
+    "finalUrl": "/proposals",
+    "errorBoundary": false,
+    "blankPage": false,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedReqs": 9,
+    "sampleConsole": [],
+    "samplePageErr": [],
+    "sampleFailed": [
+      "GET https://www.lancerwise.com/clients?_rsc=8qZH60WsiyOTuseO - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/dashboard?_rsc=8qZH60WsiyOTuseO - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/time-tracker?_rsc=On8aL4lxxi3VPnbw - net::ERR_ABORTED"
+    ]
+  },
+  {
+    "url": "/proposals/generate",
+    "label": "proposals-generate",
+    "loadMs": 7801,
+    "status": 200,
+    "finalUrl": "/proposals/generate",
+    "errorBoundary": false,
+    "blankPage": false,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedReqs": 5,
+    "sampleConsole": [],
+    "samplePageErr": [],
+    "sampleFailed": [
+      "GET https://www.lancerwise.com/proposals?_rsc=5BrLn83Lv-LyqtcI - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/notifications?_rsc=bsyhZLKXLttvJOw5 - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/time-tracker?_rsc=V1_3diCQ3JjNMWeo - net::ERR_ABORTED"
+    ]
+  },
+  {
+    "url": "/proposals/ai-writer",
+    "label": "proposals-ai-writer",
+    "loadMs": 7167,
+    "status": 200,
+    "finalUrl": "/proposals/ai-writer",
+    "errorBoundary": false,
+    "blankPage": false,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedReqs": 6,
+    "sampleConsole": [],
+    "samplePageErr": [],
+    "sampleFailed": [
+      "GET https://www.lancerwise.com/time-tracker?_rsc=UszGfZ4OxKH34EOb - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/notifications?_rsc=uUqyY_Wok3XgrLob - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/settings?_rsc=GenwHDZiRYyFeJxa - net::ERR_ABORTED"
+    ]
+  },
+  {
+    "url": "/proposals/brief",
+    "label": "proposals-brief",
+    "loadMs": 7357,
+    "status": 200,
+    "finalUrl": "/proposals/brief",
+    "errorBoundary": false,
+    "blankPage": false,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedReqs": 5,
+    "sampleConsole": [],
+    "samplePageErr": [],
+    "sampleFailed": [
+      "GET https://www.lancerwise.com/notifications?_rsc=5yoytXtHZjp21tr6 - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/settings?_rsc=uNwsX1PEw-vJQdSy - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/clients/pipeline?_rsc=1ucgL5XeBOIKZt_u - net::ERR_ABORTED"
+    ]
+  },
+  {
+    "url": "/tools/scope-estimator",
+    "label": "tools-scope-estimator",
+    "loadMs": 9374,
+    "status": 200,
+    "finalUrl": "/tools/scope-estimator",
+    "errorBoundary": false,
+    "blankPage": false,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedReqs": 3,
+    "sampleConsole": [],
+    "samplePageErr": [],
+    "sampleFailed": [
+      "GET https://www.lancerwise.com/settings?_rsc=9MC2pdFqPZSHxMEG - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/notifications?_rsc=YTVoYCp0VRjBuZG6 - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/time-tracker?_rsc=GnnHvHfhumlfr3DR - net::ERR_ABORTED"
+    ]
+  },
+  {
+    "url": "/tools/email-composer",
+    "label": "tools-email-composer",
+    "loadMs": 7499,
+    "status": 200,
+    "finalUrl": "/tools/email-composer",
+    "errorBoundary": false,
+    "blankPage": false,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedReqs": 5,
+    "sampleConsole": [],
+    "samplePageErr": [],
+    "sampleFailed": [
+      "GET https://www.lancerwise.com/settings?_rsc=axJL-CXLzWCma0N- - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/dashboard?_rsc=IGIqMpC4FXrZAip0 - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/cookie-policy?_rsc=O3rUd8M1Q3bJ4J8Z - net::ERR_ABORTED"
+    ]
+  },
+  {
+    "url": "/tools/email-reply",
+    "label": "tools-email-reply",
+    "loadMs": 7455,
+    "status": 200,
+    "finalUrl": "/tools/email-reply",
+    "errorBoundary": false,
+    "blankPage": false,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedReqs": 3,
+    "sampleConsole": [],
+    "samplePageErr": [],
+    "sampleFailed": [
+      "GET https://www.lancerwise.com/notifications?_rsc=5ubH1oGIgcF-JIj7 - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/settings?_rsc=bVNk5mVH2uVwXjpq - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/dashboard?_rsc=xU9QULIS1D5PkMpF - net::ERR_ABORTED"
+    ]
+  },
+  {
+    "url": "/tools/bio-generator",
+    "label": "tools-bio-generator",
+    "loadMs": 7765,
+    "status": 200,
+    "finalUrl": "/tools/bio-generator",
+    "errorBoundary": false,
+    "blankPage": false,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedReqs": 5,
+    "sampleConsole": [],
+    "samplePageErr": [],
+    "sampleFailed": [
+      "GET https://www.lancerwise.com/settings?_rsc=gJm3Vyj59eMwmDEG - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/dashboard?_rsc=bqnw9qQX0OMJDT4L - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/cookie-policy?_rsc=fFGalr1yDpL_T5Mk - net::ERR_ABORTED"
+    ]
+  },
+  {
+    "url": "/tools/brief-extractor",
+    "label": "tools-brief-extractor",
+    "loadMs": 7161,
+    "status": 200,
+    "finalUrl": "/tools/brief-extractor",
+    "errorBoundary": false,
+    "blankPage": false,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedReqs": 2,
+    "sampleConsole": [],
+    "samplePageErr": [],
+    "sampleFailed": [
+      "GET https://www.lancerwise.com/settings?_rsc=fl1TGuLkyFNHTSWL - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/dashboard?_rsc=Vt1oBVy-Xy_rtze_ - net::ERR_ABORTED"
+    ]
+  },
+  {
+    "url": "/tools/contract-generator",
+    "label": "tools-contract-generator",
+    "loadMs": 7673,
+    "status": 200,
+    "finalUrl": "/tools/contract-generator",
+    "errorBoundary": false,
+    "blankPage": false,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedReqs": 3,
+    "sampleConsole": [],
+    "samplePageErr": [],
+    "sampleFailed": [
+      "GET https://www.lancerwise.com/notifications?_rsc=c49s3TG0Gw_87_YG - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/cookie-policy?_rsc=vGajfP2tqDNvCwT2 - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/settings?_rsc=n3LvgiOkL942kIxI - net::ERR_ABORTED"
+    ]
+  },
+  {
+    "url": "/work/time",
+    "label": "work-time",
+    "loadMs": 9381,
+    "status": 200,
+    "finalUrl": "/work/time",
+    "errorBoundary": false,
+    "blankPage": false,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedReqs": 7,
+    "sampleConsole": [],
+    "samplePageErr": [],
+    "sampleFailed": [
+      "GET https://www.lancerwise.com/invoices/generate?_rsc=4c2fX5zgf4k-_IDs - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/invoices/generate?_rsc=th2pHAGlD_sHVG2G - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/time-tracker/analytics?_rsc=8UAa_ikzvgrf8Zg- - net::ERR_ABORTED"
+    ]
+  },
+  {
+    "url": "/analytics",
+    "label": "analytics",
+    "loadMs": 10626,
+    "status": 200,
+    "finalUrl": "/analytics",
+    "errorBoundary": false,
+    "blankPage": false,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedReqs": 10,
+    "sampleConsole": [],
+    "samplePageErr": [],
+    "sampleFailed": [
+      "GET https://www.lancerwise.com/settings?_rsc=ix5_aAief6TvBg04 - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/insights/profitability?_rsc=ix5_aAief6TvBg04 - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/time-tracker?_rsc=2wKqcKv5eOVpBKcB - net::ERR_ABORTED"
+    ]
+  },
+  {
+    "url": "/analytics/scope-creep",
+    "label": "analytics-scope-creep",
+    "loadMs": 8396,
+    "status": 200,
+    "finalUrl": "/analytics/scope-creep",
+    "errorBoundary": false,
+    "blankPage": false,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedReqs": 7,
+    "sampleConsole": [],
+    "samplePageErr": [],
+    "sampleFailed": [
+      "GET https://www.lancerwise.com/settings?_rsc=8EIIN-qtbBHCY5yg - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/insights/productivity?_rsc=8EIIN-qtbBHCY5yg - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/notifications?_rsc=gbZlbLI05hQTfY3f - net::ERR_ABORTED"
+    ]
+  },
+  {
+    "url": "/analytics/proposals",
+    "label": "analytics-proposals",
+    "loadMs": 7932,
+    "status": 200,
+    "finalUrl": "/analytics/proposals",
+    "errorBoundary": false,
+    "blankPage": false,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedReqs": 8,
+    "sampleConsole": [],
+    "samplePageErr": [],
+    "sampleFailed": [
+      "GET https://www.lancerwise.com/time-tracker?_rsc=EGZ2vu8s244kd9I6 - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/cookie-policy?_rsc=oWGJPQngKs3-fDlk - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/settings?_rsc=TRFMl74BQep4TxtD - net::ERR_ABORTED"
+    ]
+  },
+  {
+    "url": "/clients/meeting-notes",
+    "label": "clients-meeting-notes",
+    "loadMs": 8547,
+    "status": 200,
+    "finalUrl": "/clients/meeting-notes",
+    "errorBoundary": false,
+    "blankPage": false,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedReqs": 5,
+    "sampleConsole": [],
+    "samplePageErr": [],
+    "sampleFailed": [
+      "GET https://www.lancerwise.com/dashboard?_rsc=38xyyjQeDYWqC8Aj - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/settings?_rsc=byMKdQBF_umyA9Bd - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/clients/pipeline?_rsc=kslPQ8CuX6eE-LTM - net::ERR_ABORTED"
+    ]
+  },
+  {
+    "url": "/notes",
+    "label": "notes",
+    "loadMs": 7594,
+    "status": 200,
+    "finalUrl": "/notes",
+    "errorBoundary": false,
+    "blankPage": false,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedReqs": 5,
+    "sampleConsole": [],
+    "samplePageErr": [],
+    "sampleFailed": [
+      "GET https://www.lancerwise.com/dashboard?_rsc=gMKxpOiubtfRYg4s - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/notifications?_rsc=Hl9Je8LHEpL28R1b - net::ERR_ABORTED",
+      "GET https://www.lancerwise.com/time-tracker?_rsc=gMKxpOiubtfRYg4s - net::ERR_ABORTED"
+    ]
+  }
+]
