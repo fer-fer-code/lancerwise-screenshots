@@ -1,0 +1,2373 @@
+{
+  "routes": {
+    "mobile-dashboard": {
+      "requested": "/dashboard",
+      "landedOn": "https://www.lancerwise.com/dashboard",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-dashboard.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 2030,
+        "isRUlocale": true,
+        "headings": [
+          "Главная",
+          "Добрый день, QA",
+          "Доход и активность",
+          "Цель по доходу за месяц",
+          "Денежный поток",
+          "Здоровье фриланс-бизнеса"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-command-center": {
+      "requested": "/dashboard/command-center",
+      "landedOn": "https://www.lancerwise.com/dashboard/command-center",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-command-center.png",
+      "signals": {
+        "lang": "ru",
+        "title": "Command Center | LancerWise",
+        "ruChars": 31,
+        "isRUlocale": true,
+        "headings": [
+          "Главная"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Business is ON TRACK 🟢",
+        "No action items due today",
+        "📅 No meetings scheduled",
+        "No recent activity",
+        "💼 No revenue data this month yet",
+        "No follow-ups due",
+        "+ New Invoice",
+        "+ New Proposal"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-onboarding": {
+      "requested": "/onboarding",
+      "landedOn": "https://www.lancerwise.com/onboarding",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-onboarding.png",
+      "signals": {
+        "lang": "ru",
+        "title": "Get Started | LancerWise",
+        "ruChars": 241,
+        "isRUlocale": true,
+        "headings": [
+          "LancerWise",
+          "Настройте профиль"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-onboarding-checklist": {
+      "requested": "/onboarding/checklist",
+      "landedOn": "https://www.lancerwise.com/onboarding/checklist",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-onboarding-checklist.png",
+      "signals": {
+        "lang": "ru",
+        "title": "Setup Checklist | LancerWise",
+        "ruChars": 24,
+        "isRUlocale": true,
+        "headings": [
+          "LancerWise",
+          "Welcome to LancerWise"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Welcome to LancerWise",
+        "Add your first client",
+        "Create your first invoice",
+        "Send your first proposal"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-settings-hub": {
+      "requested": "/settings",
+      "landedOn": "https://www.lancerwise.com/settings",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-settings-hub.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 948,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Настройки",
+          "Профиль",
+          "Внешний вид",
+          "Invoice Branding",
+          "Client Portal Branding"
+        ],
+        "proCtas": [
+          {
+            "text": "Подробности оплаты →",
+            "href": "/billing",
+            "tag": "A",
+            "isVisible": true
+          },
+          {
+            "text": "Перейти на Pro",
+            "href": "/upgrade",
+            "tag": "A",
+            "isVisible": true
+          }
+        ],
+        "currencySelects": [
+          {
+            "value": "USD",
+            "optionCount": 16,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "CAD",
+              "AUD",
+              "CHF",
+              "JPY",
+              "CNY",
+              "INR",
+              "BRL",
+              "MXN",
+              "RUB",
+              "TRY",
+              "SEK",
+              "THB",
+              "SGD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 5,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 6,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED",
+              "THB"
+            ],
+            "hasObjectObject": false
+          }
+        ],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Profile Photo",
+        "No logo",
+        "Save Branding",
+        "Welcome Message(0/300)",
+        "Pro/Team feature to hide",
+        "Upgrade to Pro or Team to remove LancerWise branding from your client portal",
+        "Save Portal Branding"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-settings-account": {
+      "requested": "/settings/account",
+      "landedOn": "https://www.lancerwise.com/settings",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-settings-account.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 948,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Настройки",
+          "Профиль",
+          "Внешний вид",
+          "Invoice Branding",
+          "Client Portal Branding"
+        ],
+        "proCtas": [
+          {
+            "text": "Подробности оплаты →",
+            "href": "/billing",
+            "tag": "A",
+            "isVisible": true
+          },
+          {
+            "text": "Перейти на Pro",
+            "href": "/upgrade",
+            "tag": "A",
+            "isVisible": true
+          }
+        ],
+        "currencySelects": [
+          {
+            "value": "USD",
+            "optionCount": 16,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "CAD",
+              "AUD",
+              "CHF",
+              "JPY",
+              "CNY",
+              "INR",
+              "BRL",
+              "MXN",
+              "RUB",
+              "TRY",
+              "SEK",
+              "THB",
+              "SGD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 5,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 6,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED",
+              "THB"
+            ],
+            "hasObjectObject": false
+          }
+        ],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Profile Photo",
+        "No logo",
+        "Save Branding",
+        "Welcome Message(0/300)",
+        "Pro/Team feature to hide",
+        "Upgrade to Pro or Team to remove LancerWise branding from your client portal",
+        "Save Portal Branding"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-settings-billing": {
+      "requested": "/settings/billing",
+      "landedOn": "https://www.lancerwise.com/upgrade",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-settings-billing.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 527,
+        "isRUlocale": true,
+        "headings": [
+          "LancerWise",
+          "Upgrade your plan"
+        ],
+        "proCtas": [
+          {
+            "text": "Перейти на Pro",
+            "href": "",
+            "tag": "BUTTON",
+            "isVisible": true
+          }
+        ],
+        "currencySelects": [],
+        "planBadgeText": "LancerWiseГлавнаяФинансыКлиентыРаботаДоговорыАналитикаНастройкиУведомленияГорячи",
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Upgrade your plan",
+        "You're on the Free plan. Upgrade to unlock unlimited clients, AI features, and m",
+        "Free",
+        "Pro"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-settings-security": {
+      "requested": "/settings/security",
+      "landedOn": "https://www.lancerwise.com/settings",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-settings-security.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 948,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Настройки",
+          "Профиль",
+          "Внешний вид",
+          "Invoice Branding",
+          "Client Portal Branding"
+        ],
+        "proCtas": [
+          {
+            "text": "Подробности оплаты →",
+            "href": "/billing",
+            "tag": "A",
+            "isVisible": true
+          },
+          {
+            "text": "Перейти на Pro",
+            "href": "/upgrade",
+            "tag": "A",
+            "isVisible": true
+          }
+        ],
+        "currencySelects": [
+          {
+            "value": "USD",
+            "optionCount": 16,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "CAD",
+              "AUD",
+              "CHF",
+              "JPY",
+              "CNY",
+              "INR",
+              "BRL",
+              "MXN",
+              "RUB",
+              "TRY",
+              "SEK",
+              "THB",
+              "SGD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 5,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 6,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED",
+              "THB"
+            ],
+            "hasObjectObject": false
+          }
+        ],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Profile Photo",
+        "No logo",
+        "Save Branding",
+        "Welcome Message(0/300)",
+        "Pro/Team feature to hide",
+        "Upgrade to Pro or Team to remove LancerWise branding from your client portal",
+        "Save Portal Branding"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-settings-notifications": {
+      "requested": "/settings/notifications",
+      "landedOn": "https://www.lancerwise.com/settings",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-settings-notifications.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 948,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Настройки",
+          "Профиль",
+          "Внешний вид",
+          "Invoice Branding",
+          "Client Portal Branding"
+        ],
+        "proCtas": [
+          {
+            "text": "Подробности оплаты →",
+            "href": "/billing",
+            "tag": "A",
+            "isVisible": true
+          },
+          {
+            "text": "Перейти на Pro",
+            "href": "/upgrade",
+            "tag": "A",
+            "isVisible": true
+          }
+        ],
+        "currencySelects": [
+          {
+            "value": "USD",
+            "optionCount": 16,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "CAD",
+              "AUD",
+              "CHF",
+              "JPY",
+              "CNY",
+              "INR",
+              "BRL",
+              "MXN",
+              "RUB",
+              "TRY",
+              "SEK",
+              "THB",
+              "SGD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 5,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 6,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED",
+              "THB"
+            ],
+            "hasObjectObject": false
+          }
+        ],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Profile Photo",
+        "No logo",
+        "Save Branding",
+        "Welcome Message(0/300)",
+        "Pro/Team feature to hide",
+        "Upgrade to Pro or Team to remove LancerWise branding from your client portal",
+        "Save Portal Branding"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-settings-availability": {
+      "requested": "/settings/availability",
+      "landedOn": "https://www.lancerwise.com/settings/availability",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-settings-availability.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 33,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Availability Manager",
+          "Availability Status",
+          "Weekly Capacity",
+          "Availability Note",
+          "Time Off & Blackouts"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Add time off",
+        "No time off scheduled",
+        "Save Changes"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-settings-digest": {
+      "requested": "/settings/digest",
+      "landedOn": "https://www.lancerwise.com/settings/digest",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-settings-digest.png",
+      "signals": {
+        "lang": "ru",
+        "title": "Weekly Digest | LancerWise",
+        "ruChars": 33,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Weekly Digest Settings",
+          "Delivery Settings",
+          "Sections to Include",
+          "Preview & Send"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Weekly Digest Settings",
+        "Delivery Settings",
+        "Send To",
+        "Your account email — change it in Profile settings",
+        "Save Preferences",
+        "Preview & Send",
+        "Send to my email now"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-settings-export": {
+      "requested": "/settings/export",
+      "landedOn": "https://www.lancerwise.com/settings/export",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-settings-export.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 33,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Data Export",
+          "Export by Category",
+          "Export All Data",
+          "Export Data",
+          "Your Data Rights"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Business expenses and receipts"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-settings-integrations": {
+      "requested": "/settings/integrations",
+      "landedOn": "https://www.lancerwise.com/settings",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-settings-integrations.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 948,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Настройки",
+          "Профиль",
+          "Внешний вид",
+          "Invoice Branding",
+          "Client Portal Branding"
+        ],
+        "proCtas": [
+          {
+            "text": "Подробности оплаты →",
+            "href": "/billing",
+            "tag": "A",
+            "isVisible": true
+          },
+          {
+            "text": "Перейти на Pro",
+            "href": "/upgrade",
+            "tag": "A",
+            "isVisible": true
+          }
+        ],
+        "currencySelects": [
+          {
+            "value": "USD",
+            "optionCount": 16,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "CAD",
+              "AUD",
+              "CHF",
+              "JPY",
+              "CNY",
+              "INR",
+              "BRL",
+              "MXN",
+              "RUB",
+              "TRY",
+              "SEK",
+              "THB",
+              "SGD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 5,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 6,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED",
+              "THB"
+            ],
+            "hasObjectObject": false
+          }
+        ],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Profile Photo",
+        "No logo",
+        "Save Branding",
+        "Welcome Message(0/300)",
+        "Pro/Team feature to hide",
+        "Upgrade to Pro or Team to remove LancerWise branding from your client portal",
+        "Save Portal Branding"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-settings-items-library": {
+      "requested": "/settings/items-library",
+      "landedOn": "https://www.lancerwise.com/settings/items-library",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-settings-items-library.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 33,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Items Library",
+          "Service(4)",
+          "Subscription(1)"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Settings",
+        "Add Item"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-settings-late-fees": {
+      "requested": "/settings/late-fees",
+      "landedOn": "https://www.lancerwise.com/settings/late-fees",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-settings-late-fees.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 33,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Late Fee Automation"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Save Settings"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-settings-public-profile": {
+      "requested": "/settings/public-profile",
+      "landedOn": "https://www.lancerwise.com/settings/public-profile",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-settings-public-profile.png",
+      "signals": {
+        "lang": "ru",
+        "title": "Public Profile | LancerWise",
+        "ruChars": 33,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Public Profile",
+          "Profile Information",
+          "Profile URL & Visibility",
+          "Incoming Inquiries"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Public Profile",
+        "Create a shareable profile page to showcase your services to prospects.",
+        "Profile Photo URL",
+        "Profile Slug",
+        "Save Profile",
+        "No inquiries yet. Share your profile to get started!"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-settings-reminders": {
+      "requested": "/settings/reminders",
+      "landedOn": "https://www.lancerwise.com/settings/reminders",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-settings-reminders.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 33,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Payment Reminder Automation",
+          "Automation Settings",
+          "Email Template Previews",
+          "Recent Reminders Sent"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Save Settings",
+        "No reminders sent yet. Enable auto reminders and they will appear here."
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-settings-tags": {
+      "requested": "/settings/tags",
+      "landedOn": "https://www.lancerwise.com/settings/tags",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-settings-tags.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 96,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Project Tags"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Add Tag",
+        "No projects",
+        "No projects",
+        "No projects",
+        "No projects",
+        "No projects",
+        "No projects"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-settings-upgrade": {
+      "requested": "/settings/upgrade",
+      "landedOn": "https://www.lancerwise.com/upgrade",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-settings-upgrade.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 527,
+        "isRUlocale": true,
+        "headings": [
+          "LancerWise",
+          "Upgrade your plan"
+        ],
+        "proCtas": [
+          {
+            "text": "Перейти на Pro",
+            "href": "",
+            "tag": "BUTTON",
+            "isVisible": true
+          }
+        ],
+        "currencySelects": [],
+        "planBadgeText": "LancerWiseГлавнаяФинансыКлиентыРаботаДоговорыАналитикаНастройкиУведомленияГорячи",
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Upgrade your plan",
+        "You're on the Free plan. Upgrade to unlock unlimited clients, AI features, and m",
+        "Free",
+        "Pro"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-settings-api": {
+      "requested": "/settings/api",
+      "landedOn": "https://www.lancerwise.com/settings/api",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-settings-api.png",
+      "signals": {
+        "lang": "ru",
+        "title": "API Keys | LancerWise",
+        "ruChars": 33,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "API Keys",
+          "Your API Keys",
+          "API Reference"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": "LancerWiseГлавнаяФинансыКлиентыРаботаДоговорыАналитикаНастройкиУведомленияГорячи",
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "New Key",
+        "Create invoice {client_id, line_items, due_date, currency, notes, time_entry_ids",
+        "Update invoice {status, due_date, notes}",
+        "Send invoice email to client {to?, subject?, message?}",
+        "Create client {name, email, company, phone, status}",
+        "Update client {name, email, company, phone, status, notes}",
+        "Create project {title, client_id, budget, currency, due_date, status}",
+        "Update project {title, status, budget, currency, deadline}"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-upgrade": {
+      "requested": "/upgrade",
+      "landedOn": "https://www.lancerwise.com/upgrade",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-upgrade.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 527,
+        "isRUlocale": true,
+        "headings": [
+          "LancerWise",
+          "Upgrade your plan"
+        ],
+        "proCtas": [
+          {
+            "text": "Перейти на Pro",
+            "href": "",
+            "tag": "BUTTON",
+            "isVisible": true
+          }
+        ],
+        "currencySelects": [],
+        "planBadgeText": "LancerWiseГлавнаяФинансыКлиентыРаботаДоговорыАналитикаНастройкиУведомленияГорячи",
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Upgrade your plan",
+        "You're on the Free plan. Upgrade to unlock unlimited clients, AI features, and m",
+        "Free",
+        "Pro"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "mobile-billing": {
+      "requested": "/billing",
+      "landedOn": "https://www.lancerwise.com/billing",
+      "redirectedToLogin": false,
+      "screenshot": "mobile-billing.png",
+      "signals": {
+        "lang": "ru",
+        "title": "Billing & Subscription | LancerWise",
+        "ruChars": 32,
+        "isRUlocale": true,
+        "headings": [
+          "Подписка",
+          "Billing & Subscription",
+          "Current Plan",
+          "Usage",
+          "Compare Plans",
+          "Billing History"
+        ],
+        "proCtas": [
+          {
+            "text": "Upgrade to Pro →",
+            "href": "",
+            "tag": "BUTTON",
+            "isVisible": true
+          },
+          {
+            "text": "Upgrade to Pro",
+            "href": "",
+            "tag": "BUTTON",
+            "isVisible": true
+          }
+        ],
+        "currencySelects": [],
+        "planBadgeText": "LancerWiseГлавнаяФинансыКлиентыРаботаДоговорыАналитикаНастройкиУведомленияГорячи",
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Billing & Subscription",
+        "Current Plan",
+        "Free Plan",
+        "Upgrade to Pro →",
+        "Pro feature",
+        "Current Plan",
+        "Free",
+        "Free"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-dashboard": {
+      "requested": "/dashboard",
+      "landedOn": "https://www.lancerwise.com/dashboard",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-dashboard.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 2188,
+        "isRUlocale": true,
+        "headings": [
+          "Главная",
+          "Добрый день, QA",
+          "Доход и активность",
+          "Цель по доходу за месяц",
+          "Денежный поток",
+          "Здоровье фриланс-бизнеса"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-command-center": {
+      "requested": "/dashboard/command-center",
+      "landedOn": "https://www.lancerwise.com/dashboard/command-center",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-command-center.png",
+      "signals": {
+        "lang": "ru",
+        "title": "Command Center | LancerWise",
+        "ruChars": 189,
+        "isRUlocale": true,
+        "headings": [
+          "Главная"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Business is ON TRACK 🟢",
+        "No action items due today",
+        "📅 No meetings scheduled",
+        "No recent activity",
+        "💼 No revenue data this month yet",
+        "No follow-ups due",
+        "+ New Invoice",
+        "+ New Proposal"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-onboarding": {
+      "requested": "/onboarding",
+      "landedOn": "https://www.lancerwise.com/onboarding",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-onboarding.png",
+      "signals": {
+        "lang": "ru",
+        "title": "Get Started | LancerWise",
+        "ruChars": 399,
+        "isRUlocale": true,
+        "headings": [
+          "LancerWise",
+          "Настройте профиль"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-onboarding-checklist": {
+      "requested": "/onboarding/checklist",
+      "landedOn": "https://www.lancerwise.com/onboarding/checklist",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-onboarding-checklist.png",
+      "signals": {
+        "lang": "ru",
+        "title": "Setup Checklist | LancerWise",
+        "ruChars": 182,
+        "isRUlocale": true,
+        "headings": [
+          "LancerWise",
+          "Welcome to LancerWise"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Welcome to LancerWise",
+        "Add your first client",
+        "Create your first invoice",
+        "Send your first proposal"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-settings-hub": {
+      "requested": "/settings",
+      "landedOn": "https://www.lancerwise.com/settings",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-settings-hub.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 1106,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Настройки",
+          "Профиль",
+          "Внешний вид",
+          "Invoice Branding",
+          "Client Portal Branding"
+        ],
+        "proCtas": [
+          {
+            "text": "Подробности оплаты →",
+            "href": "/billing",
+            "tag": "A",
+            "isVisible": true
+          },
+          {
+            "text": "Перейти на Pro",
+            "href": "/upgrade",
+            "tag": "A",
+            "isVisible": true
+          }
+        ],
+        "currencySelects": [
+          {
+            "value": "USD",
+            "optionCount": 16,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "CAD",
+              "AUD",
+              "CHF",
+              "JPY",
+              "CNY",
+              "INR",
+              "BRL",
+              "MXN",
+              "RUB",
+              "TRY",
+              "SEK",
+              "THB",
+              "SGD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 5,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 6,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED",
+              "THB"
+            ],
+            "hasObjectObject": false
+          }
+        ],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Profile Photo",
+        "No logo",
+        "Save Branding",
+        "Welcome Message(0/300)",
+        "Pro/Team feature to hide",
+        "Upgrade to Pro or Team to remove LancerWise branding from your client portal",
+        "Save Portal Branding"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-settings-account": {
+      "requested": "/settings/account",
+      "landedOn": "https://www.lancerwise.com/settings",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-settings-account.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 1106,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Настройки",
+          "Профиль",
+          "Внешний вид",
+          "Invoice Branding",
+          "Client Portal Branding"
+        ],
+        "proCtas": [
+          {
+            "text": "Подробности оплаты →",
+            "href": "/billing",
+            "tag": "A",
+            "isVisible": true
+          },
+          {
+            "text": "Перейти на Pro",
+            "href": "/upgrade",
+            "tag": "A",
+            "isVisible": true
+          }
+        ],
+        "currencySelects": [
+          {
+            "value": "USD",
+            "optionCount": 16,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "CAD",
+              "AUD",
+              "CHF",
+              "JPY",
+              "CNY",
+              "INR",
+              "BRL",
+              "MXN",
+              "RUB",
+              "TRY",
+              "SEK",
+              "THB",
+              "SGD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 5,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 6,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED",
+              "THB"
+            ],
+            "hasObjectObject": false
+          }
+        ],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Profile Photo",
+        "No logo",
+        "Save Branding",
+        "Welcome Message(0/300)",
+        "Pro/Team feature to hide",
+        "Upgrade to Pro or Team to remove LancerWise branding from your client portal",
+        "Save Portal Branding"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-settings-billing": {
+      "requested": "/settings/billing",
+      "landedOn": "https://www.lancerwise.com/upgrade",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-settings-billing.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 685,
+        "isRUlocale": true,
+        "headings": [
+          "LancerWise",
+          "Upgrade your plan"
+        ],
+        "proCtas": [
+          {
+            "text": "Перейти на Pro",
+            "href": "",
+            "tag": "BUTTON",
+            "isVisible": true
+          }
+        ],
+        "currencySelects": [],
+        "planBadgeText": "LancerWiseГлавнаяФинансыКлиентыРаботаДоговорыАналитикаНастройкиУведомленияГорячи",
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Upgrade your plan",
+        "You're on the Free plan. Upgrade to unlock unlimited clients, AI features, and m",
+        "Free",
+        "Pro"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-settings-security": {
+      "requested": "/settings/security",
+      "landedOn": "https://www.lancerwise.com/settings",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-settings-security.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 1106,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Настройки",
+          "Профиль",
+          "Внешний вид",
+          "Invoice Branding",
+          "Client Portal Branding"
+        ],
+        "proCtas": [
+          {
+            "text": "Подробности оплаты →",
+            "href": "/billing",
+            "tag": "A",
+            "isVisible": true
+          },
+          {
+            "text": "Перейти на Pro",
+            "href": "/upgrade",
+            "tag": "A",
+            "isVisible": true
+          }
+        ],
+        "currencySelects": [
+          {
+            "value": "USD",
+            "optionCount": 16,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "CAD",
+              "AUD",
+              "CHF",
+              "JPY",
+              "CNY",
+              "INR",
+              "BRL",
+              "MXN",
+              "RUB",
+              "TRY",
+              "SEK",
+              "THB",
+              "SGD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 5,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 6,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED",
+              "THB"
+            ],
+            "hasObjectObject": false
+          }
+        ],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Profile Photo",
+        "No logo",
+        "Save Branding",
+        "Welcome Message(0/300)",
+        "Pro/Team feature to hide",
+        "Upgrade to Pro or Team to remove LancerWise branding from your client portal",
+        "Save Portal Branding"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-settings-notifications": {
+      "requested": "/settings/notifications",
+      "landedOn": "https://www.lancerwise.com/settings",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-settings-notifications.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 1106,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Настройки",
+          "Профиль",
+          "Внешний вид",
+          "Invoice Branding",
+          "Client Portal Branding"
+        ],
+        "proCtas": [
+          {
+            "text": "Подробности оплаты →",
+            "href": "/billing",
+            "tag": "A",
+            "isVisible": true
+          },
+          {
+            "text": "Перейти на Pro",
+            "href": "/upgrade",
+            "tag": "A",
+            "isVisible": true
+          }
+        ],
+        "currencySelects": [
+          {
+            "value": "USD",
+            "optionCount": 16,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "CAD",
+              "AUD",
+              "CHF",
+              "JPY",
+              "CNY",
+              "INR",
+              "BRL",
+              "MXN",
+              "RUB",
+              "TRY",
+              "SEK",
+              "THB",
+              "SGD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 5,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 6,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED",
+              "THB"
+            ],
+            "hasObjectObject": false
+          }
+        ],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Profile Photo",
+        "No logo",
+        "Save Branding",
+        "Welcome Message(0/300)",
+        "Pro/Team feature to hide",
+        "Upgrade to Pro or Team to remove LancerWise branding from your client portal",
+        "Save Portal Branding"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-settings-availability": {
+      "requested": "/settings/availability",
+      "landedOn": "https://www.lancerwise.com/settings/availability",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-settings-availability.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 191,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Availability Manager",
+          "Availability Status",
+          "Weekly Capacity",
+          "Availability Note",
+          "Time Off & Blackouts"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Add time off",
+        "No time off scheduled",
+        "Save Changes"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-settings-digest": {
+      "requested": "/settings/digest",
+      "landedOn": "https://www.lancerwise.com/settings/digest",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-settings-digest.png",
+      "signals": {
+        "lang": "ru",
+        "title": "Weekly Digest | LancerWise",
+        "ruChars": 191,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Weekly Digest Settings",
+          "Delivery Settings",
+          "Sections to Include",
+          "Preview & Send"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Weekly Digest Settings",
+        "Delivery Settings",
+        "Send To",
+        "Your account email — change it in Profile settings",
+        "Save Preferences",
+        "Preview & Send",
+        "Send to my email now"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-settings-export": {
+      "requested": "/settings/export",
+      "landedOn": "https://www.lancerwise.com/settings/export",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-settings-export.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 191,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Data Export",
+          "Export by Category",
+          "Export All Data",
+          "Export Data",
+          "Your Data Rights"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Business expenses and receipts"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-settings-integrations": {
+      "requested": "/settings/integrations",
+      "landedOn": "https://www.lancerwise.com/settings",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-settings-integrations.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 1106,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Настройки",
+          "Профиль",
+          "Внешний вид",
+          "Invoice Branding",
+          "Client Portal Branding"
+        ],
+        "proCtas": [
+          {
+            "text": "Подробности оплаты →",
+            "href": "/billing",
+            "tag": "A",
+            "isVisible": true
+          },
+          {
+            "text": "Перейти на Pro",
+            "href": "/upgrade",
+            "tag": "A",
+            "isVisible": true
+          }
+        ],
+        "currencySelects": [
+          {
+            "value": "USD",
+            "optionCount": 16,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "CAD",
+              "AUD",
+              "CHF",
+              "JPY",
+              "CNY",
+              "INR",
+              "BRL",
+              "MXN",
+              "RUB",
+              "TRY",
+              "SEK",
+              "THB",
+              "SGD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 5,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 7,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "THB",
+              "AUD",
+              "CAD"
+            ],
+            "hasObjectObject": false
+          },
+          {
+            "value": "USD",
+            "optionCount": 6,
+            "options": [
+              "USD",
+              "EUR",
+              "GBP",
+              "RUB",
+              "AED",
+              "THB"
+            ],
+            "hasObjectObject": false
+          }
+        ],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Profile Photo",
+        "No logo",
+        "Save Branding",
+        "Welcome Message(0/300)",
+        "Pro/Team feature to hide",
+        "Upgrade to Pro or Team to remove LancerWise branding from your client portal",
+        "Save Portal Branding"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-settings-items-library": {
+      "requested": "/settings/items-library",
+      "landedOn": "https://www.lancerwise.com/settings/items-library",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-settings-items-library.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 191,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Items Library",
+          "Service(4)",
+          "Subscription(1)"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Settings",
+        "Add Item"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-settings-late-fees": {
+      "requested": "/settings/late-fees",
+      "landedOn": "https://www.lancerwise.com/settings/late-fees",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-settings-late-fees.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 191,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Late Fee Automation"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Save Settings"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-settings-public-profile": {
+      "requested": "/settings/public-profile",
+      "landedOn": "https://www.lancerwise.com/settings/public-profile",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-settings-public-profile.png",
+      "signals": {
+        "lang": "ru",
+        "title": "Public Profile | LancerWise",
+        "ruChars": 191,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Public Profile",
+          "Profile Information",
+          "Profile URL & Visibility",
+          "Incoming Inquiries"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Public Profile",
+        "Create a shareable profile page to showcase your services to prospects.",
+        "Profile Photo URL",
+        "Profile Slug",
+        "Save Profile",
+        "No inquiries yet. Share your profile to get started!"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-settings-reminders": {
+      "requested": "/settings/reminders",
+      "landedOn": "https://www.lancerwise.com/settings/reminders",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-settings-reminders.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 191,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Payment Reminder Automation",
+          "Automation Settings",
+          "Email Template Previews",
+          "Recent Reminders Sent"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Save Settings",
+        "No reminders sent yet. Enable auto reminders and they will appear here."
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-settings-tags": {
+      "requested": "/settings/tags",
+      "landedOn": "https://www.lancerwise.com/settings/tags",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-settings-tags.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 254,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "Project Tags"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": null,
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Add Tag",
+        "No projects",
+        "No projects",
+        "No projects",
+        "No projects",
+        "No projects",
+        "No projects"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-settings-upgrade": {
+      "requested": "/settings/upgrade",
+      "landedOn": "https://www.lancerwise.com/upgrade",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-settings-upgrade.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 685,
+        "isRUlocale": true,
+        "headings": [
+          "LancerWise",
+          "Upgrade your plan"
+        ],
+        "proCtas": [
+          {
+            "text": "Перейти на Pro",
+            "href": "",
+            "tag": "BUTTON",
+            "isVisible": true
+          }
+        ],
+        "currencySelects": [],
+        "planBadgeText": "LancerWiseГлавнаяФинансыКлиентыРаботаДоговорыАналитикаНастройкиУведомленияГорячи",
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Upgrade your plan",
+        "You're on the Free plan. Upgrade to unlock unlimited clients, AI features, and m",
+        "Free",
+        "Pro"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-settings-api": {
+      "requested": "/settings/api",
+      "landedOn": "https://www.lancerwise.com/settings/api",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-settings-api.png",
+      "signals": {
+        "lang": "ru",
+        "title": "API Keys | LancerWise",
+        "ruChars": 191,
+        "isRUlocale": true,
+        "headings": [
+          "Настройки",
+          "API Keys",
+          "Your API Keys",
+          "API Reference"
+        ],
+        "proCtas": [],
+        "currencySelects": [],
+        "planBadgeText": "LancerWiseГлавнаяФинансыКлиентыРаботаДоговорыАналитикаНастройкиУведомленияГорячи",
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "New Key",
+        "Create invoice {client_id, line_items, due_date, currency, notes, time_entry_ids",
+        "Update invoice {status, due_date, notes}",
+        "Send invoice email to client {to?, subject?, message?}",
+        "Create client {name, email, company, phone, status}",
+        "Update client {name, email, company, phone, status, notes}",
+        "Create project {title, client_id, budget, currency, due_date, status}",
+        "Update project {title, status, budget, currency, deadline}"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-upgrade": {
+      "requested": "/upgrade",
+      "landedOn": "https://www.lancerwise.com/upgrade",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-upgrade.png",
+      "signals": {
+        "lang": "ru",
+        "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+        "ruChars": 685,
+        "isRUlocale": true,
+        "headings": [
+          "LancerWise",
+          "Upgrade your plan"
+        ],
+        "proCtas": [
+          {
+            "text": "Перейти на Pro",
+            "href": "",
+            "tag": "BUTTON",
+            "isVisible": true
+          }
+        ],
+        "currencySelects": [],
+        "planBadgeText": "LancerWiseГлавнаяФинансыКлиентыРаботаДоговорыАналитикаНастройкиУведомленияГорячи",
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Upgrade your plan",
+        "You're on the Free plan. Upgrade to unlock unlimited clients, AI features, and m",
+        "Free",
+        "Pro"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    },
+    "desktop-billing": {
+      "requested": "/billing",
+      "landedOn": "https://www.lancerwise.com/billing",
+      "redirectedToLogin": false,
+      "screenshot": "desktop-billing.png",
+      "signals": {
+        "lang": "ru",
+        "title": "Billing & Subscription | LancerWise",
+        "ruChars": 190,
+        "isRUlocale": true,
+        "headings": [
+          "Подписка",
+          "Billing & Subscription",
+          "Current Plan",
+          "Usage",
+          "Compare Plans",
+          "Billing History"
+        ],
+        "proCtas": [
+          {
+            "text": "Upgrade to Pro →",
+            "href": "",
+            "tag": "BUTTON",
+            "isVisible": true
+          },
+          {
+            "text": "Upgrade to Pro",
+            "href": "",
+            "tag": "BUTTON",
+            "isVisible": true
+          }
+        ],
+        "currencySelects": [],
+        "planBadgeText": "LancerWiseГлавнаяФинансыКлиентыРаботаДоговорыАналитикаНастройкиУведомленияГорячи",
+        "is404": false,
+        "isError": false
+      },
+      "enLeakLines": [
+        "Billing & Subscription",
+        "Current Plan",
+        "Free Plan",
+        "Upgrade to Pro →",
+        "Pro feature",
+        "Current Plan",
+        "Free",
+        "Free"
+      ],
+      "consoleErrors": [],
+      "networkErrors": []
+    }
+  },
+  "runStart": "2026-05-29T06:48:02.449Z"
+}

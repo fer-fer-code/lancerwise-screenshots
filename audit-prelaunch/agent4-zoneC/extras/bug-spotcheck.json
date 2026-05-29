@@ -1,0 +1,344 @@
+{
+  "tools-revenue-goals": {
+    "route": "/tools/revenue-goals",
+    "h1": "Инструменты",
+    "currencyControls": [
+      {
+        "label": "Currency",
+        "value": "USD",
+        "opts": [
+          {
+            "value": "USD",
+            "text": "USD"
+          },
+          {
+            "value": "EUR",
+            "text": "EUR"
+          },
+          {
+            "value": "GBP",
+            "text": "GBP"
+          },
+          {
+            "value": "AED",
+            "text": "AED"
+          },
+          {
+            "value": "THB",
+            "text": "THB"
+          }
+        ],
+        "hasBug": false
+      }
+    ]
+  },
+  "tools-cashflow": {
+    "route": "/tools/cashflow",
+    "h1": "Инструменты",
+    "currencyControls": [
+      {
+        "label": "Currency",
+        "value": "USD",
+        "opts": [
+          {
+            "value": "USD",
+            "text": "USD"
+          },
+          {
+            "value": "EUR",
+            "text": "EUR"
+          },
+          {
+            "value": "GBP",
+            "text": "GBP"
+          },
+          {
+            "value": "THB",
+            "text": "THB"
+          },
+          {
+            "value": "AED",
+            "text": "AED"
+          }
+        ],
+        "hasBug": false
+      }
+    ]
+  },
+  "tools-milestone-billing": {
+    "route": "/tools/milestone-billing",
+    "h1": "Инструменты",
+    "currencyControls": []
+  },
+  "contracts-new": {
+    "route": "/contracts/new",
+    "h1": "Договоры",
+    "currencyControls": [
+      {
+        "label": "",
+        "value": "USD",
+        "opts": [
+          {
+            "value": "USD",
+            "text": "USD"
+          },
+          {
+            "value": "EUR",
+            "text": "EUR"
+          },
+          {
+            "value": "GBP",
+            "text": "GBP"
+          },
+          {
+            "value": "RUB",
+            "text": "RUB"
+          },
+          {
+            "value": "AED",
+            "text": "AED"
+          },
+          {
+            "value": "THB",
+            "text": "THB"
+          }
+        ],
+        "hasBug": false
+      }
+    ]
+  },
+  "contracts-generate": {
+    "route": "/contracts/generate",
+    "h1": "Создать договор",
+    "currencyControls": [
+      {
+        "label": "Валюта",
+        "value": "USD",
+        "opts": [
+          {
+            "value": "USD",
+            "text": "USD"
+          },
+          {
+            "value": "EUR",
+            "text": "EUR"
+          },
+          {
+            "value": "GBP",
+            "text": "GBP"
+          },
+          {
+            "value": "RUB",
+            "text": "RUB"
+          }
+        ],
+        "hasBug": false
+      }
+    ]
+  },
+  "settings-PriceIncrease-section": {
+    "route": "/settings#price-increase",
+    "h1": "Настройки",
+    "currencyControls": [
+      {
+        "label": "Валюта",
+        "value": "USD",
+        "opts": [
+          {
+            "value": "USD",
+            "text": "USD — US Dollar"
+          },
+          {
+            "value": "EUR",
+            "text": "EUR — Euro"
+          },
+          {
+            "value": "GBP",
+            "text": "GBP — British Pound"
+          },
+          {
+            "value": "CAD",
+            "text": "CAD — Canadian Dollar"
+          },
+          {
+            "value": "AUD",
+            "text": "AUD — Australian Dollar"
+          },
+          {
+            "value": "CHF",
+            "text": "CHF — Swiss Franc"
+          },
+          {
+            "value": "JPY",
+            "text": "JPY — Japanese Yen"
+          },
+          {
+            "value": "CNY",
+            "text": "CNY — Chinese Yuan"
+          },
+          {
+            "value": "INR",
+            "text": "INR — Indian Rupee"
+          },
+          {
+            "value": "BRL",
+            "text": "BRL — Brazilian Real"
+          },
+          {
+            "value": "MXN",
+            "text": "MXN — Mexican Peso"
+          },
+          {
+            "value": "RUB",
+            "text": "RUB — Russian Ruble"
+          },
+          {
+            "value": "TRY",
+            "text": "TRY — Turkish Lira"
+          },
+          {
+            "value": "SEK",
+            "text": "SEK — Swedish Krona"
+          },
+          {
+            "value": "THB",
+            "text": "THB — Thai Baht"
+          },
+          {
+            "value": "SGD",
+            "text": "SGD — Singapore Dollar"
+          }
+        ],
+        "hasBug": false
+      },
+      {
+        "label": "Currency",
+        "value": "USD",
+        "opts": [
+          {
+            "value": "USD",
+            "text": "USD"
+          },
+          {
+            "value": "EUR",
+            "text": "EUR"
+          },
+          {
+            "value": "GBP",
+            "text": "GBP"
+          },
+          {
+            "value": "RUB",
+            "text": "RUB"
+          },
+          {
+            "value": "THB",
+            "text": "THB"
+          },
+          {
+            "value": "AUD",
+            "text": "AUD"
+          },
+          {
+            "value": "CAD",
+            "text": "CAD"
+          }
+        ],
+        "hasBug": false
+      },
+      {
+        "label": "Currency",
+        "value": "USD",
+        "opts": [
+          {
+            "value": "USD",
+            "text": "USD"
+          },
+          {
+            "value": "EUR",
+            "text": "EUR"
+          },
+          {
+            "value": "GBP",
+            "text": "GBP"
+          },
+          {
+            "value": "RUB",
+            "text": "RUB"
+          },
+          {
+            "value": "AED",
+            "text": "AED"
+          }
+        ],
+        "hasBug": false
+      },
+      {
+        "label": "Currency",
+        "value": "USD",
+        "opts": [
+          {
+            "value": "USD",
+            "text": "USD"
+          },
+          {
+            "value": "EUR",
+            "text": "EUR"
+          },
+          {
+            "value": "GBP",
+            "text": "GBP"
+          },
+          {
+            "value": "RUB",
+            "text": "RUB"
+          },
+          {
+            "value": "THB",
+            "text": "THB"
+          },
+          {
+            "value": "AUD",
+            "text": "AUD"
+          },
+          {
+            "value": "CAD",
+            "text": "CAD"
+          }
+        ],
+        "hasBug": false
+      },
+      {
+        "label": "",
+        "value": "USD",
+        "opts": [
+          {
+            "value": "USD",
+            "text": "USD"
+          },
+          {
+            "value": "EUR",
+            "text": "EUR"
+          },
+          {
+            "value": "GBP",
+            "text": "GBP"
+          },
+          {
+            "value": "RUB",
+            "text": "RUB"
+          },
+          {
+            "value": "AED",
+            "text": "AED"
+          },
+          {
+            "value": "THB",
+            "text": "THB"
+          }
+        ],
+        "hasBug": false
+      }
+    ]
+  }
+}
