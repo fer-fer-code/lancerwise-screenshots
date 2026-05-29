@@ -1,0 +1,73 @@
+LancerWise
+Главная
+Финансы
+Клиенты
+Все клиенты
+Воронка
+Работа
+Договоры
+Аналитика
+Настройки
+Уведомления
+Горячие клавиши
+Коммерческие предложения
+Поиск...
+⌘K
+🇷🇺 RU
+?
+60:22:12
+AI Price Estimator
+
+Get a data-driven price range for your freelance project.
+
+Proposals
+Project Description *
+Project Type
+Website
+Mobile App
+Design
+Content Writing
+SEO
+Video
+Consulting
+E-commerce
+API/Backend
+Other
+Complexity
+Simple
+Medium
+Complex
+Enterprise
+Your Est. Hours (optional)
+Your Hourly Rate (optional)
+$
+Currency
+USD
+EUR
+GBP
+CAD
+AUD
+AED
+SGD
+CHF
+JPY
+INR
+BRL
+MXN
+PLN
+THB
+UAH
+RUB
+Market Location (optional)
+Estimate Price
+
+Describe your project and click Estimate Price
+to get an AI-powered price range.
+
+🍪
+
+Файлы cookie: Мы используем файлы cookie, чтобы улучшить ваш опыт и анализировать трафик. Подробнее
+
+Настроить
+Отклонить
+Принять все

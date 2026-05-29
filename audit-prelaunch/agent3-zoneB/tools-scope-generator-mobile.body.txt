@@ -1,0 +1,53 @@
+Инструменты
+🇷🇺 RU
+60:22:40
+📋
+AI Project Scope Generator
+
+Generate a professional project scope document from a brief description
+
+Project Type
+🌐
+Web App
+📱
+Mobile App
+🎨
+Design
+🔌
+API/Backend
+⚙️
+Automation
+💡
+Consulting
+📝
+Content
+📦
+Other
+Client Name
+Project Description *
+Budget (optional)
+Currency
+USD
+EUR
+GBP
+THB
+Estimated weeks (optional)
+Key Features (optional)
+Tech Stack (optional)
+✨ Generate Scope
+📄
+
+Your generated scope will appear here
+
+Fill in the form and click Generate Scope
+
+Home
+Money
+Clients
+Work
+More
+🍪
+
+Файлы cookie Настроить
+
+Принять все

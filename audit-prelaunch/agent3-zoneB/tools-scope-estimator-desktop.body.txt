@@ -1,0 +1,48 @@
+LancerWise
+Главная
+Финансы
+Клиенты
+Работа
+Договоры
+Аналитика
+Настройки
+Уведомления
+Горячие клавиши
+Инструменты
+Поиск...
+⌘K
+🇷🇺 RU
+?
+60:22:48
+🎯
+AI Project Scope Estimator
+
+Paste a project description — get hours breakdown, price range, risks, and client questions
+
+PROJECT DESCRIPTION
+PROJECT TYPE
+Web App
+Website
+Mobile
+Automation
+Design
+API
+Other
+TECH STACK (OPTIONAL)
+YOUR HOURLY RATE (OPTIONAL)
+$
+/hr
+🎯 Estimate Scope
+📊
+
+Fill in the form and click "Estimate Scope"
+
+AI will estimate hours per phase, price range, delivery timeline, risks, and questions to ask your client.
+
+🍪
+
+Файлы cookie: Мы используем файлы cookie, чтобы улучшить ваш опыт и анализировать трафик. Подробнее
+
+Настроить
+Отклонить
+Принять все

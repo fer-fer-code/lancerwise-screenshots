@@ -1,0 +1,87 @@
+Аналитика
+🇷🇺 RU
+60:26:09
+Billable Hours Report
+
+May 1, 2026 — May 29, 2026
+
+↓ Export Report
+FROM
+TO
+This Month
+Last Month
+Last 30 Days
+This Week
+Generate Report
+
+TOTAL HOURS
+
+60.2 h
+
+100% billable
+
+BILLABLE HOURS
+
+60.2 h
+
+1 projects
+
+NON-BILLABLE
+
+0.0 h
+
+0% of total
+
+TOTAL BILLABLE
+
+$0
+
+1 client(s)
+
+AVG HOURLY RATE
+
+$0/hr
+
+across 1 projects
+
+Billable ratio
+100%
+● Billable: 60.2 h
+● Non-billable: 0.0 h
+By Client
+By Project
+All Entries
+No Client
+60.2 h billable / 60.2 h total
+$0
+›
+No Project
+60.2 h billable
+$0
++ Draft Invoice
+60.2 h total · 0.0 h non-billable
+Jefrey
+0.0 h billable / 0.0 h total
+$0
+›
+Pla
+0.0 h billable
+$0
++ Draft Invoice
+0.0 h total · 0.0 h non-billable
+
+EXPORT
+
+Download a formatted text report for this period
+
+↓ Download billable-report-2026-05.txt
+Home
+Money
+Clients
+Work
+More
+🍪
+
+Файлы cookie Настроить
+
+Принять все

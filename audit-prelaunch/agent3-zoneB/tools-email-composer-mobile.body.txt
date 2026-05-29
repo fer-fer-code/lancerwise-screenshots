@@ -1,0 +1,60 @@
+Инструменты
+🇷🇺 RU
+60:23:16
+✉️
+Email Composer
+
+AI-powered professional client emails in seconds
+
+Email Type
+📩
+Follow-up
+💰
+Invoice Reminder
+📊
+Project Update
+📋
+Proposal
+🔄
+Scope Change
+🙏
+Thank You
+👋
+Check-in
+📦
+Offboarding
+✏️
+Custom
+Client
+From list
+Type name
+— Select client —
+Jefrey
+Maria Rodriguez (maria.rodriguez@example.com)
+Project Name (optional)
+Tone
+Professional
+Friendly
+Formal
+Additional Context (optional)
+Your Name
+✉️
+Compose Email
+SUBJECT LINE
+
+Subject will appear here...
+
+EMAIL BODY
+
+Select an email type, fill in the client name, then click Compose Email
+
+Home
+Money
+Clients
+Work
+More
+🍪
+
+Файлы cookie Настроить
+
+Принять все

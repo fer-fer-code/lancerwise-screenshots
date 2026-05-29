@@ -1,0 +1,94 @@
+Коммерческие предложения
+🇷🇺 RU
+60:20:47
+Proposal Generator
+
+Generate a professional client proposal in seconds using AI.
+
+Templates
+AI Brief
+Generate with AI
+Your Name
+Client Name
+Client Email (optional — to send proposal by email)
+Service Type
+Web Development
+Mobile App
+UI/UX Design
+SEO / Marketing
+Copywriting
+Automation / No-code
+Branding
+Consulting
+Custom
+Project Scope *
+Budget
+💡 Estimate with AI →
+Currency
+USD
+EUR
+GBP
+AED
+CAD
+Timeline
+Tone
+Professional
+Friendly
+Bold
+Concise
+Expiry Date (optional)
+7 days
+14 days
+30 days
+Custom
+
+Proposal will be marked as expired after this date
+
+Auto-archive when expired
+Generate Proposal
+Generated Proposal
+Fill in the form and click Generate to create your proposal
+Proposal Snippets
+0 saved
+Proposal Templates
+New Template
+
+No templates yet — save reusable proposal blocks here
+
+Pre-Send Checklist
+0/10
+▼
+Objection Handler
+Client objection
+Common objections
+Your service (optional)
+Handle Objection
+AI Email Rewriter
+Tone:
+Professional
+Warm
+Firm
+Rewrite
+AI Proposal Scorer
+▼
+AI Quote Generator
+Project Description
+Type (optional)
+Budget hint
+Currency
+USD
+EUR
+GBP
+RUB
+AED
+Generate Quote
+Home
+Money
+Clients
+Work
+More
+🍪
+
+Файлы cookie Настроить
+
+Принять все
