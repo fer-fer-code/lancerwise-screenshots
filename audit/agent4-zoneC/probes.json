@@ -1,0 +1,86 @@
+{
+  "routes": {
+    "settings": {
+      "requested": "/settings",
+      "landedOn": "https://www.lancerwise.com/login",
+      "redirectedToLogin": true,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "%c%d font-size:0;color:transparent NaN",
+        "%c%d font-size:0;color:transparent NaN"
+      ],
+      "networkErrors": [
+        "401 https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/pat/a03342010af50990/1780034207418/"
+      ]
+    },
+    "settings-billing": {
+      "requested": "/settings/billing",
+      "landedOn": "https://www.lancerwise.com/login",
+      "redirectedToLogin": true,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "%c%d font-size:0;color:transparent NaN",
+        "%c%d font-size:0;color:transparent NaN"
+      ],
+      "networkErrors": [
+        "401 https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/pat/a033421ffd9d0990/1780034212085/"
+      ]
+    },
+    "settings-account": {
+      "requested": "/settings/account",
+      "landedOn": "https://www.lancerwise.com/login",
+      "redirectedToLogin": true,
+      "consoleErrors": [
+        "%c%d font-size:0;color:transparent NaN",
+        "%c%d font-size:0;color:transparent NaN",
+        "Failed to load resource: the server responded with a status of 401 ()"
+      ],
+      "networkErrors": [
+        "401 https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/pat/a03342410b250990/1780034217356/"
+      ]
+    },
+    "upgrade": {
+      "requested": "/upgrade",
+      "landedOn": "https://www.lancerwise.com/login",
+      "redirectedToLogin": true,
+      "consoleErrors": [
+        "%c%d font-size:0;color:transparent NaN",
+        "%c%d font-size:0;color:transparent NaN",
+        "Failed to load resource: the server responded with a status of 401 ()"
+      ],
+      "networkErrors": [
+        "401 https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/pat/a03342610f290990/1780034222490/"
+      ]
+    },
+    "billing": {
+      "requested": "/billing",
+      "landedOn": "https://www.lancerwise.com/login",
+      "redirectedToLogin": true,
+      "consoleErrors": [
+        "%c%d font-size:0;color:transparent NaN",
+        "%c%d font-size:0;color:transparent NaN",
+        "Failed to load resource: the server responded with a status of 401 ()"
+      ],
+      "networkErrors": [
+        "401 https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/pat/a03342860e8f0990/1780034228411/"
+      ]
+    },
+    "onboarding": {
+      "requested": "/onboarding",
+      "landedOn": "https://www.lancerwise.com/login",
+      "redirectedToLogin": true,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "%c%d font-size:0;color:transparent NaN",
+        "%c%d font-size:0;color:transparent NaN"
+      ],
+      "networkErrors": [
+        "401 https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/pat/a03342a4a9fe0990/1780034233302/"
+      ]
+    }
+  },
+  "headers": {
+    "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' challenges.cloudflare.com us.i.posthog.com www.googletagmanager.com *.vercel-insights.com *.vercel-analytics.com; connect-src 'self' *.supabase.co wss://*.supabase.co *.lemonsqueezy.com challenges.cloudflare.com us.i.posthog.com *.googletagmanager.com *.vercel-insights.com; frame-src 'self' challenges.cloudflare.com *.lemonsqueezy.com; img-src 'self' data: blob: *.supabase.co *.googleusercontent.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com data:; form-action 'self'; object-src 'none'; base-uri 'self'; report-uri /api/csp-report",
+    "server": "Vercel"
+  }
+}
