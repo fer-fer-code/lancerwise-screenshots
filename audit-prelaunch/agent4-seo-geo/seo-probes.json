@@ -1,0 +1,755 @@
+[
+  {
+    "name": "home",
+    "route": "/",
+    "status": 200,
+    "ttfbMs": 1510,
+    "contentEncoding": "br",
+    "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "xVercelCache": "MISS",
+    "perf": {
+      "domContentLoaded": 1506.800000011921,
+      "loadEvent": 2309.300000011921,
+      "transferSize": 76220,
+      "encodedBodySize": 75920,
+      "decodedBodySize": 334531,
+      "fcp": 1536
+    },
+    "seo": {
+      "title": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+      "canonical": "https://www.lancerwise.com",
+      "metaDescription": "Free freelance CRM with AI contracts, invoicing, time tracking, and client management. No credit card needed.",
+      "metaKeywords": null,
+      "ogTitle": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+      "ogDescription": "Free freelance CRM with AI contracts, invoicing, time tracking, and client management. No credit card needed.",
+      "ogImage": "https://www.lancerwise.com/og-image.png",
+      "ogType": "website",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://www.lancerwise.com/og-image.png",
+      "h1Count": 1,
+      "h1Texts": [
+        "The All-in-One Business Hub for Freelancers"
+      ],
+      "h2Count": 7,
+      "h2Texts": [
+        "$48,240",
+        "Freelance Management Features Built for Independent Professionals",
+        "Get started in minutes",
+        "Built for every kind of freelancer",
+        "Simple, transparent pricing",
+        "Frequently asked questions",
+        "Run Your Freelance Business Like a Pro"
+      ],
+      "h3Count": 19,
+      "htmlLang": "en",
+      "jsonLdScripts": [
+        {
+          "type": "Organization",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "WebSite",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "SoftwareApplication",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "FAQPage",
+          "context": "https://schema.org"
+        }
+      ],
+      "robotsMeta": "index, follow",
+      "hreflangs": [],
+      "bodyTextLen": 5078,
+      "marketingWords": 0
+    }
+  },
+  {
+    "name": "pricing",
+    "route": "/pricing",
+    "status": 200,
+    "ttfbMs": 1108,
+    "contentEncoding": "br",
+    "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "xVercelCache": "MISS",
+    "perf": {
+      "domContentLoaded": 1107,
+      "loadEvent": 1307.5,
+      "transferSize": 65973,
+      "encodedBodySize": 65673,
+      "decodedBodySize": 238894,
+      "fcp": 952
+    },
+    "seo": {
+      "title": "Pricing — Free Forever Plan & Pro from $15/mo | LancerWise",
+      "canonical": "https://www.lancerwise.com/pricing",
+      "metaDescription": "Simple pricing for freelancers. Free forever (2 clients, unlimited invoices). Pro $15/mo (unlimited clients + 12 AI tools). Business plan coming soon. Yearly billing saves up to 20%.",
+      "metaKeywords": null,
+      "ogTitle": "LancerWise Pricing — Free & Pro $15/mo",
+      "ogDescription": "Simple pricing for freelancers. Free forever tier. Pro $15/mo includes 12 AI tools. Business plan coming soon.",
+      "ogImage": "https://www.lancerwise.com/og-image.png",
+      "ogType": "website",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://www.lancerwise.com/og-image.png",
+      "h1Count": 1,
+      "h1Texts": [
+        "LancerWise Pricing — Free & Pro $15/mo (Business plan coming soon)"
+      ],
+      "h2Count": 1,
+      "h2Texts": [
+        "Simple, transparent pricing"
+      ],
+      "h3Count": 0,
+      "htmlLang": "en",
+      "jsonLdScripts": [
+        {
+          "type": "Organization",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "WebSite",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "SoftwareApplication",
+          "context": "https://schema.org"
+        }
+      ],
+      "robotsMeta": "index, follow",
+      "hreflangs": [],
+      "bodyTextLen": 1462,
+      "marketingWords": 0
+    }
+  },
+  {
+    "name": "blog",
+    "route": "/blog",
+    "status": 200,
+    "ttfbMs": 946,
+    "contentEncoding": "br",
+    "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "xVercelCache": "MISS",
+    "perf": {
+      "domContentLoaded": 944.6999999880791,
+      "loadEvent": 1286.800000011921,
+      "transferSize": 67338,
+      "encodedBodySize": 67038,
+      "decodedBodySize": 248580,
+      "fcp": 956
+    },
+    "seo": {
+      "title": "Blog — Freelance Tips, Guides & Resources | LancerWise",
+      "canonical": "https://www.lancerwise.com/blog",
+      "metaDescription": "Expert guides on freelance invoicing, contracts, time tracking, pricing, and productivity. Actionable advice from the LancerWise team for independent professionals.",
+      "metaKeywords": null,
+      "ogTitle": "Blog — Freelance Tips, Guides & Resources | LancerWise",
+      "ogDescription": "Expert guides on freelance invoicing, contracts, time tracking, pricing, and productivity. Actionable advice from the LancerWise team for independent professionals.",
+      "ogImage": "https://www.lancerwise.com/og-image.png",
+      "ogType": "website",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://www.lancerwise.com/og-image.png",
+      "h1Count": 1,
+      "h1Texts": [
+        "LancerWise Blog"
+      ],
+      "h2Count": 5,
+      "h2Texts": [
+        "Best Time Tracking Methods for Freelancers in 2026",
+        "How to Write a Freelance Contract: Template + 7 Essential Clauses",
+        "Freelance Invoice Template: Free Guide + Everything You Need to Know",
+        "How to Calculate Your Freelance Hourly Rate (with Free Calculator)",
+        "Manage your freelance business smarter"
+      ],
+      "h3Count": 0,
+      "htmlLang": "en",
+      "jsonLdScripts": [
+        {
+          "type": "Organization",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "WebSite",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "SoftwareApplication",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "BreadcrumbList",
+          "context": "https://schema.org"
+        }
+      ],
+      "robotsMeta": "index, follow",
+      "hreflangs": [],
+      "bodyTextLen": 2052,
+      "marketingWords": 0
+    }
+  },
+  {
+    "name": "blog-post",
+    "route": "/blog/how-to-calculate-freelance-hourly-rate",
+    "status": 200,
+    "ttfbMs": 1324,
+    "contentEncoding": "br",
+    "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "xVercelCache": "MISS",
+    "perf": {
+      "domContentLoaded": 1322.300000011921,
+      "loadEvent": 1322.4000000357628,
+      "transferSize": 73936,
+      "encodedBodySize": 73636,
+      "decodedBodySize": 276134,
+      "fcp": 812
+    },
+    "seo": {
+      "title": "How to Calculate Your Freelance Hourly Rate (with Free Calculator) | LancerWise",
+      "canonical": "https://www.lancerwise.com/blog/how-to-calculate-freelance-hourly-rate",
+      "metaDescription": "Stop leaving money on the table. Learn the exact formula to calculate your freelance hourly rate, including taxes, overhead, and vacation — with a free calculator.",
+      "metaKeywords": null,
+      "ogTitle": "How to Calculate Your Freelance Hourly Rate (with Free Calculator) | LancerWise",
+      "ogDescription": "Stop leaving money on the table. Learn the exact formula to calculate your freelance hourly rate, including taxes, overhead, and vacation — with a free calculator.",
+      "ogImage": "https://www.lancerwise.com/og-image.png",
+      "ogType": "article",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://www.lancerwise.com/og-image.png",
+      "h1Count": 1,
+      "h1Texts": [
+        "How to Calculate Your Freelance Hourly Rate (with Free Calculator)"
+      ],
+      "h2Count": 9,
+      "h2Texts": [
+        "Why Most Freelancers Undercharge",
+        "The Formula: How to Calculate Your Freelance Rate",
+        "Market Rate Check: Don't Work in a Vacuum",
+        "Project Rate vs. Hourly Rate",
+        "5 Common Rate-Setting Mistakes",
+        "Use Our Free Freelance Rate Calculator",
+        "FAQ: Freelance Hourly Rates",
+        "Related Resources"
+      ],
+      "h3Count": 15,
+      "htmlLang": "en",
+      "jsonLdScripts": [
+        {
+          "type": "Organization",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "WebSite",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "SoftwareApplication",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "BlogPosting",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "BreadcrumbList",
+          "context": "https://schema.org"
+        }
+      ],
+      "robotsMeta": "index, follow",
+      "hreflangs": [],
+      "bodyTextLen": 9080,
+      "marketingWords": 0
+    }
+  },
+  {
+    "name": "faq",
+    "route": "/faq",
+    "status": 200,
+    "ttfbMs": 1037,
+    "contentEncoding": "br",
+    "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "xVercelCache": "MISS",
+    "perf": {
+      "domContentLoaded": 1034.2999999523163,
+      "loadEvent": 1034.5,
+      "transferSize": 68082,
+      "encodedBodySize": 67782,
+      "decodedBodySize": 290977,
+      "fcp": 884
+    },
+    "seo": {
+      "title": "Frequently Asked Questions | LancerWise",
+      "canonical": "https://www.lancerwise.com/faq",
+      "metaDescription": "Answers about LancerWise — pricing, free plan limits, AI features, e-signatures, data security, billing, refunds, and account management for freelancers.",
+      "metaKeywords": null,
+      "ogTitle": "LancerWise FAQ — Pricing, Features, Security & Billing",
+      "ogDescription": "Common questions about LancerWise from freelancers — free plan, Pro upgrade, AI contracts, time tracking, payments, and data export.",
+      "ogImage": "https://www.lancerwise.com/og-image.png",
+      "ogType": "website",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://www.lancerwise.com/og-image.png",
+      "h1Count": 1,
+      "h1Texts": [
+        "Frequently Asked Questions"
+      ],
+      "h2Count": 5,
+      "h2Texts": [
+        "Getting Started",
+        "Billing & Pricing",
+        "Features",
+        "Security & Data",
+        "Account"
+      ],
+      "h3Count": 0,
+      "htmlLang": "en",
+      "jsonLdScripts": [
+        {
+          "type": "Organization",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "WebSite",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "SoftwareApplication",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "FAQPage",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "FAQPage",
+          "context": "https://schema.org"
+        }
+      ],
+      "robotsMeta": "index, follow",
+      "hreflangs": [],
+      "bodyTextLen": 1649,
+      "marketingWords": 0
+    }
+  },
+  {
+    "name": "about",
+    "route": "/about",
+    "status": 200,
+    "ttfbMs": 655,
+    "contentEncoding": "br",
+    "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "xVercelCache": "MISS",
+    "perf": {
+      "domContentLoaded": 654.1000000238419,
+      "loadEvent": 740.3000000119209,
+      "transferSize": 66676,
+      "encodedBodySize": 66376,
+      "decodedBodySize": 246815,
+      "fcp": 660
+    },
+    "seo": {
+      "title": "About Us — Built by Freelancers, for Freelancers | LancerWise",
+      "canonical": "https://www.lancerwise.com/about",
+      "metaDescription": "LancerWise was built to solve the real operational challenges freelancers face. Learn our story and mission.",
+      "metaKeywords": null,
+      "ogTitle": "About LancerWise — Built by Freelancers, for Freelancers",
+      "ogDescription": "LancerWise was built to solve the real operational challenges freelancers face. Learn our story.",
+      "ogImage": "https://www.lancerwise.com/og-image.png",
+      "ogType": "website",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://www.lancerwise.com/og-image.png",
+      "h1Count": 1,
+      "h1Texts": [
+        "Built by freelancers, for freelancers"
+      ],
+      "h2Count": 5,
+      "h2Texts": [
+        "Our Mission",
+        "How It Started",
+        "What We Believe",
+        "Get in touch",
+        "Ready to run your freelance business smarter?"
+      ],
+      "h3Count": 4,
+      "htmlLang": "en",
+      "jsonLdScripts": [
+        {
+          "type": "Organization",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "WebSite",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "SoftwareApplication",
+          "context": "https://schema.org"
+        }
+      ],
+      "robotsMeta": "index, follow",
+      "hreflangs": [],
+      "bodyTextLen": 3678,
+      "marketingWords": 0
+    }
+  },
+  {
+    "name": "rate-calc",
+    "route": "/tools/rate-calculator",
+    "status": 200,
+    "ttfbMs": 1201,
+    "contentEncoding": "br",
+    "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "xVercelCache": "MISS",
+    "perf": {
+      "domContentLoaded": 1199.800000011921,
+      "loadEvent": 1199.8999999761581,
+      "transferSize": 68113,
+      "encodedBodySize": 67813,
+      "decodedBodySize": 254616,
+      "fcp": 864
+    },
+    "seo": {
+      "title": "Freelance Rate Calculator — Find Your Minimum Hourly Rate | LancerWise",
+      "canonical": "https://www.lancerwise.com/tools/rate-calculator",
+      "metaDescription": "Calculate your minimum viable freelance hourly rate in seconds. Enter your income goal, expenses, vacation weeks, and billable hours — get your floor rate, recommended rate, and project presets instantly.",
+      "metaKeywords": null,
+      "ogTitle": "Freelance Rate Calculator — Find Your Minimum Hourly Rate",
+      "ogDescription": "Stop guessing. Calculate your minimum freelance rate based on income goals, expenses, and billable hours.",
+      "ogImage": "https://www.lancerwise.com/og-image.png",
+      "ogType": "website",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://www.lancerwise.com/og-image.png",
+      "h1Count": 1,
+      "h1Texts": [
+        "Freelance Rate Calculator — Find Your Minimum Hourly Rate"
+      ],
+      "h2Count": 7,
+      "h2Texts": [
+        "Your Parameters",
+        "Your Rates",
+        "Project Rate Presets",
+        "Monthly Breakdown",
+        "How to Calculate Your Freelance Hourly Rate",
+        "Frequently Asked Questions",
+        "Ready to track your rates over time?"
+      ],
+      "h3Count": 4,
+      "htmlLang": "en",
+      "jsonLdScripts": [
+        {
+          "type": "Organization",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "WebSite",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "SoftwareApplication",
+          "context": "https://schema.org"
+        }
+      ],
+      "robotsMeta": "index, follow",
+      "hreflangs": [],
+      "bodyTextLen": 4853,
+      "marketingWords": 0
+    }
+  },
+  {
+    "name": "demo",
+    "route": "/demo",
+    "status": 200,
+    "ttfbMs": 727,
+    "contentEncoding": "br",
+    "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "xVercelCache": "MISS",
+    "perf": {
+      "domContentLoaded": 725.6000000238419,
+      "loadEvent": 1180.1000000238419,
+      "transferSize": 65338,
+      "encodedBodySize": 65038,
+      "decodedBodySize": 230719,
+      "fcp": 720
+    },
+    "seo": {
+      "title": "Interactive Product Demo — No Signup Required | LancerWise",
+      "canonical": "https://www.lancerwise.com/demo",
+      "metaDescription": "Explore LancerWise features interactively: invoice management, AI contracts, time tracking, client CRM, and revenue analytics. No signup required.",
+      "metaKeywords": null,
+      "ogTitle": "LancerWise Interactive Demo — See It in Action",
+      "ogDescription": "Explore invoice management, AI contracts, time tracking, and CRM in this live interactive walkthrough. No signup required.",
+      "ogImage": "https://www.lancerwise.com/og-image.png",
+      "ogType": "website",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://www.lancerwise.com/og-image.png",
+      "h1Count": 1,
+      "h1Texts": [
+        "See LancerWise in action"
+      ],
+      "h2Count": 2,
+      "h2Texts": [
+        "Your business at a glance",
+        "Ready to run your freelance business smarter?"
+      ],
+      "h3Count": 0,
+      "htmlLang": "en",
+      "jsonLdScripts": [
+        {
+          "type": "Organization",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "WebSite",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "SoftwareApplication",
+          "context": "https://schema.org"
+        }
+      ],
+      "robotsMeta": "index, follow",
+      "hreflangs": [],
+      "bodyTextLen": 1090,
+      "marketingWords": 0
+    }
+  },
+  {
+    "name": "n8n",
+    "route": "/n8n-templates",
+    "status": 200,
+    "ttfbMs": 1248,
+    "contentEncoding": "br",
+    "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "xVercelCache": "MISS",
+    "perf": {
+      "domContentLoaded": 1246.7999999523163,
+      "loadEvent": 1246.8999999761581,
+      "transferSize": 69878,
+      "encodedBodySize": 69578,
+      "decodedBodySize": 276716,
+      "fcp": 908
+    },
+    "seo": {
+      "title": "n8n Workflow Templates | LancerWise",
+      "canonical": "https://www.lancerwise.com/n8n-templates",
+      "metaDescription": "Free n8n workflow templates to automate your freelance business with LancerWise. Slack alerts, Telegram bots, auto invoicing, and more.",
+      "metaKeywords": null,
+      "ogTitle": "n8n Workflow Templates | LancerWise",
+      "ogDescription": "Free n8n workflow templates to automate your freelance business with LancerWise. Slack alerts, Telegram bots, auto invoicing, and more.",
+      "ogImage": null,
+      "ogType": "website",
+      "twitterCard": "summary_large_image",
+      "twitterImage": null,
+      "h1Count": 1,
+      "h1Texts": [
+        "Automate your freelance businesswith n8n + LancerWise"
+      ],
+      "h2Count": 6,
+      "h2Texts": [
+        "Overdue Invoice Slack Alert",
+        "Daily AI Brief → Telegram",
+        "Monthly Business Report → Email",
+        "Payment Received → Celebrate in Slack",
+        "Weekly Invoice CSV Backup → Google Drive",
+        "New Client Auto-Onboarding"
+      ],
+      "h3Count": 0,
+      "htmlLang": "en",
+      "jsonLdScripts": [
+        {
+          "type": "Organization",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "WebSite",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "SoftwareApplication",
+          "context": "https://schema.org"
+        }
+      ],
+      "robotsMeta": "index, follow",
+      "hreflangs": [],
+      "bodyTextLen": 2429,
+      "marketingWords": 0
+    }
+  },
+  {
+    "name": "api-docs",
+    "route": "/api-docs",
+    "status": 200,
+    "ttfbMs": 1227,
+    "contentEncoding": "br",
+    "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "xVercelCache": "MISS",
+    "perf": {
+      "domContentLoaded": 1225.6000000238419,
+      "loadEvent": 1225.800000011921,
+      "transferSize": 72362,
+      "encodedBodySize": 72062,
+      "decodedBodySize": 394572,
+      "fcp": 740
+    },
+    "seo": {
+      "title": "API Documentation | LancerWise",
+      "canonical": "https://www.lancerwise.com/api-docs",
+      "metaDescription": "Build automations and integrations with the LancerWise REST API. Manage invoices, clients, projects, time entries, and more.",
+      "metaKeywords": null,
+      "ogTitle": "API Documentation | LancerWise",
+      "ogDescription": "Build automations and integrations with the LancerWise REST API. Manage invoices, clients, projects, time entries, and more.",
+      "ogImage": null,
+      "ogType": "website",
+      "twitterCard": "summary_large_image",
+      "twitterImage": null,
+      "h1Count": 1,
+      "h1Texts": [
+        "API Reference"
+      ],
+      "h2Count": 20,
+      "h2Texts": [
+        "Authentication",
+        "Account",
+        "Analytics",
+        "Invoices",
+        "Recurring Invoices",
+        "Clients",
+        "Projects",
+        "Time Entries"
+      ],
+      "h3Count": 1,
+      "htmlLang": "en",
+      "jsonLdScripts": [
+        {
+          "type": "Organization",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "WebSite",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "SoftwareApplication",
+          "context": "https://schema.org"
+        }
+      ],
+      "robotsMeta": "index, follow",
+      "hreflangs": [],
+      "bodyTextLen": 11301,
+      "marketingWords": 0
+    }
+  },
+  {
+    "name": "changelog",
+    "route": "/changelog",
+    "status": 200,
+    "ttfbMs": 1302,
+    "contentEncoding": "br",
+    "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "xVercelCache": "MISS",
+    "perf": {
+      "domContentLoaded": 1300.6000000238419,
+      "loadEvent": 1300.800000011921,
+      "transferSize": 93114,
+      "encodedBodySize": 92814,
+      "decodedBodySize": 788958,
+      "fcp": 1004
+    },
+    "seo": {
+      "title": "Changelog | LancerWise",
+      "canonical": "https://www.lancerwise.com/changelog",
+      "metaDescription": "See what's new in LancerWise. New features, improvements, and bug fixes.",
+      "metaKeywords": null,
+      "ogTitle": "LancerWise — Free Freelancer CRM, Invoices & AI Contracts",
+      "ogDescription": "Free CRM with invoices, AI contracts, time tracking & payment reminders. No credit card needed.",
+      "ogImage": "https://www.lancerwise.com/og-image.png",
+      "ogType": "website",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://www.lancerwise.com/og-image.png",
+      "h1Count": 1,
+      "h1Texts": [
+        "Changelog"
+      ],
+      "h2Count": 0,
+      "h2Texts": [],
+      "h3Count": 0,
+      "htmlLang": "en",
+      "jsonLdScripts": [
+        {
+          "type": "Organization",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "WebSite",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "SoftwareApplication",
+          "context": "https://schema.org"
+        }
+      ],
+      "robotsMeta": "index, follow",
+      "hreflangs": [],
+      "bodyTextLen": 50331,
+      "marketingWords": 0
+    }
+  },
+  {
+    "name": "contact",
+    "route": "/contact",
+    "status": 200,
+    "ttfbMs": 1095,
+    "contentEncoding": "br",
+    "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "xVercelCache": "MISS",
+    "perf": {
+      "domContentLoaded": 1092.5,
+      "loadEvent": 1164.199999988079,
+      "transferSize": 65898,
+      "encodedBodySize": 65598,
+      "decodedBodySize": 234171,
+      "fcp": 872
+    },
+    "seo": {
+      "title": "Contact Support — Response Within 1 Business Day | LancerWise",
+      "canonical": "https://www.lancerwise.com/contact",
+      "metaDescription": "Have a question or interested in the Business plan? Contact LancerWise support. We respond within one business day.",
+      "metaKeywords": null,
+      "ogTitle": "Contact LancerWise — Get in Touch",
+      "ogDescription": "Have a question or interested in the Business plan? Contact LancerWise support. We respond within one business day.",
+      "ogImage": "https://www.lancerwise.com/og-image.png",
+      "ogType": "website",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://www.lancerwise.com/og-image.png",
+      "h1Count": 1,
+      "h1Texts": [
+        "Get in touch"
+      ],
+      "h2Count": 4,
+      "h2Texts": [
+        "Business plan — coming soon",
+        "General support",
+        "Response time",
+        "Send us a message"
+      ],
+      "h3Count": 0,
+      "htmlLang": "en",
+      "jsonLdScripts": [
+        {
+          "type": "Organization",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "WebSite",
+          "context": "https://schema.org"
+        },
+        {
+          "type": "SoftwareApplication",
+          "context": "https://schema.org"
+        }
+      ],
+      "robotsMeta": "index, follow",
+      "hreflangs": [],
+      "bodyTextLen": 1460,
+      "marketingWords": 0
+    }
+  }
+]
