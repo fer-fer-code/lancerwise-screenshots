@@ -1,0 +1,163 @@
+{
+  "run": "2026-05-29T08:14:07.164Z",
+  "targets": {
+    "01-sidebar-dashboard": {
+      "route": "/dashboard",
+      "viewport": "desktop",
+      "h1": "Главная",
+      "ruChars": 1933,
+      "proCta": [
+        {
+          "text": "Перейти на ProAI, безлимит клиентов и большеОткрыть Pro",
+          "href": "/upgrade",
+          "visible": true
+        }
+      ],
+      "dashBannerInfo": {
+        "text": "Откройте все возможности LancerWiseAI-договоры, безлимит клиентов, аналитика — и многое другое.Перейти на Pro",
+        "visible": true
+      },
+      "enLeakWords": [
+        "Pro"
+      ],
+      "consoleErrors": []
+    },
+    "02-dashboard-banner": {
+      "route": "/dashboard",
+      "viewport": "desktop",
+      "h1": "Главная",
+      "ruChars": 1933,
+      "proCta": [
+        {
+          "text": "Перейти на ProAI, безлимит клиентов и большеОткрыть Pro",
+          "href": "/upgrade",
+          "visible": true
+        }
+      ],
+      "dashBannerInfo": {
+        "text": "Откройте все возможности LancerWiseAI-договоры, безлимит клиентов, аналитика — и многое другое.Перейти на Pro",
+        "visible": true
+      },
+      "enLeakWords": [
+        "Pro"
+      ],
+      "consoleErrors": []
+    },
+    "03-onboarding-checklist": {
+      "route": "/onboarding/checklist",
+      "viewport": "desktop",
+      "h1": "LancerWise",
+      "ruChars": 559,
+      "proCta": [
+        {
+          "text": "Перейти на ProAI, безлимит клиентов и большеОткрыть Pro",
+          "href": "/upgrade",
+          "visible": true
+        }
+      ],
+      "dashBannerInfo": null,
+      "enLeakWords": [
+        "Pro"
+      ],
+      "consoleErrors": []
+    },
+    "04-command-center": {
+      "route": "/dashboard/command-center",
+      "viewport": "desktop",
+      "h1": "Главная",
+      "ruChars": 755,
+      "proCta": [
+        {
+          "text": "Перейти на ProAI, безлимит клиентов и большеОткрыть Pro",
+          "href": "/upgrade",
+          "visible": true
+        }
+      ],
+      "dashBannerInfo": null,
+      "enLeakWords": [
+        "Pro"
+      ],
+      "consoleErrors": []
+    },
+    "05-billing": {
+      "route": "/billing",
+      "viewport": "desktop",
+      "h1": "Подписка",
+      "ruChars": 997,
+      "proCta": [
+        {
+          "text": "Перейти на ProAI, безлимит клиентов и большеОткрыть Pro",
+          "href": "/upgrade",
+          "visible": true
+        }
+      ],
+      "dashBannerInfo": null,
+      "enLeakWords": [
+        "Pro",
+        "Team"
+      ],
+      "consoleErrors": []
+    },
+    "06-sidebar-mobile": {
+      "route": "/dashboard",
+      "viewport": "mobile",
+      "h1": "Главная",
+      "ruChars": 1736,
+      "proCta": [
+        {
+          "text": "Перейти на ProAI, безлимит клиентов и большеОткрыть Pro",
+          "href": "/upgrade",
+          "visible": false
+        }
+      ],
+      "dashBannerInfo": {
+        "text": "Откройте все возможности LancerWiseAI-договоры, безлимит клиентов, аналитика — и многое другое.Перейти на Pro",
+        "visible": true
+      },
+      "enLeakWords": [
+        "Pro"
+      ],
+      "consoleErrors": []
+    },
+    "07-dashboard-banner-mobile": {
+      "route": "/dashboard",
+      "viewport": "mobile",
+      "h1": "Главная",
+      "ruChars": 1736,
+      "proCta": [
+        {
+          "text": "Перейти на ProAI, безлимит клиентов и большеОткрыть Pro",
+          "href": "/upgrade",
+          "visible": false
+        }
+      ],
+      "dashBannerInfo": {
+        "text": "Откройте все возможности LancerWiseAI-договоры, безлимит клиентов, аналитика — и многое другое.Перейти на Pro",
+        "visible": true
+      },
+      "enLeakWords": [
+        "Pro"
+      ],
+      "consoleErrors": []
+    },
+    "08-billing-mobile": {
+      "route": "/billing",
+      "viewport": "mobile",
+      "h1": "Подписка",
+      "ruChars": 800,
+      "proCta": [
+        {
+          "text": "Перейти на ProAI, безлимит клиентов и большеОткрыть Pro",
+          "href": "/upgrade",
+          "visible": false
+        }
+      ],
+      "dashBannerInfo": null,
+      "enLeakWords": [
+        "Pro",
+        "Team"
+      ],
+      "consoleErrors": []
+    }
+  }
+}
