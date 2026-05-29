@@ -1,0 +1,26 @@
+[
+  {
+    "href": "/dashboard",
+    "text": "LancerWise"
+  },
+  {
+    "href": "/settings",
+    "text": "Settings"
+  },
+  {
+    "href": "/notifications",
+    "text": "Notifications"
+  },
+  {
+    "href": "/money/invoices",
+    "text": "Money"
+  },
+  {
+    "href": "/clients",
+    "text": "Clients"
+  },
+  {
+    "href": "/work/projects",
+    "text": "Work"
+  }
+]

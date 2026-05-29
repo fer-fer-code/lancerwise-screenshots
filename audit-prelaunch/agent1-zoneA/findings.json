@@ -1,0 +1,142 @@
+{
+  "head_sha": "e233c946",
+  "sidebar_links": [
+    {
+      "href": "/dashboard",
+      "text": "LancerWise"
+    },
+    {
+      "href": "/settings",
+      "text": "Settings"
+    },
+    {
+      "href": "/notifications",
+      "text": "Notifications"
+    },
+    {
+      "href": "/money/invoices",
+      "text": "Money"
+    },
+    {
+      "href": "/clients",
+      "text": "Clients"
+    },
+    {
+      "href": "/work/projects",
+      "text": "Work"
+    }
+  ],
+  "findings": [
+    {
+      "name": "/dashboard",
+      "url": "https://www.lancerwise.com/dashboard",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/dashboard",
+      "http_status": 200,
+      "h1": "Dashboard",
+      "h2_list": [
+        "Good afternoon, Ramiz",
+        "Revenue & Activity Hub"
+      ],
+      "widget_card_count": 47,
+      "empty_indicators": [
+        "—",
+        "$0",
+        "0%"
+      ],
+      "has_brand_chrome": true,
+      "visible_text_first_200": "LancerWise\nHome\nMoney\nClients\nWork\nContracts\nInsights\nSettings\nNotifications\nShortcuts\nDashboard\nSearch...\n⌘K\n🇬🇧 EN\n2\n?\nGood afternoon, Ramiz\n\nFriday, May 29, 2026\n\nToday's Agenda\n2 items\nINV-2026-7"
+    },
+    {
+      "name": "/clients",
+      "url": "https://www.lancerwise.com/clients",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/clients",
+      "http_status": 200,
+      "h1": "Clients",
+      "h2_list": [],
+      "widget_card_count": 31,
+      "empty_indicators": [
+        "—",
+        "$0"
+      ],
+      "has_brand_chrome": true,
+      "visible_text_first_200": "LancerWise\nHome\nMoney\nClients\nAll Clients\nPipeline\nWork\nContracts\nInsights\nSettings\nNotifications\nShortcuts\nClients\nSearch...\n⌘K\n🇬🇧 EN\n2\n?\nTOTAL CLIENTS\n10\nACTIVE\n2\nREVENUE YTD\n$0\nWITH OVERDUE\n0\nNew"
+    },
+    {
+      "name": "/projects",
+      "url": "https://www.lancerwise.com/projects",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/projects",
+      "http_status": 200,
+      "h1": "Projects",
+      "h2_list": [],
+      "widget_card_count": 29,
+      "empty_indicators": [
+        "$0"
+      ],
+      "has_brand_chrome": true,
+      "visible_text_first_200": "LancerWise\nHome\nMoney\nClients\nWork\nProjects\nTime Tracker\nContracts\nInsights\nSettings\nNotifications\nShortcuts\nProjects\nSearch...\n⌘K\n🇬🇧 EN\n2\n?\nAll (5)\n5 active\n0 pending\n0 completed\n0 cancelled\nNew Pr"
+    },
+    {
+      "name": "/invoices",
+      "url": "https://www.lancerwise.com/invoices",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/invoices",
+      "http_status": 200,
+      "h1": "Invoices",
+      "h2_list": [],
+      "widget_card_count": 39,
+      "empty_indicators": [
+        "—",
+        "$0"
+      ],
+      "has_brand_chrome": true,
+      "visible_text_first_200": "LancerWise\nHome\nMoney\nInvoices\nRecurring\nExpenses\nClients\nWork\nContracts\nInsights\nSettings\nNotifications\nShortcuts\nInvoices\nSearch...\n⌘K\n🇬🇧 EN\n2\n?\nPAID\n$0\nPENDING\n$0\nOVERDUE\n$1,000\nUNBILLED\n$0\n66.3h"
+    },
+    {
+      "name": "/dashboard/command-center",
+      "url": "https://www.lancerwise.com/dashboard/command-center",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/dashboard/command-center",
+      "http_status": 200,
+      "h1": "Dashboard",
+      "h2_list": [],
+      "widget_card_count": 11,
+      "empty_indicators": [
+        "$0",
+        "0%"
+      ],
+      "has_brand_chrome": true,
+      "visible_text_first_200": "LancerWise\nHome\nMoney\nClients\nWork\nContracts\nInsights\nSettings\nNotifications\nShortcuts\nDashboard\nSearch...\n⌘K\n🇬🇧 EN\n2\n?\nGood afternoon, krokusstudia2\n⚡\nFriday, May 29, 2026\nBusiness is ON TRACK 🟢\nR"
+    },
+    {
+      "name": "/dashboard/briefing",
+      "url": "https://www.lancerwise.com/dashboard/briefing",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/dashboard/briefing",
+      "http_status": 200,
+      "h1": "Dashboard",
+      "h2_list": [],
+      "widget_card_count": 11,
+      "empty_indicators": [
+        "—",
+        "$0"
+      ],
+      "has_brand_chrome": true,
+      "visible_text_first_200": "LancerWise\nHome\nMoney\nClients\nWork\nContracts\nInsights\nSettings\nNotifications\nShortcuts\nDashboard\nSearch...\n⌘K\n🇬🇧 EN\n2\n?\nGood afternoon —\nFriday, May 29\nBUSINESS HEALTH SCORE\n70\n🟡 Needs Attention\n📋"
+    }
+  ]
+}

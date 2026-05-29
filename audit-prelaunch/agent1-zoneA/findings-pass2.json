@@ -1,0 +1,381 @@
+{
+  "head_sha": "e233c946",
+  "sidebar": [
+    {
+      "href": "/dashboard",
+      "text": "LancerWise"
+    },
+    {
+      "href": "/settings",
+      "text": "Settings"
+    },
+    {
+      "href": "/notifications",
+      "text": "Notifications"
+    },
+    {
+      "href": "/money/invoices",
+      "text": "Money"
+    },
+    {
+      "href": "/clients",
+      "text": "Clients"
+    },
+    {
+      "href": "/work/projects",
+      "text": "Work"
+    }
+  ],
+  "findings": [
+    {
+      "name": "/money/invoices",
+      "url": "https://www.lancerwise.com/money/invoices",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/money/invoices",
+      "http_status": 200,
+      "h1": "Invoices",
+      "h2_list": [],
+      "widget_card_count": 39,
+      "empty_indicators": [],
+      "load_time_ms": 8700
+    },
+    {
+      "name": "/money/expenses",
+      "url": "https://www.lancerwise.com/money/expenses",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/money/expenses",
+      "http_status": 200,
+      "h1": "Expenses",
+      "h2_list": [
+        "No expenses match these filters",
+        "Recurring Expenses",
+        "Expense Budgets",
+        "Tax Deduction Guide"
+      ],
+      "widget_card_count": 30,
+      "empty_indicators": [],
+      "load_time_ms": 5350
+    },
+    {
+      "name": "/money/reports",
+      "url": "https://www.lancerwise.com/money/reports",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/money/reports",
+      "http_status": 200,
+      "h1": "Reports",
+      "h2_list": [
+        "Year in Review 2026",
+        "Project Profitability",
+        "Cash Flow Statement",
+        "Weekly Timesheet",
+        "Income Statement (P&L)",
+        "Invoice Aging",
+        "CSV EXPORTS",
+        "All Invoices",
+        "Time Entries",
+        "Projects",
+        "Invoice Aging Report",
+        "Expenses",
+        "Clients",
+        "Profit & Loss",
+        "Calendar Export (.ics)"
+      ],
+      "widget_card_count": 15,
+      "empty_indicators": [],
+      "load_time_ms": 7036
+    },
+    {
+      "name": "/money",
+      "url": "https://www.lancerwise.com/money",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/money/invoices",
+      "http_status": 200,
+      "h1": "Invoices",
+      "h2_list": [],
+      "widget_card_count": 39,
+      "empty_indicators": [],
+      "load_time_ms": 9052
+    },
+    {
+      "name": "/work/projects",
+      "url": "https://www.lancerwise.com/work/projects",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/work/projects",
+      "http_status": 200,
+      "h1": "Projects",
+      "h2_list": [
+        "QA Project",
+        "QA New Spec Project 1778140279326",
+        "QA Final Spec Project",
+        "QA UserSpec Project",
+        "QA Test Project",
+        "Project Overview",
+        "Recent activity",
+        "Upcoming deadlines"
+      ],
+      "widget_card_count": 29,
+      "empty_indicators": [],
+      "load_time_ms": 8972
+    },
+    {
+      "name": "/work/time",
+      "url": "https://www.lancerwise.com/work/time",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/work/time",
+      "http_status": 200,
+      "h1": "Time Tracker",
+      "h2_list": [
+        "Timer",
+        "This Week",
+        "Weekly Schedule vs Actual",
+        "This Week's Score",
+        "Monthly Time Report",
+        "Activity — Last 3 Months",
+        "Your Stats",
+        "Day Planner",
+        "Weekly Summary Email",
+        "Hourly Rate Calculator",
+        "Timesheet Approval",
+        "Tracking Streak",
+        "Weekly Hour Goal",
+        "Billable Report — May",
+        "Longest Sessions"
+      ],
+      "widget_card_count": 191,
+      "empty_indicators": [],
+      "load_time_ms": 5412
+    },
+    {
+      "name": "/work",
+      "url": "https://www.lancerwise.com/work",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/work/projects",
+      "http_status": 200,
+      "h1": "Projects",
+      "h2_list": [
+        "QA Project",
+        "QA New Spec Project 1778140279326",
+        "QA Final Spec Project",
+        "QA UserSpec Project",
+        "QA Test Project",
+        "Project Overview",
+        "Recent activity",
+        "Upcoming deadlines"
+      ],
+      "widget_card_count": 29,
+      "empty_indicators": [],
+      "load_time_ms": 9465
+    },
+    {
+      "name": "/clients/funnel",
+      "url": "https://www.lancerwise.com/clients/funnel",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/clients/funnel",
+      "http_status": 200,
+      "h1": "Clients",
+      "h2_list": [
+        "Page not found"
+      ],
+      "widget_card_count": 15,
+      "empty_indicators": [],
+      "load_time_ms": 4974
+    },
+    {
+      "name": "/clients/win-back",
+      "url": "https://www.lancerwise.com/clients/win-back",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/clients/win-back",
+      "http_status": 200,
+      "h1": "Clients",
+      "h2_list": [
+        "Win-Back Candidates",
+        "Win-Back Tips"
+      ],
+      "widget_card_count": 42,
+      "empty_indicators": [],
+      "load_time_ms": 6699
+    },
+    {
+      "name": "/clients/intake",
+      "url": "https://www.lancerwise.com/clients/intake",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/clients/intake",
+      "http_status": 200,
+      "h1": "Clients",
+      "h2_list": [
+        "No intake forms yet"
+      ],
+      "widget_card_count": 15,
+      "empty_indicators": [],
+      "load_time_ms": 4313
+    },
+    {
+      "name": "/clients/import",
+      "url": "https://www.lancerwise.com/clients/import",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/clients/import",
+      "http_status": 200,
+      "h1": "Clients",
+      "h2_list": [],
+      "widget_card_count": 23,
+      "empty_indicators": [],
+      "load_time_ms": 5235
+    },
+    {
+      "name": "/settings",
+      "url": "https://www.lancerwise.com/settings",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/settings",
+      "http_status": 200,
+      "h1": "Settings",
+      "h2_list": [
+        "Profile",
+        "Appearance",
+        "Invoice Branding",
+        "Client Portal Branding",
+        "Business Info",
+        "Defaults",
+        "Stripe Payments",
+        "Plan",
+        "Revenue Goals",
+        "Rate Card / Services",
+        "Discount Codes",
+        "Email Templates",
+        "Line Item Templates",
+        "Service Packages",
+        "Rate Negotiation Helper"
+      ],
+      "widget_card_count": 198,
+      "empty_indicators": [
+        "Add your first"
+      ],
+      "load_time_ms": 8193
+    },
+    {
+      "name": "/notifications",
+      "url": "https://www.lancerwise.com/notifications",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/notifications",
+      "http_status": 200,
+      "h1": "Notifications",
+      "h2_list": [
+        "Overdue Invoices"
+      ],
+      "widget_card_count": 11,
+      "empty_indicators": [],
+      "load_time_ms": 6127
+    },
+    {
+      "name": "/contracts",
+      "url": "https://www.lancerwise.com/contracts",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/contracts",
+      "http_status": 200,
+      "h1": "Contracts",
+      "h2_list": [
+        "Generate your first AI contract"
+      ],
+      "widget_card_count": 15,
+      "empty_indicators": [],
+      "load_time_ms": 4703
+    },
+    {
+      "name": "/analytics",
+      "url": "https://www.lancerwise.com/analytics",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/analytics",
+      "http_status": 200,
+      "h1": "Analytics",
+      "h2_list": [
+        "Work Activity Heatmap",
+        "Work Activity",
+        "Revenue Pipeline",
+        "Monthly Revenue — Last 6 Months",
+        "May 2026 — Revenue Calendar",
+        "Productivity by Day of Week",
+        "Time by Project",
+        "Client Acquisition Sources",
+        "My Freelancer Stats Card",
+        "Profit Calculator",
+        "Profit & Loss",
+        "2026 Year in Review",
+        "Revenue by Day of Week",
+        "Work Hours by Day",
+        "Client Segments"
+      ],
+      "widget_card_count": 513,
+      "empty_indicators": [],
+      "load_time_ms": 6021
+    },
+    {
+      "name": "/dashboard",
+      "url": "https://www.lancerwise.com/dashboard",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/dashboard",
+      "http_status": 200,
+      "h1": "Dashboard",
+      "h2_list": [
+        "Good afternoon, Ramiz",
+        "Today's Agenda",
+        "Revenue & Activity Hub",
+        "Unbilled Time",
+        "Monthly Earnings Goal",
+        "Cash Flow",
+        "Freelance Health Score",
+        "Scope Creep Monitor",
+        "Overdue Invoices"
+      ],
+      "widget_card_count": 47,
+      "empty_indicators": [],
+      "load_time_ms": 7534
+    },
+    {
+      "name": "/clients",
+      "url": "https://www.lancerwise.com/clients",
+      "console_errors": [],
+      "page_errors": [],
+      "network_failures": [],
+      "final_url": "https://www.lancerwise.com/clients",
+      "http_status": 200,
+      "h1": "Clients",
+      "h2_list": [
+        "Top Clients by Health Score"
+      ],
+      "widget_card_count": 31,
+      "empty_indicators": [],
+      "load_time_ms": 6788
+    }
+  ]
+}
